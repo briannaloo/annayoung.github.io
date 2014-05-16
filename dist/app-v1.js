@@ -126,12 +126,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         });
       }
 
-      // TODO: substract padding from chords, instead of adding it to chrord sum
-      // padding = 0;
-
-      // Convert the sum to scaling factor for [0, 2pi].
-      // TODO Allow start and end angle to be specified.
-      // TODO Allow padding to be specified as percentage?
       k = (2 * π - padding * n) / k;
 
       // Compute the start and end angle for each group and subgroup.
@@ -393,6 +387,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
   // import "svg";
 
   scope.chord = function() {
+
     var source = d3_source,
         target = d3_target,
         radius = d3_svg_chordRadius,
@@ -401,12 +396,22 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         startAngle = d3_svg_arcStartAngle,
         endAngle = d3_svg_arcEndAngle;
 
-    // TODO Allow control point to be customized.
-
     function chord(d, i) {
       var s = subgroup(this, source, d, i),
           t = subgroup(this, target, d, i, true);
 
+      /*if (s.p0[1] > t.p0[1]) 	// if target is higher than source
+      {
+      	console.log(d.source.id + " " + d.target.id + " "
+      		+ t.p0[1] + " " + s.p0[1]);
+      	var target_id = '#stop0' + d.target.id + '-' + d.source.id,
+      		source_id = '#stop1' + d.target.id + '-' + d.source.id;
+
+      	d3.select(target_id)
+      		.attr("offset", "100%");
+      	d3.select(source_id)
+      		.attr("offset", "0%");
+      }*/
 
       if (equals(s, t)) {
         s.a1 = s.a1 - (s.a1 - s.a0) / 2;
@@ -544,7 +549,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 // Timeline: year selector
 (function(scope) {
   scope.timeline = function(diagram, config) {
-    var years = Object.keys(diagram.data.matrix).map(function(y) { return parseInt(y); }); 
+    var years = Object.keys(diagram.data.matrix).map(function(y) { return y; }); 
 
     config = config || {};
     config.element = config.element || 'body';
@@ -566,16 +571,23 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         checked: function(d) { return d === config.now || null; }
       })
       .on('click', function(d) {
+      	 /*config.sourcePadding = config.sourcePadding || 3;
+
+    if (config.now === (Object.keys(data.matrix)[2]))
+    	config.targetPadding = config.sourcePadding;
+    else
+    	config.targetPadding = config.targetPadding || 20;*/
         var y = d;
         year.selectAll('input').attr('checked', function(d) {
           return y === d || null;
         });
+       
         diagram.draw(d);
       });
 
     span.append('label')
       .attr('for', function(d) { return 'year-' + d; })
-      .text(function(d) { return ""+d+"–" + (d+5); });
+      .text(function(d) { return ""+d; });
 
     // keyboard control
     d3.select(document.body).on('keypress', function() {
@@ -612,8 +624,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     config.now = config.now || Object.keys(data.matrix)[0];
 
     // geometry
-    config.width = config.width || 1000;
-    config.height = config.height || 1000;
+    config.width = config.width || 1100;
+    config.height = config.height || 1100;
     config.margin = config.margin || 125;
     config.outerRadius = config.outerRadius || (Math.min(config.width, config.height) / 2 - config.margin);
     config.arcWidth = config.arcWidth || 24;
@@ -621,6 +633,9 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     config.arcPadding = config.arcPadding || 0.005;
     config.sourcePadding = config.sourcePadding || 3;
     config.targetPadding = config.targetPadding || 20;
+
+    if (config.now === "Mutual Peers")
+    	config.targetPadding = config.sourcePadding;
     config.labelPadding = config.labelPadding || 10;
     config.labelRadius = config.labelRadius || (config.outerRadius + config.labelPadding);
 
@@ -657,6 +672,14 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     }
 
     function chordColor(d) {
+    	// mutual relationship - color black
+    	/*var percent_mutual;
+      if (//d.source.region != d.source.id &&		// not at region level
+      	//d.target.region != d.target.id &&
+      	d.source.region != d.target.region && 	// not a "self"-loop
+      	(data.matrix["2012"])[d.source.id][d.target.id] === (data.matrix["2012"])[d.target.id][d.source.id])
+      	//(data.matrix["2012"])[d.source.id][d.target.id] != 0 && (data.matrix["2012"])[d.target.id][d.source.id] != 0)
+      	return "#000";*/
       return arcColor(d.source);
     }
 
@@ -736,6 +759,41 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .attr('viewBox', '0 0 ' + config.width + ' ' + config.height)
         .attr("width", config.width)
         .attr("height", config.height);
+
+        // for "Mutual Peers", want the chords to fade between the two colors (target and source)
+    svg.append("svg:defs");
+    //var c1 = "rgb(255, 202, 0)";
+    //var c2 = "rgb(104, 63, 146)";
+    for (var i = 0; i < data.regions.length; i++)
+	{
+		var first = data.regions[i];
+		var c1 = colors(first);
+		for (var j = 0; j < data.regions.length; j++)
+		{
+			var second = data.regions[j];
+			var c2 = colors(second);
+			var gradient = d3.select("defs")
+				.append("svg:linearGradient")
+				//.attr("gradientUnits", "objectBoundingBox")
+				//.attr("x1", "0%")
+				//.attr("y1", "0%")
+				//.attr("x2", "100%")
+				//.attr("y2", "100%")
+				.attr("id", "gradient"+first + "-" + second);
+
+			gradient.append("svg:stop")
+					.attr("id", "stop0"+first + "-" + second)
+					.attr("stop-color", c1)
+					.attr("offset", "0%");
+			gradient.append("svg:stop")
+					.attr("id", "stop1"+first + "-" + second)
+					.attr("stop-color", c2)
+					.attr("offset", "100%");
+		}
+	}
+
+
+
     var element = svg.append("g")
         .attr("id", "circle")
         .attr("transform", "translate(" + config.width / 2 + "," + config.height / 2 + ")");
@@ -800,8 +858,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     var infoTimer;
 
     // eg: West Africa: Total inflow 46, Total outflow 2
-    function groupInfo(d) {
-      var el = this;
+    function groupInfo(d, elt, year) {
+      var el = elt;
 
       if (infoTimer) {
         clearTimeout(infoTimer);
@@ -814,12 +872,35 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         info
           .attr('transform', 'translate(' + (bbox.x + bbox.width / 2) + ',' + (bbox.y + bbox.height / 2) + ')');
 
-        var text = info.select('.text').selectAll('text')
+        var text;
+        if (year === "All Peers")
+        {
+        	text = info.select('.text').selectAll('text')
           .data([
             data.names[d.id],
             'I am their peer: ' + formatNumber(d.inflow),
             'They are my peer: ' + formatNumber(d.outflow)
           ]);
+      	}
+        else if (year === "Mutual Peers")
+        {
+        	text = info.select('.text').selectAll('text')
+          .data([
+            data.names[d.id],
+            'Mutual peers: ' + formatNumber(d.inflow + d.outflow)
+          ]);
+      	}
+      	else if (year === "Unreciprocated Peers")
+        {
+        	text = info.select('.text').selectAll('text')
+          .data([
+            data.names[d.id],
+            'Unreciprocated peers: ' + formatNumber(d.outflow)
+          ]);
+      	}
+
+
+
         text.enter().append('text');
         text
           .text(function(t) { return t; })
@@ -869,6 +950,12 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           .data([
             data.names[d.source.id] + ' → ' + data.names[d.target.id] + ': ' + formatNumber(d.source.value)
           ]);
+
+       /* var text = info.select('.text').selectAll('text')
+          .data([
+            data.names[d.source.id] + (year==="Mutual Peers"? ' & ' : ' → ') + data.names[d.target.id] + ': ' + formatNumber(d.source.value)
+          ]);*/
+
         text.enter().append('text');
         text.exit().remove();
         text
@@ -1022,7 +1109,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           });
         });
       group.exit().remove();
-      
+
       // group arc
       var groupPath = group.selectAll('.group-arc')
         .data(function(d) { return [d]; });
@@ -1032,7 +1119,9 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .attr("id", function(d, i, k) { return "group" + k; });
       groupPath
         .style("fill", arcColor)
-        .on("mousemove", groupInfo)
+        .on("mousemove", function(d) {
+        	return groupInfo(d, this, year);
+        })
         .transition()
         .duration(config.animationDuration)
         .attrTween("d", function(d) {
@@ -1178,7 +1267,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         	if (reg === "North America")
         		return "N. Am";
         	else if (reg === "Eastern Europe and Central Asia")
-        		return "E. Europe & Central Asia"
+        		return "E. Europe & C. Asia"
         	return reg; 
         	})
         .attr('startOffset', function(d) {
@@ -1226,13 +1315,22 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       // chords
       var chord = element.selectAll(".chord")
           .data(layout.chords, function(d) { return d.id; });
+
       chord.enter()
         .append("path")
         .attr("class", "chord")
         .on('mousemove', chordInfo);
       chord
-        .style("fill", chordColor)
-        .transition()
+        //.style("fill", chordColor)
+        .style("fill", function(d)
+        {
+        	if (year ==="Mutual Peers")
+        	{
+	        	return "url(#gradient" + d.target.region + "-" + d.source.region + ")";
+        	}
+        	return chordColor(d);
+        }) 
+		.transition()
         .duration(config.animationDuration)
         .attrTween("d", function(d) {
           var p = previous.chords[d.source.id] && previous.chords[d.source.id][d.target.id];
