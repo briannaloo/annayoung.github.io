@@ -17,6 +17,8 @@
   	<div class="wrap">
   		<main role="main">
         <nav role=navigation>
+          <div id="timeline">
+          </div>
         </nav>
         <div id="diagram"></div>
   		</main>
@@ -75,11 +77,11 @@
   <script>
     (function() {
 
-      var datafile = 'json/peers.json';
+      var datafile = 'json/MutualPeers.json';
       var aLittleBit = Math.PI / 100000;
 
       d3.json(datafile, function(data) {
-        var now = 2012;
+        var now = "Mutual Peers";        
         var chart = Globalmigration.chart(data, {
           element: '#diagram',
           now: now,
@@ -91,6 +93,11 @@
             labelThreshold: 0,
             colors: 'cd3d08 ec8f00 6dae29 683f92 b60275 2058a5 00a592 ffca00 009d3c 378974'.split(' ').map(function(c) { return '#' + c; })
           }
+        });
+
+        Globalmigration.timeline(chart, {
+          now: now,
+          element: '#timeline'
         });
 
         chart.draw(now);
