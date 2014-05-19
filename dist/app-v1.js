@@ -400,6 +400,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       var s = subgroup(this, source, d, i),
           t = subgroup(this, target, d, i, true);
 
+
+
       /*if (s.p0[1] > t.p0[1]) 	// if target is higher than source
       {
       	console.log(d.source.id + " " + d.target.id + " "
@@ -772,14 +774,10 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 		{
 			var second = data.regions[j];
 			var c2 = colors(second);
-			var gradient = d3.select("defs")
+			/*var gradient = d3.select("defs")
 				.append("svg:linearGradient")
-				//.attr("gradientUnits", "objectBoundingBox")
-				//.attr("x1", "0%")
-				//.attr("y1", "0%")
-				//.attr("x2", "100%")
-				//.attr("y2", "100%")
-				.attr("id", "gradient"+first + "-" + second);
+				.attr("id", "gradient"+first + "-" + second)
+				.attr("gradientTransform", "rotate(0)");
 
 			gradient.append("svg:stop")
 					.attr("id", "stop0"+first + "-" + second)
@@ -788,7 +786,81 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 			gradient.append("svg:stop")
 					.attr("id", "stop1"+first + "-" + second)
 					.attr("stop-color", c2)
-					.attr("offset", "100%");
+					.attr("offset", "100%");*/
+
+
+			var w = 4;
+			var h = w;
+			var pattern = d3.select("defs")
+				.append("svg:pattern")
+				.attr("id", "pattern" + first + "-" + second)
+				.attr("patternUnits", "userSpaceOnUse")
+				.attr("width", "" + w)
+				.attr("height", "" + h);
+				//.attr("patternTransform", "rotate(90)");
+
+			// checkerboard
+			pattern.append("svg:rect")
+					.attr("width", "" + w/2+1)
+					.attr("height", "" + h/2+1)
+					.attr("x", "0")
+					.attr("y", "0")
+					.style("fill", c1)
+					.style("stroke", "none");
+			pattern.append("svg:rect")
+					.attr("width", "" + w/2)
+					.attr("height", "" + h/2)
+					.attr("x", "" + w/2)
+					.attr("y", "" + h/2)
+					.style("fill", c1)
+					.style("stroke", "none");
+
+			pattern.append("svg:rect")
+					.attr("width", "" + w/2)
+					.attr("height", "" + h/2)
+					.attr("x", "0")
+					.attr("y", "" + h/2)
+					.style("fill", c2)
+					.style("stroke", "none");
+			pattern.append("svg:rect")
+					.attr("width", "" + w/2)
+					.attr("height", "" + h/2)
+					.attr("x", "" + w/2)
+					.attr("y", "0")
+					.style("fill", c2)
+					.style("stroke", "none");
+
+			/*
+			// stripes
+			pattern.append("svg:rect")
+				.attr("x", "0")
+				.attr("y", "0")
+				.attr("width", "3")
+				.attr("height", "6")
+				.style("fill", c1);
+
+			pattern.append("svg:rect")
+				.attr("x", "3")
+				.attr("y", "0")
+				.attr("width", "3")
+				.attr("height", "6")
+				.style("fill", c2);*/
+
+
+			// dots
+			/*pattern.append("svg:rect")
+				.attr("x", "0")
+				.attr("y", "0")
+				.attr("height", "" + w)
+				.attr("width", "" + h)
+				.style("fill", c1);
+
+			pattern.append("svg:circle")
+				.attr("cx", "" + w/2)
+				.attr("cy", "" + h/2)
+				.attr("r", "" + w/2-1)
+				.style("fill", c2);*/
+				
 		}
 	}
 
@@ -1321,12 +1393,11 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .attr("class", "chord")
         .on('mousemove', chordInfo);
       chord
-        //.style("fill", chordColor)
         .style("fill", function(d)
         {
         	if (year ==="Mutual Peers")
         	{
-	        	return "url(#gradient" + d.target.region + "-" + d.source.region + ")";
+	        	return "url(#pattern" + d.target.region + "-" + d.source.region + ")";
         	}
         	return chordColor(d);
         }) 
