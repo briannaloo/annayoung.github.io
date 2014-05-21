@@ -750,10 +750,12 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     }
 
     // chord path generator
-    var chordGenerator = Globalmigration.chord()
+    var chordGenerator = 
+    	Globalmigration.chord()
         .radius(config.innerRadius)
         .sourcePadding(config.sourcePadding)
-        .targetPadding(config.targetPadding);
+        .targetPadding(function() {
+        	return config.targetPadding;});
 
     // svg element
     var svg = d3.select(config.element).append("svg")
@@ -764,8 +766,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 
         // for "Mutual Peers", want the chords to fade between the two colors (target and source)
     svg.append("svg:defs");
-    //var c1 = "rgb(255, 202, 0)";
-    //var c2 = "rgb(104, 63, 146)";
     for (var i = 0; i < data.regions.length; i++)
 	{
 		var first = data.regions[i];
@@ -1410,6 +1410,10 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           p = p || config.initialAngle.chord;
           var i = d3.interpolate(p, d);
           return function (t) {
+          	if (year==="Mutual Peers")
+          		config.targetPadding = config.sourcePadding;
+          	else
+          		config.targetPadding = 20;
             return chordGenerator(i(t));
           };
         });
@@ -1429,6 +1433,10 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
             }
           });
           return function (t) {
+          	if (year==="Mutual Peers")
+          		config.targetPadding = config.sourcePadding;
+          	else
+          		config.targetPadding = 20;
             return chordGenerator(i(t));
           };
         })
