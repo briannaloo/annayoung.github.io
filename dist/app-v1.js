@@ -789,7 +789,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 					.attr("offset", "100%");*/
 
 
-			var w = 4;
+			var w = 6;
 			var h = w;
 			var pattern = d3.select("defs")
 				.append("svg:pattern")
