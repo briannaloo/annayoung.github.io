@@ -636,8 +636,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     config.sourcePadding = config.sourcePadding || 3;
     config.targetPadding = config.targetPadding || 20;
 
-    if (config.now === "Mutual Peers")
-    	config.targetPadding = config.sourcePadding;
     config.labelPadding = config.labelPadding || 10;
     config.labelRadius = config.labelRadius || (config.outerRadius + config.labelPadding);
 
