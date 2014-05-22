@@ -799,8 +799,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 
 			// checkerboard
 			pattern.append("svg:rect")
-					.attr("width", "" + w/2+1)
-					.attr("height", "" + h/2+1)
+					.attr("width", "" + (w/2+1))
+					.attr("height", "" + (h/2+1))
 					.attr("x", "0")
 					.attr("y", "0")
 					.style("fill", c1)
