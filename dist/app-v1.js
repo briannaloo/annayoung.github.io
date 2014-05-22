@@ -400,20 +400,35 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       var s = subgroup(this, source, d, i),
           t = subgroup(this, target, d, i, true);
 
+      var gradient_id = '#gradient' + d.source.region + '-' + d.target.region;
 
-
-      /*if (s.p0[1] > t.p0[1]) 	// if target is higher than source
+      if (s.p0[1] > t.p0[1] && s.p0[0] > t.p0[0]) 
       {
-      	console.log(d.source.id + " " + d.target.id + " "
-      		+ t.p0[1] + " " + s.p0[1]);
-      	var target_id = '#stop0' + d.target.id + '-' + d.source.id,
-      		source_id = '#stop1' + d.target.id + '-' + d.source.id;
+      	d3.select(gradient_id)
+      		.attr("x1", "100%")
+			.attr("y1", "100%")
+			.attr("x2", "0%")
+			.attr("y2", "0%");
+      }
+      else if (s.p0[1] > t.p0[1] && t.p0[0] > s.p0[0])
+      {
+      	//console.log(d.source.id + " " + d.target.id);
+      	d3.select(gradient_id)
+      		.attr("x1", "0%")
+			.attr("y1", "100%")
+			.attr("x2", "100%")
+			.attr("y2", "0%");
+      }
+      else if (t.p0[1] > s.p0[1] && s.p0[0] > t.p0[0])
+      {
+      	//console.log(d.source.id + " " + d.target.id);
+      	d3.select(gradient_id)
+      		.attr("x1", "100%")
+			.attr("y1", "0%")
+			.attr("x2", "0%")
+			.attr("y2", "100%");
 
-      	d3.select(target_id)
-      		.attr("offset", "100%");
-      	d3.select(source_id)
-      		.attr("offset", "0%");
-      }*/
+      }
 
       if (equals(s, t)) {
         s.a1 = s.a1 - (s.a1 - s.a0) / 2;
@@ -772,19 +787,22 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 		{
 			var second = data.regions[j];
 			var c2 = colors(second);
-			/*var gradient = d3.select("defs")
+			var gradient = d3.select("defs")
 				.append("svg:linearGradient")
 				.attr("id", "gradient"+first + "-" + second)
-				.attr("gradientTransform", "rotate(0)");
+				.attr("x1", "0%")
+				.attr("y1", "0%")
+				.attr("x2", "100%")
+				.attr("y2", "100%");
 
 			gradient.append("svg:stop")
-					.attr("id", "stop0"+first + "-" + second)
-					.attr("stop-color", c1)
+					//.attr("id", "stop0"+first + "-" + second)
+					.attr("stop-color", c2)
 					.attr("offset", "0%");
 			gradient.append("svg:stop")
-					.attr("id", "stop1"+first + "-" + second)
-					.attr("stop-color", c2)
-					.attr("offset", "100%");*/
+					//.attr("id", "stop1"+first + "-" + second)
+					.attr("stop-color", c1)
+					.attr("offset", "100%");
 
 
 			var w = 6;
@@ -1393,25 +1411,28 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       chord
         .style("fill", function(d)
         {
+        	//console.log(d);
         	if (year ==="Mutual Peers")
         	{
-	        	return "url(#pattern" + d.target.region + "-" + d.source.region + ")";
+	        	return "url(#gradient" + d.source.region + "-" + d.target.region + ")";
         	}
         	return chordColor(d);
         }) 
 		.transition()
         .duration(config.animationDuration)
         .attrTween("d", function(d) {
+        	if (year==="Mutual Peers")
+          		config.targetPadding = config.sourcePadding;
+          	else
+          		config.targetPadding = 20;
+
           var p = previous.chords[d.source.id] && previous.chords[d.source.id][d.target.id];
           p = p || (previous.chords[d.source.region] && previous.chords[d.source.region][d.target.region]);
           p = p || meltPreviousChord(d);
           p = p || config.initialAngle.chord;
+
           var i = d3.interpolate(p, d);
           return function (t) {
-          	if (year==="Mutual Peers")
-          		config.targetPadding = config.sourcePadding;
-          	else
-          		config.targetPadding = 20;
             return chordGenerator(i(t));
           };
         });
@@ -1420,6 +1441,11 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .duration(config.animationDuration)
         .style('opacity', 0)
         .attrTween("d", function(d) {
+        	if (year==="Mutual Peers")
+          		config.targetPadding = config.sourcePadding;
+          	else
+          		config.targetPadding = 20;
+
           var i = d3.interpolate(d, {
             source: {
               startAngle: d.source.endAngle - aLittleBit,
@@ -1431,10 +1457,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
             }
           });
           return function (t) {
-          	if (year==="Mutual Peers")
-          		config.targetPadding = config.sourcePadding;
-          	else
-          		config.targetPadding = 20;
             return chordGenerator(i(t));
           };
         })
