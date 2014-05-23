@@ -1336,9 +1336,9 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .duration(config.animationDuration)
         .style('opacity', 0)
         .attrTween("d", function(d) {
-        	// remove gradient - don't need it right now
-        	var gradient_id = "gradient"+d.source.id + "-" + d.target.id;
-			d3.selectAll("#" + gradient_id).remove();
+        	// remove gradient - not necessary but reduces number of gradients at any time
+        	//var gradient_id = "gradient"+d.source.id + "-" + d.target.id;
+			//d3.selectAll("#" + gradient_id).remove();
 
 
           var i = d3.interpolate(d, {
