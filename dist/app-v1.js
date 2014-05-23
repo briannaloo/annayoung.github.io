@@ -1220,10 +1220,16 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       groupTextPath
         .text(function(d) { 
         	var reg = data.names[d.id];
-        	/*if (reg === "North America")
+        	if (reg === "North America")
         		return "N. Am";
         	else if (reg === "Eastern Europe and Central Asia")
-        		return "E. Europe & C. Asia";*/
+        		return "E. Europe & C. Asia";
+        	else if (reg === "Middle East and North Africa")
+        		return "Middle East & North Africa";
+        	else if (reg === "Middle East and North Africa")
+        		return "Latin America and Caribbean";
+        	else if (reg === "East Asia and the Pacific")
+        		return "East Asia & the Pacific";
         	return reg; 
         	})
         .attr('startOffset', function(d) {
@@ -1238,6 +1244,10 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 
       groupTextPath
         .filter(function(d, i) {
+        	if (d.id === 0){
+        	console.log(this.getComputedTextLength());
+        	console.log((d.endAngle - d.startAngle) * (config.outerRadius + 18));
+        	console.log(this.getComputedTextLength() > (d.endAngle - d.startAngle) * (config.outerRadius + 18));}
           return this.getComputedTextLength() > (d.endAngle - d.startAngle) * (config.outerRadius + 18);
         })
         .remove();
