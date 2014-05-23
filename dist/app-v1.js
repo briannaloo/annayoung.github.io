@@ -1264,7 +1264,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 				var gradient_id = "gradient"+d.source.id + "-" + d.target.id;
 
 				d3.selectAll("#" + gradient_id).remove();
-				
+
         		var gradient = d3.select("defs")
 					.append("svg:linearGradient")
 					.attr("id", gradient_id)
@@ -1326,10 +1326,10 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .duration(config.animationDuration)
         .style('opacity', 0)
         .attrTween("d", function(d) {
-        	if (year==="Mutual Peers")
-          		config.targetPadding = config.sourcePadding;
-          	else
-          		config.targetPadding = 20;
+        	// remove gradient - don't need it right now
+        	var gradient_id = "gradient"+d.source.id + "-" + d.target.id;
+			d3.selectAll("#" + gradient_id).remove();
+
 
           var i = d3.interpolate(d, {
             source: {
