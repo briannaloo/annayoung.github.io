@@ -1223,7 +1223,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         	if (reg === "North America")
         		return "N. Am";
         	else if (reg === "Eastern Europe and Central Asia")
-        		return "E. Europe & C. Asia";
+        		return "E Europe & C Asia";
         	else if (reg === "Middle East and North Africa")
         		return "Middle East & North Africa";
         	else if (reg === "Middle East and North Africa")
