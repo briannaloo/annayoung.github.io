@@ -1295,7 +1295,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           if (d.id !== d.region) {
           	if (d.outflow === 0)
           	{
-          		return "*" + data.names[d.id];
+          		return data.names[d.id] + "*";
           	}
             return data.names[d.id];
           } 
