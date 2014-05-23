@@ -1293,6 +1293,10 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         })
         .text(function(d) { 
           if (d.id !== d.region) {
+          	if (d.outflow === 0)
+          	{
+          		return "*" + data.names[d.id];
+          	}
             return data.names[d.id];
           } 
         })
@@ -1366,30 +1370,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           }
         })
         .attr("xlink:href", function(d, i, k) { return "#group-textpath-arc" + d.id; });
-
-        // to put "North America" and "Eastern Europe and Central Asia" on two 
-        // doesn't work if expanding other country
-      /*groupText
-      	.append("textPath")
-      	.attr('startOffset', function(d) {
-          if (d.angle > Math.PI/2 && d.angle < Math.PI*3/2) {
-            return '75%';
-          } else {
-            return '25%';
-          }
-        })
-        .attr("xlink:href", function(d, i, k) { return "#group-textpath-arc" + d.id; })
-      	.append("tspan")
-      	.attr("dy", "-15")
-      	.text(function(d)
-      	{
-      		var reg = data.names[d.id];
-      		if (reg === "North America")
-      			return "North ";
-      		else if (reg === "Eastern Europe and Central Asia")
-      			return "Eastern Europe ";
-      	});*/
-
 
 
       groupTextPath
