@@ -400,35 +400,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       var s = subgroup(this, source, d, i),
           t = subgroup(this, target, d, i, true);
 
-      var gradient_id = '#gradient' + d.source.region + '-' + d.target.region;
-
-      if (s.p0[1] > t.p0[1] && s.p0[0] > t.p0[0]) 
-      {
-      	d3.select(gradient_id)
-      		.attr("x1", "100%")
-			.attr("y1", "100%")
-			.attr("x2", "0%")
-			.attr("y2", "0%");
-      }
-      else if (s.p0[1] > t.p0[1] && t.p0[0] > s.p0[0])
-      {
-      	//console.log(d.source.id + " " + d.target.id);
-      	d3.select(gradient_id)
-      		.attr("x1", "0%")
-			.attr("y1", "100%")
-			.attr("x2", "100%")
-			.attr("y2", "0%");
-      }
-      else if (t.p0[1] > s.p0[1] && s.p0[0] > t.p0[0])
-      {
-      	//console.log(d.source.id + " " + d.target.id);
-      	d3.select(gradient_id)
-      		.attr("x1", "100%")
-			.attr("y1", "0%")
-			.attr("x2", "0%")
-			.attr("y2", "100%");
-
-      }
 
       if (equals(s, t)) {
         s.a1 = s.a1 - (s.a1 - s.a0) / 2;
@@ -777,110 +748,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .attr("width", config.width)
         .attr("height", config.height);
 
-        // for "Mutual Peers", want the chords to fade between the two colors (target and source)
+     
     svg.append("svg:defs");
-    for (var i = 0; i < data.regions.length; i++)
-	{
-		var first = data.regions[i];
-		var c1 = colors(first);
-		for (var j = 0; j < data.regions.length; j++)
-		{
-			var second = data.regions[j];
-			var c2 = colors(second);
-			var gradient = d3.select("defs")
-				.append("svg:linearGradient")
-				.attr("id", "gradient"+first + "-" + second)
-				.attr("x1", "0%")
-				.attr("y1", "0%")
-				.attr("x2", "100%")
-				.attr("y2", "100%");
-
-			gradient.append("svg:stop")
-					//.attr("id", "stop0"+first + "-" + second)
-					.attr("stop-color", c2)
-					.attr("offset", "0%");
-			gradient.append("svg:stop")
-					//.attr("id", "stop1"+first + "-" + second)
-					.attr("stop-color", c1)
-					.attr("offset", "100%");
-
-
-			var w = 6;
-			var h = w;
-			var pattern = d3.select("defs")
-				.append("svg:pattern")
-				.attr("id", "pattern" + first + "-" + second)
-				.attr("patternUnits", "userSpaceOnUse")
-				.attr("width", "" + w)
-				.attr("height", "" + h);
-				//.attr("patternTransform", "rotate(90)");
-
-			// checkerboard
-			pattern.append("svg:rect")
-					.attr("width", "" + w)
-					.attr("height", "" + h)
-					.attr("x", "0")
-					.attr("y", "0")
-					.style("fill", c1)
-					.style("stroke", "none");
-			pattern.append("svg:rect")
-					.attr("width", "" + w/2)
-					.attr("height", "" + h/2)
-					.attr("x", "" + w/2)
-					.attr("y", "" + h/2)
-					.style("fill", c1)
-					.style("stroke", "none");
-
-			pattern.append("svg:rect")
-					.attr("width", "" + w/2)
-					.attr("height", "" + h/2)
-					.attr("x", "0")
-					.attr("y", "" + h/2)
-					.style("fill", c2)
-					.style("stroke", "none");
-			pattern.append("svg:rect")
-					.attr("width", "" + w/2)
-					.attr("height", "" + h/2)
-					.attr("x", "" + w/2)
-					.attr("y", "0")
-					.style("fill", c2)
-					.style("stroke", "none");
-
-			/*
-			// stripes
-			pattern.append("svg:rect")
-				.attr("x", "0")
-				.attr("y", "0")
-				.attr("width", "3")
-				.attr("height", "6")
-				.style("fill", c1);
-
-			pattern.append("svg:rect")
-				.attr("x", "3")
-				.attr("y", "0")
-				.attr("width", "3")
-				.attr("height", "6")
-				.style("fill", c2);*/
-
-
-			// dots
-			/*pattern.append("svg:rect")
-				.attr("x", "0")
-				.attr("y", "0")
-				.attr("height", "" + w)
-				.attr("width", "" + h)
-				.style("fill", c1);
-
-			pattern.append("svg:circle")
-				.attr("cx", "" + w/2)
-				.attr("cy", "" + h/2)
-				.attr("r", "" + w/2-1)
-				.style("fill", c2);*/
-				
-		}
-	}
-
-
 
     var element = svg.append("g")
         .attr("id", "circle")
@@ -1169,7 +1038,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       return c;
     }
 
-
     // finally draw the diagram
     function draw(year, countries) {
       year = year || Object.keys(data.matrix)[0];
@@ -1352,10 +1220,10 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       groupTextPath
         .text(function(d) { 
         	var reg = data.names[d.id];
-        	if (reg === "North America")
+        	/*if (reg === "North America")
         		return "N. Am";
         	else if (reg === "Eastern Europe and Central Asia")
-        		return "E. Europe & C. Asia"
+        		return "E. Europe & C. Asia";*/
         	return reg; 
         	})
         .attr('startOffset', function(d) {
@@ -1387,10 +1255,51 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       chord
         .style("fill", function(d)
         {
-        	//console.log(d);
         	if (year ==="Mutual Peers")
         	{
-	        	return "url(#gradient" + d.source.region + "-" + d.target.region + ")";
+        		var source_x = Math.sin(d.source.startAngle) * config.innerRadius,
+					source_y = -1 * Math.cos(d.source.startAngle) * config.innerRadius,
+					target_x = Math.sin(d.target.startAngle) * config.innerRadius,
+					target_y = -1 * Math.cos(d.target.startAngle) * config.innerRadius;
+				var gradient_id = "gradient"+d.source.id + "-" + d.target.id;
+
+				d3.selectAll("#" + gradient_id).remove();
+				
+        		var gradient = d3.select("defs")
+					.append("svg:linearGradient")
+					.attr("id", gradient_id)
+					.attr("x1", function(d) {
+						if (source_x > target_x) 
+					    	return "100%";
+				      	else 
+					    	return "0%";
+						})
+					.attr("y1", function(d) {
+						if (source_y > target_y) 
+					    	return "100%";
+				      	else 
+					    	return "0%";
+						})
+					.attr("x2", function(d) {
+						if (target_x > source_x) 
+					    	return "100%";
+				      	else 
+					    	return "0%";
+						})
+					.attr("y2", function(d) {
+						if (target_y > source_y) 
+					    	return "100%";
+				      	else 
+					    	return "0%";
+						});
+
+				gradient.append("svg:stop")
+						.attr("stop-color", arcColor(d.target))
+						.attr("offset", "0%");
+				gradient.append("svg:stop")
+						.attr("stop-color", arcColor(d.source))
+						.attr("offset", "100%");
+	        	return "url(#gradient" + d.source.id + "-" + d.target.id + ")";
         	}
         	return chordColor(d);
         }) 
