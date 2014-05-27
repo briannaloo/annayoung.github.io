@@ -835,8 +835,9 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         	text = info.select('.text').selectAll('text')
           .data([
             data.names[d.id],
-            'I am their peer: ' + formatNumber(d.inflow),
-            'They are my peer: ' + formatNumber(d.outflow)
+            'They are my peer: ' + formatNumber(d.outflow),
+            'I am their peer: ' + formatNumber(d.inflow)
+            
           ]);
       	}
         else if (year === "Mutual Peers")
@@ -852,7 +853,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         	text = info.select('.text').selectAll('text')
           .data([
             data.names[d.id],
-            'Unreciprocated peers: ' + formatNumber(d.outflow)
+            'They are my unreciprocated peer: ' + formatNumber(d.outflow),
+            'I am their unreciprocated peer: ' + formatNumber(d.inflow)
           ]);
       	}
 
