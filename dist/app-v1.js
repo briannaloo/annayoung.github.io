@@ -853,8 +853,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         	text = info.select('.text').selectAll('text')
           .data([
             data.names[d.id],
-            'They are my unreciprocated peer: ' + formatNumber(d.outflow),
-            'I am their unreciprocated peer: ' + formatNumber(d.inflow)
+            'Unreciprocated peers: ' + formatNumber(d.outflow),
+            'I don\'t reciprocate: ' + formatNumber(d.inflow)
           ]);
       	}
 
