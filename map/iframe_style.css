@@ -131,7 +131,7 @@ html, body, #map {
       #tool-tip {
         position: absolute;
         width: auto;
-        height: 40px;
+        height: auto;
         background-color: white;
         opacity: .9;
         z-index: 50;
