@@ -28,13 +28,18 @@ html, body, #map {
         font-size: 17px;
       }
   
-
+      .countries_label {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: #444;
+      }
 
       #layer_selector {
         position: absolute;
         top: 0px;
         left: 50px;
-        padding: 0;
+        padding: 0px;
         width: 330px;
       }
 
@@ -62,7 +67,7 @@ html, body, #map {
       #layer_selector2 {
         position: absolute;
         width: 100px;
-        top: 9px;
+        top: 16px;
         left: 395px;
         padding: 0;
         background-color: #ff8a87;
