@@ -6,6 +6,7 @@
      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
      <link href='iframe_style.css' rel='stylesheet' type='text/css'>
      <script type="text/javascript" src="jquery.js"></script>
+     <script type="text/javascript" src="slide.js"></script>
   </head>
 
   <body>
@@ -36,15 +37,35 @@
       </div>
     </div>
 
-    <div class="authors">
-      <p>Created by <a id="links" href="http://spinsomewebs.com/" target="_blank">Pedro Cunha</a> and <a id="links" href="http://www.dmitrypavluk.com" target="_blank">Dmitry Pavluk</a> using CartoDB with help from <a id="links" href="https://twitter.colorsm/andrewxhill" target="_blank">Andrew Hill</a> and Anna Young</p>
+    <div id="slide_out_info">
+      <a class="handle" href="#">
+        <span id="rotated_text">Map Info</span>
+      </a>
+      <h1>Air pollution trends in countries and cities</h1>
+        In 2012, the <a href="http://www.who.int/mediacentre/news/releases/2014/air-pollution/en/" target="_blank">World Health Organization (WHO)</a> estimates 7 million people died - one in eight deaths - due to air pollution exposure. This map shows both national and city-level exposures to fine particulate matter or PM2.5, which is an air pollutant with human health consequences.<br><br>
+
+      <span style="font-size:20px;"><b>FINE PARTICULATE MATTER (PM2.5)</b></span>
+      Suspended particulates contribute to acute lower respiratory infections and other diseases such as cancer. They can penetrate human lung and blood tissue, leading to higher incidences of cardiovascular and lung disease. Most countries currently monitor and report coarse particulate pollution, or PM10 (particles between 2.5 and 10 microns in diameter). However, fine particulates or PM2.5 (2.5 microns and smaller) lodge deep in lung tissue and are far more injurious to health than coarser particulates. PM2.5 also travel farther from their source than PM10 and can have a more toxic composition, including heavy metals and carcinogenic compounds.<br><br> 
+
+      According to the <a href="http://www.who.int/gho/phe/outdoor_air_pollution/en/" target="_blank">WHO</a>, fine particulate matter (PM2.5) has the greatest effect on human health. Airborne particulates originate from a variety of sources. PM2.5 is generally the product of combustion, whether anthropogenic, both from mobile sources such as vehicles and from stationary sources such as power plants, industry, households or biomass burning.<br><br>
+
+      <span style="font-size:20px;"><b>COMPARE NATIONAL AND CITY-LEVEL RESULTS</b></span>
+      City-level data (represented as points in the map) for around 1,600 cities in 91 countries from 2008 to 2013 are provided in the <a href="http://www.who.int/phe/health_topics/outdoorair/databases/AAP_database_methods_2014.pdf?ua=1" target="_blank">WHO's Ambient Air Pollution database</a>. These values for cities generally represent annual averaged data from a single or multiple air monitoring stations. Because location data were not provided for many of the database entries, we approximated the latitude/longitude of some of the cities and stations identified.<br><br> 
+
+      The national data (represented by the country shading) are from the 2014 <a href="http://www.epi.yale.edu/" target="_blank">Environmental Performance Index (EPI)</a>. Researchers led by <a href="http://myweb.dal.ca/adonkela/main.swf" target="_blank">Aaron van Donkelaar</a> at Dalhousie University used satellite data to estimate ground-level exposures to fine particulate matter (PM2.5). These data indicate longer term exposures to PM2.5 and are based on a three-year rolling average of data from 1998 to 2012. Read more about how these data were developed <a href="http://epi.yale.edu/our-methods/air-quality" target="_blank">here</a>.<br><br>
+
+
+      <span style="font-size:20px;"><b>ABOUT THE ENVIRONMENTAL PERFORMANCE INDEX (EPI)</b></span>
+      The <a href="http://www.epi.yale.edu/" target="_blank">Environmental Performance Index</a> is a biennial global ranking of how well countries perform on high-priority environmental issues. It is a joint project of the <a href="http://envirocenter.yale.edu/" target="_blank">Yale Center for Environmental Law & Policy</a> and the <a href="http://ciesin.columbia.edu/" target="_blank">Center for International Earth Science Information Network</a> at The Earth Institute, Columbia University. 
+      <br><br>
+      <span>Created by <a id="links" href="http://spinsomewebs.com/" target="_blank">Pedro Cunha</a> and <a id="links" href="http://www.dmitrypavluk.com" target="_blank">Dmitry Pavluk</a> using CartoDB with help from <a id="links" href="https://twitter.colorsm/andrewxhill" target="_blank">Andrew Hill</a> and Anna Young</span>
     </div>
 
     <div id="header_container">
       <div id="header">
         <div id="layer_selector" class="cartodb-infobox">
           <ul>
-            <li data="2000" class="selected">2000</li>
+            <li data="2000">2000</li>
             <li data="2001">2001</li>
             <li data="2002">2002</li>
             <li data="2003">2003</li>
@@ -56,7 +77,7 @@
             <li data="2009">2009</li>
             <li data="2010">2010</li>
             <li data="2011">2011</li>
-            <li data="2012">2012</li>  
+            <li data="2012" class="selected">2012</li>  
           </ul>
 
         </div>
@@ -312,38 +333,48 @@
         }
 
 
-          $("#show_cities").on("click", function(){
-            if ($("#show_cities").hasClass('shown'))
-            {
-              sublayer_city.hide();
-              var year = $('#layer_selector li.selected').attr('data');
-              col1 = 'pm25_' + year;
-              $("#legend_cities").hide();
-               $("#show_cities").removeClass('shown');
-              $("#show_cities").text("Show Cities");
+      $("#show_cities").on("click", function(){
+        if ($("#show_cities").hasClass('shown'))
+        {
+          sublayer_city.hide();
+          var year = $('#layer_selector li.selected').attr('data');
+          col1 = 'pm25_' + year;
+          $("#legend_cities").hide();
+           $("#show_cities").removeClass('shown');
+          $("#show_cities").text("Show Cities");
 
-              $("#legend_countries").removeClass("cities_label");
-            }
-            else
-            {
-              //Set the column to the city_station from our cities table
-              col2 = 'city_station';
-              //create a local variable named style and convert our cities script above to html and run the format function defined above to render some CSS.
-               var style = $('#cities').html().format(col2);
-              //Attached the CSS to the layer
-              sublayer_city.setCartoCSS(style);
-               sublayer_city.show();
+          $("#legend_countries").removeClass("cities_label");
+        }
+        else
+        {
+          //Set the column to the city_station from our cities table
+          col2 = 'city_station';
+          //create a local variable named style and convert our cities script above to html and run the format function defined above to render some CSS.
+           var style = $('#cities').html().format(col2);
+          //Attached the CSS to the layer
+          sublayer_city.setCartoCSS(style);
+           sublayer_city.show();
 
-              //Hide legend on click
-              $("#legend_cities").show();
-              $("#show_cities").addClass('shown');
-              $("#show_cities").text("Hide Cities");
-              
-              $("#legend_countries").addClass("cities_label");
-            }
-          });
+          //Hide legend on click
+          $("#legend_cities").show();
+          $("#show_cities").addClass('shown');
+          $("#show_cities").text("Hide Cities");
+          
+          $("#legend_countries").addClass("cities_label");
+        }
+      });
 
-
+  
+         //have the info tab slide out
+        $('#slide_out_info').tabSlideOut({
+          tabHandle: '.handle',                     //class of the element that will become your tab
+          //Optionally can be set using css
+          height: '110px',                     //height of tab image           //Optionally can be set using css
+          width: '30px',                       //width of tab image            //Optionally can be set using css
+          tabLocation: 'right',                      //side of screen where tab lives, top, right, bottom, or left
+          speed: 400,                               //speed of animation
+          action: 'click',                  //options: true makes it stick(fixed position) on scroll
+      });
 
     </script>
 

@@ -42,7 +42,9 @@ html, body, #map {
         list-style-type: none;
       }
       
-      #show_cities {cursor: pointer;}
+      #show_cities {
+        cursor: pointer;
+      }
 
       #layer_selector li {
         border-bottom: 1px solid #999;
@@ -62,15 +64,11 @@ html, body, #map {
         top: 9px;
         left: 395px;
         padding: 0;
+        background-color: #ff8a87;
       }
 
-      /*#layer_selector2 p {
-        padding: 0; margin: 0;
-        list-style-type: none;
-      }*/
-
       #layer_selector2 p {
-        border-bottom: 1px solid #999;
+        /*border-bottom: 1px solid #999;*/
         padding-left: 15px;
         padding-right: 5px;
         font-size: 13px;
@@ -89,7 +87,7 @@ html, body, #map {
         right: 20px;
         padding: 0;
         background-color: white;
-        opacity: 0.7;
+        opacity: 0.9;
         border-radius: 3px;
       }
       
@@ -150,7 +148,7 @@ html, body, #map {
       }
       .hidden {display: none;}
       #header_container { 
-        opacity: .7; 
+        opacity: .9; 
         height:50px; 
         position:fixed; 
         width:100%;  
@@ -254,21 +252,45 @@ html, body, #map {
         height: 113px;
       }
 
+      #rotated_text {
+        position: absolute;
+        top: 43px;
+        left: -22px;
+        color: #444;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+         /* Safari */
+        -webkit-transform: rotate(-90deg);
+        /* Firefox */
+        -moz-transform: rotate(-90deg);
+        /* IE */
+        -ms-transform: rotate(-90deg);
+        /* Opera */
+        -o-transform: rotate(-90deg);
+        /* Internet Explorer */
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+          width: 90px;
+          height: 29px;
+      }
+
       .hidden {
         display: none;
       }
 
 
-      .authors {
-        position: absolute;
-        width: 200px;
+      #slide_out_info {
+        padding: 20px;
+        width: 85%;
         height: auto;
-        bottom: 10px;
-        right: 10px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 11px;
-        text-align: right;
+        border-radius: 10px;
+        background: #ccc;
+        border: 1px solid #a4a2a2;
+        background-color: white;
+        opacity: .9;
+        z-index: 50;
       }
       #links {
         color: navy;
