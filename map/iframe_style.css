@@ -183,6 +183,7 @@ html, body, #map {
         margin-top: 10px;
         border: 1px solid #a4a2a2;
         box-shadow: rgba(0,0,0,0.2) 0 0 4px 2px;
+        opacity: 0.9;
       }
       .legend div {
         width:30px;
