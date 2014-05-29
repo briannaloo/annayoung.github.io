@@ -5,7 +5,7 @@
             speed: 300, 
             action: 'click',
             tabLocation: 'left',
-            topPos: '200px',
+            topPos: '160px',
             leftPos: '20px',
             fixedPosition: false,
             positioning: 'absolute',
