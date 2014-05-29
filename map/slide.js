@@ -36,7 +36,8 @@
             'width' : settings.width,
             'height': settings.height,
             'border-radius' : '5px',
-            'border': '1px solid #a4a2a2'
+            'border': '1px solid #a4a2a2',
+            'box-shadow': 'rgba(0,0,0,0.2) 0 0 4px 2px'
         });
         
         settings.tabHandle.css({ 
