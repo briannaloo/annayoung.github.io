@@ -90,7 +90,7 @@
   <script type="cartocss/html" id="cities">
   /*City Styles*/
 
-#who_georeferenced_clean{
+#who_georeferenced_clean_v2{
   marker-fill-opacity: 0.8;
   marker-line-color: #FFF;
   marker-line-width: 1.5;
@@ -99,34 +99,34 @@
   marker-fill: #FFFFB2;
   marker-allow-overlap: true;
 }
-#who_georeferenced_clean [ pm_2_5 <= 154] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
   marker-fill: #4e0000;
 }
-#who_georeferenced_clean [ pm_2_5 <= 140] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 140] {
   marker-fill: #870000;
 }
-#who_georeferenced_clean [ pm_2_5 <= 125] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 125] {
   marker-fill: #c30000;
 }
-#who_georeferenced_clean [ pm_2_5 <= 110] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 110] {
   marker-fill: #f50000;
 }
-#who_georeferenced_clean [ pm_2_5 <= 90] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 90] {
   marker-fill: #FF3200;
 }
-#who_georeferenced_clean [ pm_2_5 <= 69] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 69] {
   marker-fill: #FF5a00;
 }
-#who_georeferenced_clean [ pm_2_5 <= 55] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 55] {
   marker-fill: #FF8200;
 }
-#who_georeferenced_clean [ pm_2_5 <= 41] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 41] {
   marker-fill: #FFaa00;
 }
-#who_georeferenced_clean [ pm_2_5 <= 28] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 28] {
   marker-fill: #ffd72d;
 }
-#who_georeferenced_clean [ pm_2_5 <= 15] {
+#who_georeferenced_clean_v2 [ pm_2_5 <= 15] {
   marker-fill: #fff74b;
 }
 
@@ -234,7 +234,7 @@
             cartocss: $('#pm25_na').html().format('pm25_2000'),
             interactivity: "cartodb_id, the_geom, pm25_2000, pm25_2001, pm25_2002, pm25_2003, pm25_2004, pm25_2005, pm25_2006, pm25_2007, pm25_2008, pm25_2009, pm25_2010, pm25_2011, pm25_2012, country"
             },{
-            sql: "SELECT * FROM who_georeferenced_clean",
+            sql: "SELECT * FROM who_georeferenced_clean_v2",
             cartocss: $('#cities').html().format('city_station'),
             interactivity: "city_station, pm_2_5, country"
             }]
