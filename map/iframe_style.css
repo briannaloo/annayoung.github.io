@@ -217,7 +217,7 @@ html, body, #map {
       .city_leftest {
         position: absolute;
         left:16px;
-        top:86px;
+        top:83px;
         font-family: arial;   
         font-size: 13px;
         color: #6b6a6a;
@@ -225,7 +225,7 @@ html, body, #map {
       .city_rightest {
         position: absolute;
         right:15px;
-        top:86px;
+        top:83px;
         font-family: arial;   
         font-size: 13px;
         color: #6b6a6a;
