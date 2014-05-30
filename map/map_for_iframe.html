@@ -220,7 +220,6 @@
           searchControl: true
         });
 
-
         
 
         // create our layers
@@ -235,10 +234,9 @@
             cartocss: $('#pm25_na').html().format('pm25_2000'),
             interactivity: "cartodb_id, the_geom, pm25_2000, pm25_2001, pm25_2002, pm25_2003, pm25_2004, pm25_2005, pm25_2006, pm25_2007, pm25_2008, pm25_2009, pm25_2010, pm25_2011, pm25_2012, country"
             },{
-            sql: "SELECT * FROM who_georeferenced_clean",
+            sql: "SELECT * FROM who_georeferenced_clean_v2",
             cartocss: $('#cities').html().format('city_station'),
             interactivity: "city_station, pm_2_5, country"
-            
             }]
 
         }).done(function(layer) {
