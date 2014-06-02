@@ -73,7 +73,6 @@ public class convertToJSON
 			if (!hasData(matrix, i, names.length))
 			{
 				json.print("*");
-				//System.out.println(names[i]);
 			}
 			json.print("\"");
 		}
