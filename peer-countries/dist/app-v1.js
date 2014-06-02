@@ -1246,11 +1246,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 
       groupTextPath
         .filter(function(d, i) {
-        	if (d.id === 0){
-        	console.log(this.getComputedTextLength());
-        	console.log((d.endAngle - d.startAngle) * (config.outerRadius + 18));
-        	console.log(this.getComputedTextLength() > (d.endAngle - d.startAngle) * (config.outerRadius + 18));}
-          return this.getComputedTextLength() > (d.endAngle - d.startAngle) * (config.outerRadius + 18);
+        	return this.getComputedTextLength() > (d.endAngle - d.startAngle) * (config.outerRadius + 18);
         })
         .remove();
 
