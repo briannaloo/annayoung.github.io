@@ -74,7 +74,6 @@ html, body, #map {
       }
 
       #layer_selector2 p {
-        /*border-bottom: 1px solid #999;*/
         padding-left: 15px;
         padding-right: 5px;
         font-size: 13px;
@@ -216,24 +215,8 @@ html, body, #map {
       }
       .country_middle {
         position: absolute;
-        left:150px;
+        left:165px;
         top:40px;
-        font-family: arial;   
-        font-size: 13px;
-        color: #6b6a6a;
-      }
-      .city_leftest {
-        position: absolute;
-        left:16px;
-        top:83px;
-        font-family: arial;   
-        font-size: 13px;
-        color: #6b6a6a;
-      }
-      .city_rightest {
-        position: absolute;
-        right:15px;
-        top:83px;
         font-family: arial;   
         font-size: 13px;
         color: #6b6a6a;
@@ -251,25 +234,6 @@ html, body, #map {
         font-family: arial;
         font-size: 13px;
         color: #6b6a6a;
-      }
-
-      .city_title {
-        width: 100%;
-        position: absolute;
-        bottom: 5px;
-        text-align: center;
-        font-family: arial;
-        font-size: 13px;
-        color: #6b6a6a;
-      }
-
-      #legend_cities {
-        width:330px;
-        height: auto;
-      }
-
-      .cities_label {
-        height: 113px;
       }
 
       #rotated_text {
