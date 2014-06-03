@@ -32,7 +32,7 @@
         </aside>
         <div id="legend_cities" style="display:none">
           <aside class="colors colors2">
-            <!--<div style="background-color:#B2D1F0;"></div>
+            <div style="background-color:#B2D1F0;"></div>
             <div style="background-color:#80B2E6;"></div>
             <div style="background-color:#4D94DB;"></div>
             <div style="background-color:#1975D1;"></div>
@@ -41,8 +41,8 @@
             <div style="background-color:#00478F;"></div>
             <div style="background-color:#003366;"></div>
             <div style="background-color:#002952;"></div>
-            <div style="background-color:#001429;"></div>-->
-          <div style="background-color:#F7F7F7;"></div>
+            <div style="background-color:#001429;"></div>
+          <!--<div style="background-color:#F7F7F7;"></div>
           <div style="background-color:#DEDEDE;"></div>
           <div style="background-color:#C6C6C6;"></div>
           <div style="background-color:#ADADAD;"></div>
@@ -51,7 +51,7 @@
           <div style="background-color:#636363;"></div>
           <div style="background-color:#4A4A4A;"></div>
           <div style="background-color:#313131;"></div>
-          <div style="background-color:#191919;"></div>
+          <div style="background-color:#191919;"></div>-->
         </aside>
           <span class="city_leftest">2</span><span class="city_rightest">153</span>
           <p class="city_title">CITY PM<sub>2.5</sub> LEVELS</p><br>
@@ -122,7 +122,7 @@
   marker-fill: #F7F7F7;
   marker-allow-overlap: true;
 }
-#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
+/*#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
   //marker-fill: #4e0000;
   marker-fill: #191919;
 }
@@ -161,7 +161,50 @@
 #who_georeferenced_clean_v2 [ pm_2_5 <= 15] {
   //marker-fill: #fff74b;
   marker-fill: #F7F7F7;
+}*/
+
+
+#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
+  //marker-fill: #4e0000;
+  marker-fill: #001429;
 }
+#who_georeferenced_clean_v2 [ pm_2_5 <= 140] {
+  //marker-fill: #870000;
+  marker-fill: #002952;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 125] {
+  //marker-fill: #c30000;
+  marker-fill: #003366;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 110] {
+  //marker-fill: #f50000;
+  marker-fill: #00478F;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 90] {
+  //marker-fill: #FF3200;
+  marker-fill: #0052A3;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 69] {
+  //marker-fill: #FF5a00;
+  marker-fill: #005CB8;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 55] {
+  //marker-fill: #FF8200;
+  marker-fill: #1975D1;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 41] {
+  //marker-fill: #FFaa00;
+  marker-fill: #4D94DB;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 28] {
+  //marker-fill: #ffd72d;
+  marker-fill: #80B2E6;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 15] {
+  //marker-fill: #fff74b;
+  marker-fill: #B2D1F0;
+}
+
 
   </script>
 
