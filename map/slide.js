@@ -81,7 +81,7 @@
         
         if(settings.tabLocation === 'left' || settings.tabLocation === 'right') {
             obj.css({
-                'height' : properties.containerHeight,
+                //'height' : properties.containerHeight,
                 'top' : settings.topPos
             });
             
@@ -94,7 +94,7 @@
         }
 
         if(settings.tabLocation === 'right') {
-            obj.css({ 'right': '-' + properties.containerWidth});
+           obj.css({ 'right': '-60%'});
             settings.tabHandle.css({'left' : '-' + properties.tabWidth});
             
             $('html').css('overflow-x', 'hidden');
@@ -107,13 +107,12 @@
         });
         
         var slideIn = function() {
-            
             if (settings.tabLocation === 'top') {
                 obj.animate({top:'-' + properties.containerHeight}, settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'left') {
                 obj.animate({left: '-' + properties.containerWidth}, settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'right') {
-                obj.animate({right: '-' + properties.containerWidth}, settings.speed).removeClass('open');
+                obj.animate({right: '-60%'},  settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'bottom') {
                 obj.animate({bottom: '-' + properties.containerHeight}, settings.speed).removeClass('open');
             }    
@@ -121,17 +120,17 @@
         };
         
         var slideOut = function() {
-            
             if (settings.tabLocation == 'top') {
                 obj.animate({top:'-3px'},  settings.speed).addClass('open');
             } else if (settings.tabLocation == 'left') {
                 obj.animate({left:'-3px'},  settings.speed).addClass('open');
             } else if (settings.tabLocation == 'right') {
-                obj.animate({right:'-3px'},  settings.speed).addClass('open');
+                obj.animate({right: '0%'}, settings.speed).addClass('open');
             } else if (settings.tabLocation == 'bottom') {
                 obj.animate({bottom:'-3px'},  settings.speed).addClass('open');
             }
         };
+
 
         var clickScreenToClose = function() {
             obj.click(function(event){

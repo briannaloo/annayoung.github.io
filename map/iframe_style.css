@@ -265,8 +265,8 @@ html, body, #map {
       }
 
       #slide_out_info {
-        width: 75%;
-        height: 300px;
+        width: 60%;
+        height: 50%;
         border-radius: 10px;
         background: #ccc;
         border: 1px solid #a4a2a2;
@@ -276,9 +276,11 @@ html, body, #map {
       }
 
       .content {
-        padding: 20px;
-        height: 260px;
+        height: 100%;
         width: auto;
         overflow-x: hidden;
         overflow-y: scroll;
+      }
+      .text {
+        padding: 20px;
       }

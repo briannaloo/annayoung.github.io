@@ -557,7 +557,7 @@ main {
   position: relative;
 }
 
-.contribute {
+/*.contribute {
   position: absolute;
   top: 15px;
   width: 100%;
@@ -572,7 +572,7 @@ main {
   border: 2px solid black;
   padding: 7px;
   background-color: white;
-}
+}*/
 
 .year label {
   font-size: 15px;
