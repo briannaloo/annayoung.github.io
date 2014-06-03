@@ -182,7 +182,7 @@ html, body, #map {
       }
       .legend {
         width:330px;
-        height: 83px;
+        height: 85px;
         background-color: white;
         border-radius: 10px;
         margin-top: 10px;
@@ -222,12 +222,12 @@ html, body, #map {
         color: #6b6a6a;
       }
       .bottom_middle {
-        top: 80px;
+        top: 82px;
         left: 152px;
         font-size: 10px;
       }
       .bottom_right {
-        top: 80px;
+        top: 82px;
         font-size: 10px;
       }
       .colors {
