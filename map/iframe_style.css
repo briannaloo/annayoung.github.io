@@ -8,7 +8,6 @@ html, body, #map {
 
       #map {
          background-color: #9abae0;
-         /*box-shadow: inset 1px 1px 5px 1px;*/
       }
       .selected {
         background-color: #ff8a87;
