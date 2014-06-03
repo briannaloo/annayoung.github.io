@@ -31,7 +31,7 @@
           <div style="background-color:#4e0000;"></div>
         </aside>
         <div id="legend_cities" style="display:none">
-          <aside class="colors colors2">
+          <!--<aside class="colors colors2">
             <div style="background-color:#B2D1F0;"></div>
             <div style="background-color:#80B2E6;"></div>
             <div style="background-color:#4D94DB;"></div>
@@ -41,8 +41,8 @@
             <div style="background-color:#00478F;"></div>
             <div style="background-color:#003366;"></div>
             <div style="background-color:#002952;"></div>
-            <div style="background-color:#001429;"></div>
-            
+            <div style="background-color:#001429;"></div>->
+
           <!--<div style="background-color:#F7F7F7;"></div>
           <div style="background-color:#DEDEDE;"></div>
           <div style="background-color:#C6C6C6;"></div>
@@ -123,88 +123,37 @@
   marker-fill: #F7F7F7;
   marker-allow-overlap: true;
 }
-/*#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
-  //marker-fill: #4e0000;
-  marker-fill: #191919;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 140] {
-  //marker-fill: #870000;
-  marker-fill: #313131;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 125] {
-  //marker-fill: #c30000;
-  marker-fill: #4A4A4A;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 110] {
-  //marker-fill: #f50000;
-  marker-fill: #636363;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 90] {
-  //marker-fill: #FF3200;
-  marker-fill: #7C7C7C;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 69] {
-  //marker-fill: #FF5a00;
-  marker-fill: #949494;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 55] {
-  //marker-fill: #FF8200;
-  marker-fill: #ADADAD;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 41] {
-  //marker-fill: #FFaa00;
-  marker-fill: #C6C6C6;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 28] {
-  //marker-fill: #ffd72d;
-  marker-fill: #DEDEDE;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 15] {
-  //marker-fill: #fff74b;
-  marker-fill: #F7F7F7;
-}*/
-
-
 #who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
-  //marker-fill: #4e0000;
-  marker-fill: #001429;
+  marker-fill: #4e0000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 140] {
-  //marker-fill: #870000;
-  marker-fill: #002952;
+  marker-fill: #870000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 125] {
-  //marker-fill: #c30000;
-  marker-fill: #003366;
+  marker-fill: #c30000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 110] {
-  //marker-fill: #f50000;
-  marker-fill: #00478F;
+  marker-fill: #f50000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 90] {
-  //marker-fill: #FF3200;
-  marker-fill: #0052A3;
+  marker-fill: #FF3200;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 69] {
-  //marker-fill: #FF5a00;
-  marker-fill: #005CB8;
+  marker-fill: #FF5a00;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 55] {
-  //marker-fill: #FF8200;
-  marker-fill: #1975D1;
+  marker-fill: #FF8200;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 41] {
-  //marker-fill: #FFaa00;
-  marker-fill: #4D94DB;
+  marker-fill: #FFaa00;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 28] {
-  //marker-fill: #ffd72d;
-  marker-fill: #80B2E6;
+  marker-fill: #ffd72d;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 15] {
-  //marker-fill: #fff74b;
-  marker-fill: #B2D1F0;
+  marker-fill: #fff74b;
 }
+
 
 
   </script>
@@ -220,7 +169,7 @@
   line-opacity: 1;
 }
 
-#pm25_na [ {0} <= 49.92] {
+/*#pm25_na [ {0} <= 49.92] {
    polygon-fill: #4e0000;
 }
 #pm25_na [ {0} <= 32.54] {
@@ -249,7 +198,40 @@
 }
 #pm25_na [ {0} <= 2.98] {
    polygon-fill: #fff74b;
+}*/
+
+#pm25_na [ {0} <= 154] {
+   polygon-fill: #4e0000;
 }
+#pm25_na [ {0} <= 140] {
+   polygon-fill: #870000;
+}
+#pm25_na [ {0} <= 125] {
+   polygon-fill: #c30000;
+}
+#pm25_na [ {0} <= 110] {
+   polygon-fill: #f50000;
+}
+#pm25_na [ {0} <= 90] {
+   polygon-fill: #FF3200;
+}
+#pm25_na [ {0} <= 69] {
+   polygon-fill: #FF5a00;
+}
+#pm25_na [ {0} <= 55] {
+   polygon-fill: #FF8200;
+}
+#pm25_na [ {0} <= 41] {
+   polygon-fill: #FFaa00;
+}
+#pm25_na [ {0} <= 28] {
+   polygon-fill: #ffd72d;
+}
+#pm25_na [ {0} <= 15] {
+   polygon-fill: #fff74b;
+}
+
+
     </script>
 
     <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> 
