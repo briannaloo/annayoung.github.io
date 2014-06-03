@@ -20,12 +20,18 @@
         <span class="country_leftest">0.03</span><span class="country_rightest">153</span><br>
         <aside class="colors">
 
-
-           <div style="background-color:#BFE3BF;"></div>
+          <!--<div style="background-color:#BFE3BF;"></div>
           <div style="background-color:#7FC87F;"></div>
           <div style="background-color:#3EAC3E;"></div>
-           <div style="background-color:#218221;"></div>
-           <div style="background-color:#145214;"></div>
+          <div style="background-color:#218221;"></div>
+          <div style="background-color:#145214;"></div>-->
+          <div style="background-color:#CCEBD6;"></div>
+          <div style="background-color:#4DB870;"></div>
+          <div style="background-color:#009933;"></div>
+          <div style="background-color:#005C1F;"></div>
+          <div style="background-color:#002E0F;"></div>
+          
+           
 
           <div style="background-color:#fff74b;"></div>
           <div style="background-color:#ffd72d;"></div>
@@ -37,6 +43,20 @@
           <div style="background-color:#c30000;"></div>
           <div style="background-color:#870000;"></div>
           <div style="background-color:#4e0000;"></div>
+
+
+
+          <!--<div style="background-color:#a0d080;"></div>
+          <div style="background-color:#90c070;"></div>
+          <div style="background-color:#8AB66C;"></div>
+           <div style="background-color:#80b060;"></div>
+           <div style="background-color:#70a050;"></div>
+
+           <div style="background-color:#609040;"></div>
+           <div style="background-color:#508030;"></div>
+           <div style="background-color:#407020;"></div>
+           <div style="background-color:#306010;"></div>
+           <div style="background-color:#203000;"></div>-->
 
 
           
@@ -124,6 +144,8 @@
   <script type="cartocss/html" id="cities">
   /*City Styles*/
 
+  
+
 #who_georeferenced_clean_v2{
   marker-fill-opacity: 0.8;
   marker-line-color: #FFF;
@@ -134,6 +156,69 @@
   marker-fill: #F7F7F7;
   marker-allow-overlap: true;
 }
+
+/*var colors = [
+    "#fff74b", "#ffd72d", "#FFaa00", "#FF8200", "#FF5a00", "#FF3200"
+    , "#f50000", "#c30000", "#870000", "#4e0000"
+    , "#a0d080", "#90c070", "#8AB66C", "#80b060"
+    , "#70a050", "#609040", "#508030", "#407020"
+    , "#306010", "#203000"
+  ];
+#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
+  marker-fill: colors[19];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 146.5] {
+  marker-fill: colors[18];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 139] {
+  marker-fill: colors[17];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 131.5] {
+  marker-fill: colors[16];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 124] {
+  marker-fill: colors[15];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 116.5] {
+  marker-fill: colors[14];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 109] {
+  marker-fill: colors[13];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 101.5] {
+  marker-fill: colors[12];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 94] {
+  marker-fill: colors[11];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 86.5] {
+  marker-fill: colors[10];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 79] {
+   marker-fill: colors[9];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 71.5] {
+   marker-fill: colors[8];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 64] {
+   marker-fill: colors[7];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 56.5] {
+   marker-fill: colors[6];
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 49] {
+   marker-fill: colors[5];
+ #who_georeferenced_clean_v2 [ pm_2_5 <= 41.5] {
+    marker-fill: colors[4];
+ #who_georeferenced_clean_v2 [ pm_2_5 <= 34] {
+ marker-fill: colors[3];
+ #who_georeferenced_clean_v2 [ pm_2_5 <= 26.5] {
+ marker-fill: colors[2];
+ #who_georeferenced_clean_v2 [ pm_2_5 <= 19] {
+ marker-fill: colors[1];
+ #who_georeferenced_clean_v2 [ pm_2_5 <= 8.5] {
+ marker-fill: colors[0];*/
+
 /*#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
   marker-fill: #4e0000;
 }
@@ -197,20 +282,21 @@
    marker-fill: #fff74b;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 50] {
-   marker-fill: #145214;
+   marker-fill: #002E0F;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 40] {
-   marker-fill: #218221;
+   marker-fill: #005C1F;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 30] {
-   marker-fill: #3EAC3E;
+   marker-fill: #009933;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 20] {
-   marker-fill: #7FC87F;
+   marker-fill: #4DB870;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 10] {
-   marker-fill: #BFE3BF;
+   marker-fill: #CCEBD6;
 }
+
 
   </script>
 
@@ -319,20 +405,21 @@
    polygon-fill: #fff74b;
 }
 #pm25_na [ {0} <= 50] {
-   polygon-fill: #145214;
+   polygon-fill: #002E0F;
 }
 #pm25_na [ {0} <= 40] {
-   polygon-fill: #218221;
+   polygon-fill: #005C1F;
 }
 #pm25_na [ {0} <= 30] {
-   polygon-fill: #3EAC3E;
+   polygon-fill: #009933;
 }
 #pm25_na [ {0} <= 20] {
-   polygon-fill: #7FC87F;
+   polygon-fill: #4DB870;
 }
 #pm25_na [ {0} <= 10] {
-   polygon-fill: #BFE3BF;
+   polygon-fill: #CCEBD6;
 }
+
 
 
 
@@ -500,11 +587,11 @@
           sublayer_city.hide();
           var year = $('#layer_selector li.selected').attr('data');
           col1 = 'pm25_' + year;
-          $("#legend_cities").hide();
+          //$("#legend_cities").hide();
            $("#show_cities").removeClass('shown');
           $("#show_cities").text("Show Cities");
 
-          $("#legend_countries").removeClass("cities_label");
+          //$("#legend_countries").removeClass("cities_label");
         }
         else
         {
@@ -517,11 +604,11 @@
            sublayer_city.show();
 
           //Hide legend on click
-          $("#legend_cities").show();
+          //$("#legend_cities").show();
           $("#show_cities").addClass('shown');
           $("#show_cities").text("Hide Cities");
           
-          $("#legend_countries").addClass("cities_label");
+          //$("#legend_countries").addClass("cities_label");
         }
       });
 
