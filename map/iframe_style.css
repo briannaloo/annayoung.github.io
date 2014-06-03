@@ -214,6 +214,14 @@ html, body, #map {
         font-size: 13px;
         color: #6b6a6a;
       }
+      .country_middle {
+        position: absolute;
+        left:150px;
+        top:40px;
+        font-family: arial;   
+        font-size: 13px;
+        color: #6b6a6a;
+      }
       .city_leftest {
         position: absolute;
         left:16px;

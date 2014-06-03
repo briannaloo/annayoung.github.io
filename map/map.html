@@ -16,22 +16,12 @@
     <div id="legends">   
       
       <div id="legend_countries" class="legend">
-        <p class="legend_title">COUNTRY PM<sub>2.5</sub> LEVELS</p>
-        <span class="country_leftest">0.03</span><span class="country_rightest">153</span><br>
+        <p class="legend_title">PM<sub>2.5</sub> LEVELS</p>
+        <span class="country_leftest">0.03</span>
+        <span class="country_middle">49.92</span>
+        <span class="country_rightest">153</span><br>
         <aside class="colors">
 
-          <!--<div style="background-color:#BFE3BF;"></div>
-          <div style="background-color:#7FC87F;"></div>
-          <div style="background-color:#3EAC3E;"></div>
-          <div style="background-color:#218221;"></div>
-          <div style="background-color:#145214;"></div>-->
-          <div style="background-color:#CCEBD6;"></div>
-          <div style="background-color:#4DB870;"></div>
-          <div style="background-color:#009933;"></div>
-          <div style="background-color:#005C1F;"></div>
-          <div style="background-color:#002E0F;"></div>
-          
-           
 
           <div style="background-color:#fff74b;"></div>
           <div style="background-color:#ffd72d;"></div>
@@ -43,6 +33,23 @@
           <div style="background-color:#c30000;"></div>
           <div style="background-color:#870000;"></div>
           <div style="background-color:#4e0000;"></div>
+
+          <div style="background-color:#80CC99;"></div>
+          <div style="background-color:#4DB870;"></div>
+          <div style="background-color:#33AD5C;"></div>
+          <div style="background-color:#19A347;"></div>
+          <div style="background-color:#009933;"></div>
+          <div style="background-color:#008A2E;"></div>
+          <div style="background-color:#007A29;"></div>
+          <div style="background-color:#006B24;"></div>
+          <div style="background-color:#005C1F;"></div>
+          <div style="background-color:#004C1A;"></div>
+
+          <!--<div style="background-color:#CCEBD6;"></div>
+          <div style="background-color:#4DB870;"></div>
+          <div style="background-color:#009933;"></div>
+          <div style="background-color:#005C1F;"></div>
+          <div style="background-color:#002E0F;"></div>-->
 
 
 
@@ -62,28 +69,6 @@
           
         </aside>
         <div id="legend_cities" style="display:none">
-          <!--<aside class="colors colors2">
-            <div style="background-color:#B2D1F0;"></div>
-            <div style="background-color:#80B2E6;"></div>
-            <div style="background-color:#4D94DB;"></div>
-            <div style="background-color:#1975D1;"></div>
-            <div style="background-color:#005CB8;"></div>
-            <div style="background-color:#0052A3;"></div>
-            <div style="background-color:#00478F;"></div>
-            <div style="background-color:#003366;"></div>
-            <div style="background-color:#002952;"></div>
-            <div style="background-color:#001429;"></div>->
-
-          <!--<div style="background-color:#F7F7F7;"></div>
-          <div style="background-color:#DEDEDE;"></div>
-          <div style="background-color:#C6C6C6;"></div>
-          <div style="background-color:#ADADAD;"></div>
-          <div style="background-color:#949494;"></div>
-          <div style="background-color:#7C7C7C;"></div>
-          <div style="background-color:#636363;"></div>
-          <div style="background-color:#4A4A4A;"></div>
-          <div style="background-color:#313131;"></div>
-          <div style="background-color:#191919;"></div>-->
         </aside>
           <span class="city_leftest">2</span><span class="city_rightest">153</span>
           <p class="city_title">CITY PM<sub>2.5</sub> LEVELS</p><br>
@@ -251,7 +236,7 @@
 }*/
 
 
-#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
+/*#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
    marker-fill: #4e0000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 140] {
@@ -295,6 +280,69 @@
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 10] {
    marker-fill: #CCEBD6;
+}*/
+
+
+#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
+   marker-fill: #004C1A;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 146.3] {
+   marker-fill: #005C1F;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 138.6] {
+   marker-fill: #006B24;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 130.9] {
+   marker-fill: #007A29;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 123.2] {
+   marker-fill: #008A2E;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 115.5] {
+   marker-fill: #009933;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 107.8] {
+   marker-fill: #19A347;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 100.1] {
+   marker-fill: #33AD5C;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 92.4] {
+   marker-fill: #4DB870;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 84.7] {
+   marker-fill: #80CC99;
+}
+
+#who_georeferenced_clean_v2 [ pm_2_5 <= 49.92] {
+   marker-fill: #4e0000;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 32.54] {
+   marker-fill: #870000;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 25.17] {
+   marker-fill: #c30000;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 15.17] {
+   marker-fill: #f50000;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 10.85] {
+   marker-fill: #FF3200;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 9.15] {
+   marker-fill: #FF5a00;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 8.15] {
+   marker-fill: #FF8200;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 6.06] {
+   marker-fill: #FFaa00;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 4.62] {
+   marker-fill: #ffd72d;
+}
+#who_georeferenced_clean_v2 [ pm_2_5 <= 2.98] {
+   marker-fill: #fff74b;
 }
 
 
@@ -374,7 +422,7 @@
    polygon-fill: #fff74b;
 }*/
 
-#pm25_na [ {0} <= 154] {
+/*#pm25_na [ {0} <= 154] {
    polygon-fill: #4e0000;
 }
 #pm25_na [ {0} <= 140] {
@@ -418,8 +466,71 @@
 }
 #pm25_na [ {0} <= 10] {
    polygon-fill: #CCEBD6;
+}*/
+
+
+
+#pm25_na [ {0} <= 154] {
+   polygon-fill: #004C1A;
+}
+#pm25_na [ {0} <= 146.3] {
+   polygon-fill: #005C1F;
+}
+#pm25_na [ {0} <= 138.6] {
+   polygon-fill: #006B24;
+}
+#pm25_na [ {0} <= 130.9] {
+   polygon-fill: #007A29;
+}
+#pm25_na [ {0} <= 123.2] {
+   polygon-fill: #008A2E;
+}
+#pm25_na [ {0} <= 115.5] {
+   polygon-fill: #009933;
+}
+#pm25_na [ {0} <= 107.8] {
+   polygon-fill: #19A347;
+}
+#pm25_na [ {0} <= 100.1] {
+   polygon-fill: #33AD5C;
+}
+#pm25_na [ {0} <= 92.4] {
+   polygon-fill: #4DB870;
+}
+#pm25_na [ {0} <= 84.7] {
+   polygon-fill: #80CC99;
 }
 
+#pm25_na [ {0} <= 49.92] {
+   polygon-fill: #4e0000;
+}
+#pm25_na [ {0} <= 32.54] {
+   polygon-fill: #870000;
+}
+#pm25_na [ {0} <= 25.17] {
+   polygon-fill: #c30000;
+}
+#pm25_na [ {0} <= 15.17] {
+   polygon-fill: #f50000;
+}
+#pm25_na [ {0} <= 10.85] {
+   polygon-fill: #FF3200;
+}
+#pm25_na [ {0} <= 9.15] {
+   polygon-fill: #FF5a00;
+}
+#pm25_na [ {0} <= 8.15] {
+   polygon-fill: #FF8200;
+}
+#pm25_na [ {0} <= 6.06] {
+   polygon-fill: #FFaa00;
+}
+#pm25_na [ {0} <= 4.62] {
+   polygon-fill: #ffd72d;
+}
+#pm25_na [ {0} <= 2.98] {
+   polygon-fill: #fff74b;
+}
 
 
 
