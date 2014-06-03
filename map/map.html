@@ -237,7 +237,7 @@
           $('#layer_selector li').click(function() {        
             $('#layer_select li').addClass('selected');
           });
-          var col1 = 'pm25_2000';
+          var col1 = 'pm25_2012';
           var col2 = '';
           var country = 'country';
           var city = 'city_station';
@@ -288,7 +288,7 @@
             cartocss: "#bathymetry_layers{ polygon-fill: #598cdb;polygon-opacity: 0.2;line-color: #FFF;line-width: 0;line-opacity: 1;}"
             },{
             sql: "SELECT * FROM pm25_na",
-            cartocss: $('#pm25_na').html().format('pm25_2000'),
+            cartocss: $('#pm25_na').html().format('pm25_2012'),
             interactivity: "cartodb_id, the_geom, pm25_2000, pm25_2001, pm25_2002, pm25_2003, pm25_2004, pm25_2005, pm25_2006, pm25_2007, pm25_2008, pm25_2009, pm25_2010, pm25_2011, pm25_2012, country"
             },{
             sql: "SELECT * FROM who_georeferenced_clean_v2",
