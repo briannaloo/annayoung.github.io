@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,7 +17,7 @@
       <div id="legend_countries" class="legend">
         <p class="legend_title">COUNTRY PM<sub>2.5</sub> LEVELS</p>
         <span class="country_leftest">0.03</span><span class="country_rightest">49.92</span><br>
-        <aside class="colors">
+        <aside class="country_colors">
           <div style="background-color:#fff74b;"></div>
           <div style="background-color:#ffd72d;"></div>
           <div style="background-color:#FFaa00;"></div>
@@ -30,32 +29,40 @@
           <div style="background-color:#870000;"></div>
           <div style="background-color:#4e0000;"></div>
         </aside>
-        <div id="legend_cities" style="display:none">
-          <aside class="colors colors2">
-            <!--<div style="background-color:#B2D1F0;"></div>
-            <div style="background-color:#80B2E6;"></div>
-            <div style="background-color:#4D94DB;"></div>
-            <div style="background-color:#1975D1;"></div>
-            <div style="background-color:#005CB8;"></div>
-            <div style="background-color:#0052A3;"></div>
-            <div style="background-color:#00478F;"></div>
-            <div style="background-color:#003366;"></div>
-            <div style="background-color:#002952;"></div>
-            <div style="background-color:#001429;"></div>-->
-          <div style="background-color:#F7F7F7;"></div>
-          <div style="background-color:#DEDEDE;"></div>
-          <div style="background-color:#C6C6C6;"></div>
-          <div style="background-color:#ADADAD;"></div>
-          <div style="background-color:#949494;"></div>
-          <div style="background-color:#7C7C7C;"></div>
+      </div>
+      
+      <div id="legend_countries_gray" class="legend" style="display:none">
+        <p class="legend_title">COUNTRY PM<sub>2.5</sub> LEVELS</p>
+        <span class="country_leftest">0.03</span><span class="country_rightest">49.92</span><br>
+        <aside class="country_colors">
+          <div style="background-color:#262626;"></div>
+          <div style="background-color:#3B3B3B;"></div>
+          <div style="background-color:#4F4F4F;"></div>
           <div style="background-color:#636363;"></div>
-          <div style="background-color:#4A4A4A;"></div>
-          <div style="background-color:#313131;"></div>
-          <div style="background-color:#191919;"></div>
+          <div style="background-color:#787878;"></div>
+          <div style="background-color:#8C8C8C;"></div>
+          <div style="background-color:#A1A1A1;"></div>
+          <div style="background-color:#B5B5B5;"></div>
+          <div style="background-color:#C9C9C9;"></div>
+          <div style="background-color:#DEDEDE;"></div>
         </aside>
-          <span class="city_leftest">2</span><span class="city_rightest">153</span>
-          <p class="city_title">CITY PM<sub>2.5</sub> LEVELS</p><br>
-        </div>
+      </div>
+      
+      <div id="legend_cities" class="legend" style="display:none">
+        <p class="legend_title">CITY PM<sub>2.5</sub> LEVELS</p><br>
+        <span class="city_leftest">2</span><span class="city_rightest">153</span><br>
+        <aside class="city_colors">
+          <div style="background-color:#fff74b;"></div>
+          <div style="background-color:#ffd72d;"></div>
+          <div style="background-color:#FFaa00;"></div>
+          <div style="background-color:#FF8200;"></div>
+          <div style="background-color:#FF5a00;"></div>
+          <div style="background-color:#FF3200;"></div>
+          <div style="background-color:#f50000;"></div>
+          <div style="background-color:#c30000;"></div>
+          <div style="background-color:#870000;"></div>
+          <div style="background-color:#4e0000;"></div>
+        </aside>
       </div>
     </div>
 
@@ -118,49 +125,38 @@
   marker-line-width: 1.5;
   marker-line-opacity: 1;
   marker-width: 10;
-  //marker-fill: #FFFFB2;
-  marker-fill: #F7F7F7;
+  marker-fill: #FFFFB2;
   marker-allow-overlap: true;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
-  //marker-fill: #4e0000;
-  marker-fill: #191919;
+  marker-fill: #4e0000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 140] {
-  //marker-fill: #870000;
-  marker-fill: #313131;
+  marker-fill: #870000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 125] {
-  //marker-fill: #c30000;
-  marker-fill: #4A4A4A;
+  marker-fill: #c30000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 110] {
-  //marker-fill: #f50000;
-  marker-fill: #636363;
+  marker-fill: #f50000;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 90] {
-  //marker-fill: #FF3200;
-  marker-fill: #7C7C7C;
+  marker-fill: #FF3200;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 69] {
-  //marker-fill: #FF5a00;
-  marker-fill: #949494;
+  marker-fill: #FF5a00;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 55] {
-  //marker-fill: #FF8200;
-  marker-fill: #ADADAD;
+  marker-fill: #FF8200;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 41] {
-  //marker-fill: #FFaa00;
-  marker-fill: #C6C6C6;
+  marker-fill: #FFaa00;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 28] {
-  //marker-fill: #ffd72d;
-  marker-fill: #DEDEDE;
+  marker-fill: #ffd72d;
 }
 #who_georeferenced_clean_v2 [ pm_2_5 <= 15] {
-  //marker-fill: #fff74b;
-  marker-fill: #F7F7F7;
+  marker-fill: #fff74b;
 }
 
   </script>
@@ -175,7 +171,6 @@
   line-width: 1;
   line-opacity: 1;
 }
-
 #pm25_na [ {0} <= 49.92] {
    polygon-fill: #4e0000;
 }
@@ -205,6 +200,48 @@
 }
 #pm25_na [ {0} <= 2.98] {
    polygon-fill: #fff74b;
+}
+    </script>
+    
+   <script type="cartocss/html" id="pm25_gray">
+   /*Country Styles*/
+
+#pm25_na{
+  polygon-fill: #121212;
+  polygon-opacity: 0.8;
+  line-color: #FFF;
+  line-width: 1;
+  line-opacity: 1;
+}
+#pm25_na [ {0} <= 49.92] {
+   polygon-fill: #262626;
+}
+#pm25_na [ {0} <= 32.54] {
+   polygon-fill: #3B3B3B;
+}
+#pm25_na [ {0} <= 25.17] {
+   polygon-fill: #4F4F4F;
+}
+#pm25_na [ {0} <= 15.17] {
+   polygon-fill: #636363;
+}
+#pm25_na [ {0} <= 10.85] {
+   polygon-fill: #787878;
+}
+#pm25_na [ {0} <= 9.15] {
+   polygon-fill: #8C8C8C;
+}
+#pm25_na [ {0} <= 8.15] {
+   polygon-fill: #A1A1A1;
+}
+#pm25_na [ {0} <= 6.06] {
+   polygon-fill: #B5B5B5;
+}
+#pm25_na [ {0} <= 4.62] {
+   polygon-fill: #C9C9C9;
+}
+#pm25_na [ {0} <= 2.98] {
+   polygon-fill: #DEDEDE;
 }
     </script>
 
@@ -352,7 +389,6 @@
             layer.setCartoCSS(style);
             sublayer_city.hide();
 
-
           $('#show_cities').removeClass('shown');
           $("#show_cities").text("Show Cities");
           $("#legend_cities").hide();
@@ -370,9 +406,16 @@
           sublayer_city.hide();
           var year = $('#layer_selector li.selected').attr('data');
           col1 = 'pm25_' + year;
+          
+          $("#legend_countries_gray").hide();
           $("#legend_cities").hide();
+		  $("#legend_countries").show();
+          
            $("#show_cities").removeClass('shown');
           $("#show_cities").text("Show Cities");
+          
+		  var style = $('#pm25_na').html().format(col1);
+          sublayer_country.setCartoCSS(style);
 
           $("#legend_countries").removeClass("cities_label");
         }
@@ -385,9 +428,17 @@
           //Attached the CSS to the layer
           sublayer_city.setCartoCSS(style);
            sublayer_city.show();
-
+			
+		  // Set countries to gray
+		  var style = $('#pm25_gray').html().format(col1);
+          sublayer_country.setCartoCSS(style);
+		  
+		  $("#legend_countries_gray").show();
+		  $("#legend_cities").show();
+		  $("#legend_countries").hide();
           //Hide legend on click
-          $("#legend_cities").show();
+          //$("#legend_cities").show();
+          
           $("#show_cities").addClass('shown');
           $("#show_cities").text("Hide Cities");
           

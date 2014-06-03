@@ -1,0 +1,37 @@
+#pm25_na{
+  polygon-fill: #FFFFB2;
+  polygon-opacity: 0.8;
+  line-color: #FFF;
+  line-width: 1;
+  line-opacity: 1;
+}
+#pm25_na [ {0} <= 49.92] {
+   polygon-fill: #4e0000;
+}
+#pm25_na [ {0} <= 32.54] {
+   polygon-fill: #870000;
+}
+#pm25_na [ {0} <= 25.17] {
+   polygon-fill: #c30000;
+}
+#pm25_na [ {0} <= 15.17] {
+   polygon-fill: #f50000;
+}
+#pm25_na [ {0} <= 10.85] {
+   polygon-fill: #FF3200;
+}
+#pm25_na [ {0} <= 9.15] {
+   polygon-fill: #FF5a00;
+}
+#pm25_na [ {0} <= 8.15] {
+   polygon-fill: #FF8200;
+}
+#pm25_na [ {0} <= 6.06] {
+   polygon-fill: #FFaa00;
+}
+#pm25_na [ {0} <= 4.62] {
+   polygon-fill: #ffd72d;
+}
+#pm25_na [ {0} <= 2.98] {
+   polygon-fill: #fff74b;
+}
