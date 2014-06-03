@@ -217,7 +217,7 @@ html, body, #map {
       .city_leftest {
         position: absolute;
         left:16px;
-        top:83px;
+        top:110px;
         font-family: arial;   
         font-size: 13px;
         color: #6b6a6a;
@@ -225,7 +225,7 @@ html, body, #map {
       .city_rightest {
         position: absolute;
         right:15px;
-        top:83px;
+        top:110px;
         font-family: arial;   
         font-size: 13px;
         color: #6b6a6a;
@@ -236,6 +236,9 @@ html, body, #map {
         top: 56px;
         border: 1px solid #a4a2a2;
         width:300px;
+      }
+      .colors2 {
+        top: 83px;
       }
       .legend_title {
         text-align: center;
@@ -261,7 +264,7 @@ html, body, #map {
       }
 
       .cities_label {
-        height: 113px;
+        height: 140px;
       }
 
       #rotated_text {

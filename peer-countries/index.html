@@ -10,14 +10,18 @@
   <script src="dist/app-v1.js"></script>
 </head>
 <body>
+  <div class="contribute">
+    <a class="year" id="survey" style="cursor: pointer;">Please contribute to our data!</a>
+  </div>
+
   <div id=container class="container">
   	
   	<div class="wrap">
   		<main role="main">
         <nav role=navigation>
-          <a class="year contribute" href="survey/index.html">Please contribute to our data!</a>
 
           <div id="timeline">
+            
           </div>
         </nav>
         <div id="diagram"></div>
@@ -48,11 +52,22 @@
         <div class="clear"></div>
       </div>
     </div>
+
+    <iframe id="frame" src="survey/iframe.html" style="opacity: 0"
+    width="600" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
   </div>
 
   <script>
-    // help
     (function() {
+      // survey
+      var survey = d3.select('#survey').on('click', function() {
+        d3.select("#frame").transition()
+        .style("opacity", "1")
+        .duration(500);
+      });
+
+
+      // help
       var help = d3.select('#help');
 
       help.on('click', function() {
