@@ -238,7 +238,7 @@ html, body, #map {
       }
       .legend_title {
         text-align: center;
-        padding-top: 10px;
+        margin-top: 10px;
         font-family: arial;
         font-size: 13px;
         color: #6b6a6a;
