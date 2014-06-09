@@ -583,8 +583,17 @@ main {
   position: fixed;
   top: 50%;
   left: 50%;
-  margin: -307px 0 0 -330px;
-  z-index: 100;
+  margin: -375px 0 0 -382px;
+  z-index: -1;
+}
+
+.language {
+  cursor: pointer;
+  padding: 3px;
+}
+
+.selected-language {
+  text-decoration: underline;
 }
 
 .contribute:hover {

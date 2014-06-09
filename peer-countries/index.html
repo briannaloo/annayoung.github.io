@@ -10,8 +10,9 @@
   <script src="main.js"></script>
 </head>
 <body>
-  <iframe id="frame" src="survey/survey.html" width="660" height="615" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading...</iframe>
-  <img src="images/close.png" id="frame" class="close" style="top: 51%; left: 50%; width: 25px; height: 25px; cursor: pointer;"></img>
+  <iframe id="frame" src="survey/survey.html" width="765" height="750" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
+  <img src="images/close.png" id="frame" class="close" style="top: 51%; left: 50%; width: 25px; height: 25px; cursor: pointer; z-index: -1;"></img>
+  
 
   <div id=container class="container">
     <div id="survey" class="contribute">
@@ -31,7 +32,7 @@
     <div id=help-wrapper class=help-wrapper>
       <div class="help" id="help">
         <div class="tab">How to read the plot</div>
-        <div class="help-content">
+        <div class="help-content" style="z-index:1000">
           <h3>How to read the plot</h3>
           <img src="images/help.png" class="left">
           <p>
@@ -57,6 +58,7 @@
   <script>
 
     (function() {
+      
       // survey
       var open = false;
 
@@ -81,7 +83,6 @@
           open = false;
         }
       });
-        //close it
       d3.select('.close').on('click', function() {
         frame.style("z-index", "-1");
         frame.transition()
