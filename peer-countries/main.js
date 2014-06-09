@@ -559,12 +559,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         checked: function(d) { return d === config.now || null; }
       })
       .on('click', function(d) {
-      	 /*config.sourcePadding = config.sourcePadding || 3;
-
-    if (config.now === (Object.keys(data.matrix)[2]))
-    	config.targetPadding = config.sourcePadding;
-    else
-    	config.targetPadding = config.targetPadding || 20;*/
         var y = d;
         year.selectAll('input').attr('checked', function(d) {
           return y === d || null;
