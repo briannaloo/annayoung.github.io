@@ -570,12 +570,21 @@ main {
   background-color: #D8D8D8;
   color: #668DB7;
   cursor: pointer;
+  text-align: center;
   background-image: -webkit-linear-gradient(top, #D8D8D8, #CDCDCD);
   background-image:    -moz-linear-gradient(top, #D8D8D8, #CDCDCD);
   background-image:     -ms-linear-gradient(top, #D8D8D8, #CDCDCD);
   background-image:      -o-linear-gradient(top, #D8D8D8, #CDCDCD);
   background-image:   linear-gradient(to bottom, #D8D8D8, #CDCDCD);
-  z-index: 9999;
+  z-index: 50;
+}
+
+#frame {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -307px 0 0 -330px;
+  z-index: 100;
 }
 
 .contribute:hover {

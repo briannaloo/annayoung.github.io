@@ -10,10 +10,12 @@
   <script src="main.js"></script>
 </head>
 <body>
+  <iframe id="frame" src="survey/survey.html" width="660" height="615" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+  <img src="images/close.png" id="frame" class="close" style="top: 51%; left: 50%; width: 25px; height: 25px; cursor: pointer;"></img>
 
   <div id=container class="container">
-    <div class="contribute">
-      <a class="survey" href="survey/index.html">Please contribute to our data!</a>
+    <div id="survey" class="contribute">
+      <span style="position: absolute; top: 15px; left: 2px">Please contribute to our data!</span>
     </div>
 
   	<div class="wrap">
@@ -53,8 +55,30 @@
   </div>
 
   <script>
-    // help
+
     (function() {
+      // survey
+      var frame = d3.selectAll('#frame');
+      frame.style("opacity", "0");
+      d3.select('#survey').on('click', function() {
+        frame.style("z-index", "100");
+        frame.transition()
+          .style("opacity", "1")
+          .duration(400)
+          .delay(0);
+      });
+        //close it
+      d3.select('.close').on('click', function() {
+        console.log("hello");
+        frame.style("z-index", "-1");
+        frame.transition()
+          .style("opacity", "0")
+          .duration(600)
+          .delay(0);
+      });
+
+
+      // help
       var help = d3.select('#help');
 
       help.on('click', function() {
