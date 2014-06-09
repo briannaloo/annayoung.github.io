@@ -58,18 +58,31 @@
 
     (function() {
       // survey
+      var open = false;
+
       var frame = d3.selectAll('#frame');
       frame.style("opacity", "0");
       d3.select('#survey').on('click', function() {
-        frame.style("z-index", "100");
-        frame.transition()
-          .style("opacity", "1")
-          .duration(400)
+        if (open === false)
+        {
+          frame.style("z-index", "100");
+          frame.transition()
+            .style("opacity", "1")
+            .duration(400)
+            .delay(0);
+          open = true;
+        }
+        else {
+          frame.style("z-index", "-1");
+          frame.transition()
+          .style("opacity", "0")
+          .duration(600)
           .delay(0);
+          open = false;
+        }
       });
         //close it
       d3.select('.close').on('click', function() {
-        console.log("hello");
         frame.style("z-index", "-1");
         frame.transition()
           .style("opacity", "0")
