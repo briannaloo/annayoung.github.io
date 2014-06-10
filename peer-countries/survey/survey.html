@@ -9,18 +9,25 @@
 <link rel="stylesheet" type="text/css" href="">
 
 <link href='./static/forms/client/css/3377299198-formview_ltr.css' type='text/css' rel='stylesheet'>
+
 <style type="text/css">
-.language {
-  cursor: pointer;
-  padding: 4px;
-  color: #6A93BF;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 3px;
-}
+
+  .language {
+    cursor: pointer;
+    padding: 4px;
+    color: #6A93BF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px;
+  }
   .selected-language {
     text-decoration: underline;
   }
+
+  #searched {
+    background-color: #FFFF99;
+  }
+
 </style>
 
 <script src="./jquery.js" type="text/javascript"></script>
@@ -68,6 +75,7 @@
     <a class="language">русский</a>
     <a class="language">हिंदी</a>
     <span><br><br></span>
+   
 
 <hr class="ss-email-break" style="display:none;">
 <div class="ss-required-asterisk" aria-hidden="true">* Required</div></div></div>
@@ -109,7 +117,19 @@
   <div class="ss-form-entry">
 <label class="ss-q-item-label" for="entry_64097766"><div class="ss-q-title"><span id="question2">Identify up to 20 countries that are often compared to yours because of similarities with respect to natural resources, economic development, and environmental challenges.</span>
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk">*</span></div>
+<span class="ss-required-asterisk">*</span>
+
+<span><br><br>
+  <form method="get">
+      <input type="search" placeholder="Search" name="country_search" results="0"
+      onKeyUP="searchCountries(this.value)"
+      onsearch="searchCountries(this.value)"
+      id="searchbox"
+      />
+    </form>
+</span>
+
+</div>
 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
 
 <ul class="ss-choices ss-choices-required" role="group" aria-label="Identify up to 20 countries that are often compared to yours because of similarities with respect to natural resources, economic development, and environmental challenges.  Please select at least 3 countries." style="width: 100%; overflow-y: scroll; padding: 10px;
@@ -826,6 +846,44 @@ columns: 5;
       }
 
     });
+
+
+    // search for countries
+    function searchCountries(text) {
+      var length = text.length;
+
+      if (length === 0) {
+        console.log("true");
+        $('.ss-choice-label').each(function(index) {
+          $(this).removeAttr("id", "searched");
+        });
+      }
+
+      else
+      {
+        $('.ss-choice-label').each(function(index) {
+          if (index > 4) {
+            index -=5;
+            var country = $(this).text();
+            if (country.substring(0, length).toUpperCase() === text.toUpperCase())
+            {
+              $(this).attr("id", "searched");
+            }
+            else
+              $(this).removeAttr("id", "searched");
+          }
+        });
+      }
+    };
+
+    $("#searchbox").on('keydown', function(e) {
+      if (e.keyCode == 13)
+      {
+        event.preventDefault();
+        return false;
+      }
+    });
+
 
 </script>
 
