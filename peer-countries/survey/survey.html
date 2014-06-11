@@ -28,6 +28,12 @@
     background-color: #FFFF99;
   }
 
+  #searchbox {
+    z-index: 150;
+    opacity: 0.9;
+  }
+
+
 </style>
 
 <script src="./jquery.js" type="text/javascript"></script>
@@ -60,7 +66,7 @@
 
 
 
-<div class="ss-form-container" style="width: 700px;"><div class="ss-header-image"></div>
+<div class="ss-form-container" style="width: 97%;"><div class="ss-header-image"></div>
 <div class="ss-top-of-page"><div class="ss-form-heading">
 
 
@@ -132,11 +138,11 @@
 </div>
 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
 
-<ul class="ss-choices ss-choices-required" role="group" aria-label="Identify up to 20 countries that are often compared to yours because of similarities with respect to natural resources, economic development, and environmental challenges.  Please select at least 3 countries." style="width: 100%; overflow-y: scroll; padding: 10px;
+<ul class="ss-choices ss-choices-required" role="group" aria-label="Identify up to 20 countries that are often compared to yours because of similarities with respect to natural resources, economic development, and environmental challenges.  Please select at least 3 countries." style="width: 97%; overflow-y: scroll; padding: 10px;
 
-columns: 5;
--webkit-columns: 5;
--moz-columns: 5;">
+columns: 6;
+-webkit-columns: 6;
+-moz-columns: 6;">
 
   <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Afghanistan" id="group_875817215_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
 <span class="ss-choice-label">Afghanistan</span>
@@ -847,15 +853,15 @@ columns: 5;
 
     });
 
-
+    var search_position = $('#searchbox').offset().top;
     // search for countries
     function searchCountries(text) {
       var length = text.length;
 
       if (length === 0) {
-        console.log("true");
         $('.ss-choice-label').each(function(index) {
           $(this).removeAttr("id", "searched");
+          $('#searchbox').css("position", "static");
         });
       }
 
@@ -865,22 +871,26 @@ columns: 5;
         $('.ss-choice-label').each(function(index) {
           if (index > 4) {
             index -=5;
-            var country = $(this).text();
-            if (country.substring(0, length).toUpperCase() === text.toUpperCase())
+            var country = $(this).text().toUpperCase();
+            //if (country.substring(0, length).toUpperCase() === text.toUpperCase())
+            if (country.indexOf(text.toUpperCase()) != -1)
             {
               counter++;
               $(this).attr("id", "searched");
               
               if (counter===1) { // scroll to first search result
-                //$('html, body').animate({
-                  //scrollTop: $(this).offset().top}, 500);
-                //location.href = "#";
-                //location.href = "#searched";
-                //$(this).scrollTo();
+                var scroll_y = $(this).offset().top - 50;
+                $('html, body').animate({
+                  scrollTop: scroll_y
+                }, 200);
+
+                $('#searchbox').css("position", "fixed");
               }
             }
             else
+            {
               $(this).removeAttr("id", "searched");
+            }
           }
         });
       }

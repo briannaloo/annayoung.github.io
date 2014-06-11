@@ -580,10 +580,9 @@ main {
 }
 
 #frame {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: -375px 0 0 -382px;
+  position: absolute;
+  top: 12.5%;
+  left: 12.5%;
   z-index: -1;
 }
 
