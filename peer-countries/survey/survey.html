@@ -825,7 +825,7 @@ columns: 5;
       }
        else if (this.text === "हिंदी")
       {
-        $("#question1").text("あなたはどこの国から来たの？");
+        $("#question1").text("");
         $("#question2").text("क्रपिया २० देशों को पहेच्छनिए, जिन में आपके देश के समान प्राकृतिक संसाधान हैं, और जहाँ आपके देश के समान आर्थिक वा पर्यावरनिया चुनौतियाँ हैं.");
         $("#occupation").text("आपका व्यवसाय क्या है?");
         translatePeers(hindi, occupations_hindi);
@@ -839,8 +839,8 @@ columns: 5;
       }
       else if (this.text === "русский")
       {
-        $("#question1").text("ما هي جنسيتك؟");
-        $("#question2").text("اختر 20 بلد، أو أقل،  يتشابهون مع بلدك بالنسبه إلى الموارد الطبيعيه و التقدم الإقتصادي و المشاكل البيئيه؟");
+        $("#question1").text("");
+        $("#question2").text("Назовите до 20ти стран,  которые часто сравнивают с Вашей (страной) по аналагичному отношению к природным ресурсам, экономическому развитию и по отношению к экологическим проблемам");
         $("#occupation").text("Чем вы занимаетесь?");
         translatePeers(russian, occupations_russian);
       }
@@ -861,13 +861,23 @@ columns: 5;
 
       else
       {
+        var counter = 0;
         $('.ss-choice-label').each(function(index) {
           if (index > 4) {
             index -=5;
             var country = $(this).text();
             if (country.substring(0, length).toUpperCase() === text.toUpperCase())
             {
+              counter++;
               $(this).attr("id", "searched");
+              
+              if (counter===1) { // scroll to first search result
+                //$('html, body').animate({
+                  //scrollTop: $(this).offset().top}, 500);
+                //location.href = "#";
+                //location.href = "#searched";
+                //$(this).scrollTo();
+              }
             }
             else
               $(this).removeAttr("id", "searched");
