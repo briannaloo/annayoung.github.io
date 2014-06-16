@@ -41,22 +41,8 @@ public class convertToJSON
 		loadCountries(matrix, mutual_matrix, rejected_matrix, 
 			country_indices, region_indices, countries, regions, scan, 
 			region_names, names_length);
-
-		/*PrintWriter regionCountries = new PrintWriter("updated data/Peers.json", "UTF-8");
-		printData(regionCountries, names, region_indices, matrix, names_length, "2012");
-		PrintWriter mutualData = new PrintWriter("updated data/MutualPeers.json", "UTF-8");
-		printData(mutualData, names, region_indices, mutual_matrix, names_length, "Mutual Peers");
-
-		PrintWriter countriesCSV = new PrintWriter("updated data/Peers2.csv", "UTF-8");
-		printCSV(countriesCSV, names, region_indices, matrix, names_length, names);
-		PrintWriter mutualCSV = new PrintWriter("updated data/MutualPeers.csv", "UTF-8");
-		printCSV(mutualCSV, names, region_indices, mutual_matrix, names_length, names);
-		*/
-
-		//PrintWriter rejectedCSV = new PrintWriter("updated data/rejected.csv", "UTF-8");
-		//printCSV(rejectedCSV, names, region_indices, rejected_matrix, names_length, names);
-
-		PrintWriter mutualData = new PrintWriter("updated data/MutualPeers.json", "UTF-8");
+ 
+		PrintWriter mutualData = new PrintWriter("Peers.json", "UTF-8");
 		printCombined(mutualData, names, region_indices, matrix, mutual_matrix, rejected_matrix, names_length, 
 			"All Peers", "Mutual Peers", "Unreciprocated Peers");
 

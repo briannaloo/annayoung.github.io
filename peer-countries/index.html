@@ -11,6 +11,30 @@
 </head>
 <body>
   <iframe id="frame" src="survey/survey.html" width="75%" height="75%" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
+  <div id="frame" class="results" style="width: 75%; height: 75%; top: 12.5%; left: 12.5%; background-color: #e8eef7; display: none;">
+    <div style="width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #fff; border:1px solid #ccc; overflow-y: scroll;">
+      <div style="width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center;">
+        <span>Thanks! Your response has been recorded.<br>
+          Here's how your response compares to others.<br><br></span>
+        <span id="origin" style="font-size: 18px; color: rgb(104, 63, 146);">COUNTRY</span>
+
+        <span style="text-decoration: underline;"><br><br>You said your country's peers are: <br></span>
+        <span id="peers-text"></span>
+
+        <div id="col1" style="width: 50%; position: absolute; left: 0;">
+          <span style="text-decoration: underline;"><br>The data shows your country's peers are: <br></span>
+          <span id="data-peers"></span>
+          <br><br><br><br>
+        </div>
+        <div id="col2" style="width: 50%; position: absolute; right: 0;">
+          <span style="text-decoration: underline;"><br>These countries think your country is their peer: <br></span>
+          <span id="their-peer"></span>
+        </div>
+
+        <span id="results"></span>
+      </div>
+    </div>
+  </div>
   <img src="images/close.png" id="frame" class="close" style="top: 12.5%; left: 12.5%; width: 25px; height: 25px; cursor: pointer; z-index: -1;"></img>
   
 
@@ -56,10 +80,7 @@
   </div>
 
   <script>
-    /*var width = document.getElementById("frame").style.width / 2;
-    var height = document.getElementById("frame").style.height / 2;
-    document.getElementById("frame").style.margin = "-" + height + "px 0px 0px -" + width + "px";
-*/
+
     (function() {
       
       // survey
@@ -119,13 +140,17 @@
   </script>
 
 
+
   <script>
     (function() {
+      window.peer_data;  // make data global, so survey can access
 
-      var datafile = 'json/MutualPeers.json';
+
+      var datafile = 'json/Peers.json';
       var aLittleBit = Math.PI / 100000;
 
       d3.json(datafile, function(data) {
+        peer_data = data;
         var now = "Mutual Peers";        
         var chart = Globalmigration.chart(data, {
           element: '#diagram',
