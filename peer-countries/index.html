@@ -8,17 +8,42 @@
 
   <script src="javascripts/d3.v3.min.js"></script>
   <script src="main.js"></script>
+
+  <style type="text/css">
+  .results {
+    width: 75%; height: 75%; top: 12.5%; left: 12.5%; background-color: #e8eef7; display: none;
+  }
+  .results-container {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #668DB7; border:1px solid #ccc; overflow-y: scroll;
+    background-image: -webkit-linear-gradient(top, #13A778 0px, #51B375 100%);
+    background-image:    -moz-linear-gradient(top, #13A778 0px, #51B375 100%);
+    background-image:     -ms-linear-gradient(top, #13A778 0px, #51B375 100%);
+    background-image:      -o-linear-gradient(top, #13A778 0px, #51B375 100%);
+    background-image:   linear-gradient(to bottom, #13A778 0px, #51B375 100%);
+  }
+  .text-results {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #FFFEFF; font-size: 18px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  }
+  #origin {
+    font-size: 18px; color: rgb(104, 63, 146);
+  }
+
+  </style>
 </head>
 <body>
-  <iframe id="frame" src="survey/survey.html" width="75%" height="75%" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
-  <div id="frame" class="results" style="width: 75%; height: 75%; top: 12.5%; left: 12.5%; background-color: #e8eef7; display: none;">
-    <div style="width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #fff; border:1px solid #ccc; overflow-y: scroll;">
-      <div style="width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center;">
+  <iframe id="frame" src="survey/index.html" width="75%" height="75%" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
+  <div id="frame" class="results">
+    <div class="results-container">
+        <div id="timeline2"></div>
+        <div id="diagram2"></div>
+
+      <div class="text-results">
         <span>Thanks! Your response has been recorded.<br>
           Here's how your response compares to others.<br><br></span>
-        <span id="origin" style="font-size: 18px; color: rgb(104, 63, 146);">COUNTRY</span>
+        <span id="origin">COUNTRY</span>
 
-        <span style="text-decoration: underline;"><br><br>You said your country's peers are: <br></span>
+        <!--<span style="text-decoration: underline;"><br><br>You said your country's peers are: <br></span>
         <span id="peers-text"></span>
 
         <div id="col1" style="width: 50%; position: absolute; left: 0;">
@@ -31,7 +56,7 @@
           <span id="their-peer"></span>
         </div>
 
-        <span id="results"></span>
+        <span id="results"></span>-->
       </div>
     </div>
   </div>
