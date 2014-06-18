@@ -54,6 +54,9 @@
 
       <div class="results-container">
         <div class="container1">
+
+          <span class="mini-plot-label" id="origin-label1" style="text-align: center;">All Peers</span>
+
           <div class="wrap">
             <main role="main">
               <nav role=navigation>
@@ -66,7 +69,10 @@
           </div>
         </div>
 
-        <div class="container2"
+        <div class="container2">
+
+          <span class="mini-plot-label" id="origin-label2" style="text-align: center;">Your Response</span>
+
           <div class="wrap2">
             <main role="main2">
               <nav role=navigation>
@@ -133,7 +139,8 @@
       var now = plot;        
       var chart = Globalmigration.chart(peerData, {
         element: elt, 
-        openRegionsAtStart: true,
+        openRegionsAtStart: true,   // also so can't open the Origin region
+        regionAbbreviations: true,
         width: 400,
         height: 400,
         acrWidth: 10,

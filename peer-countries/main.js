@@ -616,6 +616,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 
     config.now = config.now || Object.keys(data.matrix)[0];
 
+    config.regionAbbreviations = config.regionAbbreviations || false;
     config.openRegionsAtStart = config.openRegionsAtStart || false;
     /*config.drawDiagramInParent = config.drawDiagramInParent || false;
     if (config.drawDiagramInParent)
@@ -1107,10 +1108,13 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           return d.id === d.region;
         })
         .on('click', function(d) {
-          if (countries.length + 1 > config.maxRegionsOpen) {
-            countries.shift();
-          }
-          draw(year, countries.concat(d.id));
+        	if (!config.openRegionsAtStart || d.id !== 0)
+        	{
+	          if (countries.length + 1 > config.maxRegionsOpen) {
+	            countries.shift();
+	          }
+	          draw(year, countries.concat(d.id));
+	      	}
         });
 
 
@@ -1120,8 +1124,11 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           return d.id !== d.region;
         })
         .on('click', function(d) {
-          countries.splice(countries.indexOf(d.region), 1);
-          draw(year, countries);
+        	if (!config.openRegionsAtStart || d.id !== 0)
+        	{
+	          countries.splice(countries.indexOf(d.region), 1);
+	          draw(year, countries);
+	      	}
         });
       
       // text label group
@@ -1235,16 +1242,38 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       groupTextPath
         .text(function(d) { 
         	var reg = data.names[d.id];
-        	if (reg === "North America")
-        		return "N. Am";
-        	else if (reg === "Eastern Europe and Central Asia")
-        		return "E Europe & C Asia";
-        	else if (reg === "Middle East and North Africa")
-        		return "Middle East & North Africa";
-        	else if (reg === "Middle East and North Africa")
-        		return "Latin America and Caribbean";
-        	else if (reg === "East Asia and the Pacific")
-        		return "East Asia & the Pacific";
+        	if (config.regionAbbreviations)
+        	{
+        		if (reg === "North America")
+		          reg = "NA";
+		        else if (reg === "Europe")
+		          reg = "EU";
+		        else if (reg === "Eastern Europe and Central Asia")
+		          reg = "EE";
+		        else if (reg === "South Asia")
+		          reg = "SA";
+		        else if (reg === "East Asia and the Pacific")
+		          reg = "EA";
+		        else if (reg === "Sub-Saharan Africa")
+		          reg = "SS";
+		        else if (reg === "Middle East and North Africa")
+		          reg = "ME";
+		        else if (reg === "Latin America and Caribbean")
+		          reg = "LA";
+        	}
+        	else
+        	{
+	        	if (reg === "North America")
+	        		return "N. Am";
+	        	else if (reg === "Eastern Europe and Central Asia")
+	        		return "E Europe & C Asia";
+	        	else if (reg === "Middle East and North Africa")
+	        		return "Middle East & North Africa";
+	        	else if (reg === "Middle East and North Africa")
+	        		return "Latin America and Caribbean";
+	        	else if (reg === "East Asia and the Pacific")
+	        		return "East Asia & the Pacific";
+	        }
         	return reg; 
         	})
         .attr('startOffset', function(d) {

@@ -579,6 +579,17 @@ main {
   z-index: 50;
 }
 
+.mini-plot-label {
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  height: auto;
+  line-height: 1.1em;
+  color: #668DB7;
+  text-align: center;
+  z-index: 50;
+}
+
 #frame {
   position: absolute;
   top: 12.5%;

@@ -283,6 +283,9 @@
         return;
       }
 
+      $('#origin-label1', window.parent.document).text(origin + "'s Peers");
+      $('#origin-label2', window.parent.document).text("Your Response for " + origin);
+
       var origin_region = names[getRegion(origin_index, data.regions)];
       origin = origin.toUpperCase();
 
@@ -376,7 +379,6 @@
         }
       }
 
-      //$('#origin', window.parent.document).text(origin.toUpperCase());
 
       var new_data = {"names":[],
                       "regions":[],
@@ -432,6 +434,8 @@
 
       $('.results', window.parent.document).css("display", "inline");
 
+      // match colors with regions, so that no matter what the data, 
+        // the regions always have the same colors
       var color = '' + color_match["origin"];
       for (var r in new_regions)
       {
