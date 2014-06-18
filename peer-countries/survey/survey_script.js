@@ -286,13 +286,23 @@
       var origin_region = names[getRegion(origin_index, data.regions)];
       origin = origin.toUpperCase();
 
-      createPlot("All Peers", origin, origin_region, origin_index, data, names, matrix, '#results-diagram', '#results-timeline');
-      createPlot("Your Peers", origin, origin_region, origin_index, data, names, matrix, '#results-diagram2', '#results-timeline2');
+      var colors = ['6dae29', '683f92', 'b60275', '2058a5', '00a592', 'cd3d08', '009d3c', 'ffca00', '378974'];
+      var color_match = {"origin": colors[0]};
+      var ind = 1;
+      for (var r in data.regions)
+      {
+        color_match[names[data.regions[r]]] = colors[ind++];
+      }
+
+      createPlot("All Peers", origin, origin_region, origin_index, data, names, matrix, 
+        '#results-diagram', '#results-timeline', color_match);
+      createPlot("Your Peers", origin, origin_region, origin_index, data, names, matrix, 
+        '#results-diagram2', '#results-timeline2', color_match);
 
     }
 
 
-    function createPlot(plot, origin, origin_region, origin_index, data, names, matrix, elt, timeline)
+    function createPlot(plot, origin, origin_region, origin_index, data, names, matrix, elt, timeline, color_match)
     {
       var all_peers = {};
       all_peers[origin] = {};
@@ -421,7 +431,16 @@
       new_data.matrix[plot] = new_matrix;
 
       $('.results', window.parent.document).css("display", "inline");
-      drawDiagram(new_data, plot, elt, timeline);
+
+      var color = '' + color_match["origin"];
+      for (var r in new_regions)
+      {
+        if (r != 0)  // not origin
+          color += ' ' + color_match[new_names[new_regions[r]]];
+      }
+
+      window.parent.drawDiagram(new_data, plot, elt, timeline, color);
+        // has to be in parent because this frame will be deleted and replaced with the Google Form confirmation page.
     }
 
 
@@ -458,35 +477,3 @@
       }
       return false;
     }
-
-    function drawDiagram (peerData, plot, elt, timeline) {
-
-      var aLittleBit = Math.PI / 100000;
-      var now = plot;        
-      var chart = Globalmigration.chart(peerData, {
-        element: elt, 
-        openRegionsAtStart: true,
-        drawDiagramInParent: true,
-        width: 400,
-        height: 400,
-        acrWidth: 10,
-        targetPadding: 7,
-        maxRegionsOpen: 10,
-        now: now,
-        animationDuration: 500,
-        margin: 50,
-        arcPadding: 0.04,
-        layout: {
-          threshold: 0,
-          labelThreshold: 0,
-          colors: '6dae29 ec8f00 cd3d08 683f92 b60275 2058a5 00a592 ffca00 009d3c 378974'.split(' ').map(function(c) { return '#' + c; })
-        }
-      });
-      /*Globalmigration.timeline(chart, {
-        element: timeline, 
-        drawDiagramInParent: true,
-        now: now
-      });*/
-      chart.draw(now);
-    }
-

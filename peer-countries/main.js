@@ -544,17 +544,17 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     config.element = config.element || 'body';
 
     // to put the diagram in the parent html
-    config.drawDiagramInParent = config.drawDiagramInParent || false;
+    /*config.drawDiagramInParent = config.drawDiagramInParent || false;
     if (config.drawDiagramInParent)
-    	config.element = d3.select(window.parent.document).select(config.element);
+    	config.element = d3.select(window.parent.document).select(config.element);*/
 
     config.now = config.now || years[0];
 
-    var form;
+    /*var form;
     if (config.drawDiagramInParent)
     	form = config.element.append('form');
-    else
-    	form = d3.select(config.element).append('form');
+    else*/
+    var form = d3.select(config.element).append('form');
 
     var year = form.selectAll('.year')
       .data(years);
@@ -617,9 +617,9 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     config.now = config.now || Object.keys(data.matrix)[0];
 
     config.openRegionsAtStart = config.openRegionsAtStart || false;
-    config.drawDiagramInParent = config.drawDiagramInParent || false;
+    /*config.drawDiagramInParent = config.drawDiagramInParent || false;
     if (config.drawDiagramInParent)
-    	config.element = d3.select(window.parent.document).select(config.element);
+    	config.element = d3.select(window.parent.document).select(config.element);*/
     
     // geometry
     config.width = config.width || 1100;
@@ -744,7 +744,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         	return config.targetPadding;});
 
     // svg element
-    var svg;
+    /*var svg;
     if (config.drawDiagramInParent)
     {
     	svg = config.element.append("svg")
@@ -753,8 +753,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .attr("width", config.width)
         .attr("height", config.height);
     }
-    else
-    	svg = d3.select(config.element).append("svg")
+    else*/
+    var svg = d3.select(config.element).append("svg")
     	.attr('preserveAspectRatio', 'xMidYMid')
         .attr('viewBox', '0 0 ' + config.width + ' ' + config.height)
         .attr("width", config.width)
@@ -842,17 +842,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           .attr('transform', 'translate(' + (bbox.x + bbox.width / 2) + ',' + (bbox.y + bbox.height / 2) + ')');
 
         var text;
-        if (year === "All Peers")
-        {
-        	text = info.select('.text').selectAll('text')
-          .data([
-            data.names[d.id],
-            'They are my peer: ' + formatNumber(d.outflow),
-            'I am their peer: ' + formatNumber(d.inflow)
-            
-          ]);
-      	}
-        else if (year === "Mutual Peers")
+        if (year === "Mutual Peers")
         {
         	text = info.select('.text').selectAll('text')
           .data([
@@ -867,6 +857,16 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
             data.names[d.id],
             'Unreciprocated peers: ' + formatNumber(d.outflow),
             'I don\'t reciprocate: ' + formatNumber(d.inflow)
+          ]);
+      	}
+      	else //(year === "All Peers")
+      	{
+      		text = info.select('.text').selectAll('text')
+          .data([
+            data.names[d.id],
+            'They are my peer: ' + formatNumber(d.outflow),
+            'I am their peer: ' + formatNumber(d.inflow)
+            
           ]);
       	}
 

@@ -15,11 +15,6 @@
   }
   #response-container {
     width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #668DB7; border:1px solid #ccc; overflow-y: scroll;
-    /*background-image: -webkit-linear-gradient(top, #13A778 0px, #51B375 100%);
-    background-image:    -moz-linear-gradient(top, #13A778 0px, #51B375 100%);
-    background-image:     -ms-linear-gradient(top, #13A778 0px, #51B375 100%);
-    background-image:      -o-linear-gradient(top, #13A778 0px, #51B375 100%);
-    background-image:   linear-gradient(to bottom, #13A778 0px, #51B375 100%);*/
   }
   .text-results {
     width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #6F99C6; font-size: 18px;
@@ -131,9 +126,39 @@
   </div>
 
   <script>
+      // survey response plots
+      window.drawDiagram = function(peerData, plot, elt, timeline, color) {
+
+      var aLittleBit = Math.PI / 100000;
+      var now = plot;        
+      var chart = Globalmigration.chart(peerData, {
+        element: elt, 
+        openRegionsAtStart: true,
+        width: 400,
+        height: 400,
+        acrWidth: 10,
+        targetPadding: 7,
+        maxRegionsOpen: 10,
+        now: now,
+        animationDuration: 500,
+        margin: 50,
+        arcPadding: 0.04,
+        layout: {
+          threshold: 0,
+          labelThreshold: 0,
+          colors: color.split(' ').map(function(c) { return '#' + c; })
+        }
+      });
+      /*Globalmigration.timeline(chart, {
+        element: timeline, 
+        drawDiagramInParent: true,
+        now: now
+      });*/
+      chart.draw(now);
+    };
+
 
     (function() {
-      
       // survey
       var open = false;
 
