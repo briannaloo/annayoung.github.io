@@ -13,20 +13,36 @@
   .results {
     width: 75%; height: 75%; top: 12.5%; left: 12.5%; background-color: #e8eef7; display: none;
   }
-  .results-container {
+  #response-container {
     width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #668DB7; border:1px solid #ccc; overflow-y: scroll;
-    background-image: -webkit-linear-gradient(top, #13A778 0px, #51B375 100%);
+    /*background-image: -webkit-linear-gradient(top, #13A778 0px, #51B375 100%);
     background-image:    -moz-linear-gradient(top, #13A778 0px, #51B375 100%);
     background-image:     -ms-linear-gradient(top, #13A778 0px, #51B375 100%);
     background-image:      -o-linear-gradient(top, #13A778 0px, #51B375 100%);
-    background-image:   linear-gradient(to bottom, #13A778 0px, #51B375 100%);
+    background-image:   linear-gradient(to bottom, #13A778 0px, #51B375 100%);*/
   }
   .text-results {
-    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #FFFEFF; font-size: 18px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #6F99C6; font-size: 18px;
   }
   #origin {
     font-size: 18px; color: rgb(104, 63, 146);
+  }
+  .results-container {
+    width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; background-color: #fff;
+  }
+  main, main2 {
+    position: absolute;
+    top: 2.5%;
+  }
+  .container1 {
+    width: 50%;
+    position: absolute;
+    left: 0%;
+  }
+  .container2 {
+    width: 50%;
+    position: absolute;
+    right: 0%;
   }
 
   </style>
@@ -34,30 +50,40 @@
 <body>
   <iframe id="frame" src="survey/index.html" width="75%" height="75%" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
   <div id="frame" class="results">
-    <div class="results-container">
-        <div id="timeline2"></div>
-        <div id="diagram2"></div>
-
+    <div class="response-container">
+      
       <div class="text-results">
         <span>Thanks! Your response has been recorded.<br>
           Here's how your response compares to others.<br><br></span>
-        <span id="origin">COUNTRY</span>
-
-        <!--<span style="text-decoration: underline;"><br><br>You said your country's peers are: <br></span>
-        <span id="peers-text"></span>
-
-        <div id="col1" style="width: 50%; position: absolute; left: 0;">
-          <span style="text-decoration: underline;"><br>The data shows your country's peers are: <br></span>
-          <span id="data-peers"></span>
-          <br><br><br><br>
-        </div>
-        <div id="col2" style="width: 50%; position: absolute; right: 0;">
-          <span style="text-decoration: underline;"><br>These countries think your country is their peer: <br></span>
-          <span id="their-peer"></span>
-        </div>
-
-        <span id="results"></span>-->
       </div>
+
+      <div class="results-container">
+        <div class="container1">
+          <div class="wrap">
+            <main role="main">
+              <nav role=navigation>
+                <div id="results-timeline">
+                </div>
+              </nav>
+              <div id="results-diagram">
+              </div>
+            </main>
+          </div>
+        </div>
+
+        <div class="container2"
+          <div class="wrap2">
+            <main role="main2">
+              <nav role=navigation>
+                <div id="results-timeline2">
+                </div>
+              </nav>
+              <div id="results-diagram2"></div>
+            </main>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   <img src="images/close.png" id="frame" class="close" style="top: 12.5%; left: 12.5%; width: 25px; height: 25px; cursor: pointer; z-index: -1;"></img>

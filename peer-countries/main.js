@@ -125,8 +125,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           });
         });
       }
-
       k = (2 * π - padding * n) / k;
+          
 
       // Compute the start and end angle for each group and subgroup.
       // Note: Opera has a bug reordering object literal properties!
@@ -142,6 +142,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
               a0 = x,
               d = v * k;
           x += d;
+
           subgroups['target' + '-' + di + "-" + dj] = {
             originalIndex: indices[dj],
             index: di,
@@ -170,7 +171,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           };
           outflow += v;
         }
-        
         groups[di] = {
           id: indices[di],
           region: region(indices[di]),
@@ -540,10 +540,21 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     var years = Object.keys(diagram.data.matrix).map(function(y) { return y; }); 
 
     config = config || {};
+
     config.element = config.element || 'body';
+
+    // to put the diagram in the parent html
+    config.drawDiagramInParent = config.drawDiagramInParent || false;
+    if (config.drawDiagramInParent)
+    	config.element = d3.select(window.parent.document).select(config.element);
+
     config.now = config.now || years[0];
 
-    var form = d3.select(config.element).append('form');
+    var form;
+    if (config.drawDiagramInParent)
+    	form = config.element.append('form');
+    else
+    	form = d3.select(config.element).append('form');
 
     var year = form.selectAll('.year')
       .data(years);
@@ -605,6 +616,11 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 
     config.now = config.now || Object.keys(data.matrix)[0];
 
+    config.openRegionsAtStart = config.openRegionsAtStart || false;
+    config.drawDiagramInParent = config.drawDiagramInParent || false;
+    if (config.drawDiagramInParent)
+    	config.element = d3.select(window.parent.document).select(config.element);
+    
     // geometry
     config.width = config.width || 1100;
     config.height = config.height || 1100;
@@ -652,14 +668,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     }
 
     function chordColor(d) {
-    	// mutual relationship - color black
-    	/*var percent_mutual;
-      if (//d.source.region != d.source.id &&		// not at region level
-      	//d.target.region != d.target.id &&
-      	d.source.region != d.target.region && 	// not a "self"-loop
-      	(data.matrix["2012"])[d.source.id][d.target.id] === (data.matrix["2012"])[d.target.id][d.source.id])
-      	//(data.matrix["2012"])[d.source.id][d.target.id] != 0 && (data.matrix["2012"])[d.target.id][d.source.id] != 0)
-      	return "#000";*/
       return arcColor(d.source);
     }
 
@@ -736,8 +744,18 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         	return config.targetPadding;});
 
     // svg element
-    var svg = d3.select(config.element).append("svg")
-        .attr('preserveAspectRatio', 'xMidYMid')
+    var svg;
+    if (config.drawDiagramInParent)
+    {
+    	svg = config.element.append("svg")
+    	.attr('preserveAspectRatio', 'xMidYMid')
+        .attr('viewBox', '0 0 ' + config.width + ' ' + config.height)
+        .attr("width", config.width)
+        .attr("height", config.height);
+    }
+    else
+    	svg = d3.select(config.element).append("svg")
+    	.attr('preserveAspectRatio', 'xMidYMid')
         .attr('viewBox', '0 0 ' + config.width + ' ' + config.height)
         .attr("width", config.width)
         .attr("height", config.height);
@@ -1078,7 +1096,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .duration(config.animationDuration)
         .attrTween("d", function(d) {
           var i = d3.interpolate(previous.groups[d.id] || previous.groups[d.region] || meltPreviousGroupArc(d) || config.initialAngle.arc, d);
-          return function (t) { return arc(i(t)); };
+
+          return function (t) {return arc(i(t)); };
         });
       groupPath.exit().remove();
 
@@ -1094,6 +1113,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           draw(year, countries.concat(d.id));
         });
 
+
       // close regions
       groupPath
         .filter(function(d) {
@@ -1103,7 +1123,6 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           countries.splice(countries.indexOf(d.region), 1);
           draw(year, countries);
         });
-
       
       // text label group
       var groupTextGroup = element.selectAll('.label')

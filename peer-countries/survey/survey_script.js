@@ -257,6 +257,7 @@
       }
     });
 
+
     // process answers
     function showResults () {
       var origin = $('#entry_200171192 option:selected').text();
@@ -269,140 +270,185 @@
       for (var i in names) {
         if (origin === names[i] || (origin+'*') === names[i]) {
           origin_index = i;
+          if ((origin+'*') === names[i])
+            origin += '*';
           break;
         }
       }
 
-      var all_peers = {};
-      all_peers[origin] = [0, 0];
-      var length = 1;
-      // get the real peers of the country
-      //var real_peers = [];
-      var peer_data = matrix[origin_index];
-      for (var i in peer_data)
+      // don't have data for this country
+      if (origin_index === -1 || names[origin_index].indexOf('*') !== -1)
       {
-        if (peer_data[i] > 0 && !region(i, data.regions))
-        {
-          var name = names[i];
-          if (name.charAt(name.length-1) === '*')
-            name = name.substring(0, name.length-1);
-          //real_peers.push(name);
-          all_peers[name] = [1, 0];
-          length++;
-        }
+        console.log("Sorry, we don't have data for this country yet.");
+        return;
       }
 
-      // get the countries who think it is their peer
-      //var their_peers = [];
+      var origin_region = names[getRegion(origin_index, data.regions)];
+      origin = origin.toUpperCase();
+
+      createPlot("All Peers", origin, origin_region, origin_index, data, names, matrix, '#results-diagram', '#results-timeline');
+      createPlot("Your Peers", origin, origin_region, origin_index, data, names, matrix, '#results-diagram2', '#results-timeline2');
+
+    }
+
+
+    function createPlot(plot, origin, origin_region, origin_index, data, names, matrix, elt, timeline)
+    {
+      var all_peers = {};
+      all_peers[origin] = {};
+      for (var i in data.regions)     // push all regions to the object
+        all_peers[names[data.regions[i]]] = {};
+      all_peers[origin][origin] = [0, 0];
+      var length = 1;
+
+      var current_region = "";
       for (var i in matrix)
       {
-        if (matrix[i][origin_index] > 0 && !region(i, data.regions))
+        if (region(i, data.regions))  // update current region
+          current_region = names[i];
+
+        var name = names[i];
+
+        if (i === origin_index) // get real peers of origin-country
         {
-          var name = names[i];
-          if (name.charAt(name.length-1) === '*')
-            name = name.substring(0, name.length-1);
-          //their_peers.push(name);
-          if (all_peers[name] != undefined)
-            all_peers[name] = [1, 1];
+          if (plot==="All Peers")
+          {
+            var current_region2 = "";
+            for (var p in matrix[i])
+            {
+              if (region(p, data.regions))  // update current region
+                  current_region2 = names[p];
+              if (matrix[i][p] > 0 && !region(p, data.regions))
+              {
+                name = names[p];
+
+                if (all_peers[current_region2][name] != undefined)
+                  all_peers[current_region2][name] = [1, 1];
+                else {
+                  all_peers[current_region2][name] = [1, 0];
+                  length++;
+                }
+              }
+            }
+          }
+          else // "Your Peers"
+          {
+            // get the peers of the survey response
+            var peers = [];
+            $('.ss-checkbox input:checked').each(function() {
+              peers.push($(this).val());
+            });
+
+            for (var p in peers)
+            {
+              if (names.indexOf(peers[p])===-1 && names.indexOf(peers[p]+'*')!==-1)
+                peers[p] += '*';
+              var current_region2 = names[getRegion(names.indexOf(peers[p]), data.regions)];
+
+              if (all_peers[current_region2][peers[p]] != undefined)
+                  all_peers[current_region2][peers[p]] = [1, 1];
+              else {
+                all_peers[current_region2][peers[p]] = [1, 0];
+                length++;
+              }
+            }
+          }
+        }
+        // get countries who think it is their peer
+        else if (matrix[i][origin_index] > 0 && !region(i, data.regions))
+        {
+          if (all_peers[current_region][name] != undefined)
+            all_peers[current_region][name] = [1, 1];
           else {
-            all_peers[name] = [0, 1];
+            all_peers[current_region][name] = [0, 1];
             length++;
           }
         }
       }
 
-      // get the peers of the survey response
-      var peers = [];
-      $('.ss-checkbox input:checked').each(function() {
-        peers.push($(this).val());
-      });
-
-      $('#origin', window.parent.document).text(origin.toUpperCase());
-      $('.results', window.parent.document).css("display", "inline");
-
-      // have data?
+      //$('#origin', window.parent.document).text(origin.toUpperCase());
 
       var new_data = {"names":[],
                       "regions":[],
-                      "matrix":{"All Peers":[]}};
-      new_data.names = all_peers;
-
+                      "matrix":{plot:[]}};
+      var new_names = [], new_regions = [];
+      
+      var num_regions = 0;
+      for (var key in all_peers)
+        if (Object.keys(all_peers[key]).length !== 0)
+          num_regions++;
+      var new_matrix = initialize(length + num_regions);
+      var index = 0;
       for (var key in all_peers)
       {
-        var data_for_matrix = [];
-        if (key===origin)  // origin country
+        if (Object.keys(all_peers[key]).length !== 0)
         {
-          for (var c in all_peers)
+          // load region names & indices
+          new_names.push(key);
+          new_regions.push(index);
+          index++;
+
+          // load country data
+          var count = 0, count_region = 0;
+          for (var c in all_peers[key])
           {
-            if (all_peers[c][0] === 1)
-              data_for_matrix.push(1);
-            else
-              data_for_matrix.push(0);
+            new_names.push(c);
+            index++;
+
+            if (c != origin)
+            {
+              var c_index = new_names.indexOf(c);
+              // to sum for region
+              count += all_peers[key][c][1];
+              count_region += all_peers[key][c][0];
+              // country data
+              new_matrix[c_index][1] = all_peers[key][c][1]; // e.g. country Netherlands (origin)
+              new_matrix[c_index][0] = all_peers[key][c][1]; // e.g. region Netherlands
+              // get for origin
+              new_matrix[1][c_index] = all_peers[key][c][0];  // origin country to c
+              new_matrix[0][c_index] += all_peers[key][c][0]; // origin region to c
+            }
           }
+          new_matrix[new_names.indexOf(key)][1] = count;  // whole region to Netherlands
+          new_matrix[new_names.indexOf(key)][0] = count;  // whole region to Netherlands region
+          new_matrix[0][new_names.indexOf(key)] = count_region; // Netherlands region to whole region (key)
+          new_matrix[1][new_names.indexOf(key)] = count_region; // Netherlands country to region (e.g. South Asia)
+
         }
-        else
-        {
-          if (all_peers[key][1] === 1)
-            data_for_matrix.push(1);
-          else
-            data_for_matrix.push(0);
-          for (var i = 1; i < length; i++)
-            data_for_matrix.push(0);
-        }
-        new_data.matrix["All Peers"].push(data_for_matrix);
       }
+      new_data.names = new_names;
+      new_data.regions = new_regions;
+      new_data.matrix[plot] = new_matrix;
 
-      drawDiagram(new_data);
-
-      
-      /*var peers_text = "";
-      for (key in peers)
-        peers_text += peers[key] + "<br>";
-
-      $('#origin', window.parent.document).text(origin.toUpperCase());
-      $('#peers-text', window.parent.document).html(peers_text);
-      $('.results', window.parent.document).css("display", "inline");*/
+      $('.results', window.parent.document).css("display", "inline");
+      drawDiagram(new_data, plot, elt, timeline);
+    }
 
 
-      // get the peers of that country (from data)
-      /*if (origin_index != -1 && names[origin_index].indexOf('*') === -1)
+    function initialize (length)
+    {
+      var matrixdata = [];
+      for (var i = 0; i < length; i++)
       {
-        var real_peers = "";
-        var peer_data = matrix[origin_index];
-        for (var i in peer_data)
+        var sub_data = [];
+        for (var j = 0; j < length; j++)
         {
-          if (peer_data[i] > 0 && !region(i, data.regions))
-          {
-            var name = names[i];
-            if (name.charAt(name.length-1) === '*')
-              name = name.substring(0, name.length-1);
-            real_peers += name + "<br>";
-          }
+          sub_data.push(0);
         }
-
-        $('#data-peers', window.parent.document).html(real_peers);
-       }
-      else
-      {
-        $('#data-peers', window.parent.document).text("Sorry, we do not have data for this country yet.");
+        matrixdata.push(sub_data);
       }
+      return matrixdata;
+    }
 
-      // get which countries think that origin country is their peer
-      if (origin_index != -1)
+    function getRegion(index, regions) 
+    {
+      var region = 0;
+      for (var i in regions)
       {
-        var their_peer = "";
-        for (var i in matrix)
-        {
-          if (matrix[i][origin_index] > 0 && !region(i, data.regions))
-          {
-            var name = names[i];
-            if (name.charAt(name.length-1) === '*')
-              name = name.substring(0, name.length-1);
-            their_peer += name + "<br>";
-          }
-        }
-        $('#their-peer', window.parent.document).html(their_peer);
-      }*/
+        if (parseInt(index) > regions[i])
+          region = regions[i];
+      }
+      return region;
     }
 
     function region(index, regions) {
@@ -413,26 +459,34 @@
       return false;
     }
 
-    function drawDiagram (peer_data) {
+    function drawDiagram (peerData, plot, elt, timeline) {
 
       var aLittleBit = Math.PI / 100000;
-      var now = "All Peers";        
-      var chart = Globalmigration.chart(peer_data, {
-        element: '.results-container',
+      var now = plot;        
+      var chart = Globalmigration.chart(peerData, {
+        element: elt, 
+        openRegionsAtStart: true,
+        drawDiagramInParent: true,
+        width: 400,
+        height: 400,
+        acrWidth: 10,
+        targetPadding: 7,
+        maxRegionsOpen: 10,
         now: now,
         animationDuration: 500,
-        margin: 125,
+        margin: 50,
         arcPadding: 0.04,
         layout: {
           threshold: 0,
           labelThreshold: 0,
-          colors: 'cd3d08 ec8f00 6dae29 683f92 b60275 2058a5 00a592 ffca00 009d3c 378974'.split(' ').map(function(c) { return '#' + c; })
+          colors: '6dae29 ec8f00 cd3d08 683f92 b60275 2058a5 00a592 ffca00 009d3c 378974'.split(' ').map(function(c) { return '#' + c; })
         }
       });
-      Globalmigration.timeline(chart, {
-        now: now,
-        element: '#timeline2'
-      });
+      /*Globalmigration.timeline(chart, {
+        element: timeline, 
+        drawDiagramInParent: true,
+        now: now
+      });*/
       chart.draw(now);
     }
 
