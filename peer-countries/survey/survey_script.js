@@ -260,7 +260,7 @@
 
     // process answers
     function showResults () {
-      var origin = $('#entry_200171192 option:selected').text();
+      var origin = $('#entry_200171192 option:selected').val();
       var data = window.parent.peer_data;
       var names = data.names;
       var matrix = data.matrix["All Peers"];
@@ -279,7 +279,8 @@
       // don't have data for this country
       if (origin_index === -1 || names[origin_index].indexOf('*') !== -1)
       {
-        console.log("Sorry, we don't have data for this country yet.");
+        $('.results', window.parent.document).css("display", "inline");
+        $('#nodata', window.parent.document).css("visibility", "visible");
         return;
       }
 
@@ -290,6 +291,7 @@
       origin = origin.toUpperCase();
 
       var colors = ['6dae29', '683f92', 'b60275', '2058a5', '00a592', 'cd3d08', '009d3c', 'ffca00', '378974'];
+      // note: if change COLORS, have to change in main index.html for regions-legend
       var color_match = {"origin": colors[0]};
       var ind = 1;
       for (var r in data.regions)

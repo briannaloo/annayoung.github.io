@@ -24,6 +24,7 @@
   }
   .results-container {
     width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; background-color: #fff;
+    border: 1px solid #ccc;
   }
   main, main2 {
     position: absolute;
@@ -39,6 +40,17 @@
     position: absolute;
     right: 0%;
   }
+  #region-legend {
+    visibility: hidden;
+    font-size: 11px;
+    line-height: 1.2em;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+
 
   </style>
 </head>
@@ -53,9 +65,11 @@
       </div>
 
       <div class="results-container">
+        <span id="nodata" style="visibility: hidden; position:absolute; left: 10px; top: 10px;">Sorry, we don't have data for this country yet. Thanks for being the first!</span>
+
         <div class="container1">
 
-          <span class="mini-plot-label" id="origin-label1" style="text-align: center;">All Peers</span>
+          <span class="mini-plot-label" id="origin-label1" style="text-align: center; visibility: hidden;">All Peers</span>
 
           <div class="wrap">
             <main role="main">
@@ -71,7 +85,7 @@
 
         <div class="container2">
 
-          <span class="mini-plot-label" id="origin-label2" style="text-align: center;">Your Response</span>
+          <span class="mini-plot-label" id="origin-label2" style="text-align: center; visibility: hidden;">Your Response</span>
 
           <div class="wrap2">
             <main role="main2">
@@ -82,6 +96,18 @@
               <div id="results-diagram2"></div>
             </main>
           </div>
+        </div>
+
+        <div id="region-legend">
+          <span style="color: #6dae29;">Country of Origin<br></span>
+          <span style="color: #683f92;">NA = North America<br></span>
+          <span style="color: #b60275;">EU = Europe<br></span>
+          <span style="color: #2058a5;">EE = Eastern Europe and Central Asia<br></span>
+          <span style="color: #00a592;">SA = South Asia<br></span>
+          <span style="color: #cd3d08;">EA = East Asia and the Pacific<br></span>
+          <span style="color: #009d3c;">SS = Sub-Saharan Africa<br></span>
+          <span style="color: #ffca00;">ME = Middle East and North Africa<br></span>
+          <span style="color: #378974;">LA = Latin America and Caribbean<br></span>
         </div>
       </div>
 
@@ -135,6 +161,11 @@
       // survey response plots
       window.drawDiagram = function(peerData, plot, elt, timeline, color) {
 
+      document.getElementById('region-legend').style.visibility = "visible";
+      document.getElementById('origin-label1').style.visibility = "visible";
+      document.getElementById('origin-label2').style.visibility = "visible";
+
+      // draw circular plots
       var aLittleBit = Math.PI / 100000;
       var now = plot;        
       var chart = Globalmigration.chart(peerData, {
@@ -156,11 +187,6 @@
           colors: color.split(' ').map(function(c) { return '#' + c; })
         }
       });
-      /*Globalmigration.timeline(chart, {
-        element: timeline, 
-        drawDiagramInParent: true,
-        now: now
-      });*/
       chart.draw(now);
     };
 
