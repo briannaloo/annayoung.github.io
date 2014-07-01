@@ -20,7 +20,7 @@
     width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #6F99C6; font-size: 18px;
   }
   .results-container {
-    width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; overflow-x: hidden; background-color: #fff;
+    width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; overflow-x: scroll; background-color: #fff;
     border: 1px solid #ccc;
   }
   main1, main2 {
@@ -78,6 +78,7 @@
       </div>
 
       <div class="results-container">
+        <div class="scroll-container" style="width: 650px;">
         <span id="nodata" style="visibility: hidden; position:absolute; left: 10px; top: 10px;">Sorry, we don't have data for this country yet. Thanks for being the first!</span>
 
         <div class="outer-container">
@@ -151,6 +152,7 @@
 
       </div>
     </div>
+  </div>
   </div>
   <img src="images/close.png" id="frame" class="close" style="top: 12.5%; left: 12.5%; width: 25px; height: 25px; cursor: pointer; z-index: -1;"></img>
   

@@ -184,7 +184,7 @@
       }
        else if (this.text === "हिंदी")
       {
-        $("#question1").text("");
+        $("#question1").text("आप क्या देश से हैं?");
         $("#question2").text("क्रपिया २० देशों को पहेच्छनिए, जिन में आपके देश के समान प्राकृतिक संसाधान हैं, और जहाँ आपके देश के समान आर्थिक वा पर्यावरनिया चुनौतियाँ हैं.");
         $("#occupation").text("आपका व्यवसाय क्या है?");
         translatePeers(hindi, occupations_hindi);
@@ -198,7 +198,7 @@
       }
       else if (this.text === "русский")
       {
-        $("#question1").text("");
+        $("#question1").text("Что вы страны?");
         $("#question2").text("Назовите до 20ти стран,  которые часто сравнивают с Вашей (страной) по аналагичному отношению к природным ресурсам, экономическому развитию и по отношению к экологическим проблемам");
         $("#occupation").text("Чем вы занимаетесь?");
         translatePeers(russian, occupations_russian);
@@ -214,7 +214,7 @@
       if (length === 0) {
         $('.ss-choice-label').each(function(index) {
           $(this).removeAttr("id", "searched");
-          $('#searchbox').css("position", "static");
+          //$('#searchbox').css("position", "static");
         });
       }
 
@@ -237,7 +237,7 @@
                   scrollTop: scroll_y
                 }, 500);
 
-                $('#searchbox').css("position", "fixed");
+                //$('#searchbox').css("position", "fixed");
               }
             }
             else

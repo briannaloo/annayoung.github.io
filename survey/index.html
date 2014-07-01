@@ -19,7 +19,7 @@
   .text-results {
     width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #6F99C6; font-size: 18px;
   }
-  .results-container {
+  #results-container {
     width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; overflow-x: scroll; background-color: #fff;
     border: 1px solid #ccc;
   }
@@ -78,8 +78,8 @@
           Here's how your response compares to others.<br><br></span>
       </div>
 
-      <div class="results-container">
-        <div class="scroll-container" style="width: 800px;">
+      <div id="results-container">
+        <div id="scroll-container" style="width: 800px;">
         <span id="nodata" style="visibility: hidden; position:absolute; left: 10px; top: 10px;">Sorry, we don't have data for this country yet. Thanks for being the first!</span>
 
         <div class="outer-container">
@@ -117,7 +117,7 @@
   </div>
 
   <script>
-
+  
     window.peer_data;  // make data global, so survey can access
     var datafile = 'json/Peers.json';
     d3.json(datafile, function(data) {
