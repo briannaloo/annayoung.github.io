@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+	<title>Peer country flows</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+	<link href="style.css" rel="stylesheet" media="all">
+
+  <script src="javascripts/d3.v3.min.js"></script>
+  <script src="main.js"></script>
+
+  <style type="text/css">
+  .results {
+    width: 100%; height: 100%; top: 0%; left: 0%; background-color: #e8eef7; display: none;
+  }
+  #response-container {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #668DB7; border:1px solid #ccc; overflow-y: scroll;
+  }
+  .text-results {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #6F99C6; font-size: 18px;
+  }
+  .results-container {
+    width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; overflow-x: scroll; background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  main1, main2 {
+    position: absolute;
+    top: 2.5%;
+  }
+  .outer-container {
+    width: 50%;
+    position: relative;
+    float: left;
+  }
+  .container1, .container2 {
+    width: 90%;
+    position: relative;
+    left: 5%;
+  }
+  #region-legend {
+    visibility: hidden;
+    font-size: 11px;
+    line-height: 1.2em;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+  }
+  #statistics {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    float: left;
+    visibility: hidden;
+    font-size: 14px;
+  }
+  .inner {
+    width: 100%;
+    height: 50%;
+    color: white;
+    vertical-align: middle;
+  }
+  .inner-text {
+    font-size: 24px;
+  }
+
+  </style>
+</head>
+<body>
+  <iframe id="frame" src="survey/index.html" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
+
+  <div id="frame" class="results">
+    <div class="response-container">
+      
+      <div class="text-results">
+        <span>Thanks! Your response has been recorded.<br>
+          Here's how your response compares to others.<br><br></span>
+      </div>
+
+      <div class="results-container">
+        <div class="scroll-container" style="width: 800px;">
+        <span id="nodata" style="visibility: hidden; position:absolute; left: 10px; top: 10px;">Sorry, we don't have data for this country yet. Thanks for being the first!</span>
+
+        <div class="outer-container">
+          <span class="mini-plot-label" id="origin-label1" style="text-align: center; visibility: hidden; left: 0;">All Peers</span>
+          <div class="container1">
+            <div class="wrap1">
+              <main role="main1">
+                <nav role=navigation>
+                  <div id="results-timeline">
+                  </div>
+                </nav>
+                <div id="results-diagram">
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+        <div class="outer-container">
+          <span class="mini-plot-label" id="origin-label2" style="text-align: center; visibility: hidden; right: 0;">Your Response</span>
+          <div class="container2">
+            <div class="wrap2">
+              <main role="main2">
+                <nav role=navigation>
+                  <div id="results-timeline2">
+                  </div>
+                </nav>
+                <div id="results-diagram2"></div>
+              </main>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <script>
+
+    window.peer_data;  // make data global, so survey can access
+    var datafile = 'json/Peers.json';
+    d3.json(datafile, function(data) {
+      peer_data = data;
+      });
+
+      // survey response plots
+      window.drawDiagram = function(peerData, plot, elt, timeline, color) {
+
+      //document.getElementById('region-legend').style.visibility = "visible";
+      document.getElementById('origin-label1').style.visibility = "visible";
+      document.getElementById('origin-label2').style.visibility = "visible";
+      //document.getElementById('statistics').style.visibility = "visible";
+
+      // draw circular plots
+      var aLittleBit = Math.PI / 100000;
+      var now = plot;        
+      var chart = Globalmigration.chart(peerData, {
+        element: elt, 
+        openRegionsAtStart: true,   // also so can't open the Origin region
+        regionAbbreviations: true,
+        width: 400,
+        height: 400,
+        acrWidth: 10,
+        targetPadding: 7,
+        maxRegionsOpen: 10,
+        now: now,
+        animationDuration: 500,
+        margin: 50,
+        arcPadding: 0.04,
+        layout: {
+          threshold: 0,
+          labelThreshold: 0,
+          colors: color.split(' ').map(function(c) { return '#' + c; })
+        }
+      });
+      chart.draw(now);
+    };
+  </script>
+
+
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+    {"parsetags": "explicit"}
+  </script>
+
+  <script>
+    (function() {
+      function loadScript(d,s,l,id){
+        var js,
+        fjs=d.getElementsByTagName(s)[0],
+        p=/^http:/.test(d.location)?'http':'https';
+        if(!id || !d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+'://' + l;
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>

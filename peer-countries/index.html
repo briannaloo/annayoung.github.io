@@ -27,13 +27,15 @@
     position: absolute;
     top: 2.5%;
   }
-  .container1 {
+  .outer-container {
     width: 50%;
+    position: relative;
     float: left;
   }
-  .container2 {
-    width: 50%;
-    float: left;
+  .container1, .container2 {
+    width: 90%;
+    position: relative;
+    left: 5%;
   }
   #region-legend {
     visibility: hidden;
@@ -78,34 +80,33 @@
       <div class="results-container">
         <span id="nodata" style="visibility: hidden; position:absolute; left: 10px; top: 10px;">Sorry, we don't have data for this country yet. Thanks for being the first!</span>
 
-        <div class="container1">
-
-          <span class="mini-plot-label" id="origin-label1" style="text-align: center; visibility: hidden;">All Peers</span>
-
-          <div class="wrap1">
-            <main role="main1">
-              <nav role=navigation>
-                <div id="results-timeline">
+        <div class="outer-container">
+          <span class="mini-plot-label" id="origin-label1" style="text-align: center; visibility: hidden; left: 0;">All Peers</span>
+          <div class="container1" style="padding-top: 20px;">
+            <div class="wrap1">
+              <main role="main1">
+                <nav role=navigation>
+                  <div id="results-timeline">
+                  </div>
+                </nav>
+                <div id="results-diagram">
                 </div>
-              </nav>
-              <div id="results-diagram">
-              </div>
-            </main>
+              </main>
+            </div>
           </div>
         </div>
-
-        <div class="container2">
-
-          <span class="mini-plot-label" id="origin-label2" style="text-align: center; visibility: hidden;">Your Response</span>
-
-          <div class="wrap2">
-            <main role="main2">
-              <nav role=navigation>
-                <div id="results-timeline2">
-                </div>
-              </nav>
-              <div id="results-diagram2"></div>
-            </main>
+        <div class="outer-container">
+          <span class="mini-plot-label" id="origin-label2" style="text-align: center; visibility: hidden; right: 0;">Your Response</span>
+          <div class="container2" style="padding-top: 20px;">
+            <div class="wrap2">
+              <main role="main2">
+                <nav role=navigation>
+                  <div id="results-timeline2">
+                  </div>
+                </nav>
+                <div id="results-diagram2"></div>
+              </main>
+            </div>
           </div>
         </div>
 
@@ -121,7 +122,7 @@
           <span style="color: #378974;">LA = Latin America and Caribbean<br></span>
         </div>-->
 
-      <div id="statistics">
+      <!--<div id="statistics">
         <div style="width: 50%; height: 100%; position: absolute; left: 25%; text-align: center;">
           <div class="container1" style="height: 100%;">
             <div class="inner" style="background-color: #6dae29; left: 0%;">
@@ -146,7 +147,7 @@
           </div>
         </div>
       </div>
-      <span><br><br><br><br><br></span>
+      <span><br><br><br><br><br></span>-->
 
       </div>
     </div>
@@ -158,6 +159,10 @@
     <div id="survey" class="contribute">
       <span style="position: absolute; top: 15px; left: 2px">Please contribute to our data!</span>
     </div>
+
+    <br><span style="padding: 15px; font-size: 34px; color: #6A93BF;">PEER COUNTRIES</span>
+    <br><span style="padding: 15px; font-size: 12px;">Created by Anna Young, based on code from <a target="_blank" href="http://www.global-migration.info/">Sander et al</a>.</span>
+    <hr>
 
   	<div class="wrap">
   		<main role="main">
@@ -197,15 +202,12 @@
 
   <script>
       // survey response plots
-      //var your_data = [];
-      //var its data = [];
-      //var count = 0;
       window.drawDiagram = function(peerData, plot, elt, timeline, color) {
 
       //document.getElementById('region-legend').style.visibility = "visible";
       document.getElementById('origin-label1').style.visibility = "visible";
       document.getElementById('origin-label2').style.visibility = "visible";
-      document.getElementById('statistics').style.visibility = "visible";
+      //document.getElementById('statistics').style.visibility = "visible";
 
       // draw circular plots
       var aLittleBit = Math.PI / 100000;
@@ -230,20 +232,6 @@
         }
       });
       chart.draw(now);
-
-      // get stats
-      /*for (var key in peerData.matrix[0])
-        {
-          if (peerData.matrix[0][key] === 1)
-            {
-              if (plot==="All Peers")
-                its_data.push(peerData.names[key]);
-              else
-                your_data.push(peerData.names[key]);
-            }
-        }
-
-      count++;*/
     };
 
 
