@@ -582,7 +582,7 @@ main {
 .mini-plot-label {
   position: absolute;
   top: 7px;
-  width: 100%;
+  width: 50%;
   height: auto;
   line-height: 1.1em;
   color: #668DB7;

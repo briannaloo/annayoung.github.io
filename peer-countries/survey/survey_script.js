@@ -286,6 +286,7 @@
 
       $('#origin-label1', window.parent.document).text(origin + "'s Peers");
       $('#origin-label2', window.parent.document).text("Your Response for " + origin);
+      $('[id=origin]', window.parent.document).text(origin);
 
       var origin_region = names[getRegion(origin_index, data.regions)];
       origin = origin.toUpperCase();

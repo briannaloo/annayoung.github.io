@@ -19,26 +19,21 @@
   .text-results {
     width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #6F99C6; font-size: 18px;
   }
-  #origin {
-    font-size: 18px; color: rgb(104, 63, 146);
-  }
   .results-container {
-    width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; background-color: #fff;
+    width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; overflow-x: hidden; background-color: #fff;
     border: 1px solid #ccc;
   }
-  main, main2 {
+  main1, main2 {
     position: absolute;
     top: 2.5%;
   }
   .container1 {
     width: 50%;
-    position: absolute;
-    left: 0%;
+    float: left;
   }
   .container2 {
     width: 50%;
-    position: absolute;
-    right: 0%;
+    float: left;
   }
   #region-legend {
     visibility: hidden;
@@ -47,10 +42,26 @@
     display: block;
     font-weight: bold;
     position: absolute;
-    bottom: 5%;
+    top: 75%;
     left: 5%;
   }
-
+  #statistics {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    float: left;
+    visibility: hidden;
+    font-size: 14px;
+  }
+  .inner {
+    width: 100%;
+    height: 50%;
+    color: white;
+    vertical-align: middle;
+  }
+  .inner-text {
+    font-size: 24px;
+  }
 
   </style>
 </head>
@@ -71,8 +82,8 @@
 
           <span class="mini-plot-label" id="origin-label1" style="text-align: center; visibility: hidden;">All Peers</span>
 
-          <div class="wrap">
-            <main role="main">
+          <div class="wrap1">
+            <main role="main1">
               <nav role=navigation>
                 <div id="results-timeline">
                 </div>
@@ -98,7 +109,7 @@
           </div>
         </div>
 
-        <div id="region-legend">
+        <!--<div id="region-legend">
           <span style="color: #6dae29;">Country of Origin<br></span>
           <span style="color: #683f92;">NA = North America<br></span>
           <span style="color: #b60275;">EU = Europe<br></span>
@@ -108,9 +119,36 @@
           <span style="color: #009d3c;">SS = Sub-Saharan Africa<br></span>
           <span style="color: #ffca00;">ME = Middle East and North Africa<br></span>
           <span style="color: #378974;">LA = Latin America and Caribbean<br></span>
+        </div>-->
+
+      <div id="statistics">
+        <div style="width: 50%; height: 100%; position: absolute; left: 25%; text-align: center;">
+          <div class="container1" style="height: 100%;">
+            <div class="inner" style="background-color: #6dae29; left: 0%;">
+              <span class="inner-text" id="stat1"><br>32%</span>
+              <span><br> of your peers are consistent with <span id="origin">Country</span>'s</span>
+            </div>
+            <div class="inner" style="background-color: #683f92;  left: 0%;">
+              <span class="inner-text" id="stat2"><br>53%</span>
+              <span><br> of your peers are reciprocated</span>
+              
+            </div>
+          </div>
+          <div class="container2" style="height: 100%;">
+            <div class="inner" style="background-color: #b60275;  right: 0%;">
+              <span class="inner-text" id="stat3"><br>40%</span>
+              <span><br> of <span id="origin">Country</span>'s peers are consistent with yours</span>
+            </div>
+            <div class="inner" style="background-color: #2058a5;  right: 0%;">
+              <span class="inner-text" id="stat4"><br>22%</span>
+              <span><br> of <span id="origin">Country</span>'s peers are reciprocated</span>
+            </div>
+          </div>
         </div>
       </div>
+      <span><br><br><br><br><br></span>
 
+      </div>
     </div>
   </div>
   <img src="images/close.png" id="frame" class="close" style="top: 12.5%; left: 12.5%; width: 25px; height: 25px; cursor: pointer; z-index: -1;"></img>
@@ -159,11 +197,15 @@
 
   <script>
       // survey response plots
+      //var your_data = [];
+      //var its data = [];
+      //var count = 0;
       window.drawDiagram = function(peerData, plot, elt, timeline, color) {
 
-      document.getElementById('region-legend').style.visibility = "visible";
+      //document.getElementById('region-legend').style.visibility = "visible";
       document.getElementById('origin-label1').style.visibility = "visible";
       document.getElementById('origin-label2').style.visibility = "visible";
+      document.getElementById('statistics').style.visibility = "visible";
 
       // draw circular plots
       var aLittleBit = Math.PI / 100000;
@@ -188,7 +230,22 @@
         }
       });
       chart.draw(now);
+
+      // get stats
+      /*for (var key in peerData.matrix[0])
+        {
+          if (peerData.matrix[0][key] === 1)
+            {
+              if (plot==="All Peers")
+                its_data.push(peerData.names[key]);
+              else
+                your_data.push(peerData.names[key]);
+            }
+        }
+
+      count++;*/
     };
+
 
 
     (function() {
