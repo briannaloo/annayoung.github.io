@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+	<title>Peer country flows</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+	<link href="style.css" rel="stylesheet" media="all">
+
+  <script src="javascripts/d3.v3.min.js"></script>
+  <script src="main.js"></script>
+
+  <style type="text/css">
+  .results {
+    width: 75%; height: 75%; top: 12.5%; left: 12.5%; background-color: #e8eef7; display: none;
+  }
+  #response-container {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #668DB7; border:1px solid #ccc; overflow-y: scroll;
+  }
+  .text-results {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #6F99C6; font-size: 18px;
+  }
+  .results-container {
+    width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; overflow-x: scroll; background-color: #fff;
+    border: 1px solid #ccc;
+  }
+
+  </style>
+</head>
+<body>
+  <iframe id="frame" src="survey/index.html" width="75%" height="75%" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
+  <div id="frame" class="results">
+    <div class="response-container">
+      
+      <div class="text-results">
+        <span>Thanks! Your response has been recorded.<br>
+          Here's how your response compares to others.<br><br></span>
+      </div>
+
+      <div class="results-container">
+        <div class="scroll-container" style="width: 650px;">
+        <span id="nodata" style="visibility: hidden; position:absolute; left: 10px; top: 10px;">Sorry, we don't have data for this country yet. Thanks for being the first!</span>
+      </div>
+    </div>
+  </div>
+  </div>
+  <img src="images/close.png" id="frame" class="close" style="top: 12.5%; left: 12.5%; width: 25px; height: 25px; cursor: pointer; z-index: -1;"></img>
+  
+
+  <div id=container class="container">
+    <div id="survey" class="contribute">
+      <span style="position: absolute; top: 15px; left: 2px">Please contribute to our data!</span>
+    </div>
+
+    <br><span style="padding: 15px; font-size: 34px; color: #6A93BF;">PEER COUNTRIES</span>
+    <br><span style="padding: 15px; font-size: 12px;">Created by Anna Young, based on code from <a target="_blank" href="http://www.global-migration.info/">Sander et al</a>.</span>
+    <hr>
+
+  	<div class="wrap">
+  		<main role="main">
+        <nav role=navigation>
+          <div id="timeline">
+          </div>
+        </nav>
+        <div id="diagram"></div>
+  		</main>
+  	</div>
+     
+    <div id=help-wrapper class=help-wrapper>
+      <div class="help" id="help">
+        <div class="tab">How to read the plot</div>
+        <div class="help-content" style="z-index:1000">
+          <h3>How to read the plot</h3>
+          <img src="images/help.png" class="left">
+          <p>
+            Regions/countries are represented by the circle’s segments and each is assigned a color. 
+            Flows have the same color as the surveyed region/country and the width indicates the number of peers it has in that region.
+            For "All Peers" and "Unreciprocated Peers", the direction of the flow is also shown by the gap between flow and country/region: small gap indicates surveyed country; large gap indicates peer.
+            <b>Click on a segment to switch between country and region view.</b>
+            <br><br>
+            * Countries with an asterisk have not been surveyed yet.
+          </p>
+          <div class="clear"></div>
+          <p>
+            Switch between plots using Ctrl and number keys (1,2,3,4); 
+            reset the plot using Ctrl and r; zoom in/out with Ctrl and +/- 
+          </p>
+
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      // survey response plots
+      window.drawDiagram = function(peers) {
+        var file = 'json/ISOcodes.json';
+        d3.json(file, function(data) {
+          console.log(data);
+          for (var key in peers)
+          {
+            console.log(peers[key]);
+            console.log(data[peers[key]]);
+            var iso1 = data[peers[key]][1];
+            var iso2 = data[peers[key]][0];
+            var imageFile = iso2.toLowerCase() + ".png";
+            console.log(iso1 + ", " + iso2 + ", " + imageFile + ", ");
+          }
+        });
+      };
+
+
+
+    (function() {
+      // survey
+      var open = false;
+
+      var frame = d3.selectAll('#frame');
+      frame.style("opacity", "0");
+      d3.select('#survey').on('click', function() {
+        if (open === false)
+        {
+          frame.style("z-index", "100");
+          frame.transition()
+            .style("opacity", "1")
+            .duration(400)
+            .delay(0);
+          open = true;
+        }
+        else {
+          frame.style("z-index", "-1");
+          frame.transition()
+          .style("opacity", "0")
+          .duration(600)
+          .delay(0);
+          open = false;
+        }
+      });
+      d3.select('.close').on('click', function() {
+        frame.style("z-index", "-1");
+        frame.transition()
+          .style("opacity", "0")
+          .duration(600)
+          .delay(0);
+        open = false;
+      });
+
+
+      // help
+      var help = d3.select('#help');
+
+      help.on('click', function() {
+        var isActive = help.classed('active');
+
+        help
+          .classed('active', !isActive)
+          .transition()
+          .style('width', isActive ? '30px' : '572px');
+      });
+
+      function helpOffset() {
+        var offset = Math.max((document.body.clientWidth - document.getElementById('container').clientWidth) / 2, 0);
+
+        help.style('right', offset + 'px');
+      }
+      d3.select(window).on('resize.help-resize', helpOffset);
+      helpOffset();
+    })();
+  </script>
+
+
+
+  <script>
+    (function() {
+      var datafile = 'json/Peers.json';
+      var aLittleBit = Math.PI / 100000;
+
+      d3.json(datafile, function(data) {
+        var now = "Mutual Peers";        
+        var chart = Globalmigration.chart(data, {
+          element: '#diagram',
+          now: now,
+          animationDuration: 500,
+          margin: 125,
+          arcPadding: 0.04,
+          layout: {
+            threshold: 0,
+            labelThreshold: 0,
+            colors: 'cd3d08 ec8f00 6dae29 683f92 b60275 2058a5 00a592 ffca00 009d3c 378974'.split(' ').map(function(c) { return '#' + c; })
+          }
+        });
+
+        Globalmigration.timeline(chart, {
+          now: now,
+          element: '#timeline'
+        });
+
+        chart.draw(now);
+      });
+    })();
+
+  </script>
+
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+    {"parsetags": "explicit"}
+  </script>
+
+  <script>
+    (function() {
+      function loadScript(d,s,l,id){
+        var js,
+        fjs=d.getElementsByTagName(s)[0],
+        p=/^http:/.test(d.location)?'http':'https';
+        if(!id || !d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+'://' + l;
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>
