@@ -13,7 +13,7 @@ public class getISO
 			String line = scan.nextLine();
 			String parts[] = line.split(",");
 			System.out.print("\"" + parts[0] + "\"" + ": [" + "\"" + parts[1] + "\"" + ", "
-			 + "\"" + parts[2] + "\"" + "], ");
+			 + "\"" + parts[2] + "\", \"" + parts[1].toLowerCase() + ".png\"" + "], ");
 		}
 		System.out.println('}');
 

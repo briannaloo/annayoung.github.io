@@ -268,7 +268,12 @@
       peers.push(origin);
       $('.results', window.parent.document).css("display", "inline");
 
-       window.parent.drawDiagram(peers);
-        // has to be in parent because this frame will be deleted and replaced with the Google Form confirmation page.
+      var indicators = ["EH_HealthImpacts", "EH_AirQuality", "EH_WaterSanitation", "EV_WaterResources", "EV_Agriculture", "EV_Forests", "EV_Fisheries", "EV_BiodiversityHabitat", "EV_ClimateEnergy"];
+
+      for (var i in indicators)
+      {
+        window.parent.drawDiagram(peers, indicators[i]);
+          // has to be in parent because this frame will be deleted and replaced with the Google Form confirmation page.
+      }
     }
 

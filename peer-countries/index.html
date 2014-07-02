@@ -23,6 +23,29 @@
     width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; overflow-x: scroll; background-color: #fff;
     border: 1px solid #ccc;
   }
+  .indicators {
+    width: 11%;
+    height: 100%;
+    float: left;
+  }
+  #flag {
+    width: 80px;
+    max-width: 200%;
+    position: relative;
+    left: -15px;
+    bottom: 2.5px;
+  }
+  #circle {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   </style>
 </head>
@@ -37,9 +60,28 @@
       </div>
 
       <div class="results-container">
-        <div class="scroll-container" style="width: 650px;">
-        <span id="nodata" style="visibility: hidden; position:absolute; left: 10px; top: 10px;">Sorry, we don't have data for this country yet. Thanks for being the first!</span>
-      </div>
+        <div class="indicators" id="EH_HealthImpacts"></div>
+        <div class="indicators" id="EH_AirQuality"></div>
+        <div class="indicators" id="EH_WaterSanitation"></div>
+        <div class="indicators" id="EV_WaterResources"></div>
+        <div class="indicators" id="EV_Agriculture"></div>
+        <div class="indicators" id="EV_Forests"></div>
+        <div class="indicators" id="EV_Fisheries"></div>
+        <div class="indicators" id="EV_BiodiversityHabitat"></div>
+        <div class="indicators" id="EV_ClimateEnergy"></div>
+
+        <!--
+          <div class="indicators"><div class="circle" id="EH_HealthImpacts"></div></div>
+          <div class="indicators"><div class="circle" id="EH_AirQuality"></div></div>
+          <div class="indicators"><div class="circle" id="EH_WaterSanitation"></div></div>
+          <div class="indicators"><div class="circle" id="EV_WaterResources"></div></div>
+          <div class="indicators"><div class="circle" id="EV_Agriculture"></div></div>
+          <div class="indicators"><div class="circle" id="EV_Forests"></div></div>
+          <div class="indicators"><div class="circle" id="EV_Fisheries"></div></div>
+          <div class="indicators"><div class="circle" id="EV_BiodiversityHabitat"></div></div>
+          <div class="indicators"><div class="circle" id="EV_ClimateEnergy"></div></div>
+          */-->
+
     </div>
   </div>
   </div>
@@ -93,21 +135,48 @@
 
   <script>
       // survey response plots
-      window.drawDiagram = function(peers) {
-        var file = 'json/ISOcodes.json';
+      var codes = {"Afghanistan": ["AF", "AFG", "af.png"], "Albania": ["AL", "ALB", "al.png"], "Algeria": ["DZ", "DZA", "dz.png"], "American Samoa": ["AS", "ASM", "as.png"], "Andorra": ["AD", "AND", "ad.png"], "Angola": ["AO", "AGO", "ao.png"], "Anguilla": ["AI", "AIA", "ai.png"], "Antigua and Barbuda": ["AG", "ATG", "ag.png"], "Argentina": ["AR", "ARG", "ar.png"], "Armenia": ["AM", "ARM", "am.png"], "Aruba": ["AW", "ABW", "aw.png"], "Australia": ["AU", "AUS", "au.png"], "Austria": ["AT", "AUT", "at.png"], "Azerbaijan": ["AZ", "AZE", "az.png"], "Bahamas": ["BS", "BHS", "bs.png"], "Bahrain": ["BH", "BHR", "bh.png"], "Bangladesh": ["BD", "BGD", "bd.png"], "Barbados": ["BB", "BRB", "bb.png"], "Belarus": ["BY", "BLR", "by.png"], "Belgium": ["BE", "BEL", "be.png"], "Belize": ["BZ", "BLZ", "bz.png"], "Benin": ["BJ", "BEN", "bj.png"], "Bermuda": ["BM", "BMU", "bm.png"], "Bhutan": ["BT", "BTN", "bt.png"], "Bolivia": ["BO", "BOL", "bo.png"], "Bosnia and Herzegovina": ["BA", "BIH", "ba.png"], "Botswana": ["BW", "BWA", "bw.png"], "Brazil": ["BR", "BRA", "br.png"], "British Virgin Islands": ["VG", "VGB", "vg.png"], "Brunei Darussalam": ["BN", "BRN", "bn.png"], "Bulgaria": ["BG", "BGR", "bg.png"], "Burkina Faso": ["BF", "BFA", "bf.png"], "Burundi": ["BI", "BDI", "bi.png"], "Cambodia": ["KH", "KHM", "kh.png"], "Cameroon": ["CM", "CMR", "cm.png"], "Canada": ["CA", "CAN", "ca.png"], "Cape Verde": ["CV", "CPV", "cv.png"], "Cayman Islands": ["KY", "CYM", "ky.png"], "Central African Republic": ["CF", "CAF", "cf.png"], "Chad": ["TD", "TCD", "td.png"], "Chile": ["CL", "CHL", "cl.png"], "China": ["CN", "CHN", "cn.png"], "Colombia": ["CO", "COL", "co.png"], "Comoros": ["KM", "COM", "km.png"], "Congo": ["CG", "COG", "cg.png"], "Cook Islands": ["CK", "COK", "ck.png"], "Costa Rica": ["CR", "CRI", "cr.png"], "Cote d'Ivoire": ["CI", "CIV", "ci.png"], "Croatia": ["HR", "HRV", "hr.png"], "Cuba": ["CU", "CUB", "cu.png"], "Cyprus": ["CY", "CYP", "cy.png"], "Czech Republic": ["CZ", "CZE", "cz.png"], "Dem. Rep. Congo": ["CD", "COD", "cd.png"], "Denmark": ["DK", "DNK", "dk.png"], "Djibouti": ["DJ", "DJI", "dj.png"], "Dominica": ["DM", "DMA", "dm.png"], "Dominican Republic": ["DO", "DOM", "do.png"], "Ecuador": ["EC", "ECU", "ec.png"], "Egypt": ["EG", "EGY", "eg.png"], "El Salvador": ["SV", "SLV", "sv.png"], "Equatorial Guinea": ["GQ", "GNQ", "gq.png"], "Eritrea": ["ER", "ERI", "er.png"], "Estonia": ["EE", "EST", "ee.png"], "Ethiopia": ["ET", "ETH", "et.png"], "Faeroe Islands": ["FO", "FRO", "fo.png"], "Falkland Islands": ["FK", "FLK", "fk.png"], "Fiji": ["FJ", "FJI", "fj.png"], "Finland": ["FI", "FIN", "fi.png"], "France": ["FR", "FRA", "fr.png"], "French Guiana": ["GF", "GUF", "gf.png"], "French Polynesia": ["PF", "PYF", "pf.png"], "Gabon": ["GA", "GAB", "ga.png"], "Gambia": ["GM", "GMB", "gm.png"], "Georgia": ["GE", "GEO", "ge.png"], "Germany": ["DE", "DEU", "de.png"], "Ghana": ["GH", "GHA", "gh.png"], "Gibraltar": ["GI", "GIB", "gi.png"], "Greece": ["GR", "GRC", "gr.png"], "Greenland": ["GL", "GRL", "gl.png"], "Grenada": ["GD", "GRD", "gd.png"], "Guadeloupe": ["GP", "GLP", "gp.png"], "Guam": ["GU", "GUM", "gu.png"], "Guatemala": ["GT", "GTM", "gt.png"], "Guinea": ["GN", "GIN", "gn.png"], "Guinea-Bissau": ["GW", "GNB", "gw.png"], "Guyana": ["GY", "GUY", "gy.png"], "Haiti": ["HT", "HTI", "ht.png"], "Holy See": ["VA", "VAT", "va.png"], "Honduras": ["HN", "HND", "hn.png"], "Hong Kong": ["HK", "HKG", "hk.png"], "Hungary": ["HU", "HUN", "hu.png"], "Iceland": ["IS", "ISL", "is.png"], "India": ["IN", "IND", "in.png"], "Indonesia": ["ID", "IDN", "id.png"], "Iran": ["IR", "IRN", "ir.png"], "Iraq": ["IQ", "IRQ", "iq.png"], "Ireland": ["IE", "IRL", "ie.png"], "Isle of Man": ["IM", "IMN", "im.png"], "Israel": ["IL", "ISR", "il.png"], "Italy": ["IT", "ITA", "it.png"], "Jamaica": ["JM", "JAM", "jm.png"], "Japan": ["JP", "JPN", "jp.png"], "Jordan": ["JO", "JOR", "jo.png"], "Kazakhstan": ["KZ", "KAZ", "kz.png"], "Kenya": ["KE", "KEN", "ke.png"], "Kiribati": ["KI", "KIR", "ki.png"], "Kuwait": ["KW", "KWT", "kw.png"], "Kyrgyzstan": ["KG", "KGZ", "kg.png"], "Laos": ["LA", "LAO", "la.png"], "Latvia": ["LV", "LVA", "lv.png"], "Lebanon": ["LB", "LBN", "lb.png"], "Lesotho": ["LS", "LSO", "ls.png"], "Liberia": ["LR", "LBR", "lr.png"], "Libya": ["LY", "LBY", "ly.png"], "Liechtenstein": ["LI", "LIE", "li.png"], "Lithuania": ["LT", "LTU", "lt.png"], "Luxembourg": ["LU", "LUX", "lu.png"], "Macao": ["MO", "MAC", "mo.png"], "Macedonia": ["MK", "MKD", "mk.png"], "Madagascar": ["MG", "MDG", "mg.png"], "Malawi": ["MW", "MWI", "mw.png"], "Malaysia": ["MY", "MYS", "my.png"], "Maldives": ["MV", "MDV", "mv.png"], "Mali": ["ML", "MLI", "ml.png"], "Malta": ["MT", "MLT", "mt.png"], "Marshall Islands": ["MH", "MHL", "mh.png"], "Martinique": ["MQ", "MTQ", "mq.png"], "Mauritania": ["MR", "MRT", "mr.png"], "Mauritius": ["MU", "MUS", "mu.png"], "Mayotte": ["YT", "MYT", "yt.png"], "Mexico": ["MX", "MEX", "mx.png"], "Micronesia": ["FM", "FSM", "fm.png"], "Moldova": ["MD", "MDA", "md.png"], "Monaco": ["MC", "MCO", "mc.png"], "Mongolia": ["MN", "MNG", "mn.png"], "Montenegro": ["ME", "MNE", "me.png"], "Montserrat": ["MS", "MSR", "ms.png"], "Morocco": ["MA", "MAR", "ma.png"], "Mozambique": ["MZ", "MOZ", "mz.png"], "Myanmar": ["MM", "MMR", "mm.png"], "Namibia": ["NA", "NAM", "na.png"], "Nauru": ["NR", "NRU", "nr.png"], "Nepal": ["NP", "NPL", "np.png"], "Netherlands": ["NL", "NLD", "nl.png"], "Netherlands Antilles": ["XX", "ANT", "xx.png"], "New Caledonia": ["NC", "NCL", "nc.png"], "New Zealand": ["NZ", "NZL", "nz.png"], "Nicaragua": ["NI", "NIC", "ni.png"], "Niger": ["NE", "NER", "ne.png"], "Nigeria": ["NG", "NGA", "ng.png"], "Niue": ["NU", "NIU", "nu.png"], "Norfolk Island": ["NF", "NFK", "nf.png"], "North Korea": ["KP", "PRK", "kp.png"], "Northern Mariana Islands": ["MP", "MNP", "mp.png"], "Norway": ["NO", "NOR", "no.png"], "Oman": ["OM", "OMN", "om.png"], "Pakistan": ["PK", "PAK", "pk.png"], "Palau": ["PW", "PLW", "pw.png"], "Panama": ["PA", "PAN", "pa.png"], "Papua New Guinea": ["PG", "PNG", "pg.png"], "Paraguay": ["PY", "PRY", "py.png"], "Peru": ["PE", "PER", "pe.png"], "Philippines": ["PH", "PHL", "ph.png"], "Pitcairn": ["PN", "PCN", "pn.png"], "Poland": ["PL", "POL", "pl.png"], "Portugal": ["PT", "PRT", "pt.png"], "Puerto Rico": ["PR", "PRI", "pr.png"], "Qatar": ["QA", "QAT", "qa.png"], "Reunion": ["RE", "REU", "re.png"], "Romania": ["RO", "ROU", "ro.png"], "Russia": ["RU", "RUS", "ru.png"], "Rwanda": ["RW", "RWA", "rw.png"], "Saint Helena": ["SH", "SHN", "sh.png"], "Saint Kitts and Nevis": ["KN", "KNA", "kn.png"], "Saint Lucia": ["LC", "LCA", "lc.png"], "Saint Pierre and Miquelon": ["PM", "SPM", "pm.png"], "Saint Vincent and the Grenadines": ["VC", "VCT", "vc.png"], "Samoa": ["WS", "WSM", "ws.png"], "San Marino": ["SM", "SMR", "sm.png"], "Sao Tome and Principe": ["ST", "STP", "st.png"], "Saudi Arabia": ["SA", "SAU", "sa.png"], "Senegal": ["SN", "SEN", "sn.png"], "Serbia": ["RS", "SRB", "rs.png"], "Seychelles": ["SC", "SYC", "sc.png"], "Sierra Leone": ["SL", "SLE", "sl.png"], "Singapore": ["SG", "SGP", "sg.png"], "Slovakia": ["SK", "SVK", "sk.png"], "Slovenia": ["SI", "SVN", "si.png"], "Solomon Islands": ["SB", "SLB", "sb.png"], "Somalia": ["SO", "SOM", "so.png"], "South Africa": ["ZA", "ZAF", "za.png"], "South Korea": ["KR", "KOR", "kr.png"], "Spain": ["ES", "ESP", "es.png"], "Sri Lanka": ["LK", "LKA", "lk.png"], "State of Palestine": ["PS", "PSE", "ps.png"], "Sudan": ["SD", "SDN", "sd.png"], "Suriname": ["SR", "SUR", "sr.png"], "Svalbard and Jan Mayen Islands": ["SJ", "SJM", "sj.png"], "Swaziland": ["SZ", "SWZ", "sz.png"], "Sweden": ["SE", "SWE", "se.png"], "Switzerland": ["CH", "CHE", "ch.png"], "Syria": ["SY", "SYR", "sy.png"], "Taiwan": ["TW", "TWN", "tw.png"], "Tajikistan": ["TJ", "TJK", "tj.png"], "Tanzania": ["TZ", "TZA", "tz.png"], "Thailand": ["TH", "THA", "th.png"], "Timor-Leste": ["TL", "TLS", "tl.png"], "Togo": ["TG", "TGO", "tg.png"], "Tokelau": ["TK", "TKL", "tk.png"], "Tonga": ["TO", "TON", "to.png"], "Trinidad and Tobago": ["TT", "TTO", "tt.png"], "Tunisia": ["TN", "TUN", "tn.png"], "Turkey": ["TR", "TUR", "tr.png"], "Turkmenistan": ["TM", "TKM", "tm.png"], "Turks and Caicos Islands": ["TC", "TCA", "tc.png"], "Tuvalu": ["TV", "TUV", "tv.png"], "Uganda": ["UG", "UGA", "ug.png"], "Ukraine": ["UA", "UKR", "ua.png"], "United Arab Emirates": ["AE", "ARE", "ae.png"], "United Kingdom": ["GB", "GBR", "gb.png"], "United States of America": ["US", "USA", "us.png"], "United States Virgin Islands": ["VI", "VIR", "vi.png"], "Uruguay": ["UY", "URY", "uy.png"], "Uzbekistan": ["UZ", "UZB", "uz.png"], "Vanuatu": ["VU", "VUT", "vu.png"], "Venezuela": ["VE", "VEN", "ve.png"], "Viet Nam": ["VN", "VNM", "vn.png"], "Wallis and Futuna Islands": ["WF", "WLF", "wf.png"], "Western Sahara": ["EH", "ESH", "eh.png"], "Yemen": ["YE", "YEM", "ye.png"], "Zambia": ["ZM", "ZMB", "zm.png"], "Zimbabwe": ["ZW", "ZWE", "zw.png"]};
+      window.drawDiagram = function(peers, indicator) {
+        var file = "http://epivisual.yale.edu/radar_chart.json?years[]=2012&indicators[]=" + indicator;
+        for (var key in peers) 
+        {
+          file += "&iso_codes[]=" + codes[peers[key]][1];
+        }
         d3.json(file, function(data) {
-          console.log(data);
-          for (var key in peers)
+          var order = [];
+          data = data[0];
+          for (var key in data)
           {
-            console.log(peers[key]);
-            console.log(data[peers[key]]);
-            var iso1 = data[peers[key]][1];
-            var iso2 = data[peers[key]][0];
-            var imageFile = iso2.toLowerCase() + ".png";
-            console.log(iso1 + ", " + iso2 + ", " + imageFile + ", ");
+            var country = data[key]["data"]["name"];
+            var value = data[key]["data"]["indicators"][0]["value"];
+            order.push(value + "," + country);
           }
+          rank(order, indicator);
         });
       };
+
+      function rank(order, indicator) {
+          order.sort(function(a, b) {         // sort by score
+            a = parseInt((a.split(","))[0]);
+            b = parseInt((b.split(","))[0]);
+            return a-b;
+          });
+          order.reverse(); // highest (best) scores first
+          console.log(indicator);
+          console.log(order);
+          for (var rank in order)
+          {
+            var country = (order[rank].split(","))[1];
+            var flag = codes[country][2];
+            var circle = document.createElement('div');
+            circle.id = "circle";
+            var elt = document.createElement('img');
+            elt.src = "images/flags/" + flag;
+            elt.id = "flag";
+            circle.appendChild(elt);
+            document.getElementById(indicator).appendChild(circle);
+          }
+      }
 
 
 
