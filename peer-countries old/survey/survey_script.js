@@ -261,14 +261,226 @@
     // process answers
     function showResults () {
       var origin = $('#entry_200171192 option:selected').val();
-      var peers = [];
-      $('.ss-checkbox input:checked').each(function() {
-        peers.push($(this).val());
-      });
-      peers.push(origin);
+      var data = window.parent.peer_data;
+      var names = data.names;
+      var matrix = data.matrix["All Peers"];
+
+      // get the index of the country in the matrix
+      var origin_index = -1;
+      for (var i in names) {
+        if (origin === names[i] || (origin+'*') === names[i]) {
+          origin_index = i;
+          if ((origin+'*') === names[i])
+            origin += '*';
+          break;
+        }
+      }
+
+      // don't have data for this country
+      if (origin_index === -1 || names[origin_index].indexOf('*') !== -1)
+      {
+        $('.results', window.parent.document).css("display", "inline");
+        $('#nodata', window.parent.document).css("visibility", "visible");
+        return;
+      }
+
+      $('#origin-label1', window.parent.document).text(origin + "'s Peers");
+      $('#origin-label2', window.parent.document).text("Your Response for " + origin);
+      $('[id=origin]', window.parent.document).text(origin);
+
+      var origin_region = names[getRegion(origin_index, data.regions)];
+      origin = origin.toUpperCase();
+
+      var colors = ['6dae29', '683f92', 'b60275', '2058a5', '00a592', 'cd3d08', '009d3c', 'ffca00', '378974'];
+      // note: if change COLORS, have to change in main index.html for regions-legend
+      var color_match = {"origin": colors[0]};
+      var ind = 1;
+      for (var r in data.regions)
+      {
+        color_match[names[data.regions[r]]] = colors[ind++];
+      }
+
+      createPlot("All Peers", origin, origin_region, origin_index, data, names, matrix, 
+        '#results-diagram', '#results-timeline', color_match);
+      createPlot("Your Peers", origin, origin_region, origin_index, data, names, matrix, 
+        '#results-diagram2', '#results-timeline2', color_match);
+
+    }
+
+
+    function createPlot(plot, origin, origin_region, origin_index, data, names, matrix, elt, timeline, color_match)
+    {
+      var all_peers = {};
+      all_peers[origin] = {};
+      for (var i in data.regions)     // push all regions to the object
+        all_peers[names[data.regions[i]]] = {};
+      all_peers[origin][origin] = [0, 0];
+      var length = 1;
+
+      var current_region = "";
+      for (var i in matrix)
+      {
+        if (region(i, data.regions))  // update current region
+          current_region = names[i];
+
+        var name = names[i];
+
+        if (i === origin_index) // get real peers of origin-country
+        {
+          if (plot==="All Peers")
+          {
+            var current_region2 = "";
+            for (var p in matrix[i])
+            {
+              if (region(p, data.regions))  // update current region
+                  current_region2 = names[p];
+              if (matrix[i][p] > 0 && !region(p, data.regions))
+              {
+                name = names[p];
+
+                if (all_peers[current_region2][name] != undefined)
+                  all_peers[current_region2][name] = [1, 1];
+                else {
+                  all_peers[current_region2][name] = [1, 0];
+                  length++;
+                }
+              }
+            }
+          }
+          else // "Your Peers"
+          {
+            // get the peers of the survey response
+            var peers = [];
+            $('.ss-checkbox input:checked').each(function() {
+              peers.push($(this).val());
+            });
+
+            for (var p in peers)
+            {
+              if (names.indexOf(peers[p])===-1 && names.indexOf(peers[p]+'*')!==-1)
+                peers[p] += '*';
+              var current_region2 = names[getRegion(names.indexOf(peers[p]), data.regions)];
+
+              if (all_peers[current_region2][peers[p]] != undefined)
+                  all_peers[current_region2][peers[p]] = [1, 1];
+              else {
+                all_peers[current_region2][peers[p]] = [1, 0];
+                length++;
+              }
+            }
+          }
+        }
+        // get countries who think it is their peer
+        else if (matrix[i][origin_index] > 0 && !region(i, data.regions))
+        {
+          if (all_peers[current_region][name] != undefined)
+            all_peers[current_region][name] = [1, 1];
+          else {
+            all_peers[current_region][name] = [0, 1];
+            length++;
+          }
+        }
+      }
+
+
+      var new_data = {"names":[],
+                      "regions":[],
+                      "matrix":{plot:[]}};
+      var new_names = [], new_regions = [];
+      
+      var num_regions = 0;
+      for (var key in all_peers)
+        if (Object.keys(all_peers[key]).length !== 0)
+          num_regions++;
+      var new_matrix = initialize(length + num_regions);
+      var index = 0;
+      for (var key in all_peers)
+      {
+        if (Object.keys(all_peers[key]).length !== 0)
+        {
+          // load region names & indices
+          new_names.push(key);
+          new_regions.push(index);
+          index++;
+
+          // load country data
+          var count = 0, count_region = 0;
+          for (var c in all_peers[key])
+          {
+            new_names.push(c);
+            index++;
+
+            if (c != origin)
+            {
+              var c_index = new_names.indexOf(c);
+              // to sum for region
+              count += all_peers[key][c][1];
+              count_region += all_peers[key][c][0];
+              // country data
+              new_matrix[c_index][1] = all_peers[key][c][1]; // e.g. country Netherlands (origin)
+              new_matrix[c_index][0] = all_peers[key][c][1]; // e.g. region Netherlands
+              // get for origin
+              new_matrix[1][c_index] = all_peers[key][c][0];  // origin country to c
+              new_matrix[0][c_index] += all_peers[key][c][0]; // origin region to c
+            }
+          }
+          new_matrix[new_names.indexOf(key)][1] = count;  // whole region to Netherlands
+          new_matrix[new_names.indexOf(key)][0] = count;  // whole region to Netherlands region
+          new_matrix[0][new_names.indexOf(key)] = count_region; // Netherlands region to whole region (key)
+          new_matrix[1][new_names.indexOf(key)] = count_region; // Netherlands country to region (e.g. South Asia)
+
+        }
+      }
+      new_data.names = new_names;
+      new_data.regions = new_regions;
+      new_data.matrix[plot] = new_matrix;
+
       $('.results', window.parent.document).css("display", "inline");
 
-       window.parent.drawDiagram(peers);
+      // match colors with regions, so that no matter what the data, 
+        // the regions always have the same colors
+      var color = '' + color_match["origin"];
+      for (var r in new_regions)
+      {
+        if (r != 0)  // not origin
+          color += ' ' + color_match[new_names[new_regions[r]]];
+      }
+
+      window.parent.drawDiagram(new_data, plot, elt, timeline, color);
         // has to be in parent because this frame will be deleted and replaced with the Google Form confirmation page.
     }
 
+
+    function initialize (length)
+    {
+      var matrixdata = [];
+      for (var i = 0; i < length; i++)
+      {
+        var sub_data = [];
+        for (var j = 0; j < length; j++)
+        {
+          sub_data.push(0);
+        }
+        matrixdata.push(sub_data);
+      }
+      return matrixdata;
+    }
+
+    function getRegion(index, regions) 
+    {
+      var region = 0;
+      for (var i in regions)
+      {
+        if (parseInt(index) > regions[i])
+          region = regions[i];
+      }
+      return region;
+    }
+
+    function region(index, regions) {
+      for (var i in regions) {
+        if (parseInt(index) === regions[i])
+          return true;
+      }
+      return false;
+    }
