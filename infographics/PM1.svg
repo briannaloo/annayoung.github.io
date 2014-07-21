@@ -8852,12 +8852,18 @@
 		c-19.8,0-35.9-16.1-35.9-35.9c0-19.8,16.1-35.9,35.9-35.9C953.6,363.3,969.7,379.4,969.7,399.3z"/>
 	<polygon id="nose" fill="#2BC0D2" points="1052.9,284.9 1037.9,269.8 1018.8,288.9 999.8,269.8 984.7,284.9 1003.8,303.9 984.7,323 
 		999.8,338 1018.8,319 1037.9,338 1052.9,323 1033.9,303.9 	">
-		<set id="begin-nose" attributeName="fill" attributeType="XML"
+		<set attributeName="fill" attributeType="XML"
+         to="#F5C714"
+         begin="particle-motion.begin + 1.5s"/>
+         <set attributeName="fill" attributeType="XML"
+         to="#2BC0D2"
+         begin="particle-motion.begin + 3s"/>
+		<!--<set id="begin-nose" attributeName="fill" attributeType="XML"
          to="#F5C714" dur="1.5s"
          begin="1.5s; end-nose.end" fill="freeze"/>
          <set id="end-nose" attributeName="fill" attributeType="XML"
          to="#2BC0D2" dur="13.5s"
-         begin="begin-nose.end" fill="freeze" />
+         begin="begin-nose.end" fill="freeze" />-->
          <!--<animate attributeName="fill" attributeType="XML"
              from="#2BC0D2"  to="#F5C714"
              begin="particle-motion.begin + 1.5s" dur="1.5s"
