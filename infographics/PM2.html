@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+
+<object id="svg-object" width="600" height="600" type="image/svg+xml" data="./PM2.svg">Your browser does not support SVG</object>
+
+
+<script type="text/javascript">
+
+var obj = document.getElementById("svg-object");
+obj.addEventListener("load", function() {
+	var object = obj.contentDocument;
+
+	var skyline = object.getElementById("buildings");
+	$(skyline).children().each(function() {
+
+		var animation_x = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+		animation_x.setAttribute("dur", "5s");
+		animation_x.setAttribute("id", "x_motion");
+		animation_x.setAttribute("repeatCount", "1");
+		animation_x.setAttribute("begin", "0s");
+		animation_x.setAttribute("from", "0,0");
+		animation_x.setAttribute("to", "250,0");
+		animation_x.setAttribute("fill", "freeze");
+
+		var degrees = $(this).attr("id");
+		var animation_y = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+		animation_y.setAttribute("dur", "5s");
+		animation_y.setAttribute("repeatCount", "1");
+		animation_y.setAttribute("begin", "0s");
+		animation_y.setAttribute("from", "0,0");
+		animation_y.setAttribute("to", "0,-" + degrees);
+		animation_y.setAttribute("fill", "freeze");
+
+		var degrees = $(this).attr("id");
+		var rotate = document.createElementNS("http://www.w3.org/2000/svg","animateTransform");
+		rotate.setAttribute("dur", "5s");
+		rotate.setAttribute("repeatCount", "1");
+		rotate.setAttribute("begin", "x_motion.begin");
+		//rotate.setAttribute("begin", "0s");
+		rotate.setAttribute("attributeName", "transform");
+		rotate.setAttribute("type", "rotate");
+		rotate.setAttribute("fill", "freeze");
+		rotate.setAttribute("from", "0");
+		rotate.setAttribute("to", "25");
+		rotate.setAttribute("additive", "sum");
+
+		$(this).append(animation_x);
+		$(this).append(rotate);
+
+	});
+
+	});
+</script>
+</body>
+</html>

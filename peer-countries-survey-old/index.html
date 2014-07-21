@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+	<title>Peer country flows</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+	<link href="style.css" rel="stylesheet" media="all">
+
+  <script src="javascripts/d3.v3.min.js"></script>
+  <script src="main.js"></script>
+
+  <style type="text/css">
+  .results {
+    width: 75%; height: 75%; top: 12.5%; left: 12.5%; background-color: #e8eef7; display: none;
+  }
+  #response-container {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #668DB7; border:1px solid #ccc; overflow-y: scroll;
+  }
+  .text-results {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; text-align: center; color: #6F99C6; font-size: 18px;
+  }
+  .results-container {
+    width: 97%; height: 85%; position: absolute; top: 15%; left: 1.5%; overflow-y: scroll; overflow-x: scroll; background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  main1, main2 {
+    position: absolute;
+    top: 2.5%;
+  }
+  .outer-container {
+    width: 50%;
+    position: relative;
+    float: left;
+  }
+  .container1, .container2 {
+    width: 90%;
+    position: relative;
+    left: 5%;
+  }
+  #region-legend {
+    visibility: hidden;
+    font-size: 11px;
+    line-height: 1.2em;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+  }
+  #statistics {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    float: left;
+    visibility: hidden;
+    font-size: 14px;
+  }
+  .inner {
+    width: 100%;
+    height: 50%;
+    color: white;
+    vertical-align: middle;
+  }
+  .inner-text {
+    font-size: 24px;
+  }
+
+  </style>
+</head>
+<body>
+  <iframe id="frame" src="survey/index.html" width="75%" height="75%" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
+  <div id="frame" class="results">
+    <div class="response-container">
+      
+      <div class="text-results">
+        <span>Thanks! Your response has been recorded.<br>
+          Here's how your response compares to others.<br><br></span>
+      </div>
+
+      <div class="results-container">
+        <div class="scroll-container" style="width: 650px;">
+        <span id="nodata" style="visibility: hidden; position:absolute; left: 10px; top: 10px;">Sorry, we don't have data for this country yet. Thanks for being the first!</span>
+
+        <div class="outer-container">
+          <span class="mini-plot-label" id="origin-label1" style="text-align: center; visibility: hidden; left: 0;">All Peers</span>
+          <div class="container1" style="padding-top: 20px;">
+            <div class="wrap1">
+              <main role="main1">
+                <nav role=navigation>
+                  <div id="results-timeline">
+                  </div>
+                </nav>
+                <div id="results-diagram">
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+        <div class="outer-container">
+          <span class="mini-plot-label" id="origin-label2" style="text-align: center; visibility: hidden; right: 0;">Your Response</span>
+          <div class="container2" style="padding-top: 20px;">
+            <div class="wrap2">
+              <main role="main2">
+                <nav role=navigation>
+                  <div id="results-timeline2">
+                  </div>
+                </nav>
+                <div id="results-diagram2"></div>
+              </main>
+            </div>
+          </div>
+        </div>
+
+        <!--<div id="region-legend">
+          <span style="color: #6dae29;">Country of Origin<br></span>
+          <span style="color: #683f92;">NA = North America<br></span>
+          <span style="color: #b60275;">EU = Europe<br></span>
+          <span style="color: #2058a5;">EE = Eastern Europe and Central Asia<br></span>
+          <span style="color: #00a592;">SA = South Asia<br></span>
+          <span style="color: #cd3d08;">EA = East Asia and the Pacific<br></span>
+          <span style="color: #009d3c;">SS = Sub-Saharan Africa<br></span>
+          <span style="color: #ffca00;">ME = Middle East and North Africa<br></span>
+          <span style="color: #378974;">LA = Latin America and Caribbean<br></span>
+        </div>-->
+
+      <!--<div id="statistics">
+        <div style="width: 50%; height: 100%; position: absolute; left: 25%; text-align: center;">
+          <div class="container1" style="height: 100%;">
+            <div class="inner" style="background-color: #6dae29; left: 0%;">
+              <span class="inner-text" id="stat1"><br>32%</span>
+              <span><br> of your peers are consistent with <span id="origin">Country</span>'s</span>
+            </div>
+            <div class="inner" style="background-color: #683f92;  left: 0%;">
+              <span class="inner-text" id="stat2"><br>53%</span>
+              <span><br> of your peers are reciprocated</span>
+              
+            </div>
+          </div>
+          <div class="container2" style="height: 100%;">
+            <div class="inner" style="background-color: #b60275;  right: 0%;">
+              <span class="inner-text" id="stat3"><br>40%</span>
+              <span><br> of <span id="origin">Country</span>'s peers are consistent with yours</span>
+            </div>
+            <div class="inner" style="background-color: #2058a5;  right: 0%;">
+              <span class="inner-text" id="stat4"><br>22%</span>
+              <span><br> of <span id="origin">Country</span>'s peers are reciprocated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span><br><br><br><br><br></span>-->
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <img src="images/close.png" id="frame" class="close" style="top: 12.5%; left: 12.5%; width: 25px; height: 25px; cursor: pointer; z-index: -1;"></img>
+  
+
+  <div id=container class="container">
+    <div id="survey" class="contribute">
+      <span style="position: absolute; top: 15px; left: 2px">Please contribute to our data!</span>
+    </div>
+
+    <br><span style="padding: 15px; font-size: 34px; color: #6A93BF;">PEER COUNTRIES</span>
+    <br><span style="padding: 15px; font-size: 12px;">Created by Anna Young, based on code from <a target="_blank" href="http://www.global-migration.info/">Sander et al</a>.</span>
+    <hr>
+
+  	<div class="wrap">
+  		<main role="main">
+        <nav role=navigation>
+          <div id="timeline">
+          </div>
+        </nav>
+        <div id="diagram"></div>
+  		</main>
+  	</div>
+     
+    <div id=help-wrapper class=help-wrapper>
+      <div class="help" id="help">
+        <div class="tab">How to read the plot</div>
+        <div class="help-content" style="z-index:1000">
+          <h3>How to read the plot</h3>
+          <img src="images/help.png" class="left">
+          <p>
+            Regions/countries are represented by the circle’s segments and each is assigned a color. 
+            Flows have the same color as the surveyed region/country and the width indicates the number of peers it has in that region.
+            For "All Peers" and "Unreciprocated Peers", the direction of the flow is also shown by the gap between flow and country/region: small gap indicates surveyed country; large gap indicates peer.
+            <b>Click on a segment to switch between country and region view.</b>
+            <br><br>
+            * Countries with an asterisk have not been surveyed yet.
+          </p>
+          <div class="clear"></div>
+          <p>
+            Switch between plots using Ctrl and number keys (1,2,3,4); 
+            reset the plot using Ctrl and r; zoom in/out with Ctrl and +/- 
+          </p>
+
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      // survey response plots
+      window.drawDiagram = function(peerData, plot, elt, timeline, color) {
+
+      //document.getElementById('region-legend').style.visibility = "visible";
+      document.getElementById('origin-label1').style.visibility = "visible";
+      document.getElementById('origin-label2').style.visibility = "visible";
+      //document.getElementById('statistics').style.visibility = "visible";
+
+      // draw circular plots
+      var aLittleBit = Math.PI / 100000;
+      var now = plot;        
+      var chart = Globalmigration.chart(peerData, {
+        element: elt, 
+        openRegionsAtStart: true,   // also so can't open the Origin region
+        regionAbbreviations: true,
+        width: 400,
+        height: 400,
+        acrWidth: 10,
+        targetPadding: 7,
+        maxRegionsOpen: 10,
+        now: now,
+        animationDuration: 500,
+        margin: 50,
+        arcPadding: 0.04,
+        layout: {
+          threshold: 0,
+          labelThreshold: 0,
+          colors: color.split(' ').map(function(c) { return '#' + c; })
+        }
+      });
+      chart.draw(now);
+    };
+
+
+
+    (function() {
+      // survey
+      var open = false;
+
+      var frame = d3.selectAll('#frame');
+      frame.style("opacity", "0");
+      d3.select('#survey').on('click', function() {
+        if (open === false)
+        {
+          frame.style("z-index", "100");
+          frame.transition()
+            .style("opacity", "1")
+            .duration(400)
+            .delay(0);
+          open = true;
+        }
+        else {
+          frame.style("z-index", "-1");
+          frame.transition()
+          .style("opacity", "0")
+          .duration(600)
+          .delay(0);
+          open = false;
+        }
+      });
+      d3.select('.close').on('click', function() {
+        frame.style("z-index", "-1");
+        frame.transition()
+          .style("opacity", "0")
+          .duration(600)
+          .delay(0);
+        open = false;
+      });
+
+
+      // help
+      var help = d3.select('#help');
+
+      help.on('click', function() {
+        var isActive = help.classed('active');
+
+        help
+          .classed('active', !isActive)
+          .transition()
+          .style('width', isActive ? '30px' : '572px');
+      });
+
+      function helpOffset() {
+        var offset = Math.max((document.body.clientWidth - document.getElementById('container').clientWidth) / 2, 0);
+
+        help.style('right', offset + 'px');
+      }
+      d3.select(window).on('resize.help-resize', helpOffset);
+      helpOffset();
+    })();
+  </script>
+
+
+
+  <script>
+    (function() {
+      window.peer_data;  // make data global, so survey can access
+
+
+      var datafile = 'json/Peers.json';
+      var aLittleBit = Math.PI / 100000;
+
+      d3.json(datafile, function(data) {
+        peer_data = data;
+        var now = "Mutual Peers";        
+        var chart = Globalmigration.chart(data, {
+          element: '#diagram',
+          now: now,
+          animationDuration: 500,
+          margin: 125,
+          arcPadding: 0.04,
+          layout: {
+            threshold: 0,
+            labelThreshold: 0,
+            colors: 'cd3d08 ec8f00 6dae29 683f92 b60275 2058a5 00a592 ffca00 009d3c 378974'.split(' ').map(function(c) { return '#' + c; })
+          }
+        });
+
+        Globalmigration.timeline(chart, {
+          now: now,
+          element: '#timeline'
+        });
+
+        chart.draw(now);
+      });
+    })();
+
+  </script>
+
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+    {"parsetags": "explicit"}
+  </script>
+
+  <script>
+    (function() {
+      function loadScript(d,s,l,id){
+        var js,
+        fjs=d.getElementsByTagName(s)[0],
+        p=/^http:/.test(d.location)?'http':'https';
+        if(!id || !d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+'://' + l;
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>
