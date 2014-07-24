@@ -102,7 +102,7 @@ obj.addEventListener("load", function() {
 			$(trees_hidden).attr("cursor", "auto");
 			$(trees_hidden).attr("pointer-events", "none");
 		});
-		var seconds = 2;
+		var seconds = 1;
 		// make trees bigger
 		$(object.getElementsByClassName("trees-hide")).hide();
 		// hide elements of page1
@@ -119,20 +119,28 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("draw-respiratory-line")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "440", "0"));
 		$(object.getElementById("respiratory-dropdown")).append(createSet("visibility", "visible", "person.click + " + (2*seconds) + "s"));
 
-		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "1000", "0"));
+		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds*2, "person.click + " + (seconds) + "s", "1000", "0"));
 		$(object.getElementById("health-line")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s"));
-		$(object.getElementById("health-line2")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "150", "0"));
+		$(object.getElementById("health-line2")).append(createAnimate("stroke-dashoffset", seconds*2, "person.click + " + (seconds) + "s", "150", "0"));
 		$(object.getElementById("health-line2")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s"));
 		$(object.getElementById("health-line2")).append(createSet("stroke-dasharray", "0", "person.click + " + (seconds+0.5) + "s"));
 
-		var sec = seconds / 6.0;
+		var sec = 0;
+		$(object.getElementsByClassName("fade1")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));});
+		sec += seconds*2 / 5.5;
 		$(object.getElementById("small-lines1")).append(createAnimate("stroke-dashoffset", seconds/2, "person.click + " + (seconds + sec) + "s", "50", "0")).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));
-		sec += seconds / 6.0;
+		$(object.getElementsByClassName("fade2")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));});
+		sec += seconds*2 / 5.0;
 		$(object.getElementById("small-lines2")).append(createAnimate("stroke-dashoffset", seconds/2, "person.click + " + (seconds + sec) + "s", "50", "0")).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));
-		sec += seconds / 6.0;
+		$(object.getElementsByClassName("fade3")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));});
+		sec += seconds*2 / 5.0;
 		$(object.getElementById("small-lines3")).append(createAnimate("stroke-dashoffset", seconds/2, "person.click + " + (seconds + sec) + "s", "50", "0")).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));
-		sec += seconds / 6.0;
+		$(object.getElementsByClassName("fade4")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));});
+		sec += seconds*2 / 5.0;
 		$(object.getElementById("small-lines4")).append(createAnimate("stroke-dashoffset", seconds/2, "person.click + " + (seconds + sec) + "s", "50", "0")).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));
+		$(object.getElementsByClassName("fade5")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));});
+		sec += seconds*2 / 5.0;
+		$(object.getElementsByClassName("fade6")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));});
 	}
 
 	function createMotion(seconds, begin, from, to, id) {
