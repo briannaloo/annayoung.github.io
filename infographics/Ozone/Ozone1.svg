@@ -4,10 +4,12 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1600 1150" enable-background="new 0 0 1600 1150" xml:space="preserve">
 <svg>
 <g id="Layer_1">
-	<rect fill="#47BCB6" width="1600.229" height="1147.277"/>
+	<g id="logo">
+		<rect fill="#47BCB6" width="1600.229" height="1147.277"/>
 
-	<rect id="go-back" x="1.592" y="984.238" fill="#FFFFFF" width="1600" height="165.762"/>
-	<text transform="matrix(1 0 0 1 341.2988 1046.0869)"><tspan x="0" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">Re</tspan><tspan x="23.01" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">f</tspan><tspan x="27.849" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">erences</tspan></text>
+		<rect id="go-back" x="1.592" y="984.238" fill="#FFFFFF" width="1600" height="165.762"/>
+		<text transform="matrix(1 0 0 1 341.2988 1046.0869)"><tspan x="0" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">Re</tspan><tspan x="23.01" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">f</tspan><tspan x="27.849" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">erences</tspan></text>
+	</g>
 	<g>
 		<polygon fill="#2E2119" points="105.124,1045.854 105.124,1029.158 116.626,1029.158 116.626,1031.684 108.737,1031.684 
 			108.737,1035.93 115.362,1035.93 115.362,1038.309 108.737,1038.309 108.737,1043.307 116.966,1043.307 116.966,1045.854 		"/>
@@ -625,6 +627,14 @@
 <g id="health-impacts" visibility="hidden">
 	<path id="health-line2" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-miterlimit="10" stroke-dashoffset="150" stroke-dasharray="150" d="M1206.261,385.068
 		c49.907-17.406,101.223-31.806,153.729-42.991v42.991"/>
+	<g id="forward" cursor="pointer">
+			<rect x="1285" y="362" fill="#47BCB6" stroke="none" stroke-miterlimit="10" width="60" height="35"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" d="M1295.238,376.046
+				c13.478-3.917,27.227-7.183,41.208-9.764"/>
+			<g>
+				<polygon fill="#FFFFFF" points="1299.5,382.605 1284.94,379.181 1295.185,368.282 				"/>
+			</g>
+	</g>
 	<g class="fade1">
 		<g>
 			<path fill="#FFFFFF" d="M1375.674,356.386h1.963v5.928h7.373v-5.928h1.963v14.346h-1.963v-6.709h-7.373v6.709h-1.963V356.386z"/>
@@ -660,10 +670,15 @@
 		 d="M1360.678,341.908
 		c-310.604,65.986-579.571,244.596-762.137,491.063c-9.001,12.152-17.782,24.478-26.358,36.955v33.227">
 		</path>
-	<g class="fade6">
-		<g>
+	<path id="health-line-copy" visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="1000" stroke-dashoffset="0"
+		 d="M1360.678,341.908
+		c-310.604,65.986-579.571,244.596-762.137,491.063c-9.001,12.152-17.782,24.478-26.358,36.955v33.227">
+		</path>
+	<g class="fade6" id="reverse-health" cursor="pointer">
+		<rect id="reverse2" x="517.667" y="886" fill="#47BCB6" stroke="none" stroke-miterlimit="10" width="44" height="52.667"/>
+		<g id="reverse3">
 			
-				<line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="527.968" y1="929.096" x2="548.156" y2="902.002"/>
+				<line fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" x1="527.968" y1="929.096" x2="548.156" y2="902.002"/>
 			<g>
 				<polygon fill="#FFFFFF" points="551.908,906.981 553.301,895.096 542.312,899.831 				"/>
 			</g>
