@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body style="background-color: rgb(58, 158, 153);">
+
+<object id="svg-object" width="100%" height="100%" style="position: absolute" type="image/svg+xml" data="./Ozone1.svg">Your browser does not support SVG</object>
+
+<script type="text/javascript">
+
+var obj = document.getElementById("svg-object");
+obj.addEventListener("load", function() {
+	var object = obj.contentDocument;
+
+// hover over elements
+	var balloon = object.getElementById("balloon");
+	var buildings = object.getElementById("buildings");
+	var front = object.getElementById("front-buildings");
+	var factory = object.getElementById("factory");
+	var stacks = object.getElementsByClassName("smoke-stack");
+	var trees = object.getElementById("trees");
+	var person = object.getElementById("person");
+
+	$(balloon).hover(function() {
+		$(this).attr("fill", "#D1DE58");
+	}, function() {
+		$(this).attr("fill", "#FFFFFF");
+	});
+	$(buildings).hover(function() {
+		$(front).attr("fill", "#D1DE58");
+		$(factory).attr("fill", "#D1DE58");
+		$(stacks).each(function() {
+			$(this).attr("fill", "#D1DE58");
+		});
+	}, function() {
+		$(front).attr("fill", "#FFFFFF");
+		$(factory).attr("fill", "#FFFFFF");
+		$(stacks).each(function() {
+			$(this).attr("fill", "#FFFFFF");
+		});
+	});	
+	$(trees).hover(function() {
+		$(object.getElementsByClassName("tree")).each(function() {
+			$(this).attr("fill", "#D1DE58");
+		});
+		$(object.getElementsByClassName("tree-gray")).each(function() {
+			$(this).attr("fill", "#99a541");
+		});
+	}, function() {
+		$(object.getElementsByClassName("tree")).each(function() {
+			$(this).attr("fill", "#FFFFFF");
+		});
+		$(object.getElementsByClassName("tree-gray")).each(function() {
+			$(this).attr("fill", "#D1D3D4");
+		});
+	});
+	$(person).hover(function() {
+		$(this).attr("fill", "#D1DE58");
+	}, function() {
+		$(this).attr("fill", "rgb(58, 158, 153)");
+	});
+
+// WHEN PERSON CLICKED
+	// hide elements of page1
+	var seconds = "4s";
+	var animation_x = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+	animation_x.setAttribute("dur", seconds);
+	animation_x.setAttribute("repeatCount", "1");
+	animation_x.setAttribute("begin", "person.click");
+	animation_x.setAttribute("from", "0,0");
+	animation_x.setAttribute("to", "2000,0");
+	animation_x.setAttribute("fill", "freeze");
+
+	$(object.getElementById("first")).append(animation_x);
+
+	// balloon floats up
+	var float_up = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+	float_up.setAttribute("dur", "9s");
+	float_up.setAttribute("repeatCount", "1");
+	float_up.setAttribute("begin", "person.click");
+	float_up.setAttribute("fill", "freeze");
+	// backwards: //float_up.setAttribute("path", "M0,0c0,0-23.308,74.049-20.12,100c3.076,25.041,40.207,47.393,40.239,73.032c0.033,25.758-40.26,47.941-40.239,73.699c0.021,25.682,40.302,47.588,40.239,73.269c-0.062,25.456-37.674,46.961-40.239,72c-2.209,21.573,20.12,80,20.12,80");
+	float_up.setAttribute("from", "0,0");
+	float_up.setAttribute("to", "0,-1600");
+	$(balloon).append(float_up);
+
+
+	$(person).click(function() {
+		$(person).attr("cursor", "auto");
+		$(person).attr("pointer-events", "none");
+	});
+
+
+
+
+	});
+</script>
+</body>
+</html>
