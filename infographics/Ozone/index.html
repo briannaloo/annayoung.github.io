@@ -14,15 +14,40 @@ var obj = document.getElementById("svg-object");
 obj.addEventListener("load", function() {
 	var object = obj.contentDocument;
 
-// hover over elements
 	var balloon = object.getElementById("balloon");
 	var buildings = object.getElementById("buildings");
 	var front = object.getElementById("front-buildings");
 	var factory = object.getElementById("factory");
 	var stacks = object.getElementsByClassName("smoke-stack");
 	var trees = object.getElementById("trees");
+	var trees_hidden = object.getElementById("trees-person");
 	var person = object.getElementById("person");
+	var beach = object.getElementById("person+beach");
 
+	var page = "home";
+// go back button
+	var back = object.getElementById("go-back");
+	$(back).click(function() {
+		if (page === "person")
+		{
+			$(person).attr("cursor", "pointer");
+			$(person).attr("pointer-events", "auto");
+
+			// show elements of page1
+			$(object.getElementById("first")).append(createMotion("4s", "0s", "0,0", "-2000,0", false));
+
+			// balloon floats down
+			$(balloon).append(createMotion("9s", "0s", "0,0", "0,1600", false));
+
+			// make beach and person bigger
+			$(beach).append(createTransform("scale", "4s", "0s", "1.25", "1"));
+			$(beach).append(createMotion("4s", "0s", "0,0", "410,200", false));
+			$(object.getElementsByClassName("trees-hide")).show();
+		}
+		page = "home";
+	});
+
+// hover over elements
 	$(balloon).hover(function() {
 		$(this).attr("fill", "#D1DE58");
 	}, function() {
@@ -41,7 +66,7 @@ obj.addEventListener("load", function() {
 			$(this).attr("fill", "#FFFFFF");
 		});
 	});	
-	$(trees).hover(function() {
+	$([trees, trees_hidden]).hover(function() {
 		$(object.getElementsByClassName("tree")).each(function() {
 			$(this).attr("fill", "#D1DE58");
 		});
@@ -56,6 +81,7 @@ obj.addEventListener("load", function() {
 			$(this).attr("fill", "#D1D3D4");
 		});
 	});
+
 	$(person).hover(function() {
 		$(this).attr("fill", "#D1DE58");
 	}, function() {
@@ -63,39 +89,97 @@ obj.addEventListener("load", function() {
 	});
 
 // WHEN PERSON CLICKED
-	// hide elements of page1
-	var seconds = "4s";
-	var animation_x = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
-	animation_x.setAttribute("dur", seconds);
-	animation_x.setAttribute("repeatCount", "1");
-	animation_x.setAttribute("begin", "person.click");
-	animation_x.setAttribute("from", "0,0");
-	animation_x.setAttribute("to", "2000,0");
-	animation_x.setAttribute("fill", "freeze");
+	personClicked(object, person, trees_hidden, balloon, beach);
 
-	$(object.getElementById("first")).append(animation_x);
-
-	// balloon floats up
-	var float_up = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
-	float_up.setAttribute("dur", "9s");
-	float_up.setAttribute("repeatCount", "1");
-	float_up.setAttribute("begin", "person.click");
-	float_up.setAttribute("fill", "freeze");
-	// backwards: //float_up.setAttribute("path", "M0,0c0,0-23.308,74.049-20.12,100c3.076,25.041,40.207,47.393,40.239,73.032c0.033,25.758-40.26,47.941-40.239,73.699c0.021,25.682,40.302,47.588,40.239,73.269c-0.062,25.456-37.674,46.961-40.239,72c-2.209,21.573,20.12,80,20.12,80");
-	float_up.setAttribute("from", "0,0");
-	float_up.setAttribute("to", "0,-1600");
-	$(balloon).append(float_up);
+});
 
 
-	$(person).click(function() {
-		$(person).attr("cursor", "auto");
-		$(person).attr("pointer-events", "none");
-	});
+	function personClicked(object, person, trees_hidden, balloon, beach) {
+		$(person).click(function() {
+			page = "person";
+			$(person).attr("cursor", "auto");
+			$(person).attr("pointer-events", "none");
+			$(trees_hidden).attr("cursor", "auto");
+			$(trees_hidden).attr("pointer-events", "none");
+		});
+		var seconds = 2;
+		// make trees bigger
+		$(object.getElementsByClassName("trees-hide")).hide();
+		// hide elements of page1
+		$(object.getElementById("first")).append(createMotion(seconds, "person.click", "0,0", "2000,0", false));
+		// balloon floats up
+		$(balloon).append(createMotion(2*seconds, "person.click", "0,0", "0,-1600", false));
+		// make beach and person bigger
+		$(beach).append(createTransform("scale", seconds, "person.click", "1", "1.25"));
+		$(beach).append(createMotion(seconds, "person.click", "0,0", "-410,-200", false));
 
+		$(object.getElementById("person-text")).append(createMotion(seconds, "person.click", "-1000,0", "0,0", "text-move"));
+		$(object.getElementById("person-text")).append(createSet("visibility", "visible", "person.click"));
+		$(object.getElementById("draw-respiratory-line")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s"));
+		$(object.getElementById("draw-respiratory-line")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "440", "0"));
+		$(object.getElementById("respiratory-dropdown")).append(createSet("visibility", "visible", "person.click + " + (2*seconds) + "s"));
 
+		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "1000", "0"));
+		$(object.getElementById("health-line")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s"));
+		$(object.getElementById("health-line2")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "150", "0"));
+		$(object.getElementById("health-line2")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s"));
+		$(object.getElementById("health-line2")).append(createSet("stroke-dasharray", "0", "person.click + " + (seconds+0.5) + "s"));
 
+		var sec = seconds / 6.0;
+		$(object.getElementById("small-lines1")).append(createAnimate("stroke-dashoffset", seconds/2, "person.click + " + (seconds + sec) + "s", "50", "0")).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));
+		sec += seconds / 6.0;
+		$(object.getElementById("small-lines2")).append(createAnimate("stroke-dashoffset", seconds/2, "person.click + " + (seconds + sec) + "s", "50", "0")).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));
+		sec += seconds / 6.0;
+		$(object.getElementById("small-lines3")).append(createAnimate("stroke-dashoffset", seconds/2, "person.click + " + (seconds + sec) + "s", "50", "0")).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));
+		sec += seconds / 6.0;
+		$(object.getElementById("small-lines4")).append(createAnimate("stroke-dashoffset", seconds/2, "person.click + " + (seconds + sec) + "s", "50", "0")).append(createSet("visibility", "visible", "person.click + " + (seconds + sec) + "s"));
+	}
 
-	});
+	function createMotion(seconds, begin, from, to, id) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("from", from);
+		animation.setAttribute("to", to);
+		animation.setAttribute("fill", "freeze");
+		if (id)
+			animation.setAttribute("id", id);
+		return animation;
+	}
+	function createTransform(type, seconds, begin, from, to) {
+		var scale = document.createElementNS("http://www.w3.org/2000/svg","animateTransform");
+		scale.setAttribute("attributeName", "transform");
+		scale.setAttribute("attributeType", "XML");
+		scale.setAttribute("type", type);
+		scale.setAttribute("dur", seconds + "s");
+		scale.setAttribute("repeatCount", "1");
+		scale.setAttribute("begin", begin);
+		scale.setAttribute("from", from);
+		scale.setAttribute("to", to);
+		scale.setAttribute("fill", "freeze");
+		return scale;
+	}
+	function createSet(name, to, begin) {
+		var set = document.createElementNS("http://www.w3.org/2000/svg","set");
+		set.setAttribute("attributeName", name);
+		set.setAttribute("attributeType", "XML");
+		set.setAttribute("to", to);
+		set.setAttribute("begin", begin);
+		return set;
+	}
+	function createAnimate(name, seconds, begin, from, to) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animate");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("attributeName", name);
+		animation.setAttribute("attributeType", "XML");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("from", from);
+		animation.setAttribute("to", to);
+		animation.setAttribute("fill", "freeze");
+		return animation;
+	}
 </script>
 </body>
 </html>
