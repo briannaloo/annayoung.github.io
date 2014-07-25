@@ -96,6 +96,7 @@ obj.addEventListener("load", function() {
 
 
 	function personClicked(object, person, trees_hidden, balloon, beach) {
+		var seconds = 1;
 		$(person).click(function() {
 			page = "person";
 			$(person).attr("cursor", "auto");
@@ -104,8 +105,7 @@ obj.addEventListener("load", function() {
 			$(trees_hidden).attr("pointer-events", "none");
 			window.healthShown = true;
 		});
-		var seconds = 1;
-
+		
 		// make trees bigger
 		$(object.getElementsByClassName("trees-hide")).hide();
 		// hide elements of page1
@@ -132,6 +132,26 @@ obj.addEventListener("load", function() {
 		
 		initializeHealthLine(object, seconds, 0);
 		hideHealth(object, seconds, 0);
+
+		initializeRespiratory(object, seconds, 0);
+	}
+
+	function initializeRespiratory(object, seconds, sec) {
+		// open respiratory effects
+		$(object.getElementById("respiratory-hide")).append(createAnimate("height", 2, "respiratory2.click", "495", "0"));
+		//$(object.getElementById("respiratory-hide")).append(createAnimate("height", 2, "respiratory-close.click; logo.click; 2.click; 3.click", "0", "495"));
+		$(object.getElementById("respiratory2")).click(function() {
+			$(object.getElementById("respiratory2")).fadeOut(200);
+			$(object.getElementById("respiratory-close")).fadeIn(200);
+			$(object.getElementById("respiratory-info")).show();
+		});
+
+		// close respiratory effects
+		$(object.getElementById("respiratory-close")).click(function() {
+			$(object.getElementById("respiratory2")).fadeIn(200);
+			$(object.getElementById("respiratory-close")).fadeOut(200);
+			$(object.getElementById("respiratory-info")).fadeOut(200);
+		});
 	}
 
 	function initializeHealthLine(object, seconds, sec) {

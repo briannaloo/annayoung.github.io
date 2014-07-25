@@ -616,11 +616,12 @@
 
 		<text transform="matrix(1 0 0 1 38.708 224.3799)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">RESPIRATORY EFFECTS</text>
 	</g>
-	<g id="respiratory2">
-			<line id="draw-respiratory-line"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
+	<g id="respiratory2" cursor="pointer">
+		<line id="draw-respiratory-line"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
 				 stroke-dashoffset="440" stroke-dasharray="440"
 			 x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
-		<polygon visibility="hidden" cursor="pointer" id="respiratory-dropdown" fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/>
+		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
+		<polygon visibility="hidden" id="respiratory-dropdown" fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/>
 	</g>
 </g>
 
@@ -2096,6 +2097,60 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 1130.6858 116.1316)">
 	</image>
 	</g>
+</g>
+<g id="respiratory-info" style="display: none;">
+	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
+	<rect x="39.125" y="237.698" fill="#D1DE58" width="431.978" height="95.996"/>
+	<rect x="39.125" y="338.252" fill="#D9E37D" width="431.978" height="89.303"/>
+	<rect x="39.125" y="432.113" fill="#E2E99C" width="431.978" height="66.303"/>
+	<rect x="39.125" y="502.975" fill="#EBF0BC" width="431.978" height="55.303"/>
+	<rect x="39.125" y="562.836" fill="#F3F6DC" width="431.978" height="55.303"/>
+	<rect x="39.125" y="622.697" fill="#F5F8E2" width="431.978" height="62.819"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="333.693" x2="589.666" y2="333.693"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="427.555" x2="589.666" y2="427.555"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="498.416" x2="589.666" y2="498.416"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="558.277" x2="589.666" y2="558.277"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="618.139" x2="589.666" y2="618.139"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="685.517" x2="589.666" y2="685.517"/>
+	<rect x="62.204" y="279.235" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 62.2036 289.3013)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">CONCENTRATIONS USED IN FOOD INDUSTRY</text>
+	<rect x="62.204" y="458.5" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 62.2036 468.5659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SEVERE SYMPTOMS &amp; SHALLOW BREATHING</text>
+	<rect x="62.204" y="348.691" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 284.2427 358.7573)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSOR’S UPPER LIMIT</text>
+	<rect x="204.262" y="219.399" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 527.5957 233.7788)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0</text>
+	<text transform="matrix(0.583 0 0 0.583 538.7188 240.439)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">3</text>
+	<text transform="matrix(1 0 0 1 545.2031 233.7788)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20"> ppm</text>
+	<rect x="204.262" y="304.895" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 578.543 319.2744)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">1</text>
+	<rect x="204.262" y="400.89" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 539.6172 415.2695)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.404</text>
+	<rect x="204.262" y="472.03" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 539.6172 486.4097)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.115</text>
+	<rect x="204.262" y="532.44" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 539.6172 546.8203)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.095</text>
+	<rect x="204.262" y="592.252" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 539.6172 606.6318)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.075</text>
+	<rect x="204.262" y="662.815" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 550.7402 677.1948)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.01</text>
+	<rect x="62.204" y="665" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 281.1392 675.0659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSOR’S LOWER LIMIT</text>
+	<rect x="62.204" y="523.861" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 62.2036 533.9268)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN, REDUCED LUNG FUNCTION</text>
+	<rect x="62.204" y="583.722" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 62.2036 593.7881)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN</text>
+	<g id="respiratory-close" cursor="pointer">
+		<rect id="2" fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
+		<polygon id="3" fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
+	</g>
+	<rect transform="rotate(180)" id="respiratory-hide" fill="rgb(71, 188, 182)" stroke="none" height="495" width="560" x="-590" y="-730"/>
 </g>
 </svg>
 <g id="Layer_2">
