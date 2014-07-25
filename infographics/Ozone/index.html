@@ -23,6 +23,7 @@ obj.addEventListener("load", function() {
 	var trees_hidden = object.getElementById("trees-person");
 	var person = object.getElementById("person");
 	var beach = object.getElementById("person+beach");
+	var sand = object.getElementById("beach");
 	var smog = object.getElementById("smog");
 
 // hover over elements
@@ -75,6 +76,7 @@ obj.addEventListener("load", function() {
 		$(trees_hidden).attr("cursor", "pointer").attr("pointer-events", "auto");
 		//$(object.getElementById("respiratory2")).fadeOut(200);
 		$(object.getElementsByClassName("trees-hide")).show();
+		$(object.getElementById("tree-ground")).delay(seconds*1000).show(0);
 	});
 	$(object.getElementById("go_back_cities")).click(function() {
 		$(buildings).attr("cursor", "pointer").attr("pointer-events", "auto");
@@ -91,11 +93,11 @@ obj.addEventListener("load", function() {
 	personClicked(object, person, trees_hidden, balloon, beach, seconds);
 
 // WHEN CITIES/FACTORY CLICKED
-	citiesClicked(object, buildings, seconds, trees, person, trees_hidden, smog);
+	citiesClicked(object, buildings, seconds, trees, person, trees_hidden, smog, sand);
 
 });
 
-	function citiesClicked(object, buildings, seconds, trees, person, trees_hidden, smog) {
+	function citiesClicked(object, buildings, seconds, trees, person, trees_hidden, smog, sand) {
 		$(buildings).click(function() {
 			$([buildings, trees, trees_hidden]).attr("cursor", "auto").attr("pointer-events", "none");
 			$(smog).fadeOut(seconds*1000);
@@ -103,13 +105,22 @@ obj.addEventListener("load", function() {
 
 		$(object.getElementById("page1-text")).append(createMotion(seconds, "buildings.click;", "0,0", "2000,0", "go_back_cities.click"))
 			.append(createMotion(seconds, "go_back_cities.click;", "2000,0", "0,0", "buildings.click"));
-		$(person).append(createMotion(seconds, "buildings.click;", "0,0", "2000,0", "go_back_cities.click"))
+		$([person, sand]).append(createMotion(seconds, "buildings.click;", "0,0", "2000,0", "go_back_cities.click"))
 			.append(createMotion(seconds, "go_back_cities.click;", "2000,0", "0,0", "buildings.click"));
 		
 		$(object.getElementById("sources-text")).append(createMotion(seconds, "buildings.click", "-1600,0", "0,0", "go_back_cities.click"))
 			.append(createSet("visibility", "visible", "buildings.click", "go_back_cities.click + " + seconds + "s"))
 			.append(createMotion(seconds, "go_back_cities.click", "0,0", "-1600,0", "buildings.click"));
 		
+		$([object.getElementById("cityscape"), trees_hidden, object.getElementById("mountains")])
+			.append(createTransform("scale", seconds, "buildings.click", "1", "1.23"))
+			.append(createMotion(seconds, "buildings.click", "0,0", "-50,-90", "go_back_cities.click"))
+			.append(createTransform("scale", seconds, "go_back_cities.click", "1.23", "1"))
+			.append(createMotion(seconds, "go_back_cities.click", "-50,-90", "0,0", "buildings.click"));
+
+		$(object.getElementById("car")).append(createSet("visibility", "visible", "buildings.click + " + (seconds) + "s", "go_back_cities.click"))
+			.append(createMotion(seconds, "buildings.click + " + (seconds) + "s", "800,0", "0,0", "go_back_cities.click"))
+			.append(createMotion(seconds, "go_back_cities.click", "0,0", "800,0", "buildings.click"));
 	}
 
 
@@ -117,6 +128,7 @@ obj.addEventListener("load", function() {
 		$(person).click(function() {
 			$(person).attr("cursor", "auto").attr("pointer-events", "none");
 			$(trees_hidden).attr("cursor", "auto").attr("pointer-events", "none");
+			$(object.getElementById("tree-ground")).hide();
 		});
 		
 		// hide elements of page1

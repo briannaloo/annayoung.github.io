@@ -206,7 +206,7 @@
 		<text transform="matrix(1 0 0 1 66.9058 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">SOURCES</tspan></text>
 		<rect x="70.506" y="92.466" fill="none" width="863.957" height="65.132"/>
 		<text transform="matrix(1 0 0 1 70.5063 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
-		<polygon cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
+		<polygon id="go_back_cities" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
 	</g>
 	<g>
 		<g>
