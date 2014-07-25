@@ -4,7 +4,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1600 1150" enable-background="new 0 0 1600 1150" xml:space="preserve">
 <svg>
 <g id="Layer_1">
-	<g id="logo">
+	<g id="go_back">
 		<rect fill="#47BCB6" width="1600.229" height="1147.277"/>
 
 		<rect id="go-back" x="1.592" y="984.238" fill="#FFFFFF" width="1600" height="165.762"/>
@@ -610,7 +610,7 @@
 		c1.375,1.093,2.525,2.238,2.863,3.246C1509.979,823.61,1508.576,830.558,1508.98,833.908z"/>
 	</g>
 	<g id="person-text" visibility="hidden">
-		<text transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">SOURCES</tspan></text>
+		<text transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
 		<rect x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
 		<text transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 
@@ -620,19 +620,78 @@
 		<line id="draw-respiratory-line"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
 				 stroke-dashoffset="440" stroke-dasharray="440"
 			 x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
-		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
-		<polygon visibility="hidden" id="respiratory-dropdown" fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/>
+		<g id="respiratory-dropdown" visibility="hidden">
+			<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
+		<polygon fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/></g>
 	</g>
-	<g id="respiratory2health" cursor="pointer">
-		<line id="draw-respiratory-line-health"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
-				 stroke-dashoffset="440" stroke-dasharray="440"
-			 x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
-		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
-		<polygon visibility="hidden" id="respiratory-dropdown-health" fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/>
+	<!--<g id="respiratory2health" cursor="pointer">
+		<g id="closeHealth" style="display: none;">
+			<line id="draw-respiratory-line-health"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
+					 stroke-dashoffset="440" stroke-dasharray="440"
+				 x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
+			<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
+			<polygon visibility="hidden" id="respiratory-dropdown-health" fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/>
+		</g>
+	</g>-->
+</g>
+
+<g id="respiratory-info" style="display: none;">
+	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
+	<rect x="39.125" y="237.698" fill="#D1DE58" width="431.978" height="95.996"/>
+	<rect x="39.125" y="338.252" fill="#D9E37D" width="431.978" height="89.303"/>
+	<rect x="39.125" y="432.113" fill="#E2E99C" width="431.978" height="66.303"/>
+	<rect x="39.125" y="502.975" fill="#EBF0BC" width="431.978" height="55.303"/>
+	<rect x="39.125" y="562.836" fill="#F3F6DC" width="431.978" height="55.303"/>
+	<rect x="39.125" y="622.697" fill="#F5F8E2" width="431.978" height="62.819"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="333.693" x2="589.666" y2="333.693"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="427.555" x2="589.666" y2="427.555"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="498.416" x2="589.666" y2="498.416"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="558.277" x2="589.666" y2="558.277"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="618.139" x2="589.666" y2="618.139"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="685.517" x2="589.666" y2="685.517"/>
+	<rect x="62.204" y="279.235" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 62.2036 289.3013)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">CONCENTRATIONS USED IN FOOD INDUSTRY</text>
+	<rect x="62.204" y="458.5" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 62.2036 468.5659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SEVERE SYMPTOMS &amp; SHALLOW BREATHING</text>
+	<rect x="62.204" y="348.691" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 284.2427 358.7573)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSOR’S UPPER LIMIT</text>
+	<rect x="204.262" y="219.399" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 527.5957 233.7788)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0</text>
+	<text transform="matrix(0.583 0 0 0.583 538.7188 240.439)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">3</text>
+	<text transform="matrix(1 0 0 1 545.2031 233.7788)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20"> ppm</text>
+	<rect x="204.262" y="304.895" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 578.543 319.2744)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">1</text>
+	<rect x="204.262" y="400.89" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 539.6172 415.2695)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.404</text>
+	<rect x="204.262" y="472.03" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 539.6172 486.4097)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.115</text>
+	<rect x="204.262" y="532.44" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 539.6172 546.8203)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.095</text>
+	<rect x="204.262" y="592.252" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 539.6172 606.6318)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.075</text>
+	<rect x="204.262" y="662.815" fill="none" width="385.404" height="17.9"/>
+	<text transform="matrix(1 0 0 1 550.7402 677.1948)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.01</text>
+	<rect x="62.204" y="665" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 281.1392 675.0659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSOR’S LOWER LIMIT</text>
+	<rect x="62.204" y="523.861" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 62.2036 533.9268)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN, REDUCED LUNG FUNCTION</text>
+	<rect x="62.204" y="583.722" fill="none" width="385.404" height="13.53"/>
+	<text transform="matrix(1 0 0 1 62.2036 593.7881)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN</text>
+	<g id="respiratory-close" cursor="pointer">
+		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
+		<polygon fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
 	</g>
+	<rect transform="rotate(180)" id="respiratory-hide" fill="rgb(71, 188, 182)" stroke="none" height="495" width="565" x="-595" y="-730"/>
 </g>
 
 <g id="health-impacts" visibility="hidden">
+	<g id="hide-health">
 	<path id="health-line2" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-miterlimit="10" stroke-dashoffset="150" stroke-dasharray="150" d="M1206.261,385.068
 		c49.907-17.406,101.223-31.806,153.729-42.991v42.991"/>
 	<g id="forward" cursor="pointer">
@@ -643,6 +702,14 @@
 				<polygon fill="#FFFFFF" points="1299.5,382.605 1284.94,379.181 1295.185,368.282 				"/>
 			</g>
 	</g>
+	<!--<g id="forward-respiratory" cursor="pointer" style="display: none;">
+			<rect x="1285" y="362" fill="#47BCB6" stroke="none" stroke-miterlimit="10" width="60" height="35"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" d="M1295.238,376.046
+				c13.478-3.917,27.227-7.183,41.208-9.764"/>
+			<g>
+				<polygon fill="#FFFFFF" points="1299.5,382.605 1284.94,379.181 1295.185,368.282 				"/>
+			</g>
+	</g>-->
 	<g class="fade1">
 		<g>
 			<path fill="#FFFFFF" d="M1375.674,356.386h1.963v5.928h7.373v-5.928h1.963v14.346h-1.963v-6.709h-7.373v6.709h-1.963V356.386z"/>
@@ -674,6 +741,7 @@
 				c-0.984-0.905-1.467-2.132-1.447-3.682H1537.656z"/>
 		</g>
 	</g>
+	</g>
 	<path id="health-line" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="1000" stroke-dashoffset="1000"
 		 d="M1360.678,341.908
 		c-310.604,65.986-579.571,244.596-762.137,491.063c-9.001,12.152-17.782,24.478-26.358,36.955v33.227">
@@ -682,7 +750,7 @@
 		 d="M1360.678,341.908
 		c-310.604,65.986-579.571,244.596-762.137,491.063c-9.001,12.152-17.782,24.478-26.358,36.955v33.227">
 		</path>
-	<g class="fade6" id="reverse-health" cursor="pointer">
+	<g class="fade6" id="reverse_health" cursor="pointer">
 		<rect id="reverse2" x="517.667" y="886" fill="#47BCB6" stroke="none" stroke-miterlimit="10" width="44" height="52.667"/>
 		<g id="reverse3">
 			
@@ -2104,64 +2172,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 1130.6858 116.1316)">
 	</image>
 	</g>
-</g>
-<g id="respiratory-info" style="display: none;">
-	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
-	<rect x="39.125" y="237.698" fill="#D1DE58" width="431.978" height="95.996"/>
-	<rect x="39.125" y="338.252" fill="#D9E37D" width="431.978" height="89.303"/>
-	<rect x="39.125" y="432.113" fill="#E2E99C" width="431.978" height="66.303"/>
-	<rect x="39.125" y="502.975" fill="#EBF0BC" width="431.978" height="55.303"/>
-	<rect x="39.125" y="562.836" fill="#F3F6DC" width="431.978" height="55.303"/>
-	<rect x="39.125" y="622.697" fill="#F5F8E2" width="431.978" height="62.819"/>
-	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="333.693" x2="589.666" y2="333.693"/>
-	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="427.555" x2="589.666" y2="427.555"/>
-	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="498.416" x2="589.666" y2="498.416"/>
-	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="558.277" x2="589.666" y2="558.277"/>
-	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="618.139" x2="589.666" y2="618.139"/>
-	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="685.517" x2="589.666" y2="685.517"/>
-	<rect x="62.204" y="279.235" fill="none" width="385.404" height="13.53"/>
-	<text transform="matrix(1 0 0 1 62.2036 289.3013)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">CONCENTRATIONS USED IN FOOD INDUSTRY</text>
-	<rect x="62.204" y="458.5" fill="none" width="385.404" height="13.53"/>
-	<text transform="matrix(1 0 0 1 62.2036 468.5659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SEVERE SYMPTOMS &amp; SHALLOW BREATHING</text>
-	<rect x="62.204" y="348.691" fill="none" width="385.404" height="13.53"/>
-	<text transform="matrix(1 0 0 1 284.2427 358.7573)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSOR’S UPPER LIMIT</text>
-	<rect x="204.262" y="219.399" fill="none" width="385.404" height="17.9"/>
-	<text transform="matrix(1 0 0 1 527.5957 233.7788)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0</text>
-	<text transform="matrix(0.583 0 0 0.583 538.7188 240.439)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">3</text>
-	<text transform="matrix(1 0 0 1 545.2031 233.7788)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20"> ppm</text>
-	<rect x="204.262" y="304.895" fill="none" width="385.404" height="17.9"/>
-	<text transform="matrix(1 0 0 1 578.543 319.2744)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">1</text>
-	<rect x="204.262" y="400.89" fill="none" width="385.404" height="17.9"/>
-	<text transform="matrix(1 0 0 1 539.6172 415.2695)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.404</text>
-	<rect x="204.262" y="472.03" fill="none" width="385.404" height="17.9"/>
-	<text transform="matrix(1 0 0 1 539.6172 486.4097)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.115</text>
-	<rect x="204.262" y="532.44" fill="none" width="385.404" height="17.9"/>
-	<text transform="matrix(1 0 0 1 539.6172 546.8203)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.095</text>
-	<rect x="204.262" y="592.252" fill="none" width="385.404" height="17.9"/>
-	<text transform="matrix(1 0 0 1 539.6172 606.6318)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.075</text>
-	<rect x="204.262" y="662.815" fill="none" width="385.404" height="17.9"/>
-	<text transform="matrix(1 0 0 1 550.7402 677.1948)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.01</text>
-	<rect x="62.204" y="665" fill="none" width="385.404" height="13.53"/>
-	<text transform="matrix(1 0 0 1 281.1392 675.0659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSOR’S LOWER LIMIT</text>
-	<rect x="62.204" y="523.861" fill="none" width="385.404" height="13.53"/>
-	<text transform="matrix(1 0 0 1 62.2036 533.9268)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN, REDUCED LUNG FUNCTION</text>
-	<rect x="62.204" y="583.722" fill="none" width="385.404" height="13.53"/>
-	<text transform="matrix(1 0 0 1 62.2036 593.7881)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN</text>
-	<g id="respiratory-close" cursor="pointer">
-		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
-		<polygon fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
-	</g>
-	<g id="respiratory_close_health" cursor="pointer">
-		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
-		<polygon fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
-	</g>
-	<rect transform="rotate(180)" id="respiratory-hide" fill="rgb(71, 188, 182)" stroke="none" height="495" width="560" x="-590" y="-730"/>
 </g>
 </svg>
 <g id="Layer_2">
