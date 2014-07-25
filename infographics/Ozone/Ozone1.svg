@@ -2178,7 +2178,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		<text transform="matrix(1 0 0 1 66.9058 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">SOURCES</tspan></text>
 		<rect x="70.506" y="92.466" fill="none" width="863.957" height="65.132"/>
 		<text transform="matrix(1 0 0 1 70.5063 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
-		<polygon id="go_back_cities" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
+		<polygon id="go_back_cities" style="display: none;" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
 	</g>
 	<g id="car" visibility="hidden">
 		<path fill="#3A9E99" d="M890.473,918.175h-12.85c-11.268,0-15.461,13.923-15.461,13.923h28.311V918.175z"/>
@@ -2199,6 +2199,146 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		<path fill="#3A9E99" d="M907.83,951.388c-4.995,0-9.044,4.042-9.044,9.042c0,4.994,4.049,9.05,9.044,9.05
 			c5.009,0,9.044-4.056,9.044-9.05C916.874,955.43,912.839,951.388,907.83,951.388 M907.83,964.57c-2.283,0-4.135-1.844-4.135-4.14
 			c0-2.282,1.852-4.137,4.135-4.137c2.297,0,4.136,1.854,4.136,4.137C911.966,962.726,910.127,964.57,907.83,964.57"/>
+	</g>
+	
+	<g id="sunlight" visibility="hidden">
+		<g id="sun">
+			<circle fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" cx="1318.511" cy="179.551" r="55.788"/>
+			<g>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1318.387,102.028 1318.387,101.854 1318.475,101.941 
+					1318.561,101.854 1318.561,102.028 1330.611,114.078 1318.561,114.078 1318.387,114.078 1306.338,114.078 			"/>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1318.387,261.046 1318.387,261.221 1318.475,261.133 
+					1318.561,261.221 1318.561,261.046 1330.611,248.997 1318.561,248.997 1318.387,248.997 1306.338,248.997 			"/>
+			</g>
+			<g>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1278.645,112.725 1278.556,112.573 1278.676,112.605 
+					1278.709,112.486 1278.795,112.637 1295.257,117.047 1284.82,123.072 1284.668,123.16 1274.234,129.184 			"/>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1358.152,250.438 1358.24,250.589 1358.271,250.469 
+					1358.391,250.502 1358.303,250.35 1362.717,233.891 1352.281,239.915 1352.127,240.003 1341.691,246.027 			"/>
+			</g>
+			<g>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1249.574,141.86 1249.42,141.772 1249.543,141.74 
+					1249.509,141.62 1249.66,141.708 1266.121,137.297 1260.098,147.732 1260.008,147.885 1253.984,158.318 			"/>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1387.287,221.369 1387.438,221.456 1387.406,221.336 
+					1387.525,221.304 1387.373,221.216 1382.965,204.756 1376.939,215.192 1376.852,215.343 1370.828,225.778 			"/>
+			</g>
+			<g>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1238.967,181.626 1238.789,181.626 1238.879,181.538 
+					1238.789,181.45 1238.964,181.45 1251.016,169.4 1251.016,181.45 1251.016,181.626 1251.015,193.673 			"/>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1397.982,181.626 1398.156,181.626 1398.07,181.538 
+					1398.156,181.45 1397.982,181.45 1385.932,169.399 1385.932,181.45 1385.932,181.626 1385.932,193.673 			"/>
+			</g>
+			<g>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1249.66,221.368 1249.51,221.456 1249.543,221.335 
+					1249.42,221.304 1249.574,221.216 1253.984,204.755 1260.008,215.19 1260.098,215.343 1266.121,225.777 			"/>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1387.375,141.859 1387.527,141.772 1387.406,141.74 
+					1387.438,141.62 1387.287,141.708 1370.828,137.296 1376.852,147.732 1376.941,147.883 1382.963,158.317 			"/>
+			</g>
+			<g>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1278.797,250.437 1278.709,250.589 1278.676,250.469 
+					1278.556,250.502 1278.645,250.35 1274.231,233.889 1284.668,239.915 1284.821,240.002 1295.255,246.027 			"/>
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1358.307,112.724 1358.393,112.573 1358.273,112.605 
+					1358.24,112.486 1358.152,112.637 1341.691,117.046 1352.129,123.072 1352.283,123.159 1362.717,129.183 			"/>
+			</g>
+		</g>
+	</g>
+
+	<g id="sources-info">
+	<g id="group1" style="display: none;">
+		<rect x="1452.837" y="443.25" fill="none" width="123" height="15.5"/>
+		<text transform="matrix(1 0 0 1 1452.8369 457.6299)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NOx</text>
+		<rect x="1452.837" y="474.25" fill="none" width="123" height="15.5"/>
+		<text transform="matrix(1 0 0 1 1452.8369 488.6299)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">VOCs</text>
+		<rect x="1452.837" y="505.25" fill="none" width="123" height="15.5"/>
+		<text transform="matrix(1 0 0 1 1452.8369 519.6299)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">CO</text>
+		<g>
+			<rect x="39.048" y="537.639" fill="none" width="351.001" height="36"/>
+			<text transform="matrix(1 0 0 1 47.2974 552.0186)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">PLANTS, FACTORIES, REFINERIES</text>
+		</g>
+		<g>
+			<rect x="390.133" y="537.639" fill="none" width="351.001" height="36"/>
+			<text transform="matrix(1 0 0 1 518.4072 552.0186)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">FORESTS</text>
+		</g>
+		<g>
+			<rect x="741.194" y="537.639" fill="none" width="351.001" height="36"/>
+			<text transform="matrix(1 0 0 1 827.2363 552.0186)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MOTOR VEHICLES</text>
+		</g>
+		<g>
+			<rect x="1092.194" y="537.639" fill="none" width="351" height="36"/>
+			<text transform="matrix(1 0 0 1 1235.4678 552.0186)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">CITIES</text>
+		</g>
+		<rect x="1102.938" y="505.25" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+		<rect x="1102.938" y="474.25" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+		<rect x="1102.938" y="443.25" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+		<rect x="751.088" y="504.986" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+		<rect x="751.088" y="473.986" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+		<rect x="751.088" y="442.986" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+		<g>
+			<path fill="#328F8B" d="M728.651,506.986v11.5H403.14v-11.5H728.651 M730.651,504.986H401.14v15.5h329.511V504.986
+				L730.651,504.986z"/>
+		</g>
+		<rect x="401.14" y="473.986" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+		<g>
+			<path fill="#328F8B" d="M728.651,444.986v11.5H403.14v-11.5H728.651 M730.651,442.986H401.14v15.5h329.511V442.986
+				L730.651,442.986z"/>
+		</g>
+		<g>
+			<path fill="#328F8B" d="M377.304,506.986v11.5H51.792v-11.5H377.304 M379.304,504.986H49.792v15.5h329.511V504.986
+				L379.304,504.986z"/>
+		</g>
+		<rect x="49.792" y="473.986" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+		<rect x="49.792" y="442.986" fill-rule="evenodd" clip-rule="evenodd" fill="#328F8B" width="329.511" height="15.5"/>
+	</g>
+	<g id="group2" style="display: none;">
+		<rect x="1452.837" y="380.986" fill="none" width="123" height="15.5"/>
+		<text transform="matrix(1 0 0 1 1452.8369 395.3662)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">SUNLIGHT</text>
+		<rect x="1452.837" y="408.986" fill="none" width="123" height="15.5"/>
+		<text transform="matrix(1 0 0 1 1452.8369 423.3662)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">+</text>
+		<rect x="48.515" y="408.986" fill="none" width="1383.936" height="15.5"/>
+		<text transform="matrix(1 0 0 1 734.6436 423.3662)" fill="#FFFFFF" font-family="'Helvetica'" font-size="25">+</text>
+		<rect x="49.792" y="381.736" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="1382.659" height="15.5"/>
+	</g>
+	<g id="group3" style="display: none;">
+		<rect x="49.792" y="321.779" fill-rule="evenodd" clip-rule="evenodd" fill="#D1DE58" width="1382.657" height="40"/>
+		<g>
+			<path fill="#FFFFFF" d="M709.875,334.506c1.346,1.798,2.018,4.098,2.018,6.9c0,3.032-0.769,5.553-2.309,7.562
+				c-1.806,2.359-4.383,3.539-7.729,3.539c-3.125,0-5.581-1.032-7.369-3.097c-1.595-1.991-2.392-4.507-2.392-7.549
+				c0-2.746,0.683-5.097,2.046-7.051c1.751-2.508,4.341-3.761,7.77-3.761C705.498,331.05,708.152,332.203,709.875,334.506z
+				 M707.449,347.452c1.083-1.739,1.625-3.738,1.625-5.998c0-2.39-0.625-4.313-1.873-5.77c-1.249-1.458-2.957-2.187-5.123-2.187
+				c-2.101,0-3.816,0.722-5.143,2.165c-1.327,1.443-1.991,3.572-1.991,6.385c0,2.252,0.569,4.15,1.708,5.694
+				c1.139,1.545,2.984,2.317,5.537,2.317C704.613,350.06,706.366,349.191,707.449,347.452z"/>
+			<path fill="#FFFFFF" d="M713.664,349.632l12.489-15.609h-11.576v-2.42h15.125v2.364l-12.563,15.526h12.563v2.419h-16.038V349.632z
+				"/>
+			<path fill="#FFFFFF" d="M749.195,334.506c1.346,1.798,2.019,4.098,2.019,6.9c0,3.032-0.77,5.553-2.309,7.562
+				c-1.806,2.359-4.382,3.539-7.728,3.539c-3.125,0-5.581-1.032-7.369-3.097c-1.595-1.991-2.392-4.507-2.392-7.549
+				c0-2.746,0.682-5.097,2.046-7.051c1.751-2.508,4.341-3.761,7.77-3.761C744.817,331.05,747.472,332.203,749.195,334.506z
+				 M746.769,347.452c1.083-1.739,1.625-3.738,1.625-5.998c0-2.39-0.625-4.313-1.874-5.77c-1.249-1.458-2.957-2.187-5.123-2.187
+				c-2.102,0-3.815,0.722-5.143,2.165c-1.327,1.443-1.991,3.572-1.991,6.385c0,2.252,0.569,4.15,1.708,5.694
+				c1.138,1.545,2.984,2.317,5.537,2.317C743.933,350.06,745.685,349.191,746.769,347.452z"/>
+			<path fill="#FFFFFF" d="M754.49,331.603h3.241l10.128,16.41v-16.41h2.626v20.31h-3.09l-10.279-16.39v16.39h-2.627V331.603z"/>
+			<path fill="#FFFFFF" d="M775.201,331.603h14.738v2.489h-12.056v6.167h11.144v2.35h-11.144v6.885h12.263v2.419h-14.945V331.603z"/>
+		</g>
+	</g>
+		<polyline id="line5" stroke-dashoffset="-300" stroke-dasharray="300" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="1428,181.537 
+		1501.703,181.537 1501.703,361.779 	"/>
+	
+		<circle id="circle5" visibility="hidden" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1422.669" cy="181.537" r="5.331"/>
+	
+		<circle id="circle4" visibility="hidden" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1295.255" cy="693.331" r="5.331"/>
+	
+		<circle id="circle3" visibility="hidden" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="881" cy="844.862" r="5.331"/>
+	
+		<circle id="circle2" visibility="hidden" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="565.896" cy="845.862" r="5.331"/>
+	
+		<circle id="circle1" visibility="hidden" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="184" cy="845.862" r="5.331"/>
+		<polyline id="line4" stroke-dashoffset="150" stroke-dasharray="150" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="1267.693,565 
+			1267.693,596.431 1295.255,596.431 1295.255,688 	"/>
+		<polyline id="line3" stroke-dashoffset="350" stroke-dasharray="350" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="916.107,565 
+			881,565 881,838.701 	"/>
+		
+		<line id="line2" stroke-dashoffset="350" stroke-dasharray="350" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="565.896" y1="565" x2="565.896" y2="841.396"/>
+		<polyline id="line1" stroke-dashoffset="350" stroke-dasharray="350" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="214.548,565 
+			214.548,723 184,723 184,841.396 	"/>
 	</g>
 </g>
 
