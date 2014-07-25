@@ -95,7 +95,95 @@ obj.addEventListener("load", function() {
 });
 
 
-	function createMotion(seconds, begin, from, to, id) {
+	function personClicked(object, person, trees_hidden, balloon, beach) {
+		$(person).click(function() {
+			page = "person";
+			$(person).attr("cursor", "auto");
+			$(person).attr("pointer-events", "none");
+			$(trees_hidden).attr("cursor", "auto");
+			$(trees_hidden).attr("pointer-events", "none");
+			window.healthShown = true;
+		});
+		var seconds = 1;
+
+		// make trees bigger
+		$(object.getElementsByClassName("trees-hide")).hide();
+		// hide elements of page1
+		$(object.getElementById("first")).append(createMotion(seconds, "person.click", "0,0", "2000,0", false));
+		// balloon floats up
+		$(balloon).append(createMotion(2*seconds, "person.click", "0,0", "0,-1600", false));
+		// make beach and person bigger
+		$(beach).append(createTransform("scale", seconds, "person.click", "1", "1.25"));
+		$(beach).append(createMotion(seconds, "person.click", "0,0", "-410,-200", false));
+
+		$(object.getElementById("person-text")).append(createMotion(seconds, "person.click", "-1000,0", "0,0", "text-move"));
+		$(object.getElementById("person-text")).append(createSet("visibility", "visible", "person.click", false));
+		$(object.getElementById("draw-respiratory-line")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s", false));
+		$(object.getElementById("draw-respiratory-line")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "440", "0", false));
+		$(object.getElementById("respiratory-dropdown")).append(createSet("visibility", "visible", "person.click + " + (2*seconds) + "s", false));
+
+		$(object.getElementsByClassName("fade1")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + seconds + "s", false));});
+		$(object.getElementById("health-line2")).append(createAnimate("stroke-dashoffset", seconds*3, "person.click + " + (seconds) + "s", "150", "0", false));
+		$(object.getElementById("health-line2")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s", false));
+		
+		$(object.getElementById("forward")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s; respiratory.click + " + (2*seconds-0.4) + "s; reverse-health.click + " + (2*seconds-0.4) + "s; reverse2.click+ " + (2*seconds-0.4) + "s; reverse3.click+ " + (2*seconds-0.4) + "s", "forward.click"));
+
+		$(object.getElementById("health-line2")).append(createSet("stroke-dasharray", "0", "person.click + " + (seconds + 0.25) + "s", false));
+		
+		initializeHealthLine(object, seconds, 0);
+		hideHealth(object, seconds, 0);
+	}
+
+	function initializeHealthLine(object, seconds, sec) {
+		$(object.getElementById("health-line")).append(createSet("visibility", "visible", "forward.click", "respiratory.click + "+ (seconds*2) + "s"));
+		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds*2, "forward.click ", "1000", "0"));
+		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds*2, "reverse-health.click; reverse2.click; reverse3.click; respiratory.click", "0", "1000"));
+
+		sec += seconds*2 / 5.5;
+		$(object.getElementById("small-lines1")).append(createAnimate("stroke-dashoffset", seconds/2, "forward.click + " + sec + "s", "50", "0", false)).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));
+		$(object.getElementsByClassName("fade2")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));});
+		
+		sec += seconds*2 / 5.0;
+		$(object.getElementById("small-lines2")).append(createAnimate("stroke-dashoffset", seconds/2, "forward.click + " + sec + "s", "50", "0", false)).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));
+		$(object.getElementsByClassName("fade3")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));});
+		
+		sec += seconds*2 / 5.0;
+		$(object.getElementById("small-lines3")).append(createAnimate("stroke-dashoffset", seconds/2, "forward.click + " + sec + "s", "50", "0", false)).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));
+		$(object.getElementsByClassName("fade4")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));});
+		
+		sec += seconds*2 / 5.0;
+		$(object.getElementById("small-lines4")).append(createAnimate("stroke-dashoffset", seconds/2, "forward.click + " + sec + "s", "50", "0", false)).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));
+		$(object.getElementsByClassName("fade5")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));});
+		
+		sec += seconds*2 / 5.0;
+		$(object.getElementsByClassName("fade6")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s", false));});
+	}
+
+	function hideHealth(object, seconds, sec) {
+		sec = 2*seconds * 0.9818;
+
+		sec -= seconds*2 / 5.5;
+		$(object.getElementById("small-lines1")).append(createAnimate("stroke-dashoffset", seconds/2, "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", "50", "0", false)).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s"));
+		$(object.getElementsByClassName("fade2")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", false));});
+		
+		sec -= seconds*2 / 5.0;
+		$(object.getElementById("small-lines2")).append(createAnimate("stroke-dashoffset", seconds/2, "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", "50", "0", false)).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s"));
+		$(object.getElementsByClassName("fade3")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", false));});
+		
+		sec -= seconds*2 / 5.0;
+		$(object.getElementById("small-lines3")).append(createAnimate("stroke-dashoffset", seconds/2, "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", "50", "0", false)).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s"));
+		$(object.getElementsByClassName("fade4")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", false));});
+		
+		sec -= seconds*2 / 5.0;
+		$(object.getElementById("small-lines4")).append(createAnimate("stroke-dashoffset", seconds/2, "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", "50", "0", false)).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s"));
+		$(object.getElementsByClassName("fade5")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", false));});
+		
+		sec -= seconds*2 / 5.0;
+		$(object.getElementsByClassName("fade6")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s; respiratory.click + " + (sec) + "s", false));});
+	}
+
+
+		function createMotion(seconds, begin, from, to, id) {
 		var animation = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
 		animation.setAttribute("dur", seconds + "s");
 		animation.setAttribute("repeatCount", "1");
@@ -120,12 +208,14 @@ obj.addEventListener("load", function() {
 		scale.setAttribute("fill", "freeze");
 		return scale;
 	}
-	function createSet(name, to, begin) {
+	function createSet(name, to, begin, end) {
 		var set = document.createElementNS("http://www.w3.org/2000/svg","set");
 		set.setAttribute("attributeName", name);
 		set.setAttribute("attributeType", "XML");
 		set.setAttribute("to", to);
 		set.setAttribute("begin", begin);
+		if (end != false)
+			set.setAttribute("end", end);
 		return set;
 	}
 	function createAnimate(name, seconds, begin, from, to, id) {
@@ -142,101 +232,6 @@ obj.addEventListener("load", function() {
 			animation.setAttribute("id", id);
 		return animation;
 	}
-
-
-	function personClicked(object, person, trees_hidden, balloon, beach) {
-		$(person).click(function() {
-			page = "person";
-			$(person).attr("cursor", "auto");
-			$(person).attr("pointer-events", "none");
-			$(trees_hidden).attr("cursor", "auto");
-			$(trees_hidden).attr("pointer-events", "none");
-			window.healthShown = true;
-		});
-		var seconds = 1;
-
-		// make trees bigger
-		$(object.getElementsByClassName("trees-hide")).hide();
-		// hide elements of page1
-		$(object.getElementById("first")).append(createMotion(seconds, "person.click", "0,0", "2000,0", false));
-		// balloon floats up
-		$(balloon).append(createMotion(2*seconds, "person.click", "0,0", "0,-1600", false));
-		// make beach and person bigger
-		$(beach).append(createTransform("scale", seconds, "person.click", "1", "1.25"));
-		$(beach).append(createMotion(seconds, "person.click", "0,0", "-410,-200", false));
-
-		$(object.getElementById("person-text")).append(createMotion(seconds, "person.click", "-1000,0", "0,0", "text-move"));
-		$(object.getElementById("person-text")).append(createSet("visibility", "visible", "person.click"));
-		$(object.getElementById("draw-respiratory-line")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s"));
-		$(object.getElementById("draw-respiratory-line")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "440", "0", false));
-		$(object.getElementById("respiratory-dropdown")).append(createSet("visibility", "visible", "person.click + " + (2*seconds) + "s"));
-
-		$(object.getElementsByClassName("fade1")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + seconds + "s"));});
-		$(object.getElementById("health-line2")).append(createAnimate("stroke-dashoffset", seconds*3, "person.click + " + (seconds) + "s", "150", "0", false));
-		$(object.getElementById("health-line2")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s"));
-		
-		var set = document.createElementNS("http://www.w3.org/2000/svg","set");
-		set.setAttribute("attributeName", "visibility");
-		set.setAttribute("attributeType", "XML");
-		set.setAttribute("to", "visible");
-		set.setAttribute("begin", "person.click + " + (seconds) + "s; logo.click; reverse-health.click + " + (2*seconds-0.4) + "s; reverse2.click+ " + (2*seconds-0.4) + "s; reverse3.click+ " + (2*seconds-0.4) + "s");
-		set.setAttribute("end", "forward.click");
-		$(object.getElementById("forward")).append(set);
-
-		$(object.getElementById("health-line2")).append(createSet("stroke-dasharray", "0", "person.click + " + (seconds + 0.25) + "s"));
-
-		$(object.getElementById("health-line")).append(createSet("visibility", "visible", "forward.click"));
-		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds*2, "forward.click ", "1000", "0"));
-		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds*2, "reverse-health.click; reverse2.click; reverse3.click", "0", "1000"));
-		
-		initializeHealthLine(object, seconds, 0);
-		hideHealth(object, seconds, 0);
-	}
-
-	function initializeHealthLine(object, seconds, sec) {
-		sec += seconds*2 / 5.5;
-		$(object.getElementById("small-lines1")).append(createAnimate("stroke-dashoffset", seconds/2, "forward.click + " + sec + "s", "50", "0", false)).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));
-		$(object.getElementsByClassName("fade2")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));});
-		
-		sec += seconds*2 / 5.0;
-		$(object.getElementById("small-lines2")).append(createAnimate("stroke-dashoffset", seconds/2, "forward.click + " + sec + "s", "50", "0", false)).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));
-		$(object.getElementsByClassName("fade3")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));});
-		
-		sec += seconds*2 / 5.0;
-		$(object.getElementById("small-lines3")).append(createAnimate("stroke-dashoffset", seconds/2, "forward.click + " + sec + "s", "50", "0", false)).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));
-		$(object.getElementsByClassName("fade4")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));});
-		
-		sec += seconds*2 / 5.0;
-		$(object.getElementById("small-lines4")).append(createAnimate("stroke-dashoffset", seconds/2, "forward.click + " + sec + "s", "50", "0", false)).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));
-		$(object.getElementsByClassName("fade5")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));});
-		
-		sec += seconds*2 / 5.0;
-		$(object.getElementsByClassName("fade6")).each(function() {$(this).append(createSet("visibility", "visible", "forward.click + " + (sec) + "s"));});
-	}
-
-	function hideHealth(object, seconds, sec) {
-		sec = 2*seconds * 0.9818;
-
-		sec -= seconds*2 / 5.5;
-		$(object.getElementById("small-lines1")).append(createAnimate("stroke-dashoffset", seconds/2, "reverse-health.click + " + (sec) + "s", "50", "0", false)).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));
-		$(object.getElementsByClassName("fade2")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));});
-		
-		sec -= seconds*2 / 5.0;
-		$(object.getElementById("small-lines2")).append(createAnimate("stroke-dashoffset", seconds/2, "reverse-health.click + " + (sec) + "s", "50", "0", false)).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));
-		$(object.getElementsByClassName("fade3")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));});
-		
-		sec -= seconds*2 / 5.0;
-		$(object.getElementById("small-lines3")).append(createAnimate("stroke-dashoffset", seconds/2, "reverse-health.click + " + (sec) + "s", "50", "0", false)).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));
-		$(object.getElementsByClassName("fade4")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));});
-		
-		sec -= seconds*2 / 5.0;
-		$(object.getElementById("small-lines4")).append(createAnimate("stroke-dashoffset", seconds/2, "reverse-health.click + " + (sec) + "s", "50", "0", false)).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));
-		$(object.getElementsByClassName("fade5")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));});
-		
-		sec -= seconds*2 / 5.0;
-		$(object.getElementsByClassName("fade6")).each(function() {$(this).append(createSet("visibility", "hidden", "reverse-health.click + " + (sec) + "s"));});
-	}
-
 
 </script>
 </body>
