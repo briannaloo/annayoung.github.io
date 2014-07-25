@@ -121,6 +121,9 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("draw-respiratory-line")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s", false));
 		$(object.getElementById("draw-respiratory-line")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "440", "0", false));
 		$(object.getElementById("respiratory-dropdown")).append(createSet("visibility", "visible", "person.click + " + (2*seconds) + "s", false));
+		$(object.getElementById("draw-respiratory-line-health")).append(createSet("visibility", "visible", "person.click + " + (seconds) + "s", false));
+		$(object.getElementById("draw-respiratory-line-health")).append(createAnimate("stroke-dashoffset", seconds, "person.click + " + (seconds) + "s", "440", "0", false));
+		$(object.getElementById("respiratory-dropdown-health")).append(createSet("visibility", "visible", "person.click + " + (2*seconds) + "s", false));
 
 		$(object.getElementsByClassName("fade1")).each(function() {$(this).append(createSet("visibility", "visible", "person.click + " + seconds + "s", false));});
 		$(object.getElementById("health-line2")).append(createAnimate("stroke-dashoffset", seconds*3, "person.click + " + (seconds) + "s", "150", "0", false));
@@ -138,18 +141,21 @@ obj.addEventListener("load", function() {
 
 	function initializeRespiratory(object, seconds, sec) {
 		// open respiratory effects
-		$(object.getElementById("respiratory-hide")).append(createAnimate("height", 2, "respiratory2.click", "495", "0"));
-		//$(object.getElementById("respiratory-hide")).append(createAnimate("height", 2, "respiratory-close.click; logo.click; 2.click; 3.click", "0", "495"));
-		$(object.getElementById("respiratory2")).click(function() {
+		$(object.getElementById("respiratory-hide")).append(createAnimate("height", 1, "respiratory2.click; respiratory2health.click", "495", "0"));
+		$([object.getElementById("respiratory2"), object.getElementById("respiratory2health")]).click(function() {
 			$(object.getElementById("respiratory2")).fadeOut(200);
+			$(object.getElementById("respiratory2-health")).fadeOut(200);
 			$(object.getElementById("respiratory-close")).fadeIn(200);
+			$(object.getElementById("respiratory_close_health")).fadeIn(200);
 			$(object.getElementById("respiratory-info")).show();
 		});
 
 		// close respiratory effects
-		$(object.getElementById("respiratory-close")).click(function() {
+		$([object.getElementById("respiratory-close"), object.getElementById("respiratory_close_health")]).click(function() {
 			$(object.getElementById("respiratory2")).fadeIn(200);
+			$(object.getElementById("respiratory2-health")).fadeIn(200);
 			$(object.getElementById("respiratory-close")).fadeOut(200);
+			$(object.getElementById("respiratory_close_health")).fadeOut(200);
 			$(object.getElementById("respiratory-info")).fadeOut(200);
 		});
 	}

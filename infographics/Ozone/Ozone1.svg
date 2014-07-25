@@ -623,6 +623,13 @@
 		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
 		<polygon visibility="hidden" id="respiratory-dropdown" fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/>
 	</g>
+	<g id="respiratory2health" cursor="pointer">
+		<line id="draw-respiratory-line-health"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
+				 stroke-dashoffset="440" stroke-dasharray="440"
+			 x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
+		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
+		<polygon visibility="hidden" id="respiratory-dropdown-health" fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/>
+	</g>
 </g>
 
 <g id="health-impacts" visibility="hidden">
@@ -2147,8 +2154,12 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 	<rect x="62.204" y="583.722" fill="none" width="385.404" height="13.53"/>
 	<text transform="matrix(1 0 0 1 62.2036 593.7881)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN</text>
 	<g id="respiratory-close" cursor="pointer">
-		<rect id="2" fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
-		<polygon id="3" fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
+		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
+		<polygon fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
+	</g>
+	<g id="respiratory_close_health" cursor="pointer">
+		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
+		<polygon fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
 	</g>
 	<rect transform="rotate(180)" id="respiratory-hide" fill="rgb(71, 188, 182)" stroke="none" height="495" width="560" x="-590" y="-730"/>
 </g>
