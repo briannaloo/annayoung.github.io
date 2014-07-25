@@ -4,7 +4,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1600 1150" enable-background="new 0 0 1600 1150" xml:space="preserve">
 <svg>
 <g id="Layer_1">
-	<g id="go_back">
+	<g id="logo">
 		<rect fill="#47BCB6" width="1600.229" height="1147.277"/>
 
 		<rect id="go-back" x="1.592" y="984.238" fill="#FFFFFF" width="1600" height="165.762"/>
@@ -195,6 +195,7 @@
 		c27.923,3.756,52.81,18.251,81.185,17.726c20.056-0.372,38.467-9.228,57.872-13.644c48.248-10.982,93.293-4.709,141.56,1.798
 		c44.615,6.015,100.298,3.948,144.968-0.104c35.694-3.237,82.576-16.794,112.945-35.311c32.626,27.184,59.932,18.682,97.187,11.13
 		c28.994-5.878,60.937-20.382,61.851-56.446C1465.814,698.25,1444.225,675.125,1428.658,657.031z"/>
+	<g id="page1-text">
 	<rect class="page1" x="38.524" y="40.995" fill="none" width="1054.143" height="38.606"/>
 	<text class="page1" transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">OZONE</tspan></text>
 	<rect class="page1" x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
@@ -217,6 +218,7 @@
 		1146.289,224.44 1121.496,260.106 1136.809,260.106 1139.357,260.106 1430.357,260.106 1455.496,224.697 	"/>
 	<rect class="page1" x="1193.193" y="199.731" fill="none" width="222.266" height="58.375"/>
 	<text class="page1" transform="matrix(1 0 0 1 1193.1934 209.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Future changes can improve the </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">impacts of PM</tspan></text>
+	</g>
 	<g>
 		<polygon fill="#D1D3D4" points="1493.629,746.189 1493.629,863.956 1538.266,863.956 1528.848,848.897 1532.884,848.897 
 			1523.744,834.381 1528.045,834.381 1519.175,819.859 1523.205,819.859 1514.061,805.336 1518.906,805.336 1508.955,790.282 
@@ -288,14 +290,6 @@
 				313.586,818.312 319.383,809.367 316.235,809.367 322.036,800.421 319.216,800.421 			"/>
 		</g>
 		<g>
-			<polygon class="tree-gray" fill="#D1D3D4" points="83.845,791.146 83.845,863.705 111.347,863.705 105.544,854.426 108.031,854.426 102.4,845.482 
-				105.05,845.482 99.585,836.535 102.067,836.535 96.434,827.587 99.419,827.587 93.288,818.312 96.103,818.312 90.304,809.367 
-				93.452,809.367 87.656,800.421 90.47,800.421 			"/>
-			<polygon class="tree" fill="#FFFFFF" points="83.845,791.146 83.845,863.705 56.345,863.705 62.143,854.426 59.659,854.426 65.292,845.482 
-				62.638,845.482 68.107,836.535 65.623,836.535 71.255,827.587 68.273,827.587 74.403,818.312 71.586,818.312 77.383,809.367 
-				74.235,809.367 80.036,800.421 77.216,800.421 			"/>
-		</g>
-		<g>
 			<polygon class="tree-gray" fill="#D1D3D4" points="499.845,791.146 499.845,863.705 527.347,863.705 521.544,854.426 524.031,854.426 
 				518.4,845.482 521.05,845.482 515.584,836.535 518.067,836.535 512.434,827.587 515.419,827.587 509.288,818.312 
 				512.102,818.312 506.304,809.367 509.452,809.367 503.656,800.421 506.47,800.421 			"/>
@@ -326,6 +320,14 @@
 			<polygon class="tree" fill="#FFFFFF" points="48.527,771.425 48.527,862.453 14.027,862.453 21.302,850.812 18.185,850.812 25.252,839.592 
 				21.923,839.592 28.784,828.368 25.667,828.368 32.733,817.143 28.993,817.143 36.683,805.506 33.148,805.506 40.421,794.285 
 				36.472,794.285 43.749,783.061 40.211,783.061 			"/>
+		</g>
+		<g>
+			<polygon class="tree-gray" fill="#D1D3D4" points="83.845,791.146 83.845,863.705 111.347,863.705 105.544,854.426 108.031,854.426 102.4,845.482 
+				105.05,845.482 99.585,836.535 102.067,836.535 96.434,827.587 99.419,827.587 93.288,818.312 96.103,818.312 90.304,809.367 
+				93.452,809.367 87.656,800.421 90.47,800.421 			"/>
+			<polygon class="tree" fill="#FFFFFF" points="83.845,791.146 83.845,863.705 56.345,863.705 62.143,854.426 59.659,854.426 65.292,845.482 
+				62.638,845.482 68.107,836.535 65.623,836.535 71.255,827.587 68.273,827.587 74.403,818.312 71.586,818.312 77.383,809.367 
+				74.235,809.367 80.036,800.421 77.216,800.421 			"/>
 		</g>
 		<g class="trees-hide">
 			<polygon class="tree-gray" fill="#D1D3D4" points="1373.366,684.166 1373.366,850.062 1436.245,850.062 1422.979,828.849 1428.664,828.849 
@@ -615,6 +617,7 @@
 		<text transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 
 		<text transform="matrix(1 0 0 1 38.708 224.3799)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">RESPIRATORY EFFECTS</text>
+		<polygon id="go_back" cursor="pointer" fill="#D1DE58" points="32.555,42.891 13.445,62 32.555,81.109"/>
 	</g>
 	<g id="respiratory2" cursor="pointer">
 		<line id="draw-respiratory-line"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
@@ -2173,17 +2176,18 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 	</image>
 	</g>
 </g>
+
+<g id="cities_page">
+	<g id="sources-text" visibility="hidden">
+		<rect x="69.906" y="40.995" fill="none" width="1054.143" height="38.606"/>
+		<text transform="matrix(1 0 0 1 66.9058 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">SOURCES</tspan></text>
+		<rect x="70.506" y="92.466" fill="none" width="863.957" height="65.132"/>
+		<text transform="matrix(1 0 0 1 70.5063 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+		<polygon id="go_back_cities" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
+	</g>
+</g>
+
 </svg>
 <g id="Layer_2">
-</g>
-<g id="Layer_3">
-</g>
-<g id="Layer_4">
-</g>
-<g id="Layer_5">
-</g>
-<g id="Layer_6">
-</g>
-<g id="Layer_7">
 </g>
 </svg>
