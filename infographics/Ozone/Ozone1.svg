@@ -214,10 +214,12 @@
 		858.289,224.44 	"/>
 	<rect class="page1" x="905.193" y="199.731" fill="none" width="222.266" height="54.375"/>
 	<text class="page1" transform="matrix(1 0 0 1 905.1938 209.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM concentrations are monitored </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">on the ground and by satellite</tspan></text>
-	<polygon class="page1" opacity="0.3" fill="#FFFFFF" points="1431.357,187.773 1140.357,187.773 1135.476,187.773 1121.496,187.773 
-		1146.289,224.44 1121.496,260.106 1136.809,260.106 1139.357,260.106 1430.357,260.106 1455.496,224.697 	"/>
-	<rect class="page1" x="1193.193" y="199.731" fill="none" width="222.266" height="58.375"/>
-	<text class="page1" transform="matrix(1 0 0 1 1193.1934 209.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Future changes can improve the </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">impacts of PM</tspan></text>
+	<g id="page5" cursor="pointer">
+		<polygon class="page1" opacity="0.3" fill="#FFFFFF" points="1431.357,187.773 1140.357,187.773 1135.476,187.773 1121.496,187.773 
+			1146.289,224.44 1121.496,260.106 1136.809,260.106 1139.357,260.106 1430.357,260.106 1455.496,224.697 	"/>
+		<rect class="page1" x="1193.193" y="199.731" fill="none" width="222.266" height="58.375"/>
+		<text class="page1" transform="matrix(1 0 0 1 1193.1934 209.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Future changes can improve the </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">impacts of PM</tspan></text>
+	</g>
 	</g>
 	<g id="cityscape">
 	<g id="trees" cursor="pointer">
