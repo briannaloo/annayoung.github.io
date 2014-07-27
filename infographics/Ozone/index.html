@@ -150,14 +150,14 @@ obj.addEventListener("load", function() {
 		// city zooms out
 		$([object.getElementById("cityscape"), object.getElementById("mountains")])
 			.append(createTransform("scale", seconds, "balloon.click", "1", "0.5"))
-			.append(createMotion(seconds, "balloon.click", "0,0", "400,520", "go_back_balloon.click + " + seconds + "s"))
+			.append(createMotion(seconds, "balloon.click", "0,0", "400,530", "go_back_balloon.click + " + seconds + "s"))
 			.append(createTransform("scale", seconds, "go_back_balloon.click + " + seconds + "s", "0.5", "1"))
-			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "400,520", "0,0", "balloon.click"));
+			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "400,530", "0,0", "balloon.click"));
 
-		// balloon moves left
+		// balloon moves left & down
 		$(balloon)
-			.append(createMotion(seconds, "balloon.click", "0,0", "-5,130", "go_back_balloon.click"))
-			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "-5,130", "0,0", "balloon.click"));
+			.append(createMotion(seconds, "balloon.click", "0,0", "-5,145", "go_back_balloon.click"))
+			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "-5,145", "0,0", "balloon.click"));
 	
 		// gradient moves up
 		$(object.getElementById("gradient"))
@@ -170,16 +170,22 @@ obj.addEventListener("load", function() {
 		var path = "M0,0c-28.897-18.597-57.794-37.195-86.692-55.792   C1459,630,1462.731,632.892,1445,622c-18.495-11.361-34-20-56.234-30.993c-48.469-23.965-97.646-47.377-148.338-66.188   c-58.323-21.643-119.05-35.985-179.596-50.274";
 		$(object.getElementById("plane"))
 			.append(createSet("visibility", "visible", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s", false))
-			.append(createPath(4*seconds, path, "auto", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
+			.append(createPath(2*seconds, path, "auto", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
 			.append(createPath(seconds, backwards_path, "auto", "go_back_balloon.click", "balloon.click"));
 
 		// satellite moves in
+		path = "M-470,200c120.588-78.699,299.084-164.038,438.495-200.086";
+		backwards_path = "M380,380C280.021,336.235,165.865,382.973,55,442c-35.919,19.124-80.15,39.54-109.442,67.786";
+		$(object.getElementById("satellite"))
+			.append(createSet("visibility", "visible", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + (seconds) + "s", false))
+			.append(createPath(2*seconds, path, "auto", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
+			.append(createPath(seconds, backwards_path, "auto", "go_back_balloon.click", "balloon.click"));
 
 
 		// lasers shoot up
 		$(object.getElementById("lasers")).children().each(function() {$(this)
-			.append(createSet("visibility", "visible", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + (seconds/2.0) + "s", false))
-			.append(createAnimate("stroke-dashoffset", seconds/2.0, "balloon.click + " + (2*seconds) + "s", "700", "0", "go_back_balloon.click", false))
+			.append(createSet("visibility", "visible", "balloon.click + " + (4*seconds) + "s", "go_back_balloon.click + " + (seconds/2.0) + "s", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "balloon.click + " + (4*seconds) + "s", "700", "0", "go_back_balloon.click", false))
 			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_balloon.click", "0", "700", "balloon.click", false));
 		});
 
