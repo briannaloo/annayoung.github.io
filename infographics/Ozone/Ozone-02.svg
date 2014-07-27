@@ -201,10 +201,10 @@
 		<path fill="#2CB35F" d="M85.364,1050.699c-1.024,0-1.852-0.83-1.852-1.852s0.828-1.852,1.852-1.852c1.021,0,1.85,0.83,1.85,1.852
 			S86.386,1050.699,85.364,1050.699"/>
 	</g>
-	<rect x="38.524" y="40.995" fill="none" width="1054.143" height="38.606"/>
-	<text transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">SOURCES</tspan></text>
-	<rect x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
-	<text transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+	<rect x="69.906" y="40.995" fill="none" width="1054.143" height="38.606"/>
+	<text transform="matrix(1 0 0 1 66.9058 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">SOURCES</tspan></text>
+	<rect x="70.506" y="92.466" fill="none" width="863.957" height="65.132"/>
+	<text transform="matrix(1 0 0 1 70.5063 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 	<g>
 		<g>
 			<path opacity="0.75" fill="#BCBEC0" d="M806.011,941.575c9.58-5.314,19.161-10.627,28.741-15.941c0-28.08,0-56.159,0-84.239
@@ -621,6 +621,7 @@
 		<line fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="565.896" y1="565" x2="565.896" y2="841.396"/>
 	<polyline fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="214.548,565 
 		214.548,723 184,723 184,841.396 	"/>
+	<polygon fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
 </g>
 <g id="Layer_3">
 </g>

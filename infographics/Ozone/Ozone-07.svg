@@ -93,16 +93,16 @@
 </g>
 <g id="Layer_7">
 	<rect fill="#47BCB6" width="1600.229" height="1147.277"/>
-	<path fill="#3A9E99" d="M2087.238,967.357c0,0-23.594-40.215-35.838-49.274c-27.617-20.435-100.945-26.325-129.912-44.797
-		c-38.078-24.284-125.43-130.021-125.43-130.021s-168.494-101.201-237.422-108.54c-31.6-3.367-91.678,28.857-123.188,25.047
-		c-11.959-1.446-28.27-19.103-40.318-20.038c-35.99-2.794-99.096,34.125-134.389,40.075c-33.934,5.724-104.084,6.981-138.871,6.68
-		c-32.035-0.273-95.643-9.019-127.67-8.348c-42.982,0.9-131.387,4.611-170.227,18.367c-25.416,9.002-54.796,55.388-82.874,56.775
-		c-40.921,2.024-95.671-60.055-134.389-70.135c-25.952-6.756-84.589,3.245-109.752-5.008c-20.66-6.779-42.382-46.6-64.955-46.758
-		c-32.883-0.228-68.536,53.672-96.314,66.796c-15.28,7.22-49.185,18.735-67.192,20.038c-20.989,1.52-62.959-6.523-82.877-11.69
-		c-12.537-3.249-33.804-19.163-47.033-18.367c-11.163,0.671-26.815,15.095-35.839,20.038c-13.9,7.617-40.05,25.152-55.996,30.059
-		c-19.657,6.046-83.993,10.019-83.993,10.019c-34.231-21.266-115.599,41.16-146.708,66.774
-		c-22.312,18.372-49.708,71.062-67.196,94.071c-11.323,14.902-47.036,58.236-47.036,58.236H-11.48c0,0,0.05-0.447,0.137-1.295
-		h1754.134l-0.307,1.295H2087.238z"/>
+	<path fill="#3A9E99" d="M2087.238,967.357c0,0-23.594-31.538-35.838-38.643c-27.617-16.026-100.945-20.646-129.912-35.133
+		c-38.078-19.044-125.43-101.968-125.43-101.968s-168.494-79.367-237.422-85.123c-31.6-2.641-91.678,22.632-123.188,19.643
+		c-11.959-1.134-28.27-14.98-40.318-15.715c-35.99-2.19-99.096,26.763-134.389,31.43c-33.934,4.488-104.084,5.476-138.871,5.238
+		c-32.035-0.214-95.643-7.073-127.67-6.547c-42.982,0.706-131.387,3.616-170.227,14.404c-25.416,7.06-54.796,43.439-82.874,44.527
+		c-40.921,1.587-95.671-47.099-134.389-55.004c-25.952-5.299-84.589,2.546-109.752-3.928c-20.66-5.316-42.382-36.546-64.955-36.67
+		c-32.883-0.179-68.536,42.093-96.314,52.385c-15.28,5.663-49.185,14.693-67.192,15.715c-20.989,1.191-62.959-5.116-82.877-9.168
+		c-12.537-2.549-33.804-15.029-47.033-14.404c-11.163,0.526-26.815,11.838-35.839,15.715c-13.9,5.974-40.05,19.726-55.996,23.574
+		c-19.657,4.741-83.993,7.857-83.993,7.857c-34.231-16.677-115.599,32.28-146.708,52.368
+		c-22.312,14.407-49.708,55.731-67.196,73.775c-11.323,11.686-47.036,45.671-47.036,45.671H-11.48c0,0,0.05-0.351,0.137-1.016
+		h1754.134l-0.307,1.016H2087.238z"/>
 	<g>
 		<polygon fill="#D1D3D4" points="1185.492,850.879 1185.492,963.298 1228.103,963.298 1219.112,948.923 1222.965,948.923 
 			1214.24,935.065 1218.346,935.065 1209.879,921.204 1213.726,921.204 1204.997,907.341 1209.622,907.341 1200.123,892.97 
@@ -277,10 +277,10 @@
 		<path fill="#2CB35F" d="M85.364,1050.699c-1.024,0-1.852-0.83-1.852-1.852s0.828-1.852,1.852-1.852c1.021,0,1.85,0.83,1.85,1.852
 			S86.386,1050.699,85.364,1050.699"/>
 	</g>
-	<rect x="38.524" y="40.995" fill="none" width="1054.143" height="38.606"/>
-	<text transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">RECOMMENDATIONS</tspan></text>
-	<rect x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
-	<text transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+	<rect x="70.351" y="40.995" fill="none" width="1054.143" height="38.606"/>
+	<text transform="matrix(1 0 0 1 67.3511 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">RECOMMENDATIONS</tspan></text>
+	<rect x="70.952" y="92.466" fill="none" width="863.956" height="65.132"/>
+	<text transform="matrix(1 0 0 1 70.9517 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 	<g>
 		<g>
 			<path opacity="0.75" fill="#BCBEC0" d="M1297.896,944.493c9.262-5.138,13.894-7.705,23.155-12.843c0-22.62,0-45.24,0-67.86
@@ -671,7 +671,9 @@
 	<path fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" d="M562.075,492.284
 		c-15.542-1.812-27.603-15.023-27.604-31.051c0-17.267,13.997-31.263,31.263-31.263s31.263,13.996,31.263,31.263
 		S583,492.496,565.734,492.496c-0.358,0-0.715-0.007-1.071-0.019"/>
-	<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="565.734" cy="280.811" r="31.263"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M534.471,280.81
+		c0-17.267,13.997-31.263,31.263-31.263s31.263,13.996,31.263,31.263c0,17.267-13.997,31.263-31.263,31.263
+		c-15.978,0-29.156-11.985-31.034-27.457c-0.08-0.659-0.14-1.325-0.178-1.996C534.488,282.022,534.471,281.418,534.471,280.81z"/>
 	<polyline fill="none" stroke="#3A9E99" stroke-width="2" stroke-miterlimit="10" points="144.855,681.971 144.855,641.649 
 		534.471,641.649 534.471,640.688 	"/>
 	<polyline fill="none" stroke="#3A9E99" stroke-width="2" stroke-miterlimit="10" points="1520.054,672.912 1402.075,672.912 
@@ -714,5 +716,6 @@
 		<rect x="640.259" y="841.092" fill="none" width="415.358" height="90.45"/>
 		<text transform="matrix(1 0 0 1 640.2588 849.7197)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
 	</g>
+	<polygon fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408 	"/>
 </g>
 </svg>

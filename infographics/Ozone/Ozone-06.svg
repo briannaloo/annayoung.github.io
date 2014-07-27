@@ -4,6 +4,9 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1600 1150" enable-background="new 0 0 1600 1150" xml:space="preserve">
 <g id="Layer_1">
+	<path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M1605.605,729.213C1572.217,709.071,1539,700,1517,668
+		c-13.287-19.327-46.399-29.936-66-42c-42.365-26.076-88.909-46.245-134.547-66.044c-25.662-11.133-52.167-20.191-78.637-29.236
+		c-66.911-22.863-134.132-45.808-203.714-58.382"/>
 </g>
 <g id="Layer_2">
 </g>
@@ -223,10 +226,10 @@
 		<path fill="#2CB35F" d="M87.397,1049.698c-1.023,0-1.852-0.83-1.852-1.852s0.828-1.852,1.852-1.852
 			c1.021,0,1.851,0.83,1.851,1.852S88.419,1049.698,87.397,1049.698"/>
 	</g>
-	<rect x="40.558" y="39.994" fill="none" width="1054.143" height="38.606"/>
-	<text transform="matrix(1 0 0 1 37.5576 74.5059)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">MONITORING</tspan></text>
-	<rect x="41.158" y="91.465" fill="none" width="863.957" height="65.132"/>
-	<text transform="matrix(1 0 0 1 41.1582 105.8447)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+	<rect x="68.476" y="39.994" fill="none" width="1054.143" height="38.606"/>
+	<text transform="matrix(1 0 0 1 65.4756 74.5059)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">MONITORING</tspan></text>
+	<rect x="69.076" y="91.465" fill="none" width="863.957" height="65.132"/>
+	<text transform="matrix(1 0 0 1 69.0762 105.8447)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 	<g>
 		<g>
 			<path fill="#3A9E99" d="M1315.218,969.011c0.007,0.004-8.601-17.648-13.482-21.842c-10.985-9.485-41.778-14.196-53.51-22.752
@@ -935,6 +938,10 @@
 			<circle clip-path="url(#SVGID_9_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1508"/>
 		</g>
 	</g>
+	<polygon fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408 	"/>
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M1011.886,463.645C1093,478,1131.457,487.883,1187.173,504.827
+		c5.707,1.736,22.298,8.935,27.827,11.173c8.331,3.372,34,14,34,14c46,16,89.978,37.1,108,46c162,80,212,120,200,110
+		c-6.904-5.753,29.129,20.448,34,28c6.498,10.074,8,10,15.407,11.304"/>
 </g>
 <g id="Layer_7">
 </g>

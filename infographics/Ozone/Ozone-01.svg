@@ -196,7 +196,7 @@
 	<rect x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
 	<text transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 	<rect x="40.533" y="200.731" fill="none" width="222.265" height="54.375"/>
-	<text transform="matrix(1 0 0 1 40.5332 210.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHERE DOES IT COME FROM?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM can be linked to both </tspan><tspan x="157.985" y="16.8" fill="#F36F2B" font-family="'Helvetica'" font-size="14">direct </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">and </tspan><tspan x="27.248" y="33.6" fill="#F36F2B" font-family="'Helvetica'" font-size="14">indirect </tspan><tspan x="76.269" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">sources.</tspan></text>
+	<text transform="matrix(1 0 0 1 40.5332 210.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHERE DOES IT COME FROM?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Whomp whomp whomp whomp </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">glerp herp merp slerp</tspan></text>
 	<polygon opacity="0.3" fill="#FFFFFF" points="257.098,186.773 275.959,186.773 300.098,223.697 274.959,259.106 257.098,259.106 
 		281.891,223.44 	"/>
 	<rect x="328.795" y="199.731" fill="none" width="222.265" height="54.375"/>
@@ -239,9 +239,17 @@
 				397.174,788.515 406.156,774.657 401.278,774.657 410.266,760.795 405.896,760.795 			"/>
 		</g>
 		<g>
-			<polygon fill="#D1D3D4" points="-3.833,748.425 -3.833,860.844 38.777,860.844 29.787,846.469 33.64,846.469 24.916,832.612 
-				29.021,832.612 20.554,818.75 24.4,818.75 15.672,804.886 20.297,804.886 10.798,790.515 15.159,790.515 6.174,776.657 
-				11.053,776.657 2.071,762.795 6.432,762.795 			"/>
+			<path fill="#FFFFFF" d="M4.5,752.245V860.28c0,0.588-0.477,1.065-1.065,1.065h-39.623c-0.836,0-1.346-0.92-0.903-1.629
+				l6.948-11.118c0.443-0.709-0.067-1.629-0.903-1.629h0c-0.838,0-1.347-0.923-0.901-1.632l6.672-10.593
+				c0.446-0.709-0.063-1.632-0.901-1.632h-0.284c-0.831,0-1.342-0.91-0.908-1.62l6.493-10.623c0.434-0.709-0.077-1.62-0.908-1.62
+				h-0.023c-0.838,0-1.347-0.923-0.901-1.632l6.673-10.6c0.446-0.709-0.063-1.632-0.901-1.632h-0.712
+				c-0.848,0-1.356-0.944-0.888-1.651l7.314-11.068c0.468-0.708-0.04-1.651-0.888-1.651h-0.427c-0.844,0-1.352-0.935-0.893-1.644
+				l6.852-10.571c0.459-0.708-0.049-1.643-0.893-1.643h-0.96c-0.844,0-1.352-0.935-0.893-1.644l6.856-10.574
+				c0.459-0.708-0.049-1.644-0.893-1.644h-0.341c-0.866,0-1.37-0.979-0.866-1.684l7.137-9.986C3.171,750.784,4.5,751.21,4.5,752.245
+				z"/>
+			<polygon fill="#D1D3D4" points="0,748.425 0,860.844 42.61,860.844 33.62,846.469 37.473,846.469 28.748,832.612 32.854,832.612 
+				24.386,818.75 28.233,818.75 19.504,804.886 24.129,804.886 14.63,790.515 18.991,790.515 10.006,776.657 14.885,776.657 
+				5.904,762.795 10.264,762.795 			"/>
 		</g>
 		<g>
 			<polygon fill="#D1D3D4" points="1342.137,731.19 1342.137,848.957 1386.773,848.957 1377.355,833.898 1381.392,833.898 
@@ -567,6 +575,9 @@
 		h29.75l4-1.5l2-2.5l-2.25-41.5l-0.5-6.5c0,0-0.137-3.57,0-4.75c0.126-1.084,0.874-3.166,1-4.25c0.094-0.807,0.311-2.5,0-3.25
 		c-0.474-1.143-2.638-2.613-3.5-3.5c-1.078-1.11-4.25-4.5-4.25-4.5l-0.5-4.75l0.75-4.75l1.75-3.5l3.25-5l0.793-1.585
 		c1.375,1.093,2.525,2.238,2.863,3.246C1509.979,823.61,1508.576,830.558,1508.98,833.908z"/>
+	<path fill="none" stroke="#3A9E99" stroke-miterlimit="10" d="M557.373-48c0,0-23.308,74.049-20.12,100
+		c3.076,25.041,40.207,47.393,40.239,73.032c0.033,25.758-40.26,47.941-40.239,73.699c0.021,25.682,40.302,47.588,40.239,73.269
+		c-0.062,25.456-37.674,46.961-40.239,72c-2.209,21.573,20.12,80,20.12,80"/>
 </g>
 <g id="Layer_2">
 </g>

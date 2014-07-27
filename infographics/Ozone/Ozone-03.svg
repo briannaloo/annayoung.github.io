@@ -175,10 +175,10 @@
 		<path fill="#2CB35F" d="M85.364,1050.699c-1.024,0-1.852-0.83-1.852-1.852s0.828-1.852,1.852-1.852c1.021,0,1.85,0.83,1.85,1.852
 			S86.386,1050.699,85.364,1050.699"/>
 	</g>
-	<rect x="38.524" y="40.995" fill="none" width="1054.143" height="38.606"/>
-	<text transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
-	<rect x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
-	<text transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+	<rect x="72.435" y="40.995" fill="none" width="1054.142" height="38.606"/>
+	<text transform="matrix(1 0 0 1 69.4346 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
+	<rect x="73.035" y="92.466" fill="none" width="863.957" height="65.132"/>
+	<text transform="matrix(1 0 0 1 73.0352 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 	<g>
 		<polygon fill="#D1D3D4" points="1259.635,666.69 1259.635,814.504 1315.659,814.504 1303.839,795.602 1308.904,795.602 
 			1297.433,777.383 1302.831,777.383 1291.698,759.155 1296.756,759.155 1285.279,740.928 1291.36,740.928 1278.871,722.032 
@@ -336,6 +336,7 @@
 	<rect x="62.204" y="583.722" fill="none" width="385.404" height="13.53"/>
 	<text transform="matrix(1 0 0 1 62.2036 593.7881)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN</text>
 	<polygon fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
+	<polygon fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
 </g>
 <g id="Layer_5">
 </g>
