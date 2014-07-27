@@ -121,7 +121,9 @@ obj.addEventListener("load", function() {
 	// beach moves out
 	$([person, sand]).append(createMotion(seconds, "buildings.click; balloon.click", "0,0", "2000,0", "go_back_cities.click; go_back_balloon.click"))
 		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s", "2000,0", "0,0", "buildings.click + " + seconds + "s; balloon.click + " + seconds + "s"));
-		
+	// side trees move out
+	$([trees_hidden, object.getElementById("trees-to-hide")]).append(createMotion(seconds, "balloon.click", "0,0", "2000,0", "go_back_balloon.click"))
+		.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "2000,0", "0,0", "balloon.click + " + seconds + "s"));	
 
 // WHEN PERSON CLICKED
 	personClicked(object, person, trees_hidden, balloon, beach, seconds);
@@ -146,7 +148,7 @@ obj.addEventListener("load", function() {
 			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "0,0", "-1600,0", "balloon.click"));
 		
 		// city zooms out
-		$([object.getElementById("cityscape"), trees_hidden, object.getElementById("mountains")])
+		$([object.getElementById("cityscape"), object.getElementById("mountains")])
 			.append(createTransform("scale", seconds, "balloon.click", "1", "0.5"))
 			.append(createMotion(seconds, "balloon.click", "0,0", "380,520", "go_back_balloon.click + " + seconds + "s"))
 			.append(createTransform("scale", seconds, "go_back_balloon.click + " + seconds + "s", "0.5", "1"))
@@ -159,17 +161,27 @@ obj.addEventListener("load", function() {
 	
 		// gradient moves up
 		$(object.getElementById("gradient"))
-			.append(createSet("visibility", "visible", "balloon.click + " + (3/4.0*seconds) + "s", "go_back_balloon.click + " + seconds + "s", false))
-			.append(createMotion(2.5*seconds, "balloon.click + " + (3/4.0*seconds) + "s", "0,1600", "0,0", "go_back_balloon.click"))
+			.append(createSet("visibility", "visible", "balloon.click", "go_back_balloon.click + " + seconds + "s", false))
+			.append(createMotion(2*seconds, "balloon.click", "0,1600", "0,0", "go_back_balloon.click"))
 			.append(createMotion(seconds, "go_back_balloon.click", "0,0", "0,1600", "balloon.click"));
 		
 		// plane flies in
-		var path = "M1011.886,463.645C1093,478,1131.457,487.883,1187.173,504.827c5.707,1.736,22.298,8.935,27.827,11.173c8.331,3.372,34,14,34,14c46,16,89.978,37.1,108,46c162,80,212,120,200,110   c-6.904-5.753,29.129,20.448,34,28c6.498,10.074,8,10,15.407,11.304";
+		var backwards_path = "M0,0C1093,478,1131.457,487.883,1187.173,504.827c5.707,1.736,22.298,8.935,27.827,11.173c8.331,3.372,34,14,34,14c46,16,89.978,37.1,108,46c162,80,212,120,200,110   c-6.904-5.753,29.129,20.448,34,28c6.498,10.074,8,10,15.407,11.304";
+		var path = "M0,0c-28.897-18.597-57.794-37.195-86.692-55.792   C1459,630,1462.731,632.892,1445,622c-18.495-11.361-34-20-56.234-30.993c-48.469-23.965-97.646-47.377-148.338-66.188   c-58.323-21.643-119.05-35.985-179.596-50.274";
 		$(object.getElementById("plane"))
-			.append(createSet("visibility", "visible", "balloon.click + " + (2.5*seconds) + "s", "go_back_balloon.click + " + seconds + "s", false))
-			.append(createPath(2*seconds, path, "auto", "balloon.click + " + (2.5*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
-			.append(createPath(seconds, path, "auto", "go_back_balloon.click", "balloon.click"));
+			.append(createSet("visibility", "visible", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s", false))
+			.append(createPath(4*seconds, path, "auto", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
+			.append(createPath(seconds, backwards_path, "auto", "go_back_balloon.click", "balloon.click"));
 
+		// satellite moves in
+
+
+		// lasers shoot up
+		$(object.getElementById("lasers")).children().each(function() {$(this)
+			.append(createSet("visibility", "visible", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + (seconds/2.0) + "s", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "balloon.click + " + (2*seconds) + "s", "700", "0", "go_back_balloon.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_balloon.click", "0", "700", "balloon.click", false));
+		});
 	}
 
 	function citiesClicked(object, buildings, seconds, trees, person, trees_hidden, smog, sand) {
@@ -384,7 +396,7 @@ obj.addEventListener("load", function() {
 		animation.setAttribute("path", path);
 		animation.setAttribute("fill", "freeze");
 		animation.setAttribute("end", end);
-		animation.setAttribute("rotate", rotate);
+		//animation.setAttribute("rotate", rotate);
 		return animation;
 	}
 
