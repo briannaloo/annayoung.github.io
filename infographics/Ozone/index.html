@@ -156,8 +156,8 @@ obj.addEventListener("load", function() {
 
 		// balloon moves left
 		$(balloon)
-			.append(createMotion(seconds, "balloon.click", "0,0", "-50,0", "go_back_balloon.click"))
-			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "-50,0", "0,0", "balloon.click"));
+			.append(createMotion(seconds, "balloon.click", "0,0", "-5,130", "go_back_balloon.click"))
+			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "-5,130", "0,0", "balloon.click"));
 	
 		// gradient moves up
 		$(object.getElementById("gradient"))
@@ -181,6 +181,19 @@ obj.addEventListener("load", function() {
 			.append(createSet("visibility", "visible", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + (seconds/2.0) + "s", false))
 			.append(createAnimate("stroke-dashoffset", seconds/2.0, "balloon.click + " + (2*seconds) + "s", "700", "0", "go_back_balloon.click", false))
 			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_balloon.click", "0", "700", "balloon.click", false));
+		});
+
+		// text boxes draw
+		$(object.getElementById("monitoring-lines")).children().each(function() {
+			$(this).append(createSet("visibility", "visible", "balloon.click + " + (2.5*seconds) + "s", "go_back_balloon.click + " + (seconds/2.0) + "s", false))
+			.append(createAnimate("stroke-dashoffset", seconds, "balloon.click + " + (2.5*seconds) + "s", "300", "0", "go_back_balloon.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_balloon.click", "0", "300", "balloon.click", false));
+		});
+		$(object.getElementById("monitoring-titles"))
+			.append(createSet("visibility", "visible", "balloon.click + " + (2.5*seconds) + "s", "go_back_balloon.click + " + (seconds/2.0) + "s", false));
+		// text box buttons draw
+		$(object.getElementById("monitoring-buttons-open")).children().each(function() {
+			$(this).append(createSet("visibility", "visible", "balloon.click + " + (3.5*seconds) + "s", "go_back_balloon.click", false));
 		});
 	}
 

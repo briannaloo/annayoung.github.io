@@ -873,35 +873,31 @@
 	</g>
 	<line fill="none" stroke="#D1DE58" stroke-width="2" stroke-miterlimit="10" x1="795.091" y1="861.614" x2="795.091" y2="207.52"/>
 	<line fill="none" stroke="#D1DE58" stroke-width="2" stroke-miterlimit="10" x1="802.59" y1="861.614" x2="802.59" y2="207.52"/>
-	<rect x="815" y="643" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
 	<rect x="822.589" y="753.489" fill="none" width="271.486" height="14.999"/>
 	<text transform="matrix(1 0 0 1 822.5889 766.4307)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">GROUND BASED </text>
 	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="815" y1="772" x2="1076.333" y2="772"/>
-	<polygon fill="#FFFFFF" points="1043.279,753.611 1058.109,768.441 1072.94,753.611 	"/>
-	<rect x="209.489" y="619.711" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
+	<polygon fill="#FFFFFF" points="1075.83,765.498 1061.167,750.502 1046.17,765.166 	"/>
 	<rect x="217.078" y="602.706" fill="none" width="271.486" height="14.999"/>
 	<text transform="matrix(1 0 0 1 217.0781 615.6475)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">BALLOON SONDES</text>
 	
 		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="209.489" y1="621.217" x2="470.822" y2="621.217"/>
-	<polygon fill="#FFFFFF" points="467.43,617.124 452.6,602.294 437.769,617.124 	"/>
-	<rect x="825.022" y="655.997" fill="none" width="235.488" height="91.496"/>
-	<text transform="matrix(1 0 0 1 825.0225 664.625)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
-	<rect x="1245.479" y="372.074" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
+	<polygon fill="#FFFFFF" points="439.115,627.403 454.177,641.998 468.772,626.936 	"/>
+	<polyline fill="none" points="825.022,747.493 825.022,655.997 1060.511,655.997 	"/>
+	<text transform="matrix(1 0 0 1 825.0225 664.625)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WO</tspan></text>
 	<rect x="1253.067" y="482.563" fill="none" width="271.486" height="14.999"/>
 	<text transform="matrix(1 0 0 1 1253.0674 495.5049)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">AIRCRAFT</text>
 	
 		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="1245.479" y1="501.074" x2="1506.812" y2="501.074"/>
-	<polygon fill="#FFFFFF" points="1473.758,482.685 1488.588,497.516 1503.419,482.685 	"/>
-	<rect x="1255.501" y="385.071" fill="none" width="235.488" height="91.496"/>
-	<text transform="matrix(1 0 0 1 1255.501 393.6992)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+	<polygon fill="#FFFFFF" points="1503.829,495.112 1488.799,480.485 1474.171,495.515 	"/>
+	<polyline fill="none" points="1255.501,476.567 1255.501,385.071 1490.989,385.071 	"/>
+	<text transform="matrix(1 0 0 1 1255.501 393.6992)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WO</tspan></text>
 	<rect x="218.455" y="634.467" fill="none" width="235.488" height="91.496"/>
 	<text transform="matrix(1 0 0 1 218.4551 643.0947)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
-	<rect x="467.746" y="329.279" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
 	<rect x="475.335" y="312.274" fill="none" width="271.486" height="14.999"/>
 	<text transform="matrix(1 0 0 1 475.335 325.2158)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">SATELLITE</text>
 	
 		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="467.746" y1="330.785" x2="729.079" y2="330.785"/>
-	<polygon fill="#FFFFFF" points="725.687,326.692 710.857,311.862 696.026,326.692 	"/>
+	<polygon fill="#FFFFFF" points="697.376,337.299 712.65,351.672 727.024,336.399 	"/>
 	<rect x="476.712" y="344.035" fill="none" width="235.488" height="91.496"/>
 	<text transform="matrix(1 0 0 1 476.7119 352.6631)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
 	<g>

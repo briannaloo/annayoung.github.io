@@ -41,6 +41,57 @@
 		<polygon id="go_back_balloon" cursor="pointer" xmlns="http://www.w3.org/2000/svg" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
 	</g>
 
+	<g id="text-boxes">
+		<g id="monitoring-lines">
+			<line stroke-dashoffset="300" stroke-dasharray="300" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="815" y1="772" x2="1076.333" y2="772"/>
+			<line stroke-dashoffset="300" stroke-dasharray="300" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="209.489" y1="621.217" x2="470.822" y2="621.217"/>
+			<line stroke-dashoffset="300" stroke-dasharray="300" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="1245.479" y1="501.074" x2="1506.812" y2="501.074"/>
+			<line stroke-dashoffset="300" stroke-dasharray="300" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="467.746" y1="330.785" x2="729.079" y2="330.785"/>
+		</g>
+		<g id="monitoring-buttons-open" cursor="pointer">
+			<polygon fill="#FFFFFF" points="439.115,627.403 454.177,641.998 468.772,626.936  "/>
+			<polygon fill="#FFFFFF" points="697.376,337.299 712.65,351.672 727.024,336.399  "/>
+			<polygon fill="#FFFFFF" points="1075.83,765.498 1061.167,750.502 1046.17,765.166  "/>
+			<polygon fill="#FFFFFF" points="1503.829,495.112 1488.799,480.485 1474.171,495.515  "/>
+		</g>
+		<g id="monitoring-buttons-close" cursor="pointer">
+			<polygon fill="#FFFFFF" points="1043.279,753.611 1058.109,768.441 1072.94,753.611 	"/>
+			<polygon fill="#FFFFFF" points="467.43,617.124 452.6,602.294 437.769,617.124 	"/>
+			<polygon fill="#FFFFFF" points="1473.758,482.685 1488.588,497.516 1503.419,482.685 	"/>
+			<polygon fill="#FFFFFF" points="725.687,326.692 710.857,311.862 696.026,326.692 	"/>
+		</g>
+		<g id="monitoring-titles">
+			<text transform="matrix(1 0 0 1 822.5889 766.4307)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">GROUND BASED </text>
+			<text transform="matrix(1 0 0 1 217.0781 615.6475)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">BALLOON SONDES</text>
+			<text transform="matrix(1 0 0 1 1253.0674 495.5049)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">AIRCRAFT</text>
+			<text transform="matrix(1 0 0 1 475.335 325.2158)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">SATELLITE</text>
+		</g>
+
+		<rect x="815" y="643" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
+		<rect x="822.589" y="753.489" fill="none" width="271.486" height="14.999"/>
+		
+		<rect x="209.489" y="619.711" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
+		<rect x="217.078" y="602.706" fill="none" width="271.486" height="14.999"/>
+		
+		
+		<rect x="825.022" y="655.997" fill="none" width="235.488" height="91.496"/>
+		<text transform="matrix(1 0 0 1 825.0225 664.625)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+		<rect x="1245.479" y="372.074" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
+		<rect x="1253.067" y="482.563" fill="none" width="271.486" height="14.999"/>
+		
+		
+		<rect x="1255.501" y="385.071" fill="none" width="235.488" height="91.496"/>
+		<text transform="matrix(1 0 0 1 1255.501 393.6992)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+		<rect x="218.455" y="634.467" fill="none" width="235.488" height="91.496"/>
+		<text transform="matrix(1 0 0 1 218.4551 643.0947)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+		<rect x="467.746" y="329.279" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
+		<rect x="475.335" y="312.274" fill="none" width="271.486" height="14.999"/>
+		
+		
+		<rect x="476.712" y="344.035" fill="none" width="235.488" height="91.496"/>
+		<text transform="matrix(1 0 0 1 476.7119 352.6631)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+	</g>
+
 
 	<g id="plane">
 		<path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M1582.389,712.035c1.059-1.255,2.431-1.749,3.949-2.084    c2.179-0.478,4.302-1.221,6.488-1.652c8.391-1.662,16.586-0.728,24.328,2.764c5.889,2.659,11.552,5.834,17.239,8.924    c20.547,11.16,41.062,22.377,61.586,33.58c10.305,5.625,20.525,11.408,30.926,16.843c7.652,4.001,15.764,4.829,24.112,2.141    c11.598-3.737,23.206-7.444,34.808-11.164c0.547-0.176,1.086-0.375,1.631-0.556c1.756-0.58,3.554-0.749,5.222,0.118    c3.846,2.001,7.634,4.111,11.61,6.268c-11.704,10.069-23.336,20.075-35.092,30.186c0.65,0.487,1.253,0.924,1.841,1.379    c2.6,2.004,5.306,3.89,7.756,6.065c1.551,1.377,3.222,2.452,5.02,3.407c1.803,0.956,3.589,1.938,5.334,3.108    c-0.249-0.03-0.501-0.046-0.745-0.096c-2.627-0.526-5.255-1.037-7.874-1.601c-0.693-0.152-1.109-0.062-1.436,0.634    c-0.403,0.856-0.767,2.055-1.469,2.358c-0.699,0.304-1.809-0.286-2.725-0.537c-16.384-4.501-32.786-8.939-49.133-13.572    c-3.631-1.028-7.064-2.755-10.593-4.151c-12.471-4.935-23.985-11.764-35.758-18.075c-0.62-0.332-1.19-0.512-1.9-0.338    c-0.329,0.081-0.767-0.01-1.075-0.175c-3.265-1.742-6.517-3.506-9.76-5.288c-0.275-0.153-0.632-0.464-0.648-0.72    c-0.059-0.899-0.672-1.181-1.355-1.384c-2.198-0.659-4.406-1.288-6.611-1.928c-0.092-0.026-0.195-0.086-0.276-0.064    c-2.003,0.539-3.491-0.668-5.069-1.513c-3.377-1.804-6.736-3.643-10.101-5.468c-2.244-1.218-2.867-2.588-2.214-5.295    c-1.828-0.992-3.745-1.985-5.62-3.054c-12.853-7.336-25.742-14.616-38.527-22.071c-4.61-2.69-8.695-6.141-12.166-10.246    c-1.236-1.463-2.272-3.043-2.311-5.035C1581.96,713.246,1582.213,712.533,1582.389,712.035z"/>	
@@ -113,7 +164,7 @@
 		<line id="laser1" stroke-dashoffset="700" stroke-dasharray="700" fill="none" stroke="#D1DE58" stroke-width="2" stroke-miterlimit="10" x1="795.091" y1="861.614" x2="795.091" y2="207.52"/>
 		<line id="laser2" stroke-dashoffset="700" stroke-dasharray="700" fill="none" stroke="#D1DE58" stroke-width="2" stroke-miterlimit="10" x1="802.59" y1="861.614" x2="802.59" y2="207.52"/>
 	</g>
-	
+
 	<g id="page1-text">
 	<rect class="page1" x="38.524" y="40.995" fill="none" width="1054.143" height="38.606"/>
 	<text class="page1" transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">OZONE</tspan></text>
