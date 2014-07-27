@@ -150,9 +150,9 @@ obj.addEventListener("load", function() {
 		// city zooms out
 		$([object.getElementById("cityscape"), object.getElementById("mountains")])
 			.append(createTransform("scale", seconds, "balloon.click", "1", "0.5"))
-			.append(createMotion(seconds, "balloon.click", "0,0", "380,520", "go_back_balloon.click + " + seconds + "s"))
+			.append(createMotion(seconds, "balloon.click", "0,0", "400,520", "go_back_balloon.click + " + seconds + "s"))
 			.append(createTransform("scale", seconds, "go_back_balloon.click + " + seconds + "s", "0.5", "1"))
-			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "380,520", "0,0", "balloon.click"));
+			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "400,520", "0,0", "balloon.click"));
 
 		// balloon moves left
 		$(balloon)
