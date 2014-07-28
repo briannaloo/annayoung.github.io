@@ -895,6 +895,14 @@
 	<text transform="matrix(1 0 0 1 1230.0503 775.2949)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS</tspan></text>
 	<rect x="549" y="766.667" fill="none" width="143.679" height="69.403"/>
 	<text transform="matrix(1 0 0 1 560.6963 775.2949)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD </tspan><tspan x="-4.67" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan><tspan x="3.334" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD </tspan><tspan x="85.986" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS</tspan></text>
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M8.623,1206.274c-28.897-18.597-57.795-37.194-86.692-55.792
+		c-39.356-24.203-35.625-21.31-53.356-32.203c-18.495-11.361-34-20-56.234-30.993c-48.469-23.965-97.646-47.377-148.338-66.188
+		c-58.323-21.643-119.05-35.985-179.596-50.274c-11.352-2.679-23.371-4.826-34.071-9.469
+		c-34.756-10.181-70.792-15.979-106.987-17.214"/>
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M-656.909,943.53c36.195,1.235,72.232,7.033,106.987,17.214
+		c10.699,4.643,22.719,6.79,34.071,9.469c60.546,14.288,121.273,28.631,179.596,50.274c50.692,18.811,99.869,42.223,148.338,66.188
+		c22.234,10.993,37.739,19.632,56.234,30.993c17.731,10.892,14,8,53.356,32.203c28.897,18.597,57.795,37.194,86.692,55.792
+		c1.063,3.958,2.881-0.784,6.168,1.665"/>
 </g>
 <g id="Layer_7">
 	<polygon fill="#D1DE58" points="249.934,780.809 230.824,799.918 249.934,819.027 	"/>

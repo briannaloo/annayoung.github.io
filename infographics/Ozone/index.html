@@ -109,6 +109,9 @@ obj.addEventListener("load", function() {
 	$(object.getElementById("go_back_balloon")).click(function() {
 		$([balloon, buildings, trees, trees_hidden]).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$(smog).delay(1000*seconds).fadeIn(seconds*1000);
+
+		$([object.getElementById("cityscape"), object.getElementById("mountains")]).fadeIn(700);
+		$(object.getElementById("cityscape2")).fadeOut(700);
 	});
 
 // HIDE ELEMENTS OF FIRST PAGE	
@@ -140,6 +143,10 @@ obj.addEventListener("load", function() {
 		$(balloon).click(function() {
 			$([balloon, buildings, trees, trees_hidden]).attr("cursor", "auto").attr("pointer-events", "none");
 			$(smog).fadeOut(seconds*1000);
+
+			$([object.getElementById("cityscape"), object.getElementById("mountains")])
+				.delay(seconds*1000).fadeOut(700);
+			$(object.getElementById("cityscape2")).delay(seconds*1000).fadeIn(700);
 		});
 
 		// text come in
@@ -153,7 +160,7 @@ obj.addEventListener("load", function() {
 			.append(createMotion(seconds, "balloon.click", "0,0", "400,530", "go_back_balloon.click + " + seconds + "s"))
 			.append(createTransform("scale", seconds, "go_back_balloon.click + " + seconds + "s", "0.5", "1"))
 			.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "400,530", "0,0", "balloon.click"));
-
+		
 		// balloon moves left & down
 		$(balloon)
 			.append(createMotion(seconds, "balloon.click", "0,0", "-5,145", "go_back_balloon.click"))
@@ -166,21 +173,26 @@ obj.addEventListener("load", function() {
 			.append(createMotion(seconds, "go_back_balloon.click", "0,0", "0,1600", "balloon.click"));
 		
 		// plane flies in
-		var backwards_path = "M0,0C1093,478,1131.457,487.883,1187.173,504.827c5.707,1.736,22.298,8.935,27.827,11.173c8.331,3.372,34,14,34,14c46,16,89.978,37.1,108,46c162,80,212,120,200,110   c-6.904-5.753,29.129,20.448,34,28c6.498,10.074,8,10,15.407,11.304";
-		var path = "M0,0c-28.897-18.597-57.794-37.195-86.692-55.792   C1459,630,1462.731,632.892,1445,622c-18.495-11.361-34-20-56.234-30.993c-48.469-23.965-97.646-47.377-148.338-66.188   c-58.323-21.643-119.05-35.985-179.596-50.274";
+		var backwards_path = "M-656.909-256.47c36.195,1.235,72.232,7.033,106.987,17.214   c10.699,4.643,22.719,6.79,34.071,9.469c60.546,14.288,121.273,28.631,179.596,50.274c50.692,18.811,99.869,42.223,148.338,66.188   c22.234,10.993,37.739,19.632,56.234,30.993c17.731,10.892,14,8,53.356,32.203C-49.431-31.533-20.534-12.935,8.364,5.662   c1.063,3.958,2.881-0.784,6.168,1.665";
+		var path = "M0,0c-28.897-18.597-57.795-37.194-86.692-55.792   c-39.356-24.203-35.625-21.31-53.356-32.203c-18.495-11.361-34-20-56.234-30.993c-48.469-23.965-97.646-47.377-148.338-66.188   c-58.323-21.643-119.05-35.985-179.596-50.274c-11.352-2.679-23.371-4.826-34.071-9.469   c-34.756-10.181-70.792-15.979-106.987-17.214";
 		$(object.getElementById("plane"))
 			.append(createSet("visibility", "visible", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s", false))
-			.append(createPath(2*seconds, path, "auto", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
-			.append(createPath(seconds, backwards_path, "auto", "go_back_balloon.click", "balloon.click"));
+			.append(createPath(2*seconds, path, "0", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
+			.append(createPath(seconds, backwards_path, "0", "go_back_balloon.click", "balloon.click"));
+		$(object.getElementById("plane-shape"))
+			.append(createTransform("rotate", 2*seconds, "balloon.click + " + (2*seconds) + "s", "0", "-10 0 0"))
+			.append(createTransform("rotate", seconds, "go_back_balloon.click", "-10 0 0", "0"))
+			.append(createMotion(2*seconds, "balloon.click + " + (2*seconds) + "s", "0,0", "0,300", "go_back_balloon.click"))
+			.append(createMotion(2*seconds, "go_back_balloon.click", "0,300", "0,0", "balloon.click"));
+
 
 		// satellite moves in
 		path = "M-470,200c120.588-78.699,299.084-164.038,438.495-200.086";
-		backwards_path = "M380,380C280.021,336.235,165.865,382.973,55,442c-35.919,19.124-80.15,39.54-109.442,67.786";
+		backwards_path = "M6,0c-46.197,0.786-110.27,27.218-152.812,45.243   c-34.879,14.778-70.572,27.767-104.637,44.335C-314,120-398.536,167.22-458,220c-7.086,6.29-11.25,14.464-17.222,21.82";
 		$(object.getElementById("satellite"))
 			.append(createSet("visibility", "visible", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + (seconds) + "s", false))
-			.append(createPath(2*seconds, path, "auto", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
-			.append(createPath(seconds, backwards_path, "auto", "go_back_balloon.click", "balloon.click"));
-
+			.append(createPath(2*seconds, path, "0", "balloon.click + " + (2*seconds) + "s", "go_back_balloon.click + " + seconds + "s"))
+			.append(createPath(seconds, backwards_path, "0", "go_back_balloon.click", "balloon.click"));
 
 		// lasers shoot up
 		$(object.getElementById("lasers")).children().each(function() {$(this)
@@ -199,8 +211,30 @@ obj.addEventListener("load", function() {
 			.append(createSet("visibility", "visible", "balloon.click + " + (2.5*seconds) + "s", "go_back_balloon.click + " + (seconds/2.0) + "s", false));
 		// text box buttons draw
 		$(object.getElementById("monitoring-buttons-open")).children().each(function() {
-			$(this).append(createSet("visibility", "visible", "balloon.click + " + (3.5*seconds) + "s", "go_back_balloon.click", false));
+			var id = $(this).attr("id");
+			var close_button = id + "close";
+			$(this).append(createSet("visibility", "visible", "balloon.click + " + (3.5*seconds) + "s; " + close_button + ".click", "go_back_balloon.click; " + id + ".click", false));
+			$(object.getElementById(close_button)).append(createSet("visibility", "visible", id + ".click", "go_back_balloon.click; " + close_button + ".click", false));
 		});
+		// text boxes & rects open up
+		$(object.getElementById("monitoring-text-boxes")).children().each(function() {
+			var open = $(this).attr("id") + "_open";
+			var close = $(this).attr("id") + "_openclose";
+			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_balloon.click", false));
+		});
+		$(object.getElementById("clip-path1")).find("rect")
+			.append(createAnimate("height", seconds/4.0, "monitoring1_open.click", "0", "129", "monitoring1_openclose.click; go_back_balloon.click", false))
+			.append(createAnimate("height", seconds/4.0, "monitoring1_openclose.click", "129", "0", "monitoring1_open.click; go_back_balloon.click", false));
+		$(object.getElementById("clip-path2")).find("rect")
+			.append(createAnimate("height", seconds/4.0, "monitoring2_open.click", "0", "129", "monitoring2_openclose.click; go_back_balloon.click", false))
+			.append(createAnimate("height", seconds/4.0, "monitoring2_openclose.click", "129", "0", "monitoring2_open.click; go_back_balloon.click", false));
+		$(object.getElementById("clip-path3")).find("rect")
+			.append(createAnimate("height", seconds/4.0, "monitoring3_open.click", "0", "129", "monitoring3_openclose.click; go_back_balloon.click", false))
+			.append(createAnimate("height", seconds/4.0, "monitoring3_openclose.click", "129", "0", "monitoring3_open.click; go_back_balloon.click", false));
+		$(object.getElementById("clip-path4")).find("rect")
+			.append(createAnimate("height", seconds/4.0, "monitoring4_open.click", "0", "129", "monitoring4_openclose.click; go_back_balloon.click", false))
+			.append(createAnimate("height", seconds/4.0, "monitoring4_openclose.click", "129", "0", "monitoring4_open.click; go_back_balloon.click", false));
+
 	}
 
 	function citiesClicked(object, buildings, seconds, trees, person, trees_hidden, smog, sand) {
@@ -415,7 +449,7 @@ obj.addEventListener("load", function() {
 		animation.setAttribute("path", path);
 		animation.setAttribute("fill", "freeze");
 		animation.setAttribute("end", end);
-		//animation.setAttribute("rotate", rotate);
+		animation.setAttribute("rotate", rotate);
 		return animation;
 	}
 
