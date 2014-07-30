@@ -6,6 +6,8 @@
 <g id="Layer_1">
 </g>
 <g id="Layer_2">
+	<g id="Layer_8">
+	</g>
 </g>
 <g id="Layer_3">
 </g>
@@ -14,16 +16,16 @@
 <g id="Layer_5">
 	<g>
 		<defs>
-			<rect id="SVGID_5_" y="-2169.441" width="1600" height="344.441"/>
+			<rect id="SVGID_2_" y="-2169.441" width="1600" height="344.441"/>
 		</defs>
-		<clipPath id="SVGID_2_">
-			<use xlink:href="#SVGID_5_"  overflow="visible"/>
+		<clipPath id="SVGID_1_">
+			<use xlink:href="#SVGID_2_"  overflow="visible"/>
 		</clipPath>
-		<path opacity="0.5" clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M800-2096.477c-1402.173,0-2538.859,1118.705-2538.859,2498.697
+		<path opacity="0.5" clip-path="url(#SVGID_1_)" fill="#FFFFFF" d="M800-2096.477c-1402.173,0-2538.859,1118.705-2538.859,2498.697
 			S-602.173,2900.918,800,2900.918S3338.859,1782.213,3338.859,402.221S2202.174-2096.477,800-2096.477z M800,2805.756
 			c-1327.436,0-2403.536-1076.1-2403.536-2403.535c0-1327.438,1076.1-2403.536,2403.536-2403.536S3203.536-925.217,3203.536,402.221
 			C3203.536,1729.656,2127.438,2805.756,800,2805.756z"/>
-		<path clip-path="url(#SVGID_2_)" fill="#D1DE58" d="M800-2169.441c-1490.501,0-2698.792,1104.738-2698.792,2571.662
+		<path clip-path="url(#SVGID_1_)" fill="#D1DE58" d="M800-2169.441c-1490.501,0-2698.792,1104.738-2698.792,2571.662
 			c0,1466.922,1208.291,2656.1,2698.792,2656.1s2698.792-1189.178,2698.792-2656.1
 			C3498.793-1064.703,2290.502-2169.441,800-2169.441z M800,2924.457c-1415.382,0-2562.777-1129.244-2562.777-2522.236
 			S-615.382-2120.016,800-2120.016S3362.777-990.771,3362.777,402.221S2215.384,2924.457,800,2924.457z"/>
@@ -32,12 +34,12 @@
 <g id="Layer_6">
 	<g>
 		<defs>
-			<rect id="SVGID_7_" x="4.625" y="-1030.041" width="1596.375" height="979.04"/>
+			<rect id="SVGID_4_" x="4.625" y="-1030.041" width="1596.375" height="979.04"/>
 		</defs>
-		<clipPath id="SVGID_4_">
-			<use xlink:href="#SVGID_7_"  overflow="visible"/>
+		<clipPath id="SVGID_3_">
+			<use xlink:href="#SVGID_4_"  overflow="visible"/>
 		</clipPath>
-		<radialGradient id="SVGID_6_" cx="805" cy="552" r="1508" gradientUnits="userSpaceOnUse">
+		<radialGradient id="SVGID_5_" cx="805" cy="552" r="1508" gradientUnits="userSpaceOnUse">
 			<stop  offset="0" style="stop-color:#48C2C5"/>
 			<stop  offset="0.0912" style="stop-color:#58C4BE"/>
 			<stop  offset="0.2495" style="stop-color:#79C9AB"/>
@@ -51,26 +53,26 @@
 			<stop  offset="0.9871" style="stop-color:#51C3C2"/>
 			<stop  offset="0.9931" style="stop-color:#48C2C5"/>
 		</radialGradient>
-		<circle opacity="0.5" clip-path="url(#SVGID_4_)" fill="url(#SVGID_6_)" cx="805" cy="552" r="1508"/>
-		<circle clip-path="url(#SVGID_4_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1112"/>
-		<circle clip-path="url(#SVGID_4_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1300"/>
-		<circle clip-path="url(#SVGID_4_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1508"/>
+		<circle opacity="0.5" clip-path="url(#SVGID_3_)" fill="url(#SVGID_5_)" cx="805" cy="552" r="1508"/>
+		<circle clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1112"/>
+		<circle clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1300"/>
+		<circle clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1508"/>
 	</g>
 	<g>
 		<defs>
-			<rect id="SVGID_10_" x="1245.479" y="-698.926" width="262" height="129"/>
+			<rect id="SVGID_7_" x="1245.479" y="-698.926" width="262" height="129"/>
 		</defs>
-		<clipPath id="SVGID_8_">
-			<use xlink:href="#SVGID_10_"  overflow="visible"/>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_7_"  overflow="visible"/>
 		</clipPath>
-		<g clip-path="url(#SVGID_8_)">
+		<g clip-path="url(#SVGID_6_)">
 			<defs>
-				<rect id="SVGID_12_" x="4.625" y="-1030.041" width="1596.375" height="979.04"/>
+				<rect id="SVGID_9_" x="4.625" y="-1030.041" width="1596.375" height="979.04"/>
 			</defs>
-			<clipPath id="SVGID_9_">
-				<use xlink:href="#SVGID_12_"  overflow="visible"/>
+			<clipPath id="SVGID_8_">
+				<use xlink:href="#SVGID_9_"  overflow="visible"/>
 			</clipPath>
-			<radialGradient id="SVGID_11_" cx="805" cy="552" r="1508" gradientUnits="userSpaceOnUse">
+			<radialGradient id="SVGID_10_" cx="805" cy="552" r="1508" gradientUnits="userSpaceOnUse">
 				<stop  offset="0" style="stop-color:#48C2C5"/>
 				<stop  offset="0.0912" style="stop-color:#58C4BE"/>
 				<stop  offset="0.2495" style="stop-color:#79C9AB"/>
@@ -84,10 +86,10 @@
 				<stop  offset="0.9871" style="stop-color:#51C3C2"/>
 				<stop  offset="0.9931" style="stop-color:#48C2C5"/>
 			</radialGradient>
-			<circle opacity="0.5" clip-path="url(#SVGID_9_)" fill="url(#SVGID_11_)" cx="805" cy="552" r="1508"/>
-			<circle clip-path="url(#SVGID_9_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1112"/>
-			<circle clip-path="url(#SVGID_9_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1300"/>
-			<circle clip-path="url(#SVGID_9_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1508"/>
+			<circle opacity="0.5" clip-path="url(#SVGID_8_)" fill="url(#SVGID_10_)" cx="805" cy="552" r="1508"/>
+			<circle clip-path="url(#SVGID_8_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1112"/>
+			<circle clip-path="url(#SVGID_8_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1300"/>
+			<circle clip-path="url(#SVGID_8_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="552" r="1508"/>
 		</g>
 	</g>
 </g>

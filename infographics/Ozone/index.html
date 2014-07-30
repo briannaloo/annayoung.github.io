@@ -127,7 +127,7 @@ obj.addEventListener("load", function() {
 
 		$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(seconds*1000).fadeOut(0);});
 		$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).fadeOut(0);});
-
+		$(object.getElementById("rays-label")).fadeOut(0);
 	});
 
 // HIDE ELEMENTS OF FIRST PAGE	
@@ -174,10 +174,22 @@ obj.addEventListener("load", function() {
 			// sun rays
 			$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(4.5*seconds*1000).fadeIn(0);});
 			$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).delay(6.4*seconds*1000).fadeIn(0);});
+			$(object.getElementById("rays-label")).delay(6.4*seconds*1000).fadeIn(0);
 		});
 
+		// buildings move out
+		$(object.getElementById("just-buildings"))
+			.append(createMotion(seconds, "trees.click; trees_person.click", "0,0", "0,400", "go_back_trees.click + " + seconds + "s"))
+			.append(createMotion(seconds, "go_back_trees.click + " + (seconds) + "s", "0,400", "0,0", "trees.click; trees_person.click"));
+		
+		// crops move in
+		$(object.getElementById("crops"))
+			.append(createMotion(seconds, "trees.click; trees_person.click", "0,400", "0,0", "go_back_trees.click + " + seconds + "s"))
+			.append(createSet("visibility", "visible", "trees.click; trees_person.click", "go_back_trees.click + " + (2*seconds) + "s", false))
+			.append(createMotion(seconds, "go_back_trees.click + " + seconds + "s", "0,0", "0,400", "trees.click; trees_person.click"));
+		
 		// city moves down
-		$([object.getElementById("cityscape"), object.getElementById("mountains"), object.getElementById("smog")])
+		$([trees, object.getElementById("trees_behind"), object.getElementById("factory"), object.getElementById("mountains"), object.getElementById("smog")])
 			.append(createMotion(seconds, "trees.click; trees_person.click", "0,0", "0,90", "go_back_trees.click + " + seconds + "s"))
 			.append(createMotion(seconds, "go_back_trees.click + " + seconds + "s", "0,90", "0,0", "trees.click; trees_hidden.click"));
 	
