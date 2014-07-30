@@ -1,0 +1,20 @@
+
+html, body {
+	height:100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+#timeline-embed { height: 100%; }
+
+h2 {
+	font-size: 36px;
+	line-height: 38px;
+	margin-bottom: 15px;
+}
+h3 {
+	font-size: 28px;
+}
+p {
+	font-size: 15px;
+}

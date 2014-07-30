@@ -20,7 +20,7 @@ obj.addEventListener("load", function() {
 	var factory = object.getElementById("factory");
 	var stacks = object.getElementsByClassName("smoke-stack");
 	var trees = object.getElementById("trees");
-	var trees_hidden = object.getElementById("trees-person");
+	var trees_hidden = object.getElementById("trees_person");
 	var person = object.getElementById("person");
 	var beach = object.getElementById("person+beach");
 	var sand = object.getElementById("beach");
@@ -112,21 +112,38 @@ obj.addEventListener("load", function() {
 
 		$([object.getElementById("cityscape"), object.getElementById("mountains")]).fadeIn(700);
 		$(object.getElementById("cityscape2")).fadeOut(700);
+		$(object.getElementById("go_back_balloon")).fadeOut(200);
+	});
+	// from trees
+	$(object.getElementById("go_back_trees")).click(function() {
+		$([balloon, buildings, trees, trees_hidden]).attr("cursor", "pointer").attr("pointer-events", "auto");
+		$(object.getElementById("smog2")).fadeOut(seconds * 1000);
+		$(object.getElementById("go_back_trees")).fadeOut(400);
+
+		$(object.getElementById("layer1")).delay(1.5*seconds*1000).fadeOut(seconds/2.0*1000);
+		$(object.getElementById("layer2")).delay(seconds*1000).fadeOut(seconds/2.0*1000);
+		$(object.getElementById("layer3")).delay(seconds/2.0*1000).fadeOut(seconds/2.0*1000);
+		$(object.getElementById("layer4-sun")).fadeOut(seconds/2.0*1000);
+
+		$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(seconds*1000).fadeOut(0);});
+		$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).fadeOut(0);});
+
 	});
 
 // HIDE ELEMENTS OF FIRST PAGE	
 	// balloon floats up
-	$(balloon).append(createMotion(2*seconds, "person.click; buildings.click", "0,0", "0,-1600", "go_back.click; go_back_cities.click"));
-	$(balloon).append(createMotion(2*seconds, "go_back.click; go_back_cities.click", "0,-1600", "0,0", "person.click; buildings.click"));	
+	$(balloon).append(createMotion(2*seconds, "person.click; buildings.click; trees.click; trees_person.click", 
+		"0,0", "0,-1600", "go_back.click; go_back_cities.click; go_back_trees.click"));
+	$(balloon).append(createMotion(2*seconds, "go_back.click; go_back_cities.click; go_back_trees.click", "0,-1600", "0,0", "person.click; buildings.click; trees.click; trees_person.click"));	
 	// text moves out
-	$(object.getElementById("page1-text")).append(createMotion(seconds, "buildings.click; balloon.click", "0,0", "2000,0", "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s"))
-		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s", "2000,0", "0,0", "buildings.click"));
+	$(object.getElementById("page1-text")).append(createMotion(seconds, "buildings.click; balloon.click; trees.click; trees_person.click", "0,0", "2000,0", "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + seconds + "s"))
+		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (2*seconds) + "s", "2000,0", "0,0", "buildings.click; balloon.click; trees.click; trees_person.click"));
 	// beach moves out
-	$([person, sand]).append(createMotion(seconds, "buildings.click; balloon.click", "0,0", "2000,0", "go_back_cities.click; go_back_balloon.click"))
-		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s", "2000,0", "0,0", "buildings.click + " + seconds + "s; balloon.click + " + seconds + "s"));
+	$([person, sand]).append(createMotion(seconds, "buildings.click; balloon.click; trees.click; trees_person.click", "0,0", "2000,0", "go_back_cities.click; go_back_balloon.click; go_back_trees.click"))
+		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (2*seconds) + "s", "2000,0", "0,0", "buildings.click + " + seconds + "s; balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s"));
 	// side trees move out
-	$([trees_hidden, object.getElementById("trees-to-hide")]).append(createMotion(seconds, "balloon.click", "0,0", "2000,0", "go_back_balloon.click"))
-		.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s", "2000,0", "0,0", "balloon.click + " + seconds + "s"));	
+	$([trees_hidden, object.getElementById("trees-to-hide")]).append(createMotion(seconds, "balloon.click; trees.click; trees_person.click", "0,0", "2000,0", "go_back_balloon.click; go_back_trees.click"))
+		.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (2*seconds) + "s", "2000,0", "0,0", "balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s"));	
 
 // WHEN PERSON CLICKED
 	personClicked(object, person, trees_hidden, balloon, beach, seconds);
@@ -137,7 +154,53 @@ obj.addEventListener("load", function() {
 // WHEN BALLOON CLICKED
 	balloonClicked(object, seconds, balloon, beach, buildings, trees, trees_hidden, smog);
 
+// WHEN TREES CLICKED
+	treesClicked(object, seconds, trees, trees_hidden, smog, balloon, buildings);
+
 });
+
+	function treesClicked(object, seconds, trees, trees_hidden, smog, balloon, buildings) {
+		$([trees, trees_hidden]).click(function() {
+			$([balloon, buildings, trees, trees_hidden]).attr("cursor", "auto").attr("pointer-events", "none");
+			$(object.getElementById("smog2")).delay(seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("go_back_trees")).delay(4.5*seconds*1000).fadeIn(400);
+		
+			// ozone layers draw
+			$(object.getElementById("layer1")).delay(1.5*seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("layer2")).delay(2.5*seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("layer3")).delay(3.5*seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("layer4-sun")).delay(4.5*seconds*1000).fadeIn(seconds*1000);
+		
+			// sun rays
+			$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(4.5*seconds*1000).fadeIn(0);});
+			$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).delay(6.4*seconds*1000).fadeIn(0);});
+		});
+
+		// city moves down
+		$([object.getElementById("cityscape"), object.getElementById("mountains"), object.getElementById("smog")])
+			.append(createMotion(seconds, "trees.click; trees_person.click", "0,0", "0,90", "go_back_trees.click + " + seconds + "s"))
+			.append(createMotion(seconds, "go_back_trees.click + " + seconds + "s", "0,90", "0,0", "trees.click; trees_hidden.click"));
+	
+		// smog fades in
+		$(smog).append(createAnimate("fill-opacity", seconds, "trees.click + " + seconds + "s; trees_person.click + " + seconds + "s", "0.15", "0.5", "go_back_trees.click", false))
+				.append(createAnimate("fill-opacity", seconds, "go_back_trees.click", "0.5", "0.15", "trees.click; trees_person.click", false));
+
+		// text comes in
+		$(object.getElementById("trees-text")).append(createMotion(seconds, "trees.click; trees_person.click", "-1600,0", "0,0", "go_back_trees.click + " + seconds + "s"))
+			.append(createSet("visibility", "visible", "trees.click; trees_person.click", "go_back_trees.click + " + (2*seconds) + "s", false))
+			.append(createMotion(seconds, "go_back_trees.click + " + seconds + "s", "0,0", "-1600,0", "trees.click; trees_person.click"));
+		
+		// sun rays draw
+		$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this)
+			.append(createAnimate("stroke-dashoffset", 2*seconds, "trees.click + " + (4.5*seconds) + "s", "300", "0", "go_back_trees.click", false, "rays"))
+			.append(createAnimate("stroke-dashoffset", seconds, "go_back_trees.click", "0", "300", "trees.click; trees_person.click", false));
+		});
+		//$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this)
+		//	.append(createSet("visibility", "visible", "trees.click + " + (4.5*seconds) + "s", "go_back_trees.click", false))
+		//	.append(createMotion(2*seconds, "trees.click + " + (4.5*seconds) + "s", "0,0", "100,0", "go_back_trees.click", true));
+		//});
+
+	}
 
 	function balloonClicked(object, seconds, balloon, beach, buildings, trees, trees_hidden, smog) {
 		$(balloon).click(function() {
@@ -145,8 +208,9 @@ obj.addEventListener("load", function() {
 			$(smog).fadeOut(seconds*1000);
 
 			$([object.getElementById("cityscape"), object.getElementById("mountains")])
-				.delay(seconds*1000).fadeOut(700);
-			$(object.getElementById("cityscape2")).delay(seconds*1000).fadeIn(700);
+				.delay(seconds*800).fadeOut(800);
+			$(object.getElementById("cityscape2")).delay(seconds*800).fadeIn(800);
+			$(object.getElementById("go_back_balloon")).delay(4*seconds*1000).fadeIn(200);
 		});
 
 		// text come in
@@ -453,7 +517,7 @@ obj.addEventListener("load", function() {
 		return animation;
 	}
 
-	function createMotion(seconds, begin, from, to, end) {
+	function createMotion(seconds, begin, from, to, end, indefinite) {
 		var animation = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
 		animation.setAttribute("dur", seconds + "s");
 		animation.setAttribute("repeatCount", "1");
@@ -463,6 +527,8 @@ obj.addEventListener("load", function() {
 		animation.setAttribute("fill", "freeze");
 		if (end != false)
 			animation.setAttribute("end", end);
+		if (indefinite != null && indefinite != false)
+			animation.setAttribute("repeatCount", "indefinite");
 		return animation;
 	}
 	function createTransform(type, seconds, begin, from, to) {
@@ -490,7 +556,7 @@ obj.addEventListener("load", function() {
 			set.setAttribute("id", id);
 		return set;
 	}
-	function createAnimate(name, seconds, begin, from, to, end, id) {
+	function createAnimate(name, seconds, begin, from, to, end, indefinite, id) {
 		var animation = document.createElementNS("http://www.w3.org/2000/svg","animate");
 		animation.setAttribute("dur", seconds + "s");
 		animation.setAttribute("attributeName", name);
@@ -502,7 +568,9 @@ obj.addEventListener("load", function() {
 		animation.setAttribute("fill", "freeze");
 		if (end != false)
 			animation.setAttribute("end", end);
-		if (id != false)
+		if (indefinite == true)
+			animation.setAttribute("repeatCount", "indefinite");
+		if (id != null && id != false)
 			animation.setAttribute("id", id);
 		return animation;
 	}
