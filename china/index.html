@@ -22,6 +22,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
+<img width="100px" id="logo" src="http://epi.yale.edu/sites/all/themes/epi_theme/images/logo.svg">
 <div id="timeline-embed"></div>
     <script type="text/javascript">
         var timeline_config = {
@@ -37,9 +38,21 @@
             debug:              true,                           //OPTIONAL DEBUG TO CONSOLE
             lang:               'en',                           //OPTIONAL LANGUAGE
             maptype:            'watercolor',                   //OPTIONAL MAP STYLE
-            css:                './timeline.css',                  //OPTIONAL PATH TO CSS
         }
     </script>
     <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+
+    <style>
+        body, #timeline-embed, #storyjs-timeline {
+            background-color: #ADD8E6 !important;
+        }  
+        .timenav-background {
+            background-color: #5596AC !important;
+        }
+        .timenav-interval-background {
+            background-color: grey !important;
+        }
+    </style>
+
 </body>
 </html>
