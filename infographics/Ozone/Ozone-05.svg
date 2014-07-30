@@ -1092,10 +1092,10 @@
 	<text transform="matrix(1 0 0 1 908.874 775.2949)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD </tspan><tspan x="-4.67" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan><tspan x="3.334" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD </tspan><tspan x="85.986" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS</tspan></text>
 </g>
 <g id="Layer_7">
-	<polygon fill="#D1DE58" points="406.401,780.809 387.292,799.918 406.401,819.027 	"/>
-	<polygon fill="#D1DE58" points="923.808,473.612 904.698,492.722 923.808,511.831 	"/>
-	<polygon fill="#D1DE58" points="1399.688,780.809 1380.578,799.918 1399.688,819.027 	"/>
-	<polygon fill="#D1DE58" points="869.862,780.809 888.972,799.918 869.862,819.027 	"/>
+	<polygon fill="#D1DE58" points="389.198,821.103 408.802,802.501 390.2,782.897 	"/>
+	<polygon fill="#D1DE58" points="905.726,511.108 924.648,491.813 905.352,472.892 	"/>
+	<polygon fill="#D1DE58" points="1379.722,819.041 1398.761,800.857 1379.628,780.769 	"/>
+	<polygon fill="#D1DE58" points="885.4,819.022 866.759,799.456 886.325,780.814 	"/>
 	<g>
 		<path fill="#21716E" d="M1176.995,178.857l-4.849,7.424c-0.57,0.872-0.878,1.704-0.926,2.499c-0.081,1.19,0.459,2.165,1.619,2.922
 			c1.389,0.908,2.643,1.054,3.758,0.438c0.604-0.338,1.188-0.939,1.755-1.805l4.849-7.425l1.644,1.072l-4.405,6.747
