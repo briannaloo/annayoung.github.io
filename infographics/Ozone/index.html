@@ -120,13 +120,13 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("smog2")).fadeOut(seconds * 1000);
 		$(object.getElementById("go_back_trees")).fadeOut(400);
 
-		$(object.getElementById("layer1")).delay(1.5*seconds*1000).fadeOut(seconds/2.0*1000);
-		$(object.getElementById("layer2")).delay(seconds*1000).fadeOut(seconds/2.0*1000);
-		$(object.getElementById("layer3")).delay(seconds/2.0*1000).fadeOut(seconds/2.0*1000);
-		$(object.getElementById("layer4-sun")).fadeOut(seconds/2.0*1000);
+		$(object.getElementById("layer1")).delay(.75*seconds*1000).fadeOut(seconds/4.0*1000);
+		$(object.getElementById("layer2")).delay(seconds/2.0*1000).fadeOut(seconds/4.0*1000);
+		$(object.getElementById("layer3")).delay(seconds/4.0*1000).fadeOut(seconds/4.0*1000);
+		$(object.getElementById("layer4-sun")).fadeOut(seconds/4.0*1000);
 
 		$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(seconds*1000).fadeOut(0);});
-		$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).fadeOut(0);});
+		//$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).fadeOut(0);});
 		$(object.getElementById("rays-label")).fadeOut(0);
 		$(object.getElementById("ecosystem-buttons")).fadeOut(seconds*1000);
 	});
@@ -138,13 +138,13 @@ obj.addEventListener("load", function() {
 	$(balloon).append(createMotion(2*seconds, "go_back.click; go_back_cities.click; go_back_trees.click", "0,-1600", "0,0", "person.click; buildings.click; trees.click; trees_person.click"));	
 	// text moves out
 	$(object.getElementById("page1-text")).append(createMotion(seconds, "buildings.click; balloon.click; trees.click; trees_person.click", "0,0", "2000,0", "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + seconds + "s"))
-		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (2*seconds) + "s", "2000,0", "0,0", "buildings.click; balloon.click; trees.click; trees_person.click"));
+		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s", "2000,0", "0,0", "buildings.click; balloon.click; trees.click; trees_person.click"));
 	// beach moves out
 	$([person, sand]).append(createMotion(seconds, "buildings.click; balloon.click; trees.click; trees_person.click", "0,0", "2000,0", "go_back_cities.click; go_back_balloon.click; go_back_trees.click"))
-		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (2*seconds) + "s", "2000,0", "0,0", "buildings.click + " + seconds + "s; balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s"));
+		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s", "2000,0", "0,0", "buildings.click + " + seconds + "s; balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s"));
 	// side trees move out
 	$([trees_hidden, object.getElementById("trees-to-hide")]).append(createMotion(seconds, "balloon.click; trees.click; trees_person.click", "0,0", "2000,0", "go_back_balloon.click; go_back_trees.click"))
-		.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (2*seconds) + "s", "2000,0", "0,0", "balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s"));	
+		.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s", "2000,0", "0,0", "balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s"));	
 
 // WHEN PERSON CLICKED
 	personClicked(object, person, trees_hidden, balloon, beach, seconds);
@@ -174,7 +174,7 @@ obj.addEventListener("load", function() {
 		
 			// sun rays
 			$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(4.5*seconds*1000).fadeIn(0);});
-			$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).delay(6.4*seconds*1000).fadeIn(0);});
+			//$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).delay(6.4*seconds*1000).fadeIn(0);});
 			$(object.getElementById("rays-label")).delay(6.4*seconds*1000).fadeIn(0);
 		
 			// text boxes fade in
@@ -216,7 +216,7 @@ obj.addEventListener("load", function() {
 
 		// sun rays draw
 		$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this)
-			.append(createAnimate("stroke-dashoffset", 2*seconds, "trees.click + " + (4.5*seconds) + "s", "300", "0", "go_back_trees.click", false, "rays"))
+			.append(createAnimate("stroke-dashoffset", 2*seconds, "trees.click + " + (4.5*seconds) + "s", "300", "0", "go_back_trees.click", true, "rays"))
 			.append(createAnimate("stroke-dashoffset", seconds, "go_back_trees.click", "0", "300", "trees.click; trees_person.click", false));
 		});
 		//$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this)
