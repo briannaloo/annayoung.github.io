@@ -1,112 +1,15 @@
 <!DOCTYPE html>
 <html>
-<!--
-     
-    88888888888 d8b                        888 d8b                888888   d8888b  
-        888     Y8P                        888 Y8P                   88b d88P  Y88b 
-        888                                888                       888 Y88b
-        888     888 88888b d88b     d88b   888 888 88888b     d88b   888   Y888b
-        888     888 888  888  88b d8P  Y8b 888 888 888  88b d8P  Y8b 888      Y88b
-        888     888 888  888  888 88888888 888 888 888  888 88888888 888        888 
-        888     888 888  888  888 Y8b      888 888 888  888 Y8b      88P Y88b  d88P 
-        888     888 888  888  888   Y8888  888 888 888  888   Y8888  888   Y8888P
-                                                                    d88P            
-                                                                  d88P             
-                                                                888P              
-     -->
 <head>
-    <title>Five-Year Plan Process in the People's Republic of China</title>
+	<title>Five-Year Plan Process in the People's Republic of China</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
-<img width="100px" id="logo" src="./Logo_EPI_White.png">
-
-<div id="timeline-embed"></div>
-
-<div id="credits" style="color: #fff">
-    <br><br>
-    Timeline composed by Andrew Moffat, with Design by Knightlabs, Peter Hirsch, and Anna Young.
-</div>
-
-    <script type="text/javascript">
-        var timeline_config = {
-            width:              '100%',
-            height:             '499',
-            source:             'https://docs.google.com/spreadsheet/pub?key=0Avx3zEJVAtmfdEpqRlpfVm1sQ2tOcVJ3RkFOSldWMGc&output=html',
-            embed_id:           'timeline-embed',               //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED
-            start_at_end:       false,                          //OPTIONAL START AT LATEST DATE
-            start_at_slide:     '0',                            //OPTIONAL START AT SPECIFIC SLIDE
-            start_zoom_adjust:  '1',                            //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL
-            hash_bookmark:      false,                           //OPTIONAL LOCATION BAR HASHES
-            font:               'Bevan-PotanoSans',             //OPTIONAL FONT
-            debug:              false,                           //OPTIONAL DEBUG TO CONSOLE
-            lang:               'en',                           //OPTIONAL LANGUAGE
-            maptype:            'watercolor',                   //OPTIONAL MAP STYLE
-        }
-    </script>
-    <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js" ></script>
-
-    <style>
-        body, #timeline-embed, #storyjs-timeline {
-            background-color: #231F20 !important; 
-        }  
-        .timenav-background {
-            background-color: #808285 !important;
-        }
-        .timenav-interval-background {
-            background-color: #58595B !important;
-        }
-        body, h1, h2, h3, p, div {
-            color: #fff !important;
-        }
-        .time-interval div {
-            color: #44C6CC !important;
-        }
-        .time-interval-major div {
-            color: #44C6CC !important;
-        }
-        .flag {
-            background-image: url(./timeline_flag2.png) !important;
-        }
-        .nav-container div {
-            color: #FFF !important;
-        }
-        .nav-container:hover div {
-            color: #44C6CC !important;
-        }
-        #credits {
-            font-size: 11px;
-            font-family: 'Pontano Sans',sans-serif;
-        }
-        .vco-storyjs h3 {
-            font-size: 25px !important;
-            line-height: 25px !important;
-            margin-bottom: 5px !important;
-        }
-        .vco-storyjs h2.start {
-            font-size: 30px !important;
-            line-height: 35px !important;
-            margin-bottom: 5px !important;
-        }
-        .flag h3 {
-            font-size: 11px !important;
-            line-height: 11px !important;
-            margin-bottom: 2px !important;
-        }
-        div[class="slider-item"][style*="width: 614px; height: 280px; overflow-y: auto; display: table; left: 649px;"] .date {
-            display: none !important;
-        }
-
-        div[class="slider-item"][style*="width: 614px; height: 280px; overflow-y: auto; display: table; left: 8437px;"] .date {
-            display: none !important;
-            opacity: 0 !important;
-            font-size: "0px" !important;
-        }
-
-    </style>
-
+	<div class="container" style="width: 650px; height: 590px">
+		<iframe src="./timeline.html" width="100%" height="590px" frameborder="0"> </iframe>
+	</div>
 </body>
 </html>
