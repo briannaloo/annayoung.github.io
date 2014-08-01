@@ -20,27 +20,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta property="og:title" content="China's Five Year Plan" />
+    <meta property="og:url" content="http://epi.yale.edu/visuals/china-five-year-plan" />
+    <meta property="og:description" content="See what China's Five Year Plan is..."/>
+    <meta property="og:image" content="http://epi.yale.edu/visuals/china-five-year-plan/thumbnail.png" />
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=741655859211506&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <style>
     #chinese {
-        font-size: 14px;
+        font-size: 13px;
         font-family: 'Pontano Sans',sans-serif;
         color: #fff;
         position: fixed;
-        top: 5px;
-        right: 5px;
+        top: 10px;
+        left: 150px;
         text-decoration: none;
     }
     #chinese:hover {
         text-decoration: underline;
     }
+    #tweet {
+        font-size: 0px;
+    }
+    #tweet-container {
+        position: fixed;
+        top: 5px;
+        right: 0px;
+    }
+    #fb-container {
+        position: fixed;
+        top: 35px;
+        right: 5px;
+    }
 </style>
 
 <img width="100px" id="logo" src="./Logo_EPI_White.png">
 
-<a id="chinese" href="./chinese/index.html">中文</a>
+<a id="chinese" href="epi.yale.edu/visuals/china-five-year-plan/chinese">中文</a>
+
+<div id="tweet-container">
+<a id="tweet" href="https://twitter.com/share" class="twitter-share-button" data-url="http://epi.yale.edu/visuals/china-five-year-plan" data-text="Check out China's Five Year Plan blah blah">Tweet</a></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<div id="fb-container">
+    <div class="fb-like" data-href="http://epi.yale.edu/visuals/china-five-year-plan" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+</div>
 
 <div id="timeline-embed"></div>
 
