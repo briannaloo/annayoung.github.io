@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="./jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body style="background-color: rgb(44, 191, 209);">
+
+<object id="svg-object" width="100%" height="100%" style="position: absolute" type="image/svg+xml" data="./Mercury1.svg">Your browser does not support SVG</object>
+
+<script type="text/javascript">
+
+var obj = document.getElementById("svg-object");
+obj.addEventListener("load", function() {
+	var object = obj.contentDocument;
+
+	$(object.getElementById("planet")).hover(function() {
+		$(object.getElementById("planet_background")).attr("fill", "#F26E2A");
+	}, function() {
+		$(object.getElementById("planet_background")).attr("fill", "#103844");
+	});
+
+	var seconds = 1;
+	planetClicked(object, seconds);
+});
+
+	function planetClicked(object, seconds) {
+		$(object.getElementById("planet"))
+			.append(createMotion(seconds, "planet.click", "0,0", "-470,0", "go_back_planet.click", false))
+			.append(createMotion(seconds, "go_back_planet.click", "-470,0", "0,0", "planet.click", false));
+	}
+
+	function createPath(seconds, path, rotate, begin, end) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("path", path);
+		animation.setAttribute("fill", "freeze");
+		animation.setAttribute("end", end);
+		animation.setAttribute("rotate", rotate);
+		return animation;
+	}
+
+	function createMotion(seconds, begin, from, to, end, indefinite) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("from", from);
+		animation.setAttribute("to", to);
+		animation.setAttribute("fill", "freeze");
+		if (end != false)
+			animation.setAttribute("end", end);
+		if (indefinite != null && indefinite != false)
+			animation.setAttribute("repeatCount", "indefinite");
+		return animation;
+	}
+	function createTransform(type, seconds, begin, from, to) {
+		var scale = document.createElementNS("http://www.w3.org/2000/svg","animateTransform");
+		scale.setAttribute("attributeName", "transform");
+		scale.setAttribute("attributeType", "XML");
+		scale.setAttribute("type", type);
+		scale.setAttribute("dur", seconds + "s");
+		scale.setAttribute("repeatCount", "1");
+		scale.setAttribute("begin", begin);
+		scale.setAttribute("from", from);
+		scale.setAttribute("to", to);
+		scale.setAttribute("fill", "freeze");
+		return scale;
+	}
+	function createSet(name, to, begin, end, id) {
+		var set = document.createElementNS("http://www.w3.org/2000/svg","set");
+		set.setAttribute("attributeName", name);
+		set.setAttribute("attributeType", "XML");
+		set.setAttribute("to", to);
+		set.setAttribute("begin", begin);
+		if (end != false)
+			set.setAttribute("end", end);
+		if (id != false)
+			set.setAttribute("id", id);
+		return set;
+	}
+	function createAnimate(name, seconds, begin, from, to, end, indefinite, id) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animate");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("attributeName", name);
+		animation.setAttribute("attributeType", "XML");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("from", from);
+		animation.setAttribute("to", to);
+		animation.setAttribute("fill", "freeze");
+		if (end != false)
+			animation.setAttribute("end", end);
+		if (indefinite == true)
+			animation.setAttribute("repeatCount", "indefinite");
+		if (id != null && id != false)
+			animation.setAttribute("id", id);
+		return animation;
+	}
+
+</script>
+</body>
+</html>

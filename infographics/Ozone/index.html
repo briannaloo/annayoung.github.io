@@ -100,10 +100,11 @@ obj.addEventListener("load", function() {
 		$(buildings).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$([trees, trees_hidden]).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$(smog).delay(1000*seconds).fadeIn(seconds*1000);
-		$(object.getElementById("group1")).fadeOut(400);
-		$(object.getElementById("group2")).fadeOut(400);
-		$(object.getElementById("group3")).fadeOut(400);
+		$(object.getElementById("group1")).fadeOut(500);
+		$(object.getElementById("molecules")).fadeOut(500);
 		$(object.getElementById("go_back_cities")).delay(100).fadeOut(200);
+		$(object.getElementById("green-molecules")).delay(seconds*1000).fadeOut(0);
+
 	});
 	// from balloon
 	$(object.getElementById("go_back_balloon")).click(function() {
@@ -132,7 +133,7 @@ obj.addEventListener("load", function() {
 	});
 	// from recommendations page
 	$(object.getElementById("go_back_page5")).click(function() {
-		$(smog).delay(1000*seconds).fadeIn(seconds*1000);
+		$(smog).delay(1000*seconds).fadeIn(2*seconds*1000);
 		$([buildings, trees, balloon]).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$(object.getElementById("go_back_page5")).fadeOut(400);
 		$([object.getElementById("page5-trees1"), object.getElementById("page5-trees2")]).delay(3*seconds*1000).fadeIn(500);
@@ -145,13 +146,13 @@ obj.addEventListener("load", function() {
 	$(balloon).append(createMotion(2*seconds, "go_back.click; go_back_cities.click; go_back_trees.click", "0,-1600", "0,0", "person.click; buildings.click; trees.click; trees_person.click"));	
 	// text moves out
 	$(object.getElementById("page1-text")).append(createMotion(seconds, "buildings.click; balloon.click; trees.click; trees_person.click; page5.click", "0,0", "2000,0", "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + seconds + "s; go_back_page5.click + " + seconds + "s"))
-		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s; go_back_page5.click + " + (2*seconds) + "s", "2000,0", "0,0", "buildings.click; balloon.click; trees.click; trees_person.click; page5.click"));
+		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s; go_back_page5.click + " + (3*seconds) + "s", "2000,0", "0,0", "buildings.click; balloon.click; trees.click; trees_person.click; page5.click"));
 	// beach moves out
 	$([person, sand]).append(createMotion(seconds, "buildings.click; balloon.click; trees.click; trees_person.click; page5.click", "0,0", "2000,0", "go_back_cities.click; go_back_balloon.click; go_back_trees.click; go_back_page5.click"))
-		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s; go_back_page5.click + " + (2*seconds) + "s", "2000,0", "0,0", "buildings.click + " + seconds + "s; balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s; page5.click + " + seconds + "s"));
+		.append(createMotion(seconds, "go_back_cities.click + " + seconds + "s; go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s; go_back_page5.click + " + (3*seconds) + "s", "2000,0", "0,0", "buildings.click + " + seconds + "s; balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s; page5.click + " + seconds + "s"));
 	// side trees move out
 	$([trees_hidden, object.getElementById("trees-to-hide")]).append(createMotion(seconds, "balloon.click; trees.click; trees_person.click; page5.click", "0,0", "2000,0", "go_back_balloon.click; go_back_trees.click; go_back_page5.click"))
-		.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s; go_back_page5.click + " + (2*seconds) + "s", "2000,0", "0,0", "balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s; page5.click + " + seconds + "s"));	
+		.append(createMotion(seconds, "go_back_balloon.click + " + seconds + "s; go_back_trees.click + " + (seconds) + "s; go_back_page5.click + " + (3*seconds) + "s", "2000,0", "0,0", "balloon.click + " + seconds + "s; trees.click + " + seconds + "s; trees_person.click + " + seconds + "s; page5.click + " + seconds + "s"));	
 
 // WHEN PERSON CLICKED
 	personClicked(object, person, trees_hidden, balloon, beach, seconds);
@@ -174,29 +175,34 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("page5")).click(function() {
 			$(smog).fadeOut(seconds*1000);
 			$([buildings, trees, balloon]).attr("cursor", "auto").attr("pointer-events", "none");
-			$(object.getElementById("go_back_page5")).delay(seconds*1000).fadeIn(400);
+			$(object.getElementById("go_back_page5")).delay(5*seconds*1000).fadeIn(400);
 			$([object.getElementById("page5-trees1"), object.getElementById("page5-trees2")]).fadeOut(500);
 		});
+
+		// text comes in
+		$(object.getElementById("page5-text")).append(createMotion(seconds, "page5.click", "-1600,0", "0,0", "go_back_page5.click + " + seconds + "s"))
+			.append(createSet("visibility", "visible", "page5.click;", "go_back_page5.click + " + (2*seconds) + "s", false))
+			.append(createMotion(seconds, "go_back_page5.click + " + (2*seconds) + "s", "0,0", "-1600,0", "page5.click; "));
 
 
 		// landscape moves left
 		$([buildings, trees, object.getElementById("trees_behind")])
 			.append(createMotion(seconds, "page5.click", "0,0", "-1005,103", "go_back_page5.click"))
-			.append(createMotion(seconds, "go_back_page5.click + " + seconds + "s", "-1005,103", "0,0", "page5.click"));
+			.append(createMotion(seconds, "go_back_page5.click + " + (2*seconds) + "s", "-1005,103", "0,0", "page5.click"));
 		$(object.getElementById("mountains"))
 			.append(createMotion(seconds, "page5.click", "0,0", "0,103", "go_back_page5.click"))
-			.append(createMotion(seconds, "go_back_page5.click + " + seconds + "s", "0,103", "0,0", "page5.click"));
+			.append(createMotion(seconds, "go_back_page5.click + " + (2*seconds) + "s", "0,103", "0,0", "page5.click"));
 
 		// second landscape moves in from right
 		$(object.getElementById("buildings2"))
 			.append(createMotion(seconds, "page5.click;", "1600,-103", "0,0", "go_back_page5.click + " + seconds + "s"))
 			.append(createSet("visibility", "visible", "page5.click", "go_back_page5.click + " + (2*seconds) + "s", false))
-			.append(createMotion(seconds, "go_back_page5.click + " + seconds + "s", "0,0", "1600,-103", "page5.click"));
+			.append(createMotion(seconds, "go_back_page5.click + " + (2*seconds) + "s", "0,0", "1600,-103", "page5.click"));
 	
 		// balloon moves
 		$(balloon)
 			.append(createMotion(seconds, "page5.click", "0,0", "855,-70", "go_back_page5.click"))
-			.append(createMotion(seconds, "go_back_page5.click + " + (2*seconds) + "s", "855,-70", "0,0", "page5.click"));
+			.append(createMotion(seconds, "go_back_page5.click + " + (3*seconds) + "s", "855,-70", "0,0", "page5.click"));
 
 		// satellite moves in
 		$(object.getElementById("page5-satellite"))
@@ -213,18 +219,46 @@ obj.addEventListener("load", function() {
 		// numbers for text boxes draw
 		$(object.getElementById("numbers")).find("path").each(function(){$(this)
 			.append(createSet("visibility", "visible", "page5.click + " + (3.5*seconds) + "s", "go_back_page5.click + " + seconds + "s", false))
-			.append(createAnimate("stroke-dashoffset", seconds, "page5.click + " + (3.5*seconds) + "s", "200", "0", "go_back_page5.click", false))
-			.append(createAnimate("stroke-dashoffset", seconds, "go_back_page5.click", "0", "200", "page5.click", false));
+			.append(createAnimate("stroke-dashoffset", seconds, "page5.click + " + (3.5*seconds) + "s", "250", "0", "go_back_page5.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds, "go_back_page5.click", "0", "250", "page5.click", false));
 		});
 		// lines to sources draw
 		$(object.getElementById("sources-lines")).find("polyline").each(function() {
 			var stroke_offset = $(this).attr("stroke-dashoffset");
 			var id = $(this).attr("id");
 			console.log(document.querySelector('#' + id));
-			$(this).append(createSet("visibility", "visible", "page5.click + " + (4.5*seconds) + "s", "go_back_page5.click + " + seconds + "s", false))
+			$(this).append(createSet("visibility", "visible", "page5.click + " + (4.5*seconds) + "s", "go_back_page5.click + " + (2*seconds) + "s", false))
 			.append(createAnimate("stroke-dashoffset", 2*seconds, "page5.click + " + (4.5*seconds) + "s", stroke_offset, "0", "go_back_page5.click", false))
-			.append(createAnimate("stroke-dashoffset", 2*seconds, "go_back_page5.click", "0", stroke_offset, "page5.click", false));
+			.append(createAnimate("stroke-dashoffset", seconds, "go_back_page5.click", "0", stroke_offset, "page5.click", false));
 		});
+
+		// text box buttons draw
+		$(object.getElementById("page5-buttons-open")).children().each(function() {
+			var id = $(this).attr("id");
+			var close_button = id + "close";
+			$(this).append(createSet("visibility", "visible", "page5.click + " + (5.5*seconds) + "s; " + close_button + ".click", "go_back_page5.click; " + id + ".click", false));
+			$(object.getElementById(close_button)).append(createSet("visibility", "visible", id + ".click", "go_back_page5.click; " + close_button + ".click", false));
+		});
+
+		// text boxes & rects open up
+		$(object.getElementById("page5-text-boxes")).children().each(function() {
+			var open = $(this).attr("id") + "_open";
+			var close = $(this).attr("id") + "_openclose";
+			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_page5.click", false));
+		});
+		$(object.getElementById("page5-clip1")).find("rect")
+			.append(createAnimate("width", seconds/4.0, "page51_open.click", "0", "450.65", "page51_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/4.0, "page51_openclose.click", "450.65", "0", "page51_open.click; go_back_page5.click", false));
+		$(object.getElementById("page5-clip2")).find("rect")
+			.append(createAnimate("width", seconds/4.0, "page52_open.click", "0", "450.65", "page52_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/4.0, "page52_openclose.click", "450.65", "0", "page52_open.click; go_back_page5.click", false));
+		$(object.getElementById("page5-clip3")).find("rect")
+			.append(createAnimate("width", seconds/4.0, "page53_open.click", "0", "450.65", "page53_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/4.0, "page53_openclose.click", "450.65", "0", "page53_open.click; go_back_page5.click", false));
+		$(object.getElementById("page5-clip4")).find("rect")
+			.append(createAnimate("width", seconds/4.0, "page54_open.click", "0", "450.65", "page54_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/4.0, "page54_openclose.click", "450.65", "0", "page54_open.click; go_back_page5.click", false));
+
 
 	}
 
@@ -417,10 +451,22 @@ obj.addEventListener("load", function() {
 			$([buildings, trees, trees_hidden]).attr("cursor", "auto").attr("pointer-events", "none");
 			$(smog).fadeOut(seconds*1000);
 
-			$(object.getElementById("group1")).delay(2*seconds*1000 + 200).fadeIn(400);
-			$(object.getElementById("group2")).delay(2*seconds*1000 + 800).fadeIn(400);
-			$(object.getElementById("group3")).delay(2*seconds*1000 + 1400).fadeIn(400);
+			$(object.getElementById("molecules")).delay(2*seconds*1000).fadeIn(2*seconds*1000);
+			$(object.getElementById("group1")).delay(2*seconds*1000).fadeIn(500);
 			$(object.getElementById("go_back_cities")).delay(4*seconds*1000 + 1400).fadeIn(200);
+		});
+
+		// expand-sun clicked
+		$(object.getElementById("expand_sun")).click(function() {
+			$(object.getElementById("green-molecules")).delay(2*seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("molecules")).delay(2*seconds*1000).fadeOut(seconds*1000);
+			$(object.getElementById("molecules-lines")).delay(2*seconds*1000).fadeOut(seconds*1000);
+		});
+		// collapse-sun clicked
+		$(object.getElementById("collapse_sun")).click(function() {
+			$(object.getElementById("green-molecules")).delay(seconds*1000).fadeOut(0);
+			$(object.getElementById("molecules")).fadeIn(seconds*1000);
+			$(object.getElementById("molecules-lines")).fadeIn(seconds*1000);
 		});
 
 		// text moves in
@@ -449,12 +495,28 @@ obj.addEventListener("load", function() {
 			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_cities.click", "0", "150", "buildings.click", false));
 		$([object.getElementById("circle1"), object.getElementById("circle2"), object.getElementById("circle3"), object.getElementById("circle4")])
 			.append(createSet("visibility", "visible", "buildings.click + " + (4*seconds) + "s", "go_back_cities.click", false));
-		$(object.getElementById("line5")).append(createAnimate("stroke-dashoffset", 2*seconds, "buildings.click + " + (2*seconds + 1.4) + "s", "-300", "0", "go_back_cities.click"))
-			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_cities.click", "0", "-300", "buildings.click", false));
-		$(object.getElementById("circle5")).append(createSet("visibility", "visible", "buildings.click + " + (4*seconds + 1.4) + "s", "go_back_cities.click"));
+		
+		// sun comes in
 		$(object.getElementById("sunlight")).append(createSet("visibility", "visible", "buildings.click + " + (2*seconds + 1.4) + "s", "go_back_cities.click + " + seconds + "s"))
 			.append(createMotion(2*seconds, "buildings.click + " + (2*seconds) + "s", "500,0", "0,0", "go_back_cities.click"))
 			.append(createMotion(seconds, "go_back_cities.click", "0,0", "500,0", "buildings.click"));
+	
+		// button on sun
+		$(object.getElementById("expand_sun")).append(createSet("visibility", "visible", "buildings.click + " + (4*seconds) + "s; collapse_sun.click + " + (2*seconds) +  "s", "go_back_cities.click; expand_sun.click"));
+		$(object.getElementById("collapse_sun")).append(createSet("visibility", "visible", "expand_sun.click + " + (3*seconds) + "s", "go_back_cities.click; collapse_sun.click"));
+	
+		// white gradient draws when click sun
+		$(object.getElementById("molecules-gradient")).append(createSet("visibility", "visible", "buildings.click; expand_sun.click", "collapse_sun.click + " + seconds + "s; go_back_cities.click + " + seconds + "s"));
+		$(object.getElementById("gradient-clip")).find('rect').append(createAnimate("width", seconds, "expand_sun.click", "0", "1600", "collapse_sun.click; go_back_cities.click"))
+			.append(createAnimate("width", seconds, "collapse_sun.click; go_back_cities.click", "1600", "0", "expand_sun.click; buildings.click"));
+
+		$(object.getElementById("gradient-clip2")).find('rect').append(createAnimate("width", seconds, "collapse_sun.click; go_back_cities.click", "1600", "0", "expand_sun.click"))
+			.append(createSet("width", "1600", "expand_sun.click", "go_back_cities.click"));
+
+		// disable go-back button during animation
+		$(object.getElementById("go_back_cities")).append(createSet("pointer-events", "none", "expand_sun.click", "expand_sun.click + " + (3*seconds) + "s"));
+		$(object.getElementById("go_back_cities")).append(createSet("cursor", "auto", "expand_sun.click", "expand_sun.click + " + (3*seconds) + "s"));
+
 	}
 
 

@@ -696,12 +696,12 @@
 	<rect x="615.585" y="640.688" opacity="0.3" fill="#D1DE58" width="450.65" height="122.888"/>
 	<rect x="615.585" y="824.873" opacity="0.3" fill="#D1DE58" width="450.65" height="122.888"/>
 	<rect x="615.585" y="279.49" opacity="0.3" fill="#D1DE58" width="450.65" height="122.888"/>
-	<polygon fill="#D1DE58" points="615.585,475.943 630.415,461.113 615.585,446.281 	"/>
-	<polygon fill="#D1DE58" points="615.585,294.321 630.415,279.491 615.585,264.659 	"/>
+	<polygon fill="#D1DE58" points="630.584,447.781 615.754,462.611 630.584,477.443 	"/>
+	<polygon fill="#D1DE58" points="629.084,267.159 614.254,281.989 629.084,296.821 	"/>
 	<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="220.333,345.672 484.333,345.672 
 		484.333,279.49 534.471,279.49 	"/>
-	<polygon fill="#D1DE58" points="615.585,838.187 630.415,823.356 615.585,808.524 	"/>
-	<polygon fill="#D1DE58" points="630.415,626.818 615.585,641.648 630.415,656.481 	"/>
+	<polygon fill="#D1DE58" points="629.599,812.579 614.769,827.409 629.599,842.241 	"/>
+	<polygon fill="#D1DE58" points="616.916,654.981 631.746,640.151 616.916,625.318 	"/>
 	<g>
 		<rect x="640.259" y="298.995" fill="none" width="415.358" height="90.45"/>
 		<text transform="matrix(1 0 0 1 640.2588 307.623)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
