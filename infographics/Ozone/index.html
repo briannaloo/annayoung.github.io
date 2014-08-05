@@ -225,19 +225,19 @@ obj.addEventListener("load", function() {
 		// lines to sources draw
 		$(object.getElementById("sources-lines")).find("polyline").each(function() {
 			var stroke_offset = $(this).attr("stroke-dashoffset");
-			var id = $(this).attr("id");
-			console.log(document.querySelector('#' + id));
-			$(this).append(createSet("visibility", "visible", "page5.click + " + (4.5*seconds) + "s", "go_back_page5.click + " + (2*seconds) + "s", false))
-			.append(createAnimate("stroke-dashoffset", 2*seconds, "page5.click + " + (4.5*seconds) + "s", stroke_offset, "0", "go_back_page5.click", false))
-			.append(createAnimate("stroke-dashoffset", seconds, "go_back_page5.click", "0", stroke_offset, "page5.click", false));
+			var open_button = $(this).attr("class");
+			var close = open_button + "close"; 
+			$(this).append(createSet("visibility", "visible", open_button + ".click", "go_back_page5.click + " + (seconds/2.0) + "s; " + close + ".click + " + (seconds/2.0) + "s", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, open_button + ".click", stroke_offset, "0", "go_back_page5.click; " + close + ".click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, close + ".click; go_back_page5.click", "0", stroke_offset, "page5.click; " + open_button + ".click", false));
 		});
 
 		// text box buttons draw
 		$(object.getElementById("page5-buttons-open")).children().each(function() {
 			var id = $(this).attr("id");
 			var close_button = id + "close";
-			$(this).append(createSet("visibility", "visible", "page5.click + " + (5.5*seconds) + "s; " + close_button + ".click", "go_back_page5.click; " + id + ".click", false));
-			$(object.getElementById(close_button)).append(createSet("visibility", "visible", id + ".click", "go_back_page5.click; " + close_button + ".click", false));
+			$(this).append(createSet("visibility", "visible", "page5.click + " + (4.5*seconds) + "s; " + close_button + ".click + " + (seconds/2.0) + "s", "go_back_page5.click; " + id + ".click", false));
+			$(object.getElementById(close_button)).append(createSet("visibility", "visible", id + ".click +  " + (seconds/2.0) + "s", "go_back_page5.click; " + close_button + ".click", false));
 		});
 
 		// text boxes & rects open up
@@ -247,17 +247,17 @@ obj.addEventListener("load", function() {
 			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_page5.click", false));
 		});
 		$(object.getElementById("page5-clip1")).find("rect")
-			.append(createAnimate("width", seconds/4.0, "page51_open.click", "0", "450.65", "page51_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/4.0, "page51_openclose.click", "450.65", "0", "page51_open.click; go_back_page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page51_open.click", "0", "450.65", "page51_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/2.0, "page51_openclose.click", "450.65", "0", "page51_open.click; go_back_page5.click", false));
 		$(object.getElementById("page5-clip2")).find("rect")
-			.append(createAnimate("width", seconds/4.0, "page52_open.click", "0", "450.65", "page52_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/4.0, "page52_openclose.click", "450.65", "0", "page52_open.click; go_back_page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page52_open.click", "0", "450.65", "page52_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/2.0, "page52_openclose.click", "450.65", "0", "page52_open.click; go_back_page5.click", false));
 		$(object.getElementById("page5-clip3")).find("rect")
-			.append(createAnimate("width", seconds/4.0, "page53_open.click", "0", "450.65", "page53_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/4.0, "page53_openclose.click", "450.65", "0", "page53_open.click; go_back_page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page53_open.click", "0", "450.65", "page53_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/2.0, "page53_openclose.click", "450.65", "0", "page53_open.click; go_back_page5.click", false));
 		$(object.getElementById("page5-clip4")).find("rect")
-			.append(createAnimate("width", seconds/4.0, "page54_open.click", "0", "450.65", "page54_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/4.0, "page54_openclose.click", "450.65", "0", "page54_open.click; go_back_page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page54_open.click", "0", "450.65", "page54_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/2.0, "page54_openclose.click", "450.65", "0", "page54_open.click; go_back_page5.click", false));
 
 
 	}

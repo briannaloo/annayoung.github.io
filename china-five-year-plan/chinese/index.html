@@ -29,6 +29,35 @@
     <meta property="og:image" content="http://epi.yale.edu/visuals/china-five-year-plan/thumbnail.png" />
 </head>
 <body>
+
+    <style>
+        #tweet {
+            font-size: 0px;
+        }
+        #tweet-container {
+            position: fixed;
+            top: 5px;
+            right: 0px;
+        }
+        #fb-container {
+            position: fixed;
+            top: 5px;
+            right: 140px;
+        }
+        #chinese {
+            font-size: 13px;
+            font-family: 'Pontano Sans',sans-serif;
+            color: #fff;
+            position: fixed;
+            top: 17px;
+            left: 150px;
+            text-decoration: none;
+        }
+        #chinese:hover {
+            text-decoration: underline;
+        }
+    </style>
+
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -38,37 +67,9 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-<style>
-    #tweet {
-        font-size: 0px;
-    }
-    #tweet-container {
-        position: fixed;
-        top: 5px;
-        right: 0px;
-    }
-    #fb-container {
-        position: fixed;
-        top: 5px;
-        right: 140px;
-    }
-    #chinese {
-            font-size: 13px;
-            font-family: 'Pontano Sans',sans-serif;
-            color: #fff;
-            position: fixed;
-            top: 17px;
-            left: 150px;
-            text-decoration: none;
-    }
-    #chinese:hover {
-        text-decoration: underline;
-    }
-</style>
+<img width="100px" id="logo" src="../Logo_EPI_White.png">
 
-<img width="100px" id="logo" src="./Logo_EPI_White.png">
-
-<a id="chinese" href="./chinese">中文</a>
+<a id="chinese" href="../">English</a>
 
 <div id="tweet-container">
 <a id="tweet" href="https://twitter.com/share" class="twitter-share-button" data-url="http://epi.yale.edu/visuals/china-five-year-plan" data-text="Interactive Timeline of China's 12-13 Five-Year Plans">Tweet</a></div>
@@ -102,7 +103,7 @@
         }
     </script>
     <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js" ></script>
-    
+
     <style>
         body, #timeline-embed, #storyjs-timeline {
             background-color: #231F20 !important; 
@@ -123,7 +124,7 @@
             color: #44C6CC !important;
         }
         .flag {
-            background-image: url(./timeline_flag2.png) !important;
+            background-image: url(../timeline_flag2.png) !important;
         }
         .nav-container div {
             color: #FFF !important;
