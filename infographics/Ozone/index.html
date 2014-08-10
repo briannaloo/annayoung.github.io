@@ -209,7 +209,7 @@ obj.addEventListener("load", function() {
 
 		// text comes in
 		$(object.getElementById("page5-text")).append(createMotion(seconds, "page5.click", "-1600,0", "0,0", "go_back_page5.click + " + seconds + "s"))
-			.append(createSet("visibility", "visible", "page5.click;", "go_back_page5.click + " + (2*seconds) + "s", false))
+			.append(createSet("visibility", "visible", "page5.click;", "go_back_page5.click + " + (3*seconds) + "s", false))
 			.append(createMotion(seconds, "go_back_page5.click + " + (2*seconds) + "s", "0,0", "-1600,0", "page5.click; "));
 
 
