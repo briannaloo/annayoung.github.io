@@ -33,14 +33,14 @@ obj.addEventListener("load", function() {
 // hover over elements
 	$([balloon, button4]).hover(function() {
 		$(balloon).attr("fill", "#D1DE58");
-		//$(object.getElementById("button4_title")).attr("fill", "rgb(58, 158, 153)");
-		//$(object.getElementById("button4_triangle")).attr("fill", "#D1DE58");
-		//$(object.getElementById("button4_triangle")).attr("opacity", "1");
+		$(object.getElementById("button4_title")).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button4_triangle")).attr("fill", "#D1DE58");
+		$(object.getElementById("button4_triangle")).attr("opacity", "1");
 	}, function() {
 		$(balloon).attr("fill", "#FFFFFF");
-		//$(object.getElementById("button4_title")).attr("fill", "#D1DE58");
-		//$(object.getElementById("button4_triangle")).attr("fill", "#FFFFFF");
-		//$(object.getElementById("button4_triangle")).attr("opacity", "0");
+		$(object.getElementById("button4_title")).attr("fill", "#D1DE58");
+		$(object.getElementById("button4_triangle")).attr("fill", "#FFFFFF");
+		$(object.getElementById("button4_triangle")).attr("opacity", "0");
 	});
 	$([buildings, button1]).hover(function() {
 		$(front).attr("fill", "#D1DE58");
@@ -48,18 +48,18 @@ obj.addEventListener("load", function() {
 		$(stacks).each(function() {
 			$(this).attr("fill", "#D1DE58");
 		});
-		//$(object.getElementById("button1_title")).attr("fill", "rgb(58, 158, 153)");
-		//$(object.getElementById("button1_triangle")).attr("fill", "#D1DE58");
-		//$(object.getElementById("button1_triangle")).attr("opacity", "1");
+		$(object.getElementById("button1_title")).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button1_triangle")).attr("fill", "#D1DE58");
+		$(object.getElementById("button1_triangle")).attr("opacity", "1");
 	}, function() {
 		$(front).attr("fill", "#FFFFFF");
 		$(factory).attr("fill", "#FFFFFF");
 		$(stacks).each(function() {
 			$(this).attr("fill", "#FFFFFF");
 		});
-		/*$(object.getElementById("button1_title")).attr("fill", "#D1DE58");
+		$(object.getElementById("button1_title")).attr("fill", "#D1DE58");
 		$(object.getElementById("button1_triangle")).attr("fill", "#FFFFFF");
-		$(object.getElementById("button1_triangle")).attr("opacity", "0");*/
+		$(object.getElementById("button1_triangle")).attr("opacity", "0");
 	});	
 	$([trees, trees_hidden, button3]).hover(function() {
 		$(object.getElementsByClassName("tree")).each(function() {
@@ -68,9 +68,9 @@ obj.addEventListener("load", function() {
 		$(object.getElementsByClassName("tree-gray")).each(function() {
 			$(this).attr("fill", "#99a541");
 		});
-		/*$(object.getElementById("button3_title")).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button3_title")).attr("fill", "rgb(58, 158, 153)");
 		$(object.getElementById("button3_triangle")).attr("fill", "#D1DE58");
-		$(object.getElementById("button3_triangle")).attr("opacity", "1");*/
+		$(object.getElementById("button3_triangle")).attr("opacity", "1");
 	}, function() {
 		$(object.getElementsByClassName("tree")).each(function() {
 			$(this).attr("fill", "#FFFFFF");
@@ -78,21 +78,21 @@ obj.addEventListener("load", function() {
 		$(object.getElementsByClassName("tree-gray")).each(function() {
 			$(this).attr("fill", "#D1D3D4");
 		});
-		/*$(object.getElementById("button3_title")).attr("fill", "#D1DE58");
+		$(object.getElementById("button3_title")).attr("fill", "#D1DE58");
 		$(object.getElementById("button3_triangle")).attr("fill", "#FFFFFF");
-		$(object.getElementById("button3_triangle")).attr("opacity", "0");*/
+		$(object.getElementById("button3_triangle")).attr("opacity", "0");
 	});
 
 	$([person, button2]).hover(function() {
 		$(person).attr("fill", "#D1DE58");
-		/*$(object.getElementById("button2_title")).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button2_title")).attr("fill", "rgb(58, 158, 153)");
 		$(object.getElementById("button2_triangle")).attr("fill", "#D1DE58");
-		$(object.getElementById("button2_triangle")).attr("opacity", "1");*/
+		$(object.getElementById("button2_triangle")).attr("opacity", "1");
 	}, function() {
 		$(person).attr("fill", "rgb(58, 158, 153)");
-		/*$(object.getElementById("button2_title")).attr("fill", "#D1DE58");
+		$(object.getElementById("button2_title")).attr("fill", "#D1DE58");
 		$(object.getElementById("button2_triangle")).attr("fill", "#FFFFFF");
-		$(object.getElementById("button2_triangle")).attr("opacity", "0");*/
+		$(object.getElementById("button2_triangle")).attr("opacity", "0");
 	});
 
 	$(object.getElementById("page5")).hover(function() {
