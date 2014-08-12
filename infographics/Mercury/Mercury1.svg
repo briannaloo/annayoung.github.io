@@ -49,29 +49,6 @@
 			<polygon opacity="0.15" fill="#2CBFD1" points="915.008,67.742 500.995,668.297 1306.237,668.297   "/>
 			<polygon opacity="0.15" fill="#2CBFD1" points="915.008,67.742 277.949,993.137 1517.279,993.137   "/>
 			<polygon opacity="0.15" fill="#2CBFD1" points="915.008,67.742 392.738,825.023 1408.334,825.376   "/>
-			<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M1155.943,624.411c0,4.051-3.284,7.334-7.334,7.334    c-4.049,0-7.33-3.283-7.33-7.334c0-4.049,3.281-7.33,7.33-7.33C1152.659,617.081,1155.943,620.362,1155.943,624.411z"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="867.232" cy="710.196" r="3"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="561.561" cy="794.137" r="5.999"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="455.394" cy="777.949" r="4.344"/>
-			<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M552.893,651.771c0,1.914-1.552,3.465-3.467,3.465    c-1.911,0-3.465-1.551-3.465-3.465c0-1.914,1.554-3.465,3.465-3.465C551.341,648.306,552.893,649.856,552.893,651.771z"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="619.71" cy="611.974" r="5.332"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="904.702" cy="749.015" r="3.405"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="954.108" cy="766.579" r="5.998"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="984.878" cy="654.661" r="2.999"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="654.35" cy="566.333" r="5.964"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="786.216" cy="628.546" r="3.702"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1083.301" cy="800.136" r="5.999"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1054.879" cy="846.17" r="3.406"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="782.165" cy="704.448" r="7.331"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="787.826" cy="524.476" r="7.332"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="754.887" cy="640.185" r="3"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="827.876" cy="492.469" r="5.999"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1077.581" cy="580.204" r="3.702"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1057.879" cy="609.69" r="3"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="764.386" cy="810.621" r="3.703"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="744.684" cy="840.107" r="3"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1212.878" cy="746.19" r="3.703"/>
-			<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1193.176" cy="775.677" r="3"/>
 			<g id="pyramid-text">
 				<rect x="74.021" y="836.557" fill="none" width="208.602" height="62.137"/>
 				<text transform="matrix(1 0 0 1 74.0205 849.498)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica'" font-size="18">PRIMARY PRODUCERS</tspan><tspan x="0" y="24.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">Plankton absorb merthylmercury from </tspan><tspan x="0" y="38.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">the water and sediment.</tspan></text>
@@ -724,31 +701,99 @@
 	</g>
 	
 	</g>
-
 	<g id="bubbles">
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="246.767" cy="802.375" r="7.331"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="270.993" cy="888.629" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="361.578" cy="812.565" r="5.999"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="331.994" cy="786.424" r="3.466"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="326.13" cy="746.627" r="5.332"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="127.844" cy="885.275" r="3.405"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1136.133" cy="746.959" r="5.998"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="54.836" cy="821.377" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="521.269" cy="841.805" r="5.964"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="680.453" cy="731.361" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1207.291" cy="915.422" r="5.998"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1180.133" cy="759.555" r="3.406"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="649.123" cy="743" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="776.075" cy="733.162" r="5.999"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1064.525" cy="836.906" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1044.822" cy="866.393" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="977.568" cy="736.826" r="5.998"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="905.961" cy="826.773" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="886.258" cy="856.26" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="481.457" cy="721.588" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="469.512" cy="757.922" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1269.536" cy="727.835" r="7.331"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1354.345" cy="807.031" r="5.999"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="246.767" cy="802.375" r="7.331"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="551,-270" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="551,-270" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="270.993" cy="888.629" r="3"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="275,-237" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="275,-237" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="361.578" cy="812.565" r="5.999"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="534,-315" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="534,-315" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="331.994" cy="786.424" r="3.466"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="322,-114" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="322,-114" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="326.13" cy="746.627" r="5.332"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="328,-75" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="328,-75" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="127.844" cy="885.275" r="3.405"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="646,-71" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="646,-71" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1136.133" cy="746.959" r="5.998"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="-153,53" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="-153,53" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="54.836" cy="821.377" r="3"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="690,22" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="690,22" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="521.269" cy="841.805" r="5.964"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="47,-48" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="47,-48" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="680.453" cy="731.361" r="3.703"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="160,-102" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="160,-102" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1207.291" cy="915.422" r="5.998"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="-152,-295" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="-152,-295" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1180.133" cy="759.555" r="3.406"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="32,-13" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="32,-13" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="649.123" cy="743" r="3"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="339,-88" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="339,-88" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="776.075" cy="733.162" r="5.999"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="6,-29" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="6,-29" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1064.525" cy="836.906" r="3.703"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="128,-58" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="128,-58" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1044.822" cy="866.393" r="3"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="13,-20" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="13,-20" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="977.568" cy="736.826" r="5.998"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="-24,30" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="-24,30" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="905.961" cy="826.773" r="3.703"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="-36,-107" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="-36,-107" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="886.258" cy="856.26" r="3"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="19,-101" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="19,-101" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="481.457" cy="721.588" r="3.703"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="-23,56" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="-23,56" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="469.512" cy="757.922" r="3"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="285,-108" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="285,-108" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1269.536" cy="727.835" r="7.331"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="-121,-104" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="-121,-104" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1354.345" cy="807.031" r="5.999"> 
+			<animateMotion dur="1s" repeatCount="1" begin="animals.click + 1s; button3.click + 1s" from="0,0" to="-273,-227" fill="freeze" end="go_back_animals.click"/>
+			<animateMotion dur="1s" repeatCount="1" begin="go_back_animals.click + 1s" from="-273,-227" to="0,0" fill="freeze" end="animals.click; button3.click"/>
+		</circle>
 	</g>
 	<line id="bottom_line" fill="none" stroke="#2CBFD1" stroke-width="3" stroke-miterlimit="10" x1="-0.277" y1="979.009" x2="1600.5" y2="979.009"/>
 </g>
