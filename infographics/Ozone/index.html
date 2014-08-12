@@ -516,12 +516,12 @@ obj.addEventListener("load", function() {
 			.append(createMotion(seconds, "go_back_cities.click", "0,0", "800,0", "buildings.click; home_button1.click"));
 	
 		// lines draw
-		$([object.getElementById("line1"), object.getElementById("line2"), object.getElementById("line3")])
-			.append(createAnimate("stroke-dashoffset", 2*seconds, "buildings.click + " + (2*seconds) + "s; home_button1.click + " + (2*seconds) + "s", "350", "0", "go_back_cities.click", false))
-			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_cities.click", "0", "350", "buildings.click; home_button1.click", false));
-		$(object.getElementById("line4"))
-			.append(createAnimate("stroke-dashoffset", 2*seconds, "buildings.click + " + (2*seconds) + "s; home_button1.click + " + (2*seconds) + "s", "150", "0", "go_back_cities.click", false))
-			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_cities.click", "0", "150", "buildings.click; home_button1.click", false));
+		$(object.getElementById("lines-for-sources")).children().each(function() {
+			var stroke = $(this).attr("stroke-dashoffset") + "";
+			$(this).append(createAnimate("stroke-dashoffset", 2*seconds, "buildings.click + " + (2*seconds) + "s; home_button1.click + " + (2*seconds) + "s", stroke, "0", "go_back_cities.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_cities.click", "0", stroke, "buildings.click; home_button1.click", false));
+		});
+		
 		$([object.getElementById("circle1"), object.getElementById("circle2"), object.getElementById("circle3"), object.getElementById("circle4")])
 			.append(createSet("visibility", "visible", "buildings.click + " + (4*seconds) + "s; home_button1.click + " + (4*seconds) + "s", "go_back_cities.click", false));
 		

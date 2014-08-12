@@ -2474,11 +2474,13 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		<circle id="circle2" visibility="hidden" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="495.305" cy="819.862" r="5.331"/>
 
 		<circle id="circle1" visibility="hidden" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="184" cy="845.862" r="5.331"/>
-		<polyline id="line4" stroke-dashoffset="150" stroke-dasharray="150" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="1163.977,565    1163.977,596.431 1181,596.431 1181,688  "/>
-		<polyline id="line3" stroke-dashoffset="350" stroke-dasharray="350" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="807.51,565    807.51,612.739 881,612.739 881,838.701  "/>
-		
-		<line id="line2" stroke-dashoffset="350" stroke-dasharray="350" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="495.566" y1="565" x2="495.566" y2="814.531"/>
-		<polyline id="line1" stroke-dashoffset="350" stroke-dasharray="350" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="214.548,565    214.548,723 184,723 184,841.396  "/>
+		<g id="lines-for-sources">
+			<polyline id="line4" stroke-dashoffset="141" stroke-dasharray="141" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="1163.977,565    1163.977,596.431 1181,596.431 1181,688  "/>
+			<polyline id="line3" stroke-dashoffset="348" stroke-dasharray="348" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="807.51,565    807.51,612.739 881,612.739 881,838.701  "/>
+			
+			<line id="line2" stroke-dashoffset="250" stroke-dasharray="250" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="495.566" y1="565" x2="495.566" y2="814.531"/>
+			<polyline id="line1" stroke-dashoffset="307" stroke-dasharray="307" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="214.548,565    214.548,723 184,723 184,841.396  "/>
+		</g>
 	
 	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="341.6153" x2="1480.0117" y2="341.6153">
 		<stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
@@ -3438,15 +3440,15 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 
 		<g id="sources-lines" visibility="hidden">
-			<polyline id="sources-lines1" class="page54_open" stroke-dashoffset="-430" stroke-dasharray="430" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="220.333,345.672 484.333,345.672    484.333,279.49 534.471,279.49  "/>
-			<polyline id="sources-lines2" class="page53_open" stroke-dashoffset="-450" stroke-dasharray="450" fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" points="211,345.672 211,453 526.088,453  "/>
-			<polyline id="sources-lines3" class="page53_open" stroke-dashoffset="-300" stroke-dasharray="300" fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" points="339.663,499 339.663,461.233    529.868,461.233  "/>
-			<polyline id="sources-lines4" class="page53_open" stroke-dashoffset="-1000" stroke-dasharray="1000" fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" points="1402.075,562.94 1354.574,562.94    1354.574,592.938 565.734,592.938 565.734,492.496  "/>
-			<polyline id="sources-lines5" class="page52_open" stroke-dashoffset="-1000" stroke-dasharray="1000" fill="none" stroke="#3A9E99" stroke-width="2" stroke-miterlimit="10" points="1520.054,672.912 1402.075,672.912    1402.075,614 588.234,614  "/>
-			<polyline id="sources-lines6" class="page52_open" stroke-dashoffset="-500" stroke-dasharray="500" fill="none" stroke="#3A9E99" stroke-width="2" stroke-miterlimit="10" points="144.855,681.971 144.855,641.649    534.471,641.649 534.471,640.688  "/>
-			<polyline id="sources-lines7" class="page51_open" stroke-dashoffset="-400" stroke-dasharray="400" fill="none" stroke="#21716E" stroke-width="2" stroke-miterlimit="10" points="270.822,857.653 270.822,823.356    522.762,823.356  "/>
-			<polyline id="sources-lines8" class="page51_open" stroke-dashoffset="-800" stroke-dasharray="800" fill="none" stroke="#21716E" stroke-width="2" stroke-miterlimit="10" points="203.312,345.672 203.312,815 527.824,815     "/>
-			<polyline id="sources-lines9" class="page51_open" stroke-dashoffset="-500" stroke-dasharray="500" fill="none" stroke="#21716E" stroke-width="2" stroke-miterlimit="10" points="339.824,556.941 339.824,807 536.724,807     "/>
+			<polyline id="sources-lines1" class="page54_open" stroke-dashoffset="-381" stroke-dasharray="381" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="220.333,345.672 484.333,345.672    484.333,279.49 534.471,279.49  "/>
+			<polyline id="sources-lines2" class="page53_open" stroke-dashoffset="-423" stroke-dasharray="423" fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" points="211,345.672 211,453 526.088,453  "/>
+			<polyline id="sources-lines3" class="page53_open" stroke-dashoffset="-228" stroke-dasharray="228" fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" points="339.663,499 339.663,461.233    529.868,461.233  "/>
+			<polyline id="sources-lines4" class="page53_open" stroke-dashoffset="-967" stroke-dasharray="967" fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" points="1402.075,562.94 1354.574,562.94    1354.574,592.938 565.734,592.938 565.734,492.496  "/>
+			<polyline id="sources-lines5" class="page52_open" stroke-dashoffset="-991" stroke-dasharray="991" fill="none" stroke="#3A9E99" stroke-width="2" stroke-miterlimit="10" points="1520.054,672.912 1402.075,672.912    1402.075,614 588.234,614  "/>
+			<polyline id="sources-lines6" class="page52_open" stroke-dashoffset="-431" stroke-dasharray="431" fill="none" stroke="#3A9E99" stroke-width="2" stroke-miterlimit="10" points="144.855,681.971 144.855,641.649    534.471,641.649 534.471,640.688  "/>
+			<polyline id="sources-lines7" class="page51_open" stroke-dashoffset="-287" stroke-dasharray="287" fill="none" stroke="#21716E" stroke-width="2" stroke-miterlimit="10" points="270.822,857.653 270.822,823.356    522.762,823.356  "/>
+			<polyline id="sources-lines8" class="page51_open" stroke-dashoffset="-794" stroke-dasharray="794" fill="none" stroke="#21716E" stroke-width="2" stroke-miterlimit="10" points="203.312,345.672 203.312,815 527.824,815     "/>
+			<polyline id="sources-lines9" class="page51_open" stroke-dashoffset="-447" stroke-dasharray="447" fill="none" stroke="#21716E" stroke-width="2" stroke-miterlimit="10" points="339.824,556.941 339.824,807 536.724,807     "/>
 		</g>
 
 
