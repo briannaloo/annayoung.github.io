@@ -273,20 +273,20 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("page5-text-boxes")).children().each(function() {
 			var open = $(this).attr("id") + "_open";
 			var close = $(this).attr("id") + "_openclose";
-			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_page5.click", false));
+			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_page5.click + " + (seconds/2.0) + "s", false));
 		});
 		$(object.getElementById("page5-clip1")).find("rect")
 			.append(createAnimate("width", seconds/2.0, "page51_open.click", "0", "450.65", "page51_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/2.0, "page51_openclose.click", "450.65", "0", "page51_open.click; go_back_page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page51_openclose.click; go_back_page5.click", "450.65", "0", "page51_open.click; page5.click", false));
 		$(object.getElementById("page5-clip2")).find("rect")
 			.append(createAnimate("width", seconds/2.0, "page52_open.click", "0", "450.65", "page52_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/2.0, "page52_openclose.click", "450.65", "0", "page52_open.click; go_back_page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page52_openclose.click; go_back_page5.click", "450.65", "0", "page52_open.click; page5.click", false));
 		$(object.getElementById("page5-clip3")).find("rect")
 			.append(createAnimate("width", seconds/2.0, "page53_open.click", "0", "450.65", "page53_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/2.0, "page53_openclose.click", "450.65", "0", "page53_open.click; go_back_page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page53_openclose.click; go_back_page5.click", "450.65", "0", "page53_open.click; page5.click", false));
 		$(object.getElementById("page5-clip4")).find("rect")
 			.append(createAnimate("width", seconds/2.0, "page54_open.click", "0", "450.65", "page54_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/2.0, "page54_openclose.click", "450.65", "0", "page54_open.click; go_back_page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page54_openclose.click; go_back_page5.click", "450.65", "0", "page54_open.click; page5.click", false));
 
 
 	}
