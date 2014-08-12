@@ -14,9 +14,67 @@
  </defs>
 <g id="INTRO_SLIDE">
 	<rect y="0.374" fill="#103844" width="1600.459" height="1147.44"/>
-	
+	<g id="recs">
+		<g id="recs_text" visibility="hidden">
+			<rect x="73.51" y="38.489" fill="none" width="1054.143" height="38.606"/>
+			<text transform="matrix(1 0 0 1 70.5093 73.001)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">THE NEXT GENERATION</tspan></text>
+			<rect xmlns="http://www.w3.org/2000/svg" x="74.109" y="89.96" fill="none" width="885.957" height="65.132"/>
+			<text transform="matrix(1 0 0 1 71.1094 104.3398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NINETY-ONE countries and the European Union have signed the MINIMATA </tspan><tspan x="3" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Convention. Measurements of water sampling is taken in a number of parts </tspan><tspan x="3" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">of the world.</tspan></text>
+			<polygon id="go_back_recs" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.113,36.684 37.004,55.793 56.113,74.902  "/>
+		</g>
+		<g id="icons" visibility="hidden">
+			<g id="top-icon">
+				<path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" d="M1419.826,34.605   c-67.293,70.476-131.835,168.949-157.771,300.499"/>
+				<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="1215.328" y1="218.507" x2="1279.312" y2="264.061"/>
+			
+				<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="1266.182" y1="112.225" x2="1341.85" y2="133.595"/>
+			
+				<rect x="1170.734" y="158.94" transform="matrix(0.4323 -0.9018 0.9018 0.4323 554.6 1208.7542)" fill="#FFFFFF" width="133.001" height="10"/>
+			
+				<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="1266.562" y1="113.153" x2="1278.736" y2="264.764"/>
+			
+				<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="1215.867" y1="218.912" x2="1341.682" y2="133.449"/>
+			
+				<rect x="1184.729" y="140.762" transform="matrix(0.4323 -0.9018 0.9018 0.4323 551.9168 1185.4669)" fill="#FFFFFF" width="65.335" height="27.334"/>
+			
+				<rect x="1198.819" y="161.648" transform="matrix(0.4323 -0.9017 0.9017 0.4323 531.45 1187.6729)" fill="#103844" width="20.251" height="20.249"/>
+			
+				<ellipse transform="matrix(0.4322 -0.9018 0.9018 0.4322 569.0607 1153.0614)" fill="#FFFFFF" cx="1200.219" cy="124.619" rx="6.875" ry="2.375"/>
+			
+				<rect x="1206.621" y="122.097" transform="matrix(0.4324 -0.9017 0.9017 0.4324 569.9713 1162.1028)" fill="#FFFFFF" width="2.751" height="12.5"/>
+			</g>
+			<g id="bottom-icon">
+				<path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" d="M1297.341,746.182   c34.199,70.221,85.428,141.887,161.999,203.428"/>
+				<path fill="#FFFFFF" d="M1283.912,903.877c2.628-1.991,3.144-5.731,1.156-8.36c-1.986-2.628-5.73-3.149-8.355-1.157    c-2.629,1.987-3.146,5.732-1.16,8.357C1277.545,905.344,1281.285,905.861,1283.912,903.877z"/>
+				<polyline fill="#FFFFFF" points="1283.869,893.933 1350.863,838.749 1357.992,847.044 1284.759,897.745   "/>
+				<g>
+					<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1257.105,896.091     c0,0,1.462-20.755,23.688-17.922"/>
+					<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1239.711,894.759     c0,0,3.811-36.357,43.224-32.708"/>
+					<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1223.146,893.173c0,0,2.852-58.23,64.733-48.98"/>
+				</g>
+				<g>
+					<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1276.394,922.24c0,0,20.368,4.234,23.686-17.919     "/>
+					<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1272.949,939.34c0,0,36.023,6.219,43.221-32.705     "/>
+					<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1269.973,955.717     c0,0,56.807,13.084,64.732-48.982"/>
+				</g>
+			</g>
+
+		</g>
+	</g>
+
+	<g>
+		<path id="Hg2" style="display: none" fill="#F26E2A" d="M1210.362,197.781c0,6.885-5.58,12.464-12.465,12.464H1045.2c-6.883,0-12.465-5.579-12.465-12.464V56.509    c0-6.884,5.582-12.466,12.465-12.466h152.697c6.885,0,12.465,5.582,12.465,12.466V197.781z"/>
+		<g id="Hg">
+			<path id="Hg1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1172.492,149.482c0,4.94-4.004,8.943-8.943,8.943
+				h-109.556c-4.938,0-8.943-4.003-8.943-8.943V48.124c0-4.939,4.005-8.943,8.943-8.943h109.556c4.939,0,8.943,4.004,8.943,8.943
+				V149.482z"/>
+			<rect x="1056.781" y="52.385" fill="none" width="80.479" height="101.205"/>
+			<text transform="matrix(1 0 0 1 1056.7803 65.2988)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="17.9613">80</tspan><tspan x="-2.072" y="36.825" fill="#FFFFFF" font-family="'Helvetica'" font-size="41.4491">Hg</tspan><tspan x="0" y="63.628" fill="#FFFFFF" font-family="'Helvetica'" font-size="16.5796">Mercury</tspan><tspan x="0" y="79.379" fill="#FFFFFF" font-family="'Helvetica'" font-size="9.6715">200.59</tspan></text>
+		</g>
+	</g>
+<g id="background">
 	<g id="mountains+ship">
-	<path id="mountains" fill="#FFFFFF" d="M-18.17,366.203c0,0-2.173,0,13.136,14.051c15.31,14.053,12.086,18.553,21.755,18.409
+	<path id="mountains" cursor="pointer" fill="#FFFFFF" d="M-18.17,366.203c0,0-2.173,0,13.136,14.051c15.31,14.053,12.086,18.553,21.755,18.409
 			c9.669-0.141,20.95,13.91,31.424,27.961c0,0,20.144,16.861,45.122,0c24.979-16.864,32.768-43.094,42.973-41.217
 			c10.207,1.874,8.439-6.556,12.278-6.556c3.837,0,8.135-7.495,20.489,14.051c12.357,21.543,47.809,44.965,47.809,44.965
 			s11.28,0.936,17.19,14.051c5.909,13.112,20.763,19.673,27.571,19.673c6.808,0,23.765-3.751,30.864,12.174
@@ -26,18 +84,7 @@
 			c0,0,24.711-71.441,30.082-72.38c5.372-0.936,12.891,9.366,12.891,9.366s16.654,6.561,24.71,3.748
 			c8.059-2.81,35.455-15.922,41.9-15.922c6.446,0,13.43,19.25,21.487,32.107c8.059,12.856,88.54,199.274,112.76,213.325
 			c24.222,14.05,76.324,47.025,99.424,48.899c23.098,1.874-921.761,0.474-948.352,1.41V366.203z"/>
-	<g id="fishing" cursor="pointer">
-		<g>
-			<path id="person" fill="#103844" d="M703.704,503.962l14.264,14.035c0,0,3.413,4.173,6.448,5.31c3.037,1.138,6.07,4.553,7.967,6.828
-				c1.898,2.277,6.448,0,6.448,0s-1.515-3.035-1.515-4.55c0-1.518,1.515-4.93,1.515-4.93s0.38-4.555,4.175-5.692
-				c3.792-1.138,9.192,2.653,7.63,7.585c-1.562,4.933-4.217,8.6-4.217,8.6l-0.757,2.402c0,0,0,3.035,3.413,3.792
-				c3.415,0.76,5.932,4.172,6.002,11.38c0.068,7.209-0.603,18.971-1.025,20.866c-0.422,1.898-3.415,12.138-3.415,12.138
-				s-2.32,3.035-4.597,2.277c-2.275-0.758-0.758-1.52,0.38-4.553c1.14-3.034-0.378-2.274,1.519-4.552
-				c1.896-2.275,0.378-24.659,0.378-24.659s-6.068,10.623-6.068,12.9c0,2.276,1.516,17.071,1.516,17.071s2.275,15.553,2.655,17.07
-				c0.38,1.516,4.217,13.36,4.217,13.36h-8.388l-5.312-14.5l-4.172-15.173l0.757,14.795l1.874,14.878l-9.839,0.015l-5.164-31.585
-				c0,0-0.148-8.345,4.024-19.726c4.174-11.38,3.037-20.105,3.037-20.105s-12.52-12.14-13.278-13.655
-				c-0.76-1.518-10.471-17.072-10.471-17.072V503.962z"/>
-			<path id="ship" fill-rule="evenodd" clip-rule="evenodd" fill="#2CBFD1" d="M706.306,586.401c-3.536,6.244-7.021,12.396-10.584,18.689
+	<path id="ship" fill-rule="evenodd" clip-rule="evenodd" fill="#2CBFD1" d="M706.306,586.401c-3.536,6.244-7.021,12.396-10.584,18.689
 				c18.944,4.238,26.226-1.794,27.321,2.203c2.948-0.978,50.892-1.089,51.815-2.865c4.338-8.33,9.572-16.799,11.215-25.81
 				c3.723-20.418,5.52-41.184,8.099-61.81c0.919,0.063,1.847,0.127,2.773,0.191c-1.379,18.443-2.757,36.889-4.206,56.328
 				c13.299,0.972,26.149,2.137,39.029,2.589c1.834,0.066,5.196-3.179,5.434-5.181c0.819-6.884,1.021-13.926,0.497-20.838
@@ -81,6 +128,17 @@
 				 M1027.927,502.056c-1.628-4.951-3.082-9.361-4.533-13.774c-1.883,1.596-5.113,2.997-5.389,4.835
 				C1017.245,498.164,1017.504,503.585,1027.927,502.056 M874.093,530.922v-16.718C865.227,519.262,865.22,520.919,874.093,530.922
 				 M884.356,534.422c0.595-0.008,1.19-0.017,1.787-0.027v-23.098c-0.597,0.002-1.192,0.009-1.787,0.011V534.422z"/>
+	<g id="fishing" cursor="pointer">
+		<g>
+			<path id="person" fill="#103844" d="M703.704,503.962l14.264,14.035c0,0,3.413,4.173,6.448,5.31c3.037,1.138,6.07,4.553,7.967,6.828
+				c1.898,2.277,6.448,0,6.448,0s-1.515-3.035-1.515-4.55c0-1.518,1.515-4.93,1.515-4.93s0.38-4.555,4.175-5.692
+				c3.792-1.138,9.192,2.653,7.63,7.585c-1.562,4.933-4.217,8.6-4.217,8.6l-0.757,2.402c0,0,0,3.035,3.413,3.792
+				c3.415,0.76,5.932,4.172,6.002,11.38c0.068,7.209-0.603,18.971-1.025,20.866c-0.422,1.898-3.415,12.138-3.415,12.138
+				s-2.32,3.035-4.597,2.277c-2.275-0.758-0.758-1.52,0.38-4.553c1.14-3.034-0.378-2.274,1.519-4.552
+				c1.896-2.275,0.378-24.659,0.378-24.659s-6.068,10.623-6.068,12.9c0,2.276,1.516,17.071,1.516,17.071s2.275,15.553,2.655,17.07
+				c0.38,1.516,4.217,13.36,4.217,13.36h-8.388l-5.312-14.5l-4.172-15.173l0.757,14.795l1.874,14.878l-9.839,0.015l-5.164-31.585
+				c0,0-0.148-8.345,4.024-19.726c4.174-11.38,3.037-20.105,3.037-20.105s-12.52-12.14-13.278-13.655
+				c-0.76-1.518-10.471-17.072-10.471-17.072V503.962z"/>
 			<path id="caught_fish" fill="#2CBFD1" d="M710.614,533.176c0,0,2.702-2.371,4.124-4.355c1.424-1.982,1.736-3.489,0.304-3.674
 				c-1.433-0.187-4.194-0.484-4.735-0.802c-0.543-0.318-1.564-0.514-1.817-1.721c-0.252-1.212-4.217-16.457-4.391-16.915
 				c0,0-0.81-4.066-0.955-4.765c-0.14-0.701-0.588-3.111-0.301-3.508c0.284-0.395,2.372-2.105,3.188-2.988
@@ -129,7 +187,6 @@
 			v54.861h1600v-89.059c0,0-100.635,58.537-149.541,55.041c-48.904-3.494-139.916-4.547-154.459-2.234
 			c-14.541,2.312-95.361,5.629-133.844-8.75C1123.674,924.932,1118.67,925.934,1118.67,925.934"/>
 
-			<g id="animals" cursor="pointer">
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M471.018,964.984c-11.498-4.143-13.801-14.15-18.834-22.35
 		c-2.848-4.627-8.303-8.023-13.25-10.795c-1.85-1.039-5.586,1.205-8.434,2.053c-2.205,0.664-4.357,1.488-6.539,2.238
 		c-0.303-0.664-0.605-1.324-0.914-1.979c2.34-1.357,4.68-2.715,7.736-4.48c-11.559-4.105-23.184-7.787-26.314-22.039
@@ -210,6 +267,7 @@
 		c0,0-3.765,6.768,0,12.09c3.766,5.32,2.625,9.414,2.777,10.973c0.152,1.559,1.615,6.012,5.59,10.465
 		c3.975,4.453,8.994,11.027,8.785,19.086s5.857,11.451,7.948,14.631c2.092,3.182,1.882,2.545,3.347,4.879
 		c1.463,2.332,3.91,7.252,12.881,12.299c0,0,5.451,3.006,5.803,9.879l-0.497,2.135h5.532V931.664z"/>
+	<g id="animals" cursor="pointer">
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M767.561,887.871c1.066-3.148,9.99,7.424,7.465-5.6
 		c3.285,0.449,4.256,3.213,3.734,7.467c1.742-1.369,2.828-3.393,3.734-5.602c4.025,0.123-2.855,12.139,3.732,5.602
 		c5.752,1.861-2.08,5.045-3.732,5.6c-0.555,4.908,7.24,1.469,5.6,7.467c-4.938-2.94-5.797-2.08-3.734,3.732
@@ -444,6 +502,7 @@
 		c-0.566-1.805-1.326-4.934,0.381-9.772c0,0-0.57,0-1.043,0.287c-0.475,0.283-10.903,8.058-13.559,10.336
 		c-2.655,2.273-12.328,10.238-13.466,11.473c-1.137,1.234-0.948,1.99-1.421,5.973c-0.476,3.982-2.466,13.275-8.629,15.457
 		C69.439,812.99,70.956,802.273,69.63,802.463z"/>
+	</g>
 	<path fill="#FFFFFF" d="M679.534,914.041c0,0-3.483-4.504-7.657-6.022c-4.173-1.517-2.656-6.83-2.656-8.348
 		c0-1.518-0.76-2.656-3.415-6.451c-2.656-3.793-0.758-4.174,0-7.967c0.759-3.795,3.415-6.072,0.759-11.006
 		c-2.656-4.932-5.137-7.719-5.415-14.482c-0.276-6.766,4.656-19.666,4.656-19.666s-1.898,11.004,1.138,14.799
@@ -492,18 +551,7 @@
 		c2.899,4.408,2.608,3.527,4.639,6.76c2.028,3.234,5.419,10.055,17.854,17.049c0,0,7.557,4.168,8.043,13.693l-0.688,2.959h7.668
 		V964.776z"/>
 	</g>
-	</g>
 
-	<g>
-		<path id="Hg2" style="display: none" fill="#F26E2A" d="M1210.362,197.781c0,6.885-5.58,12.464-12.465,12.464H1045.2c-6.883,0-12.465-5.579-12.465-12.464V56.509    c0-6.884,5.582-12.466,12.465-12.466h152.697c6.885,0,12.465,5.582,12.465,12.466V197.781z"/>
-		<g id="Hg">
-			<path id="Hg1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1172.492,149.482c0,4.94-4.004,8.943-8.943,8.943
-				h-109.556c-4.938,0-8.943-4.003-8.943-8.943V48.124c0-4.939,4.005-8.943,8.943-8.943h109.556c4.939,0,8.943,4.004,8.943,8.943
-				V149.482z"/>
-			<rect x="1056.781" y="52.385" fill="none" width="80.479" height="101.205"/>
-			<text transform="matrix(1 0 0 1 1056.7803 65.2988)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="17.9613">80</tspan><tspan x="-2.072" y="36.825" fill="#FFFFFF" font-family="'Helvetica'" font-size="41.4491">Hg</tspan><tspan x="0" y="63.628" fill="#FFFFFF" font-family="'Helvetica'" font-size="16.5796">Mercury</tspan><tspan x="0" y="79.379" fill="#FFFFFF" font-family="'Helvetica'" font-size="9.6715">200.59</tspan></text>
-		</g>
-	</g>
 	<g id="radars">
 		<circle fill="#103844" cx="472.128" cy="582.441" r="5.322"/>
 		<polyline fill="#103844" points="470.354,587.763 467.161,665.102 476.897,665.709 473.547,586.344 		"/>
@@ -533,12 +581,41 @@
 			</g>
 		</g>
 	</g>
+	<g id="bubbles">
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="246.767" cy="802.375" r="7.331"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="270.993" cy="888.629" r="3"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="361.578" cy="812.565" r="5.999"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="331.994" cy="786.424" r="3.466"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="326.13" cy="746.627" r="5.332"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="127.844" cy="885.275" r="3.405"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1136.133" cy="746.959" r="5.998"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="54.836" cy="821.377" r="3"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="521.269" cy="841.805" r="5.964"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="680.453" cy="731.361" r="3.703"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1207.291" cy="915.422" r="5.998"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1180.133" cy="759.555" r="3.406"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="649.123" cy="743" r="3"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="776.075" cy="733.162" r="5.999"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1064.525" cy="836.906" r="3.703"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1044.822" cy="866.393" r="3"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="977.568" cy="736.826" r="5.998"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="905.961" cy="826.773" r="3.703"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="886.258" cy="856.26" r="3"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="481.457" cy="721.588" r="3.703"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="469.512" cy="757.922" r="3"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1269.536" cy="727.835" r="7.331"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1354.345" cy="807.031" r="5.999"/>
+	</g>
+	<line id="bottom_line" fill="none" stroke="#2CBFD1" stroke-width="3" stroke-miterlimit="10" x1="-0.277" y1="979.009" x2="1600.5" y2="979.009"/>
+</g>
 	<g id="whole_planet">
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1403.089" cy="756.148" r="4.345"/>
+		<g id="Hg_line">
 		<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="1312.931,182.156 1229.125,93.969 
 		1172.261,93.969 	"/>
 		<path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" d="M1420.199,33.692
 			c-104.072,108.994-201.564,284.956-159.84,546.663"/>
+		</g>
 		<g id="planet" cursor="pointer">
 			<g>
 				<path id="planet_background" fill="#103844" stroke="#FFFFFF" stroke-width="2.5" stroke-miterlimit="10" d="M1597.707-2.5
@@ -7455,64 +7532,37 @@
 			</g>
 		</g>
 	</g>
-	<g id="bubbles">
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="246.767" cy="802.375" r="7.331"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="270.993" cy="888.629" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="361.578" cy="812.565" r="5.999"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="331.994" cy="786.424" r="3.466"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="326.13" cy="746.627" r="5.332"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="127.844" cy="885.275" r="3.405"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1136.133" cy="746.959" r="5.998"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="54.836" cy="821.377" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="521.269" cy="841.805" r="5.964"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="680.453" cy="731.361" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1207.291" cy="915.422" r="5.998"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1180.133" cy="759.555" r="3.406"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="649.123" cy="743" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="776.075" cy="733.162" r="5.999"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1064.525" cy="836.906" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1044.822" cy="866.393" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="977.568" cy="736.826" r="5.998"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="905.961" cy="826.773" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="886.258" cy="856.26" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="481.457" cy="721.588" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="469.512" cy="757.922" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1269.536" cy="727.835" r="7.331"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1354.345" cy="807.031" r="5.999"/>
-	</g>
-	<line id="bottom_line" fill="none" stroke="#2CBFD1" stroke-width="3" stroke-miterlimit="10" x1="-0.277" y1="979.009" x2="1600.5" y2="979.009"/>
+	
 	<g id="home_text">
 		<rect x="38.524" y="41.495" fill="none" width="1054.143" height="38.606"/>
 		<text transform="matrix(1 0 0 1 35.5244 76.0068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG: </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">MERCURY</tspan></text>
 		<rect x="39.125" y="92.966" fill="none" width="863.957" height="65.132"/>
 		<text transform="matrix(1 0 0 1 39.125 107.3457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+
+		<polygon id="button4-polygon" cursor="pointer" fill="#103844" points="1162.822,188.287 871.822,188.287 866.94,188.287 852.961,188.287 877.754,224.953     852.961,260.62 868.273,260.62 870.822,260.62 1161.822,260.62 1186.961,225.21   "/>
+		<polygon id="button3-polygon" cursor="pointer" fill="#103844" points="855.32,188.293 564.32,188.293 559.438,188.293 545.459,188.293 570.252,224.96 545.459,260.626     560.771,260.626 563.32,260.626 854.32,260.626 879.459,225.217   "/>
+		<polygon id="button2-polygon" cursor="pointer" fill="#103844" points="564.335,188.293 273.335,188.293 268.453,188.293 254.473,188.293 279.266,224.96     254.473,260.626 269.786,260.626 272.335,260.626 563.335,260.626 588.473,225.217   "/>
+		<polygon id="button1-polygon" cursor="pointer" fill="#103844" points="275.363,188.293 -15.637,188.293 -20.519,188.293 -34.498,188.293 -9.705,224.96 -34.498,260.626     -19.186,260.626 -16.637,260.626 274.363,260.626 299.502,225.217   "/>
+
 		<g id="button1" cursor="pointer">
-			<polygon fill="#103844" points="274.56,185.802 2.649,185.802 -1.912,185.802 -14.975,185.802 8.192,222.468 -14.975,258.135     -0.667,258.135 1.715,258.135 273.626,258.135 297.116,222.725   "/>
 			<rect x="40.533" y="201.231" fill="none" width="222.265" height="54.375"/>
 			<text transform="matrix(1 0 0 1 40.5332 211.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">WHERE DOES IT COME FROM?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Whomp whomp whomp whomp </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">glerp herp merp slerp</tspan></text>
 			<polygon opacity="0.3" fill="#FFFFFF" points="257.098,187.273 275.959,187.273 300.098,224.197 274.959,259.606 257.098,259.606 
 		281.891,223.94 	"/>
 		</g>
 		<g id="button2" cursor="pointer">
-			<polygon fill="#103844" points="564.546,186.789 292.635,186.789 288.073,186.789 275.011,186.789 298.177,223.455     275.011,259.122 289.319,259.122 291.701,259.122 563.611,259.122 587.101,223.712   "/>
 			<rect x="328.795" y="200.231" fill="none" width="222.265" height="54.375"/>
 			<text transform="matrix(1 0 0 1 328.7949 210.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">WHAT ARE THE RISKS?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM exposure can have serious </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">health impacts</tspan></text>
 			<polygon opacity="0.3" fill="#FFFFFF" points="545.359,188.273 564.221,188.273 588.359,225.197 563.221,260.606 545.359,260.606 
 		570.152,224.94 	"/>
 		</g>
 		<g id="button3" cursor="pointer">
-			<polygon fill="#103844" points="853.531,187.302 581.62,187.302 577.059,187.302 563.996,187.302 587.163,223.968     563.996,259.635 578.305,259.635 580.686,259.635 852.597,259.635 876.087,224.225   "/>
 			<rect x="617.057" y="199.231" fill="none" width="222.265" height="54.375"/>
 			<text transform="matrix(1 0 0 1 617.0566 209.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">WHAT IS ITS IMPACT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Variations in temperature and </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">topography can impact PM</tspan></text>
 			<polygon opacity="0.3" fill="#FFFFFF" points="833.496,188.273 852.357,188.273 876.496,225.197 851.357,260.606 833.496,260.606 
 		858.289,224.94 	"/>
 		</g>
-		<g id="button4" cursor="pointer">
-			<polygon fill="#103844" points="1121.216,188.802 869.779,188.802 865.561,188.802 853.482,188.802 874.904,225.468     853.482,261.135 866.713,261.135 868.915,261.135 1120.352,261.135 1142.073,225.725   "/>
-			<rect x="905.193" y="200.231" fill="none" width="222.266" height="54.375"/>
-			<text transform="matrix(1 0 0 1 905.1938 210.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM concentrations are monitored </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">on the ground and by satellite</tspan></text>
-		</g>
-	<g id="recommendations" cursor="pointer">
+		<g id="recommendations" cursor="pointer">
 		<g>
 			<polygon id="recs_triangle" fill="#103844" points="1431.357,188.273 1140.357,188.273 1135.476,188.273 1121.496,188.273 1146.289,224.94 
 				1121.496,260.606 1136.809,260.606 1139.357,260.606 1430.357,260.606 1455.496,225.197 		"/>
@@ -7522,6 +7572,12 @@
 		<rect x="1193.193" y="200.231" fill="none" width="222.266" height="58.375"/>
 		<text transform="matrix(1 0 0 1 1193.1934 210.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Future changes can improve the </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">impacts of PM</tspan></text>
 	</g>
+		<g id="button4" cursor="pointer">
+			<rect x="905.193" y="200.231" fill="none" width="222.266" height="54.375"/>
+			<text transform="matrix(1 0 0 1 905.1938 210.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM concentrations are monitored </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">on the ground and by satellite</tspan></text>
+			<polygon opacity="0.3" fill="#FFFFFF" points="1124.469,188.284 1143.331,188.284 1167.469,225.208 1142.331,260.617    1124.469,260.617 1149.262,224.951  "/>
+		</g>
+	
 	</g>
 </g>
 <g id="health_risks">
@@ -7619,7 +7675,7 @@
 			<line id="health_line4" stroke-dashoffset="31" stroke-dasharray="31" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="674.635" y1="304.5" x2="674.635" y2="275.357"/>
 			
 			<line id="health_line2" stroke-dashoffset="31" stroke-dasharray="31" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="1082.179" y1="305.162" x2="1082.179" y2="276.02"/>
-			<polyline id="main_line1" stroke-dashoffset="255" stroke-dasharray="255" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="1345.454,305.476 1345.454,276.333     1121.549,276.023   "/>
+			<polyline id="main_line1" stroke-dashoffset="-255" stroke-dasharray="255" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="1345.454,305.476 1345.454,276.333     1121.549,276.023   "/>
 			<line id="health_line3" stroke-dashoffset="31" stroke-dasharray="31" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="881.59" y1="304.5" x2="881.59" y2="275.357"/>
 			
 			<line id="health_line_hg" stroke-dashoffset="-54" stroke-dasharray="54" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="1114.201" y1="273.909" x2="1114.201" y2="225.905"/>
@@ -7861,6 +7917,7 @@
 				c1.021,0,1.851,0.83,1.851,1.852S84.794,1049.18,83.772,1049.18"/>
 		</g>
 	</g>
+
 
 </svg>
 </svg>
