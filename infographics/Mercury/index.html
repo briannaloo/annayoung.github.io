@@ -17,9 +17,11 @@ obj.addEventListener("load", function() {
 // hover over planet
 	$([object.getElementById("planet"), object.getElementById("button4"), object.getElementById("button4-polygon")]).hover(function() {
 		$(object.getElementById("planet_background")).attr("fill", "#F26E2A");
+		$(object.getElementById("marker_background")).attr("fill", "#F26E2A");
 		$(object.getElementById("button4-polygon")).attr("fill", "#F26E2A");
 	}, function() {
 		$(object.getElementById("planet_background")).attr("fill", "#103844");
+		$(object.getElementById("marker_background")).attr("fill", "#103844");
 		$(object.getElementById("button4-polygon")).attr("fill", "#103844");
 	});
 // hover over ship
@@ -104,7 +106,7 @@ var seconds = 1;
 			.append(createMotion(seconds, "go_back_animals.click + " + (2*seconds) + "s", "0,0", "-1600,0", "animals.click; button3.click"));
 
 		// background moves out
-		$([object.getElementById("mountains"), object.getElementById("smoke_stacks"), object.getElementById("radars")])
+		$([object.getElementById("mountains"), object.getElementById("smoke_stacks"), object.getElementById("radars"), object.getElementById("sea-mountain")])
 			.append(createMotion(seconds, "animals.click; button3.click", "0,0", "-1600,0", "go_back_animals.click"))
 			.append(createMotion(seconds, "go_back_animals.click + " + (2*seconds) + "s", "-1600,0", "0,0", "animals.click; button3.click"));
 
@@ -114,7 +116,8 @@ var seconds = 1;
 			.append(createMotion(seconds, "go_back_animals.click + " + (2*seconds) + "s", "1600,0", "0,0", "animals.click; button3.click"));
 
 		// plants & sea floor move to center
-		$(object.getElementById("plants"))
+		$([object.getElementById("plants"), object.getElementById("animals"),
+			 object.getElementById("bubbles")])
 			.append(createMotion(seconds, "animals.click; button3.click", "0,0", "200,0", "go_back_animals.click"))
 			.append(createMotion(seconds, "go_back_animals.click + " + (2*seconds) + "s", "200,0", "0,0", "animals.click; button3.click"));
 
@@ -125,7 +128,7 @@ var seconds = 1;
 		// ship moves up
 		$([object.getElementById("fishing"), object.getElementById("ship")])
 			.append(createMotion(seconds, "animals.click; button3.click", "0,0", "0,-325", "go_back_animals.click"))
-			.append(createMotion(seconds, "go_back_animals.click + " + (2*seconds) + "s", "0,-325", "0,0", "animals.click; button3.click"));
+			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "0,-325", "0,0", "animals.click; button3.click"));
 
 		// pyramid draws in
 		$(object.getElementById("pyramid"))
@@ -142,27 +145,21 @@ var seconds = 1;
 			.append(createAnimate("height", seconds, "go_back_animals.click", "1000", "0", "animals.click; button3.click", false));
 
 		// animals move
-		$(object.getElementById("starfish"))
-			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "200,0", "go_back_animals.click"))
-			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "200,0", "0,0", "animals.click; button3.click"));
 		$(object.getElementById("shark"))
-			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "-233,-423", "go_back_animals.click"))
-			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "-233,-423", "0,0", "animals.click; button3.click"));
+			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "-433,-423", "go_back_animals.click"))
+			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "-433,-423", "0,0", "animals.click; button3.click"));
 		$(object.getElementById("long_fish"))
-			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "50,-165", "go_back_animals.click"))
-			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "50,-165", "0,0", "animals.click; button3.click"));
-		$(object.getElementById("plankton"))
-			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "200,0", "go_back_animals.click"))
-			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "200,0", "0,0", "animals.click; button3.click"));
+			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "-150,-165", "go_back_animals.click"))
+			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "-150,-165", "0,0", "animals.click; button3.click"));
 		$(object.getElementById("fish4"))
-			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "115,-40", "go_back_animals.click"))
-			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "115,-40", "0,0", "animals.click; button3.click"));
-		$(object.getElementById("crab"))
-			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "200,0", "go_back_animals.click"))
-			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "200,0", "0,0", "animals.click; button3.click"));
+			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "-75,-40", "go_back_animals.click"))
+			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "-75,-40", "0,0", "animals.click; button3.click"));
+		$(object.getElementById("fish1"))
+			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "-200,0", "go_back_animals.click"))
+			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "-200,0", "0,0", "animals.click; button3.click"));
 		$(object.getElementById("swordfish"))
-			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "650,-322", "go_back_animals.click"))
-			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "650,-322", "0,0", "animals.click; button3.click"));
+			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "450,-322", "go_back_animals.click"))
+			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "450,-322", "0,0", "animals.click; button3.click"));
 	}
 
 	function recsClicked(object, seconds) {
@@ -316,7 +313,7 @@ var seconds = 1;
 		$(object.getElementById("whole_planet"))
 			.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "600,0", "go_back_fishing.click"))
 			.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "600,0", "0,0", "fishing.click; button2.click"));
-		$(object.getElementById("sea"))
+		$([object.getElementById("sea"), object.getElementById("animals")])
 			.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "0,400", "go_back_fishing.click"))
 			.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "0,400", "0,0", "fishing.click; button2.click"));
 
