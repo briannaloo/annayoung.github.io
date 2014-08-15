@@ -34,7 +34,8 @@
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="984.878" cy="654.661" r="2.999"/>
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="654.35" cy="566.333" r="5.964"/>
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="786.216" cy="628.546" r="3.702"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1083.301" cy="800.136" r="5.999"/>
+		<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M1083.301,794.138c3.313,0,5.999,2.685,5.999,5.998
+			c0,3.315-2.686,6-5.999,6"/>
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1054.879" cy="846.17" r="3.406"/>
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="782.165" cy="704.448" r="7.331"/>
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="787.826" cy="524.476" r="7.332"/>
@@ -44,8 +45,9 @@
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1057.879" cy="609.69" r="3"/>
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="764.386" cy="810.621" r="3.703"/>
 		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="744.684" cy="840.107" r="3"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1212.878" cy="746.19" r="3.703"/>
-		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="1193.176" cy="775.677" r="3"/>
+		<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M1216.581,746.19c0,2.045-1.657,3.701-3.702,3.701
+			s-3.703-1.656-3.703-3.701"/>
+		<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M1190.176,775.677c0-1.656,1.342-3,3-3c1.656,0,3,1.344,3,3"/>
 	</g>
 	<path fill="#FFFFFF" d="M984.071,502.435c-0.533,0.23-0.918,0.361-1.143,0.361c-7.883,7.176-14.424,15.447-19.611,24.809
 		c-5.17,9.35-8.586,19.326-10.234,29.938c-0.128,0-0.209,0.023-0.269,0.068c-0.055,0.064-0.143,0.098-0.264,0.098
