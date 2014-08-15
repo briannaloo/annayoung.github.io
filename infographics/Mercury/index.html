@@ -102,7 +102,7 @@ var seconds = 1;
 		// planet moves into center
 		$([object.getElementById("planet"), object.getElementById("marker-hide"), object.getElementById("planet-stroke")])
 			.append(createMotion(seconds, "planet.click; button4.click", "0,0", "-500,0", "go_back_planet.click", false))
-			.append(createMotion(seconds, "go_back_planet.click", "-500,0", "0,0", "planet.click; button4.click", false));
+			.append(createMotion(seconds, "go_back_planet.click + " + seconds + "s", "-500,0", "0,0", "planet.click; button4.click", false));
 
 		// text comes in
 		$(object.getElementById("planet-text"))

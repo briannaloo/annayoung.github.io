@@ -2203,6 +2203,7 @@
 	<g id="planet-info">
 		<polygon id="go_back_planet" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.154,37.456 37.045,56.565 56.154,75.675  "/>
 		<g id="planet-text" visibility="hidden">
+			<rect x="56.113" y="28.684" opacity="0.8" fill="#103844" width="895.904" height="140.316"/>
 			<rect x="73.551" y="39.262" fill="none" width="1054.142" height="38.606"/>
 			<text transform="matrix(1 0 0 1 70.5503 73.7734)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">GLOBAL RISK AND POLICY</tspan></text>
 			<rect x="74.15" y="90.732" fill="none" width="818.36" height="65.132"/>
