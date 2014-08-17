@@ -73,7 +73,7 @@ var seconds = 1;
 // hide elements from home page
 	// text moves out
 	$(object.getElementById("home_text")).append(createMotion(seconds, "fishing.click; smoke_stacks.click; animals.click; planet.click; recommendations.click; button1.click; button2.click; button3.click; button4.click", "0,0", "-2000,0", "go_back_fishing.click + " + (1.5*seconds) + "s; go_back_smoke_stacks.click + " + seconds + "s; go_back_animals.click + " + seconds + "s; go_back_planet.click + " + seconds + "s; go_back_recs.click + " + (seconds) + "s"))
-		.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s; go_back_smoke_stacks.click + " + seconds + "s; go_back_animals.click + " + (2*seconds) + "s; go_back_planet.click + " + seconds + "s; go_back_recs.click + " + (2*seconds) + "s", "-2000,0", "0,0", "fishing.click; smoke_stacks.click; animals.click; planet.click; recommendations.click; button1.click; button2.click; button3.click; button4.click"));
+		.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s; go_back_smoke_stacks.click + " + seconds + "s; go_back_animals.click + " + (2*seconds) + "s; go_back_planet.click + " + (2*seconds) + "s; go_back_recs.click + " + (2*seconds) + "s", "-2000,0", "0,0", "fishing.click; smoke_stacks.click; animals.click; planet.click; recommendations.click; button1.click; button2.click; button3.click; button4.click"));
 
 	shipClicked(object, seconds);
 	recsClicked(object, seconds);
@@ -83,17 +83,24 @@ var seconds = 1;
 
 	function planetClicked(object, seconds) {
 		$([object.getElementById("planet"), object.getElementById("button4")]).click(function() {
-			$(object.getElementById("go_back_planet")).delay(0*seconds*1000).fadeIn(500);
+			$(object.getElementById("planet_background")).attr("fill", "#103844");
+			$(object.getElementById("marker_background")).attr("fill", "#103844");
+			$(object.getElementById("go_back_planet")).delay(3.5*seconds*1000).fadeIn(500);
 			$([object.getElementById("Hg"), object.getElementById("Hg_line")]).fadeOut(seconds*1000);
 			$(object.getElementById("sea-floor-rect")).delay(500).fadeIn(1000);
+			$(object.getElementById("marker-hide")).fadeOut(500);
+			$(object.getElementById("region-circles")).delay(2.5*seconds*1000).fadeIn(500);
 
 			$(object.getElementById("planet")).attr("cursor", "auto");
 			$(object.getElementById("planet")).attr("pointer-events", "none");
 		});
 		$(object.getElementById("go_back_planet")).click(function() {
 			$(object.getElementById("go_back_planet")).fadeOut(seconds*1000);
-			$([object.getElementById("Hg"), object.getElementById("Hg_line")]).delay(1.5*seconds*1000).fadeIn(seconds*500);
-			$(object.getElementById("sea-floor-rect")).fadeOut(500);
+			$([object.getElementById("Hg"), object.getElementById("Hg_line")]).delay(2.5*seconds*1000).fadeIn(seconds*500);
+			$(object.getElementById("sea-floor-rect")).delay(1000).fadeOut(500);
+			$(object.getElementById("marker-hide")).delay(2*seconds*1000).fadeIn(500);
+			$(object.getElementById("region-circles")).fadeOut(500);
+			$(object.getElementById("region-markers")).delay(500).fadeOut(500);
 
 			$(object.getElementById("planet")).attr("cursor", "pointer");
 			$(object.getElementById("planet")).attr("pointer-events", "auto");
@@ -102,33 +109,114 @@ var seconds = 1;
 		// planet moves into center
 		$([object.getElementById("planet"), object.getElementById("marker-hide"), object.getElementById("planet-stroke")])
 			.append(createMotion(seconds, "planet.click; button4.click", "0,0", "-500,0", "go_back_planet.click", false))
-			.append(createMotion(seconds, "go_back_planet.click + " + seconds + "s", "-500,0", "0,0", "planet.click; button4.click", false));
+			.append(createMotion(seconds, "go_back_planet.click + " + (2*seconds) + "s", "-500,0", "0,0", "planet.click; button4.click", false));
 
 		// text comes in
 		$(object.getElementById("planet-text"))
 			.append(createMotion(seconds, "planet.click; button4.click", "1600,0", "0,0", "go_back_planet.click"))
 			.append(createSet("visibility", "visible", "planet.click; button4.click", "go_back_planet.click + " + (2*seconds) + "s", false))
-			.append(createMotion(seconds, "go_back_planet.click + " + (seconds) + "s", "0,0", "1600,0", "planet.click; button4.click"));
+			.append(createMotion(seconds, "go_back_planet.click + " + (2*seconds) + "s", "0,0", "1600,0", "planet.click; button4.click"));
 
 		// background moves out
 		$([object.getElementById("mountains+ship"), object.getElementById("smoke_stacks"), object.getElementById("radars"), object.getElementById("sea-mountain"), object.getElementById("plants"), object.getElementById("bubbles"), object.getElementById("animals"), object.getElementById("sea-floor")])
 			.append(createMotion(seconds, "planet.click; button4.click", "0,0", "-1800,0", "go_back_planet.click"))
-			.append(createMotion(seconds, "go_back_planet.click + " + (seconds) + "s", "-1800,0", "0,0", "planet.click; button4.click"));
+			.append(createMotion(seconds, "go_back_planet.click + " + (2*seconds) + "s", "-1800,0", "0,0", "planet.click; button4.click"));
 
 		// outline of planet
 		$(object.getElementById("planet-stroke"))
 			.append(createMotion(seconds, "planet.click + " + seconds + "s; button4.click + " + seconds + "s", "-500,0", "-1325,0", "go_back_planet.click", false))
-			.append(createMotion(seconds, "go_back_planet.click", "-1325,0", "-500,0", "planet.click; button4.click", false));
+			.append(createMotion(seconds, "go_back_planet.click + " + seconds + "s", "-1325,0", "-500,0", "planet.click; button4.click", false));
 
 		// planet unfolds
 		$(object.getElementById("planet1"))
 			.append(createMotion(seconds, "planet.click + " + seconds + "s; button4.click + " + seconds + "s", "0,0", "-825,0", "go_back_planet.click", false))
-			.append(createMotion(seconds, "go_back_planet.click", "-825,0", "0,0", "planet.click", false));
+			.append(createMotion(seconds, "go_back_planet.click + " + seconds + "s", "-825,0", "0,0", "planet.click", false));
 
 		$(object.getElementById("planet-middle"))
 			.append(createAnimate("width", seconds, "planet.click + " + seconds + "s; button4.click + " + seconds + "s", "0", "828", "go_back_planet.click", false, false))
-			.append(createAnimate("width", seconds, "go_back_planet.click", "828", "0", "planet.click; button4.click", false, false));
+			.append(createAnimate("width", seconds, "go_back_planet.click + " + seconds + "s", "828", "0", "planet.click; button4.click", false, false));
 
+		// certain countries fade to blue
+		$(object.getElementsByClassName("2CBFD1")).each(function() {
+			$(this)
+				.append(createAnimate("fill", seconds/2.0, "planet.click + " + (2*seconds) + "s; button4.click + " + (2*seconds) + "s", "#FFFFFF", "#2CBFD1", "go_back_planet.click", false))
+				.append(createAnimate("fill", seconds/2.0, "go_back_planet.click", "#2CBFD1", "#FFFFFF", "planet.click; button4.click", false))
+				.append(createAnimate("opacity", seconds/2.0, "planet.click + " + (2*seconds) + "s; button4.click + " + (2*seconds) + "s", "1", "0.2", "go_back_planet.click", false))
+				.append(createAnimate("opacity", seconds/2.0, "go_back_planet.click", "0.2", "1", "planet.click; button4.click", false));
+		});
+
+		// map circles draw
+		$(object.getElementById("regions_close")).click(function() {
+			$(object.getElementById("region-circles")).fadeIn(500);
+			$(object.getElementById("region-markers")).delay(500).fadeOut(500);
+		});
+		$(object.getElementById("regions_open")).click(function() {
+			$(object.getElementById("region-circles")).fadeOut(500);
+			$(object.getElementById("region-markers")).delay(500).fadeIn(500);
+		});
+		$(object.getElementById("region-circles")).find('circle').each(function() {$(this)
+			.append(createAnimate("stroke-dashoffset", seconds*.75, "planet.click + 2.5s; button4.click + 2.5s", "100", "0", "go_back_planet.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/4.0, "go_back_planet.click", "0", "100", "planet.click; button4.click", false));
+		});
+
+		// text for boxes draw
+		$(object.getElementById("minimata-texts"))
+			.append(createSet("visibility", "visible", "planet.click + " + (2.75*seconds) + "s; button4.click + " + (2.75*seconds) + "s", "go_back_planet.click + " + (seconds/2.0) + "s", false));
+		// lines draw
+		$(object.getElementById("minimata-line"))
+			.append(createAnimate("stroke-dashoffset", seconds, "planet.click + " + (2.75*seconds) + "s; button4.click + " + (2.75*seconds) + "s", "360", "0", "go_back_planet.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_planet.click", "0", "360", "planet.click; button4.click", false));
+		$(object.getElementById("regions-line"))
+			.append(createAnimate("stroke-dashoffset", seconds, "planet.click + " + (2.75*seconds) + "s; button4.click + " + (2.75*seconds) + "s", "380", "0", "go_back_planet.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_planet.click", "0", "380", "planet.click; button4.click", false));
+		// buttons
+		$(object.getElementById("minimata_open"))
+			.append(createSet("visibility", "visible", "planet.click + " + (3.75*seconds) + "s; button4.click + " + (3.75*seconds) + "s; minimata_close.click", "go_back_planet.click; minimata_open.click;", false));
+		$(object.getElementById("regions_open"))
+			.append(createSet("visibility", "visible", "planet.click + " + (3.75*seconds) + "s; button4.click + " + (3.75*seconds) + "s; regions_close.click + .5s", "go_back_planet.click; regions_open.click;", false));
+		$(object.getElementById("minimata_close"))
+			.append(createSet("visibility", "visible", "minimata_open.click", "go_back_planet.click; minimata_close.click;", false));
+		$(object.getElementById("regions_close"))
+			.append(createSet("visibility", "visible", "regions_open.click + 1.5s", "go_back_planet.click; regions_close.click;", false));
+		// text box opens
+		$(object.getElementById("minimata-clip-rect"))
+			.append(createAnimate("height", seconds/2.0, "minimata_open.click", "0", "261", "go_back_planet.click; minimata_close.click", false))
+			.append(createAnimate("height", seconds/2.0, "minimata_close.click; go_back_planet.click", "261", "0", "minimata_open.click; planet.click; button4.click", false));
+		$(object.getElementById("minimata-text-box"))
+			.append(createSet("visibility", "visible", "minimata_open.click", "minimata_close.click + " + (seconds/4.0) + "s; go_back_planet.click + " + (seconds/4.0) + "s", false));
+
+		// markers draw when open regions
+		$(object.getElementById("data-gap-line"))
+			.append(createSet("visibility", "visible", "regions_open.click + 1s", "regions_close.click + .5s; go_back_planet.click + .5s", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "regions_open.click + 1s", "310", "0", "go_back_planet.click; regions_close.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_planet.click; regions_close.click", "0", "310", "regions_open.click; planet.click; button4.click", false));
+		$(object.getElementById("gap-text"))
+			.append(createSet("visibility", "visible", "regions_open.click + 1s", "regions_close.click + .5s; go_back_planet.click + .5s", false));
+		// lines from flags draw
+		$(object.getElementById("data-gap-lines")).children().each(function() {
+			var open = $(this).attr("class");
+			var close = open + "close";
+			var offset = $(this).attr("stroke-dashoffset");
+			$(this)
+			.append(createSet("visibility", "visible", open + ".click", "regions_close.click + .5s; go_back_planet.click + .5s; " + close + ".click + .5s", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, open + ".click", offset, "0", "go_back_planet.click; regions_close.click; " + close + ".click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_planet.click; regions_close.click; " + close + ".click", "0", offset, "planet.click; button4.click; " + open + ".click", false));
+
+			$(object.getElementById(open + "-text"))
+				.append(createSet("visibility", "visible", open + ".click + .5s", "regions_close.click; go_back_planet.click; " + close + ".click", false));
+			$(object.getElementById(open + "-clip")).find('rect')
+				.append(createAnimate("height", seconds/2.0, open + ".click + .5s", "0", "70.5", "go_back_planet.click; regions_close.click; " + close + ".click", false))
+				.append(createAnimate("height", seconds/2.0, "go_back_planet.click; regions_close.click; " + close + ".click", "70.5", "0", "planet.click; button4.click; " + open + ".click", false));
+
+			$(object.getElementById(open + "")).click(function() {
+				$(this).attr("visibility", "hidden");
+				$(object.getElementById(close)).attr("visibility", "visible");
+			});
+			$(object.getElementById(close)).click(function() {
+				$(this).attr("visibility", "hidden");
+				$(object.getElementById(open + "")).attr("visibility", "visible");
+			});
+		});
 	}
 
 	function fishClicked(object, seconds) {
