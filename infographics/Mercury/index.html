@@ -84,11 +84,14 @@ var seconds = 1;
 
 	function emissionsClicked(object, seconds) {
 		$([object.getElementById("smoke_stacks"), object.getElementById("button1"), object.getElementById("mountains")]).click(function() {
+			$(object.getElementById("radars")).fadeOut(1000);
 			$(object.getElementById("map-point")).delay(3*seconds*1000).fadeIn(1000);
 			$(object.getElementById("mountains")).attr("fill", "#FFFFFF");
 			$(object.getElementById("bubbles1")).delay(seconds*1000).fadeIn(2000);
 			$(object.getElementById("bubbles2")).delay(1.5*seconds*1000).fadeIn(2000);
 			$(object.getElementById("bubbles3")).delay(2*seconds*1000).fadeIn(2000);
+
+			$(object.getElementById("emissions-caption")).delay(5.5*seconds*1000).fadeIn(1000);
 
 
 			$([object.getElementById("planet"), object.getElementById("animals"), object.getElementById("fishing"), object.getElementById("mountains"), object.getElementById("smoke_stacks")]).attr("cursor", "auto");
@@ -97,6 +100,8 @@ var seconds = 1;
 		$(object.getElementById("go_back_smoke_stacks")).click(function() {
 			$(object.getElementById("map-point")).delay(1000).fadeOut(1000);
 			$([object.getElementById("bubbles1"), object.getElementById("bubbles2"), object.getElementById("bubbles3")]).fadeOut(500);
+			$(object.getElementById("emissions-caption")).fadeOut(500);
+			$(object.getElementById("radars")).delay(2*seconds*1000).fadeIn(500);
 
 			$([object.getElementById("planet"), object.getElementById("animals"), object.getElementById("fishing"), object.getElementById("mountains"), object.getElementById("smoke_stacks")]).attr("cursor", "pointer");
 			$([object.getElementById("planet"), object.getElementById("animals"), object.getElementById("fishing"), object.getElementById("mountains"), object.getElementById("smoke_stacks")]).attr("pointer-events", "auto");
@@ -123,19 +128,19 @@ var seconds = 1;
 		$(object.getElementById("eruption-bubbles"))
 			.append(createSet("visibility", "visible", "smoke_stacks.click + 3.5s; button1.click + 3.5s; mountains.click + 3.5s", "go_back_smoke_stacks.click + " + (1*seconds) + "s", false))
 		$(object.getElementById("eruption1"))
-			.append(createAnimate("opacity", 1.5*seconds, "smoke_stacks.click + 3.5s; button1.click + 3.5s; mountains.click + 3.5s", "0", "1", "go_back_smoke_stacks.click", false))
+			.append(createAnimate("opacity", 1*seconds, "smoke_stacks.click + 3.5s; button1.click + 3.5s; mountains.click + 3.5s", "0", "1", "go_back_smoke_stacks.click", false))
 			.append(createAnimate("opacity", 0.5*seconds, "go_back_smoke_stacks.click", "1", "0", "smoke_stacks.click; mountains.click; button1.click", false));
 		$(object.getElementById("eruption2"))
-			.append(createAnimate("opacity", 1.5*seconds, "smoke_stacks.click + 4s; button1.click + 4s; mountains.click + 4s", "0", "1", "go_back_smoke_stacks.click", false))
+			.append(createAnimate("opacity", 1*seconds, "smoke_stacks.click + 3.75s; button1.click + 3.75s; mountains.click + 3.75s", "0", "1", "go_back_smoke_stacks.click", false))
 			.append(createAnimate("opacity", 0.5*seconds, "go_back_smoke_stacks.click", "1", "0", "smoke_stacks.click; mountains.click; button1.click", false));
 		$(object.getElementById("eruption3"))
-			.append(createAnimate("opacity", 1.5*seconds, "smoke_stacks.click + 4.5s; button1.click + 4.5s; mountains.click + 4.5s", "0", "1", "go_back_smoke_stacks.click", false))
+			.append(createAnimate("opacity", 1*seconds, "smoke_stacks.click + 4s; button1.click + 4s; mountains.click + 4s", "0", "1", "go_back_smoke_stacks.click", false))
 			.append(createAnimate("opacity", 0.5*seconds, "go_back_smoke_stacks.click", "1", "0", "smoke_stacks.click; mountains.click; button1.click", false));
 		$(object.getElementById("eruption4"))
-			.append(createAnimate("opacity", 1.5*seconds, "smoke_stacks.click + 4.5s; button1.click + 4.5s; mountains.click + 4.5s", "0", "1", "go_back_smoke_stacks.click", false))
+			.append(createAnimate("opacity", 1*seconds, "smoke_stacks.click + 4.25s; button1.click + 4.25s; mountains.click + 4.25s", "0", "1", "go_back_smoke_stacks.click", false))
 			.append(createAnimate("opacity", 0.5*seconds, "go_back_smoke_stacks.click", "1", "0", "smoke_stacks.click; mountains.click; button1.click", false));
 		$(object.getElementById("eruption5"))
-			.append(createAnimate("opacity", seconds, "smoke_stacks.click + 5s; button1.click + 5s; mountains.click + 5s", "0", "1", "go_back_smoke_stacks.click", false))
+			.append(createAnimate("opacity", seconds, "smoke_stacks.click + 4.5s; button1.click + 4.5s; mountains.click + 4.5s", "0", "1", "go_back_smoke_stacks.click", false))
 			.append(createAnimate("opacity", 0.5*seconds, "go_back_smoke_stacks.click", "1", "0", "smoke_stacks.click; mountains.click; button1.click", false));
 
 		// lava flows
@@ -144,6 +149,12 @@ var seconds = 1;
 		$(object.getElementById("lava2-clip")).find('rect')
 			.append(createAnimate("height", 2*seconds, "smoke_stacks.click + 3.5s; button1.click + 3.5s; mountains.click + 3.5s", "0", "400", "go_back_smoke_stacks.click", false))
 			.append(createAnimate("height", seconds/2.0, "go_back_smoke_stacks.click", "400", "0", "smoke_stacks.click; mountains.click; button1.click", false));
+
+		// cycle circles
+		$(object.getElementById("cycle1")).find("rect")
+			.append(createAnimate("y", 2*seconds, "smoke_stacks.click + 5.5s; button1.click + 5.5s; mountains.click + 5.5s", "320", "600", "go_back_smoke_stacks.click", true));
+		$(object.getElementById("cycle2")).find("rect")
+			.append(createAnimate("y", 2*seconds, "smoke_stacks.click + 5.5s; button1.click + 5.5s; mountains.click + 5.5s", "350", "630", "go_back_smoke_stacks.click", true));
 
 
 		/*$(object.getElementById("INTRO_SLIDE"))

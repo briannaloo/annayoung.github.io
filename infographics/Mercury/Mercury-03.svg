@@ -9387,12 +9387,12 @@
 	<rect x="46.693" y="550.08" fill="none" width="414.892" height="53.448"/>
 	<text transform="matrix(1 0 0 1 100.2168 563.3364)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">1</tspan><tspan x="13.348" y="4" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">/</tspan><tspan x="20.016" y="7" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">3</tspan><tspan x="33.363" y="4" fill="#F26E2A" font-family="'Helvetica'" font-size="20"> POINT SOURCE EMISSIONS</tspan><tspan x="65.005" y="28.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">2</tspan><tspan x="78.353" y="32.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">/</tspan><tspan x="85.021" y="35.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">3</tspan><tspan x="98.368" y="32.8" fill="#F26E2A" font-family="'Helvetica'" font-size="20"> REEMISSIONS</tspan></text>
 	<g>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#F9A11D" d="M314.12,665.247c6.574,0,13.147,0,19.721,0
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#F9A11D" d="M338.12,665.247c6.574,0,13.147,0,19.721,0
 			c-13.255,14.279-23.755,24.279-35.855,35.855c-11.4-11.576-21.4-22.576-32.27-35.855c7.171,0,14.342,0,21.513,0
-			c0.128-31.203-18.299-43.851-44.819-48.404C281.659,603.803,311.774,629.568,314.12,665.247z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#F9A11D" d="M253.166,668.247c-6.574,0-13.146,0-19.721,0
+			c0.128-31.203-18.299-43.851-44.819-48.404C305.659,603.803,335.774,629.568,338.12,665.247z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#F9A11D" d="M241.166,668.247c-6.574,0-13.146,0-19.721,0
 			c0.603,31.071,15.983,47.363,46.612,48.405c-36.892,16.401-73.348-10.525-73.504-48.405c-6.574,0-13.146,0-19.721,0
-			c10.753-10.221,19.753-21.721,32.271-34.062C229.586,645.026,245.586,659.526,253.166,668.247z"/>
+			c10.753-10.221,19.753-21.721,32.271-34.062C217.586,645.026,233.586,659.526,241.166,668.247z"/>
 	</g>
 	<g>
 		<path fill="#F9A11D" d="M107.77,269.198c0,12.859,10.422,23.281,23.279,23.281c12.857,0,23.281-10.422,23.281-23.281

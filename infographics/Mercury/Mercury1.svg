@@ -5,6 +5,13 @@
 	 viewBox="0 0 1600 1150" enable-background="new 0 0 1600 1150" xml:space="preserve">
  <svg>
  <defs>
+ 	<clipPath id="cycle1">
+ 		<rect width="190" height="220" x="264" y="320" />
+ 	</clipPath>
+ 	<clipPath id="cycle2">
+ 		<rect width="150" height="110" x="150" y="350" transform="rotate(180,221,678)" />
+ 	</clipPath>
+
  	<clipPath id="gap-clip">
  		<rect width="295.485" height="0" x="395.398" y="901.5"/>
  	</clipPath>
@@ -2479,6 +2486,13 @@
 			<path fill-rule="evenodd" clip-rule="evenodd" fill="#F26E2A" d="M633.769,384.69c3.135,0.465,8.139,0.061,10.08,1.721    c-5.941,7.26-13.156,12.244-15.84,22.76c-0.967-0.475-1.342-1.539-1.441-2.881c0-2.879,0-5.76,0-8.639    C627.34,391.702,630.662,388.303,633.769,384.69z"/>
 			<path fill-rule="evenodd" clip-rule="evenodd" fill="#F26E2A" d="M633.664,560.414c8.236-37.296,0.076-53.613-13.68-72.749    c-6.176-8.589-14.008-16.936-14.4-25.605c-0.91-20.111,20.268-25.727,33.119-32.671c8.732-4.716,24.965-12.982,25.201-23.84    c0.242-11.171-11.789-13.387-14.68-19.425c9.346,3.6,20.865,8.635,21.16,21.191c0.324,13.888-14.488,22.115-23.762,27.373    c-8.318,4.716-26.127,11.483-26.639,23.84c-0.387,9.346,8.82,15.528,14.4,21.193c19.869,20.168,32.301,36.963,29.519,79.467    C653.824,559.188,643.744,560.414,633.664,560.414z"/>
 			<path fill-rule="evenodd" clip-rule="evenodd" fill="#F26E2A" d="M634.664,557.961c0,0-22.592,56.011-95.924,106.888l70.666,0.404    c0,0,48.328-70.435,54.498-106.081L634.664,557.961z"/>
+		</g>
+		<g id="emissions-caption" style="display: none">
+			<text transform="matrix(1 0 0 1 100.1309 563.3101)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">1</tspan><tspan x="13.348" y="4" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">/</tspan><tspan x="20.016" y="7" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">3</tspan><tspan x="33.363" y="4" fill="#F26E2A" font-family="'Helvetica'" font-size="20"> POINT SOURCE EMISSIONS</tspan><tspan x="65.005" y="28.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">2</tspan><tspan x="78.353" y="32.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">/</tspan><tspan x="85.021" y="35.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">3</tspan><tspan x="98.368" y="32.8" fill="#F26E2A" font-family="'Helvetica'" font-size="20"> REEMISSIONS</tspan></text>
+			<g id="emissions-cycle">
+				<path clip-path="url(#cycle1)" fill-rule="evenodd" clip-rule="evenodd" fill="#F9A11D" d="M338.12,665.247c6.574,0,13.147,0,19.721,0    c-13.255,14.279-23.755,24.279-35.855,35.855c-11.4-11.576-21.4-22.576-32.27-35.855c7.171,0,14.342,0,21.513,0    c0.128-31.203-18.299-43.851-44.819-48.404C305.659,603.803,335.774,629.568,338.12,665.247z"/>
+				<path clip-path="url(#cycle2)" fill-rule="evenodd" clip-rule="evenodd" fill="#F9A11D" d="M241.166,668.247c-6.574,0-13.146,0-19.721,0    c0.603,31.071,15.983,47.363,46.612,48.405c-36.892,16.401-73.348-10.525-73.504-48.405c-6.574,0-13.146,0-19.721,0    c10.753-10.221,19.753-21.721,32.271-34.062C217.586,645.026,233.586,659.526,241.166,668.247z"/>
+			</g>
 		</g>
 	</g>
 
