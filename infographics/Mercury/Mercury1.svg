@@ -2999,7 +2999,7 @@
 			</g>
 			<g id="emissions-boxes" visibility="hidden">
 				<g id="industrial_sources">
-					<g id="industrial-text" clip-path="url(#industrial-clip)">
+					<g id="industrial-text" clip-path="url(#industrial-clip)" visibility="hidden">
 						<rect x="291.852" y="176.333" opacity="0.8" fill="#2CBFD1" width="262" height="129"/>
 						<rect x="301.874" y="189.331" fill="none" width="235.488" height="91.496"/>
 						<text transform="matrix(1 0 0 1 301.8741 197.958)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
@@ -3015,7 +3015,7 @@
 				</g>
 				<g id="methyl">
 
-					<g id="methyl-text" clip-path="url(#methyl-clip)">
+					<g id="methyl-text" clip-path="url(#methyl-clip)" visibility="hidden">
 						<rect x="653.955" y="819.146" opacity="0.8" fill="#2CBFD1" width="282.184" height="149.184"/>
 						<rect x="663.978" y="833.979" fill="none" width="260.259" height="105.256"/>
 						<text transform="matrix(1 0 0 1 663.9775 842.6064)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>

@@ -194,9 +194,9 @@ var seconds = 1;
 			.append(createSet("visibility", "visible", "methyl_close.click; smoke_stacks.click + 17s; button1.click + 17s; mountains.click + 17s", "go_back_smoke_stacks.click; methyl_open.click", false));
 		$(object.getElementById("industrial_close"))
 			.append(createSet("visibility", "visible", "industrial_open.click", "go_back_smoke_stacks.click; industrial_close.click", false));
-			$(object.getElementById("natural_close"))
+		$(object.getElementById("natural_close"))
 			.append(createSet("visibility", "visible", "natural_open.click", "go_back_smoke_stacks.click; natural_close.click", false));
-			$(object.getElementById("methyl_close"))
+		$(object.getElementById("methyl_close"))
 			.append(createSet("visibility", "visible", "methyl_open.click", "go_back_smoke_stacks.click; methyl_close.click", false));
 
 		$(object.getElementById("industrial-clip")).find('rect')
@@ -205,6 +205,11 @@ var seconds = 1;
 		$(object.getElementById("methyl-clip")).find('rect')
 			.append(createAnimate("height", seconds/2.0, "methyl_open.click", "0", "150", "go_back_smoke_stacks.click; methyl_close.click", false))
 			.append(createAnimate("height", seconds/2.0, "methyl_close.click; go_back_smoke_stacks.click", "150", "0", "methyl_open.click; smoke_stacks.click; mountains.click; button1.click", false));
+
+		$(object.getElementById("industrial-text"))
+			.append(createSet("visibility", "visible", "industrial_open.click", "go_back_smoke_stacks.click + 0.5s; industrial_close.click + 0.5s", false));
+		$(object.getElementById("methyl-text"))
+			.append(createSet("visibility", "visible", "methyl_open.click", "go_back_smoke_stacks.click + 0.5s; methyl_close.click + 0.5s", false));
 
 		// expand methyl-mercury text box
 		$(object.getElementById("methyl_open")).click(function() {
