@@ -1697,42 +1697,38 @@
 		<rect x="39.125" y="92.966" fill="none" width="863.957" height="65.132"/>
 		<text transform="matrix(1 0 0 1 39.125 107.3457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 
-		<g id="button4" cursor="pointer">
-			<polygon id="button4-polygon" cursor="pointer" fill="#103844" points="1162.822,188.287 871.822,188.287 866.94,188.287 852.961,188.287 877.754,224.953     852.961,260.62 868.273,260.62 870.822,260.62 1161.822,260.62 1186.961,225.21   "/>
-			<rect x="905.193" y="200.231" fill="none" width="222.266" height="54.375"/>
-			<text transform="matrix(1 0 0 1 905.1938 210.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM concentrations are monitored </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">on the ground and by satellite</tspan></text>
-			<polygon opacity="0.3" fill="#FFFFFF" points="1124.469,188.284 1143.331,188.284 1167.469,225.208 1142.331,260.617    1124.469,260.617 1149.262,224.951  "/>
-		</g>
 		<g id="recommendations" cursor="pointer">
 			<g>
 				<polygon id="recs_triangle" fill="#103844" points="1431.357,188.273 1140.357,188.273 1135.476,188.273 1121.496,188.273 1146.289,224.94 
 					1121.496,260.606 1136.809,260.606 1139.357,260.606 1430.357,260.606 1455.496,225.197 		"/>
-				<polygon id="recs_triangle2" opacity="0.3" fill="#FFFFFF" points="1431.357,188.273 1140.357,188.273 1135.476,188.273 1121.496,188.273 
-					1146.289,224.94 1121.496,260.606 1136.809,260.606 1139.357,260.606 1430.357,260.606 1455.496,225.197 		"/>
+				<polygon id="recs_triangle2" opacity="0.3" fill="#FFFFFF" points="1431.357,188.273 1140.357,188.273 1135.476,188.273 
+					1146.289,224.94 1136.809,260.606 1139.357,260.606 1430.357,260.606 1455.496,225.197 		"/>
 			</g>
 			<rect x="1193.193" y="200.231" fill="none" width="222.266" height="58.375"/>
 			<text transform="matrix(1 0 0 1 1193.1934 210.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Future changes can improve the </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">impacts of PM</tspan></text>
 		</g>
+		<g id="button4" cursor="pointer">
+			<polygon id="button4-polygon" cursor="pointer" fill="#103844" points="1140.357,188.273 870.607,188.273 865.726,188.273 852.221,188.273 876.359,225.197    851.221,260.606 867.059,260.606 869.607,260.606 1139.357,260.606 1164.496,225.197  "/>
+			<rect x="905.193" y="200.231" fill="none" width="222.266" height="54.375"/>
+			<text transform="matrix(1 0 0 1 905.1938 210.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM concentrations are monitored </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">on the ground and by satellite</tspan></text>
+		</g>
 		<g id="button3" cursor="pointer">
-			<polygon id="button3-polygon" cursor="pointer" fill="#103844" points="855.32,188.293 564.32,188.293 559.438,188.293 545.459,188.293 570.252,224.96 545.459,260.626     560.771,260.626 563.32,260.626 854.32,260.626 879.459,225.217   "/>
+			<polygon id="button3-polygon" cursor="pointer" fill="#103844" points="852.357,188.273 582.607,188.273 577.726,188.273 564.221,188.273 588.359,225.197    563.221,260.606 579.059,260.606 581.607,260.606 851.357,260.606 876.496,225.197  "/>
 			<rect x="617.057" y="199.231" fill="none" width="222.265" height="54.375"/>
 			<text transform="matrix(1 0 0 1 617.0566 209.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">WHAT IS ITS IMPACT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Variations in temperature and </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">topography can impact PM</tspan></text>
-			<polygon opacity="0.3" fill="#FFFFFF" points="833.496,188.273 852.357,188.273 876.496,225.197 851.357,260.606 833.496,260.606 
-		858.289,224.94 	"/>
+			<polygon opacity="0.3" fill="#FFFFFF" points="833.496,188.273 852.357,188.273 876.496,225.197 851.357,260.606 833.496,260.606    858.289,224.94  "/>
 		</g>
 		<g id="button2" cursor="pointer">
-			<polygon id="button2-polygon" cursor="pointer" fill="#103844" points="564.335,188.293 273.335,188.293 268.453,188.293 254.473,188.293 279.266,224.96     254.473,260.626 269.786,260.626 272.335,260.626 563.335,260.626 588.473,225.217   "/>
+			<polygon id="button2-polygon" cursor="pointer" fill="#103844" points="564.221,188.273 293.857,188.273 288.976,188.273 274.996,188.273 299.789,224.94    274.996,260.606 290.309,260.606 292.857,260.606 563.221,260.606 588.359,225.197  "/>
 			<rect x="328.795" y="200.231" fill="none" width="222.265" height="54.375"/>
 			<text transform="matrix(1 0 0 1 328.7949 210.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">WHAT ARE THE RISKS?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM exposure can have serious </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">health impacts</tspan></text>
-			<polygon opacity="0.3" fill="#FFFFFF" points="545.359,188.273 564.221,188.273 588.359,225.197 563.221,260.606 545.359,260.606 
-		570.152,224.94 	"/>
+			<polygon opacity="0.3" fill="#FFFFFF" points="545.359,188.273 564.221,188.273 588.359,225.197 563.221,260.606 545.359,260.606    570.152,224.94  "/>
 		</g>
 		<g id="button1" cursor="pointer">
-			<polygon id="button1-polygon" cursor="pointer" fill="#103844" points="275.363,188.293 -15.637,188.293 -20.519,188.293 -34.498,188.293 -9.705,224.96 -34.498,260.626     -19.186,260.626 -16.637,260.626 274.363,260.626 299.502,225.217   "/>
+			<polygon id="button1-polygon" cursor="pointer" fill="#103844" points="274.971,188.357 4.607,188.357 -0.274,188.357 -14.254,188.357 10.539,225.023    -14.254,260.69 1.059,260.69 3.607,260.69 273.971,260.69 299.109,225.28  "/>
 			<rect x="40.533" y="201.231" fill="none" width="222.265" height="54.375"/>
 			<text transform="matrix(1 0 0 1 40.5332 211.2969)"><tspan x="0" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="14">WHERE DOES IT COME FROM?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Whomp whomp whomp whomp </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">glerp herp merp slerp</tspan></text>
-			<polygon opacity="0.3" fill="#FFFFFF" points="257.098,187.273 275.959,187.273 300.098,224.197 274.959,259.606 257.098,259.606 
-		281.891,223.94 	"/>
+			<polygon opacity="0.3" fill="#FFFFFF" points="256.764,188.273 274.996,188.273 299.764,225.197 274.626,260.606 256.764,260.606    281.557,224.94  "/>
 		</g>
 	
 	</g>
