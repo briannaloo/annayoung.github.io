@@ -9539,7 +9539,7 @@
 		
 			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="579.852" y1="349.334" x2="841.186" y2="349.334"/>
 	</g>
-	<polygon fill="#FFFFFF" points="808.131,330.945 822.961,345.775 837.792,330.945 	"/>
+	<polygon fill="#FFFFFF" points="837.792,343.415 822.962,328.585 808.131,343.415 	"/>
 	<g>
 		<g>
 			<path fill="#F26E2A" d="M231.328,490.839c-5.491,0.304-14.411,1.361-19.822,2.35l-4.65,0.849
@@ -9575,14 +9575,14 @@
 		<text transform="matrix(1 0 0 1 661.5439 962.7598)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">METHYLMERCURY</text>
 		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="653.955" y1="968.33" x2="936.395" y2="968.33"/>
 	</g>
-	<polygon fill="#FFFFFF" points="900.418,949.941 915.248,964.771 930.079,949.941 	"/>
+	<polygon fill="#FFFFFF" points="930.079,963.275 915.249,948.445 900.418,963.275 	"/>
 	<g>
 		<rect x="299.44" y="286.823" fill="none" width="271.486" height="14.999"/>
 		<text transform="matrix(1 0 0 1 299.4405 299.7637)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">INDUSTRIAL SOURCES</text>
 		
 			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="291.852" y1="305.333" x2="553.186" y2="305.333"/>
 	</g>
-	<polygon fill="#FFFFFF" points="520.131,286.945 534.961,301.775 549.792,286.945 	"/>
+	<polygon fill="#FFFFFF" points="549.792,299.415 534.962,284.585 520.131,299.415 	"/>
 </g>
 <g id="EMIT_4">
 </g>
