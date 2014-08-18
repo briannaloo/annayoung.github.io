@@ -84,24 +84,31 @@ var seconds = 1;
 
 	function emissionsClicked(object, seconds) {
 		$([object.getElementById("smoke_stacks"), object.getElementById("button1"), object.getElementById("mountains")]).click(function() {
-			$(object.getElementById("radars")).fadeOut(1000);
-			$(object.getElementById("map-point")).delay(3*seconds*1000).fadeIn(1000);
+			$([object.getElementById("radars"), object.getElementById("Hg"), object.getElementById("Hg_small_line")]).fadeOut(1000);
 			$(object.getElementById("mountains")).attr("fill", "#FFFFFF");
 			$(object.getElementById("bubbles1")).delay(seconds*1000).fadeIn(2000);
 			$(object.getElementById("bubbles2")).delay(1.5*seconds*1000).fadeIn(2000);
 			$(object.getElementById("bubbles3")).delay(2*seconds*1000).fadeIn(2000);
 
 			$(object.getElementById("emissions-caption")).delay(5.5*seconds*1000).fadeIn(1000);
+			
+			$(object.getElementById("emissions-gradient")).delay(8*seconds*1000).fadeIn(2000);
+			$([object.getElementById("eruption"), object.getElementById("eruption-bubbles")]).delay(6*seconds*1000).fadeOut(2000);
+			$([object.getElementById("bubbles1"), object.getElementById("bubbles2"), object.getElementById("bubbles3")]).delay(2*seconds*1000).fadeOut(2000);
+			$(object.getElementById("next-bubbles")).delay(6*seconds*1000).fadeIn(2000);
 
+			$(object.getElementById("next-bubbles")).delay(3*seconds*1000).fadeOut(4000);
+			$(object.getElementById("clouds")).delay(14*seconds*1000).fadeIn(2000);
 
 			$([object.getElementById("planet"), object.getElementById("animals"), object.getElementById("fishing"), object.getElementById("mountains"), object.getElementById("smoke_stacks")]).attr("cursor", "auto");
 			$([object.getElementById("planet"), object.getElementById("animals"), object.getElementById("fishing"), object.getElementById("mountains"), object.getElementById("smoke_stacks")]).attr("pointer-events", "none");
 		});
 		$(object.getElementById("go_back_smoke_stacks")).click(function() {
-			$(object.getElementById("map-point")).delay(1000).fadeOut(1000);
-			$([object.getElementById("bubbles1"), object.getElementById("bubbles2"), object.getElementById("bubbles3")]).fadeOut(500);
 			$(object.getElementById("emissions-caption")).fadeOut(500);
-			$(object.getElementById("radars")).delay(2*seconds*1000).fadeIn(500);
+			$([object.getElementById("radars"), object.getElementById("Hg"), object.getElementById("Hg_small_line")]).delay(2*seconds*1000).fadeIn(500);
+
+			$(object.getElementById("emissions-gradient")).fadeOut(1000);
+			$(object.getElementById("clouds")).fadeOut(1000);
 
 			$([object.getElementById("planet"), object.getElementById("animals"), object.getElementById("fishing"), object.getElementById("mountains"), object.getElementById("smoke_stacks")]).attr("cursor", "pointer");
 			$([object.getElementById("planet"), object.getElementById("animals"), object.getElementById("fishing"), object.getElementById("mountains"), object.getElementById("smoke_stacks")]).attr("pointer-events", "auto");
@@ -152,15 +159,34 @@ var seconds = 1;
 
 		// cycle circles
 		$(object.getElementById("cycle1")).find("rect")
-			.append(createAnimate("y", 2*seconds, "smoke_stacks.click + 5.5s; button1.click + 5.5s; mountains.click + 5.5s", "320", "600", "go_back_smoke_stacks.click", true));
+			.append(createAnimate("y", 2*seconds, "smoke_stacks.click + 5.5s; button1.click + 5.5s; mountains.click + 5.5s", "360", "600", "go_back_smoke_stacks.click", true));
 		$(object.getElementById("cycle2")).find("rect")
-			.append(createAnimate("y", 2*seconds, "smoke_stacks.click + 5.5s; button1.click + 5.5s; mountains.click + 5.5s", "350", "630", "go_back_smoke_stacks.click", true));
+			.append(createAnimate("y", 2*seconds, "smoke_stacks.click + 5.5s; button1.click + 5.5s; mountains.click + 5.5s", "390", "630", "go_back_smoke_stacks.click", true));
 
+		// points on map come in
+		$(object.getElementById("map-point"))
+			.append(createSet("visibility", "visible", "smoke_stacks.click + 10s; button1.click + 10s; mountains.click + 10s", "go_back_smoke_stacks.click + " + (0.5*seconds) + "s", false))
+			.append(createTransform("scale", seconds, "smoke_stacks.click + 10s; button1.click + 10s; mountains.click + 10s", "0", "1"))
+			.append(createMotion(seconds, "smoke_stacks.click + 10s; button1.click + 10s; mountains.click + 10s", "1494,160", "0,0", "go_back_smoke_stacks.click"));
 
-		/*$(object.getElementById("INTRO_SLIDE"))
-			.append(createTransform("scale", 5*seconds, "smoke_stacks.click; button1.click; mountains.click", "1", "120"))
-			.append(createMotion(5*seconds, "smoke_stacks.click; button1.click; mountains.click", "0,0", "-178500,-17000", "go_back_smoke_stacks.click"))
-			.append(createTransform("scale", seconds, "go_back_smoke_stacks.click", "120", "1"));*/
+		// clouds rain
+		$(object.getElementById("rain")).children().each(function() {
+			$(this)
+				.append(createAnimate("stroke-dashoffset", 2*seconds, "smoke_stacks.click + 14s; button1.click + 14s; mountains.click + 14s", "406", "0", "go_back_smoke_stacks.click", true));
+		});
+
+		/*var sec = 10;
+		$(object.getElementById("planet-bubbles")).children().each(function() {
+
+			$(this).find('animateMotion')
+				.attr("begin", "smoke_stacks.click + " + sec + "s; button1.click + " + sec + "s; mountains.click + " + sec + "s");
+			$(this).find('set')
+				.attr("begin", "smoke_stacks.click + " + sec + "s; button1.click + " + sec + "s; mountains.click + " + sec + "s");
+			$(this).find('animateTransform')
+				.attr("begin", "smoke_stacks.click + " + sec + "s; button1.click + " + sec + "s; mountains.click + " + sec + "s");
+			sec+= 0.05;
+		});*/
+
 	}
 
 	function planetClicked(object, seconds) {
