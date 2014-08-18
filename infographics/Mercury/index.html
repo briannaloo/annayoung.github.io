@@ -497,7 +497,7 @@ var seconds = 1;
 
 		// river draws
 		$(object.getElementById("river-path"))
-			.append(createSet("visibility", "visible", "recommendations.click + 1.5s", "go_back_recs.click + 2s", false));
+			.append(createSet("visibility", "visible", "recommendations.click + 1.5s", "go_back_recs.click", false));
 		$(object.getElementById("river2-clip-rect"))
 			.append(createAnimate("height", seconds, "recommendations.click + 1.5s", "0", "550", "go_back_recs.click", false));
 		$(object.getElementById("river2-clip-rect2"))
