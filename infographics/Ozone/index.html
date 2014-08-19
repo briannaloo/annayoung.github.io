@@ -543,8 +543,8 @@ obj.addEventListener("load", function() {
 		// disable go-back button during animation
 		$(object.getElementById("go_back_cities")).append(createSet("pointer-events", "none", "expand_sun.click", "expand_sun.click + " + (3.5*seconds) + "s"));
 		$(object.getElementById("go_back_cities")).append(createSet("cursor", "auto", "expand_sun.click", "expand_sun.click + " + (3.5*seconds) + "s"));
-		$(object.getElementById("go_back_cities")).append(createSet("pointer-events", "none", "collapse_sun.click", "collapse_sun.click + " + (3*seconds) + "s"));
-		$(object.getElementById("go_back_cities")).append(createSet("cursor", "auto", "collapse_sun.click", "collapse_sun.click + " + (3*seconds) + "s"));
+		$(object.getElementById("go_back_cities")).append(createSet("pointer-events", "none", "collapse_sun.click", "collapse_sun.click + " + (seconds) + "s"));
+		$(object.getElementById("go_back_cities")).append(createSet("cursor", "auto", "collapse_sun.click", "collapse_sun.click + " + (seconds) + "s"));
 
 	}
 
