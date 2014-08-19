@@ -971,17 +971,17 @@
 	
 		<line stroke-dasharray="50" stroke-dashoffset="50" id="small-lines4" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="694.673" y1="718.326" x2="694.673" y2="762.113"/>
 	<rect class="fade2" x="1198.339" y="418.372" fill="none" width="280.486" height="14.999"/>
-	<text class="fade2" transform="matrix(1 0 0 1 1198.3389 428.438)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">central nervous system damage</text>
+	<text class="fade2" transform="matrix(1 0 0 1 1198.3389 429.876)" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">central nervous system damage</text>
 	<g class="fade3">
 		<rect x="1037.48" y="494.165" fill="none" width="280.486" height="51.669"/>
-		<text transform="matrix(1 0 0 1 1037.4805 504.2314)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">cardiovascular harm - heart attacks, strokes, </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">heart disease, congestive heart failure</tspan></text>
+		<text transform="matrix(1 0 0 1 1037.4805 505.6694)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">cardiovascular harm - heart attacks, </tspan><tspan x="0" y="19.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">strokes, heart disease, congestive </tspan><tspan x="0" y="38.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">heart failure</tspan></text>
 	</g>
 	<rect class="fade4" x="844.168" y="615.031" fill="none" width="308.982" height="14.999"/>
-	<text class="fade4" transform="matrix(1 0 0 1 844.168 625.0972)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">respiratory harm - worsened asthma &amp; COPD</text>
+	<text class="fade4" transform="matrix(1 0 0 1 844.168 626.5352)" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">respiratory harm - worsened asthma &amp; COPD</text>
 	<rect class="fade5" x="703.925" y="746.932" fill="none" width="280.486" height="14.999"/>
-	<text class="fade5" transform="matrix(1 0 0 1 703.9248 756.998)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">reproductive and developmental damage</text>
+	<text class="fade5" transform="matrix(1 0 0 1 703.9248 758.436)" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">reproductive and developmental damage</text>
 	<rect class="fade6" x="586.059" y="887.597" fill="none" width="280.486" height="14.999"/>
-	<text class="fade6" transform="matrix(1 0 0 1 586.0586 897.6626)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">early death</text>
+	<text class="fade6" transform="matrix(1 0 0 1 586.0586 899.1006)" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">early death</text>
 	<g class="fade3" >
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M973.138,372.499c0.223-8.216,1.215-16.432,4.118-24.118
 			c3.536-9.367,4.085-18.762,2.246-28.409c-0.691-3.629-0.317-6.401,3.547-7.962c4.689-1.893,7.292-0.467,7.981,4.673
