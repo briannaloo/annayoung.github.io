@@ -811,12 +811,11 @@
 		c1.375,1.093,2.525,2.238,2.863,3.246C1509.979,823.61,1508.576,830.558,1508.98,833.908z"/>
 	</g>
 	<g id="person-text" visibility="hidden">
-		<text transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
-		<rect x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
-		<text transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+		<text transform="matrix(1 0 0 1 69.4346 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
+		<text transform="matrix(1 0 0 1 73.0352 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 
 		<text transform="matrix(1 0 0 1 38.708 224.3799)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">RESPIRATORY EFFECTS</text>
-		<polygon id="go_back" style="display: none" cursor="pointer" fill="#D1DE58" points="32.555,42.891 13.445,62 32.555,81.109"/>
+		<polygon id="go_back" style="display: none" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408  "/>
 	</g>
 	<g id="respiratory2" cursor="pointer">
 		<line id="draw-respiratory-line"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
