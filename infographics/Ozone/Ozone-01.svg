@@ -195,24 +195,24 @@
 	<text transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">OZONE</tspan></text>
 	<rect x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
 	<text transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
-	<rect x="40.533" y="200.731" fill="none" width="222.265" height="54.375"/>
-	<text transform="matrix(1 0 0 1 40.5332 210.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHERE DOES IT COME FROM?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Whomp whomp whomp whomp </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">glerp herp merp slerp</tspan></text>
-	<polygon opacity="0.3" fill="#FFFFFF" points="257.098,186.773 275.959,186.773 300.098,223.697 274.959,259.106 257.098,259.106 
-		281.891,223.44 	"/>
-	<rect x="328.795" y="199.731" fill="none" width="222.265" height="54.375"/>
-	<text transform="matrix(1 0 0 1 328.7949 209.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHAT ARE THE RISKS?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM exposure can have serious </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">health impacts</tspan></text>
-	<polygon opacity="0.3" fill="#FFFFFF" points="545.359,187.773 564.221,187.773 588.359,224.697 563.221,260.106 545.359,260.106 
-		570.152,224.44 	"/>
-	<rect x="617.057" y="198.731" fill="none" width="222.265" height="54.375"/>
-	<text transform="matrix(1 0 0 1 617.0566 208.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHAT IS ITS IMPACT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Variations in temperature and </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">topography can impact PM</tspan></text>
-	<polygon opacity="0.3" fill="#FFFFFF" points="833.496,187.773 852.357,187.773 876.496,224.697 851.357,260.106 833.496,260.106 
-		858.289,224.44 	"/>
-	<rect x="905.193" y="199.731" fill="none" width="222.266" height="54.375"/>
-	<text transform="matrix(1 0 0 1 905.1938 209.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">PM concentrations are monitored </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">on the ground and by satellite</tspan></text>
-	<polygon opacity="0.3" fill="#FFFFFF" points="1431.357,187.773 1140.357,187.773 1135.476,187.773 1121.496,187.773 
-		1146.289,224.44 1121.496,260.106 1136.809,260.106 1139.357,260.106 1430.357,260.106 1455.496,224.697 	"/>
-	<rect x="1193.193" y="199.731" fill="none" width="222.266" height="58.375"/>
-	<text transform="matrix(1 0 0 1 1193.1934 209.7969)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="14">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Future changes can improve the </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">impacts of PM</tspan></text>
+	<rect x="40.533" y="200.731" fill="none" width="222.265" height="96.269"/>
+	<text transform="matrix(1 0 0 1 40.5332 211.5161)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHERE DOES IT COME FROM?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Whomp whomp whomp whomp </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">glerp herp merp slerp</tspan></text>
+	<polygon opacity="0.3" fill="#FFFFFF" points="267.098,187.773 285.959,187.773 310.098,224.697 284.959,260.107 267.098,260.107 
+		291.891,224.44 	"/>
+	<rect x="338.795" y="199.731" fill="none" width="222.265" height="54.375"/>
+	<text transform="matrix(1 0 0 1 338.7949 210.5161)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT ARE THE RISKS?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">PM exposure can have serious </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">health impacts</tspan></text>
+	<polygon opacity="0.3" fill="#FFFFFF" points="565.359,187.773 584.221,187.773 608.359,224.697 583.221,260.106 565.359,260.106 
+		590.152,224.44 	"/>
+	<rect x="637.057" y="198.731" fill="none" width="222.265" height="54.375"/>
+	<text transform="matrix(1 0 0 1 637.0566 209.5161)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT IS ITS IMPACT?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Variations in temperature and </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">topography can impact PM</tspan></text>
+	<polygon opacity="0.3" fill="#FFFFFF" points="863.496,187.773 882.357,187.773 906.496,224.697 881.357,260.106 863.496,260.106 
+		888.289,224.44 	"/>
+	<rect x="935.193" y="199.731" fill="none" width="222.266" height="54.375"/>
+	<text transform="matrix(1 0 0 1 935.1938 210.5161)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">PM concentrations are monitored </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">on the ground and by satellite</tspan></text>
+	<polygon opacity="0.3" fill="#FFFFFF" points="1471.357,187.773 1180.357,187.773 1175.476,187.773 1161.496,187.773 
+		1186.289,224.44 1161.496,260.106 1176.809,260.106 1179.357,260.106 1470.357,260.106 1495.496,224.697 	"/>
+	<rect x="1233.193" y="199.731" fill="none" width="222.266" height="58.375"/>
+	<text transform="matrix(1 0 0 1 1233.1934 210.5161)"><tspan x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Future changes can improve the </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">impacts of PM</tspan></text>
 	<g>
 		<polygon fill="#D1D3D4" points="1493.629,746.189 1493.629,863.956 1538.266,863.956 1528.848,848.897 1532.884,848.897 
 			1523.744,834.381 1528.045,834.381 1519.175,819.859 1523.205,819.859 1514.061,805.336 1518.906,805.336 1508.955,790.282 
@@ -567,14 +567,6 @@
 		h29.75l4-1.5l2-2.5l-2.25-41.5l-0.5-6.5c0,0-0.137-3.57,0-4.75c0.126-1.084,0.874-3.166,1-4.25c0.094-0.807,0.311-2.5,0-3.25
 		c-0.474-1.143-2.638-2.613-3.5-3.5c-1.078-1.11-4.25-4.5-4.25-4.5l-0.5-4.75l0.75-4.75l1.75-3.5l3.25-5l0.793-1.585
 		c1.375,1.093,2.525,2.238,2.863,3.246C1509.979,823.61,1508.576,830.558,1508.98,833.908z"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="1142.357,186.773 851.357,186.773 846.476,186.773 832.496,186.773 857.289,223.44 
-		832.496,259.106 847.809,259.106 850.357,259.106 1141.357,259.106 1166.496,223.697 	"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="854.024,187.44 563.024,187.44 558.142,187.44 544.163,187.44 568.956,224.107 
-		544.163,259.773 559.475,259.773 562.024,259.773 853.024,259.773 878.163,224.363 	"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="565.357,187.44 274.357,187.44 269.476,187.44 255.496,187.44 280.289,224.107 
-		255.496,259.773 270.809,259.773 273.357,259.773 564.357,259.773 589.496,224.363 	"/>
-	<polygon opacity="0.3" fill="#FFFFFF" points="276.024,187.107 -14.976,187.107 -19.858,187.107 -33.837,187.107 -9.044,223.773 
-		-33.837,259.44 -18.525,259.44 -15.976,259.44 275.024,259.44 300.163,224.03 	"/>
 </g>
 <g id="Layer_2">
 	<g id="Layer_8">
@@ -589,5 +581,9 @@
 <g id="Layer_6">
 </g>
 <g id="Layer_7">
+	<polygon opacity="0.3" fill="#7F3F98" points="280.024,227.357 -10.976,227.357 -15.858,227.357 -29.837,227.357 -5.044,264.023 
+		-29.837,299.69 -14.525,299.69 -11.976,299.69 279.024,299.69 304.163,264.28 	"/>
+	<polyline opacity="0.3" fill="#4571B8" points="291.959,226.773 316.098,263.697 290.5,300.19 295.725,300.19 297.75,300 
+		589.274,300.19 614.413,264.78 590.274,227.857 	"/>
 </g>
 </svg>
