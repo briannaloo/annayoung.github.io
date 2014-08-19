@@ -483,11 +483,17 @@ var seconds = 1;
 			$(object.getElementById("marker-hide")).delay(seconds*1000).fadeOut(seconds*1000);
 			$([object.getElementById("markers-show")]).delay(seconds*1000).fadeIn(seconds*1000);
 			$(object.getElementById("river")).delay(seconds*1000).fadeIn(500);
+
+			$(object.getElementById("planet")).attr('cursor', 'auto');
+			$(object.getElementById("planet")).attr('pointer-events', 'none');
 		});
 		$(object.getElementById("go_back_recs")).click(function() {
 			$([object.getElementById("go_back_recs"), object.getElementById("markers-show")]).fadeOut(seconds*1000);
 			$([object.getElementById("Hg"), object.getElementById("Hg_line"), object.getElementById("marker-hide")]).fadeIn(1*seconds*1000);
 			$(object.getElementById("river")).delay(2*seconds*1000).fadeOut(0);
+
+			$(object.getElementById("planet")).attr('cursor', 'pointer');
+			$(object.getElementById("planet")).attr('pointer-events', 'auto');
 		});
 		// text comes in
 		$(object.getElementById("recs_text"))
@@ -522,12 +528,13 @@ var seconds = 1;
 			.append(createMotion(seconds/2.0, "go_back_recs.click", "0,0", "200,-100", "recommendations.click"));
 
 		// numbers for text boxes draw
-		$(object.getElementById("numbers"))
+		$(object.getElementsByClassName("numbers"))
 			.append(createSet("visibility", "visible", "recommendations.click + " + (2.5*seconds) + "s", "go_back_recs.click + " + seconds + "s", false));
 
-		$(object.getElementById("numbers_lines")).find("path").each(function(){
+		$(object.getElementsByClassName("numbers_lines")).each(function(){
 			var stroke = $(this).attr("stroke-dashoffset") + "";
 			$(this)
+			.append(createSet("visibility", "visible", "recommendations.click + " + (2.5*seconds) + "s", "go_back_recs.click + " + seconds + "s", false))
 			.append(createAnimate("stroke-dashoffset", seconds, "recommendations.click + " + (2.5*seconds) + "s", stroke, "0", "go_back_recs.click", false))
 			.append(createAnimate("stroke-dashoffset", seconds, "go_back_recs.click", "0", stroke, "recommendations.click", false));
 		});

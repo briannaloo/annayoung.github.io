@@ -25,7 +25,7 @@
 	<g>
 		<rect x="0.104" y="664.438" opacity="0.15" fill="#2CBFD1" width="1600.355" height="317.789"/>
 		<line fill="none" stroke="#2CBFD1" stroke-width="2" stroke-miterlimit="10" x1="0" y1="664.712" x2="1600.459" y2="664.712"/>
-		<rect x="-140.982" y="946.545" opacity="0.5" fill="#FFFFFF" width="1740.982" height="35.8"/>
+		<rect x="0" y="946.545" opacity="0.5" fill="#FFFFFF" width="1600" height="35.8"/>
 	</g>
 	<g>
 		<rect x="0" y="982.345" fill="#FFFFFF" width="1600" height="165.762"/>
@@ -8025,9 +8025,11 @@
 	<rect x="928.859" y="917.739" fill="none" width="353.486" height="14.999"/>
 	<text transform="matrix(1 0 0 1 928.8594 930.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">KEY REGIONS OF AFFECTED PEOPLE</text>
 	<line fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="929.018" y1="936.25" x2="1307.604" y2="936.25"/>
+	<polygon fill="#F26E2A" points="1304.213,932.157 1289.383,917.327 1274.551,932.157 	"/>
 	<g>
 		<rect x="53.967" y="637.309" fill="none" width="372" height="32.502"/>
 		<text transform="matrix(1 0 0 1 53.9668 651.6885)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THE minimata CONVENTION</text>
+		<polygon fill="#FFFFFF" points="362.259,672.975 381.368,692.084 400.478,672.975 		"/>
 		
 			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="53.967" y1="665.006" x2="408.369" y2="665.006"/>
 	</g>
@@ -8092,7 +8094,7 @@
 	<rect x="928.859" y="917.739" fill="none" width="353.486" height="14.999"/>
 	<text transform="matrix(1 0 0 1 928.8594 930.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">KEY REGIONS OF AFFECTED PEOPLE</text>
 	<line fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="929.018" y1="936.25" x2="1307.604" y2="936.25"/>
-	<polygon fill="#F26E2A" points="1276.551,917.491 1291.381,932.321 1306.213,917.491 	"/>
+	<polygon fill="#F26E2A" points="1304.213,932.157 1289.383,917.327 1274.551,932.157 	"/>
 	<g>
 		
 			<circle fill="none" stroke="#F26E2A" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" cx="1343.226" cy="540.207" r="136.208"/>
@@ -8101,7 +8103,12 @@
 		
 			<circle fill="none" stroke="#F26E2A" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" cx="469.481" cy="652.075" r="117.707"/>
 	</g>
-	<polygon fill="#FFFFFF" points="400.478,692.308 381.368,673.199 362.259,692.308 	"/>
+	<g>
+		<rect x="53.706" y="664.778" opacity="0.8" fill="#2CBFD1" width="354.694" height="260.099"/>
+		<rect x="65.729" y="681.277" fill="none" width="275.588" height="216.693"/>
+		<text transform="matrix(1 0 0 1 65.7285 689.9058)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS </tspan></text>
+	</g>
+	<polygon fill="#FFFFFF" points="362.259,672.975 381.368,692.084 400.478,672.975 	"/>
 	<g>
 		<rect x="53.967" y="637.309" fill="none" width="372" height="32.502"/>
 		<text transform="matrix(1 0 0 1 53.9668 651.6885)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THE minimata CONVENTION</text>
