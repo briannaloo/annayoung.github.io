@@ -107,6 +107,39 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("triangle")).attr("opacity", "0.3");
 	});
 
+	var color, elt;
+	$(object.getElementsByClassName("buttons")).hover(function() {
+		color = $(this).attr("fill");
+		$(this).attr("fill", "rgb(50, 143, 139)");
+	}, function() {
+		$(this).attr("fill", color);
+	});
+	$(object.getElementsByClassName("buttons2")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "rgb(50, 143, 139)");
+	}, function() {
+		elt.attr("fill", color);
+	});
+	$(object.getElementsByClassName("buttons3")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "rgb(50, 143, 139)");
+		$(this).find('path').attr("stroke", "rgb(50, 143, 139)");
+	}, function() {
+		elt.attr("fill", color);
+		$(this).find('path').attr("stroke", color);
+	});
+	$(object.getElementsByClassName("buttons4")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "rgb(50, 143, 139)");
+		$(this).find('line').attr("stroke", "rgb(50, 143, 139)");
+	}, function() {
+		elt.attr("fill", color);
+		$(this).find('line').attr("stroke", color);
+	});
+
 
 	var seconds = 1; // animation time
 

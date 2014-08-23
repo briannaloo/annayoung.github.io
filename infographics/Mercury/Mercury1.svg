@@ -141,7 +141,7 @@
 			<text transform="matrix(1 0 0 1 70.3413 71.126)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">BIOACCUMULATION</tspan></text>
 			<rect x="73.941" y="88.085" fill="none" width="592.957" height="120.132"/>
 			<text transform="matrix(1 0 0 1 73.9414 102.4648)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Toxins become MORE CONCENTRATED when breathed, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">swallowed, and absorbed by marine organisms </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">than in theIR surrounding environment. </tspan></text>
-			<polygon id="go_back_animals" cursor="pointer" style="display: none" fill="#2CBFD1" points="55.945,34.809 36.836,53.918 55.945,73.027  "/>
+			<polygon id="go_back_animals" class="buttons" cursor="pointer" style="display: none" fill="#2CBFD1" points="55.945,34.809 36.836,53.918 55.945,73.027  "/>
 		</g>
 
 		<g id="pyramid" clip-path="url(#pyramid-clip)">
@@ -239,7 +239,7 @@
 			<text transform="matrix(1 0 0 1 70.5093 73.001)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">THE NEXT GENERATION</tspan></text>
 			<rect xmlns="http://www.w3.org/2000/svg" x="74.109" y="89.96" fill="none" width="885.957" height="65.132"/>
 			<text transform="matrix(1 0 0 1 71.1094 104.3398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NINETY-ONE countries and the European Union have signed the MINIMATA </tspan><tspan x="3" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Convention. Measurements of water sampling is taken in a number of parts </tspan><tspan x="3" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">of the world.</tspan></text>
-			<polygon id="go_back_recs" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.113,36.684 37.004,55.793 56.113,74.902  "/>
+			<polygon id="go_back_recs" class="buttons" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.113,36.684 37.004,55.793 56.113,74.902  "/>
 		</g>
 		<g id="icons" visibility="hidden">
 			<g id="top-icon">
@@ -1772,8 +1772,8 @@
 		<rect x="394.021" y="869.739" fill="none" width="271.486" height="14.999"/>
 		<text transform="matrix(1 0 0 1 394.0215 882.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
 		<line id="data_gap_line" stroke-dashoffset="300" stroke-dasharray="300" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="394.192" y1="888.25" x2="690.766" y2="888.25"/>
-		<polygon id="gap_close" visibility="hidden" cursor="pointer" fill="#F26E2A" points="687.374,884.157 672.544,869.327 657.712,884.157"/>
-		<polygon id="gap_open" visibility="hidden" cursor="pointer" fill="#F26E2A" points="659.859,892.099 674.689,906.929 689.521,892.099  "/>
+		<polygon id="gap_close" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="687.374,884.157 672.544,869.327 657.712,884.157"/>
+		<polygon id="gap_open" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="659.859,892.099 674.689,906.929 689.521,892.099  "/>
 		<g id="data_gap_text" clip-path="url(#gap-clip)" visibility="hidden">
 			<rect x="395.398" y="901.5" fill="none" width="295.485" height="91.496"/>
 			<text transform="matrix(1 0 0 1 395.3984 910.1279)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica'" font-size="12">There are no consistent indicators to describe human </tspan><tspan x="0" y="14.4" fill="#F26E2A" font-family="'Helvetica'" font-size="12">risk exposure to mercury through seafood consumption </tspan><tspan x="0" y="28.8" fill="#F26E2A" font-family="'Helvetica'" font-size="12">and certain occupational tasks. A gap exists between </tspan><tspan x="0" y="43.2" fill="#F26E2A" font-family="'Helvetica'" font-size="12">what is measured at the source and the impact on </tspan><tspan x="0" y="57.6" fill="#F26E2A" font-family="'Helvetica'" font-size="12">human health. </tspan></text>
@@ -1827,13 +1827,13 @@
 		<rect x="726.521" y="801.739" fill="none" width="400.986" height="14.999"/>
 		<text transform="matrix(1 0 0 1 726.5215 814.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">OTHER SOURCES OF EXPOSURE</text>
 		<line id="exposure_line" stroke-dasharray="405" stroke-dashoffset="405" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="726.692" y1="820.25" x2="1129.179" y2="820.25"/>
-		<polygon id="exposure_close" visibility="hidden" cursor="pointer" fill="#F26E2A" points="1128.999,815.434 1114.169,800.604 1099.337,815.434  "/>
-		<polygon id="exposure_open" visibility="hidden" cursor="pointer" fill="#F26E2A" points="1099.337,824.602 1114.167,839.432 1128.999,824.602  "/>
+		<polygon id="exposure_close" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="1128.999,815.434 1114.169,800.604 1099.337,815.434  "/>
+		<polygon id="exposure_open" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="1099.337,824.602 1114.167,839.432 1128.999,824.602  "/>
 
 	</g>
 
 	<g id="health_text" visibility="hidden">
-		<polygon id="go_back_fishing" style="display: none" cursor="pointer" fill="#2CBFD1" points="56.654,36.184 37.545,55.293 56.654,74.402  "/>
+		<polygon id="go_back_fishing" class="buttons" style="display: none" cursor="pointer" fill="#2CBFD1" points="56.654,36.184 37.545,55.293 56.654,74.402  "/>
 
 		<rect x="74.051" y="37.989" fill="none" width="1054.142" height="38.606"/>
 		<text transform="matrix(1 0 0 1 71.0503 72.501)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
@@ -2150,15 +2150,15 @@
 			</g>
 		</g>
 		<g id="recs-buttons-open" visibility="hidden" cursor="pointer">
-			<g id="recs1_open">
+			<g id="recs1_open" class="buttons5">
 				<polygon fill="#103844" points="185.517,781.008 109.627,795.008 108.697,735.086 185.627,735.008  "/>
-				<polygon opacity="0.9" fill="#FFFFFF" points="205.751,787.688 220.581,772.857 205.751,758.025  "/>
+				<polygon id="buttons5-button" opacity="0.9" fill="#FFFFFF" points="205.751,787.688 220.581,772.857 205.751,758.025  "/>
 				<g opacity="0.9" class="numbers">
 					<path fill="#FFFFFF" d="M144.614,766.411v-4.547c2.104-0.094,3.577-0.234,4.419-0.422c1.341-0.297,2.432-0.891,3.272-1.781    c0.577-0.609,1.014-1.422,1.311-2.438c0.17-0.609,0.256-1.062,0.256-1.359h5.578v33.984h-6.844v-23.438H144.614z"/>
 				</g>
 				<path class="numbers_lines" stroke-dashoffset="195.889" stroke-dasharray="195.889" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" d="M181.49,752.964l-0.971-0.358    c-2.453-3.09-5.506-5.789-9.122-7.892c-15.543-9.039-35.47-3.766-44.507,11.775c-9.039,15.544-3.768,35.469,11.775,44.508    c15.542,9.038,35.469,3.768,44.508-11.776c5.379-9.248,5.689-20.048,1.784-29.183"/>
 			</g>
-			<g id="recs2_open">
+			<g id="recs2_open" class="buttons2">
 				<rect x="112.298" y="553.731" fill="#103844" width="85.219" height="75.276"/>
 				<polygon opacity="0.9" fill="#FFFFFF" points="205.751,576.319 220.581,591.149 205.751,605.981  "/>
 				<g opacity="0.9" class="numbers">
@@ -2166,7 +2166,7 @@
 				</g>
 				<path class="numbers_lines" stroke-dashoffset="186.642" stroke-dasharray="186.642" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" d="M175.49,617.97l-0.027-2.435    c13.467-10.804,15.626-30.481,4.82-43.95c-10.801-13.466-30.479-15.625-43.947-4.821c-13.469,10.805-15.628,30.48-4.824,43.948    c8.696,10.84,23.137,14.354,35.465,9.681"/>
 			</g>
-			<g id="recs3_open">
+			<g id="recs3_open" class="buttons2">
 				<rect x="107.627" y="367.398" fill="#103844" width="89.89" height="85.609"/>
 				<polygon opacity="0.9" fill="#FFFFFF" points="205.751,425.444 220.581,410.614 205.751,395.782  "/>
 				<g opacity="0.9" class="numbers">
@@ -2175,7 +2175,7 @@
 				<path class="numbers_lines" stroke-dashoffset="188.437" stroke-dasharray="188.437" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" d="M184.488,398.064    c5.458,12.304,2.489,27.218-8.26,36.421c-13.117,11.228-32.853,9.694-44.08-3.423c-11.227-13.116-9.695-32.851,3.422-44.079    c13.117-11.228,32.852-9.696,44.08,3.421c0.232,0.273,0.461,0.549,0.682,0.826"/>
 				<path class="numbers_lines" stroke-dashoffset="161.218" stroke-dasharray="161.218" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" d="M174.533,440.468    c-14.032,8.918-32.858,7.061-44.858-5.364c-13.71-14.2-13.319-36.83,0.882-50.545c14.202-13.715,36.83-13.32,50.545,0.882    c0.287,0.295,0.565,0.595,0.837,0.894"/>
 			</g>
-			<g id="recs4_open">
+			<g id="recs4_open" class="buttons2">
 				<rect x="107.627" y="191.398" fill="#103844" width="95.89" height="85.609"/>
 				<polygon opacity="0.9" fill="#FFFFFF" points="205.751,243.822 220.581,228.992 205.751,214.16  "/>
 				<g opacity="0.9" class="numbers">
@@ -2186,16 +2186,16 @@
 			</g>
 		</g>
 		<g id="recs-buttons-close" visibility="hidden" cursor="pointer">
-			<g id="recs1_openclose">
+			<g id="recs1_openclose" class="buttons5">
 				<polygon fill="#103844" points="185.517,781.008 109.627,795.008 108.697,735.086 185.627,735.008  "/>
-				<polygon opacity="0.9" fill="#FFFFFF" points="220.751,760.025 205.921,774.856 220.751,789.688  "/>
+				<polygon id="buttons5-button" opacity="0.9" fill="#FFFFFF" points="220.751,760.025 205.921,774.856 220.751,789.688  "/>
 
 				<g opacity="0.9">
 					<path fill="#FFFFFF" d="M144.614,766.411v-4.547c2.104-0.094,3.577-0.234,4.419-0.422c1.341-0.297,2.432-0.891,3.272-1.781    c0.577-0.609,1.014-1.422,1.311-2.438c0.17-0.609,0.256-1.062,0.256-1.359h5.578v33.984h-6.844v-23.438H144.614z"/>
 				</g>
 				<path fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" d="M181.49,752.964l-0.971-0.358    c-2.453-3.09-5.506-5.789-9.122-7.892c-15.543-9.039-35.47-3.766-44.507,11.775c-9.039,15.544-3.768,35.469,11.775,44.508    c15.542,9.038,35.469,3.768,44.508-11.776c5.379-9.248,5.689-20.048,1.784-29.183"/>
 			</g>
-			<g id="recs2_openclose">
+			<g id="recs2_openclose" class="buttons2">
 				<rect x="112.298" y="553.731" fill="#103844" width="85.219" height="75.276"/>
 				<polygon opacity="0.9" fill="#FFFFFF" points="220.627,605.801 205.797,590.971 220.627,576.139  "/>
 
@@ -2204,7 +2204,7 @@
 				</g>
 				<path fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" d="M175.49,617.97l-0.027-2.435    c13.467-10.804,15.626-30.481,4.82-43.95c-10.801-13.466-30.479-15.625-43.947-4.821c-13.469,10.805-15.628,30.48-4.824,43.948    c8.696,10.84,23.137,14.354,35.465,9.681"/>
 			</g>
-			<g id="recs3_openclose">
+			<g id="recs3_openclose" class="buttons2">
 				<rect x="107.627" y="367.398" fill="#103844" width="89.89" height="85.609"/>
 				<polygon opacity="0.9" fill="#FFFFFF" points="220.751,396.782 205.921,411.612 220.751,426.444  "/>
 
@@ -2214,7 +2214,7 @@
 				<path fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" d="M184.488,398.064    c5.458,12.304,2.489,27.218-8.26,36.421c-13.117,11.228-32.853,9.694-44.08-3.423c-11.227-13.116-9.695-32.851,3.422-44.079    c13.117-11.228,32.852-9.696,44.08,3.421c0.232,0.273,0.461,0.549,0.682,0.826"/>
 				<path fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" d="M174.533,440.468    c-14.032,8.918-32.858,7.061-44.858-5.364c-13.71-14.2-13.319-36.83,0.882-50.545c14.202-13.715,36.83-13.32,50.545,0.882    c0.287,0.295,0.565,0.595,0.837,0.894"/>
 			</g>
-			<g id="recs4_openclose">
+			<g id="recs4_openclose" class="buttons2">
 				<rect x="107.627" y="191.398" fill="#103844" width="95.89" height="85.609"/>
 				<polygon opacity="0.9" fill="#FFFFFF" points="220.627,215.177 205.797,230.007 220.627,244.839  "/>
 
@@ -2329,7 +2329,7 @@
 	</g>
 
 	<g id="planet-info">
-		<polygon id="go_back_planet" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.154,37.456 37.045,56.565 56.154,75.675  "/>
+		<polygon id="go_back_planet" class="buttons" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.154,37.456 37.045,56.565 56.154,75.675  "/>
 		<g id="planet-text" visibility="hidden">
 			<rect x="56.113" y="28.684" opacity="0.8" fill="#103844" width="895.904" height="140.316"/>
 			<rect x="73.551" y="39.262" fill="none" width="1054.142" height="38.606"/>
@@ -2341,18 +2341,18 @@
 		<g id="minimata-texts" visibility="hidden">
 			<text transform="matrix(1 0 0 1 53.9668 651.6885)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THE minimata CONVENTION</text>
 			<line id="minimata-line" stroke-dashoffset="360" stroke-dasharray="360" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="53.967" y1="665.006" x2="408.369" y2="665.006"/>
-			<polygon visibility="hidden" id="minimata_open" cursor="pointer" fill="#FFFFFF" points="362.259,672.975 381.368,692.084 400.478,672.975  "/>
+			<polygon visibility="hidden" id="minimata_open" class="buttons" cursor="pointer" fill="#FFFFFF" points="362.259,672.975 381.368,692.084 400.478,672.975  "/>
 			
 			<text transform="matrix(1 0 0 1 928.8594 930.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">KEY REGIONS OF AFFECTED PEOPLE</text>
 			<line id="regions-line" stroke-dashoffset="380" stroke-dasharray="380" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="929.018" y1="936.25" x2="1307.604" y2="936.25"/>
-			<polygon id="regions_open" visibility="hidden" cursor="pointer" fill="#F26E2A" points="1304.213,932.157 1289.383,917.327 1274.551,932.157  "/>
-			<polygon id="regions_close" visibility="hidden" cursor="pointer" fill="#F26E2A" points="1276.551,917.491 1291.381,932.321 1306.213,917.491  "/>
+			<polygon id="regions_open" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="1304.213,932.157 1289.383,917.327 1274.551,932.157  "/>
+			<polygon id="regions_close" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="1276.551,917.491 1291.381,932.321 1306.213,917.491  "/>
 
 			<g id="minimata-text-box" clip-path="url(#minimata_clip)" visibility="hidden">
 				<rect x="53.706" y="664.778" opacity="0.8" fill="#2CBFD1" width="354.694" height="260.099"/>
 				<text transform="matrix(1 0 0 1 65.7285 689.9058)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS </tspan></text>
 			</g>
-			<polygon id="minimata_close" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="400.478,692.308 381.368,673.199 362.259,692.308  "/>
+			<polygon id="minimata_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="400.478,692.308 381.368,673.199 362.259,692.308  "/>
 
 			<g id="region-circles" transform="translate(-20,0)" style="display: none">
 				<g>
@@ -2520,7 +2520,7 @@
 		<g id="emissions-text" visibility="hidden">
 			<text transform="matrix(1 0 0 1 70.9058 73.8271)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">EMISSIONS AND TRANSFER</tspan></text>
 			<text transform="matrix(1 0 0 1 74.5059 105.166)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Mercury in the rainwater settles in lakes and rivers, where </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">microorganisms convert it to a highly toxic form called </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">methylmercury, which is then absorbed by algae.</tspan></text>
-			<polygon id="go_back_smoke_stacks" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.51,37.51 37.4,56.619 56.51,75.728  "/>
+			<polygon id="go_back_smoke_stacks" class="buttons" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.51,37.51 37.4,56.619 56.51,75.728  "/>
 		</g>
 		<circle id="map-point" visibility="hidden" opacity="0.8" fill="#F9A11D" cx="1494.048" cy="160.051" r="26.05"/>
 		<g id="bubbles1" style="display: none">
@@ -3054,8 +3054,8 @@
 					<text transform="matrix(1 0 0 1 299.4405 299.7637)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">INDUSTRIAL SOURCES</text>
 					<line stroke-dashoffset="265" stroke-dasharray="265" id="industrial_line" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="291.852" y1="305.333" x2="553.186" y2="305.333"/>
 
-					<polygon id="industrial_open" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="549.792,299.415 534.962,284.585 520.131,299.415  "/>
-					<polygon id="industrial_close" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="520.131,286.945 534.961,301.775 549.792,286.945  "/>
+					<polygon id="industrial_open" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="549.792,299.415 534.962,284.585 520.131,299.415  "/>
+					<polygon id="industrial_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="520.131,286.945 534.961,301.775 549.792,286.945  "/>
 
 				</g>
 				<g id="methyl">
@@ -3070,8 +3070,8 @@
 					<text transform="matrix(1 0 0 1 661.5439 962.7598)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">METHYLMERCURY</text>
 					<line stroke-dashoffset="265" stroke-dasharray="265" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="653.955" y1="968.33" x2="936.395" y2="968.33"/>
 
-					<polygon id="methyl_open" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="930.079,963.275 915.249,948.445 900.418,963.275  "/>
-					<polygon id="methyl_close" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="900.418,949.941 915.248,964.771 930.079,949.941  "/>
+					<polygon id="methyl_open" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="930.079,963.275 915.249,948.445 900.418,963.275  "/>
+					<polygon id="methyl_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="900.418,949.941 915.248,964.771 930.079,949.941  "/>
 
 				</g>
 				<g id="natural_sources">
@@ -3080,8 +3080,8 @@
 					
 					<line stroke-dashoffset="265" stroke-dasharray="265" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="579.852" y1="349.334" x2="841.186" y2="349.334"/>
 
-					<polygon id="natural_open" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="837.792,343.415 822.962,328.585 808.131,343.415  "/>
-					<polygon id="natural_close" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="808.131,330.945 822.961,345.775 837.792,330.945  "/>
+					<polygon id="natural_open" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="837.792,343.415 822.962,328.585 808.131,343.415  "/>
+					<polygon id="natural_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="808.131,330.945 822.961,345.775 837.792,330.945  "/>
 				</g>
 			</g>
 

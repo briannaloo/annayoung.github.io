@@ -85,7 +85,7 @@
 		<text transform="matrix(1 0 0 1 65.4756 74.5059)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">MONITORING</tspan></text>
 		<rect x="69.076" y="91.465" fill="none" width="863.957" height="65.132"/>
 		<text transform="matrix(1 0 0 1 69.0762 105.8447)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
-		<polygon style="display: none" id="go_back_balloon" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
+		<polygon style="display: none" id="go_back_balloon" class="buttons" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
 	</g>
 
 	<g id="text-boxes">
@@ -123,16 +123,16 @@
 			<line stroke-dashoffset="300" stroke-dasharray="300" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="467.746" y1="330.785" x2="729.079" y2="330.785"/>
 		</g>
 		<g id="monitoring-buttons-open" cursor="pointer">
-			<polygon id="monitoring1_open" fill="#FFFFFF" points="439.115,627.403 454.177,641.998 468.772,626.936  "/>
-			<polygon id="monitoring2_open" fill="#FFFFFF" points="697.376,337.299 712.65,351.672 727.024,336.399  "/>
-			<polygon id="monitoring3_open" fill="#FFFFFF" points="1075.83,765.498 1061.167,750.502 1046.17,765.166  "/>
-			<polygon id="monitoring4_open" fill="#FFFFFF" points="1503.829,495.112 1488.799,480.485 1474.171,495.515  "/>
+			<polygon id="monitoring1_open" class="buttons" fill="#FFFFFF" points="439.115,627.403 454.177,641.998 468.772,626.936  "/>
+			<polygon id="monitoring2_open" class="buttons" fill="#FFFFFF" points="697.376,337.299 712.65,351.672 727.024,336.399  "/>
+			<polygon id="monitoring3_open" class="buttons" fill="#FFFFFF" points="1075.83,765.498 1061.167,750.502 1046.17,765.166  "/>
+			<polygon id="monitoring4_open" class="buttons" fill="#FFFFFF" points="1503.829,495.112 1488.799,480.485 1474.171,495.515  "/>
 		</g>
 		<g id="monitoring-buttons-close" cursor="pointer">
-			<polygon id="monitoring3_openclose" fill="#FFFFFF" points="1043.279,753.611 1058.109,768.441 1072.94,753.611 	"/>
-			<polygon id="monitoring1_openclose" fill="#FFFFFF" points="467.43,617.124 452.6,602.294 437.769,617.124 	"/>
-			<polygon id="monitoring4_openclose" fill="#FFFFFF" points="1473.758,482.685 1488.588,497.516 1503.419,482.685 	"/>
-			<polygon id="monitoring2_openclose" fill="#FFFFFF" points="725.687,326.692 710.857,311.862 696.026,326.692 	"/>
+			<polygon id="monitoring3_openclose" class="buttons" fill="#FFFFFF" points="1043.279,753.611 1058.109,768.441 1072.94,753.611 	"/>
+			<polygon id="monitoring1_openclose" class="buttons" fill="#FFFFFF" points="467.43,617.124 452.6,602.294 437.769,617.124 	"/>
+			<polygon id="monitoring4_openclose" class="buttons" fill="#FFFFFF" points="1473.758,482.685 1488.588,497.516 1503.419,482.685 	"/>
+			<polygon id="monitoring2_openclose" class="buttons" fill="#FFFFFF" points="725.687,326.692 710.857,311.862 696.026,326.692 	"/>
 		</g>
 		<g id="monitoring-titles">
 			<text transform="matrix(1 0 0 1 822.5889 766.4307)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">GROUND BASED </text>
@@ -815,25 +815,16 @@
 		<text transform="matrix(1 0 0 1 73.0352 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 
 		<text transform="matrix(1 0 0 1 38.708 224.3799)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">RESPIRATORY EFFECTS</text>
-		<polygon id="go_back" style="display: none" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408  "/>
+		<polygon id="go_back" class="buttons" style="display: none" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408  "/>
 	</g>
 	<g id="respiratory2" cursor="pointer">
 		<line id="draw-respiratory-line"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
 				 stroke-dashoffset="440" stroke-dasharray="440"
 			 x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
-		<g id="respiratory-dropdown" visibility="hidden">
+		<g id="respiratory-dropdown" visibility="hidden" class="buttons2">
 			<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
 		<polygon fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/></g>
 	</g>
-	<!--<g id="respiratory2health" cursor="pointer">
-		<g id="closeHealth" style="display: none;">
-			<line id="draw-respiratory-line-health"  visibility="hidden" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10"
-					 stroke-dashoffset="440" stroke-dasharray="440"
-				 x1="39.125" y1="237.697" x2="471.103" y2="237.697"/>
-			<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="40" x="415" y="240"/>
-			<polygon visibility="hidden" id="respiratory-dropdown-health" fill="#FFFFFF" points="427,245.667 446.109,264.776 465.219,245.667 	"/>
-		</g>
-	</g>-->
 </g>
 
 <g id="respiratory-info" style="display: none;">
@@ -884,7 +875,7 @@
 	<text transform="matrix(1 0 0 1 62.2036 533.9268)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN, REDUCED LUNG FUNCTION</text>
 	<rect x="62.204" y="583.722" fill="none" width="385.404" height="13.53"/>
 	<text transform="matrix(1 0 0 1 62.2036 593.7881)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN</text>
-	<g id="respiratory-close" cursor="pointer">
+	<g id="respiratory-close" cursor="pointer" class="buttons2">
 		<rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
 		<polygon fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555 	"/>
 	</g>
@@ -895,7 +886,7 @@
 	<g id="hide-health">
 	<path id="health-line2" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-miterlimit="10" stroke-dashoffset="150" stroke-dasharray="150" d="M1206.261,385.068
 		c49.907-17.406,101.223-31.806,153.729-42.991v42.991"/>
-	<g id="forward" cursor="pointer">
+	<g id="forward"  class="buttons3" cursor="pointer">
 			<rect x="1285" y="362" fill="#47BCB6" stroke="none" stroke-miterlimit="10" width="60" height="35"/>
 			<path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" d="M1295.238,376.046
 				c13.478-3.917,27.227-7.183,41.208-9.764"/>
@@ -953,7 +944,7 @@
 		</path>
 	<g class="fade6" id="reverse_health" cursor="pointer">
 		<rect id="reverse2" x="517.667" y="886" fill="#47BCB6" stroke="none" stroke-miterlimit="10" width="44" height="52.667"/>
-		<g id="reverse3">
+		<g id="reverse3" class="buttons4">
 			
 				<line fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" x1="527.968" y1="929.096" x2="548.156" y2="902.002"/>
 			<g>
@@ -2381,7 +2372,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		<text transform="matrix(1 0 0 1 66.9058 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">SOURCES</tspan></text>
 		<rect x="70.506" y="92.466" fill="none" width="863.957" height="65.132"/>
 		<text transform="matrix(1 0 0 1 70.5063 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
-		<polygon id="go_back_cities" style="display: none;" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
+		<polygon id="go_back_cities" class="buttons" style="display: none;" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408 	"/>
 	</g>
 	<g id="car" visibility="hidden">
 		<path fill="#3A9E99" d="M890.473,918.175h-12.85c-11.268,0-15.461,13.923-15.461,13.923h28.311V918.175z"/>
@@ -2431,8 +2422,8 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="1519.808,272.131 1519.894,271.979 1519.774,272.012      1519.741,271.893 1519.653,272.044 1503.192,276.453 1513.63,282.478 1513.784,282.566 1524.218,288.59    "/>
 		</g>
 	</g>
-	<polygon id="expand_sun" visibility="hidden" cursor="pointer" fill="#D1DE58" points="1486.393,320.521 1467.283,339.63 1486.393,358.739  "/>
-	<polygon id="collapse_sun" visibility="hidden" cursor="pointer" fill="#D1DE58" points="1473.837,358.067 1492.946,338.958 1473.837,319.849  "/>
+	<polygon id="expand_sun" class="buttons" visibility="hidden" cursor="pointer" fill="#D1DE58" points="1486.393,320.521 1467.283,339.63 1486.393,358.739  "/>
+	<polygon id="collapse_sun" class="buttons" visibility="hidden" cursor="pointer" fill="#D1DE58" points="1473.837,358.067 1492.946,338.958 1473.837,319.849  "/>
 
 	<g id="sources-info">
 	<g id="group1" style="display: none;">
@@ -3071,7 +3062,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 	</g>
 
-	<polygon id="go_back_trees" style="display: none" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
+	<polygon id="go_back_trees" class="buttons" style="display: none" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
 	<path id="smog2" style="display: none" opacity="0.5" fill="#D1DE58" d="M98.126,800.315c-2.699-10.609,8.849-22.359,19.17-30.447   c14.825-11.616,21.685-24.334,34.947-37.033c9.258-8.865,16.976-15.759,23.129-26.53c4.999-8.751,6.874-18.997,11.206-28.247   c7.104-15.163,25.781-24.173,37.469-36.789c15.43-16.657,20.571-39.489,37.565-53.799c12.519-10.543,27.451-16.85,45.636-18.486   c29.03-2.613,102.738,11.918,65.5,45.727c-24.114,21.895-67.427,27.002-90.46,46.891c-13.628,11.768-30.731,21.094-42.718,33.412   c-12.21,12.547-23.62,24.521-34.944,37.317c-9.688,10.948-22.452,17.628-32.63,26.276c-9.77,8.301-6.248,17.141-12.75,27.107   c-5.116,7.844-13.748,17.174-25.157,15.904c-4.312-0.48-21.288-15.865-24.225-0.252c-2.32,0.617-6.157,0.539-8.512,0.029   c-0.333-1.641-0.209-3.212-0.227-4.898"/>
 	
 	<defs>
@@ -3212,7 +3203,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 
 	<g id="ecosystem-buttons-open" cursor="pointer" visibility="hidden" style="display: none">
 		<g id="ecosystem1_open">
-			<polygon fill="#D1DE58" points="406.401,780.809 387.292,799.918 406.401,819.027  "/>
+			<polygon class="buttons" fill="#D1DE58" points="406.401,780.809 387.292,799.918 406.401,819.027  "/>
 			<g>
 			<circle fill="#21716E" cx="456.982" cy="799.918" r="40.784"/>
 			<g>
@@ -3224,7 +3215,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 		</g>
 		<g id="ecosystem2_open">
-			<polygon fill="#D1DE58" points="869.862,780.809 888.972,799.918 869.862,819.027  "/>
+			<polygon class="buttons" fill="#D1DE58" points="869.862,780.809 888.972,799.918 869.862,819.027  "/>
 			<g>
 			<circle fill="#21716E" cx="819.281" cy="799.918" r="40.784"/>
 			<g>
@@ -3236,7 +3227,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 		</g>
 		<g id="ecosystem3_open">
-			<polygon fill="#D1DE58" points="923.808,473.612 904.698,492.722 923.808,511.831  "/>
+			<polygon class="buttons" fill="#D1DE58" points="923.808,473.612 904.698,492.722 923.808,511.831  "/>
 			<g >
 			<circle fill="#21716E" cx="972.665" cy="492.722" r="40.784"/>
 			<g>
@@ -3248,7 +3239,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 		</g>
 		<g id="ecosystem4_open">
-			<polygon fill="#D1DE58" points="1399.688,780.809 1380.578,799.918 1399.688,819.027  "/>
+			<polygon class="buttons" fill="#D1DE58" points="1399.688,780.809 1380.578,799.918 1399.688,819.027  "/>
 			<g>
 			<circle fill="#21716E" cx="1446.632" cy="799.918" r="40.784"/>
 			<g>
@@ -3262,7 +3253,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 	</g>
 	<g id="ecosystem-buttons-close" cursor="pointer" style="display: none" visibility="hidden">
 		<g id="ecosystem1_openclose">
-			<polygon fill="#D1DE58" points="389.198,821.103 408.802,802.501 390.2,782.897  "/>
+			<polygon class="buttons" fill="#D1DE58" points="389.198,821.103 408.802,802.501 390.2,782.897  "/>
 			<g>
 			<circle fill="#21716E" cx="456.982" cy="799.918" r="40.784"/>
 			<g>
@@ -3274,7 +3265,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 		</g>
 		<g id="ecosystem2_openclose">
-			<polygon fill="#D1DE58" points="885.4,819.022 866.759,799.456 886.325,780.814  "/>
+			<polygon class="buttons" fill="#D1DE58" points="885.4,819.022 866.759,799.456 886.325,780.814  "/>
 			<g>
 			<circle fill="#21716E" cx="819.281" cy="799.918" r="40.784"/>
 			<g>
@@ -3286,7 +3277,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 		</g>
 		<g id="ecosystem3_openclose">
-			<polygon fill="#D1DE58" points="905.726,511.108 924.648,491.813 905.352,472.892  "/>
+			<polygon class="buttons" fill="#D1DE58" points="905.726,511.108 924.648,491.813 905.352,472.892  "/>
 			<g>
 			<circle fill="#21716E" cx="972.665" cy="492.722" r="40.784"/>
 			<g>
@@ -3298,7 +3289,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 		</g>
 		<g id="ecosystem4_openclose">
-			<polygon fill="#D1DE58" points="1379.722,819.041 1398.761,800.857 1379.628,780.769  "/>
+			<polygon class="buttons" fill="#D1DE58" points="1379.722,819.041 1398.761,800.857 1379.628,780.769  "/>
 			<g>
 			<circle fill="#21716E" cx="1446.632" cy="799.918" r="40.784"/>
 			<g>
@@ -3320,7 +3311,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 			<text transform="matrix(1 0 0 1 70.9517 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
 		</g>
 
-		<polygon id="go_back_page5" cursor="pointer" style="display: none" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
+		<polygon id="go_back_page5" class="buttons" cursor="pointer" style="display: none" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
 		
 		<g id="page5-text-boxes" visibility="hidden">
 			<g id="page51" clip-path="url(#page5-clip1)">
@@ -3352,7 +3343,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 		</g>
 
 		<g id="page5-buttons-open" cursor="pointer" visibility="hidden">
-			<g id="page51_open">
+			<g id="page51_open" class="buttons2">
 				<polygon fill="#D1DE58" points="615.585,838.187 630.415,823.356 615.585,808.524  "/>
 				<rect x="516.625" y="779.312" fill="#3A9E99" width="93.062" height="91.836"/>
 				<g class="numbers" visibility="hidden">
@@ -3362,7 +3353,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 				<path stroke-dashoffset="222.359" stroke-dasharray="222.359" fill="none" stroke="#21716E" stroke-width="2" stroke-miterlimit="10" d="M533.467,803.151   c6.542-10.46,18.053-17.073,31.4-17.073c20.588,0,37.278,16.689,37.278,37.277c0,20.588-16.69,37.278-37.278,37.278   s-37.278-16.69-37.278-37.278c0-2.562,0.259-5.062,0.752-7.48l0.409-1.751"></path>
 			</g>
 			</g>
-			<g id="page52_open">
+			<g id="page52_open" class="buttons2">
 				<polygon fill="#D1DE58" points="616.916,654.981 631.746,640.151 616.916,625.318  "/>
 				<rect x="521.539" y="604" fill="#47BCB6" width="86.148" height="80.148"/>
 				<g class="numbers" visibility="hidden">
@@ -3371,7 +3362,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 				<path stroke-dashoffset="141" stroke-dasharray="141" fill="none" stroke="#3A9E99" stroke-width="2" stroke-miterlimit="10" d="M587.457,613.383   c8.468,6.517,13.925,16.754,13.925,28.267c0,19.688-15.96,35.648-35.648,35.648c-18.458,0-33.639-14.027-35.465-32.004"></path>
 			</g>
 			</g>
-			<g id="page53_open">
+			<g id="page53_open" class="buttons2">
 				<polygon fill="#D1DE58" points="615.585,475.943 630.415,461.113 615.585,446.281  "/>
 				<rect x="519" y="418" fill="#47BCB6" width="93.688" height="86.227"/>
 				<g class="numbers" visibility="hidden">
@@ -3381,7 +3372,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 				<path stroke-dashoffset="179.083" stroke-dasharray="179.083" fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" d="M525.893,454.011   c3.406-18.912,19.948-33.261,39.841-33.261c22.359,0,40.484,18.125,40.484,40.483c0,20.854-15.77,38.026-36.035,40.242"></path>
 			</g>
 			</g>
-			<g id="page54_open">
+			<g id="page54_open" class="buttons2">
 				<polygon fill="#D1DE58" points="615.585,294.321 630.415,279.491 615.585,264.659  "/>
 				<rect x="523" y="246" fill="#47BCB6" width="82" height="72"/>
 				<g class="numbers" visibility="hidden">
@@ -3391,7 +3382,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 			</g>
 		</g>
 		<g id="page5-buttons-close" cursor="pointer" visibility="hidden">
-			<g id="page51_openclose">
+			<g id="page51_openclose" class="buttons2">
 				<polygon fill="#D1DE58" points="629.599,812.579 614.769,827.409 629.599,842.241  "/>
 				<rect x="516.625" y="779.312" fill="#3A9E99" width="93.062" height="91.836"/>
 				<g>
@@ -3401,7 +3392,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 				<path fill="none" stroke="#21716E" stroke-width="2" stroke-miterlimit="10" d="M533.467,803.151   c6.542-10.46,18.053-17.073,31.4-17.073c20.588,0,37.278,16.689,37.278,37.277c0,20.588-16.69,37.278-37.278,37.278   s-37.278-16.69-37.278-37.278c0-2.562,0.259-5.062,0.752-7.48l0.409-1.751"></path>
 			</g>
 			</g>
-			<g id="page52_openclose">
+			<g id="page52_openclose" class="buttons2">
 				<polygon fill="#D1DE58" points="630.415,626.818 615.585,641.648 630.415,656.481  "/>
 				<rect x="521.539" y="604" fill="#47BCB6" width="86.148" height="80.148"/>
 				<g>
@@ -3410,7 +3401,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 				<path fill="none" stroke="#3A9E99" stroke-width="2" stroke-miterlimit="10" d="M587.457,613.383   c8.468,6.517,13.925,16.754,13.925,28.267c0,19.688-15.96,35.648-35.648,35.648c-18.458,0-33.639-14.027-35.465-32.004"></path>
 			</g>
 			</g>
-			<g id="page53_openclose">
+			<g id="page53_openclose" class="buttons2">
 				<polygon fill="#D1DE58" points="630.584,447.781 615.754,462.611 630.584,477.443  "/>
 				<rect x="519" y="418" fill="#47BCB6" width="93.688" height="86.227"/>
 				<g>
@@ -3420,7 +3411,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 				<path fill="none" stroke="#D1D3D4" stroke-width="2" stroke-miterlimit="10" d="M525.893,454.011   c3.406-18.912,19.948-33.261,39.841-33.261c22.359,0,40.484,18.125,40.484,40.483c0,20.854-15.77,38.026-36.035,40.242"></path>
 			</g>
 			</g>
-			<g id="page54_openclose">
+			<g id="page54_openclose" class="buttons2">
 				<polygon fill="#D1DE58" points="629.084,267.159 614.254,281.989 629.084,296.821  "/>
 				<rect x="523" y="246" fill="#47BCB6" width="82" height="72"/>
 				<g>

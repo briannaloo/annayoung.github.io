@@ -68,6 +68,52 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("button3-polygon")).attr("fill", "#103844");
 	});
 
+	var color, elt;
+	$(object.getElementsByClassName("buttons")).hover(function() {
+		color = $(this).attr("fill");
+		$(this).attr("fill", "#F26E2A");
+	}, function() {
+		$(this).attr("fill", color);
+	});
+	$(object.getElementsByClassName("buttons-blue")).hover(function() {
+		color = $(this).attr("fill");
+		$(this).attr("fill", "rgb(44, 191, 209)");
+	}, function() {
+		$(this).attr("fill", color);
+	});
+	$(object.getElementsByClassName("buttons2")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "#F26E2A");
+	}, function() {
+		elt.attr("fill", color);
+	});
+	$(object.getElementsByClassName("buttons3")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "#F26E2A");
+		$(this).find('path').attr("stroke", "#F26E2A");
+	}, function() {
+		elt.attr("fill", color);
+		$(this).find('path').attr("stroke", color);
+	});
+	$(object.getElementsByClassName("buttons4")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "#F26E2A");
+		$(this).find('line').attr("stroke", "#F26E2A");
+	}, function() {
+		elt.attr("fill", color);
+		$(this).find('line').attr("stroke", color);
+	});
+	$(object.getElementsByClassName("buttons5")).hover(function() {
+		elt = $(this).find('#buttons5-button');
+		color = elt.attr("fill");
+		elt.attr("fill", "#F26E2A");
+	}, function() {
+		elt.attr("fill", color);
+	});
+
 var seconds = 1;
 
 // hide elements from home page
@@ -220,25 +266,36 @@ var seconds = 1;
 		});
 
 		// expand industrial sources
+		var natural_bool = false, industrial_bool = false;
 		$(object.getElementById("industrial_open")).click(function() {
 			$(object.getElementById("landfill")).fadeIn(500);
 			$(object.getElementById("waste-water")).fadeIn(500);
 			$(object.getElementById("emissions-cycle-text")).fadeOut(250);
+
+			industrial_bool = true;
 		});
 		$([object.getElementById("industrial_close"), object.getElementById("go_back_smoke_stacks")]).click(function() {
 			$(object.getElementById("landfill")).fadeOut(500);
 			$(object.getElementById("waste-water")).fadeOut(500);
-			$(object.getElementById("emissions-cycle-text")).delay(250).fadeIn(250);
+			if (!natural_bool)
+				$(object.getElementById("emissions-cycle-text")).delay(250).fadeIn(250);
+
+			industrial_bool = false;
 		});
 
 		// expand natural sources
 		$(object.getElementById("natural_open")).click(function() {
 			$(object.getElementById("natural-sources-items")).fadeIn(500);
 			$(object.getElementById("emissions-cycle-text")).fadeOut(250);
+
+			natural_bool = true;
 		});
 		$([object.getElementById("natural_close"), object.getElementById("go_back_smoke_stacks")]).click(function() {
 			$(object.getElementById("natural-sources-items")).fadeOut(500);
-			$(object.getElementById("emissions-cycle-text")).delay(250).fadeIn(250);
+			if (!industrial_bool)
+				$(object.getElementById("emissions-cycle-text")).delay(250).fadeIn(250);
+
+			natural_bool = false;
 		});
 
 
