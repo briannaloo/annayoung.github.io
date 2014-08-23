@@ -97,15 +97,6 @@ obj.addEventListener("load", function() {
 		elt.attr("fill", color);
 		$(this).find('path').attr("stroke", color);
 	});
-	$(object.getElementsByClassName("buttons4")).hover(function() {
-		elt = $(this).find('polygon');
-		color = elt.attr("fill");
-		elt.attr("fill", "#F26E2A");
-		$(this).find('line').attr("stroke", "#F26E2A");
-	}, function() {
-		elt.attr("fill", color);
-		$(this).find('line').attr("stroke", color);
-	});
 	$(object.getElementsByClassName("buttons5")).hover(function() {
 		elt = $(this).find('#buttons5-button');
 		color = elt.attr("fill");
@@ -324,8 +315,6 @@ var seconds = 1;
 			$(object.getElementById("marker-hide")).fadeOut(500);
 			$(object.getElementById("region-circles")).delay(2.5*seconds*1000).fadeIn(500);
 
-			$(object.getElementById("planet")).attr("cursor", "auto");
-			$(object.getElementById("planet")).attr("pointer-events", "none");
 		});
 		$(object.getElementById("go_back_planet")).click(function() {
 			$(object.getElementById("go_back_planet")).fadeOut(seconds*1000);
@@ -334,10 +323,11 @@ var seconds = 1;
 			$(object.getElementById("marker-hide")).delay(2*seconds*1000).fadeIn(500);
 			$(object.getElementById("region-circles")).fadeOut(500);
 			$(object.getElementById("region-markers")).delay(500).fadeOut(500);
-
-			$(object.getElementById("planet")).attr("cursor", "pointer");
-			$(object.getElementById("planet")).attr("pointer-events", "auto");
 		});
+
+		$(object.getElementById("planet"))
+			.append(createSet("cursor", "auto", "planet.click; button4.click", "go_back_planet.click + " + (3*seconds) + "s", false))
+			.append(createSet("pointer-events", "none", "planet.click; button4.click", "go_back_planet.click + " + (3*seconds) + "s", false));
 
 		// planet moves into center
 		$([object.getElementById("planet"), object.getElementById("marker-hide"), object.getElementById("planet-stroke")])
