@@ -216,13 +216,24 @@ function uploadImage() {
         	console.log(response);
         	var site = response.source;
         	console.log(site);
-        	FB.ui({method: 'share_open_graph',
-        		action_type: 'peer_countries:take',
-        		action_properties: JSON.stringify({
-        			survey: "http://epi.yale.edu/visuals/peer-countries-survey/",
-        			image: site
-        			})}, function(response){console.log(response);
-        		});});
+
+        var share = "https://www.facebook.com/dialog/share_open_graph?app_id=741655859211506&display=popup&action_type=peer_countries:take&action_properties=";
+		var stringify = encodeURIComponent(JSON.stringify({
+			survey: "http://epi.yale.edu/visuals/peer-countries-survey/",
+			image: site }));
+		share += stringify;
+		share += "&redirect_uri=https%3A%2F%2Fyalesurvey.qualtrics.com%2FSE%2F%3FSID%3DSV_eR7kaugnsC3ra85"
+		console.log(share);
+
+    	/*FB.ui({method: 'share_open_graph',
+    		action_type: 'peer_countries:take',
+    		action_properties: JSON.stringify({
+    			survey: "http://epi.yale.edu/visuals/peer-countries-survey/",
+    			image: site
+    			})}, function(response){console.log(response);
+    		});*/
+    	});
+
         $j("#share_photo").css("pointer-events","auto");
   		$j("#share_photo").css("cursor","pointer");
     },
