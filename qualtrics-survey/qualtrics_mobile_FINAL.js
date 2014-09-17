@@ -26,14 +26,12 @@ $j("#country").text("How green is " + choice + "?");
 var peer_answer = "${q://QID5/SelectedChoicesRecode}";
 var answer = peer_answer.split(",");
 var peers = [];
-for (var p = 0; p < answer.length; p++)
-{
+for (var p = 0; p < answer.length; p++){
   var country = countries[parseInt(answer[p]) - 1];
   peers.push(country);
 }
 var same = false;
-for (var i = 0; i < peers.length; i++)
-{
+for (var i = 0; i < peers.length; i++){
 if (origin === peers[i])
      same = true;
 }
@@ -78,8 +76,8 @@ function rank(order, indicator, origin) {
   var circle_position = 5;
   var current_rank = 0;
   var previous_value = "-1";
-  for (var rank = 0; rank < order.length; rank++)
-  {
+  var top_offset = 415;
+  for (var rank = 0; rank < order.length; rank++){
     var country = (order[rank].split(","))[1];
     var value = (order[rank].split(","))[0];
     var image = document.createElementNS(svgNS,"image");
@@ -90,8 +88,7 @@ function rank(order, indicator, origin) {
     image.setAttributeNS(null,"x","0");
     image.setAttributeNS(null,"id",country);
     var clip_y = 37 + circle_position;
-    if (document.getElementById(clip_y+"") == null)
-    {
+    if (document.getElementById(clip_y+"") == null){
       var clip_path = document.createElementNS(svgNS,"clipPath");
       clip_path.setAttributeNS(null,"id", clip_y + "");
       var c = document.createElementNS(svgNS,"circle");
@@ -133,6 +130,11 @@ function rank(order, indicator, origin) {
     var offset = $j(image).position();
     elt2.style.top =offset.top+"px";
     elt2.style.left =offset.left+"px";
+    var left = offset.left+"px";
+    if (indicator == "EH_HealthImpacts"){left = "42px";}else if (indicator == "EH_AirQuality"){left = "120px";}else if (indicator == "EH_WaterSanitation"){left = "198px";}else if (indicator == "EV_WaterResources"){left="276px";}else if (indicator == "EV_Agriculture"){left="354px";}else if (indicator == "EV_Forests"){left="432px";}else if (indicator == "EV_Fisheries"){left="510px";}else if (indicator == "EV_BiodiversityHabitat"){left="588px";}else if (indicator == "EV_ClimateEnergy"){left="666px";}
+    elt2.style.left=left;
+    elt2.style.top =top_offset + "px";
+    top_offset+=70;
     $j("."+indicator).append(elt2);
   }
 }
@@ -144,9 +146,7 @@ function renderImage() {
   var canvas = document.createElement('canvas');
   $j(canvas).width(width + "px");
   $j(canvas).height(height + "px");
-
-  if (canvas.getContext && canvas.getContext('2d')) 
-  {
+  if (canvas.getContext && canvas.getContext('2d')) {
      svg = $j('#canvas-container').html().replace(/>\s+/g,">").replace(/\s+</g,"<");
     canvg(canvas, svg, {renderCallback: function() {
        var img = canvas.toDataURL("image/jpeg", 1.0);
@@ -157,7 +157,6 @@ function renderImage() {
        $j('#download-container').append(link);
        console.log("Image rendered.");
        $j('#download-container').append("<a id=\"download\" style=\"top: 0px;\" href=\"javascript:emailCurrentPage()\">Email survey.</a>");
-
        window.image_data = img.substring(img.indexOf(',')+1,img.length);
        $j(link).on("click", function() {
         window.open(img);
@@ -171,13 +170,13 @@ function renderImage() {
     alert ("Your browser does not support the download of this image.");
 }
 window.fbAsyncInit = function() {
-  FB.init({
-        appId      : '741655859211506',
-        cookie     : true,
-        xfbml      : true,
-        status     : true,
-        version    : 'v2.0'
-      });
+FB.init({
+    appId      : '741655859211506',
+    cookie     : true,
+    xfbml      : true,
+    status     : true,
+    version    : 'v2.0'
+  });
 };
 
 function dataURItoBlob(dataURI,mime) {
@@ -192,7 +191,7 @@ function uploadImage() {
   try{
     var blob = dataURItoBlob(window.image_data,"image/jpeg");
   }catch(e){console.log(e);
-  	alert("Your browser does not support the download/sharing of this image.");}
+  	alert("Your browser does not support the download/sharing of this image. We recommend Chrome, Safari, or Firefox for full functionality.");}
   var fd = new FormData();
   var accessToken = "CAAKiiDYIrPIBALQYZBhFSj5QDFJ1WR48Dc3ImXyvLsd0GNrnzYf1aEcFMxTytD3yfDGcmqRCLI4rjugTOhgA3RXpOiYwOgkqdAkCoBcfIFkSfkCZC3PnAZCJxwUTq7rkOUL2sQjGIY2VTGXlij1bZCrkS96GETZAW5kdLyZAE6976T4FQpvKhZA8mSdTEteGnhJGQ1DAhvzRm1NqZCFIocP7";
   var page_id = "741993609192399";
@@ -207,23 +206,17 @@ function uploadImage() {
         FB.api(id,{access_token: accessToken},function(response){
         	console.log(response);
         	var site = response.source;
-        	//console.log(site);
-
         var share = "https://www.facebook.com/dialog/share_open_graph?app_id=741655859211506&display=popup&action_type=peer_countries:take&action_properties=";
 		var stringify = encodeURIComponent(JSON.stringify({
 			survey: "http://epi.yale.edu/visuals/peer-countries-survey/",
 			image: site }));
 		share += stringify;
-		share += "&redirect_uri=http%3A%2F%2Fepi.yale.edu%2Fvisuals%2Fpeer-countries-survey%2Fredirect.html"
-		//console.log(share);
-
+		share += "&redirect_uri=http%3A%2F%2Fepi.yale.edu%2Fvisuals%2Fpeer-countries-survey%2Fredirect.html";
 		var a = document.getElementById("share_click");
 		a.href=share;
 		a.target="_blank";
-
 		$j('#share_click').show();
 		});
-
     },
     error:function(shr,status,data){
        console.log("error uploading to facebook.");
@@ -234,15 +227,14 @@ function uploadImage() {
 }catch(e){console.log(e);}
 }
 (function(d, s, id){
-   var js, fjs = d.getElementsByTagName(s)[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement(s); js.id = id;
-   js.src = "//connect.facebook.net/en_US/sdk.js";
-   fjs.parentNode.insertBefore(js, fjs);
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) {return;}
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
 });
 </script>
-
 <div class="results" id="frame">
 <div class="response-container">
 <div class="text-results"><text> Here&#39;s how your country ranks against its peers on environmental issues.</text><br />
@@ -255,11 +247,12 @@ function uploadImage() {
 <div style="position:absolute;left:50px;width:50px;top:0px;margin-bottom:3px;">
 <div class="fb-like" data-action="like" data-href="http://epi.yale.edu/visuals/peer-countries-survey/" data-layout="button_count" data-share="false" data-show-faces="false">&nbsp;</div>
 </div>
+<div style="position: absolute; top: 25px; left: 0px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://epi.yale.edu/visuals/peer-countries-survey" data-text="Green Scorecard: How does your country rank in environmental issues? #2014EPI @YaleEnviro"></a></div>
 </div>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 </script></div><div class="results-container">
 <div style="height:0px;"><div class="EH_HealthImpacts">&nbsp;</div><div class="EH_AirQuality">&nbsp;</div><div class="EH_WaterSanitation">&nbsp;</div><div class="EV_WaterResources">&nbsp;</div><div class="EV_Agriculture">&nbsp;</div><div class="EV_Forests">&nbsp;</div><div class="EV_Fisheries">&nbsp;</div><div class="EV_BiodiversityHabitat">&nbsp;</div><div class="EV_ClimateEnergy">&nbsp;</div></div>
-<div id="canvas-container"><svg id="svg-container" version="1.1" width="705" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs> <clippath id="circle-crop"><circle cx="40" cy="38" r="25"></circle></clippath> </defs> <rect fill="white" id="background" width="710" x="-5" y="0"></rect> <text fill="rgb(28, 184, 93)" style="font-size: 22px;" x="140" y="35"><tspan id="country"></tspan></text>
+<div id="canvas-container"><svg id="svg-container" style="overflow:hidden" version="1.1" width="705" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs> <clippath id="circle-crop"><circle cx="40" cy="38" r="25"></circle></clippath> </defs> <rect fill="white" id="background" width="710" x="-5" y="0"></rect> <text fill="rgb(28, 184, 93)" style="font-size: 22px;" x="140" y="35"><tspan id="country"></tspan></text>
 <g transform="scale(0.6) translate(5,5)">
 <path fill="#3A3736" d="M56.971,24.727V10.66h9.692v2.127h-6.646v3.578H65.6v2.004h-5.582v4.212h6.932v2.146H56.971z"/>
 <path fill="#3A3736" d="M75.563,24.727v-6.216c0-1.043-0.164-1.799-1.431-1.799c-0.675,0-1.615,0.348-2.29,0.756v7.259h-2.944      V14.688h2.781l0.041,0.92l0.082,0.041c1.166-0.777,2.576-1.206,3.538-1.206c2.658,0,3.148,1.574,3.148,3.455v6.829H75.563z"/>
