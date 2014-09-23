@@ -1,4 +1,4 @@
 AuthType Basic  
 AuthName "restricted area"  
-AuthUserFile /infographics/Mercury/.htpasswd
+AuthUserFile annayoung.github.io/infographics/Mercury/.htpasswd
 require valid-user
