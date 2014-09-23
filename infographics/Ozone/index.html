@@ -12,11 +12,12 @@
 <script type="text/javascript">
 
 var password = prompt("Enter password: ");
-while (password != "infographics")
+while (password != "infographics" && password != null)
 {
 	password = prompt("Wrong password. Please try again.");
 }
-$('body').show();
+if (password == "infographics")
+	$('body').show();
 
 var obj = document.getElementById("svg-object");
 obj.addEventListener("load", function() {
