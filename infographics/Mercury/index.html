@@ -610,8 +610,8 @@ var seconds = 1;
 			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_recs.click + " + (seconds/2.0) + "s", false));
 		});
 		$(object.getElementById("recs-clip1")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "recs1_open.click", "0", "450.65", "recs1_openclose.click; go_back_recs.click", false))
-			.append(createAnimate("width", seconds/2.0, "recs1_openclose.click; go_back_recs.click", "450.65", "0", "recs1_open.click; recommendations.click", false));
+			.append(createAnimate("width", seconds/2.0, "recs1_open.click", "0", "450.65", "go_back_recs.click", false))
+			.append(createAnimate("width", seconds/2.0, "recs1_openclose.click; go_back_recs.click", "450.65", "0", "recommendations.click", false));
 		$(object.getElementById("recs-clip2")).find("rect")
 			.append(createAnimate("width", seconds/2.0, "recs2_open.click", "0", "450.65", "recs2_openclose.click; go_back_recs.click", false))
 			.append(createAnimate("width", seconds/2.0, "recs2_openclose.click; go_back_recs.click", "450.65", "0", "recs2_open.click; recommendations.click", false));
