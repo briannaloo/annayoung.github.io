@@ -13,12 +13,12 @@
  
 <script type="text/javascript">
 
-var password = prompt("Enter password: ");
+/*var password = prompt("Enter password: ");
 while (password != "infographics" && password != null && password != '')
 {
 	password = prompt("Wrong password. Please try again.");
 }
-if (password == "infographics")
+if (password == "infographics")*/
 	$('body').show();
 
 var obj = document.getElementById("svg-object");
@@ -566,14 +566,16 @@ var seconds = 1;
 			.append(createMotion(seconds, "go_back_recs.click + " + (2*seconds) + "s", "0,0", "1600,0", "recommendations.click"));
 
 		// river draws
-		$(object.getElementById("river-path"))
+		/*$(object.getElementById("river-path"))
 			.append(createSet("visibility", "visible", "recommendations.click + 1.5s", "go_back_recs.click", false));
 		$(object.getElementById("river2-clip-rect"))
 			.append(createAnimate("height", seconds, "recommendations.click + 1.5s", "0", "550", "go_back_recs.click", false));
 		$(object.getElementById("river2-clip-rect2"))
 			.append(createAnimate("width", seconds, "recommendations.click + 2.5s", "0", "1500", "go_back_recs.click", false));
 		$(object.getElementById("river2-clip-rect3"))
-			.append(createAnimate("height", seconds/2.0, "recommendations.click + 2.5s", "0", "305", "go_back_recs.click", false));
+			.append(createAnimate("height", seconds/2.0, "recommendations.click + 2.5s", "0", "305", "go_back_recs.click", false));*/
+		$(object.getElementById("river-line"))
+			.append(createAnimate("stroke-dashoffset", 4*seconds, "recommendations.click + 2.5s", "2390", "0", "go_back_recs.click", false));
 
 		// background moves out
 		$(object.getElementById("background"))
