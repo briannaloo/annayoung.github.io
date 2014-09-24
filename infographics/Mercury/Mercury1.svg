@@ -2151,7 +2151,7 @@
 			<path id="river-line" clip-path="url(#river-crop)" fill="none" stroke-dasharray="2390" stroke-dashoffset="2390" stroke="#436F78" stroke-width="250" stroke-miterlimit="10" d="M1340.941,362.502c0,0-408,49-324,90s182,55,233,98   s-26,80-53,93s-158,49-585-35s-360,73-360,77s25,32,52,86s-121,115-267,114s-195-2-195-2"/>
 		</g>-->
 		<g id="river" style="display: none">
-			<path id="river-line" clip-path="url(#river-crop)" stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#FFFFFF" stroke-width="200" stroke-miterlimit="10" d="M1363.262,386.193    c0,0-392.265,13.542-342.288,54.446c48.19,39.442,260,78.511,292,117.554c32,39.043-70,74.888-208,74s-322-28-322-28    s-252.094-30.885-322-36c-82-6-208,41.388-194,76c19.685,48.667,36.961,60.738,48,96c11.369,36.315,2,82.176-104,100.6    c-116.994,20.335-344.994,13.4-344.994,13.4"/>
+			<path id="river-line" clip-path="url(#river-crop)" stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#FFFFFF" stroke-width="60" stroke-miterlimit="10" d="M1363.262,386.193    c0,0-392.265,13.542-342.288,54.446c48.19,39.442,260,78.511,292,117.554c32,39.043-70,74.888-208,74s-322-28-322-28    s-252.094-30.885-322-36c-82-6-208,41.388-194,76c19.685,48.667,36.961,60.738,48,96c11.369,36.315,2,82.176-104,100.6    c-116.994,20.335-344.994,13.4-344.994,13.4"/>
 		</g>
 		<!--<g id="river" style="display: none">
 			<g id="river-path" visibility="hidden" clip-path="url(#river-clip)">
