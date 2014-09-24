@@ -13,7 +13,7 @@
 		</rect>  
  	</clipPath>
  	<clipPath id="methyl-clip">
- 		<rect transform="rotate(180,795.047,894.146)" width="282.184" height="0" x="653.955" y="819.146">
+ 		<rect transform="rotate(180,795.047,894.146)" width="301" height="0" x="653.955" y="819.146">
  			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
 		</rect>  
  	</clipPath>
@@ -26,7 +26,7 @@
  	</clipPath>
 
  	<clipPath id="gap-clip">
- 		<rect width="295.485" height="0" x="395.398" y="901.5">
+ 		<rect width="295.485" height="0" x="395.398" y="856.985">
  			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
 		</rect>  
  	</clipPath>
@@ -1816,13 +1816,13 @@
 
 	<g id="data_gap" visibility="hidden">
 		<rect x="394.021" y="869.739" fill="none" width="271.486" height="14.999"/>
-		<text transform="matrix(1 0 0 1 394.0215 882.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
-		<line id="data_gap_line" stroke-dashoffset="300" stroke-dasharray="300" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="394.192" y1="888.25" x2="690.766" y2="888.25"/>
-		<polygon id="gap_close" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="687.374,884.157 672.544,869.327 657.712,884.157"/>
-		<polygon id="gap_open" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="659.859,892.099 674.689,906.929 689.521,892.099  "/>
+		<text transform="matrix(1 0 0 1 394.0215 844.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
+		<line id="data_gap_line" stroke-dashoffset="300" stroke-dasharray="300" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="394.192" y1="848.25" x2="690.766" y2="848.25"/>
+		<polygon id="gap_close" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="687.374,844.157 672.544,829.327 657.712,844.157"/>
+		<polygon id="gap_open" class="buttons-blue" visibility="hidden" cursor="pointer" fill="#F26E2A" points="659.859,852.099 674.689,866.929 689.521,852.099"/>
 		<g id="data_gap_text" clip-path="url(#gap-clip)" visibility="hidden">
-			<rect x="395.398" y="901.5" fill="none" width="295.485" height="91.496"/>
-			<text transform="matrix(1 0 0 1 395.3984 910.1279)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica'" font-size="12">There are no consistent indicators to describe human </tspan><tspan x="0" y="14.4" fill="#F26E2A" font-family="'Helvetica'" font-size="12">risk exposure to mercury through seafood consumption </tspan><tspan x="0" y="28.8" fill="#F26E2A" font-family="'Helvetica'" font-size="12">and certain occupational tasks. A gap exists between </tspan><tspan x="0" y="43.2" fill="#F26E2A" font-family="'Helvetica'" font-size="12">what is measured at the source and the impact on </tspan><tspan x="0" y="57.6" fill="#F26E2A" font-family="'Helvetica'" font-size="12">human health. </tspan></text>
+			<rect x="395.398" y="856.985" fill="none" width="295.485" height="139.015"/>
+			<text transform="matrix(1 0 0 1 395.3984 867.0518)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica'" font-size="14">There are no consistent indicators to describe </tspan><tspan x="0" y="16.8" fill="#F26E2A" font-family="'Helvetica'" font-size="14">human risk exposure to mercury through </tspan><tspan x="0" y="33.6" fill="#F26E2A" font-family="'Helvetica'" font-size="14">seafood consumption and certain occupational </tspan><tspan x="0" y="50.399" fill="#F26E2A" font-family="'Helvetica'" font-size="14">tasks. A gap exists between what is measured </tspan><tspan x="0" y="67.199" fill="#F26E2A" font-family="'Helvetica'" font-size="14">at the source and the impact on human </tspan><tspan x="0" y="84" fill="#F26E2A" font-family="'Helvetica'" font-size="14">health.</tspan><tspan x="42.034" y="84" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">arine fish (mainly tuna)</tspan><tspan x="173.535" y="84" fill="#F26E2A" font-family="'Helvetica'" font-size="14"> </tspan></text>
 		</g>
 	</g>
 
@@ -1902,7 +1902,7 @@
 		<g id="health_pics" visibility="hidden">
 			<g id="fade1">
 				<rect x="1240.258" y="505.5" fill="none" width="213.82" height="49.251"/>
-				<text transform="matrix(1 0 0 1 1254.8301 514.1279)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">MENTAL CONFUSION, MEMORY </tspan><tspan x="-3.683" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">LOSS, HEADACHES, DAMAGE TO </tspan><tspan x="36.328" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">NERVOUS SYSTEM</tspan></text>
+				<text transform="matrix(1 0 0 1 1272.8853 515.5659)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">MENTAL CONFUSION, </tspan><tspan x="-27.238" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">MEMORY LOSS, HEADACHES, </tspan><tspan x="-4.283" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">DAMAGE TO NERVOUS </tspan><tspan x="45.5" y="50.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">SYSTEM</tspan></text>
 				<g>
 					<path fill-rule="evenodd" clip-rule="evenodd" fill="#FDFDFD" d="M1353.448,416.522c1.257,0.599,3.057,1.135,3.561-0.215    c0.968-2.591-1.7-3.434-3.157-3.201c-7.431,1.188-6.818-3.91-6.106-8.105c1.291-7.621-3.803-16.742,5.055-22.707    c0.391-0.263,0.439-1.919,0.285-1.979c-7.658-2.935-3.131-9.559-4.26-14.395c-0.583-2.501-0.301-5.432,3.21-6.31    c3.013-0.755,5.208,0.479,6.858,2.833c0.908,1.295,1.637,2.734,2.304,4.175c0.674,1.452,2.092,2.418,2.907,1.093    c1.075-1.75,3.954-0.417,4.146-2.956c0.123-1.624-0.859-2.565-2.178-2.917c-5.204-1.387-8.125-8.311-14.837-6.064    c-1.075,0.36-2.327-0.179-2.237-1.456c0.312-4.447-0.957-9.337,2.016-13.154c2.619-3.364,6.602-2.666,10.393-2.071    c8.195,1.282,16.571,1.975,19.66,11.892c0.636,2.042,3.984,2.377,4.655,0.901c3.538-7.778,6.193-0.642,7.344,0.864    c5.481,7.176,13.319,13.35,11.77,24.111c-0.325,2.26,0.868,3.208,2.86,1.768c1.951-1.409,2.211-0.432,2.559,0.561    c3.153,8.972,9.69,17.476,3.789,27.761c-0.941,1.641-0.183,4.64,1.078,5.072c7.239,2.491,3.172,8.188,3.585,12.372    c0.19,1.933-1.448,5.129-3.967,5.163c-2.241,0.029-4.252-1.851-4.563-4.713c-0.137-1.251-0.504-2.655-3.824-3.408    c1.055,3.727-2.687,7.002,3.047,10.13c3.351,1.824,3.225,6.357-1.528,6.442c-6.093,0.11-10.94,4.093-16.87,4.14    c-2.922-3.939,2.969-5.675,2.205-9.645c-2.809,0.414-4.82,1.392-6.1,4.037c-5.003,10.354-6.722,10.904-17.676,5.981    c-4.545-3.014-3.125-6.412-0.079-9.184c2.695-2.453,5.724-5.096,9.603-5.257c7.195-0.299,10.633-6.549,16.035-9.651    c2.291-1.314-0.17-3.524,0.343-5.355c-3.29,8.052-8.253,13.735-17.283,14.935c-3.544,0.472-5.967,3.295-8.976,4.915    c-5.102,2.744-10.395,3.824-16.11,2.478c-2.048-0.922-3.681-2.292-4.748-4.297c-1.626-3.821-0.026-7.715-0.22-11.583    C1347.789,415.416,1350.749,415.951,1353.448,416.522z"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" fill="#FEFEFE" d="M1321.572,441.3c-7.823,6.617-14.162,5.46-17.504-3.704    c-1.218-3.339-3.157-4.319-5.831-4.988c-1.361,1.316-0.689,2.261,0.005,3.013c1.497,1.624,3.409,3.815,2.245,5.555    c-1.674,2.508-4.434,0.32-6.448-0.405c-3.499-1.259-6.833-2.729-10.697-2.536c-1.545,0.076-3.182-0.436-3.663-2.416    c-0.421-1.73-0.171-3.748,1.369-4.178c6.231-1.739,2.793-6.214,3.451-9.506c-2.574-0.777-3.399,0.632-3.696,2.288    c-0.528,2.958-2.398,5.662-4.97,5.174c-2.297-0.436-4.553-3.985-3.881-6.333c1.031-3.603-3.328-9.042,3.536-10.948    c1.718-0.478,2.238-3.622,1.475-4.928c-6.015-10.27-2.159-22.007,4.137-26.998c7.718-6.117,2.692-16.411,10.986-20.718    c2.566-1.333,3.812-5.034,5.985-7.347c1.96-2.086,3.762-5.763,7.084-0.587c1.449,2.262,4.348,0.665,5.443-2.079    c4.604-11.522,15.287-10.323,24.42-10.672c7.71-0.294,6.068,6.997,6.971,12.043c1.134,6.335-3.493,3.615-6.146,4.686    c-4.322,1.746-8.325,4.378-12.255,6.953c-1.486,0.975-1.531,3.468,0.488,3.48c1.922,0.015,3.409,4.852,5.65,0.538    c1.084-2.089,2.259-4.348,3.988-5.838c3.627-3.128,8.656-1.202,8.167,3.412c-0.569,5.358,4.1,12.398-3.977,15.996    c-0.216,0.095-0.204,1.688,0.173,1.985c9.716,7.675,3.494,18.338,5.1,27.504c0.986,5.624-4.127,1.915-6.125,3.175    c-1.439,0.909-4.102,0.81-3.153,3.39c0.497,1.352,2.302,0.816,3.559,0.214c3.88-1.173,5.923-0.047,5.597,4.315    c-0.211,2.802,0.113,5.608,0.162,8.416c-0.733,3.054-2.713,5.012-5.51,6.24c-5.992,1.121-11.615,0.301-16.755-3.19    c-3.75-2.544-7.706-4.496-12.245-5.473c-7.432-1.599-10.129-7.948-12.994-13.938c-0.393,5.179,6.072,12.583,13.223,14.258    c4.536,1.061,8.667,2.726,12.126,5.682C1323.88,435.245,1325.884,438.22,1321.572,441.3z"/>
@@ -1922,7 +1922,7 @@
 			</g>
 			<g id="fade2">
 				<rect x="1023.179" y="506.52" fill="none" width="126.822" height="25.252"/>
-				<text transform="matrix(1 0 0 1 1037.2451 515.1475)" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">KIDNEY FAILURE</text>
+				<text transform="matrix(1 0 0 1 1029.021 516.5854)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">KIDNEY FAILURE</text>
 				<g>
 					<path fill-rule="evenodd" clip-rule="evenodd" fill="#FEFEFE" d="M1066.057,451.526h-4.724l0.526-18.891    c0,0-1.052-5.249-2.099,1.573c-1.05,6.823-2.102,12.071-2.102,12.071s-1.575,4.723-7.346,6.296    c-5.771,1.575-12.07,6.822-17.317-2.622c-5.249-9.446-12.071-18.894-12.071-18.894s-8.92-19.416-1.572-30.961    c7.346-11.546,6.296-6.822,8.92-18.893c2.625-12.069,19.417-9.971,19.417-9.971s20.466,0,20.466,18.893c0,0,0,4.197-3.674,7.871    c-3.672,3.675-3.148,6.822,0.525,7.347c3.674,0.525,3.148,6.298,0,7.347c-3.147,1.05-4.721,3.674-2.624,3.674    c2.099,0,3.15,3.673,3.15,3.673S1067.632,418.991,1066.057,451.526z"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" fill="#FEFEFE" d="M1118.21,453.316h4.724l-0.526-18.893    c0,0,1.05-5.247,2.099,1.575c1.05,6.821,2.099,12.068,2.099,12.068s1.575,4.724,7.348,6.299    c5.773,1.572,12.069,6.821,17.318-2.625c5.246-9.445,12.068-18.892,12.068-18.892s8.921-19.416,1.575-30.961    c-7.348-11.545-6.296-6.822-8.921-18.893c-2.624-12.07-19.418-9.971-19.418-9.971s-20.464,0-20.464,18.892    c0,0,0,4.198,3.671,7.871c3.675,3.674,3.151,6.823-0.523,7.348c-3.674,0.523-3.147,6.298,0,7.348    c3.148,1.05,4.722,3.672,2.623,3.672c-2.1,0-3.148,3.674-3.148,3.674S1116.635,420.779,1118.21,453.316z"/>
@@ -1930,13 +1930,13 @@
 			</g>
 			<g id="fade3">
 				<rect x="818.179" y="505.5" fill="none" width="126.822" height="26.753"/>
-				<text transform="matrix(1 0 0 1 829.9189 514.1279)" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">UPSET STOMACH</text>
+				<text transform="matrix(1 0 0 1 821.3071 515.5659)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">UPSET STOMACH</text>
 				<path fill-rule="evenodd" clip-rule="evenodd" fill="#FEFEFE" d="M865.542,361.897c0,0,0.983,19.663,11.305,28.02   c10.324,8.355,13.763,32.442,4.424,41.291c-9.338,8.847-17.202,11.305-17.202,11.305s-8.357,2.949-22.613-0.491   c-14.253-3.44-20.646,18.678-21.136,30.967l13.272-0.491l2.459-11.798c0,0,2.949-9.832,12.778,0.983   c9.831,10.815,29.493,29.493,53.58,19.662c24.085-9.832,46.696-32.934,38.34-73.241c0,0-2.458-11.797-14.255-30.967   c-11.797-19.17-33.916-6.39-33.916-6.39s-14.256,6.39-17.204-1.476c-0.772-2.058-2.458-7.374-2.458-7.374H865.542z"/>
 
 			</g>
 			<g id="fade4">
 				<rect x="611.224" y="506.52" fill="none" width="126.822" height="25.253"/>
-				<text transform="matrix(1 0 0 1 626.623 515.1475)" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">HEART DISEASE</text>
+				<text transform="matrix(1 0 0 1 618.6211 516.5854)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">HEART DISEASE</text>
 				<g>
 					<g>
 						<path fill="#F26E2A" d="M644.919,357.559c0,0,9.012,5.546,11.784,15.251c2.773,9.705-6.933,18.718-6.933,18.718l-5.545,20.104     l24.956-6.239c0,0,9.705-16.638,22.877-20.104l-3.466-11.785c0,0-9.706,6.933-7.626-0.693     c2.079-7.626,10.398-25.649,10.398-25.649l-5.546-4.16c0,0-6.933,10.398-9.012,19.411L676.114,343h-7.626l-4.159,21.49     l-13.172-12.478L644.919,357.559z"/>
@@ -1947,7 +1947,7 @@
 			</g>
 			<g id="fade5">
 				<rect x="315.683" y="506.52" fill="none" width="258.824" height="28.252"/>
-				<text transform="matrix(1 0 0 1 400.7539 515.1475)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">LUNG DAMAGE</text>
+				<text transform="matrix(1 0 0 1 393.3638 516.5854)" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">LUNG DAMAGE</text>
 				<g>
 					<path fill-rule="evenodd" clip-rule="evenodd" fill="#F26E2A" d="M433.513,377.026c-0.143,4.01-0.427,8.025-0.361,12.033    c0.025,1.666-0.126,2.991-1.392,4.137c-0.693,0.627-0.251,1.304,0.311,1.714c0.882,0.646,0.994,1.471,0.972,2.464    c-0.154,6.914-0.391,13.833-0.354,20.748c0.018,3.692,0.572,7.379,0.799,11.073c0.118,1.915-0.043,3.847,0.074,5.762    c0.226,3.656,0.687,7.303,0.808,10.961c0.093,2.805-0.185,5.617-0.299,8.424c-0.012,0.263-0.082,0.525-0.07,0.786    c0.137,2.943-0.646,5.745-1.571,8.467c-1.018,2.998-2.623,5.757-5.747,6.994c-1.781,0.704-3.746,0.995-5.653,1.323    c-2.17,0.373-4.366,0.582-6.552,0.858c-0.26,0.031-0.523,0.04-0.786,0.066c-2.786,0.288-5.581,0.521-8.357,0.882    c-2.555,0.33-5.142,0.609-7.623,1.255c-3.8,0.987-7.547,2.197-11.271,3.45c-2.839,0.955-5.592,2.162-8.408,3.19    c-2.14,0.782-4.318,1.459-6.48,2.182c-2.305,0.773-4.592,1.602-6.916,2.306c-3.691,1.121-6.699-1.134-6.634-5.021    c0.088-5.219,0.308-10.435,0.417-15.651c0.02-0.961-0.207-1.926-0.327-2.891c-0.335-2.706-0.699-5.409-1.002-8.118    c-0.292-2.611,0.361-5.114,1.071-7.576c0.737-2.561,1.632-5.079,2.506-7.599c1.179-3.395,2.473-6.749,3.586-10.165    c0.764-2.352,1.223-4.8,1.961-7.16c0.879-2.803,1.831-5.59,2.898-8.325c1.029-2.636,2.145-5.245,3.406-7.777    c1.254-2.518,2.703-4.946,4.135-7.374c2.328-3.952,5.752-6.959,8.877-10.233c1.387-1.452,2.547-3.119,3.828-4.674    c1.508-1.833,3.018-3.664,4.558-5.467c2.765-3.24,5.499-6.51,8.354-9.669c2.087-2.314,4.285-4.536,6.544-6.684    c2.121-2.018,4.595-3.553,7.287-4.729c4.307-1.881,9.544-0.901,12.474,3.18c2.192,3.055,3.521,6.473,4.391,10.046    c0.534,2.194,0.523,4.524,0.757,6.792C433.651,377.011,433.582,377.02,433.513,377.026"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" fill="#F26E2A" d="M452.21,377.026c0.143,4.01,0.427,8.025,0.361,12.033    c-0.026,1.666,0.127,2.991,1.393,4.137c0.692,0.627,0.25,1.304-0.312,1.714c-0.881,0.646-0.994,1.471-0.971,2.464    c0.154,6.914,0.391,13.833,0.354,20.748c-0.018,3.692-0.573,7.379-0.798,11.073c-0.117,1.915,0.043,3.847-0.074,5.762    c-0.227,3.656-0.686,7.303-0.809,10.961c-0.092,2.805,0.185,5.617,0.3,8.424c0.012,0.263,0.081,0.525,0.069,0.786    c-0.137,2.943,0.646,5.745,1.572,8.467c1.018,2.998,2.622,5.757,5.745,6.994c1.783,0.704,3.746,0.995,5.655,1.323    c2.168,0.373,4.365,0.582,6.551,0.858c0.26,0.031,0.523,0.04,0.785,0.066c2.787,0.288,5.582,0.521,8.359,0.882    c2.553,0.33,5.139,0.609,7.622,1.255c3.8,0.987,7.547,2.197,11.271,3.45c2.838,0.955,5.592,2.162,8.406,3.19    c2.143,0.782,4.32,1.459,6.483,2.182c2.304,0.773,4.591,1.602,6.915,2.306c3.691,1.121,6.699-1.134,6.633-5.021    c-0.087-5.219-0.307-10.435-0.415-15.651c-0.021-0.961,0.207-1.926,0.326-2.891c0.335-2.706,0.699-5.409,1.001-8.118    c0.293-2.611-0.36-5.114-1.069-7.576c-0.738-2.561-1.633-5.079-2.507-7.599c-1.178-3.395-2.474-6.749-3.585-10.165    c-0.765-2.352-1.224-4.8-1.961-7.16c-0.88-2.803-1.833-5.59-2.9-8.325c-1.027-2.636-2.144-5.245-3.404-7.777    c-1.257-2.518-2.704-4.946-4.136-7.374c-2.329-3.952-5.751-6.959-8.877-10.233c-1.387-1.452-2.547-3.119-3.828-4.674    c-1.509-1.833-3.018-3.664-4.558-5.467c-2.766-3.24-5.5-6.51-8.353-9.669c-2.088-2.314-4.286-4.536-6.545-6.684    c-2.123-2.018-4.595-3.553-7.287-4.729c-4.306-1.881-9.543-0.901-12.475,3.18c-2.192,3.055-3.519,6.473-4.39,10.046    c-0.534,2.194-0.522,4.524-0.757,6.792C452.072,377.011,452.141,377.02,452.21,377.026"/>
@@ -1956,7 +1956,7 @@
 			</g>
 			<g id="fade6">
 				<rect x="40.743" y="506.52" fill="none" width="258.824" height="46.252"/>
-				<text transform="matrix(1 0 0 1 53.126 515.1475)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">FETAL BRAIN DEVELOPMENT: </tspan><tspan x="8.687" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">DELAYED LEARNING, POOR MOTOR </tspan><tspan x="53.007" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">CONTROL, SEVERE DISABILITIES</tspan></text>
+				<text transform="matrix(1 0 0 1 68.2451 516.5854)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">FETAL BRAIN DEVELOPMENT: </tspan><tspan x="-21" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">DELAYED LEARNING, POOR MOTOR </tspan><tspan x="-10.896" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">CONTROL, SEVERE DISABILITIES</tspan></text>
 				<g>
 					<path fill-rule="evenodd" clip-rule="evenodd" fill="#FEFEFE" d="M256.728,373.713c0.219,45.48-27.547,88.653-66.594,103.734    c-12.478,4.817-25.385,6.613-38.603,3.974c-26.609-5.312-40.008-28.142-31.921-54.071c3.514-11.265,9.609-21.137,17.299-29.898    c5.631-6.419,9.285-13.647,11.969-21.599c3.625-10.749,7.42-21.45,13.52-31.13c15.403-24.445,44.705-32.692,69.932-19.715    c15.223,7.83,23.256,20.366,24.361,37.359C256.938,366.133,256.728,369.931,256.728,373.713z"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" fill="#103844" d="M137.791,424.427c3.91-4.94,7.582-10.325,12.393-14.734    c11.104-10.174,17.771-8.467,22.104,5.715c0.283,0.934,0.699,1.826,1.046,2.716c1.974,0.192,1.888-1.489,2.549-2.292    c2.98-3.612,5.673-6.813-1.509-9.371c-3.865-1.377-6.009-5.485-5.506-9.956c0.844-7.512,1.705-15.045,3.129-22.461    c0.891-4.628,4.408-5.816,8.713-4.151c5.461,2.112,8.16,0.319,8.266-5.616c0.291-16.403,6.104-23.664,22.43-28.016    c11.58-3.086,24.846,2.505,30.554,12.879c5.334,9.692,3.366,20.816-6.091,29.316c-5.332,4.791-6.61,9.371-3.577,15.933    c4.271,9.238,3.741,18.846-0.845,27.775c-11.234,21.873-25.758,40.009-52.527,43.04c-4.543,0.514-9.067,0.408-13.562-0.525    c-9.551-1.982-14.402-7.379-14.944-17.275c-0.312-5.708-0.057-11.447-0.057-17.531c-4.149,3.656-8.212,7.626-12.679,11.069    c-5.18,3.993-8.988,2.309-9.594-4.365c-0.366-4.039-0.723-8.038-1.926-11.884c-1.444-4.613,0.572-7.63,4.577-8.925    c5.665-1.832,2.286,4.207,4.401,5.742C136.03,422.156,135.848,423.944,137.791,424.427z"/>
@@ -2411,7 +2411,7 @@
 			</g>
 			<line id="data-gap-line" visibility="hidden" stroke-dashoffset="310" stroke-dasharray="310" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="1087.852" y1="795.602" x2="1390.511" y2="795.602"/>
 			<g id="gap-text" visibility="hidden">
-				<text transform="matrix(1 0 0 1 1098.6934 790.0322)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
+				<text transform="matrix(1 0 0 1 394.0215 844.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
 				<text transform="matrix(1 0 0 1 1100.0703 817.4795)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica'" font-size="12">Measurements of atmospheric and aquatic </tspan><tspan x="0" y="14.4" fill="#F26E2A" font-family="'Helvetica'" font-size="12">concentrations of mercury have now been performed </tspan><tspan x="0" y="28.8" fill="#F26E2A" font-family="'Helvetica'" font-size="12">on a sampling campaign basis in a number of parts of </tspan><tspan x="0" y="43.2" fill="#F26E2A" font-family="'Helvetica'" font-size="12">the world, and in some areas repeatedly. Exceptions </tspan><tspan x="0" y="57.6" fill="#F26E2A" font-family="'Helvetica'" font-size="12">include the Southern Hemisphere and most oceans, </tspan><tspan x="0" y="72" fill="#F26E2A" font-family="'Helvetica'" font-size="12">where data are still patchy. </tspan></text>
 			</g>
 			<g id="region-markers"  transform="translate(-20,0)" style="display: none">
@@ -3108,14 +3108,14 @@
 				<g id="methyl">
 
 					<g id="methyl-text" clip-path="url(#methyl-clip)" visibility="hidden">
-						<rect x="653.955" y="819.146" opacity="0.8" fill="#2CBFD1" width="282.184" height="149.184"/>
-						<rect x="663.978" y="833.979" fill="none" width="260.259" height="105.256"/>
-						<text transform="matrix(1 0 0 1 663.9775 842.6064)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+						<rect x="635.285" y="813.088" opacity="0.8" fill="#2CBFD1" width="300.853" height="155.242"/>
+						<rect x="646.199" y="823.979" fill="none" width="283.88" height="142.623"/>
+						<text transform="matrix(1 0 0 1 646.1992 834.0449)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">Methylmercury (MeHg) is the most toxic form </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">of mercury that accumulates in aquatic food </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">web and can cause a variety of negative </tspan><tspan x="0" y="50.399" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">health effects such as long-term IQ deficits </tspan><tspan x="0" y="67.199" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">and cardiovascular impairment in exposed </tspan><tspan x="0" y="84" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">individuals. Humans are predominately </tspan><tspan x="0" y="100.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">exposed to MeHg by consuming fish. </tspan></text>
 					</g>
 
 					<rect x="661.544" y="949.818" fill="none" width="271.486" height="15"/>
 					<text transform="matrix(1 0 0 1 661.5439 962.7598)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">METHYLMERCURY</text>
-					<line stroke-dashoffset="265" stroke-dasharray="265" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="653.955" y1="968.33" x2="936.395" y2="968.33"/>
+					<line stroke-dashoffset="302" stroke-dasharray="302" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="635.285" y1="968.33" x2="936.395" y2="968.33"/>
 
 					<polygon id="methyl_open" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="930.079,963.275 915.249,948.445 900.418,963.275  "/>
 					<polygon id="methyl_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="900.418,949.941 915.248,964.771 930.079,949.941  "/>

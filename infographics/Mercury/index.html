@@ -1,23 +1,25 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<script src="./jquery.min.js"></script>
+<meta charset="UTF-8">
+<title>Mercury Infographic</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
-<body style="background-color: #103844;">
+<body style="display: none; background-color: #103844;">
 
 <object id="svg-object" width="100%" height="100%" style="position: absolute; left: 0; right:0;" type="image/svg+xml" data="./Mercury1.svg">Your browser does not support SVG</object>
 </body>
  
 <script type="text/javascript">
 
-/*var password = prompt("Enter password: ");
+var password = prompt("Enter password: ");
 while (password != "infographics" && password != null && password != '')
 {
 	password = prompt("Wrong password. Please try again.");
 }
 if (password == "infographics")
-	$('body').show();*/
+	$('body').show();
 
 var obj = document.getElementById("svg-object");
 obj.addEventListener("load", function() {
@@ -249,8 +251,8 @@ var seconds = 1;
 			.append(createAnimate("height", seconds/2.0, "industrial_open.click", "0", "129", "go_back_smoke_stacks.click; industrial_close.click", false))
 			.append(createAnimate("height", seconds/2.0, "industrial_close.click; go_back_smoke_stacks.click", "129", "0", "industrial_open.click; smoke_stacks.click; mountains.click; button1.click", false));
 		$(object.getElementById("methyl-clip")).find('rect')
-			.append(createAnimate("height", seconds/2.0, "methyl_open.click", "0", "150", "go_back_smoke_stacks.click; methyl_close.click", false))
-			.append(createAnimate("height", seconds/2.0, "methyl_close.click; go_back_smoke_stacks.click", "150", "0", "methyl_open.click; smoke_stacks.click; mountains.click; button1.click", false));
+			.append(createAnimate("height", seconds/2.0, "methyl_open.click", "0", "156", "go_back_smoke_stacks.click; methyl_close.click", false))
+			.append(createAnimate("height", seconds/2.0, "methyl_close.click; go_back_smoke_stacks.click", "156", "0", "methyl_open.click; smoke_stacks.click; mountains.click; button1.click", false));
 
 		$(object.getElementById("industrial-text"))
 			.append(createSet("visibility", "visible", "industrial_open.click", "go_back_smoke_stacks.click + 0.5s; industrial_close.click + 0.5s", false));
@@ -780,8 +782,8 @@ var seconds = 1;
 		$(object.getElementById("exposure_text"))
 			.append(createSet("visibility", "visible", "exposure_open.click", "exposure_close.click + " + (seconds/4.0) + "s; go_back_fishing.click + " + (seconds/4.0) + "s", false));
 		$(object.getElementById("gap-clip")).find("rect")
-			.append(createAnimate("height", seconds/4.0, "gap_open.click", "0", "91.496", "gap_close.click; go_back_fishing.click", false))
-			.append(createAnimate("height", seconds/4.0, "gap_close.click; go_back_fishing.click", "91.496", "0", "gap_open.click", false));
+			.append(createAnimate("height", seconds/4.0, "gap_open.click", "0", "140", "gap_close.click; go_back_fishing.click", false))
+			.append(createAnimate("height", seconds/4.0, "gap_close.click; go_back_fishing.click", "140", "0", "gap_open.click", false));
 		$(object.getElementById("exposure-clip")).find("rect")
 			.append(createAnimate("height", seconds/4.0, "exposure_open.click", "0", "183.994", "exposure_close.click; go_back_fishing.click", false))
 			.append(createAnimate("height", seconds/4.0, "exposure_close.click; go_back_fishing.click", "183.994", "0", "exposure_open.click", false));
