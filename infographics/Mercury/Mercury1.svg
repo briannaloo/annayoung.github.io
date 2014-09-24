@@ -10,8 +10,14 @@
  	<clipPath id="industrial-clip">
  		<rect transform="rotate(180,422.852,240.833)" width="262" height="0" x="291.852" y="176.333">
  			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+ 		</rect> 
+ 	</clipPath>
+ 	<clipPath id="natural-clip">
+ 		<rect transform="rotate(180, 730.254, 278.092)" x="580.254" y="206.092" opacity="0.8" fill="#2CBFD1" width="300" height="0">
+ 			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
 		</rect>  
  	</clipPath>
+
  	<clipPath id="methyl-clip">
  		<rect transform="rotate(180,795.047,894.146)" width="301" height="0" x="653.955" y="819.146">
  			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
@@ -37,7 +43,7 @@
  	</clipPath>
 
  	<clipPath id="recs-clip1">
-		<rect x="205.751" y="774.374" width="0" height="122.888" >
+		<rect x="205.751" y="774.374" width="0" height="157.427" >
 		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
 		</rect>   
 	</clipPath>
@@ -47,7 +53,7 @@
 		</rect>   
 	</clipPath>
 	<clipPath id="recs-clip3">
-		<rect x="205.751" y="410.613" width="0" height="122.888">
+		<rect x="205.751" y="410.613" width="0" height="145.395">
 		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
 		</rect>   
 	</clipPath>
@@ -186,7 +192,7 @@
 			<rect x="73.342" y="36.614" fill="none" width="1054.143" height="38.606"/>
 			<text transform="matrix(1 0 0 1 70.3413 71.126)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">BIOACCUMULATION</tspan></text>
 			<rect x="73.941" y="88.085" fill="none" width="592.957" height="120.132"/>
-			<text transform="matrix(1 0 0 1 73.9414 102.4648)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Toxins become MORE CONCENTRATED when breathed, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">swallowed, and absorbed by marine organisms </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">than in their surrounding environment. </tspan></text>
+			<text transform="matrix(1 0 0 1 73.9414 102.4648)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">TOXINS BECOME MORE CONCENTRATED WHEN BREATHED, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">SWALLOWED, AND ABSORBED BY MARINE ORGANISMS </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THAN IN THEIR SURROUNDING ENVIRONMENT. </tspan></text>
 			<polygon id="go_back_animals" class="buttons" cursor="pointer" style="display: none" fill="#2CBFD1" points="55.945,34.809 36.836,53.918 55.945,73.027  "/>
 		</g>
 
@@ -247,11 +253,11 @@
 				<rect x="1360.652" y="958.855" fill="none" width="227.776" height="20.799"/>
 				<text transform="matrix(1 0 0 1 1368.0435 971.7974)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">CONCENTRATION (PPM)</text>
 				<rect x="1432.5" y="432.387" fill="none" width="168" height="148.667"/>
-				<text transform="matrix(1 0 0 1 1432.5 441.0146)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">SHARK: 1.00</tspan><tspan x="0" y="24.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">SWORDFISH: 0.98</tspan><tspan x="0" y="48.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">KING MACKEREL: 0.73</tspan><tspan x="0" y="73.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">ORANGE ROUGHY: 0.57</tspan><tspan x="0" y="97.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">TUNA: 0.14 - 0.69</tspan></text>
+				<text transform="matrix(1 0 0 1 1432.5 441.0146)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">SHARK: 1.00</tspan><tspan x="0" y="24.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">SWORDFISH: 0.98</tspan><tspan x="0" y="48.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">KING MACKEREL: 0.73</tspan><tspan x="0" y="73.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">ORANGE ROUGHY: 0.57</tspan><tspan x="0" y="97.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">TUNA: 0.14 - 0.69</tspan></text>
 				<rect x="1432.5" y="635.079" fill="none" width="168" height="65.709"/>
-				<text transform="matrix(1 0 0 1 1432.5 643.707)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">COD: 0.11</tspan><tspan x="0" y="24.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">HERRING: 0.08</tspan><tspan x="0" y="48.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">TROUT: 0.07</tspan></text>
+				<text transform="matrix(1 0 0 1 1432.5 643.707)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">COD: 0.11</tspan><tspan x="0" y="24.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">HERRING: 0.08</tspan><tspan x="0" y="48.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">TROUT: 0.07</tspan></text>
 				<rect x="1432.5" y="825.012" fill="none" width="168" height="104.063"/>
-				<text transform="matrix(1 0 0 1 1432.5 833.6396)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">CATFISH: 0.03</tspan><tspan x="0" y="24.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">ANCHOVIES: 0.02</tspan><tspan x="0" y="48.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">SARDINE: 0.01</tspan><tspan x="0" y="73.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">MOLLUSCS: 0.01</tspan></text>
+				<text transform="matrix(1 0 0 1 1432.5 833.6396)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">CATFISH: 0.03</tspan><tspan x="0" y="24.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">ANCHOVIES: 0.02</tspan><tspan x="0" y="48.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">SARDINE: 0.01</tspan><tspan x="0" y="73.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">MOLLUSCS: 0.01</tspan></text>
 				<rect x="1341.833" y="717.947" fill="none" width="77.906" height="42.21"/>
 				<text transform="matrix(1 0 0 1 1338.833 752.459)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="48" letter-spacing="-6">1</tspan><tspan x="19.975" y="0" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="48">0x</tspan></text>
 				<rect x="1341.833" y="550.947" fill="none" width="77.906" height="42.21"/>
@@ -284,7 +290,7 @@
 			<rect x="73.51" y="38.489" fill="none" width="1054.143" height="38.606"/>
 			<text transform="matrix(1 0 0 1 70.5093 73.001)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">THE NEXT GENERATION</tspan></text>
 			<rect xmlns="http://www.w3.org/2000/svg" x="74.109" y="89.96" fill="none" width="885.957" height="65.132"/>
-			<text transform="matrix(1 0 0 1 71.1094 104.3398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NINETY-ONE countries and the European Union have signed the MINIMATA </tspan><tspan x="3" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Convention. Measurements of water sampling is taken in a number of parts </tspan><tspan x="3" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">of the world.</tspan></text>
+			<text transform="matrix(1 0 0 1 71.1094 104.3398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THE NEXT GENERATION OF INDICATORS FOR MERCURY WILL REQUIRE IMPROVED </tspan><tspan x="3" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING GLOBALLY. METRICS TO LINK EMISSIONS TO HEALTH IMPACTS ARE ALSO </tspan><tspan x="3" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NEEDED.</tspan></text>
 			<polygon id="go_back_recs" class="buttons" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.113,36.684 37.004,55.793 56.113,74.902  "/>
 		</g>
 		<g id="icons" visibility="hidden">
@@ -1884,7 +1890,7 @@
 		<rect x="74.051" y="37.989" fill="none" width="1054.142" height="38.606"/>
 		<text transform="matrix(1 0 0 1 71.0503 72.501)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
 		<rect xmlns="http://www.w3.org/2000/svg" x="74.65" y="89.46" fill="none" width="959.957" height="120.132"/>
-		<text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 74.6504 103.8398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Injesting toxic metals can have serious effects on the kidney, liver, central </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">nervous system and other organs. </tspan><tspan x="320" y="28.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">95 percent </tspan><tspan x="450" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">of the methylmercury you </tspan><tspan x="0" y="52.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consume is absorbed by your intestinal tract and enters the blood stream. </tspan><tspan x="0" y="76.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Gaseous Hg0 is also efficiently absorbed when inhaled.</tspan></text>
+		<text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 74.6504 103.8398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">INJESTING TOXIC METALS CAN HAVE SERIOUS EFFECTS ON THE KIDNEY, LIVER, CENTRAL </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NERVOUS SYSTEM AND OTHER ORGANS. </tspan><tspan x="320" y="28.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">95 PERCENT </tspan><tspan x="450" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">OF THE METHYLMERCURY YOU </tspan><tspan x="0" y="52.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">CONSUME IS ABSORBED BY YOUR INTESTINAL TRACT AND ENTERS THE BLOOD STREAM. </tspan><tspan x="0" y="76.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">GASEOUS HG0 IS ALSO EFFICIENTLY ABSORBED WHEN INHALED.</tspan></text>
 	</g>
 	<g id="health_diagram" style="display: none">
 		<g>
@@ -2164,34 +2170,35 @@
 		</g>
 			
 		</g>
-
+		<text id="recs-more-info" style="display: none" transform="matrix(1 0 0 1 204.751 959.7045)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="14">For more information: see Pirrone et al. (2013). <a fill="#2CBFD1" style="text-decoration: underline" target="_blank" xlink:href="http://www.sciencedirect.com/science/article/pii/S1352231013005189">Toward the Next Generation of Air Quality Monitoring: Mercury</a>. Atmospheric Environment 80:599-611.</text>
 		<g id="recs-text-boxes" visibility="hidden">
 			<g id="recs4" clip-path="url(#recs-clip4)">
-				<rect x="205.751" y="228.991" opacity="0.5" fill="#2CBFD1" width="450.649" height="122.888"/>
+				<rect x="205.751" y="228.991" opacity="0.5" fill="#2CBFD1" width="483.953" height="122.888"/>
+
 				<g>
-					<rect x="230.424" y="248.496" fill="none" width="415.358" height="90.45"/>
-					<text transform="matrix(1 0 0 1 230.4239 257.124)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
+					<rect x="230.424" y="248.496" fill="none" width="430" height="90.45"/>
+					<text transform="matrix(1 0 0 1 230.4239 257.8428)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="13">MORE PERMANENT MONITORING</tspan><tspan x="213.052" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">. There is a need for a permanent </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">global monitoring network to ensure that atmospheric Hg concentration </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">trends may be established unambiguously. Data from such a network </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">could also be used for model testing and evaluation, and enhance </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">confidence in the results of modelling evaluations of future emission </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">scenarios.</tspan></text>
 				</g>
 			</g>
 			<g id="recs3" clip-path="url(#recs-clip3)">
-				<rect x="205.751" y="410.613" opacity="0.5" fill="#2CBFD1" width="450.649" height="122.888"/>
+				<rect x="205.751" y="410.613" opacity="0.5" fill="#2CBFD1" width="483.953" height="145.395"/>
 				<g>
-					<rect x="230.424" y="426.832" fill="none" width="415.358" height="90.45"/>
-					<text transform="matrix(1 0 0 1 230.4239 435.46)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
+					<rect x="229.91" y="426.832" fill="none" width="439.849" height="133.054"/>
+					<text transform="matrix(0.9792 0 0 1 229.9101 436.1787)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="13">HEALTH</tspan><tspan x="52.716" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">. There currently are no indicators that link together Hg emissions </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">with health impacts via seafood consumption.Commercial marine fish account </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">for &gt;90% of mercury exposure in the U.S.), mainly from pelagic marine fish </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">(tuna). This means that human exposures reflect the global burden of mercury </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">in addition to local sources and resulting contamination in regional water </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">bodies. Better data on the geographic origins of seafood being consumed by </tspan><tspan x="0" y="93.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">different populations is critical for establishing the link between changes in Hg </tspan><tspan x="0" y="109.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">emissions, atmospheric deposition and concentration in fish.</tspan></text>
 				</g>
 			</g>
 			<g id="recs2" clip-path="url(#recs-clip2)">
-				<rect x="205.751" y="590.188" opacity="0.5" fill="#2CBFD1" width="450.649" height="122.888"/>
+				<rect x="205.751" y="590.188" opacity="0.5" fill="#2CBFD1" width="483.953" height="122.888"/>
 				<g>
-					<rect x="230.424" y="606.407" fill="none" width="415.358" height="90.45"/>
-					<text transform="matrix(1 0 0 1 230.4239 615.0352)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
+					<rect x="230.424" y="606.407" fill="none" width="441.203" height="126.601"/>
+					<text transform="matrix(1 0 0 1 230.4239 615.7539)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="13">MONITORING IN THE SOUTHERN HEMISPHERE. </tspan><tspan x="304.071" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">The Southern </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">Hemisphere, especially south of 40–60°N, is relatively unexplored territory </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">with respect to Hg. The next generation monitoring absolutely must address </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">this gap, especially if global patterns of Hg are to be understood. Monitoring </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">at these sites is useful for the study of long-range atmospheric transport </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">patterns, and how these are influenced by large scale climatic variations.</tspan></text>
 				</g>
 			</g>
 			<g id="recs1" clip-path="url(#recs-clip1)">
-				<rect x="205.751" y="774.374" opacity="0.5" fill="#2CBFD1" width="450.649" height="122.888"/>
+				<rect x="205.751" y="774.374" opacity="0.5" fill="#2CBFD1" width="483.953" height="157.427"/>
 				<g>
-					<rect x="230.424" y="790.593" fill="none" width="415.358" height="90.451"/>
-					<text transform="matrix(1 0 0 1 230.4239 799.2207)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
+					<rect x="230.424" y="790.593" fill="none" width="441.203" height="122.85"/>
+					<text transform="matrix(1 0 0 1 230.4239 799.9395)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="13">LOW-COST SENSORS. </tspan><tspan x="145.171" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">current technologies and methods require ishigh </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">investment and running costs that cannot necessarily be used in a </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">continuous monitoring program, especially at remote locations. The </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">development of simpler and less expensive methods is needed. The next </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">generation of air quality monitoring will require a two-fold effort, investment </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">in developing new low cost sensors and an expansion in the number of </tspan><tspan x="0" y="93.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">permanent Hg monitoring sites worldwide, especially in the southern </tspan><tspan x="0" y="109.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">hemisphere and in those regions whose economies are growing the fastest. </tspan></text>
 				</g>
 			</g>
 		</g>
@@ -2381,11 +2388,11 @@
 			<rect x="73.551" y="39.262" fill="none" width="1054.142" height="38.606"/>
 			<text transform="matrix(1 0 0 1 70.5503 73.7734)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">GLOBAL RISK AND POLICY</tspan></text>
 			<rect x="74.15" y="90.732" fill="none" width="818.36" height="65.132"/>
-			<text transform="matrix(1 0 0 1 71.1504 105.1123)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NINETY-ONE countries and the European Union have signed the MINIMATA </tspan><tspan x="3" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Convention. Measurements of water sampling is taken in a number of </tspan><tspan x="3" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">parts of the world.</tspan></text>
+			<text transform="matrix(1 0 0 1 71.1094 104.3398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">102 COUNTRIES AND 1 PARTY HAVE SIGNED ON TO THE MINIMATA CONVENTION - THE </tspan><tspan x="3" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">FIRST TREATY TO PROTECT HUMAN HEALTH AND THE ENVIRONMENT FROM MERCURY.</tspan></text>
 		</g>
 
 		<g id="minimata-texts" visibility="hidden">
-			<text transform="matrix(1 0 0 1 53.9668 651.6885)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THE minimata CONVENTION</text>
+			<text transform="matrix(1 0 0 1 53.9668 651.6885)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THE MINIMATA CONVENTION</text>
 			<line id="minimata-line" stroke-dashoffset="360" stroke-dasharray="360" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="53.967" y1="665.006" x2="408.369" y2="665.006"/>
 			<polygon visibility="hidden" id="minimata_open" class="buttons" cursor="pointer" fill="#FFFFFF" points="362.259,672.975 381.368,692.084 400.478,672.975  "/>
 			
@@ -2396,7 +2403,7 @@
 
 			<g id="minimata-text-box" clip-path="url(#minimata_clip)" visibility="hidden">
 				<rect x="53.706" y="664.778" opacity="0.8" fill="#2CBFD1" width="354.694" height="260.099"/>
-				<text transform="matrix(1 0 0 1 65.7285 689.9058)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS </tspan></text>
+				<text transform="matrix(1 0 0 1 65.7285 710)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">The Minamata Convention on Mercury is a global </tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">treaty to protect human health and the </tspan><tspan x="0" y="33.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">environment from the adverse effects of mercury. </tspan><tspan x="0" y="50.399" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">It was agreed on January 19, 2013. So far, 102 </tspan><tspan x="0" y="67.199" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">countries and 1 party (the United States) have </tspan><tspan x="0" y="84" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">signed the Convention.</tspan><tspan x="0" y="110.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">The Minamata Convention on Mercury includes a </tspan><tspan x="0" y="127.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">ban on new mercury mines, the phase-out of </tspan><tspan x="0" y="144.399" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">existing ones, control measures on air emissions, </tspan><tspan x="0" y="161.199" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">and the international regulation of the informal </tspan><tspan x="0" y="178" fill="#FFFFFF" font-family="'Helvetica'" font-size="14">sector for artisanal and small-scale gold mining.</tspan></text>
 			</g>
 			<polygon id="minimata_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="400.478,692.308 381.368,673.199 362.259,692.308  "/>
 
@@ -2411,7 +2418,7 @@
 			</g>
 			<line id="data-gap-line" visibility="hidden" stroke-dashoffset="310" stroke-dasharray="310" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="1087.852" y1="795.602" x2="1390.511" y2="795.602"/>
 			<g id="gap-text" visibility="hidden">
-				<text transform="matrix(1 0 0 1 394.0215 844.6807)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
+				<text transform="matrix(1 0 0 1 1098.6934 790.0322)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
 				<text transform="matrix(1 0 0 1 1100.0703 817.4795)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica'" font-size="12">Measurements of atmospheric and aquatic </tspan><tspan x="0" y="14.4" fill="#F26E2A" font-family="'Helvetica'" font-size="12">concentrations of mercury have now been performed </tspan><tspan x="0" y="28.8" fill="#F26E2A" font-family="'Helvetica'" font-size="12">on a sampling campaign basis in a number of parts of </tspan><tspan x="0" y="43.2" fill="#F26E2A" font-family="'Helvetica'" font-size="12">the world, and in some areas repeatedly. Exceptions </tspan><tspan x="0" y="57.6" fill="#F26E2A" font-family="'Helvetica'" font-size="12">include the Southern Hemisphere and most oceans, </tspan><tspan x="0" y="72" fill="#F26E2A" font-family="'Helvetica'" font-size="12">where data are still patchy. </tspan></text>
 			</g>
 			<g id="region-markers"  transform="translate(-20,0)" style="display: none">
@@ -2565,7 +2572,7 @@
 	<g id="emissions-page">
 		<g id="emissions-text" visibility="hidden">
 			<text transform="matrix(1 0 0 1 70.9058 73.8271)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">EMISSIONS AND TRANSFER</tspan></text>
-			<text transform="matrix(1 0 0 1 74.5059 105.166)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Mercury in the rainwater settles in lakes and rivers, where </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">microorganisms convert it to a highly toxic form called </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">methylmercury, which is then absorbed by algae.</tspan></text>
+			<text transform="matrix(1 0 0 1 74.5059 105.166)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MERCURY IN THE RAINWATER SETTLES IN LAKES AND RIVERS, WHERE </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MICROORGANISMS CONVERT IT TO A HIGHLY TOXIC FORM CALLED </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">METHYLMERCURY, WHICH IS THEN ABSORBED BY ALGAE.</tspan></text>
 			<polygon id="go_back_smoke_stacks" class="buttons" cursor="pointer" style="display: none" fill="#2CBFD1" points="56.51,37.51 37.4,56.619 56.51,75.728  "/>
 		</g>
 		<circle id="map-point" visibility="hidden" opacity="0.8" fill="#F9A11D" cx="1494.048" cy="160.051" r="26.05"/>
@@ -3122,13 +3129,20 @@
 
 				</g>
 				<g id="natural_sources">
+
+					<g id="natural-text" visibility="hidden" clip-path="url(#natural-clip)">
+						<rect x="580.254" y="206.092" opacity="0.8" fill="#2CBFD1" width="298.742" height="143.228"/>
+						<rect x="590.276" y="217" fill="none" width="281.72" height="105.813"/>
+						<text transform="matrix(1 0 0 1 590.2764 226.3467)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">Natural sources of mercury include volcanic </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">eruptions and emissions from the ocean. Only </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">about 1/3 of the Hg emitted to the atmosphere is </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">derived from point and other identifiable </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">anthropogenic sources. Most of the Hg emitted </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">from terrestrial and oceanic sources had an </tspan><tspan x="0" y="93.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">original anthropogenic source</tspan></text>
+					</g>
+
 					<rect x="587.44" y="330.823" fill="none" width="271.486" height="14.999"/>
 					<text transform="matrix(1 0 0 1 587.4404 343.7646)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">NATURAL SOURCES</text>
-					
+					<line stroke-dashoffset="299" stroke-dasharray="299" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="580.254" y1="349.32" x2="878.996" y2="349.32"/>
 					<line stroke-dashoffset="265" stroke-dasharray="265" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="579.852" y1="349.334" x2="841.186" y2="349.334"/>
 
-					<polygon id="natural_open" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="837.792,343.415 822.962,328.585 808.131,343.415  "/>
-					<polygon id="natural_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="808.131,330.945 822.961,345.775 837.792,330.945  "/>
+					<polygon id="natural_open" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="862.792,343.415 847.962,328.585 833.131,343.415"/>
+					<polygon id="natural_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="843.131,330.945 857.961,345.775 872.792,330.945"/>
 				</g>
 			</g>
 

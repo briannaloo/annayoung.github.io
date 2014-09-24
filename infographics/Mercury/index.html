@@ -250,12 +250,17 @@ var seconds = 1;
 		$(object.getElementById("industrial-clip")).find('rect')
 			.append(createAnimate("height", seconds/2.0, "industrial_open.click", "0", "129", "go_back_smoke_stacks.click; industrial_close.click", false))
 			.append(createAnimate("height", seconds/2.0, "industrial_close.click; go_back_smoke_stacks.click", "129", "0", "industrial_open.click; smoke_stacks.click; mountains.click; button1.click", false));
+		$(object.getElementById("natural-clip")).find('rect')
+			.append(createAnimate("height", seconds/2.0, "natural_open.click", "0", "144", "go_back_smoke_stacks.click; natural_close.click", false))
+			.append(createAnimate("height", seconds/2.0, "natural_close.click; go_back_smoke_stacks.click", "144", "0", "natural_open.click; smoke_stacks.click; mountains.click; button1.click", false));
 		$(object.getElementById("methyl-clip")).find('rect')
 			.append(createAnimate("height", seconds/2.0, "methyl_open.click", "0", "156", "go_back_smoke_stacks.click; methyl_close.click", false))
 			.append(createAnimate("height", seconds/2.0, "methyl_close.click; go_back_smoke_stacks.click", "156", "0", "methyl_open.click; smoke_stacks.click; mountains.click; button1.click", false));
 
 		$(object.getElementById("industrial-text"))
 			.append(createSet("visibility", "visible", "industrial_open.click", "go_back_smoke_stacks.click + 0.5s; industrial_close.click + 0.5s", false));
+		$(object.getElementById("natural-text"))
+			.append(createSet("visibility", "visible", "natural_open.click", "go_back_smoke_stacks.click + 0.5s; natural_close.click + 0.5s", false));
 		$(object.getElementById("methyl-text"))
 			.append(createSet("visibility", "visible", "methyl_open.click", "go_back_smoke_stacks.click + 0.5s; methyl_close.click + 0.5s", false));
 
@@ -539,14 +544,15 @@ var seconds = 1;
 			$(object.getElementById("go_back_recs")).delay(3.5*seconds*1000).fadeIn(500);
 			$([object.getElementById("Hg"), object.getElementById("Hg_line")]).fadeOut(seconds*1000);
 			$(object.getElementById("marker-hide")).delay(seconds*1000).fadeOut(seconds*1000);
-			$([object.getElementById("markers-show")]).delay(seconds*1000).fadeIn(seconds*1000);
+			$([object.getElementById("markers-show"),
+				object.getElementById("recs-more-info")]).delay(seconds*1000).fadeIn(seconds*1000);
 			$(object.getElementById("river")).delay(seconds*1000).fadeIn(500);
 
 			$(object.getElementById("planet")).attr('cursor', 'auto');
 			$(object.getElementById("planet")).attr('pointer-events', 'none');
 		});
 		$(object.getElementById("go_back_recs")).click(function() {
-			$([object.getElementById("go_back_recs"), object.getElementById("markers-show")]).fadeOut(seconds*1000);
+			$([object.getElementById("go_back_recs"), object.getElementById("markers-show"), object.getElementById("recs-more-info")]).fadeOut(seconds*1000);
 			$([object.getElementById("Hg"), object.getElementById("Hg_line"), object.getElementById("marker-hide")]).fadeIn(1*seconds*1000);
 			$(object.getElementById("river")).delay(2*seconds*1000).fadeOut(0);
 
@@ -612,17 +618,17 @@ var seconds = 1;
 			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_recs.click + " + (seconds/2.0) + "s", false));
 		});
 		$(object.getElementById("recs-clip1")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "recs1_open.click", "0", "450.65", "recs1_openclose.click; go_back_recs.click", false))
-			.append(createAnimate("width", seconds/2.0, "recs1_openclose.click; go_back_recs.click", "450.65", "0", "recs1_open.click; recommendations.click", false));
+			.append(createAnimate("width", seconds/2.0, "recs1_open.click", "0", "483.953", "recs1_openclose.click; go_back_recs.click", false))
+			.append(createAnimate("width", seconds/2.0, "recs1_openclose.click; go_back_recs.click", "483.953", "0", "recs1_open.click; recommendations.click", false));
 		$(object.getElementById("recs-clip2")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "recs2_open.click", "0", "450.65", "recs2_openclose.click; go_back_recs.click", false))
-			.append(createAnimate("width", seconds/2.0, "recs2_openclose.click; go_back_recs.click", "450.65", "0", "recs2_open.click; recommendations.click", false));
+			.append(createAnimate("width", seconds/2.0, "recs2_open.click", "0", "483.953", "recs2_openclose.click; go_back_recs.click", false))
+			.append(createAnimate("width", seconds/2.0, "recs2_openclose.click; go_back_recs.click", "483.953", "0", "recs2_open.click; recommendations.click", false));
 		$(object.getElementById("recs-clip3")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "recs3_open.click", "0", "450.65", "recs3_openclose.click; go_back_recs.click", false))
-			.append(createAnimate("width", seconds/2.0, "recs3_openclose.click; go_back_recs.click", "450.65", "0", "recs3_open.click; recommendations.click", false));
+			.append(createAnimate("width", seconds/2.0, "recs3_open.click", "0", "483.953", "recs3_openclose.click; go_back_recs.click", false))
+			.append(createAnimate("width", seconds/2.0, "recs3_openclose.click; go_back_recs.click", "483.953", "0", "recs3_open.click; recommendations.click", false));
 		$(object.getElementById("recs-clip4")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "recs4_open.click", "0", "450.65", "recs4_openclose.click; go_back_recs.click", false))
-			.append(createAnimate("width", seconds/2.0, "recs4_openclose.click; go_back_recs.click", "450.65", "0", "recs4_open.click; recommendations.click", false));
+			.append(createAnimate("width", seconds/2.0, "recs4_open.click", "0", "483.953", "recs4_openclose.click; go_back_recs.click", false))
+			.append(createAnimate("width", seconds/2.0, "recs4_openclose.click; go_back_recs.click", "483.953", "0", "recs4_open.click; recommendations.click", false));
 
 		// lines to sources draw
 		$(object.getElementById("sources-lines")).children().each(function() {
