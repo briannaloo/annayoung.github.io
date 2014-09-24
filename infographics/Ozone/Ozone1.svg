@@ -5,49 +5,77 @@
 <svg>
 <defs>
 	<clipPath id="clip-path1">
-		<rect x="209.489" y="619.711" width="262" height="0" /> 
+		<rect x="209.489" y="619.711" width="262" height="0">
+		<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 	<clipPath id="clip-path2">
-		<rect x="467.746" y="329.279" width="262" height="0" /> 
+		<rect x="467.746" y="329.279" width="262" height="0">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="clip-path3">
-		<rect transform="rotate(180 946 707.5)" x="815" y="643" width="262" height="0" /> 
+		<rect transform="rotate(180 946 707.5)" x="815" y="643" width="262" height="0">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="clip-path4">
-		<rect transform="rotate(180 1376.479 436.574)" x="1245.479" y="372.074" width="262" height="0" /> 
+		<rect transform="rotate(180 1376.479 436.574)" x="1245.479" y="372.074" width="262" height="0">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 
 	<clipPath id="eco-path1">
-		<rect transform="rotate(180 344.201 799.918)" x="228.701" y="759.134" width="0" height="81.568" /> 
+		<rect transform="rotate(180 344.201 799.918)" x="228.701" y="759.134" width="0" height="81.568">
+			<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="eco-path2">
-		<rect x="819.281" y="759.134" width="0" height="81.568" /> 
+		<rect x="819.281" y="759.134" width="0" height="81.568">
+			<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="eco-path3">
-		<rect transform="rotate(180 862.4665 492.721)" x="747.102" y="451.937" width="0" height="81.568" /> 
+		<rect transform="rotate(180 862.4665 492.721)" x="747.102" y="451.937" width="0" height="81.568">
+			<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="eco-path4">
-		<rect transform="rotate(180 1334.3075 799.918)" x="1218.943" y="759.134" width="0" height="81.568" /> 
+		<rect transform="rotate(180 1334.3075 799.918)" x="1218.943" y="759.134" width="0" height="81.568">
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 
 	<clipPath id="page5-clip1">
-		<rect x="615.585" y="824.873" width="0" height="122.888" /> 
+		<rect x="615.585" y="824.873" width="0" height="122.888">
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 	<clipPath id="page5-clip2">
-		<rect x="615.585" y="640.688" width="0" height="122.888" /> 
+		<rect x="615.585" y="640.688" width="0" height="122.888">
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 	<clipPath id="page5-clip3">
-		<rect x="615.585" y="461.112" width="0" height="122.888" /> 
+		<rect x="615.585" y="461.112" width="0" height="122.888">
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 	<clipPath id="page5-clip4">
-		<rect x="615.585" y="279.49" width="0" height="122.888" /> 
+		<rect x="615.585" y="279.49" width="0" height="122.888">
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 
 	<clipPath id="gradient-clip">
-		<rect width="0" height="800" x="0" y="172.564" transform="rotate(180 800 572.564)"/>
+		<rect width="0" height="800" x="0" y="172.564" transform="rotate(180 800 572.564)">
+			<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="gradient-clip2">
-		<rect width="1600" height="800" x="0" y="172.564" transform="rotate(180 800 572.564)"/>
+		<rect width="1600" height="800" x="0" y="172.564" transform="rotate(180 800 572.564)">
+			<set attributeName="width" begin="0s" repeatCount="indefinite" to="1600"/>
+		</rect> 
 	</clipPath>
 </defs>
 <g id="Layer_1">

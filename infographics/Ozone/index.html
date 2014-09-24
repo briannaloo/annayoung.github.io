@@ -1,23 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./jquery.min.js"></script>
 </head>
 
-<body style="display: none; background-color: #47BCB6;">
+<body style="background-color: #47BCB6;">
 
 <object id="svg-object" width="100%" height="100%" style="position: absolute" type="image/svg+xml" data="./Ozone1.svg">Your browser does not support SVG</object>
 </body>
 
 <script type="text/javascript">
 
-var password = prompt("Enter password: ");
+/*var password = prompt("Enter password: ");
 while (password != "infographics" && password != null && password != '')
 {
 	password = prompt("Wrong password. Please try again.");
 }
 if (password == "infographics")
-	$('body').show();
+	$('body').show();*/
 
 var obj = document.getElementById("svg-object");
 obj.addEventListener("load", function() {

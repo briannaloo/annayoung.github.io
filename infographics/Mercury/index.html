@@ -1,23 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./jquery.min.js"></script>
 </head>
 
-<body style="display: none; background-color: #103844;">
+<body style="background-color: #103844;">
 
 <object id="svg-object" width="100%" height="100%" style="position: absolute; left: 0; right:0;" type="image/svg+xml" data="./Mercury1.svg">Your browser does not support SVG</object>
 </body>
  
 <script type="text/javascript">
 
-var password = prompt("Enter password: ");
+/*var password = prompt("Enter password: ");
 while (password != "infographics" && password != null && password != '')
 {
 	password = prompt("Wrong password. Please try again.");
 }
 if (password == "infographics")
-	$('body').show();
+	$('body').show();*/
 
 var obj = document.getElementById("svg-object");
 obj.addEventListener("load", function() {
@@ -437,8 +437,8 @@ var seconds = 1;
 			$(object.getElementById(open + "-text"))
 				.append(createSet("visibility", "visible", open + ".click + .5s", "regions_close.click; go_back_planet.click; " + close + ".click", false));
 			$(object.getElementById(open + "-clip")).find('rect')
-				.append(createAnimate("height", seconds/2.0, open + ".click + .5s", "0", "70.5", "go_back_planet.click; regions_close.click; " + close + ".click", false))
-				.append(createAnimate("height", seconds/2.0, "go_back_planet.click; regions_close.click; " + close + ".click", "70.5", "0", "planet.click; button4.click; " + open + ".click", false));
+				.append(createAnimate("height", seconds/2.0, open + ".click + .5s", "0", "80", "go_back_planet.click; regions_close.click; " + close + ".click", false))
+				.append(createAnimate("height", seconds/2.0, "go_back_planet.click; regions_close.click; " + close + ".click", "80", "0", "planet.click; button4.click; " + open + ".click", false));
 
 			$(object.getElementById(open + "")).click(function() {
 				$(this).attr("visibility", "hidden");
@@ -610,8 +610,8 @@ var seconds = 1;
 			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_recs.click + " + (seconds/2.0) + "s", false));
 		});
 		$(object.getElementById("recs-clip1")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "recs1_open.click", "0", "450.65", "go_back_recs.click", false))
-			.append(createAnimate("width", seconds/2.0, "recs1_openclose.click; go_back_recs.click", "450.65", "0", "recommendations.click", false));
+			.append(createAnimate("width", seconds/2.0, "recs1_open.click", "0", "450.65", "recs1_openclose.click; go_back_recs.click", false))
+			.append(createAnimate("width", seconds/2.0, "recs1_openclose.click; go_back_recs.click", "450.65", "0", "recs1_open.click; recommendations.click", false));
 		$(object.getElementById("recs-clip2")).find("rect")
 			.append(createAnimate("width", seconds/2.0, "recs2_open.click", "0", "450.65", "recs2_openclose.click; go_back_recs.click", false))
 			.append(createAnimate("width", seconds/2.0, "recs2_openclose.click; go_back_recs.click", "450.65", "0", "recs2_open.click; recommendations.click", false));

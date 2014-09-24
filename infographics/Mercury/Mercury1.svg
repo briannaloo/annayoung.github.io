@@ -8,10 +8,14 @@
  	<path id="SVGID_158_" d="M1258.842,580.26c-41.725-261.708,55.768-437.67,159.84-546.663L1421.078,0L852.326,0.947v297.007     L1258.842,580.26z"/>
 
  	<clipPath id="industrial-clip">
- 		<rect transform="rotate(180,422.852,240.833)" width="262" height="0" x="291.852" y="176.333" />
+ 		<rect transform="rotate(180,422.852,240.833)" width="262" height="0" x="291.852" y="176.333">
+ 			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
  	</clipPath>
  	<clipPath id="methyl-clip">
- 		<rect transform="rotate(180,795.047,894.146)" width="282.184" height="0" x="653.955" y="819.146" />
+ 		<rect transform="rotate(180,795.047,894.146)" width="282.184" height="0" x="653.955" y="819.146">
+ 			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
  	</clipPath>
 
  	<clipPath id="cycle1">
@@ -22,34 +26,52 @@
  	</clipPath>
 
  	<clipPath id="gap-clip">
- 		<rect width="295.485" height="0" x="395.398" y="901.5"/>
+ 		<rect width="295.485" height="0" x="395.398" y="901.5">
+ 			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
  	</clipPath>
  	<clipPath id="exposure-clip">
- 		<rect width="450.378" height="0" x="708.982" y="783.43" />
+ 		<rect width="450.378" height="0" x="708.982" y="783.43">
+ 			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
  	</clipPath>
 
  	<clipPath id="recs-clip1">
-		<rect x="205.751" y="774.374" width="0" height="122.888" /> 
+		<rect x="205.751" y="774.374" width="0" height="122.888" >
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>   
 	</clipPath>
 	<clipPath id="recs-clip2">
-		<rect x="205.751" y="590.188" width="0" height="122.888" /> 
+		<rect x="205.751" y="590.188" width="0" height="122.888">
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>   
 	</clipPath>
 	<clipPath id="recs-clip3">
-		<rect x="205.751" y="410.613" width="0" height="122.888" /> 
+		<rect x="205.751" y="410.613" width="0" height="122.888">
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>   
 	</clipPath>
 	<clipPath id="recs-clip4">
-		<rect x="205.751" y="228.991" width="0" height="122.888" /> 
+		<rect x="205.751" y="228.991" width="0" height="122.888">
+		<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>   
 	</clipPath>
 
 	<clipPath id="minimata_clip">
-		<rect id="minimata-clip-rect" x="53.706" y="664.778" width="354.7" height="0" />
+		<rect id="minimata-clip-rect" x="53.706" y="664.778" width="354.7" height="0">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 
 	<clipPath id="pyramid-clip">
-		<rect transform="rotate(180, 800, 500)" x="0" y="0" width="1600" height="0" /> 
+		<rect transform="rotate(180, 800, 500)" x="0" y="0" width="1600" height="0">
+		<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 	<clipPath id="pyramid-arrows-clip">
-		<rect transform="rotate(180, 800, 500)" x="0" y="0" width="1600" height="0" /> 
+		<rect transform="rotate(180, 800, 500)" x="0" y="0" width="1600" height="0">
+		<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect>  
 	</clipPath>
 
 	<clipPath id="planet-circle1">
@@ -64,33 +86,51 @@
 	</clipPath>
 	<clipPath id="planet-clip">
 		<rect id="planet-crop" clip-path="url(#planet-rect)" x="0" y="-1" width="2810" height="1001" />
-		<rect id="planet-middle" width="0" height="1001" x="1134" y="-1" transform="rotate(180,1385,490)"/>
+		<rect id="planet-middle" width="0" height="1001" x="1134" y="-1" transform="rotate(180,1385,490)">
+			<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 
 	<clipPath id="cato-clip">
-		<rect width="175.5" height="0" x="720.351" y="682.518" />
+		<rect width="175.5" height="0" x="720.351" y="682.518">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="guatemala-clip">
-		<rect width="175.5" height="0" x="143.351" y="486.018" />
+		<rect width="175.5" height="0" x="143.351" y="486.018">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="ghana-clip">
-		<rect width="175.5" height="0" x="571.851" y="521.018" />
+		<rect width="175.5" height="0" x="571.851" y="521.018">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="erbil-clip">
-		<rect width="175.5" height="0" x="789.351" y="406.018" />
+		<rect width="175.5" height="0" x="789.351" y="406.018">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="sihan-clip">
-		<rect width="175.5" height="0" x="1076.467" y="557.574" />
+		<rect width="175.5" height="0" x="1076.467" y="557.574">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="pakistan-clip">
-		<rect width="175.5" height="0" x="1160.351" y="411.018" />
+		<rect width="175.5" height="0" x="1160.351" y="411.018">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="minimata-clip">
-		<rect width="175.5" height="0" x="1203.851" y="297.018" />
+		<rect width="175.5" height="0" x="1203.851" y="297.018">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 
 	<clipPath id="lava2-clip">
-		<rect width="400" height="0" x="500" y="350"/>
+		<rect width="400" height="0" x="500" y="350">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="lava-clip" clip-path="url(#lava2-clip)" >
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#F26E2A" d="M633.769,384.69c3.135,0.465,8.139,0.061,10.08,1.721    c-5.941,7.26-13.156,12.244-15.84,22.76c-0.967-0.475-1.342-1.539-1.441-2.881c0-2.879,0-5.76,0-8.639    C627.34,391.702,630.662,388.303,633.769,384.69z"/>
@@ -100,9 +140,15 @@
 	</clipPath>
 
 	<clipPath id="river2-clip">
-		<rect id="river2-clip-rect" width="700" height="0" x="900" y="0"/>
-		<rect transform="rotate(180,900,800)" id="river2-clip-rect2" width="0" height="600" x="350" y="500"/>
-		<rect id="river2-clip-rect3" width="555" height="0" x="895" y="545"/>
+		<rect id="river2-clip-rect" width="700" height="0" x="900" y="0">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
+		<rect transform="rotate(180,900,800)" id="river2-clip-rect2" width="0" height="600" x="350" y="500">
+			<set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
+		<rect id="river2-clip-rect3" width="555" height="0" x="895" y="545">
+			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+		</rect> 
 	</clipPath>
 	<clipPath id="river-clip" clip-path="url(#river2-clip)">
 		<path d="M1364.853,366.194c0,0-143.664,7.44-283.293,23.107    c-157.166,17.635-171.206,69.167-110.706,95.833c48.911,21.558,125.834,38.334,137.667,57    c25.705,40.549-172.961,37.167-266.961,19.167s-296.038-89.003-535-14c-137,43-104,134-77,147s117.627,112-362.373,120v151    c16,0,356.373,0,384.373,0s229.977-113.077,91-247c-110-106,175.145-30.322,224.627-17c104,28,224.507,70.934,520.373,56    c317-16,532-185,67-290c-91.322-20.621,2.424-57.713,94.629-76.667c95.667-19.666,115.664-22.44,115.664-22.44V366.194z"/>
