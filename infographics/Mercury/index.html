@@ -178,9 +178,9 @@ var seconds = 1;
 		// volcano erupts
 		$(object.getElementById("eruption"))
 			.append(createSet("visibility", "visible", "smoke_stacks.click + 3s; button1.click + 3s; mountains.click + 3s", "go_back_smoke_stacks.click + " + (seconds/4.0) + "s", false))
-			.append(createTransform("scale", seconds/2.0, "smoke_stacks.click + 3s; button1.click + 3s; mountains.click + 3s", "0.1", "1"))
+			.append(createTransform("scale", seconds/2.0, "smoke_stacks.click + 3s; button1.click + 3s; mountains.click + 3s", "0.1", "1", false))
 			.append(createMotion(seconds/2.0, "smoke_stacks.click + 3s; button1.click + 3s; mountains.click + 3s", "590,340", "0,0", "go_back_smoke_stacks.click"))
-			.append(createTransform("scale", seconds/4.0, "go_back_smoke_stacks.click", "1", "0.1"))
+			.append(createTransform("scale", seconds/4.0, "go_back_smoke_stacks.click", "1", "0.1", false))
 			.append(createMotion(seconds/4.0, "go_back_smoke_stacks.click", "0,0", "590,340", "smoke_stacks.click; button1.click; mountains.click"));
 		// bubbles from volcano
 		$(object.getElementById("eruption-bubbles"))
@@ -217,7 +217,7 @@ var seconds = 1;
 		// point on map comes in
 		$(object.getElementById("map-point"))
 			.append(createSet("visibility", "visible", "smoke_stacks.click + 10s; button1.click + 10s; mountains.click + 10s", "go_back_smoke_stacks.click", false))
-			.append(createTransform("scale", 2*seconds, "smoke_stacks.click + 10s; button1.click + 10s; mountains.click + 10s", "0", "1"))
+			.append(createTransform("scale", 2*seconds, "smoke_stacks.click + 10s; button1.click + 10s; mountains.click + 10s", "0", "1", false))
 			.append(createMotion(2*seconds, "smoke_stacks.click + 10s; button1.click + 10s; mountains.click + 10s", "1494,160", "0,0", "go_back_smoke_stacks.click"));
 
 		// clouds rain
@@ -665,7 +665,7 @@ var seconds = 1;
 			$(object.getElementById("Hg2")).delay(seconds*1000).fadeIn(seconds/2.0*1000);
 			$(object.getElementById("Hg1")).delay(seconds*1000).fadeOut(seconds/2.0*1000);
 			$(object.getElementById("health_diagram")).show();
-			$(object.getElementById("go_back_fishing")).delay(4*seconds*1000).fadeIn(500);
+			$(object.getElementById("go_back_fishing")).delay(4.5*seconds*1000).fadeIn(500);
 		});
 		$(object.getElementById("go_back_fishing")).click(function() {
 			$(object.getElementById("smoke_stacks")).delay(2*seconds*1000).fadeIn(0.5*seconds*1000);
@@ -689,9 +689,9 @@ var seconds = 1;
 
 		// zooms in on ship + mountains
 		$(object.getElementById("mountains+ship"))
-			.append(createTransform("scale", seconds, "fishing.click; button2.click", "1", "1.75"))
+			.append(createTransform("scale", seconds, "fishing.click; button2.click", "1", "1.75", "go_back_fishing.click + " + seconds + "s"))
 			.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "15,-90", "go_back_fishing.click + " + seconds + "s"))
-			.append(createTransform("scale", seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "1.75", "1"))
+			.append(createTransform("scale", seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "1.75", "1", "fishing.click; button2.click"))
 			.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "15,-90", "0,0", "fishing.click; button2.click"));
 		$(object.getElementById("mountains"))
 			.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "-25,0", "go_back_fishing.click + " + seconds + "s"))
@@ -707,8 +707,8 @@ var seconds = 1;
 
 		// mercury symbol changes color & size
 		$(object.getElementById("Hg"))
-			.append(createTransform("scale", seconds, "fishing.click; button2.click", "1", "1.38"))
-			.append(createTransform("scale", seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "1.38", "1"))
+			.append(createTransform("scale", seconds, "fishing.click; button2.click", "1", "1.38", false))
+			.append(createTransform("scale", seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "1.38", "1", false))
 			.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "-408,-9", "go_back_fishing.click"))
 			.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "-408,-9", "0,0", "fishing.click; button2.click"));
 
@@ -822,7 +822,7 @@ var seconds = 1;
 			animation.setAttribute("repeatCount", "indefinite");
 		return animation;
 	}
-	function createTransform(type, seconds, begin, from, to) {
+	function createTransform(type, seconds, begin, from, to, end) {
 		var scale = document.createElementNS("http://www.w3.org/2000/svg","animateTransform");
 		scale.setAttribute("attributeName", "transform");
 		scale.setAttribute("attributeType", "XML");
@@ -833,6 +833,8 @@ var seconds = 1;
 		scale.setAttribute("from", from);
 		scale.setAttribute("to", to);
 		scale.setAttribute("fill", "freeze");
+		if (end != false)
+			scale.setAttribute("end", end);
 		return scale;
 	}
 	function createSet(name, to, begin, end, id) {
