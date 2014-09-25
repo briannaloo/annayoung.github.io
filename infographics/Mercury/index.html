@@ -465,7 +465,6 @@ var seconds = 1;
 			$([object.getElementById("animals"), object.getElementById("fishing")]).attr("pointer-events", "none");
 			$(object.getElementById("sea-background")).fadeOut(seconds*1000);
 			$(object.getElementById("bottom_line")).fadeOut(seconds*1000);
-			//$(object.getElementById("bubbles")).fadeOut(seconds*1000);
 		});
 		$(object.getElementById("go_back_animals")).click(function() {
 			$(object.getElementById("go_back_animals")).fadeOut(seconds*1000);
@@ -574,8 +573,9 @@ var seconds = 1;
 			.append(createAnimate("width", seconds, "recommendations.click + 2.5s", "0", "1500", "go_back_recs.click", false));
 		$(object.getElementById("river2-clip-rect3"))
 			.append(createAnimate("height", seconds/2.0, "recommendations.click + 2.5s", "0", "305", "go_back_recs.click", false));*/
-		$(object.getElementById("river-line"))
-			.append(createAnimate("stroke-dashoffset", 4*seconds, "recommendations.click + 2.5s", "2390", "0", "go_back_recs.click", false));
+		$(object.getElementById("river")).children().each(function() {
+			$(this).append(createAnimate("stroke-dashoffset", 4*seconds, "recommendations.click + 2.5s", "2390", "0", "go_back_recs.click", false));
+		});
 
 		// background moves out
 		$(object.getElementById("background"))
@@ -836,7 +836,9 @@ var seconds = 1;
 		scale.setAttribute("to", to);
 		scale.setAttribute("fill", "freeze");
 		if (end != false)
+		{
 			scale.setAttribute("end", end);
+		}
 		return scale;
 	}
 	function createSet(name, to, begin, end, id) {
