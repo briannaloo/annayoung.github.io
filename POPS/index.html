@@ -14,18 +14,19 @@
 </head>
 
 <body>
-	<div id="map_canvas"></div>
+	<div id="map"></div>
 
 	<script>
-	  var map = new L.Map('map_canvas', {
+	  var map = new L.Map('map', {
 	    center: [0,0],
-	    zoom: 2
+	    zoom: 2,
+	    searchControl: true
 	  });
 
 	  cartodb.createLayer(map, 'http://annayoung.github.io/POPS/pollution.json')
 	    .addTo(map)
 	    .on('done', function(layer) {
-	      //do stuff
+	      	map.addLayer(layer);
 	    })
 	    .on('error', function(err) {
 	      alert("some error occurred: " + err);
