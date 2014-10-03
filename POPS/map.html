@@ -7,6 +7,7 @@
      <link href='iframe_style.css' rel='stylesheet' type='text/css'>
      <script type="text/javascript" src="jquery.js"></script>
      <script type="text/javascript" src="slide.js"></script>
+     <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> 
   </head>
 
   <body>
@@ -16,31 +17,18 @@
     <div id="legends">   
       
       <div id="legend_countries" class="legend">
-        <p class="legend_title">PM<sub>2.5</sub> LEVELS</p>
-        <span class="country_leftest">0.03</span>
-        <span class="country_middle">49.92</span>
-        <span class="country_rightest">153</span><br>
+        <p class="legend_title">POPS</p>
+        <span class="left">0</span>
+        <span class="right">24</span><br>
         <aside class="colors">
-          <div style="background-color:#fff74b;"></div>
-          <div style="background-color:#ffd72d;"></div>
-          <div style="background-color:#FFaa00;"></div>
-          <div style="background-color:#FF8200;"></div>
-          <div style="background-color:#FF5a00;"></div>
-          <div style="background-color:#FF3200;"></div>
-          <div style="background-color:#E90000;"></div>
-          <div style="background-color:#c30000;"></div>
-          <div style="background-color:#970707;"></div>
-          <div style="background-color:#791406;"></div>
-          <div style="background-color:#631E04;"></div>
-          <div style="background-color:#4D1E04;"></div>
-          <div style="background-color:#3F1C05;"></div>
-          <div style="background-color:#301703;"></div>
-          <div style="background-color:#241105;"></div>
-          <div style="background-color:#1A0800;"></div>
-          <div style="background-color:#000000;"></div> 
+          <div style="background-color:#8C021F;"></div>
+          <div style="background-color:#B10026;"></div>
+          <div style="background-color:#E31A1C;"></div>
+          <div style="background-color:#FC4E2A;"></div>
+          <div style="background-color:#FD8D3C;"></div>
+          <div style="background-color:#FEB24C;"></div>
+          <div style="background-color:#FED976;"></div>
         </aside>
-        <span class="country_middle bottom_middle">Countries</span>
-        <span class="country_rightest bottom_right">Cities</span><br>
       </div>
     </div>
 
@@ -68,183 +56,47 @@
 
     <div id="header_container">
       <div id="header">
-        <div id="layer_selector" class="cartodb-infobox">
-          <ul>
-            <ul class="countries_label">&nbsp;Countries: <br></ul>
-            <li data="2000">2000</li>
-            <li data="2001">2001</li>
-            <li data="2002">2002</li>
-            <li data="2003">2003</li>
-            <li data="2004">2004</li>
-            <li data="2005">2005</li>
-            <li data="2006">2006</li>
-            <li data="2007">2007</li>
-            <li data="2008">2008</li>
-            <li data="2009">2009</li>
-            <li data="2010">2010</li>
-            <li data="2011">2011</li>
-            <li data="2012" class="selected">2012</li>  
-          </ul>
-
-        </div>
-        <div id="layer_selector2" class="cartodb-infobox">
-          <p data="pm_2_5" id="show_cities">Show Cities</p> 
-        </div>
       </div>
      </div>     
         
 
   </body>
-  <script type="cartocss/html" id="cities">
-  /*City Styles*/
 
-  
-
-#who_georeferenced_clean_v2{
-  marker-fill-opacity: 0.8;
-  marker-line-color: #FFF;
-  marker-line-width: 1.5;
-  marker-line-opacity: 1;
-  marker-width: 10;
-  marker-fill: #F7F7F7;
-  marker-allow-overlap: true;
-}
-
-#who_georeferenced_clean_v2 [ pm_2_5 <= 154] {
-   marker-fill: #000000;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 140] {
-   marker-fill: #1A0800;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 125] {
-   marker-fill: #241105;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 110] {
-   marker-fill: #301703;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 90] {
-   marker-fill: #3F1C05;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 69] {
-   marker-fill: #4D1E04;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 55] {
-   marker-fill: #631E04;
-}
-
-#who_georeferenced_clean_v2 [ pm_2_5 <= 49.92] {
-   marker-fill: #791406;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 32.54] {
-   marker-fill: #970707;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 25.17] {
-   marker-fill: #c30000;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 15.17] {
-   marker-fill: #E90000;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 10.85] {
-   marker-fill: #FF3200;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 9.15] {
-   marker-fill: #FF5a00;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 8.15] {
-   marker-fill: #FF8200;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 6.06] {
-   marker-fill: #FFaa00;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 4.62] {
-   marker-fill: #ffd72d;
-}
-#who_georeferenced_clean_v2 [ pm_2_5 <= 2.98] {
-   marker-fill: #fff74b;
-}
-
-  </script>
-
-   <script type="cartocss/html" id="pm25_na">
+   <script type="cartocss/html" id="pops">
    /*Country Styles*/
 
-#pm25_na{
-  polygon-fill: #FFFFB2;
-  polygon-opacity: 0.8;
-  line-color: #FFF;
-  line-width: 1;
-  line-opacity: 1;
-}
+    #pops{
+      polygon-fill: #fff;
+      polygon-opacity: 0.9;
+      line-color: #FFF;
+      line-width: 1;
+      line-opacity: 1;
+    }
 
-#pm25_na [ {0} <= 154] {
-   polygon-fill: #000000;
-}
-#pm25_na [ {0} <= 140] {
-   polygon-fill: #1A0800;
-}
-#pm25_na [ {0} <= 125] {
-   polygon-fill: #241105;
-}
-#pm25_na [ {0} <= 110] {
-   polygon-fill: #301703;
-}
-#pm25_na [ {0} <= 90] {
-   polygon-fill: #3F1C05;
-}
-#pm25_na [ {0} <= 69] {
-   polygon-fill: #4D1E04;
-}
-#pm25_na [ {0} <= 55] {
-   polygon-fill: #631E04;
-}
-
-#pm25_na [ {0} <= 49.92] {
-   polygon-fill: #791406;
-}
-#pm25_na [ {0} <= 32.54] {
-   polygon-fill: #970707;
-}
-#pm25_na [ {0} <= 25.17] {
-   polygon-fill: #c30000;
-}
-#pm25_na [ {0} <= 15.17] {
-   polygon-fill: #E90000;
-}
-#pm25_na [ {0} <= 10.85] {
-   polygon-fill: #FF3200;
-}
-#pm25_na [ {0} <= 9.15] {
-   polygon-fill: #FF5a00;
-}
-#pm25_na [ {0} <= 8.15] {
-   polygon-fill: #FF8200;
-}
-#pm25_na [ {0} <= 6.06] {
-   polygon-fill: #FFaa00;
-}
-#pm25_na [ {0} <= 4.62] {
-   polygon-fill: #ffd72d;
-}
-#pm25_na [ {0} <= 2.98] {
-   polygon-fill: #fff74b;
-}
-
-
-
+    #pops [ {0} <= 24] {
+       polygon-fill: #FED976;
+    }
+    #pops [ {0} <= 21] {
+       polygon-fill: #FEB24C;
+    }
+    #pops [ {0} <= 18] {
+       polygon-fill: #FD8D3C;
+    }
+    #pops [ {0} <= 15] {
+       polygon-fill: #FC4E2A;
+    }
+    #pops [ {0} <= 12] {
+       polygon-fill: #E31A1C;
+    }
+    #pops [ {0} <= 7] {
+       polygon-fill: #B10026;
+    }
+    #pops [ {0} <= 4] {
+       polygon-fill: #8C021F;
+    }
     </script>
-
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> 
      
      <script>
-          $('#layer_selector li').click(function() {        
-            $('#layer_select li').addClass('selected');
-          });
-          var col1 = 'pm25_2012';
-          var col2 = '';
-          var country = 'country';
-          var city = 'city_station';
-          var pm = 'pm_2_5';
-
           //Formats the columns for us into css
           String.prototype.format = (function (i, safe, arg) {
             function format() {
@@ -258,14 +110,9 @@
                 return str;
             }
 
-            //format.native = String.prototype.format;
             return format;
             
         })();
-
-
-
-
 
 
       // create layer selector
@@ -279,23 +126,17 @@
           searchControl: true
         });
 
-        
-
         // create our layers
         cartodb.createLayer(map, {
-          user_name: 'dmonay',
+          user_name: 'annasyoung',
           type: 'cartodb',
           sublayers: [{
             sql: "SELECT * FROM bathymetry_layers",
             cartocss: "#bathymetry_layers{ polygon-fill: #598cdb;polygon-opacity: 0.2;line-color: #FFF;line-width: 0;line-opacity: 1;}"
             },{
-            sql: "SELECT * FROM pm25_na",
-            cartocss: $('#pm25_na').html().format('pm25_2012'),
-            interactivity: "cartodb_id, the_geom, pm25_2000, pm25_2001, pm25_2002, pm25_2003, pm25_2004, pm25_2005, pm25_2006, pm25_2007, pm25_2008, pm25_2009, pm25_2010, pm25_2011, pm25_2012, country"
-            },{
-            sql: "SELECT * FROM who_georeferenced_clean_v2",
-            cartocss: $('#cities').html().format('city_station'),
-            interactivity: "city_station, pm_2_5, country"
+            sql: "SELECT * FROM pops",
+            cartocss: $('#pops').html().format('total_score'),
+            interactivity: "cartodb_id, the_geom, country, total_score"
             }]
 
         }).done(function(layer) {
@@ -303,16 +144,8 @@
           map.addLayer(layer);
           sublayer_country = layer.getSubLayer(1);
           sublayer_country.setInteraction(true);
-          sublayer_city = layer.getSubLayer(2);
-          sublayer_city.setInteraction(true);
-          createSelector(sublayer_country);
-          createSelector(sublayer_city);
-          sublayer_city.hide();
 
-          //create infowindow
-            sublayer_city.infowindow.set('template', $('#infowindow_template').html()).on('error', function() {
-            console.log("some error occurred");
-          });
+          
           
           //Make Tool-tip follow the mouse.
           var event = function(e){
@@ -321,9 +154,11 @@
                      top:   e.pageY
                   });
               };
-//Retrieve data to the tooltip on countries
+
+          var col1 = "total_score";
+          //Retrieve data to the tooltip on countries
           sublayer_country.on('featureOver', function(e, pos, latlng, data) {
-            $('#tool-tip').html('<p>'  +data[country]+'<br>'+ data[col1] + '&mu;g/m<sup>3</sup></p>');
+            $('#tool-tip').html('<p>'  +data['country']+'<br>'+ data[col1] + '&mu;g/m<sup>3</sup></p>');
             $(document).bind('mousemove', event);
             $('#tool-tip').show();
             
@@ -333,94 +168,22 @@
             $('#tool-tip').hide();
             $(document).unbind('mousemove', event, false);
           });
-//Retrieve data to the tooltip on cities
-            sublayer_city.on('featureOver', function(e, pos, latlng, data) {
-            $('#tool-tip').html('<p>'  +data[city]+', '+data[country]+  '<br>'+data[pm]+ '&mu;g/m<sup>3</sup></p>');
-            $(document).bind('mousemove', event);
-            $('#tool-tip').show();
-            
-          });
-            sublayer_city.on('featureOut', function(e, pos, latlng, data) {
-           //Make the tooltip go away when off cities
-            $('#tool-tip').hide();
-            $(document).unbind('mousemove', event, false);
-          });
 
-            
-
-            
     });
   }
 
       
       window.onload = main;
 
-/*Selection process          ------------------------------------------                       */
-     
-     var styles = {}, selectedStyle;
-      // create layer selector
-      function createSelector(layer) {
-
-        var $options = $('#layer_selector li');
-        $options.click(function(e) {
-          // get the area of the selected layer
-          var $li = $(e.target);
-          var year = $li.attr('data');
-
-          // deselect all and select the clicked one
-          $options.removeClass('selected');
-          $li.addClass('selected');
-
-
-          col1 = 'pm25_' + year;
-          var style = $('#pm25_na').html().format(col1);
-            layer.setCartoCSS(style);
-            sublayer_city.hide();
-
-
-          $('#show_cities').removeClass('shown');
-          $("#show_cities").text("Show Cities");
-
-         $(".cartodb-legend:nth-child(1)").show();
-
-          }); 
-        }
-
-
-      $("#show_cities").on("click", function(){
-        if ($("#show_cities").hasClass('shown'))
-        {
-          sublayer_city.hide();
-          var year = $('#layer_selector li.selected').attr('data');
-          col1 = 'pm25_' + year;
-           $("#show_cities").removeClass('shown');
-          $("#show_cities").text("Show Cities");
-        }
-        else
-        {
-          //Set the column to the city_station from our cities table
-          col2 = 'city_station';
-          //create a local variable named style and convert our cities script above to html and run the format function defined above to render some CSS.
-           var style = $('#cities').html().format(col2);
-          //Attached the CSS to the layer
-          sublayer_city.setCartoCSS(style);
-           sublayer_city.show();
-
-          $("#show_cities").addClass('shown');
-          $("#show_cities").text("Hide Cities");
-        }
-      });
-
-  
-         //have the info tab slide out
-        $('#slide_out_info').tabSlideOut({
-          tabHandle: '.handle',                     //class of the element that will become your tab
-          //Optionally can be set using css
-          height: '110px',                     //height of tab image           //Optionally can be set using css
-          width: '30px',                       //width of tab image            //Optionally can be set using css
-          tabLocation: 'right',                      //side of screen where tab lives, top, right, bottom, or left
-          speed: 400,                               //speed of animation
-          action: 'click',                  //options: true makes it stick(fixed position) on scroll
+       //have the info tab slide out
+      $('#slide_out_info').tabSlideOut({
+        tabHandle: '.handle',                     //class of the element that will become your tab
+        //Optionally can be set using css
+        height: '110px',                     //height of tab image           //Optionally can be set using css
+        width: '30px',                       //width of tab image            //Optionally can be set using css
+        tabLocation: 'right',                      //side of screen where tab lives, top, right, bottom, or left
+        speed: 400,                               //speed of animation
+        action: 'click',                  //options: true makes it stick(fixed position) on scroll
       });
 
     </script>
