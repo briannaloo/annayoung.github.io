@@ -89,7 +89,7 @@
         }
         
         if(settings.tabLocation === 'left') {
-            obj.css({ 'left': '-' + properties.containerWidth});
+            obj.css({ 'left': '-60%'});
             settings.tabHandle.css({'right' : '-' + properties.tabWidth});
         }
 
@@ -110,7 +110,7 @@
             if (settings.tabLocation === 'top') {
                 obj.animate({top:'-' + properties.containerHeight}, settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'left') {
-                obj.animate({left: '-' + properties.containerWidth}, settings.speed).removeClass('open');
+                obj.animate({left: '-60%'}, settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'right') {
                 obj.animate({right: '-60%'},  settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'bottom') {

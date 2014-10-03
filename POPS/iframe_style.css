@@ -9,11 +9,7 @@ html, body, #map {
       #map {
          background-color: #9abae0;
       }
-       
-      #tool-tip {
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 400;
-      }
+
       h1 {
         text-align: center;
         color: #1d1d1d;
@@ -76,18 +72,29 @@ html, body, #map {
         color: white;
       }
       #tool-tip {
-        position: absolute;
-        width: auto;
-        height: auto;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 500px;
         background-color: white;
-        opacity: .9;
+        opacity: .95;
         z-index: 50;
-        border-radius: 15px;
+        border-radius: 5px;
         text-align: center;
-        color: #3E7BB6;
+        color: #366ab2;
         vertical-align: bottom;
-        font-size: 12px;
+        font-size: 24px;
         padding: 4px;
+      }
+
+      #no-data {
+        font-style: italic;
+        font-color: grey;
+        font-size: 13px;
+        display: none;
       }
 
       .leaflet-control-attribution {display: none;}
