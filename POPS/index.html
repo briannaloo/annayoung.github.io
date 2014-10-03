@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+	<script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+	<style type="text/css">
+		iframe {
+			width:570px;
+			height: 600px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="map_canvas"></div>
+
+	<script>
+	  var map = new L.Map('map_canvas', {
+	    center: [0,0],
+	    zoom: 2
+	  });
+
+	  cartodb.createLayer(map, 'http://annayoung.github.io/POPS/bathymetry.json')
+	    .addTo(map)
+	    .on('done', function(layer) {
+	      //do stuff
+	    })
+	    .on('error', function(err) {
+	      alert("some error occurred: " + err);
+	    });
+	</script>
+</body>
+
+</html>

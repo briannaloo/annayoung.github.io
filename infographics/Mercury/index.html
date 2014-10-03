@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Mercury Infographic</title>
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
 
 <body style="display: none; background-color: #103844;">
@@ -138,7 +139,7 @@ var seconds = 1;
 			$(object.getElementById("bubbles2")).delay(1.5*seconds*1000).fadeIn(2000);
 			$(object.getElementById("bubbles3")).delay(2*seconds*1000).fadeIn(2000);
 
-			$(object.getElementById("go_back_smoke_stacks")).delay(16.5*seconds*1000).fadeIn(500);
+			$(object.getElementById("go_back_smoke_stacks")).delay(18*seconds*1000).fadeIn(500);
 
 			$(object.getElementById("emissions-caption")).delay(5.5*seconds*1000).fadeIn(1000);
 			
@@ -228,18 +229,18 @@ var seconds = 1;
 
 		// text boxes
 		$(object.getElementById("emissions-boxes"))
-			.append(createSet("visibility", "visible", "smoke_stacks.click + 16s; button1.click + 16s; mountains.click + 16s", "go_back_smoke_stacks.click + " + (0.5*seconds) + "s", false))
+			.append(createSet("visibility", "visible", "smoke_stacks.click + 17s; button1.click + 17s; mountains.click + 17s", "go_back_smoke_stacks.click + " + (0.5*seconds) + "s", false))
 			.find('line').each(function() {
 				$(this)
-					.append(createAnimate("stroke-dashoffset", seconds, "smoke_stacks.click + 16s; button1.click + 16s; mountains.click + 16s", "265", "0", "go_back_smoke_stacks.click", false))
+					.append(createAnimate("stroke-dashoffset", seconds, "smoke_stacks.click + 17s; button1.click + 17s; mountains.click + 17s", "265", "0", "go_back_smoke_stacks.click", false))
 					.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_smoke_stacks.click", "0", "265", "smoke_stacks.click; mountains.click; button1.click", false));
 			});
 		$(object.getElementById("industrial_open"))
-			.append(createSet("visibility", "visible", "industrial_close.click; smoke_stacks.click + 17s; button1.click + 17s; mountains.click + 17s", "go_back_smoke_stacks.click; industrial_open.click", false));
+			.append(createSet("visibility", "visible", "industrial_close.click; smoke_stacks.click + 18s; button1.click + 18s; mountains.click + 18s", "go_back_smoke_stacks.click; industrial_open.click", false));
 		$(object.getElementById("natural_open"))
-			.append(createSet("visibility", "visible", "natural_close.click; smoke_stacks.click + 17s; button1.click + 17s; mountains.click + 17s", "go_back_smoke_stacks.click; natural_open.click", false));
+			.append(createSet("visibility", "visible", "natural_close.click; smoke_stacks.click + 18s; button1.click + 18s; mountains.click + 18s", "go_back_smoke_stacks.click; natural_open.click", false));
 		$(object.getElementById("methyl_open"))
-			.append(createSet("visibility", "visible", "methyl_close.click; smoke_stacks.click + 17s; button1.click + 17s; mountains.click + 17s", "go_back_smoke_stacks.click; methyl_open.click", false));
+			.append(createSet("visibility", "visible", "methyl_close.click; smoke_stacks.click + 18s; button1.click + 18s; mountains.click + 18s", "go_back_smoke_stacks.click; methyl_open.click", false));
 		$(object.getElementById("industrial_close"))
 			.append(createSet("visibility", "visible", "industrial_open.click", "go_back_smoke_stacks.click; industrial_close.click", false));
 		$(object.getElementById("natural_close"))
@@ -305,6 +306,23 @@ var seconds = 1;
 			natural_bool = false;
 		});
 
+		// data gap text
+		$(object.getElementById("smoke_data_open"))
+			.append(createSet("visibility", "visible", "mountains.click + 18s; smoke_stacks.click + 18s; button1.click + 18s; smoke_data_close.click;", "go_back_smoke_stacks.click; smoke_data_open.click", false));
+		$(object.getElementById("smoke_data_close"))
+			.append(createSet("visibility", "visible", "smoke_data_open.click;", "go_back_smoke_stacks.click; smoke_data_close.click", false));
+		$(object.getElementById("smoke_data_title"))
+			.append(createSet("visibility", "visible", "mountains.click + 17s; smoke_stacks.click + 17s; button1.click + 17s; smoke_data_close.click;", "go_back_smoke_stacks.click + 0.5s", false));
+		$(object.getElementById("smoke_data_line"))
+			.append(createSet("visibility", "visible", "mountains.click + 17s; smoke_stacks.click + 17s; button1.click + 17s", "go_back_smoke_stacks.click + 0.5s", false))
+			.append(createAnimate("stroke-dashoffset", seconds, "mountains.click + 17s; smoke_stacks.click + 17s; button1.click + 17s", "236", "0", "go_back_smoke_stacks.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_smoke_stacks.click", "0", "236", "mountains.click; smoke_stacks.click; button1.click", false));
+		$(object.getElementById("smoke_data_text"))
+			.append(createSet("visibility", "visible", "smoke_data_open.click", "smoke_data_close.click + 0.5s; go_back_smoke_stacks.click + 0.5s", false));
+		$(object.getElementById("smoke-clip-rect"))
+			.append(createAnimate("height", seconds/2.0, "smoke_data_open.click", "0", "120", "go_back_smoke_stacks.click; smoke_data_close.click", false))
+			.append(createAnimate("height", seconds/2.0, "go_back_smoke_stacks.click; smoke_data_close.click", "120", "0", "smoke_data_open.click; mountains.click; smoke_stacks.click; button1.click", false));
+
 
 
 		/*var sec = 12.5;
@@ -330,6 +348,7 @@ var seconds = 1;
 			$(object.getElementById("sea-floor-rect")).delay(500).fadeIn(1000);
 			$(object.getElementById("marker-hide")).fadeOut(500);
 			$(object.getElementById("region-circles")).delay(2.5*seconds*1000).fadeIn(500);
+			$(object.getElementById("globe-sources")).delay(1000).fadeIn(1000);
 
 		});
 		$(object.getElementById("go_back_planet")).click(function() {
@@ -339,6 +358,7 @@ var seconds = 1;
 			$(object.getElementById("marker-hide")).delay(2*seconds*1000).fadeIn(500);
 			$(object.getElementById("region-circles")).fadeOut(500);
 			$(object.getElementById("region-markers")).delay(500).fadeOut(500);
+			$(object.getElementById("globe-sources")).delay(1000).fadeOut(1000);
 		});
 
 		$(object.getElementById("planet"))
@@ -460,11 +480,12 @@ var seconds = 1;
 
 	function fishClicked(object, seconds) {
 		$([object.getElementById("animals"), object.getElementById("button3")]).click(function() {
-			$(object.getElementById("go_back_animals")).delay(5*seconds*1000).fadeIn(500);
+			$(object.getElementById("go_back_animals")).delay(6*seconds*1000).fadeIn(500);
 			$([object.getElementById("animals"), object.getElementById("fishing")]).attr("cursor", "auto");
 			$([object.getElementById("animals"), object.getElementById("fishing")]).attr("pointer-events", "none");
 			$(object.getElementById("sea-background")).fadeOut(seconds*1000);
 			$(object.getElementById("bottom_line")).fadeOut(seconds*1000);
+			$(object.getElementById("fish-sources")).delay(2*seconds).fadeIn(1000);
 		});
 		$(object.getElementById("go_back_animals")).click(function() {
 			$(object.getElementById("go_back_animals")).fadeOut(seconds*1000);
@@ -473,6 +494,7 @@ var seconds = 1;
 			$(object.getElementById("sea-background")).delay(2*seconds*1000).fadeIn(seconds*1000);
 			$(object.getElementById("bottom_line")).fadeIn(seconds*1000);
 			$(object.getElementById("bottom_line")).delay(seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("fish-sources")).delay(1000).fadeOut(1000);
 		});
 
 		// text comes in
@@ -536,6 +558,23 @@ var seconds = 1;
 		$(object.getElementById("swordfish"))
 			.append(createMotion(seconds, "animals.click + " + (seconds) + "s; button3.click + " + (seconds) + "s", "0,0", "450,-322", "go_back_animals.click"))
 			.append(createMotion(seconds, "go_back_animals.click + " + (seconds) + "s", "450,-322", "0,0", "animals.click; button3.click"));
+
+		// data gap text
+		$(object.getElementById("fish_data_open"))
+			.append(createSet("visibility", "visible", "animals.click + 6s; button3.click + 6s; fish_data_close.click;", "go_back_animals.click; fish_data_open.click", false));
+		$(object.getElementById("fish_data_close"))
+			.append(createSet("visibility", "visible", "fish_data_open.click;", "go_back_animals.click; fish_data_close.click", false));
+		$(object.getElementById("fish_data_title"))
+			.append(createSet("visibility", "visible", "animals.click + 5.5s; button3.click + 5.5s", "go_back_animals.click + 0.5s", false));
+		$(object.getElementById("fish_data_line"))
+			.append(createSet("visibility", "visible", "animals.click + 5.5s; button3.click + 5.5s", "go_back_animals.click + 0.5s", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "animals.click + 5.5s; button3.click + 5.5s", "870", "0", "go_back_animals.click", false))
+			.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_animals.click", "0", "870", "animals.click; button3.click", false));
+		$(object.getElementById("fish_data_text"))
+			.append(createSet("visibility", "visible", "fish_data_open.click", "fish_data_close.click + 0.5s; go_back_animals.click + 0.5s", false));
+		$(object.getElementById("fish-clip-rect"))
+			.append(createAnimate("height", seconds/2.0, "fish_data_open.click", "0", "110", "go_back_animals.click; fish_data_close.click", false))
+			.append(createAnimate("height", seconds/2.0, "go_back_animals.click; fish_data_close.click", "110", "0", "fish_data_open.click; animals.click; button3.click", false));
 	}
 
 	function recsClicked(object, seconds) {
@@ -545,7 +584,7 @@ var seconds = 1;
 			$(object.getElementById("marker-hide")).delay(seconds*1000).fadeOut(seconds*1000);
 			$([object.getElementById("markers-show"),
 				object.getElementById("recs-more-info")]).delay(seconds*1000).fadeIn(seconds*1000);
-			$(object.getElementById("river")).delay(seconds*1000).fadeIn(500);
+			$(object.getElementById("river")).delay(1.5*seconds*1000).fadeIn(1000);
 
 			$(object.getElementById("planet")).attr('cursor', 'auto');
 			$(object.getElementById("planet")).attr('pointer-events', 'none');
@@ -553,7 +592,7 @@ var seconds = 1;
 		$(object.getElementById("go_back_recs")).click(function() {
 			$([object.getElementById("go_back_recs"), object.getElementById("markers-show"), object.getElementById("recs-more-info")]).fadeOut(seconds*1000);
 			$([object.getElementById("Hg"), object.getElementById("Hg_line"), object.getElementById("marker-hide")]).fadeIn(1*seconds*1000);
-			$(object.getElementById("river")).delay(2*seconds*1000).fadeOut(0);
+			$(object.getElementById("river")).fadeOut(1000);
 
 			$(object.getElementById("planet")).attr('cursor', 'pointer');
 			$(object.getElementById("planet")).attr('pointer-events', 'auto');
@@ -573,9 +612,9 @@ var seconds = 1;
 			.append(createAnimate("width", seconds, "recommendations.click + 2.5s", "0", "1500", "go_back_recs.click", false));
 		$(object.getElementById("river2-clip-rect3"))
 			.append(createAnimate("height", seconds/2.0, "recommendations.click + 2.5s", "0", "305", "go_back_recs.click", false));*/
-		$(object.getElementById("river")).children().each(function() {
+		/*$(object.getElementById("river")).children().each(function() {
 			$(this).append(createAnimate("stroke-dashoffset", 4*seconds, "recommendations.click + 2.5s", "2390", "0", "go_back_recs.click", false));
-		});
+		});*/
 
 		// background moves out
 		$(object.getElementById("background"))
@@ -655,6 +694,26 @@ var seconds = 1;
 
 	function shipClicked(object, seconds) {
 		$([object.getElementById("fishing"), object.getElementById("button2")]).click(function() {
+
+			// mountains scale
+			$(object.getElementById("mountains+ship"))
+				.css('transform-origin', 'top left');
+			var scale = 1.75;
+			$(object.getElementById("mountains+ship"))
+				.animate({
+				    transform: scale
+				},{
+					step: function(scale, fx) {
+						fx.start = 1;
+						$(this).css("-webkit-transform",  "scale(" + scale + ")");
+						$(this).css("transform", "scale(" + scale + ")");
+						$(this).css("-moz-transform", "scale(" + scale + ")");
+						$(this).css("-o-transform", "scale(" + scale + ")");
+					},
+					duration: 1000
+				}, {easing: 'linear'});
+
+
 			$(object.getElementById("smoke_stacks")).fadeOut(250);
 			$(object.getElementById("radars")).fadeOut(250);
 			$(object.getElementById("bubbles")).fadeOut(250);
@@ -668,6 +727,7 @@ var seconds = 1;
 			$(object.getElementById("Hg1")).delay(seconds*1000).fadeOut(seconds/2.0*1000);
 			$(object.getElementById("health_diagram")).show();
 			$(object.getElementById("go_back_fishing")).delay(4.5*seconds*1000).fadeIn(500);
+		
 		});
 		$(object.getElementById("go_back_fishing")).click(function() {
 			$(object.getElementById("smoke_stacks")).delay(2*seconds*1000).fadeIn(0.5*seconds*1000);
@@ -682,6 +742,21 @@ var seconds = 1;
 			$(object.getElementById("Hg1")).delay(1*seconds*1000).fadeIn(seconds/2.0*1000);
 			$(object.getElementById("health_diagram")).delay(seconds*2*1000).fadeOut(0);
 			$(object.getElementById("go_back_fishing")).fadeOut(500);
+
+			var scale = 1;
+			$(object.getElementById("mountains+ship"))
+				.delay(1500).animate({
+				    transform: scale
+				},{
+					step: function(scale, fx) {
+						fx.start = 1.75;
+						$(this).css("-webkit-transform",  "scale(" + scale + ")");
+						$(this).css("transform", "scale(" + scale + ")");
+						$(this).css("-moz-transform", "scale(" + scale + ")");
+						$(this).css("-o-transform", "scale(" + scale + ")");
+					},
+					duration: 1000
+				}, {easing: 'linear'});
 		});
 
 		// text comes in
@@ -691,13 +766,16 @@ var seconds = 1;
 
 		// zooms in on ship + mountains
 		$(object.getElementById("mountains+ship"))
-			.append(createTransform("scale", seconds, "fishing.click; button2.click", "1", "1.75", "go_back_fishing.click + " + seconds + "s"))
-			.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "15,-90", "go_back_fishing.click + " + seconds + "s"))
-			.append(createTransform("scale", seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "1.75", "1", "fishing.click; button2.click"))
-			.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "15,-90", "0,0", "fishing.click; button2.click"));
+			//.append(createTransform("scale", seconds, "fishing.click; button2.click", "1", "1.75", "go_back_fishing.click + " + seconds + "s"))
+			//.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "15,-90", "go_back_fishing.click + " + seconds + "s"))
+			//.append(createTransform("scale", seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "1.75", "1", "fishing.click; button2.click"))
+			//.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "15,-90", "0,0", "fishing.click; button2.click"));
 		$(object.getElementById("mountains"))
 			.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "-25,0", "go_back_fishing.click + " + seconds + "s"))
 			.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "-25,0", "0,0", "fishing.click; button2.click"));
+		$(object.getElementById("mountains+ship"))
+			.append(createMotion(seconds, "fishing.click; button2.click", "0,0", "0,170", "go_back_fishing.click + " + seconds + "s"))
+			.append(createMotion(seconds, "go_back_fishing.click + " + (1.5*seconds) + "s", "0,170", "0,0", "fishing.click; button2.click"));
 
 		// planet and sea move out
 		$(object.getElementById("whole_planet"))

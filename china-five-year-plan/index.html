@@ -82,7 +82,7 @@
 
 <div id="credits" style="color: #fff">
     <br><br>
-    Timeline composed by Andrew Moffat, with Design by Knightlabs, Peter Hirsch, and Anna Young.
+    Timeline composed by Andrew Moffat, with Design by Knightlabs, Peter Hirsch, and Anna Young, and translation by Wu Xiao.
 </div>
 
     <script type="text/javascript">
@@ -105,7 +105,7 @@
     
     <style>
         body, #timeline-embed, #storyjs-timeline {
-            background-color: #656568 !important;
+            background-color: #58595B !important;
         }  
         .timenav-background {
             background-color: #808285 !important;
@@ -117,27 +117,31 @@
         .timenav-interval-background {
             background-color: #58595B !important;
         }
-        body, h1, h2, h3, p, div {
+        body, h1, h2, h3, div {
+            color: #fff !important;
+        }
+        p, .credit {
             color: #fff !important;
         }
         .time-interval div {
-            color: #6CA2BE !important;
+            color: #fff !important;
         }
         .time-interval-major div {
-            color: #6CA2BE !important;
+            color: #fff !important;
         }
         .flag-content h3 {
             color: #595757 !important; 
         }
-        .nav-container div {
-            color: #FFF !important;
+        .nav-next div {
+            color: #8F9093 !important;
         }
-        .nav-container:hover div {
-            color: #1F2F6B !important;
+        .nav-next:hover div {
+            color: #fff !important;
         }
         #credits {
             font-size: 11px;
             font-family: 'Pontano Sans',sans-serif;
+            color: #fff !important;
         }
         .vco-storyjs h3 {
             font-size: 25px !important;
@@ -165,19 +169,31 @@
             line-height: 25px;
             font-family: 'Pontano Sans',sans-serif !important;
             margin-bottom: 7px;
-            color: #1F2F6B !important;
+            /*color: #231F20 !important;*/
+            color: #8F9093 !important;
+            font-style: italic;
         }
         .title #date {
             display: none !important;
         }
         p a {
-            color: #6CA2BE !important;
+            color: #D6C475 !important;
         }
         .timenav-line {
-            background-color: #6CA2BE !important;
+            background-color: #231F20 !important;
         }
         .timenav-tag {
             display: none !important;
+        }
+
+        .event-line {
+            opacity: 0 !important;
+        }
+        .dot {
+            background: #fff !important;
+        }
+        .line {
+            background: #5B2626 !important;
         }
 
     </style>

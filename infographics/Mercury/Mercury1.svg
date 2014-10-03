@@ -7,13 +7,25 @@
  <defs>
  	<path id="SVGID_158_" d="M1258.842,580.26c-41.725-261.708,55.768-437.67,159.84-546.663L1421.078,0L852.326,0.947v297.007     L1258.842,580.26z"/>
 
+ 	<clipPath id="fish-clip">
+ 		<rect id="fish-clip-rect" x="1293.354" y="49.1" width="295.485" height="0">
+ 			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+ 		</rect> 
+ 	</clipPath>
+
+ 	<clipPath id="smoke-clip">
+ 		<rect id="smoke-clip-rect" x="1031.898" y="112.311" width="238.757" height="0">
+ 			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
+ 		</rect> 
+ 	</clipPath>
+
  	<clipPath id="industrial-clip">
  		<rect transform="rotate(180,422.852,240.833)" width="262" height="0" x="291.852" y="176.333">
  			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
  		</rect> 
  	</clipPath>
  	<clipPath id="natural-clip">
- 		<rect transform="rotate(180, 730.254, 278.092)" x="580.254" y="206.092" opacity="0.8" fill="#2CBFD1" width="300" height="0">
+ 		<rect transform="rotate(180, 730.254, 278.092)" x="580.254" y="206.092" width="300" height="0">
  			<set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
 		</rect>  
  	</clipPath>
@@ -198,6 +210,14 @@
 			<rect x="73.941" y="88.085" fill="none" width="592.957" height="120.132"/>
 			<text transform="matrix(1 0 0 1 73.9414 102.4648)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">TOXINS BECOME MORE CONCENTRATED WHEN BREATHED, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">SWALLOWED, AND ABSORBED BY MARINE ORGANISMS </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THAN IN THEIR SURROUNDING ENVIRONMENT. </tspan></text>
 			<polygon id="go_back_animals" class="buttons" cursor="pointer" style="display: none" fill="#2CBFD1" points="55.945,34.809 36.836,53.918 55.945,73.027  "/>
+		</g>
+
+		<polygon id="fish_data_open" cursor="pointer" class="buttons-blue" fill="#F26E2A" points="1558.667,21.271 1573.498,36.101 1588.329,21.271  "/>
+		<polygon id="fish_data_close" cursor="pointer" class="buttons-blue" fill="#F26E2A" points="1588.329,36.271 1573.499,21.441 1558.667,36.271  "/>
+		<text id="fish_data_title" transform="matrix(1 0 0 1 1291.9769 36.7949)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
+		<line id="fish_data_line" stroke-dashoffset="870" stroke-dasharray="870" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="1292.148" y1="40.364" x2="1588.721" y2="40.364"/>
+		<g id="fish_data_text" clip-path="url(#fish-clip)">
+			<text transform="matrix(1 0 0 1 1293.3539 59.166)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica'" font-size="14">Commercial marine fish account for &gt;90% of </tspan><tspan x="0" y="16.8" fill="#F26E2A" font-family="'Helvetica'" font-size="14">mercury exposure in the United States, with the </tspan><tspan x="0" y="33.6" fill="#F26E2A" font-family="'Helvetica'" font-size="14">majority of the mercury coming from migratory, </tspan><tspan x="0" y="50.399" fill="#F26E2A" font-family="'Helvetica'" font-size="14">pelagic marine fish (mainly tuna). More data on </tspan><tspan x="0" y="67.199" fill="#F26E2A" font-family="'Helvetica'" font-size="14">the geographic origins of seafood being </tspan><tspan x="0" y="84" fill="#F26E2A" font-family="'Helvetica'" font-size="14">consumed by different populations are needed.</tspan></text>
 		</g>
 
 		<g id="pyramid" clip-path="url(#pyramid-clip)">
@@ -1771,7 +1791,7 @@
 		<rect x="38.524" y="41.495" fill="none" width="1054.143" height="38.606"/>
 		<text transform="matrix(1 0 0 1 35.5244 76.0068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG: </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">MERCURY</tspan></text>
 		<rect x="39.125" y="92.966" fill="none" width="863.957" height="65.132"/>
-		<text transform="matrix(1 0 0 1 39.125 107.3457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Mercury is a chemical element used in products such as button cell </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">batteries and fluorescent bulbs. Monitoring is inconsistent AND </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">improved indicators are needed to better connect emissions to health. </tspan></text>
+		<text transform="matrix(1 0 0 1 39.125 107.3457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MERCURY IS A CHEMICAL ELEMENT USED IN PRODUCTS SUCH AS BUTTON CELL </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">BATTERIES AND FLUORESCENT BULBS. MONITORING IS INCONSISTENT AND </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">IMPROVED INDICATORS ARE NEEDED TO BETTER CONNECT EMISSIONS TO HEALTH. </tspan></text>
 
 		<polygon id="recs_triangle" fill="#103844" points="1471.357,187.773 1180.357,187.773 1175.476,187.773 1161.496,187.773    1186.289,224.44 1161.496,260.106 1176.809,260.106 1179.357,260.106 1470.357,260.106 1495.496,224.697  "/>
 
@@ -1894,7 +1914,7 @@
 		<rect x="74.051" y="37.989" fill="none" width="1054.142" height="38.606"/>
 		<text transform="matrix(1 0 0 1 71.0503 72.501)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">HG:</tspan><tspan x="87.984" y="0" fill="#7D8FC7" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="101.32" y="0" fill="#2CBFD1" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
 		<rect x="74.65" y="89.46" fill="none" width="959.957" height="120.132"/>
-		<text transform="matrix(1 0 0 1 74.6504 103.8398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">INJESTING TOXIC METALS CAN HAVE SERIOUS EFFECTS ON THE KIDNEY, LIVER, CENTRAL </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NERVOUS SYSTEM AND OTHER ORGANS. </tspan><tspan x="420" y="28.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">95 PERCENT </tspan><tspan x="585" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">OF THE METHYLMERCURY YOU </tspan><tspan x="0" y="52.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">CONSUME IS ABSORBED BY YOUR INTESTINAL TRACT AND ENTERS THE BLOOD STREAM. </tspan><tspan x="0" y="76.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">GASEOUS HG0 IS ALSO EFFICIENTLY ABSORBED WHEN INHALED.</tspan></text>
+		<text transform="matrix(1 0 0 1 74.6504 103.8398)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">INGESTING TOXIC METALS CAN HAVE SERIOUS EFFECTS ON THE KIDNEY, LIVER, CENTRAL </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">NERVOUS SYSTEM AND OTHER ORGANS. </tspan><tspan x="420" y="28.8" fill="#F26E2A" font-family="'Helvetica-Bold'" font-size="24">95 PERCENT </tspan><tspan x="585" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">OF THE METHYLMERCURY YOU </tspan><tspan x="0" y="52.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">CONSUME IS ABSORBED BY YOUR INTESTINAL TRACT AND ENTERS THE BLOOD STREAM. </tspan><tspan x="0" y="76.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">GASEOUS HG0 IS ALSO EFFICIENTLY ABSORBED WHEN INHALED.</tspan></text>
 	</g>
 	<g id="health_diagram" style="display: none">
 		<g>
@@ -1978,7 +1998,9 @@
 
 <g id="logo">
 		<rect y="982.719" fill="#FFFFFF" width="1600" height="165.762"/>
-		<text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 339.707 1044.5674)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="18">Re</tspan><tspan x="23.01" y="0" font-family="'Helvetica'" font-size="18">f</tspan><tspan x="27.849" y="0" font-family="'Helvetica'" font-size="18">erences: Pirrone, Nicola, Wenche Aas, Sergio Cinnirella, Ralf Ebinghaus, Ian M. Hedgecock, Jozef Pacyna, Francesca Sprovieri, and Elsie</tspan><tspan x="0" y="21.6" font-family="'Helvetica'" font-size="18" letter-spacing="37">		</tspan><tspan x="85.452" y="21.6" font-family="'Helvetica'" font-size="18">   M. Sunderland. "Toward the next generation of air quality monitoring: Mercury." Atmospheric Environment 80 (2013): 599-611.</tspan></text>
+		<text transform="matrix(1 0 0 1 339.707 1044.5674)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="18">Re</tspan><tspan x="23.01" y="0" font-family="'Helvetica'" font-size="18">f</tspan><tspan x="27.849" y="0" font-family="'Helvetica'" font-size="18">erences: Pirrone, Nicola, Wenche Aas, Sergio Cinnirella, Ralf Ebinghaus, Ian M. Hedgecock, Jozef Pacyna, Francesca Sprovieri, and Elsie</tspan><tspan x="0" y="21.6" font-family="'Helvetica'" font-size="18" letter-spacing="37">		</tspan><tspan x="85.452" y="21.6" font-family="'Helvetica'" font-size="18">   M. Sunderland. "Toward the next generation of air quality monitoring: Mercury." Atmospheric Environment 80 (2013): 599-611.</tspan>
+		<tspan id="globe-sources" style="display:none" x="85.452" y="64.8" font-family="'Helvetica'" font-size="18">   UN Environment Programme (UNEP). (2013). Mercury: Time to Act. Available: http://www.unep.org/PDF/PressReleases/Mercury_TimeToAct.pdf</tspan></text>
+		<text id="fish-sources" style="display: none" transform="matrix(1 0 0 1 339.73 1047.0869)"><tspan x="0" y="43.2" font-family="'Helvetica'" font-size="18" letter-spacing="37">		</tspan><tspan x="85.452" y="43.2" font-family="'Helvetica'" font-size="18">   E. Sunderland. Mercury exposure from domestic and imported estuarine and marine fish in the U.S. seafood market Environmental Health </tspan><tspan x="0" y="64.8" font-family="'Helvetica'" font-size="18" letter-spacing="37">			</tspan><tspan x="128.178" y="64.8" font-family="'Helvetica'" font-size="18">Perspectives, 115 (2) (2007), pp. 235–242.</tspan><tspan x="0" y="86.4" font-family="'Helvetica'" font-size="18" letter-spacing="37">		</tspan><tspan x="85.452" y="86.4" font-family="'Helvetica'" font-size="18">  </tspan></text>
 		<g>
 			<polygon fill="#2E2119" points="103.532,1044.334 103.532,1027.639 115.034,1027.639 115.034,1030.164 107.146,1030.164 
 				107.146,1034.41 113.771,1034.41 113.771,1036.789 107.146,1036.789 107.146,1041.787 115.374,1041.787 115.374,1044.334 			"/>
@@ -2150,9 +2172,9 @@
 		<!--<g id="river" style="display: none">
 			<path id="river-line" clip-path="url(#river-crop)" fill="none" stroke-dasharray="2390" stroke-dashoffset="2390" stroke="#436F78" stroke-width="250" stroke-miterlimit="10" d="M1340.941,362.502c0,0-408,49-324,90s182,55,233,98   s-26,80-53,93s-158,49-585-35s-360,73-360,77s25,32,52,86s-121,115-267,114s-195-2-195-2"/>
 		</g>-->
-		<g id="river" style="display: none" clip-path="url(#river-crop)">
+		<!--<g id="river" style="display: none" clip-path="url(#river-crop)">-->
 			<!--<path id="river-line" stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#FFFFFF" stroke-width="60" stroke-miterlimit="10" d="M1363.262,386.193    c0,0-392.265,13.542-342.288,54.446c48.19,39.442,260,78.511,292,117.554c32,39.043-70,74.888-208,74s-322-28-322-28    s-252.094-30.885-322-36c-82-6-208,41.388-194,76c19.685,48.667,36.961,60.738,48,96c11.369,36.315,2,82.176-104,100.6    c-116.994,20.335-344.994,13.4-344.994,13.4"/>-->
-			<path stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#436F78" stroke-width="20" stroke-miterlimit="10" d="M1345.665,370.358   c0,0-145.038-0.793-238.038,18.649c-105.286,22.011-202.389,34.819-151.389,77.819s122.799,46.764,146.912,65.391   c23.715,18.319,44.774,95.79-382.226,11.79c-117.128-23.042-220.244-28.703-279.383-24.771   c-14.973,0.995-125.068,24.936-138.837,29.771c-93.143,32.702-88.865,99.509-88.331,102.079   c8.242,39.624,22.765,28.919,29.254,89.921c5,47-143.999,63.029-151,63c-146.002-0.597-237,17-237,17"/>
+			<!--<path stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#436F78" stroke-width="20" stroke-miterlimit="10" d="M1345.665,370.358   c0,0-145.038-0.793-238.038,18.649c-105.286,22.011-202.389,34.819-151.389,77.819s122.799,46.764,146.912,65.391   c23.715,18.319,44.774,95.79-382.226,11.79c-117.128-23.042-220.244-28.703-279.383-24.771   c-14.973,0.995-125.068,24.936-138.837,29.771c-93.143,32.702-88.865,99.509-88.331,102.079   c8.242,39.624,22.765,28.919,29.254,89.921c5,47-143.999,63.029-151,63c-146.002-0.597-237,17-237,17"/>
 			<path stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#436F78" stroke-width="20" stroke-miterlimit="10" d="M1345.665,387.938   c0,0-145.038-0.793-238.038,18.649c-105.286,22.011-193.564,5.948-142.564,48.948s133.45,59.845,157.564,78.472   c23.715,18.319,25.297,111.58-401.703,27.58c-117.128-23.041-220.244-28.703-279.383-24.771   c-14.973,0.995-125.068,24.936-138.837,29.771c-93.143,32.702-71.611,91.85-71.076,94.42c8.242,39.624,18.51,28.999,25,90   c5,47-157,70.609-164,70.58c-146.002-0.597-237,18.42-237,18.42"/>
 			<path stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#436F78" stroke-width="20" stroke-miterlimit="10" d="M1345.665,403.982   c0,0-145.038-0.793-238.038,18.649c-105.286,22.011-191.119-3.192-132,27.71c66.605,34.815,140.887,58.039,165,76.666   c23.715,18.319,7.297,134.624-419.703,50.624c-117.128-23.042-220.244-28.703-279.383-24.771   c-14.973,0.995-125.068,24.936-138.837,29.771c-93.143,32.702-51.297,100.3-50.763,102.87   c8.242,39.624,15.197,15.505,21.686,76.506c5,47-174,75.652-181,75.624c-146.002-0.597-237,18.42-237,18.42"/>
 			<path stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#436F78" stroke-width="20" stroke-miterlimit="10" d="M1345.411,422.241   c0,0-136.854,4.063-230.849,17.917c-101.467,14.956-155.055-13.052-95.935,17.85c66.605,34.815,116.887,51.373,141,70   c23.715,18.319-4.768,151.151-431.768,67.151c-117.128-23.042-220.244-28.703-279.383-24.771   c-14.973,0.995-121.098,18.724-134.867,23.559c-93.143,32.702-43.516,92.492-42.982,95.062c8.242,39.624,11.51,23.999,18,85   c5,47-182.064,81.179-189.065,81.15c-146.002-0.597-237,18.42-237,18.42"/>
@@ -2161,9 +2183,9 @@
 			<path stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#436F78" stroke-width="20" stroke-miterlimit="10" d="M1350.665,476.969c0,0-103.405,0-198.038,0   c-21.125,0,42.025,33.317,65.406,45.361c3.826,1.971,12.861,18.494,10.996,22.372l-24.401,48.979   c-34,18.29-38.926,112.203-446,59.327c-113.93-14.799-211.727-32.408-268.559-28.482c-14.389,0.994-104.208-2.9-117.441,1.928   c-89.51,32.659-55.885,45.923-52,55.317c18.707,45.237,7.453,65.317,13.69,126.237c4.805,46.937-176.277,92.029-183.005,92   c-140.308-0.596-280.685,27.304-280.685,27.304"/>
 			<path stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#436F78" stroke-width="20" stroke-miterlimit="10" d="M1350.665,489.699c0,0-88.163-0.258-182.797-0.258   c-21.125,0,42.025,33.317,65.406,45.361c3.826,1.971,12.86,18.494,10.995,22.372l-24.401,48.979   c-34,18.29-38.926,112.203-446,59.327c-113.93-14.799-211.727-32.408-268.559-28.482c-14.389,0.994-104.208-2.9-117.441,1.928   c-89.51,32.659-55.885,45.923-52,55.317c18.707,45.237,7.453,65.317,13.69,126.237c4.805,46.937-176.277,92.029-183.005,92   c-140.307-0.596-295.926,27.304-295.926,27.304"/>
 			<path stroke-dasharray="2390" stroke-dashoffset="2390" fill="none" stroke="#436F78" stroke-width="30" stroke-miterlimit="10" d="M1348.627,503.747c0,0-45.02,0-139.653,0   c-21.125,0,42.025,33.317,65.406,45.361c3.826,1.971-10.887,13.021-12.752,16.9l-33,60.446c-34,18.29-6.58,106.208-413.653,53.332   c-113.93-14.799-211.727-32.408-268.559-28.482c-14.389,0.994-119.555-8.222-132.787-3.394   c-89.51,32.659-62.879,44.837-58.994,54.23c18.707,45.237,9.758,64.948,15.994,125.868c4.805,46.937-156.241,98.807-162.969,98.778   C67.351,926.19-129.373,961.47-129.373,961.47"/>
-		</g>
-		<!--<g id="river" style="display: none">
-			<g id="river-path" visibility="hidden" clip-path="url(#river-clip)">
+		</g>-->
+		<g id="river" style="display: none">
+			<g id="river-path">
 				<path opacity="0.7" fill="#103844" d="M1364.853,366.194c0,0-143.664,7.44-283.293,23.107    c-157.166,17.635-171.206,69.167-110.706,95.833c48.911,21.558,125.834,38.334,137.667,57    c25.705,40.549-172.961,37.167-266.961,19.167s-296.038-89.003-535-14c-137,43-104,134-77,147s117.627,112-362.373,120v151    c16,0,356.373,0,384.373,0s229.977-113.077,91-247c-110-106,175.145-30.322,224.627-17c104,28,224.507,70.934,520.373,56    c317-16,532-185,67-290c-91.322-20.621,2.424-57.713,94.629-76.667c95.667-19.666,115.664-22.44,115.664-22.44V366.194z"/>
 				<path opacity="0.15" fill="#2CBFD1" d="M1364.125,365.9c0,0-143.664,7.44-283.293,23.107    c-157.166,17.635-171.205,69.167-110.705,95.833c48.91,21.558,125.834,38.334,137.666,57    c25.705,40.549-172.961,37.167-266.961,19.167s-296.037-89.003-535-14c-137,43-104,134-77,147s117.627,112-362.373,120v151    c16,0,356.373,0,384.373,0s229.976-113.077,91-247c-110-106,175.145-30.322,224.627-17c104,28,224.507,70.934,520.373,56    c317-16,532-185,67-290c-91.322-20.621,2.424-57.713,94.629-76.667c95.668-19.666,115.664-22.44,115.664-22.44V365.9z"/>
 				<path opacity="0.2" fill="#FFFFFF" stroke="#2CBFD1" stroke-miterlimit="10" d="M1364.125,366.9c0,0-138.33,4.774-283.293,22.107    c-157.033,18.776-165,66-114,82s105,18,140,66s-172,43-266,25s-296.037-89.003-535-14c-137,43-104,134-77,147    s117.627,111-362.373,119v71c16,0,356.373,0,384.373,0s229.976-32.077,91-166c-110-106,142.627-91,193.627-86    s255.373,58,551.373,46s509.394-104.398,67-211c-166-40-0.058-73.58,93.297-85.667c80.145-10.377,116.996-14.44,116.996-14.44    V366.9z"/>
@@ -2188,7 +2210,7 @@
 			</g>
 		</g>
 			
-		</g>-->
+		</g>
 		<text id="recs-more-info" style="display: none" transform="matrix(1 0 0 1 204.751 959.7045)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="14">For more information: see Pirrone et al. (2013). <a fill="#2CBFD1" style="text-decoration: underline" target="_blank" xlink:href="http://www.sciencedirect.com/science/article/pii/S1352231013005189">Toward the Next Generation of Air Quality Monitoring: Mercury</a>. Atmospheric Environment 80:599-611.</text>
 		<g id="recs-text-boxes" visibility="hidden">
 			<g id="recs4" clip-path="url(#recs-clip4)">
@@ -3160,9 +3182,17 @@
 					<line stroke-dashoffset="299" stroke-dasharray="299" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="580.254" y1="349.32" x2="878.996" y2="349.32"/>
 					<line stroke-dashoffset="265" stroke-dasharray="265" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="579.852" y1="349.334" x2="841.186" y2="349.334"/>
 
-					<polygon id="natural_open" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="862.792,343.415 847.962,328.585 833.131,343.415"/>
+					<polygon id="natural_open" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="872.792,343.415 857.962,328.585 843.131,343.415"/>
 					<polygon id="natural_close" class="buttons" cursor="pointer" visibility="hidden" fill="#FFFFFF" points="843.131,330.945 857.961,345.775 872.792,330.945"/>
 				</g>
+			</g>
+				<g id="data_gap_stuff" visibility="hidden">
+					<text id="smoke_data_title" transform="matrix(0.8421 0 0 1 1045.0801 103.7227)" fill="#F26E2A" font-family="'Helvetica'" font-size="18">DATA GAP</text>
+					<line id="smoke_data_line" stroke-dasharray="236" stroke-dashoffset="236" fill="none" stroke="#F26E2A" stroke-width="2" stroke-miterlimit="10" x1="1029.913" y1="107.291" x2="1265.751" y2="107.291"/>
+					<polygon id="smoke_data_close" class="buttons-blue" cursor="pointer" fill="#F26E2A" points="1265.788,102.419 1250.958,87.589 1236.125,102.419  "/>
+					<polygon id="smoke_data_open" class="buttons-blue" cursor="pointer" fill="#F26E2A" points="1236.125,90.419 1250.956,105.25 1265.788,90.419  "/>
+
+					<g id="smoke_data_text" clip-path="url(#smoke-clip)"><text transform="matrix(1 0 0 1 1031.8979 122.376)"><tspan x="0" y="0" fill="#F26E2A" font-family="'Helvetica'" font-size="14">Complex global patterns of transport, </tspan><tspan x="0" y="16.801" fill="#F26E2A" font-family="'Helvetica'" font-size="14">deposition, and natural re-emission of </tspan><tspan x="0" y="33.601" fill="#F26E2A" font-family="'Helvetica'" font-size="14">mercury result in only coarse spatial </tspan><tspan x="0" y="50.4" fill="#F26E2A" font-family="'Helvetica'" font-size="14">and temporal correlation between </tspan><tspan x="0" y="67.2" fill="#F26E2A" font-family="'Helvetica'" font-size="14">ambient air concentrations, </tspan><tspan x="0" y="84.001" fill="#F26E2A" font-family="'Helvetica'" font-size="14">anthropogenic emissions, and </tspan><tspan x="0" y="100.801" fill="#F26E2A" font-family="'Helvetica'" font-size="14">environmental deposition. </tspan></text></g>
 			</g>
 
 		</g>
