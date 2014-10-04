@@ -17,6 +17,9 @@
     <span id="no-data"><br>No data for this country.</span>
     <span id="no-data-afghanistan" style="display: none"><br>No data for this country. Note: Afghanistan ratified in 2013, but the 2014 EPI rankings used 2011 as the cutoff point for all countries due to limited data availability.</span>
       <div style="position: absolute; width:200px; top: 515px; color: grey; text-align: center; font-weight: bold; height: 80px">
+        <div id="base-text">
+          <span id="chemical-description">Hover over a pesticide to see more info.</span>
+        </div>
         <div id="aldrin-text" style="display: none">
           <span>ALDRIN</span>
           <span id="chemical-description">Pesticide widely used on corn and cotton.</span>
@@ -449,8 +452,10 @@
       $('#chemicals').children().each(function() {
         $(this).hover(function() {
           $('#' + $(this).attr("id") + "-text").show();
+          $('#base-text').hide();
         }, function() {
           $('#' + $(this).attr("id") + "-text").hide();
+          $('#base-text').show();
         });
       });
 
