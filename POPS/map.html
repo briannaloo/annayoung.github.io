@@ -15,7 +15,7 @@
     <div id="map"></div>
     <div id="tool-tip"><p id="tool-tip-text">Hover over a country.</p>
     <span id="no-data"><br>No data for this country.</span>
-      <div style="position: absolute; width:200px; top: 450px; color: grey; text-align: center; font-weight: bold;">
+      <div style="position: absolute; width:200px; top: 515px; color: grey; text-align: center; font-weight: bold; height: 100px">
         <div id="aldrin-text" style="display: none">
           <span>ALDRIN</span>
           <span id="chemical-description">Pesticide widely used on corn and cotton.</span>
@@ -63,6 +63,9 @@
       </div>
       <div style="position: absolute; top: 75px">
         <svg id="svg-container" width="200" height="425" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewBox="0 0 375 775" preserveAspectRatio="none">
+         <ellipse fill="none" stroke="#40BDA4" stroke-width="6" stroke-miterlimit="10" cx="191.996" cy="61.516" rx="61.147" ry="58.355"/>
+         <text id="score-text" transform="matrix(1 0 0 1 152 86)"><tspan visibility="hidden" id="score" x="0" y="0" fill="#3DBBA2" font-family="'PFCentroSlabPro-Italic'" font-size="80"></tspan><tspan x="37.007" y="0" fill="#3DBBA2" font-family="'PFCentroSlabPro-Italic'" font-size="72"> </tspan></text>
+         <g transform="translate(0,118)">
           <g id="signed_ratified">
             <rect x="36.488" y="59.85" fill="#40BDA4" width="292.486" height="51.123"/>
             <rect x="36.488" y="59.85" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="292.486" height="51.123"/>
@@ -256,6 +259,7 @@
 
             <text transform="matrix(0.7965 -0.6046 0.6046 0.7965 157.6822 512.3239)" fill="#40BDA4"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="12">D</tspan><tspan x="7.755" y="0.126" font-family="'MyriadPro-Regular'" font-size="12" rotate="6.185">I</tspan><tspan x="10.431" y="0.256" font-family="'MyriadPro-Regular'" font-size="12" rotate="12.521">O</tspan><tspan x="18.221" y="2.018" font-family="'MyriadPro-Regular'" font-size="12" rotate="21.004">X</tspan><tspan x="24.405" y="4.484" font-family="'MyriadPro-Regular'" font-size="12" rotate="26.513">I</tspan><tspan x="26.861" y="5.546" font-family="'MyriadPro-Regular'" font-size="12" rotate="32.668">N</tspan><tspan x="33.261" y="9.803" font-family="'MyriadPro-Regular'" font-size="12" rotate="38.644"> </tspan><tspan x="35.158" y="11.222" font-family="'MyriadPro-Regular'" font-size="12" rotate="43.417">F</tspan><tspan x="39.279" y="15.011" font-family="'MyriadPro-Regular'" font-size="12" rotate="51.162">U</tspan><tspan x="43.962" y="20.871" font-family="'MyriadPro-Regular'" font-size="12" rotate="59.215">R</tspan><tspan x="47.166" y="26.155" font-family="'MyriadPro-Regular'" font-size="12" rotate="66.988">A</tspan><tspan x="49.967" y="32.636" font-family="'MyriadPro-Regular'" font-size="12" rotate="75.619">N</tspan></text>
         </g>
+        </g>
         </svg>
       </div>
     </div>
@@ -408,6 +412,14 @@
               $('#no-data').show();
             }
 
+            var score = data['total_score'];
+            if (score < 10)
+              $('#score-text').attr("transform", "matrix(1 0 0 1 172 86)");
+            else
+              $('#score-text').attr("transform", "matrix(1 0 0 1 152 86)");
+
+            $('#score').text(score).attr("visibility", "visible");
+
             $('#check-left').attr('visibility', 'hidden');
             $('#check-right').attr('visibility', 'hidden');
             $('#x-left').attr('visibility', 'hidden');
@@ -453,6 +465,10 @@
           });
 
           sublayer_country.on('featureOut', function(e, pos, latlng, data) {
+
+            $('#score').text('').attr("visibility", "hidden");
+            $('#score-text').attr("transform", "matrix(1 0 0 1 152 86)");
+
            //Make the tooltip go away when off countries
             $('#tool-tip-text').html('Hover over a country.');
             $('#points tspan', '#svg-container').text('').attr('visibility', 'hidden');
