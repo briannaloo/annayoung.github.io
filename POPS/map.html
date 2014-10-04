@@ -337,6 +337,8 @@
               $('#no-data').show();
             }
 
+            $('#no-data-afghanistan').hide();
+            $('#ellipse').show();
 
             $('#check-left').attr('visibility', 'hidden');
             $('#check-right').attr('visibility', 'hidden');
@@ -393,9 +395,19 @@
                 $('#score').text('').attr("visibility", "hidden");
               }
 
+              if (data['country'] == 'Afghanistan')
+              {
+                $('#no-data').hide();
+                $('#no-data-afghanistan').show();
+                $('#ellipse').hide();
+              }
+
           });
 
           sublayer_country.on('featureOut', function(e, pos, latlng, data) {
+
+            $('#no-data-afghanistan').hide();
+            $('#ellipse').show();
 
             $('#score').text('').attr("visibility", "hidden");
             $('#score-text').attr("transform", "matrix(1 0 0 1 152 86)");
