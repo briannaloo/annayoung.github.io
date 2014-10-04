@@ -413,12 +413,15 @@
             }
 
             var score = data['total_score'];
-            if (score < 10)
-              $('#score-text').attr("transform", "matrix(1 0 0 1 172 86)");
-            else
-              $('#score-text').attr("transform", "matrix(1 0 0 1 152 86)");
+            if (score != -1)
+            {
+              if (score < 10)
+                $('#score-text').attr("transform", "matrix(1 0 0 1 172 86)");
+              else
+                $('#score-text').attr("transform", "matrix(1 0 0 1 152 86)");
 
-            $('#score').text(score).attr("visibility", "visible");
+              $('#score').text(score).attr("visibility", "visible");
+            }
 
             $('#check-left').attr('visibility', 'hidden');
             $('#check-right').attr('visibility', 'hidden');
