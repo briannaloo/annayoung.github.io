@@ -79,6 +79,7 @@ html, body, #map {
         right: 0;
         width: 200px;
         height: 565px;
+        max-height: 100%;
         overflow: scroll;
         background-color: white;
         opacity: .95;
