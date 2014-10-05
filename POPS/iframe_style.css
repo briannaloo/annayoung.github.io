@@ -90,6 +90,10 @@ html, body, #map {
         vertical-align: bottom;
         font-size: 24px;
         padding: 4px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(164, 162, 162);
+        box-shadow: rgba(0,0,0,0.2) 0 0 4px 2px;
       }
 
       #no-data {
@@ -214,7 +218,7 @@ html, body, #map {
       }
 
       #slide_out_info {
-        width: 60%;
+        width: 350px;
         height: 50%;
         border-radius: 10px;
         background: #ccc;

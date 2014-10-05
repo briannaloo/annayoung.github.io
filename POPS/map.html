@@ -5,6 +5,7 @@
      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
      <link href='iframe_style.css' rel='stylesheet' type='text/css'>
+     <title>Persistant Organic Pollutants Interactive Map</title>
      <script type="text/javascript" src="jquery.js"></script>
      <script type="text/javascript" src="slide.js"></script>
      <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> 
@@ -67,7 +68,7 @@
       </div>
       <div style="position: absolute; top: 75px">
         <svg id="svg-container" width="200" height="425" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewBox="0 0 375 820" preserveAspectRatio="none">
-         <ellipse id="ellipse" fill="none" stroke="#40BDA4" stroke-width="6" stroke-miterlimit="10" cx="191.996" cy="61.516" rx="61.147" ry="58.355"/>
+         <ellipse visibility="hidden" id="ellipse" fill="none" stroke="#40BDA4" stroke-width="6" stroke-miterlimit="10" cx="191.996" cy="61.516" rx="61.147" ry="58.355"/>
          <text id="score-text" transform="matrix(1 0 0 1 152 86)"><tspan visibility="hidden" id="score" x="0" y="0" fill="#3DBBA2" font-family="'PFCentroSlabPro-Italic'" font-size="80"></tspan><tspan x="37.007" y="0" fill="#3DBBA2" font-family="'PFCentroSlabPro-Italic'" font-size="72"></tspan></text>
          <g transform="translate(0,118)">
           <g id="signed_ratified">
@@ -226,9 +227,23 @@
       </a>
       <div class="content">
         <div class="text">
-        <h1>POPs are fun</h1> <br>
-          
-        <!--<span>Created by <a href="http://spinsomewebs.com/" target="_blank">Pedro Cunha</a> and <a href="http://www.dmitrypavluk.com" target="_blank">Dmitry Pavluk</a> using CartoDB <br>with help from <a href="https://twitter.colorsm/andrewxhill" target="_blank">Andrew Hill</a>, Anna Young, and Diego Torres Quintanilla</span>-->
+        <h1>Persistant Organic Pollutants (POPs)</h1> <br>
+          National Status of the Dirty Dozen POPs regulation through the Stockholm Convention
+Prepared for the 2014 Environmental Performance Index <br><br>
+
+This spreadsheet contains detailed scoring information for the Pesticide Regulation (POPS) indicator for the 2014 EPI. The POPS indicator scores whether countries allow, restrict or ban the use of the 'Dirty Dozen' Persistant Organic Pollutants (POPs) that are common agriculture pesticides.  For each of the following POPs:  Aldrin, Chlordane, 
+DDT, Dieldrin, Dioxins & Furans, Endrin, Heptachlor, Hexachlorobenzene, Mirex, PCB, and Toxaphene, we 
+assign two points in the year that were banned, one point when they are restricted and we penalize two 
+points (given zero points) for any POPs allowed (all time series). However, we do not penalize countries 
+that permit the use of DDT (that is, partial banning) for the use of medical or public health services such as 
+the in prevention of malaria. Countries who have signed on or ratified the Stockholm Convention but do 
+not provide a report on chemicals restricted or banned receive 0 points for legislation status. 
+<br><br>
+Citation:<br>
+Johnson, L. (2014). National Status of the Dirty Dozen POPs regulation through the Stockholm Convention. New Haven, CT: Yale Center for Environmental Law & Policy.
+
+<br><br>
+Map created by Anna Young (Yale College '16)
       </div></div>
     </div>
 
@@ -334,6 +349,7 @@
           sublayer_country.on('featureOver', function(e, pos, latlng, data) {
             $('#tool-tip-text').html(data['country']);
             $('#no-data').hide();
+            $('#ellipse').attr("visibility", "visible");
             
             if(data['points'] != "-1")
               $('#points tspan').text(data['points']).attr('visibility', 'visible');
@@ -395,6 +411,7 @@
 
               else
               {
+                $('#ellipse').hide();
                 $('#score').text('').attr("visibility", "hidden");
               }
 
@@ -402,12 +419,14 @@
               {
                 $('#no-data').hide();
                 $('#no-data-afghanistan').show();
-                $('#ellipse').hide();
+                $('#ellipse').attr("visibility", "hidden");
               }
 
           });
 
           sublayer_country.on('featureOut', function(e, pos, latlng, data) {
+
+            $('#ellipse').attr("visibility", "hidden");
 
             $('#no-data-afghanistan').hide();
             $('#ellipse').show();
@@ -447,17 +466,6 @@
         action: 'click',                  //options: true makes it stick(fixed position) on scroll
       });
 
-
-      // hover over icons
-      /*$('#chemicals').children().each(function() {
-        $(this).hover(function() {
-          $('#' + $(this).attr("id") + "-text").show();
-          $('#base-text').hide();
-        }, function() {
-          $('#' + $(this).attr("id") + "-text").hide();
-          $('#base-text').show();
-        });
-      });*/
       for (var key in chemicals)
       {
         $('#' + chemicals[key]).hover(function() {
