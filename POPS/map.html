@@ -8,6 +8,7 @@
      <title>Persistant Organic Pollutants Interactive Map</title>
      <script type="text/javascript" src="jquery.js"></script>
      <script type="text/javascript" src="slide.js"></script>
+     <script type="text/javascript" src="epi_scores.js"></script>
      <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> 
   </head>
 
@@ -343,10 +344,12 @@ Map created by Anna Young (Yale College '16)
           sublayer_country = layer.getSubLayer(1);
           sublayer_country.setInteraction(true);
           
-          var score1 = "total_score",
-          score2 = "ratification_date";
           //Retrieve data to the tooltip on countries
           sublayer_country.on('featureOver', function(e, pos, latlng, data) {
+
+            var country = data['country'];
+            console.log(epi_scores[country]);
+
             $('#tool-tip-text').html(data['country']);
             $('#no-data').hide();
             $('#ellipse').attr("visibility", "visible");
@@ -410,7 +413,7 @@ Map created by Anna Young (Yale College '16)
 
               else
               {
-                $('#ellipse').hide();
+                $('#ellipse').attr("visibility", "hidden");
                 $('#score').text('').attr("visibility", "hidden");
               }
 
