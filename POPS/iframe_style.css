@@ -33,7 +33,7 @@ html, body, #map {
         position: fixed;
         top: 0;
         right: 0;
-        width: 200px;
+        width: 215px;
         height: 565px;
         max-height: 100%;
         overflow: scroll;
