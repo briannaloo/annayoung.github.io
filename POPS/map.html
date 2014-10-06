@@ -15,6 +15,7 @@
   <body>
     
     <div id="map"></div>
+
     <div id="tool-tip"><p id="tool-tip-text">Hover over a country.</p>
     <span id="no-data"><br>No data for this country.</span>
     <span id="no-data-afghanistan" style="display: none"><br>No data for this country. Note: Afghanistan ratified in 2013, but the 2014 EPI rankings used 2011 as the cutoff point for all countries due to limited data availability.</span>
@@ -240,7 +241,7 @@ that permit the use of DDT (that is, partial banning) for the use of medical or 
 the in prevention of malaria. Countries who have signed on or ratified the Stockholm Convention but do 
 not provide a report on chemicals restricted or banned receive 0 points for legislation status. 
 <br><br>
-Citation:<br>
+Citation:<br><br>
 Johnson, L. (2014). National Status of the Dirty Dozen POPs regulation through the Stockholm Convention. New Haven, CT: Yale Center for Environmental Law & Policy.
 
 <br><br>
@@ -321,8 +322,7 @@ Map created by Anna Young (Yale College '16)
           legend: true,
           center: [10, 20],
           zoom: 2,
-          scrollWheelZoom: true,
-          searchControl: true
+          scrollWheelZoom: true
         });
 
         // create our layers
@@ -343,6 +343,13 @@ Map created by Anna Young (Yale College '16)
           map.addLayer(layer);
           sublayer_country = layer.getSubLayer(1);
           sublayer_country.setInteraction(true);
+
+          var v = cdb.vis.Overlay.create('search', map.viz, {})
+          v.show();
+          $('#map').append(v.render().el);
+          /*var share = cdb.vis.Overlay.create('share', map.viz, {})
+          share.show();
+          $('#map').append(share.render().el);*/
           
           //Retrieve data to the tooltip on countries
           sublayer_country.on('featureOver', function(e, pos, latlng, data) {
