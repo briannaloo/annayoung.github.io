@@ -347,9 +347,6 @@ Map created by Anna Young (Yale College '16)
           //Retrieve data to the tooltip on countries
           sublayer_country.on('featureOver', function(e, pos, latlng, data) {
 
-            var country = data['country'];
-            console.log(epi_scores[country]);
-
             $('#tool-tip-text').html(data['country']);
             $('#no-data').hide();
             $('#ellipse').attr("visibility", "visible");
