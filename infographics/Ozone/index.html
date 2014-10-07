@@ -166,7 +166,7 @@ obj.addEventListener("load", function() {
 
 		$(object.getElementById("respiratory2")).fadeIn(200);
 		//$(object.getElementById("respiratory2-health")).fadeIn(200);
-		$(object.getElementById("respiratory-close")).fadeOut(200);
+		$(object.getElementById("respiratory_close")).fadeOut(200);
 		$(object.getElementById("respiratory-info")).fadeOut(200);
 	});
 	// from cities
@@ -642,7 +642,7 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("respiratory2")).click(function() {	
 			$(object.getElementById("respiratory2")).fadeOut(200);
 			//$(object.getElementById("respiratory2-health")).fadeOut(200);
-			$(object.getElementById("respiratory-close")).fadeIn(200);
+			$(object.getElementById("respiratory_close")).fadeIn(200);
 			$(object.getElementById("respiratory-info")).show();
 
 			// hide health impacts
@@ -650,18 +650,18 @@ obj.addEventListener("load", function() {
 		});
 
 		// close respiratory effects
-		$([object.getElementById("respiratory-close"), object.getElementById("forward")]).click(function() {
+		$([object.getElementById("respiratory_close"), object.getElementById("forward")]).click(function() {
 			$(object.getElementById("respiratory2")).fadeIn(200);
 			//$(object.getElementById("respiratory2-health")).fadeIn(200);
-			$(object.getElementById("respiratory-close")).fadeOut(200);
+			$(object.getElementById("respiratory_close")).fadeOut(200);
 			$(object.getElementById("respiratory-info")).fadeOut(200);
 		});
 	}
 
 	function initializeHealthLine(object, seconds, sec) {
-		$(object.getElementById("health-line")).append(createSet("visibility", "visible", "forward.click; respiratory-close.click", "respiratory2.click + " + seconds/2.0 + "s; reverse_health.click + " + seconds + "s; go_back.click", false));	//respiratory2.click
+		$(object.getElementById("health-line")).append(createSet("visibility", "visible", "forward.click; respiratory_close.click", "respiratory2.click + " + seconds/2.0 + "s; reverse_health.click + " + seconds + "s; go_back.click", false));	//respiratory2.click
 		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds*2, "forward.click", "1000", "0", "respiratory2.click; reverse_health.click; go_back.click", false));
-		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds/2.0, "respiratory2.click; reverse_health.click; closeHealth.click; go_back.click", "0", "1000", "forward.click; respiratory-close.click", false));
+		$(object.getElementById("health-line")).append(createAnimate("stroke-dashoffset", seconds/2.0, "respiratory2.click; reverse_health.click; closeHealth.click; go_back.click", "0", "1000", "forward.click; respiratory_close.click", false));
 
 		$(object.getElementById("go_back")).append(createSet("pointer-events", "none", "forward.click", "forward.click + " + (2*seconds) + "s", false))
 			.append(createSet("cursor", "auto", "forward.click", "forward.click + " + (2*seconds) + "s", false));
