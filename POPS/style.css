@@ -57,7 +57,7 @@ html, body, #map {
       }
 
       #tool-tip-title {
-        position: fixed;
+        position: absolute;
         width: 205px;
         top: 0px;
         font-weight: bold;

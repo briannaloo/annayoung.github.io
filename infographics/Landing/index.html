@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Interactive Infographics</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body style="background-color: #103844;">
+
+<object id="svg-object" width="100%" height="100%" style="position: absolute; left: 0; right:0;" type="image/svg+xml" data="./landing.svg">Your browser does not support SVG</object>
+
+</body>
+
+<script type="text/javascript">
+	
+	var obj = document.getElementById("svg-object");
+	obj.addEventListener("load", function() {
+		var object = obj.contentDocument;
+
+		// labels appear
+		$(object.getElementById("ozone-box")).append(createSet("visibility", "visible", "2s"));
+		$(object.getElementById("pm-box")).append(createSet("visibility", "visible", "4s"));
+		$(object.getElementById("pops-box")).append(createSet("visibility", "visible", "6s"));
+		$(object.getElementById("mercury-box")).append(createSet("visibility", "visible", "8s"));
+
+		// buttons appear
+		$(object.getElementById("ozone-click")).append(createSet("visibility", "visible", "4s"));
+		$(object.getElementById("pm-click")).append(createSet("visibility", "visible", "6s"));
+		$(object.getElementById("pops-click")).append(createSet("visibility", "visible", "8s"));
+		$(object.getElementById("mercury-click")).append(createSet("visibility", "visible", "10s"));
+
+
+		// hover over section
+		$(object.getElementById("ozone-box")).hover(function() {
+			$(object.getElementById("smog")).attr("fill", "#D0DE57");
+			$(object.getElementById("balloon")).attr("fill", "#15EAFB");
+		}, function() {
+			$(object.getElementById("smog")).attr("fill", "#CBCBCB");
+			$(object.getElementById("balloon")).attr("fill", "#FFF");
+		});
+
+		$(object.getElementById("pm-box")).hover(function() {
+			$(object.getElementById("factory-grey")).attr("visibility", "hidden");
+			$(object.getElementById("factory-color")).attr("visibility", "visible");
+		}, function() {
+			$(object.getElementById("factory-color")).attr("visibility", "hidden");
+			$(object.getElementById("factory-grey")).attr("visibility", "visible");
+		});
+
+		$(object.getElementById("mercury-box")).hover(function() {
+			$(object.getElementById("sea")).attr("fill", "#175D66");
+		}, function() {
+			$(object.getElementById("sea")).attr("fill", "#494949");
+		});
+
+		$(object.getElementById("pops-box")).hover(function() {
+			$(object.getElementById("pops")).attr("visibility", "hidden");
+			$(object.getElementById("pops-color")).attr("visibility", "visible");
+		}, function() {
+			$(object.getElementById("pops-color")).attr("visibility", "hidden");
+			$(object.getElementById("pops")).attr("visibility", "visible");
+		});
+
+		// animates line
+		$([object.getElementById("ozone-line"), object.getElementById("ozone-circle")]).each(function() {
+			var stroke = $(this).attr("stroke-dashoffset");
+			$(this).append(createAnimate("stroke-dashoffset", 2, 2, stroke, "0"));
+		});
+
+		$([object.getElementById("pm-line"), object.getElementById("pm-circle1"), object.getElementById("pm-circle2")]).each(function() {
+			var stroke = $(this).attr("stroke-dashoffset");
+			$(this).append(createAnimate("stroke-dashoffset", 2, 4, stroke, "0"));
+		});
+		
+		$(object.getElementById("pops-line")).children().each(function() {
+			var stroke = $(this).attr("stroke-dashoffset");
+			$(this).append(createAnimate("stroke-dashoffset", 2, 6, stroke, "0"));
+		});
+
+		$(object.getElementById("mercury-line")).children().each(function() {
+			var stroke = $(this).attr("stroke-dashoffset");
+			$(this).append(createAnimate("stroke-dashoffset", 2, 8, stroke, "0"));
+		});
+
+	});
+
+	function createAnimate(name, seconds, begin, from, to) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animate");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("attributeName", name);
+		animation.setAttribute("attributeType", "XML");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("from", from);
+		animation.setAttribute("to", to);
+		animation.setAttribute("fill", "freeze");
+		return animation;
+	}
+
+	function createSet(name, to, begin) {
+		var set = document.createElementNS("http://www.w3.org/2000/svg","set");
+		set.setAttribute("attributeName", name);
+		set.setAttribute("attributeType", "XML");
+		set.setAttribute("to", to);
+		set.setAttribute("begin", begin);
+		return set;
+	}
+</script>
+</html>

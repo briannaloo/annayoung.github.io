@@ -22,7 +22,7 @@
     </p>
     <span id="no-data"><br>No data for this country.</span>
     <span id="no-data-afghanistan" style="display: none"><br>No data for this country. Note: Afghanistan ratified in 2013, but the 2014 EPI rankings used 2011 as the cutoff point for all countries due to limited data availability.</span>
-      <div style="position: absolute; width:200px; top: 545px; color: grey; text-align: center; font-weight: bold; height: 55px">
+      <div style="position: absolute; width:200px; top: 545px; color: grey; text-align: center; font-weight: bold; height: 65px">
         <div id="base-text">
           <span id="chemical-description">Hover over a pesticide to see more info.</span>
         </div>
@@ -299,25 +299,24 @@ Johnson, L. (2014). National Status of the Dirty Dozen POPs regulation through t
     </script>
      
      <script>
-          //Formats the columns for us into css
-          String.prototype.format = (function (i, safe, arg) {
-            function format() {
-                var str = this,
-                    len = arguments.length + 1;
+      //Formats the columns for us into css
+      String.prototype.format = (function (i, safe, arg) {
+        function format() {
+            var str = this,
+                len = arguments.length + 1;
 
-                for (i = 0; i < len; arg = arguments[i++]) {
-                    safe = typeof arg === 'object' ? JSON.stringify(arg) : arg;
-                    str = str.replace(RegExp('\\{' + (i - 1) + '\\}', 'g'), safe);
-                }
-                return str;
+            for (i = 0; i < len; arg = arguments[i++]) {
+                safe = typeof arg === 'object' ? JSON.stringify(arg) : arg;
+                str = str.replace(RegExp('\\{' + (i - 1) + '\\}', 'g'), safe);
             }
+            return str;
+        }
 
-            return format;
-            
-        })();
+        return format;
+        
+    })();
 
-        var chemicals = ["aldrin", "chlordane", "ddt", "dieldrin", "endrin", "heptachlor", "hexachlorobenzene",
-              "mirex", "toxaphene", "pcb", "dioxin_furan"];
+    var chemicals = ["aldrin", "chlordane", "ddt", "dieldrin", "endrin", "heptachlor", "hexachlorobenzene", "mirex", "toxaphene", "pcb", "dioxin_furan"];
 
       // create layer selector
     function main() {
@@ -348,7 +347,7 @@ Johnson, L. (2014). National Status of the Dirty Dozen POPs regulation through t
           sublayer_country = layer.getSubLayer(1);
           sublayer_country.setInteraction(true);
 
-          var v = cdb.vis.Overlay.create('search', map.viz, {})
+          var v = cdb.vis.Overlay.create('search', map.viz, {});
           v.show();
           $('#map').append(v.render().el);
           /*var share = cdb.vis.Overlay.create('share', map.viz, {})
@@ -459,9 +458,19 @@ Johnson, L. (2014). National Status of the Dirty Dozen POPs regulation through t
 
     });
   }
-
-      
       window.onload = main;
+
+      // hover over pesticide icon
+      for (var key in chemicals)
+      {
+        $('#' + chemicals[key]).hover(function() {
+          $('#' + $(this).attr("id") + "-text").show();
+          $('#base-text').hide();
+        }, function() {
+          $('#' + $(this).attr("id") + "-text").hide();
+          $('#base-text').show();
+        });
+      }
 
        //have the info tab slide out
       $('#slide_out_info').tabSlideOut({
@@ -474,16 +483,6 @@ Johnson, L. (2014). National Status of the Dirty Dozen POPs regulation through t
         action: 'click',                  //options: true makes it stick(fixed position) on scroll
       });
 
-      for (var key in chemicals)
-      {
-        $('#' + chemicals[key]).hover(function() {
-          $('#' + $(this).attr("id") + "-text").show();
-          $('#base-text').hide();
-        }, function() {
-          $('#' + $(this).attr("id") + "-text").hide();
-          $('#base-text').show();
-        });
-      }
 
     </script>
 
