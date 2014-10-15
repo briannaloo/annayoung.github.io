@@ -6,6 +6,8 @@
 <g id="Layer_1">
 </g>
 <g id="Layer_2">
+	<g id="Layer_9">
+	</g>
 	<g id="Layer_8">
 	</g>
 </g>
@@ -538,10 +540,10 @@
 		c-0.333-1.641-0.209-3.212-0.227-4.898"/>
 	<g>
 		<defs>
-			<rect id="SVGID_2_" y="230.559" width="1600" height="344.441"/>
+			<rect id="SVGID_8_" y="230.559" width="1600" height="344.441"/>
 		</defs>
 		<clipPath id="SVGID_1_">
-			<use xlink:href="#SVGID_2_"  overflow="visible"/>
+			<use xlink:href="#SVGID_8_"  overflow="visible"/>
 		</clipPath>
 		<path opacity="0.5" clip-path="url(#SVGID_1_)" fill="#FFFFFF" d="M800,303.523c-1402.173,0-2538.859,1118.705-2538.859,2498.697
 			S-602.173,5300.918,800,5300.918s2538.859-1118.705,2538.859-2498.697S2202.174,303.523,800,303.523z M800,5205.756

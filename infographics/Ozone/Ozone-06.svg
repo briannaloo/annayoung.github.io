@@ -6,6 +6,8 @@
 <g id="Layer_1">
 </g>
 <g id="Layer_2">
+	<g id="Layer_9">
+	</g>
 	<g id="Layer_8">
 	</g>
 </g>
@@ -16,10 +18,10 @@
 <g id="Layer_5">
 	<g>
 		<defs>
-			<rect id="SVGID_2_" y="-969.441" width="1600" height="344.441"/>
+			<rect id="SVGID_8_" y="-969.441" width="1600" height="344.441"/>
 		</defs>
 		<clipPath id="SVGID_1_">
-			<use xlink:href="#SVGID_2_"  overflow="visible"/>
+			<use xlink:href="#SVGID_8_"  overflow="visible"/>
 		</clipPath>
 		<path opacity="0.5" clip-path="url(#SVGID_1_)" fill="#FFFFFF" d="M800-896.477c-1402.173,0-2538.859,1118.705-2538.859,2498.697
 			S-602.173,4100.918,800,4100.918s2538.859-1118.705,2538.859-2498.697S2202.174-896.477,800-896.477z M800,4005.756
@@ -35,12 +37,12 @@
 	<rect x="2.033" y="-1" fill="#47BCB6" width="1600.229" height="1147.276"/>
 	<g>
 		<defs>
-			<rect id="SVGID_4_" x="4.625" y="169.959" width="1596.375" height="979.041"/>
+			<rect id="SVGID_10_" x="4.625" y="169.959" width="1596.375" height="979.041"/>
 		</defs>
-		<clipPath id="SVGID_3_">
-			<use xlink:href="#SVGID_4_"  overflow="visible"/>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_10_"  overflow="visible"/>
 		</clipPath>
-		<radialGradient id="SVGID_5_" cx="805" cy="1752" r="1508" gradientUnits="userSpaceOnUse">
+		<radialGradient id="SVGID_3_" cx="805" cy="1752" r="1508" gradientUnits="userSpaceOnUse">
 			<stop  offset="0" style="stop-color:#48C2C5"/>
 			<stop  offset="0.0912" style="stop-color:#58C4BE"/>
 			<stop  offset="0.2495" style="stop-color:#79C9AB"/>
@@ -54,10 +56,10 @@
 			<stop  offset="0.9871" style="stop-color:#51C3C2"/>
 			<stop  offset="0.9931" style="stop-color:#48C2C5"/>
 		</radialGradient>
-		<circle opacity="0.5" clip-path="url(#SVGID_3_)" fill="url(#SVGID_5_)" cx="805" cy="1752" r="1508"/>
-		<circle clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1112"/>
-		<circle clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1300"/>
-		<circle clip-path="url(#SVGID_3_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1508"/>
+		<circle opacity="0.5" clip-path="url(#SVGID_2_)" fill="url(#SVGID_3_)" cx="805" cy="1752" r="1508"/>
+		<circle clip-path="url(#SVGID_2_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1112"/>
+		<circle clip-path="url(#SVGID_2_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1300"/>
+		<circle clip-path="url(#SVGID_2_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1508"/>
 	</g>
 	<rect x="3.625" y="983.237" fill="#FFFFFF" width="1600" height="165.763"/>
 	<text transform="matrix(1 0 0 1 343.332 1045.0859)"><tspan x="0" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">Re</tspan><tspan x="23.01" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">f</tspan><tspan x="27.849" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">erences</tspan></text>
@@ -906,19 +908,19 @@
 	<text transform="matrix(1 0 0 1 476.7119 353.3818)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORD WORDS  WORD WORDS </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORD WORDS WORD WORDS </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORD WORDS WORD WORDS </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORD WORDS WORD WORDS </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORD WORDS WORD WORDS </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORD WORDS WORD WORD </tspan></text>
 	<g>
 		<defs>
-			<rect id="SVGID_7_" x="1245.479" y="501.074" width="262" height="129"/>
+			<rect id="SVGID_13_" x="1245.479" y="501.074" width="262" height="129"/>
 		</defs>
-		<clipPath id="SVGID_6_">
-			<use xlink:href="#SVGID_7_"  overflow="visible"/>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_13_"  overflow="visible"/>
 		</clipPath>
-		<g clip-path="url(#SVGID_6_)">
+		<g clip-path="url(#SVGID_4_)">
 			<defs>
-				<rect id="SVGID_9_" x="4.625" y="169.959" width="1596.375" height="979.041"/>
+				<rect id="SVGID_15_" x="4.625" y="169.959" width="1596.375" height="979.041"/>
 			</defs>
-			<clipPath id="SVGID_8_">
-				<use xlink:href="#SVGID_9_"  overflow="visible"/>
+			<clipPath id="SVGID_5_">
+				<use xlink:href="#SVGID_15_"  overflow="visible"/>
 			</clipPath>
-			<radialGradient id="SVGID_10_" cx="805" cy="1752" r="1508" gradientUnits="userSpaceOnUse">
+			<radialGradient id="SVGID_6_" cx="805" cy="1752" r="1508" gradientUnits="userSpaceOnUse">
 				<stop  offset="0" style="stop-color:#48C2C5"/>
 				<stop  offset="0.0912" style="stop-color:#58C4BE"/>
 				<stop  offset="0.2495" style="stop-color:#79C9AB"/>
@@ -932,10 +934,10 @@
 				<stop  offset="0.9871" style="stop-color:#51C3C2"/>
 				<stop  offset="0.9931" style="stop-color:#48C2C5"/>
 			</radialGradient>
-			<circle opacity="0.5" clip-path="url(#SVGID_8_)" fill="url(#SVGID_10_)" cx="805" cy="1752" r="1508"/>
-			<circle clip-path="url(#SVGID_8_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1112"/>
-			<circle clip-path="url(#SVGID_8_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1300"/>
-			<circle clip-path="url(#SVGID_8_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1508"/>
+			<circle opacity="0.5" clip-path="url(#SVGID_5_)" fill="url(#SVGID_6_)" cx="805" cy="1752" r="1508"/>
+			<circle clip-path="url(#SVGID_5_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1112"/>
+			<circle clip-path="url(#SVGID_5_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1300"/>
+			<circle clip-path="url(#SVGID_5_)" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="805" cy="1752" r="1508"/>
 		</g>
 	</g>
 	<polygon fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408 	"/>
