@@ -277,7 +277,7 @@ obj.addEventListener("load", function() {
 
 			$([object.getElementById("factory-container"), object.getElementById("tree_hide_land_use")]).fadeOut(250);
 
-			$(object.getElementById("go_back_land_use")).delay(4000).fadeIn(500);
+			$(object.getElementById("go_back_land_use")).delay(4500).fadeIn(500);
 		});
 		
 		$(object.getElementById("go_back_land_use")).click(function() {
@@ -354,32 +354,119 @@ obj.addEventListener("load", function() {
 
 		// text boxes draw in
 		$(object.getElementById("land_use_text_container"))
-			.append(createSet("visibility", "visible", "land_use_button.click + 4s", "go_back_land_use.click + 0.5s", false));
+			.append(createSet("visibility", "visible", "land_use_button.click + 4.5s", "go_back_land_use.click + 0.5s", false));
 		$(object.getElementById("land_use_text_container")).find('line').each(function() {
 			$(this)
-				.append(createAnimate("stroke-dashoffset", seconds, "land_use_button.click + 4s", "645", "0", "go_back_land_use.click", false))
+				.append(createAnimate("stroke-dashoffset", seconds, "land_use_button.click + 4.5s", "645", "0", "go_back_land_use.click", false))
 				.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_land_use.click", "0", "645", "land_use_button.click", false));
 		});
 		$(object.getElementById("low_pop_open"))
-			.append(createSet("visibility", "visible", "land_use_button.click + 4s; low_pop_close.click", "low_pop_open.click; go_back_land_use.click", false));
+			.append(createSet("visibility", "visible", "land_use_button.click + 4.5s; low_pop_close.click", "low_pop_open.click; go_back_land_use.click", false));
 		$(object.getElementById("dense_pop_open"))
-			.append(createSet("visibility", "visible", "land_use_button.click + 4s; dense_pop_close.click", "dense_pop_open.click; go_back_land_use.click", false));
+			.append(createSet("visibility", "visible", "land_use_button.click + 4.5s; dense_pop_close.click", "dense_pop_open.click; go_back_land_use.click", false));
+		$(object.getElementById("ozone_chemicals_open"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 4s; ozone_chemicals_close.click", "ozone_chemicals_open.click; go_back_land_use.click", false));
+		
 		$(object.getElementById("low_pop_close"))
 			.append(createSet("visibility", "visible", "low_pop_open.click", "low_pop_close.click; go_back_land_use.click", false));
 		$(object.getElementById("dense_pop_close"))
 			.append(createSet("visibility", "visible", "dense_pop_open.click", "dense_pop_close.click; go_back_land_use.click", false));
+		$(object.getElementById("ozone_chemicals_close"))
+			.append(createSet("visibility", "visible", "ozone_chemicals_open.click", "ozone_chemicals_close.click; go_back_land_use.click", false));
 
 		$(object.getElementById("low_pop_text"))
 			.append(createSet("visibility", "visible", "low_pop_open.click", "low_pop_close.click + 0.5s; go_back_land_use.click + 0.5s", false));
 		$(object.getElementById("dense_pop_text"))
 			.append(createSet("visibility", "visible", "dense_pop_open.click", "dense_pop_close.click + 0.5s; go_back_land_use.click + 0.5s", false));
+		$(object.getElementById("ozone_chemicals_text"))
+			.append(createSet("visibility", "visible", "ozone_chemicals_open.click", "ozone_chemicals_close.click + 0.5s; go_back_land_use.click + 0.5s", false));
+
 		$(object.getElementById("low-pop-clip")).find("rect")
 			.append(createAnimate("y", seconds/2.0, "low_pop_open.click", "792.116", "665.116", "low_pop_close.click; go_back_land_use.click", false))
 			.append(createAnimate("y", seconds/2.0, "low_pop_close.click; go_back_land_use.click", "665.116", "792.116", "low_pop_open.click; land_use_button.click", false));
 		$(object.getElementById("dense-pop-clip")).find("rect")
 			.append(createAnimate("y", seconds/2.0, "dense_pop_open.click", "547.001", "420.001", "dense_pop_close.click; go_back_land_use.click", false))
 			.append(createAnimate("y", seconds/2.0, "dense_pop_close.click; go_back_land_use.click", "420.001", "547.001", "dense_pop_open.click; land_use_button.click", false));
+		$(object.getElementById("chemicals-clip")).find("rect")
+			.append(createAnimate("width", seconds/2.0, "ozone_chemicals_open.click", "0", "362", "ozone_chemicals_close.click; go_back_land_use.click", false))
+			.append(createAnimate("width", seconds/2.0, "ozone_chemicals_close.click; go_back_land_use.click", "362", "0", "ozone_chemicals_open.click; land_use_button.click", false));
 
+
+		// ozone chemicals
+		$(object.getElementById("ozone_chemicals"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 4s", "go_back_land_use.click + 1s", false))
+			.append(createAnimate("opacity", seconds, "land_use_button.click + 4s", "0", "1", "go_back_land_use.click", false))
+			.append(createAnimate("opacity", seconds, "go_back_land_use.click", "1", "0", "land_use_button.click", false));
+
+		ozoneSlider(object);
+
+	}
+
+	function ozoneSlider(object)
+	{
+		var current = 0; // can be 0-4 inclusive
+		$([object.getElementById("land_use_button"), 
+			object.getElementById("ozone_chemicals_close")]).click(function() {
+			if (current != 0)
+			{
+				$(object.getElementById("chemicals" + current)).fadeOut(500);
+				$(object.getElementById("chemicals0")).fadeIn(500);
+				$(object.getElementById("ozone_left")).attr("opacity", "0.5").attr("pointer-events", "none");
+				$(object.getElementById("ozone_right")).attr("opacity", "1").attr("pointer-events", "auto");
+
+			}
+			current = 0;
+		});
+
+		$(object.getElementById("ozone_chemicals_open")).click(function() {
+			if (current != 4)
+			{
+				$(object.getElementById("chemicals4")).fadeIn(500);
+				$(object.getElementById("chemicals" + current)).fadeOut(500);
+				$(object.getElementById("ozone_left")).attr("opacity", "1").attr("pointer-events", "auto");
+				$(object.getElementById("ozone_right")).attr("opacity", "0.5").attr("pointer-events", "none");
+
+			}
+			current = 4;
+		});
+
+		$(object.getElementById("ozone_right")).click(function() {
+			if (current < 4)
+			{
+				if (current == 0)
+					$(object.getElementById("ozone_left")).attr("opacity", "1").attr("pointer-events", "auto");
+
+				$(object.getElementById("chemicals" + current)).fadeOut(500);	// hide previous
+				current++;
+				$(object.getElementById("chemicals" + current)).fadeIn(500); // show next
+				if (current == 4)
+				{
+					$(this).attr("opacity", "0.5").attr("pointer-events", "none");
+				}
+				
+			}
+			// else can't move right any more
+		});
+
+		$(object.getElementById("ozone_left")).click(function() {
+			if (current > 0)
+			{
+				if (current == 4)
+				{
+					$(object.getElementById("ozone_right")).attr("opacity", "1").attr("pointer-events", "auto");
+				}
+
+				$(object.getElementById("chemicals" + current)).fadeOut(500);	// hide previous
+				current--;
+				$(object.getElementById("chemicals" + current)).fadeIn(500); // show next
+				if (current == 0)
+				{
+					$(this).attr("opacity", "0.5").attr("pointer-events", "none");
+				}
+				
+			}
+			// else can't move left any more
+		});
 	}
 
 
@@ -917,6 +1004,8 @@ obj.addEventListener("load", function() {
 			animation.setAttribute("repeatCount", "indefinite");
 		if (id != null && id != false)
 			animation.setAttribute("id", id);
+
+		// additive replace
 		return animation;
 	}
 
