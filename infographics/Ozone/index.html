@@ -303,7 +303,7 @@ obj.addEventListener("load", function() {
 			.append(createTransform("scale", seconds, "land_use_button.click", "1", "1.23"))
 			//.append(createSet("transform", "scale(1)", "go_back_land_use.click", false, false))
 			.append(createMotion(seconds, "land_use_button.click", "0,0", "-50,-86", "go_back_land_use.click + " + seconds + "s"))
-			//.append(createTransform("scale", seconds, "go_back_land_use.click + " + seconds + "s", "1.23", "1"))
+			.append(createTransform("scale", seconds, "go_back_land_use.click + " + seconds + "s", "1.23", "1"))
 			.append(createMotion(seconds, "go_back_land_use.click + " + seconds + "s", "-50,-86", "0,0", "land_use_button.click"));
 		$(object.getElementById("trees_right"))
 			.append(createMotion(seconds, "land_use_button.click", "0,0", "120,114", "go_back_land_use.click + " + seconds + "s"))
@@ -313,7 +313,7 @@ obj.addEventListener("load", function() {
 			.append(createMotion(seconds, "go_back_land_use.click + " + seconds + "s", "-40,114", "0,0", "land_use_button.click"));
 
 
-		$(object.getElementsByClassName("transform_city"))
+		//$(object.getElementsByClassName("transform_city"))
 			.append(createTransform("scale", seconds, "go_back_land_use.click + " + seconds + "s", "1", "0.813"))
 			;//.append(createSet("transform", "scale(1)", "land_use_button.click", false, false));
 
