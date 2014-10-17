@@ -138,6 +138,13 @@ obj.addEventListener("load", function() {
 	}, function() {
 		$(this).attr("fill", color);
 	});
+	$(object.getElementsByClassName("buttons-green")).hover(function() {
+		color = $(this).attr("fill");
+		$(this).attr("fill", "#D1DE58");
+	}, function() {
+		$(this).attr("fill", color);
+	});
+
 	$(object.getElementsByClassName("buttons2")).hover(function() {
 		elt = $(this).find('polygon');
 		color = elt.attr("fill");
@@ -266,17 +273,21 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("land_use_button")).click(function() {
 			$(smog).fadeOut(1000);
 			$([object.getElementById("buildings"), object.getElementById("trees")]).attr("cursor", "auto").attr("pointer-events", "none");
-			$(object.getElementById("layer4-sun")).delay(1000).fadeIn(1000);
+			$(object.getElementById("land-sun")).delay(1000).fadeIn(1000);
 
 			$([object.getElementById("factory-container"), object.getElementById("tree_hide_land_use")]).fadeOut(250);
+
+			$(object.getElementById("go_back_land_use")).delay(4000).fadeIn(500);
 		});
 		
 		$(object.getElementById("go_back_land_use")).click(function() {
 			$(smog).delay(1000).fadeIn(seconds*1000);
-			$(object.getElementById("layer4-sun")).fadeOut(1000);
+			$(object.getElementById("land-sun")).fadeOut(1000);
 			$([object.getElementById("buildings"), object.getElementById("trees")]).attr("cursor", "pointer").attr("pointer-events", "auto");
 
-			$([object.getElementById("factory-container"), object.getElementById("tree_hide_land_use")]).delay(1500).fadeIn(250);
+			$([object.getElementById("factory-container"), object.getElementById("tree_hide_land_use")]).delay(1900).fadeIn(100);
+
+			$(object.getElementById("go_back_land_use")).hide();
 		});
 
 		// car move in is in citiesClicked()
@@ -287,20 +298,24 @@ obj.addEventListener("load", function() {
 			.append(createMotion(seconds, "go_back_land_use.click + " + (seconds) + "s", "0,0", "-1600,0", "land_use_button.click; "));
 
 		// scale city
+
 		$([object.getElementById("trees_behind"), object.getElementById("just-buildings"), trees_hidden, object.getElementById("mountains")])
 			.append(createTransform("scale", seconds, "land_use_button.click", "1", "1.23"))
-			.append(createMotion(seconds, "land_use_button.click", "0,0", "-50,-90", "go_back_land_use.click + " + seconds + "s"))
+			//.append(createSet("transform", "scale(1)", "go_back_land_use.click", false, false))
+			.append(createMotion(seconds, "land_use_button.click", "0,0", "-50,-86", "go_back_land_use.click + " + seconds + "s"))
 			//.append(createTransform("scale", seconds, "go_back_land_use.click + " + seconds + "s", "1.23", "1"))
-			.append(createMotion(seconds, "go_back_land_use.click + " + seconds + "s", "-50,-90", "0,0", "land_use_button.click"));
+			.append(createMotion(seconds, "go_back_land_use.click + " + seconds + "s", "-50,-86", "0,0", "land_use_button.click"));
 		$(object.getElementById("trees_right"))
-			.append(createMotion(seconds, "land_use_button.click", "0,0", "120,110", "go_back_land_use.click + " + seconds + "s"))
-			.append(createMotion(seconds, "go_back_land_use.click + " + seconds + "s", "120,110", "0,0", "land_use_button.click"));
+			.append(createMotion(seconds, "land_use_button.click", "0,0", "120,114", "go_back_land_use.click + " + seconds + "s"))
+			.append(createMotion(seconds, "go_back_land_use.click + " + seconds + "s", "120,114", "0,0", "land_use_button.click"));
 		$(object.getElementById("trees_left"))
-			.append(createMotion(seconds, "land_use_button.click", "0,0", "-40,110", "go_back_land_use.click + " + seconds + "s"))
-			.append(createMotion(seconds, "go_back_land_use.click + " + seconds + "s", "-40,110", "0,0", "land_use_button.click"));
+			.append(createMotion(seconds, "land_use_button.click", "0,0", "-40,114", "go_back_land_use.click + " + seconds + "s"))
+			.append(createMotion(seconds, "go_back_land_use.click + " + seconds + "s", "-40,114", "0,0", "land_use_button.click"));
+
 
 		$(object.getElementsByClassName("transform_city"))
-			.append(createTransform("scale", seconds, "go_back_land_use.click + " + seconds + "s", "1", "0.813"));
+			.append(createTransform("scale", seconds, "go_back_land_use.click + " + seconds + "s", "1", "0.813"))
+			;//.append(createSet("transform", "scale(1)", "land_use_button.click", false, false));
 
 
 		// crops move in
@@ -308,7 +323,66 @@ obj.addEventListener("load", function() {
 			.append(createMotion(seconds, "land_use_button.click", "0,300", "0,10", "go_back_land_use.click + " + seconds + "s"))
 			.append(createSet("visibility", "visible", "land_use_button.click;", "go_back_land_use.click + " + (2*seconds) + "s", false))
 			.append(createMotion(seconds, "go_back_land_use.click + " + (seconds) + "s", "0,10", "0,300", "land_use_button.click; "));
+
+		//clouds move in
+		$(object.getElementById("clouds"))
+			.append(createMotion(seconds, "land_use_button.click + 1s", "-900,0", "0,0", "go_back_land_use.click + " + seconds + "s"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 1s", "go_back_land_use.click + " + (seconds/2.0) + "s", false))
+			.append(createMotion(seconds, "go_back_land_use.click", "0,0", "-900,0", "land_use_button.click; "));
+
+		// sun rays draw
+		$(object.getElementById("sun-rays"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 2s", "go_back_land_use.click", false))
+			.append(createAnimate("opacity", seconds, "land_use_button.click + 3s", "0.3", "0", "go_back_land_use.click", false))
+			.append(createSet("opacity", "0.3", "go_back_land_use.click", "land_use_button.click + 3s", false));
+		$(object.getElementById("sun-clip")).find("rect")
+			.append(createAnimate("height", seconds, "land_use_button.click + 2s", "0", "1161.907", "go_back_land_use.click", false));
+
+		// smaller sun rays
+		$(object.getElementById("sun-rays2"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 3s", "go_back_land_use.click + 1s", false))
+			.append(createAnimate("opacity", seconds, "land_use_button.click + 3s", "0", "0.3", "go_back_land_use.click", false))
+			.append(createAnimate("opacity", seconds, "go_back_land_use.click", "0.3", "0", "land_use_button.click", false));
+		// ozone smog
+		$(object.getElementById("ozone-rect"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 3s", "go_back_land_use.click + 1s", false))
+			.append(createAnimate("opacity", seconds, "land_use_button.click + 3s", "0", "1", "go_back_land_use.click", false))
+			.append(createAnimate("opacity", seconds, "go_back_land_use.click", "1", "0", "land_use_button.click", false));
+		$(object.getElementById("ozone-clip")).find("rect")
+			.append(createAnimate("y", seconds, "land_use_button.click + 3s", "971.002", "420.002", "go_back_land_use.click", false));
+
+
+		// text boxes draw in
+		$(object.getElementById("land_use_text_container"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 4s", "go_back_land_use.click + 0.5s", false));
+		$(object.getElementById("land_use_text_container")).find('line').each(function() {
+			$(this)
+				.append(createAnimate("stroke-dashoffset", seconds, "land_use_button.click + 4s", "645", "0", "go_back_land_use.click", false))
+				.append(createAnimate("stroke-dashoffset", seconds/2.0, "go_back_land_use.click", "0", "645", "land_use_button.click", false));
+		});
+		$(object.getElementById("low_pop_open"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 4s; low_pop_close.click", "low_pop_open.click; go_back_land_use.click", false));
+		$(object.getElementById("dense_pop_open"))
+			.append(createSet("visibility", "visible", "land_use_button.click + 4s; dense_pop_close.click", "dense_pop_open.click; go_back_land_use.click", false));
+		$(object.getElementById("low_pop_close"))
+			.append(createSet("visibility", "visible", "low_pop_open.click", "low_pop_close.click; go_back_land_use.click", false));
+		$(object.getElementById("dense_pop_close"))
+			.append(createSet("visibility", "visible", "dense_pop_open.click", "dense_pop_close.click; go_back_land_use.click", false));
+
+		$(object.getElementById("low_pop_text"))
+			.append(createSet("visibility", "visible", "low_pop_open.click", "low_pop_close.click + 0.5s; go_back_land_use.click + 0.5s", false));
+		$(object.getElementById("dense_pop_text"))
+			.append(createSet("visibility", "visible", "dense_pop_open.click", "dense_pop_close.click + 0.5s; go_back_land_use.click + 0.5s", false));
+		$(object.getElementById("low-pop-clip")).find("rect")
+			.append(createAnimate("y", seconds/2.0, "low_pop_open.click", "792.116", "665.116", "low_pop_close.click; go_back_land_use.click", false))
+			.append(createAnimate("y", seconds/2.0, "low_pop_close.click; go_back_land_use.click", "665.116", "792.116", "low_pop_open.click; land_use_button.click", false));
+		$(object.getElementById("dense-pop-clip")).find("rect")
+			.append(createAnimate("y", seconds/2.0, "dense_pop_open.click", "547.001", "420.001", "dense_pop_close.click; go_back_land_use.click", false))
+			.append(createAnimate("y", seconds/2.0, "dense_pop_close.click; go_back_land_use.click", "420.001", "547.001", "dense_pop_open.click; land_use_button.click", false));
+
 	}
+
+
 
 	function recsClicked(object, seconds, smog, buildings, trees, balloon) {
 		$(object.getElementById("page5")).click(function() {
