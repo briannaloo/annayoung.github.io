@@ -19,17 +19,30 @@
 	obj.addEventListener("load", function() {
 		var object = obj.contentDocument;
 
+		$(object.getElementById("parachute_person")).delay(1000).fadeIn(200);
+		// person comes out
+		$(object.getElementById("parachute_person"))
+			.append(createMotion(9, "1s", "0,-200", "0, 600", false));
+
+		// colors appear when person hits the area
+			//ozone
+		$(object.getElementById("smog")).append(createSet("fill", "#D0DE57", "2s", "4s"));
+		$(object.getElementById("balloon")).append(createSet("fill", "#15EAFB", "2s", "4s"));
+			//pm
+		$(object.getElementById("factory-grey")).append(createSet("visibility", "hidden", "4s", "6s"));
+		$(object.getElementById("factory-color")).append(createSet("visibility", "visible", "4s", "6s"));
+			// pops
+		$(object.getElementById("pops")).append(createSet("visibility", "hidden", "6s", "8s"));
+		$(object.getElementById("pops-color")).append(createSet("visibility", "visible", "6s", "8s"));
+			// mercury
+		$(object.getElementById("sea")).append(createSet("fill", "#175D66", "8s", "10s"));
+
+
 		// labels appear
 		$(object.getElementById("ozone-box")).append(createSet("visibility", "visible", "2s"));
 		$(object.getElementById("pm-box")).append(createSet("visibility", "visible", "4s"));
 		$(object.getElementById("pops-box")).append(createSet("visibility", "visible", "6s"));
 		$(object.getElementById("mercury-box")).append(createSet("visibility", "visible", "8s"));
-
-		// buttons appear
-		$(object.getElementById("ozone-click")).append(createSet("visibility", "visible", "4s"));
-		$(object.getElementById("pm-click")).append(createSet("visibility", "visible", "6s"));
-		$(object.getElementById("pops-click")).append(createSet("visibility", "visible", "8s"));
-		$(object.getElementById("mercury-click")).append(createSet("visibility", "visible", "10s"));
 
 
 		// hover over section
@@ -84,9 +97,70 @@
 			$(this).append(createAnimate("stroke-dashoffset", 2, 8, stroke, "0"));
 		});
 
+		// text boxes
+			// buttons
+		$(object.getElementById("ozone_click")).append(createSet("visibility", "visible", "4s; ozone_click_close.click", "ozone_click.click"));
+		$(object.getElementById("pm_click")).append(createSet("visibility", "visible", "6s; pm_click_close.click", "pm_click.click"));
+		$(object.getElementById("pops_click")).append(createSet("visibility", "visible", "8s; pops_click_close.click", "pops_click.click"));
+		$(object.getElementById("mercury_click")).append(createSet("visibility", "visible", "10s; mercury_click_close.click", "mercury_click.click"));
+
+		$(object.getElementById("ozone_click_close")).append(createSet("visibility", "visible", "ozone_click.click", "ozone_click_close.click"));
+		$(object.getElementById("pm_click_close")).append(createSet("visibility", "visible", "pm_click.click", "pm_click_close.click"));
+		$(object.getElementById("pops_click_close")).append(createSet("visibility", "visible", "pops_click.click", "pops_click_close.click"));
+		$(object.getElementById("mercury_click_close")).append(createSet("visibility", "visible", "mercury_click.click", "mercury_click_close.click"));
+
+		$(object.getElementById("ozone_text")).append(createSet("visibility", "visible", "ozone_click.click", "ozone_click_close.click + 0.5s"));
+		$(object.getElementById("pm_text")).append(createSet("visibility", "visible", "pm_click.click", "pm_click_close.click + 0.5s"));
+		$(object.getElementById("pops_text")).append(createSet("visibility", "visible", "pops_click.click", "pops_click_close.click + 0.5s"));
+		$(object.getElementById("mercury_text")).append(createSet("visibility", "visible", "mercury_click.click", "mercury_click_close.click + 0.5s"));
+
+		$(object.getElementById("ozone_clip")).find('rect')
+			.append(createAnimate("height", 0.5, "ozone_click.click", "0", "117", "ozone_click_close.click"))
+			.append(createAnimate("height", 0.5, "ozone_click_close.click", "117", "0", "ozone_click.click"));
+		$(object.getElementById("mercury_clip")).find('rect')
+			.append(createAnimate("height", 0.5, "mercury_click.click", "0", "117", "mercury_click_close.click"))
+			.append(createAnimate("height", 0.5, "mercury_click_close.click", "117", "0", "mercury_click.click"));
+		$(object.getElementById("pops_clip")).find('rect')
+			.append(createAnimate("height", 0.5, "pops_click.click", "0", "117", "pops_click_close.click"))
+			.append(createAnimate("height", 0.5, "pops_click_close.click", "117", "0", "pops_click.click"));
+		$(object.getElementById("pm_clip")).find('rect')
+			.append(createAnimate("height", 0.5, "pm_click.click", "0", "117", "pm_click_close.click"))
+			.append(createAnimate("height", 0.5, "pm_click_close.click", "117", "0", "pm_click.click"));
+
+		// hover over button to open
+		var color;
+		$(object.getElementsByClassName("button_hover")).hover(function() {
+			color = $(this).attr("fill");
+			$(this).attr("fill", "#FFF");
+		}, function() {
+			$(this).attr("fill", color);
+		});
+
+		$(object.getElementsByClassName("close_hover")).hover(function() {
+			var id = ($(this).attr("id"));
+			color = $(object.getElementById(id.substring(0, id.length - 6))).attr("fill");
+			$(this).attr("fill", color);
+		}, function() {
+			$(this).attr("fill", "#FFF");
+		});
+
+
 	});
 
-	function createAnimate(name, seconds, begin, from, to) {
+	function createMotion(seconds, begin, from, to, end) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("from", from);
+		animation.setAttribute("to", to);
+		animation.setAttribute("fill", "freeze");
+		if (end != false)
+			animation.setAttribute("end", end);
+		return animation;
+	}
+
+	function createAnimate(name, seconds, begin, from, to, end) {
 		var animation = document.createElementNS("http://www.w3.org/2000/svg","animate");
 		animation.setAttribute("dur", seconds + "s");
 		animation.setAttribute("attributeName", name);
@@ -96,15 +170,19 @@
 		animation.setAttribute("from", from);
 		animation.setAttribute("to", to);
 		animation.setAttribute("fill", "freeze");
+		if (end)
+			animation.setAttribute("end", end);
 		return animation;
 	}
 
-	function createSet(name, to, begin) {
+	function createSet(name, to, begin, end) {
 		var set = document.createElementNS("http://www.w3.org/2000/svg","set");
 		set.setAttribute("attributeName", name);
 		set.setAttribute("attributeType", "XML");
 		set.setAttribute("to", to);
 		set.setAttribute("begin", begin);
+		if (end)
+			set.setAttribute("end", end);
 		return set;
 	}
 </script>

@@ -179,6 +179,9 @@ obj.addEventListener("load", function() {
 	$(object.getElementById("go_back")).click(function() {
 		$(person).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$(trees_hidden).attr("cursor", "pointer").attr("pointer-events", "auto");
+
+		//$(object.getElementById("page1-references")).attr("visibility", "visible");
+		//$(object.getElementById("health-references")).attr("visibility", "hidden");
 		//$(object.getElementById("respiratory2")).fadeOut(200);
 		$(object.getElementsByClassName("trees-hide")).show();
 		$(object.getElementById("tree-ground")).delay(seconds*1000).show(0);
@@ -193,6 +196,8 @@ obj.addEventListener("load", function() {
 	$(object.getElementById("go_back_cities")).click(function() {
 		$(buildings).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$([trees, trees_hidden]).attr("cursor", "pointer").attr("pointer-events", "auto");
+		$(object.getElementById("page1-ref2")).attr("visibility", "hidden");
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
 		$(smog).delay(1000*seconds).fadeIn(seconds*1000);
 		$(object.getElementById("group1")).fadeOut(500);
 		$(object.getElementById("molecules")).fadeOut(500);
@@ -208,6 +213,9 @@ obj.addEventListener("load", function() {
 		$([object.getElementById("cityscape"), object.getElementById("mountains")]).fadeIn(700);
 		$(object.getElementById("cityscape2")).fadeOut(700);
 		$(object.getElementById("go_back_balloon")).fadeOut(200);
+
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
+		$(object.getElementById("balloon-ref")).attr("visibility", "hidden");
 	});
 	// from trees
 	$(object.getElementById("go_back_trees")).click(function() {
@@ -220,6 +228,9 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("layer3")).delay(seconds/4.0*1000).fadeOut(seconds/4.0*1000);
 		$(object.getElementById("layer4-sun")).fadeOut(seconds/4.0*1000);
 
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
+		$(object.getElementById("eco-ref")).attr("visibility", "hidden");
+
 		$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(seconds*1000).fadeOut(0);});
 		//$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).fadeOut(0);});
 		$(object.getElementById("rays-label")).fadeOut(0);
@@ -231,6 +242,8 @@ obj.addEventListener("load", function() {
 		$([buildings, trees, balloon]).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$(object.getElementById("go_back_page5")).fadeOut(400);
 		$([object.getElementById("page5-trees1"), object.getElementById("page5-trees2")]).delay(3*seconds*1000).fadeIn(500);
+		$(object.getElementById("bowman")).attr("visibility", "hidden");
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
 	});
 
 // HIDE ELEMENTS OF FIRST PAGE	
@@ -278,12 +291,18 @@ obj.addEventListener("load", function() {
 			$([object.getElementById("factory-container"), object.getElementById("tree_hide_land_use")]).fadeOut(250);
 
 			$(object.getElementById("go_back_land_use")).delay(4500).fadeIn(500);
+
+			$(object.getElementById("land-ref")).attr("visibility", "visible");
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
 		});
 		
 		$(object.getElementById("go_back_land_use")).click(function() {
 			$(smog).delay(1000).fadeIn(seconds*1000);
 			$(object.getElementById("land-sun")).fadeOut(1000);
 			$([object.getElementById("buildings"), object.getElementById("trees")]).attr("cursor", "pointer").attr("pointer-events", "auto");
+
+			$(object.getElementById("land-ref")).attr("visibility", "hidden");
+			$(object.getElementById("page1-references")).attr("visibility", "visible");
 
 			$([object.getElementById("factory-container"), object.getElementById("tree_hide_land_use")]).delay(1900).fadeIn(100);
 
@@ -477,6 +496,9 @@ obj.addEventListener("load", function() {
 			$([buildings, trees, balloon]).attr("cursor", "auto").attr("pointer-events", "none");
 			$(object.getElementById("go_back_page5")).delay(5*seconds*1000).fadeIn(400);
 			$([object.getElementById("page5-trees1"), object.getElementById("page5-trees2")]).fadeOut(500);
+
+			$(object.getElementById("bowman")).attr("visibility", "visible");
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
 		});
 
 		// text comes in
@@ -568,6 +590,9 @@ obj.addEventListener("load", function() {
 			$([balloon, buildings, trees, trees_hidden]).attr("cursor", "auto").attr("pointer-events", "none");
 			$(object.getElementById("smog2")).delay(seconds*1000).fadeIn(seconds*1000);
 			$(object.getElementById("go_back_trees")).delay(5.5*seconds*1000).fadeIn(400);
+
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			$(object.getElementById("eco-ref")).attr("visibility", "visible");
 		
 			// ozone layers draw
 			$(object.getElementById("layer1")).delay(1.5*seconds*1000).fadeIn(seconds*1000);
@@ -630,14 +655,14 @@ obj.addEventListener("load", function() {
 			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_trees.click + .5s", false));
 		});
 		$(object.getElementById("eco-path1")).find("rect")
-			.append(createAnimate("width", seconds/4.0, "ecosystem1_open.click", "0", "231", "ecosystem1_openclose.click; go_back_trees.click", false))
-			.append(createAnimate("width", seconds/4.0, "ecosystem1_openclose.click; go_back_trees.click", "231", "0", "ecosystem1_open.click; trees.click; trees_person.click; home_button3.click", false));
+			.append(createAnimate("width", seconds/4.0, "ecosystem1_open.click", "0", "237", "ecosystem1_openclose.click; go_back_trees.click", false))
+			.append(createAnimate("width", seconds/4.0, "ecosystem1_openclose.click; go_back_trees.click", "237", "0", "ecosystem1_open.click; trees.click; trees_person.click; home_button3.click", false));
 		$(object.getElementById("eco-path2")).find("rect")
-			.append(createAnimate("width", seconds/4.0, "ecosystem2_open.click", "0", "231", "ecosystem2_openclose.click; go_back_trees.click", false))
-			.append(createAnimate("width", seconds/4.0, "ecosystem2_openclose.click; go_back_trees.click", "231", "0", "ecosystem2_open.click; trees.click; trees_person.click; home_button3.click", false));
+			.append(createAnimate("width", seconds/4.0, "ecosystem2_open.click", "0", "238", "ecosystem2_openclose.click; go_back_trees.click", false))
+			.append(createAnimate("width", seconds/4.0, "ecosystem2_openclose.click; go_back_trees.click", "238", "0", "ecosystem2_open.click; trees.click; trees_person.click; home_button3.click", false));
 		$(object.getElementById("eco-path3")).find("rect")
-			.append(createAnimate("width", seconds/4.0, "ecosystem3_open.click", "0", "231", "ecosystem3_openclose.click; go_back_trees.click", false))
-			.append(createAnimate("width", seconds/4.0, "ecosystem3_openclose.click; go_back_trees.click", "231", "0", "ecosystem3_open.click; trees.click; trees_person.click; home_button3.click", false));
+			.append(createAnimate("width", seconds/4.0, "ecosystem3_open.click", "0", "355", "ecosystem3_openclose.click; go_back_trees.click", false))
+			.append(createAnimate("width", seconds/4.0, "ecosystem3_openclose.click; go_back_trees.click", "355", "0", "ecosystem3_open.click; trees.click; trees_person.click; home_button3.click", false));
 		$(object.getElementById("eco-path4")).find("rect")
 			.append(createAnimate("width", seconds/4.0, "ecosystem4_open.click", "0", "231", "ecosystem4_openclose.click; go_back_trees.click", false))
 			.append(createAnimate("width", seconds/4.0, "ecosystem4_openclose.click; go_back_trees.click", "231", "0", "ecosystem4_open.click; trees.click; trees_person.click; home_button3.click", false));
@@ -653,6 +678,9 @@ obj.addEventListener("load", function() {
 				.delay(seconds*800).fadeOut(800);
 			$(object.getElementById("cityscape2")).delay(seconds*800).fadeIn(800);
 			$(object.getElementById("go_back_balloon")).delay(4*seconds*1000).fadeIn(200);
+
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			$(object.getElementById("balloon-ref")).attr("visibility", "visible");
 		});
 
 		// text come in
@@ -735,8 +763,8 @@ obj.addEventListener("load", function() {
 			.append(createAnimate("height", seconds/4.0, "monitoring2_open.click", "0", "129", "monitoring2_openclose.click; go_back_balloon.click", false))
 			.append(createAnimate("height", seconds/4.0, "monitoring2_openclose.click", "129", "0", "monitoring2_open.click; go_back_balloon.click", false));
 		$(object.getElementById("clip-path3")).find("rect")
-			.append(createAnimate("height", seconds/4.0, "monitoring3_open.click", "0", "129", "monitoring3_openclose.click; go_back_balloon.click", false))
-			.append(createAnimate("height", seconds/4.0, "monitoring3_openclose.click", "129", "0", "monitoring3_open.click; go_back_balloon.click", false));
+			.append(createAnimate("height", seconds/4.0, "monitoring3_open.click", "0", "206.426", "monitoring3_openclose.click; go_back_balloon.click", false))
+			.append(createAnimate("height", seconds/4.0, "monitoring3_openclose.click", "206.426", "0", "monitoring3_open.click; go_back_balloon.click", false));
 		$(object.getElementById("clip-path4")).find("rect")
 			.append(createAnimate("height", seconds/4.0, "monitoring4_open.click", "0", "129", "monitoring4_openclose.click; go_back_balloon.click", false))
 			.append(createAnimate("height", seconds/4.0, "monitoring4_openclose.click", "129", "0", "monitoring4_open.click; go_back_balloon.click", false));
@@ -751,6 +779,9 @@ obj.addEventListener("load", function() {
 			$(object.getElementById("molecules")).delay(2*seconds*1000).fadeIn(2*seconds*1000);
 			$(object.getElementById("group1")).delay(2*seconds*1000).fadeIn(500);
 			$(object.getElementById("go_back_cities")).delay(4*seconds*1000 + 1400).fadeIn(200);
+
+			$(object.getElementById("page1-ref2")).attr("visibility", "visible");
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
 		});
 
 		// expand-sun clicked
@@ -825,6 +856,8 @@ obj.addEventListener("load", function() {
 			$(trees_hidden).attr("cursor", "auto").attr("pointer-events", "none");
 			$(object.getElementById("tree-ground")).hide();
 			$(object.getElementById("go_back")).delay(3/2.0*seconds * 1000).fadeIn(200);
+			//$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			//$(object.getElementById("health-references")).attr("visibility", "visible");
 		});
 		
 		// hide elements of page1

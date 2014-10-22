@@ -44,7 +44,7 @@
         </rect> 
     </clipPath>
     <clipPath id="clip-path3">
-        <rect transform="rotate(180 946 707.5)" x="815" y="643" width="262" height="0" >
+        <rect transform="rotate(180 946 668.787)" x="815" y="565.574" width="257.94" height="0">
             <set attributeName="height" begin="0s" repeatCount="indefinite" to="0"/>
         </rect> 
     </clipPath>
@@ -55,22 +55,22 @@
     </clipPath>
 
     <clipPath id="eco-path1">
-        <rect transform="rotate(180 344.201 799.918)" x="228.701" y="759.134" width="0" height="81.568" >
+        <rect transform="rotate(180 342.545 804.7025)" x="224.045" y="759.134" width="0" height="91.137">
             <set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
         </rect> 
     </clipPath>
     <clipPath id="eco-path2">
-        <rect x="819.281" y="759.134" width="0" height="81.568" >
+        <rect x="819.281" y="759.134" width="0" height="88.786">
             <set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
         </rect> 
     </clipPath>
     <clipPath id="eco-path3">
-        <rect transform="rotate(180 862.4665 492.721)" x="747.102" y="451.937" width="0" height="81.568" >
+        <rect transform="rotate(180 800.535 492.721)" x="623.035" y="451.937"  width="0" height="81.568">
             <set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
         </rect> 
     </clipPath>
     <clipPath id="eco-path4">
-        <rect transform="rotate(180 1334.3075 799.918)" x="1218.943" y="759.134" width="0" height="81.568" >
+        <rect transform="rotate(180 1334.443 799.918)" x="1218.943" y="759.134" width="0" height="81.568">
             <set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
         </rect> 
     </clipPath>
@@ -91,7 +91,7 @@
         </rect> 
     </clipPath>
     <clipPath id="page5-clip4">
-        <rect x="615.585" y="279.49" width="0" height="122.888" >
+        <rect x="615.585" y="259.49" width="0" height="142.888" >
             <set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
         </rect>  
     </clipPath>
@@ -144,37 +144,35 @@
     </g>
     <g id="monitoring-text">
         <rect x="68.476" y="39.994" fill="none" width="1054.143" height="38.606"/>
-        <text transform="matrix(1 0 0 1 65.4756 74.5059)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">MONITORING</tspan></text>
-        <rect x="69.076" y="91.465" fill="none" width="863.957" height="65.132"/>
-        <text transform="matrix(1 0 0 1 69.0762 105.8447)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 65.4756 74.5059)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">MONITORING</tspan></text>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 69.0762 105.8447)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">OZONE IN THE ATMOSPHERE CAN BE MEASURED BY INSTRUMENTS ON THE GROUND </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">AND CARRIED HIGH UP IN BALLOONS, AIRCRAFT, AND SATELLITES. </tspan></text>
+
         <polygon style="display: none" id="go_back_balloon" class="buttons" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
     </g>
 
     <g id="text-boxes">
         <g id="monitoring-text-boxes">
             <g id="monitoring3" clip-path="url(#clip-path3)">
-                <rect x="815" y="643" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
-                <rect x="822.589" y="753.489" fill="none" width="271.486" height="14.999"/>
-                <rect x="825.022" y="655.997" fill="none" width="235.488" height="91.496"/>
-                <text transform="matrix(1 0 0 1 825.0225 664.625)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+                <rect x="815" y="565.574" opacity="0.8" fill="#3A9E99" width="257.94" height="206.426"/>
+                <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 826.2256 588.3467)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">LIDAR TECHNIQUES USE LASERS TO </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OBTAIN HIGH-RES ATMOSPHERIC </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE PROFILES FROM THE </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">GROUND (AND FROM AIRCRAFTS).</tspan><tspan x="0" y="72.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">THE DOBSON SPECTROMETER, THE </tspan><tspan x="0" y="88" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">VERY FIRST INSTRUMENT USED TO </tspan><tspan x="0" y="103.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">MEASURE ATMOSPHERIC ZONE, </tspan><tspan x="0" y="119.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">MEASURES BOTH TOTAL COLUMN </tspan><tspan x="0" y="134.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE AND OZONE PROFILES IN </tspan><tspan x="0" y="150.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">THE ATMOSPHERE.</tspan></text>
             </g>
             <g id="monitoring1" clip-path="url(#clip-path1)">
                 <rect x="209.489" y="619.711" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
                 <rect x="217.078" y="602.706" fill="none" width="271.486" height="14.999"/>
                 <rect x="218.455" y="634.467" fill="none" width="235.488" height="91.496"/>
-                <text transform="matrix(1 0 0 1 218.4551 643.0947)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+                <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 218.4551 643.8135)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONESONDES ARE LIGHTWEIGHT </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">INSTRUMENTS CARRIED IN A </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">BALLOON UP TO 21 MILES UP IN THE </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">STRATOSPHERE. THEY SUCK IN AIR </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AND USE AN ELECTROCHEMICAL </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE SENSOR TO MEASURE THE </tspan><tspan x="0" y="93.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AMOUNT OF OZONE GAS.</tspan></text>
             </g>
             <g id="monitoring4" clip-path="url(#clip-path4)">
                 <rect x="1245.479" y="372.074" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
                 <rect x="1253.067" y="482.563" fill="none" width="271.486" height="14.999"/>
                 <rect x="1255.501" y="385.071" fill="none" width="235.488" height="91.496"/>
-                <text transform="matrix(1 0 0 1 1255.501 393.6992)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+                <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 1255.501 389.3467)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AUTOMATED INSTRUMENTS SUCH </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AS UV PHOTOMETERS AND </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">CHEMILUMINESCENCE DETECTION </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">SENSORS CAN BE USED ABOARD </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AIRCRAFT TO COLLECT IN SITU </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">MEASUREMENTS OF OZONE. </tspan></text>
             </g>
             <g id="monitoring2" clip-path="url(#clip-path2)">
                 <rect x="467.746" y="329.279" opacity="0.8" fill="#3A9E99" width="262" height="129"/>
                 <rect x="475.335" y="312.274" fill="none" width="271.486" height="14.999"/>
                 <rect x="476.712" y="344.035" fill="none" width="235.488" height="91.496"/>
-                <text transform="matrix(1 0 0 1 476.7119 352.6631)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan></text>
+                <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 476.7119 353.3818)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">SATELLITES THAT USE ULTRAVIOLET </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">BACKSCATTER, INFRARED </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">RADIOMETERS, OR ULTRAVIOLET </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">FORWARD SCANNERS CAN BE USED </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">TO MEASURE OZONE OVER LARGE </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AREAS AND PERIODS OF TIME. </tspan></text>
             </g>
         </g>
 
@@ -197,10 +195,10 @@
             <polygon id="monitoring2_openclose" class="buttons" fill="#FFFFFF" points="725.687,326.692 710.857,311.862 696.026,326.692  "/>
         </g>
         <g id="monitoring-titles">
-            <text transform="matrix(1 0 0 1 822.5889 766.4307)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">GROUND BASED </text>
+            <text transform="matrix(1 0 0 1 822.5889 766.4307)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">GROUND SYSTEMS </text>
             <text transform="matrix(1 0 0 1 217.0781 615.6475)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">BALLOON SONDES</text>
             <text transform="matrix(1 0 0 1 1253.0674 495.5049)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">AIRCRAFT</text>
-            <text transform="matrix(1 0 0 1 475.335 325.2158)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">SATELLITE</text>
+            <text transform="matrix(1 0 0 1 475.335 325.2158)" fill="#FFFFFF" font-family="'Helvetica'" font-size="18">SATELLITES</text>
         </g>
     </g>
 
@@ -276,41 +274,41 @@
     <rect class="page1" x="38.524" y="40.995" fill="none" width="1054.143" height="38.606"/>
     <text class="page1" transform="matrix(1 0 0 1 35.5244 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">OZONE</tspan></text>
     <rect class="page1" x="39.125" y="92.466" fill="none" width="863.957" height="65.132"/>
-    <text class="page1" transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+    <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 39.125 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">OZONE HAS FAR-REACHING IMPACTS ON AIR QUALITY AND CLIMATE, PERHAPS BEST DESCRIBED BY THE US </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">EPA AS "GOOD UP HIGH, BAD NEARBY." WHEN NEARBY, OZONE EXPOSURE CAN HARM HUMAN AND </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">ECOSYSTEM HEALTH. WHEN FAR OFF, OZONE HAS A BUFFER EFFECT AGAINST INCOMING UV LIGHT FROM THE SUN.</tspan></text>
     <g id="home_button1" cursor="default">
         <g id="button1_expand" opacity="0" cursor="pointer">
             <g id="sources_button">
-                <path xmlns="http://www.w3.org/2000/svg" fill="#3A9E99" d="M18.388,269.283c0,9.233,5.629,16.717,12.573,16.717h108.133c6.943,0,12.572-7.484,12.572-16.717v-5.572   c0-1.718-0.196-3.373-0.557-4.933H18.946c-0.361,1.56-0.557,3.216-0.557,4.933"/>
-                <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 43.3536 277.0474)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="16">SOURCES</text>
+                <path transform="translate(0,20)" fill="#3A9E99" d="M18.388,269.283c0,9.233,5.629,16.717,12.573,16.717h108.133c6.943,0,12.572-7.484,12.572-16.717v-5.572   c0-1.718-0.196-3.373-0.557-4.933H18.946c-0.361,1.56-0.557,3.216-0.557,4.933"/>
+                <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 43.3536 297.0474)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="16">SOURCES</text>
             </g>
             <g id="land_use_button">
-                <path fill="#3A9E99" d="M151.666,269.283c0,9.233,5.629,16.717,12.573,16.717h108.133c6.943,0,12.572-7.484,12.572-16.717v-5.572   c0-1.718-0.196-3.373-0.557-4.933H152.223c-0.361,1.56-0.557,3.216-0.557,4.933"/>
-               <text transform="matrix(1 0 0 1 179.2072 277.0474)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="16">LAND USE</text>
+                <path fill="#3A9E99" transform="translate(0,20)" d="M151.666,269.283c0,9.233,5.629,16.717,12.573,16.717h108.133c6.943,0,12.572-7.484,12.572-16.717v-5.572   c0-1.718-0.196-3.373-0.557-4.933H152.223c-0.361,1.56-0.557,3.216-0.557,4.933"/>
+               <text transform="matrix(1 0 0 1 179.2072 297.0474)" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="16">LAND USE</text>
             </g>
         </g>
 
-        <polygon id="button1_triangle" opacity="0" fill="#FFFFFF" points="285.959,187.773 310.098,224.697 284.959,260.107 0,260.107 24.139,224.697 0,187.773"/>
-        <text transform="matrix(1 0 0 1 40.5332 211.5161)"><tspan id="button1_title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHERE DOES IT COME FROM?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Whomp whomp whomp whomp </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">glerp herp merp slerp</tspan></text>
-        <polygon opacity="0.3" fill="#FFFFFF" points="267.098,187.773 285.959,187.773 310.098,224.697 284.959,260.107 267.098,260.107    291.891,224.44  "/>
+        <polygon id="button1_triangle" opacity="0" fill="#FFFFFF" points="285.959,187.773 310.098,234.697 284.959,280.107 0,280.107 24.139,234.697 0,187.773"/>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 40.5332 211.5161)"><tspan id="button1_title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHERE DOES IT COME FROM?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Sunlight meets nitrogen oxides, </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">volatile organic compounds, and </tspan><tspan x="0" y="54" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">carbon monoxide</tspan></text>
+        <polygon opacity="0.3" fill="#FFFFFF" points="267.098,187.773 285.959,187.773 310.098,234.697 284.959,280.107 267.098,280.107    291.891,234.44  "/>
     </g>
     <g id="home_button2" cursor="pointer">
-        <polygon id="button2_triangle" opacity="0" fill="#FFFFFF" points="584.221,187.773 608.359,224.697 583.221,260.106 284.959,260.107 310.098,224.697 285.959,187.773"/>
-        <text transform="matrix(1 0 0 1 338.7949 210.5161)"><tspan id="button2_title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT ARE THE RISKS?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">PM exposure can have serious </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">health impacts</tspan></text>
-        <polygon opacity="0.3" fill="#FFFFFF" points="565.359,187.773 584.221,187.773 608.359,224.697 583.221,260.106 565.359,260.106    590.152,224.44  "/>
+        <polygon id="button2_triangle" opacity="0" fill="#FFFFFF" points="584.221,187.773 608.359,234.697 583.221,280.106 284.959,280.107 310.098,234.697 285.959,187.773"/>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 338.7949 210.5161)"><tspan id="button2_title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT ARE THE RISKS?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Ground-level exposure to ozone </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">can have serious human and </tspan><tspan x="0" y="54" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">ecosystem health impacts</tspan></text>
+        <polygon opacity="0.3" fill="#FFFFFF" points="565.359,187.773 584.221,187.773 608.359,234.697 583.221,280.106 565.359,280.106    590.152,234.44  "/>
     </g>
     <g id="home_button3" cursor="pointer">
-        <polygon id="button3_triangle" opacity="0" fill="#FFFFFF" points="584.221,187.773 608.359,224.697 583.221,260.106 881.357,260.106 906.496,224.697 882.357,187.773"/>
+        <polygon id="button3_triangle" opacity="0" fill="#FFFFFF" points="584.221,187.773 608.359,234.697 583.221,280.106 881.357,280.106 906.496,234.697 882.357,187.773"/>
         <rect class="page1" x="617.057" y="198.731" fill="none" width="222.265" height="54.375"/>
-        <text transform="matrix(1 0 0 1 637.0566 209.5161)"><tspan id="button3_title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT IS ITS IMPACT?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Variations in temperature and </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">topography can impact PM</tspan></text>
-        <polygon opacity="0.3" fill="#FFFFFF" points="863.496,187.773 882.357,187.773 906.496,224.697 881.357,260.106 863.496,260.106    888.289,224.44  "/>
+       <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 637.0566 209.5161)"><tspan id="button3_title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT IS ITS IMPACT?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Respiratory and other diseases </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">in humans, foliar injury and </tspan><tspan x="0" y="54" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">reduced tree growth in plants </tspan></text>
+        <polygon opacity="0.3" fill="#FFFFFF" points="863.496,187.773 882.357,187.773 906.496,234.697 881.357,280.106 863.496,280.106    888.289,234.44  "/>
     </g>
     <g id="home_button4" cursor="pointer">
-        <polygon id="button4_triangle" opacity="0" fill="#FFFFFF" points="882.357,187.773 906.496,224.697 881.357,260.106 1180.357,260.106 1205.15,224.44 1180.357,187.773"/>
-        <text transform="matrix(1 0 0 1 935.1938 210.5161)"><tspan id="button4_title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">PM concentrations are monitored </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">on the ground and by satellite</tspan></text>
+        <polygon id="button4_triangle" opacity="0" fill="#FFFFFF" points="882.357,187.773 906.496,234.697 881.357,280.106 1180.357,280.106 1205.15,234.44 1180.357,187.773"/>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 935.1938 210.5161)"><tspan id="button4_title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">HOW DO WE MEASURE IT? </tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Ozone levels are monitored on </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">the ground and in the air</tspan></text>
     </g>
     <g id="page5" cursor="pointer">
-        <polygon id="triangle" class="page1" opacity="0.3" fill="#FFFFFF" points="1471.357,187.773 1180.357,187.773 1175.476,187.773 1161.496,187.773    1186.289,224.44 1161.496,260.106 1176.809,260.106 1179.357,260.106 1470.357,260.106 1495.496,224.697  "/>
-        <text transform="matrix(1 0 0 1 1233.1934 210.5161)"><tspan id="title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Future changes can improve the </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">impacts of PM</tspan></text>
+        <polygon id="triangle" class="page1" opacity="0.3" fill="#FFFFFF" points="1471.357,187.773 1180.357,187.773 1175.476,187.773 1161.496,187.773    1186.289,234.44 1161.496,280.106 1176.809,280.106 1179.357,280.106 1470.357,280.106 1495.496,234.697  "/>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 1208 210.5161)"><tspan id="title" x="0" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="15">WHAT CAN WE DO ABOUT IT?</tspan><tspan x="0" y="18" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">Improve ozone monitoring coverage to </tspan><tspan x="0" y="36" fill="#FFFFFF" font-family="'Helvetica'" font-size="15">better inform policymaking and regulation</tspan></text>
     </g>
     </g>
     <g id="cityscape">
@@ -890,9 +888,9 @@
     </g>
     <g id="person-text" visibility="hidden">
         <text transform="matrix(1 0 0 1 69.4346 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">HEALTH RISKS</tspan></text>
-        <text transform="matrix(1 0 0 1 73.0352 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 73.0352 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">STUDIES ON HUMAN EXPOSURE SHOW THAT OZONE POLLUTION POSES HIGHER RISKS OF BOTH SHORT-TERM </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">AND LONG-TERM HEALTH IMPACTS. THERE ARE A NUMBER OF AIR QUALITY GUIDELINES FOR OZONE, INCLUDING </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">THE USA EPA’S AIR QUALITY INDEX, WHOSE OZONE SCALE IS FEATURED HERE.</tspan></text>
 
-        <text transform="matrix(1 0 0 1 38.708 224.3799)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">RESPIRATORY EFFECTS</text>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 38.708 203.3799)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">RESPIRATORY EFFECTS</tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">(8-hour avg ozone concentration)</tspan></text>
         <polygon id="go_back" class="buttons" style="display: none" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408  "/>
     </g>
     <g id="respiratory2" cursor="pointer">
@@ -926,11 +924,12 @@
     
         <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="8" x1="39.125" y1="685.517" x2="589.666" y2="685.517"/>
     <rect x="62.204" y="279.235" fill="none" width="385.404" height="13.53"/>
-    <text transform="matrix(1 0 0 1 62.2036 289.3013)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">CONCENTRATIONS USED IN FOOD INDUSTRY</text>
+    
     <rect x="62.204" y="458.5" fill="none" width="385.404" height="13.53"/>
-    <text transform="matrix(1 0 0 1 62.2036 468.5659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SEVERE SYMPTOMS &amp; SHALLOW BREATHING</text>
+    <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 62.2031 462.6167)"><tspan x="0" y="0" fill="#3A9E99" font-family="'Helvetica'" font-size="14">AGGRAVATED COUGH OR PAIN, REDUCED LUNG </tspan><tspan x="0" y="16.8" fill="#3A9E99" font-family="'Helvetica'" font-size="14">FUNCTION IF SENSITIVE</tspan></text>
     <rect x="62.204" y="348.691" fill="none" width="385.404" height="13.53"/>
-    <text transform="matrix(1 0 0 1 284.2427 358.7573)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSOR’S UPPER LIMIT</text>
+    <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 62.2031 378.7227)"><tspan x="0" y="0" fill="#3A9E99" font-family="'Helvetica'" font-size="14">INCREASINGLY SEVERE RESPIRATORY SYMPTOMS </tspan><tspan x="0" y="16.8" fill="#3A9E99" font-family="'Helvetica'" font-size="14">AND IMPAIRED BREATHING IF SENSITIVE</tspan></text>
+
     <rect x="204.262" y="219.399" fill="none" width="385.404" height="17.9"/>
     <text transform="matrix(1 0 0 1 527.5957 233.7788)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0</text>
     <text transform="matrix(0.583 0 0 0.583 538.7188 240.439)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">3</text>
@@ -948,11 +947,11 @@
     <rect x="204.262" y="662.815" fill="none" width="385.404" height="17.9"/>
     <text transform="matrix(1 0 0 1 550.7402 677.1948)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">0.01</text>
     <rect x="62.204" y="665" fill="none" width="385.404" height="13.53"/>
-    <text transform="matrix(1 0 0 1 281.1392 675.0659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSOR’S LOWER LIMIT</text>
+    <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 62.2031 656.0659)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">NO HEALTH EFFECTS</text>
     <rect x="62.204" y="523.861" fill="none" width="385.404" height="13.53"/>
-    <text transform="matrix(1 0 0 1 62.2036 533.9268)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN, REDUCED LUNG FUNCTION</text>
+    <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 62.2031 527.4771)"><tspan x="0" y="0" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGHING, PAINS WHEN BREATHING DEEPLY IF </tspan><tspan x="0" y="16.8" fill="#3A9E99" font-family="'Helvetica'" font-size="14">SENSITIVE</tspan></text>
     <rect x="62.204" y="583.722" fill="none" width="385.404" height="13.53"/>
-    <text transform="matrix(1 0 0 1 62.2036 593.7881)" fill="#3A9E99" font-family="'Helvetica'" font-size="14">COUGH &amp; CHEST PAIN</text>
+    <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 62.2031 586.564)"><tspan x="0" y="0" fill="#3A9E99" font-family="'Helvetica'" font-size="14">RESPIRATORY EFFECTS AFTER PROLONGED </tspan><tspan x="0" y="16.8" fill="#3A9E99" font-family="'Helvetica'" font-size="14">OUTDOOR EXERTION IF UNUSUALLY SENSITIVE</tspan></text>
     <g id="respiratory_close" cursor="pointer" class="buttons2">
         <rect fill="rgb(71, 188, 182)" stroke="none" width="60" height="50" x="415" y="690"/>
         <polygon fill="#FFFFFF" points="465.219,716.555 446.109,697.445 427,716.555     "/>
@@ -1045,7 +1044,7 @@
         <text transform="matrix(1 0 0 1 1037.4805 505.6694)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">cardiovascular harm - heart attacks, </tspan><tspan x="0" y="19.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">strokes, heart disease, congestive </tspan><tspan x="0" y="38.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">heart failure</tspan></text>
     </g>
     <rect class="fade4" x="844.168" y="615.031" fill="none" width="308.982" height="14.999"/>
-    <text class="fade4" transform="matrix(1 0 0 1 844.168 626.5352)" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">respiratory harm - worsened asthma &amp; COPD</text>
+    <text class="fade4" transform="matrix(1 0 0 1 844.168 630.4033)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">respiratory harm - worsened asthma and</tspan><tspan x="0" y="19.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">chronic obstructive pulmonary disease</tspan></text>
     <rect class="fade5" x="703.925" y="746.932" fill="none" width="280.486" height="14.999"/>
     <text class="fade5" transform="matrix(1 0 0 1 703.9248 758.436)" fill="#FFFFFF" font-family="'Helvetica'" font-size="16">reproductive and developmental damage</text>
     <rect class="fade6" x="586.059" y="887.597" fill="none" width="280.486" height="14.999"/>
@@ -2447,7 +2446,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 <g id="land_use_page">
     <g id="land_use_text" visibility="hidden">
         <text transform="matrix(1 0 0 1 66.9058 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">LAND USE</tspan></text>
-        <text transform="matrix(1 0 0 1 70.5064 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+        <text  transform="matrix(1 0 0 1 70.5049 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">SCIENTISTS HAVE FOUND THAT CLIMATE CHANGE EXERTS IMPACTS ON OZONE LEVELS, WHERE A WARMING CLIMATE </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">LEADS TO THE FORMATION OF GREATER OZONE LEVELS IN POLLUTED AREAS. GIVEN THIS PHENOMENON, EMISSION </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">CONTROLS MAY NEED TO BE MADE STRICTER IN MAJOR CITIES IN ORDER TO MEET AIR QUALITY STANDARDS FOR OZONE.</tspan></text>
         <polygon id="go_back_land_use" style="display: none" class="buttons" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.486,60.298 56.596,79.408  "/>
     </g>
     <g clip-path="url(#sun-clip)">
@@ -2811,12 +2810,12 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
             <g visibility="hidden">
                 <g id="low_pop_text" clip-path="url(#low-pop-clip)">
                     <rect x="65.972" y="665.116" opacity="0.8" fill="#3A9E99" width="643.674" height="126.335"/>
-                    <text transform="matrix(1 0 0 1 86.425 686.2642)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS </tspan><tspan x="0" y="15.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS WORDS WORDS WORDS </tspan></text>
+                   <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 86.4268 686.2583)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WARMER TEMPERATURES ARE ACCOMPANIED BY MORE WATER VAPOR IN THE AIR. THE </tspan><tspan x="0" y="15.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">RADICALS FROM WATER VAPOR DISMANTLE OZONE THROUGH CHEMICAL REACTIONS. </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">THANKS TO THIS PHENOMENON, NATURAL LEVELS OF SURFACE OZONE ARE PROJECTED TO </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">DECREASE. SPARSELY, LESS POLLUTED AREAS WILL THEREFORE EITHER SEE NO NET </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">IMPACT OR POTENTIALLY LOWER OZONE LEVELS.</tspan></text>
                 </g>
 
                 <g id="dense_pop_text" clip-path="url(#dense-pop-clip)">
                     <rect x="858.029" y="420.001" opacity="0.8" fill="#3A9E99" width="643.674" height="126.335"/>
-                    <text transform="matrix(1 0 0 1 881.0529 446.1523)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS </tspan><tspan x="0" y="15.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS WORDS WORDS WORDS </tspan></text>
+                    <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 881.0527 446.1523)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE IS PRODUCED MORE FREQUENTLY AT HIGHER TEMPERATURES IN DRIER </tspan><tspan x="0" y="15.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">ENVIRONMENTS. THIS LEAVES POLLUTED URBAN AREAS IN THE SUMMERTIME PARTICULARLY </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">SUSCEPTIBLE TO INCREASES IN SURFACE OZONE LEVELS.</tspan></text>
                 </g>
                 <polygon id="low_pop_open" cursor="pointer" class="buttons-green" fill="#FFFFFF" points="125.838,778.912 106.729,759.803 87.619,778.912  "/>
                 <polygon id="dense_pop_open" cursor="pointer" class="buttons-green" fill="#FFFFFF" points="917.896,533.798 898.786,514.688 879.677,533.798  "/>
@@ -2991,7 +2990,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
         </g>
         <g id="ozone_chemicals_text" clip-path="url(#chemicals-clip)" visibility="hidden">
             <path opacity="0.8" fill="#3A9E99" d="M397.528,289.605c58.676,0,106.245,47.567,106.245,106.245   c0,58.678-47.569,106.245-106.245,106.245h361.897v-212.49H397.528z"/>
-            <text transform="matrix(1 0 0 1 562.8232 313.9482)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="15.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="93.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="109.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="124.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="140.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="156" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan><tspan x="0" y="171.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORDS WORDS WORDS </tspan></text>
+            <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 562.8232 313.9482)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WATER MOLECULES IN </tspan><tspan x="0" y="15.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WATER VAPOR RADICALIZE </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">INTO DIFFERENT HYDROGEN </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OXIDE RADICALS. </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">HYDROGEN OXIDE </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">RADICALS IN TURN BREAK </tspan><tspan x="0" y="93.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">DOWN OZONE MOLECULES </tspan><tspan x="0" y="109.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">THROUGH CHEMICAL </tspan><tspan x="0" y="124.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">REACTIONS, RESULTING IN </tspan><tspan x="0" y="140.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WATER AND OXGYEN AS </tspan><tspan x="0" y="156" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">THE END PRODUCTS.</tspan></text>
         </g>
         <polygon visibility="hidden" id="ozone_chemicals_open" class="buttons-green" cursor="pointer" fill="#FFFFFF" points="522.491,414.96 541.6,395.851 522.491,376.742  "/>
         <polygon visibility="hidden" id="ozone_chemicals_close" class="buttons-green" cursor="pointer" fill="#FFFFFF" points="541.491,376.742 522.383,395.851 541.491,414.96  "/>
@@ -3006,7 +3005,9 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
         <rect x="69.906" y="40.995" fill="none" width="1054.143" height="38.606"/>
         <text transform="matrix(1 0 0 1 66.9058 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">SOURCES</tspan></text>
         <rect x="70.506" y="92.466" fill="none" width="863.957" height="65.132"/>
-        <text transform="matrix(1 0 0 1 70.5063 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 70.5059 106.8457)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">OZONE SMOG FORMS WHEN SUNLIGHT MEETS NITROGEN OXIDES (NO<tspan baseline-shift="sub">X</tspan>), VOLATILE ORGANIC COMPOUNDS (VOCS), AND CARBON</text>
+        <text transform="matrix(1 0 0 1 70.5059 130.8457)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONOXIDE (CO). SOURCES OF NO<tspan baseline-shift="sub">X</tspan> INCLUDE POWER PLANTS AND MOTOR VEHICLES. SOURCES FOR VOCS INCLUDE MOTOR VEHICLES,</text>
+        <text transform="matrix(1 0 0 1 70.5059 154.8457)" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">CHEMICAL PLANTS, REFINERIES, FACTORIES. FORESTS ALSO EMIT VOCS. CO IS MOSTLY EMITTED FROM MOTOR VEHICLES.</text>
         <polygon id="go_back_cities" class="buttons" style="display: none;" cursor="pointer" fill="#D1DE58" points="56.596,41.189 37.487,60.298 56.596,79.408   "/>
     </g>
     <g id="car" visibility="hidden">
@@ -3326,7 +3327,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
         <rect x="70.927" y="40.995" fill="none" width="1054.143" height="38.606"/>
         <text transform="matrix(1 0 0 1 67.9272 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">ECOSYSTEM IMPACTS</tspan></text>
         <rect x="71.528" y="92.466" fill="none" width="863.957" height="65.132"/>
-        <text transform="matrix(1 0 0 1 71.5278 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+        <text transform="matrix(1 0 0 1 71.5278 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF OZONE SUGGESTS THAT OZONE POLLUTION CAN STUNT TREE GROWTH AND CAUSE </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">FOLIAR INJURY, CHANGE SPECIES COMPOSITION, AND MAKE TREES AND CROPS MORE VULNERABLE </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">TO INSECT AND DISEASE. FURTHER UP IN THE ATMOSPHERE, OZONE ACTS AS A GREENHOUSE GAS.</tspan></text>
     </g>
 
     <g id="crops" visibility="hidden">
@@ -3815,24 +3816,20 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 
     <g id="ecosystem-text-boxes" visibility="hidden">
         <g id="ecosystem1" clip-path="url(#eco-path1)">
-            <rect x="228.701" y="759.134" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="230.729" height="81.568"/>
-            <rect x="237.951" y="766.667" fill="none" width="137.941" height="69.403"/>
-            <text transform="matrix(1 0 0 1 237.9507 775.2949)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS</tspan></text>
+            <rect x="224.045" y="759.134" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="236.841" height="91.137"/>
+            <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 233.8677 777.0146)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">IN URBAN AREAS, </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE POLLUTION CAN </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">DAMAGE ARTIFICIAL  </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">MATERIALS LIKE </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">RUBBER &amp; FIBERS.</tspan></text>
         </g>
         <g id="ecosystem2" clip-path="url(#eco-path2)">
-            <rect x="819.281" y="759.134" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="230.729" height="81.568"/>
-            <rect x="897.178" y="766.667" fill="none" width="143.679" height="69.403"/>
-            <text transform="matrix(1 0 0 1 908.874 775.2949)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS </tspan><tspan x="-4.67" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD </tspan><tspan x="3.334" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS </tspan><tspan x="85.986" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD</tspan></text>
+            <rect xmlns="http://www.w3.org/2000/svg" x="819.281" y="759.134" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="237.428" height="88.786"/>
+            <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 895.1777 776.0146)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">ON FARMS, OZONE </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">CAUSES LEAF DAMAGE </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">TO CROPS SUCH AS </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">RICE, WHEAT, AND </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">COTTON.</tspan></text>
         </g>
         <g id="ecosystem3" clip-path="url(#eco-path3)">
-            <rect x="747.102" y="451.937" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="230.729" height="81.568"/>
-            <rect x="758.813" y="459.471" fill="none" width="139.174" height="69.403"/>
-            <text transform="matrix(1 0 0 1 758.813 468.0986)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS</tspan></text>
+            <rect xmlns="http://www.w3.org/2000/svg" x="623.035" y="451.937" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="354.796" height="81.568"/>
+            <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 631.0459 472.8174)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE UP TO 5- 11 MILES HURTS </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">FORESTS AND OTHER LIVING TISSUE. IN </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">ADDITION, IT CONTRIBUTES TO CLIMATE </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">CHANGE AS A GREENHOUSE GAS.</tspan></text>
         </g>
         <g id="ecosystem4" clip-path="url(#eco-path4)">
-            <rect x="1218.943" y="759.134" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="230.729" height="81.568"/>
-            <rect x="1230.051" y="766.667" fill="none" width="144.202" height="69.403"/>
-            <text transform="matrix(1 0 0 1 1230.0503 775.2949)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS</tspan></text>
+            <rect xmlns="http://www.w3.org/2000/svg" x="1218.943" y="759.134" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="230.729" height="81.568"/>
+            <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 1227.0503 778.0146)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE CAUSES </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">DAMAGE IN FORESTS </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AND OTHER SENSITIVE </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">LANDSCAPES.</tspan></text>
         </g>
     </g>
 
@@ -3942,8 +3939,7 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
         <g id="page5-text" visibility="hidden">
             <rect x="70.351" y="40.995" fill="none" width="1054.143" height="38.606"/>
             <text transform="matrix(1 0 0 1 67.3511 75.5068)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica-Bold'" font-size="48">O3:</tspan><tspan x="80.016" y="0" fill="#7E90C8" font-family="'Helvetica-Bold'" font-size="48"> </tspan><tspan x="93.352" y="0" fill="#D1DE58" font-family="'Helvetica-Bold'" font-size="48">RECOMMENDATIONS</tspan></text>
-            <rect x="70.952" y="92.466" fill="none" width="863.956" height="65.132"/>
-            <text transform="matrix(1 0 0 1 70.9517 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">MONITORING OF MERCURY SUGGESTS... Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">consectetur adipiscing elit. Donec at purus ut tortor facilisis tincidunt. </tspan><tspan x="0" y="48" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">Pellentesque in aliquam elit. </tspan></text>
+            <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 70.9517 106.8457)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">A NEW GENERATION OF LOW-EARTH ORBITING AND GEOSTATIONARY SATELLITES </tspan><tspan x="0" y="24" fill="#FFFFFF" font-family="'Helvetica'" font-size="20">HAVE THE POTENTIAL TO ESTIMATE OZONE LEVELS NEAR THE EARTH'S SURFACE.</tspan></text>
         </g>
 
         <polygon id="go_back_page5" class="buttons" cursor="pointer" style="display: none" fill="#D1DE58" points="56.596,41.189 37.487,60.299 56.596,79.408  "/>
@@ -3953,26 +3949,26 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
                 <rect x="615.585" y="824.873" opacity="0.3" fill="#D1DE58" width="450.65" height="122.888"/>
                 <g >
                     <rect x="640.259" y="841.092" fill="none" width="415.358" height="90.45"/>
-                    <text transform="matrix(1 0 0 1 640.2588 849.7197)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
+                   <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 640.2588 850.4385)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">USE OF MULTISPECTRAL TECHNIQUES AND INSTRUMENTATION </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">SHOULD BE USED TO MEASURE BOUNDARY LAYER OZONE AND </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">CARBON MONOXIDE.</tspan><tspan x="0" y="56.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">THE ROLE OF THIS SYSTEM FOR THE MONITORING OF AIR </tspan><tspan x="0" y="72.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">QUALITY-CLIMATE CO-BENEFITS SHOULD BE INVESTIGATED.</tspan></text>
                 </g>
             </g>
             <g id="page52" clip-path="url(#page5-clip2)">
-                <rect x="615.585" y="640.688" opacity="0.3" fill="#D1DE58" width="450.65" height="122.888"/>
+                <rect x="615.585" y="640.688" opacity="0.3" fill="#D1DE58" width="450.65" height="108.888"/>
                 <g>
                     <rect x="640.259" y="656.906" fill="none" width="415.358" height="90.45"/>
-                    <text transform="matrix(1 0 0 1 640.2588 665.5342)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
+                    <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 640.2588 666.2529)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">SURFACE OZONE OBSERVATION NETWORKS NEED TO BE </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">DEVELOPED AND EXPANDED. SURFACE OZONE OBSERVATION </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">NETWORKS NEED TO BE DEVELOPED AND EXPANDED. OZONE </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">NETWORKS CAN BE OPTIMALLY CONSTRUCTED FOR A MODEST </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">INVESTMENT.</tspan></text>
                 </g>
             </g>
             <g id="page53" clip-path="url(#page5-clip3)">
-                <rect x="615.585" y="461.112" opacity="0.3" fill="#D1DE58" width="450.65" height="122.888"/>
+                <rect x="615.585" y="461.112" opacity="0.3" fill="#D1DE58" width="450.65" height="108.888"/>
                 <rect x="640.259" y="477.331" fill="none" width="415.358" height="90.45"/>
-                <text transform="matrix(1 0 0 1 640.2588 485.959)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
+                <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 640.2588 486.6777)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AIR QUALITY MONITORING SHOULD BE ANCHORED ON AN </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OPERATIONAL AIR QUALITY ANALYSIS SYSTEM THAT </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">ASSIMILATES SATELLITE, AIRCRAFT, AND IN-SITU </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OBSERVATIONS WITH GLOBAL AND REGIONAL CHEMICAL </tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">TRANSPORT MODELS.</tspan></text>
             </g>
             <g id="page54" clip-path="url(#page5-clip4)">
-                <rect x="615.585" y="279.49" opacity="0.3" fill="#D1DE58" width="450.65" height="122.888"/>
+                <rect x="615.585" y="249.49" opacity="0.3" fill="#D1DE58" width="450.65" height="152.888"/>
                 <g>
-                    <rect x="640.259" y="298.995" fill="none" width="415.358" height="90.45"/>
-                    <text transform="matrix(1 0 0 1 640.2588 307.623)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS  WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="14.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="28.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS WORD </tspan><tspan x="0" y="43.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS  WORD WORDS WORDS WORD WORDS WORD </tspan><tspan x="0" y="57.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORDS WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan><tspan x="0" y="72" fill="#FFFFFF" font-family="'Helvetica'" font-size="12">WORD WORDS WORD WORDS WORD WORDS WORD WORDS </tspan></text>
+                    <rect x="640.259" y="268.995" fill="none" width="415.358" height="110.45"/>
+                    <text transform="matrix(0.867 0 0 1 640.2588 282.168)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">A CONSTELLATION OF GEOSTATIONARY SATELLITES – THE NEXT </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">GENERATION IN AIR QUALITY MONITORING – AUGMENTED BY LOW </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">EARTH-ORBITING SATELLITES WOULD REVOLUTIONIZE GLOBAL AND </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">REGIONAL MONITORING.</tspan><tspan x="0" y="73.934" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">THE FULL SUITE OF SATELLITE OBSERVATIONS NEED TO BE USED TO </tspan><tspan x="0" y="89.534" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">CONSTRAIN BOTH OZONE PRECURSOR EMISSIONS AND OZONE </tspan><tspan x="0" y="105.134" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">CONCENTRATIONS.</tspan></text>
                 </g>
             </g>
         </g>
@@ -4192,7 +4188,26 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
 <g id="layer_logo">
     <g id="logo">
         <rect xmlns="http://www.w3.org/2000/svg" x="1.592" y="984.238" fill="#FFFFFF" width="1600" height="165.762"/>
-        <text transform="matrix(1 0 0 1 341.2988 1046.0869)"><tspan x="0" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">Re</tspan><tspan x="23.01" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">f</tspan><tspan x="27.849" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">erences</tspan></text>
+       <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 342.332 1019.5059)" fill="#010101" font-family="'Helvetica'" font-size="18">Designed by Peter Hirsch (MEM '15 candidate) and programmed by Anna Young (Yale College ‘16), with text by Daphne Yin ()</text><text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 341.2988 1065.0869)"><tspan x="0" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">Re</tspan><tspan x="23.01" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">f</tspan><tspan x="27.849" y="0" fill="#010101" font-family="'Helvetica'" font-size="18">erences</tspan></text>
+
+       <g id="page1-references">
+           <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 341.2988 1065.0869)"><tspan id="lung-ref" x="0" y="21.6" fill="#010101" font-family="'Helvetica'" font-size="18">American Lung Association. (2013). State of the Air 2013. Available: http://www.stateoftheair.org/2013/health-risks/health-risks-ozone.html</tspan><tspan x="0" y="43.2" fill="#010101" font-family="'Helvetica'" font-size="18">Bowman, K.W. (2013). Toward the next generation of air quality monitoring: Ozone. Atmospheric Environment 80: 584-590.  </tspan><tspan x="0" y="64.8" fill="#010101" font-family="'Helvetica'" font-size="18">US EPA. (2014). Health Effects of Ozone in the General Population. Available: http://www.epa.gov/eogapti1/ozonehealth/population.html</tspan></text>
+       </g>
+
+       <g id="page1-ref2" visibility="hidden"> <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 341.2988 1065.0869)"><tspan id="lung-ref" x="0" y="21.6" fill="#010101" font-family="'Helvetica'" font-size="18">American Lung Association. (2013). State of the Air 2013. Available: http://www.stateoftheair.org/2013/health-risks/health-risks-ozone.html</tspan><tspan x="0" y="43.2" fill="#010101" font-family="'Helvetica'" font-size="18">Bowman, K.W. (2013). Toward the next generation of air quality monitoring: Ozone. Atmospheric Environment 80: 584-590.  </tspan></text></g>
+
+       <g id="health-references" visibility="hidden">
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 341.2988 1078.7578)"><tspan id="bowman" x="0" y="21.6" fill="#010101" font-family="'Helvetica'" font-size="18">Bowman, K.W. (2013). Toward the next generation of air quality monitoring: Ozone. Atmospheric Environment 80: 584-590.</tspan><tspan x="0" y="43.2" fill="#010101" font-family="'Helvetica'" font-size="18">US EPA Office of Air &amp; Radiation (2008). Air Quality Guide for Ozone. Available: http://www.airnow.gov/index.cfm?action=pubs.aqiguideozone  </tspan></text>
+       </g>
+       <g id="eco-ref" visibility="hidden">
+            <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 341.2988 1075.3623)"><tspan x="0" y="21.6" fill="#010101" font-family="'Helvetica'" font-size="18">Bowman, K.W. (2013). Toward the next generation of air quality monitoring: Ozone. Atmospheric Environment 80: 584-590.</tspan><tspan x="0" y="43.2" fill="#010101" font-family="'Helvetica'" font-size="18">US EPA. (2012). Ground level ozone: ecosystem effects. Available: www.epa.gov/groundlevelozone/ecosystem.html   </tspan></text>
+       </g>
+       <g id="balloon-ref" visibility="hidden">
+        <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 343.332 1066.1187)"><tspan x="0" y="21.6" fill="#010101" font-family="'Helvetica'" font-size="18">Bowman, K.W. (2013). Toward the next generation of air quality monitoring: Ozone. Atmospheric Environment 80: 584-590.</tspan><tspan x="0" y="43.2" fill="#010101" font-family="'Helvetica'" font-size="18">NASA GES DISC. Measurement of Atmospheric Ozone. Available: http://disc.sci.gsfc.nasa.gov/ozone/keep-for-review/pre-codi/ozone_measurements.shtml</tspan><tspan x="0" y="64.8" fill="#010101" font-family="'Helvetica'" font-size="18">NOAA Research. ESRL/GMD Ozonesondes. US Department of Commerce. Available: http://www.esrl.noaa.gov/gmd/ozwv/ozsondes/  </tspan></text>
+       </g>
+       <g id="land-ref" visibility="hidden">
+            <text transform="matrix(1 0 0 1 341.2989 1040.0869)"><tspan x="0" y="44.6" fill="#010101" font-family="'Helvetica'" font-size="18">Jacob, D.J., Winner, D.A. (2009). Effect of climate change on air quality. Atmospheric Environment 43 (1), 51-63.</tspan><tspan x="0" y="64.8" fill="#010101" font-family="'Helvetica'" font-size="18">Galbraith, K. (2014). Cities’ Air Problems Only Get Worse with Climate Change. New York Times. Available:</tspan><tspan x="0" y="86.4" fill="#010101" font-family="'Helvetica'" font-size="18">http://www.nytimes.com/2014/08/21/business/international/cities-air-problems-only-get-worse-with-climate-change.html?_r=1</tspan></text>
+       </g>
         <g>
         <polygon fill="#2E2119" points="105.124,1045.854 105.124,1029.158 116.626,1029.158 116.626,1031.684 108.737,1031.684 
             108.737,1035.93 115.362,1035.93 115.362,1038.309 108.737,1038.309 108.737,1043.307 116.966,1043.307 116.966,1045.854        "/>
