@@ -12,7 +12,6 @@
   </head>
 
   <body>
-    
     <div id="map"></div>
 
     <div id="tool-tip"><p id="tool-tip-text">
@@ -332,10 +331,10 @@ Johnson, L. (2014). National Status of the Dirty Dozen POPs regulation through t
         cartodb.createLayer(map, {
           user_name: 'annasyoung',
           type: 'cartodb',
-          sublayers: [{
+          sublayers: [/*{
             sql: "SELECT * FROM bathymetry_layers",
             cartocss: "#bathymetry_layers{ polygon-fill: #A7C6E4;polygon-opacity: 0.2;line-color: #FFF;line-width: 0;line-opacity: 1;}"
-            },{
+            },*/{
             sql: "SELECT * FROM pops",
             cartocss: $('#pops').html().format('total_score'),
             interactivity: "cartodb_id, the_geom, country, total_score, aldrin, chlordane, ddt, dieldrin, dioxin_furan, endrin, heptachlor, hexachlorobenzene, mirex, pcb, points, toxaphene, ratification_date, signature_date"

@@ -4,6 +4,9 @@ html, body, #map {
         padding: 0;
         margin: 0;
         background-color: #DFE5EA;
+        background-image: url('./paper_texture.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
         /*background-color: #9abae0;*/
       }
 

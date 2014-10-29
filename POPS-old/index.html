@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./leaflet.css" />
+	<style>
+		#map{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+		.legend {
+			line-height: 18px;
+			color: #555;
+		}
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
+		}
+	</style>
+	<script src="./leaflet.js"></script>
+	<script src="./world_countries.js"></script>
+	<script src="./jquery-1.11.1.min.js"></script>
+	<script src="./tinycolor.js"></script>
+	
+	<script src="./leaflet-search.js"></script>
+	<link rel="stylesheet" href="./leaflet-search.css" />
+
+	<script>
+		var geojson;
+		var map;
+		var info = L.control();
+		var legend = L.control({position: 'bottomright'});
+		
+		$.ajax({
+			type: "GET",
+			url: "POPS.csv",
+			dataType: "text",
+			success: function(data) {processData(data);}
+		});
+		
+		$(document).ready(function() {
+			
+			map = L.map('map', {
+				center: [42,0],
+				zoom: 2,
+				minZoom: 2,
+				maxZoom: 5
+			});
+			
+			info.addTo(map);
+			legend.addTo(map);
+			
+			L.tileLayer('./coolTiles/{id}/{z}/{x}/{y}.png', {
+				id: ''
+			}).addTo(map);
+			
+			//L.rectangle([[-1000, -1000],[1000, 1000]], {color: "#B5D0D0", fillOpacity: 1}).addTo(map);
+			
+			//var db = new SQLitePlugin("./water.mbtiles");
+			//console.log(db);
+			//var bath = new L.TileLayer.MBTiles('./water.mbtiles', {maxZoom: 14, scheme: 'tms'}, db);
+			//map.addLayer(bath);
+  
+			function style(feature){
+				return {
+					"fillColor": colorPal(feature.properties.val),
+					"color": "#fff",
+					"weight": 1.5,
+					"fillOpacity": 0.8
+				};
+			};
+			// Have to get rid of this reasonably
+			setTimeout(function(){
+				geojson = L.geoJson(countries, {style: style, onEachFeature: onEachFeature}).addTo(map);
+				
+				var searchControl = new L.Control.Search({layer: geojson, propertyName: 'name', circleLocation:false});
+				searchControl.on('search_locationfound', function(e) {
+
+					//e.layer.setStyle({fillColor: '#3f0'});
+					map.fitBounds(e.layer.getBounds());
+
+				}).on('search_collapsed', function(e) {
+
+					featuresLayer.eachLayer(function(layer) {
+						featuresLayer.resetStyle(layer);
+					}); 
+				});
+				map.addControl(searchControl);
+			}, 1000);
+		});
+		
+		// Color palette
+		
+		function colorPal(val){
+			// Base color, set initial sat and lum here
+			var col = tinycolor("hsv(0, 100%, 80%)").toHsv();
+			
+			// Color range angle
+			var range = 60;
+			// Color angle offset
+			var offset = 0;
+			
+			// Saturation is val
+			if (val == -9999) return "#999";
+			
+			// Single color
+			//col.s = Math.pow((val)/150 + 0.25, 1);
+			
+			// Normal color direction
+			col.h = (val*3.6) * (range/360) + offset;
+			// Flipped color direction
+			//col.h = (range + offset) - (val*3.6) * (range/360);
+			
+			//console.log(tinycolor(col).toHexString());
+			return tinycolor(col).toHexString();
+		}
+		
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+			this.update();
+			return this._div;
+		};
+
+		// method that we will use to update the control based on feature properties passed
+		info.update = function (props) {
+			var display = "";
+			if (props){
+				display = "<b>" + props.name + "</b>";
+				if (props.val == -9999)
+					display += "<br /> Sorry, we do not have data for " + props.name;
+				else
+					display += "<br />" + props.val + " points (out of 100)"
+			}
+			else
+				display = "<b> Hover over a state! </b><br /> -";
+				
+			this._div.innerHTML = display;
+		};
+
+		legend.onAdd = function (map) {
+
+			var div = L.DomUtil.create('div', 'info legend'),
+				grades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+				labels = [];
+
+			// loop through our density intervals and generate a label with a colored square for each interval
+			for (var i = 0; i < grades.length; i++) {
+				div.innerHTML +=
+					'<i style="background:' + colorPal(grades[i]) + '"></i> ' +
+					grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+			}
+
+			return div;
+		};
+
+		legend.addTo(map);
+		
+		function highlightFeature(e) {
+			var layer = e.target;
+
+			layer.setStyle({
+				weight: 2,
+				color: "#0000ff",
+				// Have to add a ligthen function;
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+
+			if (!L.Browser.ie && !L.Browser.opera) {
+				layer.bringToFront();
+			}
+			info.update(layer.feature.properties);
+		}
+		
+		function resetHighlight(e) {
+			geojson.resetStyle(e.target);
+			info.update();
+		}
+		
+		function zoomToFeature(e) {
+			map.fitBounds(e.target.getBounds());
+		}
+
+		function onEachFeature(feature, layer) {
+			layer.on({
+				mouseover: highlightFeature,
+				mouseout: resetHighlight,
+				click: zoomToFeature
+			});
+		}
+
+
+		function processData(allText) {
+			var allTextLines = allText.split(/\r\n|\n/);
+			var headers = allTextLines[0].split(',');
+			var lines = [];
+
+			for (var i=1; i<allTextLines.length; i++) {
+				var data = allTextLines[i].split(',');
+				if (data.length == headers.length) {
+
+					var tarr = [];
+					for (var j=0; j<headers.length; j++) {
+						tarr.push(headers[j]+":"+data[j]);
+					}
+					lines.push(tarr);
+				}
+			}
+			//console.log(lines[14][27].split(':')[1]);
+			// Load data into JSON object
+			for(i = 0; i < countries.features.length; i++){
+				countries.features[i].properties.val = parseInt(lines[i][2].split(':')[1]);
+				console.log(countries.features[i]);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="map"></div>
+</body>
+</html>
