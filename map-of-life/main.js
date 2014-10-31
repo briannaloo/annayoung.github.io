@@ -23,7 +23,7 @@ function main() {
   var map = new L.Map('map', { 
     zoomControl: true,
     legend: true,
-    center: [10, 35],
+    center: [30, 15],
     zoom: 2,
     scrollWheelZoom: true
   });
@@ -63,6 +63,15 @@ function main() {
     //Retrieve data to the tooltip on countries
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
       object.getElementById('country').textContent = data['country'].toUpperCase();
+      var score = data['pacovw_2012'];
+      if (score == -9999)
+        object.getElementById('score').textContent = 'N/A';
+      else {  
+        if (score >= 10)  // only want 2 numbers
+          object.getElementById('score').textContent = Math.round(score) + '%';
+        else
+          object.getElementById('score').textContent = Math.round(score * 10)/10 + '%';
+      }
       /*$('#tool-tip').css({
          left:  e.pageX,
          top:   e.pageY - 60
@@ -72,6 +81,7 @@ function main() {
 
     sublayer_country.on('featureOut', function(e, pos, latlng, data) {
       //$(document).unbind('mousemove', event, false);
+      object.getElementById('country').textContent = "HOVER OVER A COUNTRY";
     });
 
   });
