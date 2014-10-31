@@ -1,224 +1,150 @@
 html, body, #map {
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        background-color: #DFE5EA;
-        background-image: url('./paper_texture.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
-        /*background-color: #9abae0;*/
-      }
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #DFE5EA;
+  background-image: url('./paper_texture.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /*background-color: #9abae0;*/
+}
 
-      h1 {
-        text-align: center;
-        color: #1d1d1d;
-        text-transform: uppercase;
-        font-family: arial;
-        font-size: 17px;
-      }
+h1 {
+  text-align: center;
+  color: #1d1d1d;
+  text-transform: uppercase;
+  font-family: arial;
+  font-size: 17px;
+}
 
-      .cartodb-searchbox {
-        position: fixed;
-        right: 215px;
-      }
+.cartodb-searchbox {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
 
-      #tool-tip {
-        font-family: sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 215px;
-        height: 600px;
-        max-height: 100%;
-        overflow: scroll;
-        background-color: white;
-        opacity: .95;
-        z-index: 50;
-        /*border-radius: 5px;*/
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        text-align: center;
-        color: #366ab2;
-        vertical-align: bottom;
-        padding: 4px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(164, 162, 162);
-        box-shadow: rgba(0,0,0,0.2) 0 0 4px 2px;
-      }
+#tool-tip {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  width: 280px;
+  height: 254px;
+  z-index: 50;
+}
 
-      #tool-tip-text {
-        position: relative;
-        width: 205px;
-        top: 80px;
-        font-size: 18px;
-        color: #40BDA4;
-        font-style: italic;
-      }
+.leaflet-control-attribution {display: none;}
 
-      #tool-tip-title {
-        position: absolute;
-        width: 205px;
-        top: 0px;
-        font-weight: bold;
-        font-size: 17px;
-      }
+span {
+  color:#323232;
+  font-size: 12px;
+  font-family: arial;
+  text-align: center;
+  display: block;
+}
 
-      #no-data {
-        width: 205px;
-        font-style: italic;
-        font-color: grey;
-        font-size: 13px;
-        display: none;
-        position: relative;
-        top: 75px;
-      }
-      #no-data-afghanistan {
-        width: 205px;
-        position: relative;
-        top: 75px;
-      }
+a {
+  color:#4c52ff;
+  text-decoration: none;
+}
+#legends {
+  position: absolute;
+  left:10px;
+  bottom:10px;
+}
+.legend {
+  width:210px;
+  height: 67px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid #a4a2a2;
+  box-shadow: rgba(0,0,0,0.2) 0 0 4px 2px;
+  opacity: 1;
+}
+.legend div {
+  width:30px;
+  height:22px;
+  display: table-cell;
+  margin:0;
+  padding: 0;
+}
+.left {
+  position: absolute;
+  left:15px;
+  top:30px;
+  font-family: arial;   
+  font-size: 13px;
+  color: #6b6a6a;
+}
+.right {
+  position: absolute;
+  right:15px;
+  top:30px;
+  font-family: arial;   
+  font-size: 13px;
+  color: #6b6a6a;
+}
+.colors {
+  position: absolute;
+  left: 15px;
+  top: 46px;
+  border: 1px solid #a4a2a2;
+  width:180px;
+}
+.legend_title {
+  text-align: center;
+  margin-top: 5px;
+  font-family: arial;
+  font-size: 13px;
+  color: #6b6a6a;
+}
 
-      .leaflet-control-attribution {display: none;}
-      #tool-tip p {
-        margin-top: 5px;
-      }
-      .hidden {display: none;}
-      #header_container { 
-        opacity: .9; 
-        height:50px; 
-        position:fixed; 
-        width:100%;  
-        top:10px; 
-        display: block;
-      }
-    
+#rotated_text {
+  position: absolute;
+  top: 43px;
+  left: -22px;
+  color: #444;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  width: 90px;
+  height: 29px;
+   /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
 
-      span {
-        color:#323232;
-        font-size: 12px;
-        font-family: arial;
-        text-align: center;
-        display: block;
-      }
+.handle {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  top: -1px !important;
+}
 
-      #chemical-description {
-        font-size: 11px;
-        font-style: italic;
-        font-weight: normal;
-      }
+#slide_out_info {
+  width: 350px;
+  height: 50%;
+  border-radius: 0 0 10px 0px;
+  background: #ccc;
+  border: 1px solid #a4a2a2;
+  background-color: white;
+  opacity: .9;
+  z-index: 50;
+}
 
-      a {
-        color:#4c52ff;
-        text-decoration: none;
-      }
-      #legends {
-        position: absolute;
-        left:10px;
-        bottom:10px;
-      }
-      .legend {
-        width:240px;
-        height: 85px;
-        background-color: white;
-        border-radius: 10px;
-        margin-top: 10px;
-        border: 1px solid #a4a2a2;
-        box-shadow: rgba(0,0,0,0.2) 0 0 4px 2px;
-        opacity: 1;
-      }
-      .legend div {
-        width:30px;
-        height:22px;
-        display: table-cell;
-        margin:0;
-        padding: 0;
-      }
-      .left {
-        position: absolute;
-        left:15px;
-        top:40px;
-        font-family: arial;   
-        font-size: 13px;
-        color: #6b6a6a;
-      }
-      .right {
-        position: absolute;
-        right:15px;
-        top:40px;
-        font-family: arial;   
-        font-size: 13px;
-        color: #6b6a6a;
-      }
-      .colors {
-        position: absolute;
-        left: 15px;
-        top: 56px;
-        border: 1px solid #a4a2a2;
-        width:210px;
-      }
-      .legend_title {
-        text-align: center;
-        margin-top: 10px;
-        font-family: arial;
-        font-size: 13px;
-        color: #6b6a6a;
-      }
-
-      #rotated_text {
-        position: absolute;
-        top: 43px;
-        left: -22px;
-        color: #444;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-
-         /* Safari */
-        -webkit-transform: rotate(-90deg);
-        /* Firefox */
-        -moz-transform: rotate(-90deg);
-        /* IE */
-        -ms-transform: rotate(-90deg);
-        /* Opera */
-        -o-transform: rotate(-90deg);
-        /* Internet Explorer */
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
-          width: 90px;
-          height: 29px;
-      }
-
-      .handle {
-        border-top-left-radius: 0 !important;
-        border-bottom-left-radius: 0 !important;
-        top: -1px !important;
-      }
-
-      .hidden {
-        display: none;
-      }
-
-      #slide_out_info {
-        width: 350px;
-        height: 50%;
-        border-radius: 0 0 10px 0px;
-        background: #ccc;
-        border: 1px solid #a4a2a2;
-        background-color: white;
-        opacity: .9;
-        z-index: 50;
-      }
-
-      .content {
-        height: 100%;
-        width: auto;
-        overflow-x: hidden;
-        overflow-y: scroll;
-      }
-      .text {
-        padding: 20px;
-      }
+.content {
+  height: 100%;
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.text {
+  padding: 20px;
+}
