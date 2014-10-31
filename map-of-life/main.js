@@ -63,6 +63,10 @@ function main() {
     //Retrieve data to the tooltip on countries
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
       object.getElementById('country').textContent = data['country'].toUpperCase();
+      /*$('#tool-tip').css({
+         left:  e.pageX,
+         top:   e.pageY - 60
+      });*/
       //$(document).bind('mousemove', event);
     });
 
