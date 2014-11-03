@@ -30,10 +30,7 @@ function main() {
   cartodb.createLayer(map, {
     user_name: 'annasyoung',
     type: 'cartodb',
-    sublayers: [/*{
-      sql: "SELECT * FROM bathymetry",
-      cartocss: "#doc{ polygon-fill: #A7C6E4;polygon-opacity: 1;line-color: #FFF;line-width: 0;line-opacity: 1;}"
-      },*/{
+    sublayers: [{
       sql: "SELECT * FROM pacovw_latest",
       cartocss: $('#pacovw').html().format('pacovw_2012'),
       interactivity: "pacovw_2012, the_geom, country, biome_1, biome_2, biome_3, biome_4, biome_5, biome_6, biome_7, biome_8, biome_9, biome_10, biome_11, biome_12, biome_13, biome_14, share_1, share_2, share_3, share_4, share_5, share_6, share_7, share_8, share_9, share_10, share_11, share_12, share_13, share_14"
@@ -53,7 +50,7 @@ function main() {
     var event = function(e){
       $('#tool-tip').css({
          left: e.pageX,
-         top:   e.pageY - 60
+         top:   e.pageY - 140
       });
     };
     $(document).bind('mousemove', event);
@@ -118,13 +115,13 @@ function main() {
           object.getElementById('score').textContent = '';
         }
 
+        if ($('#species1-tooltip').css("display") == "none") {  // only move it to mouse once
+          $('#species1-tooltip').css({
+           left: e.pageX,
+           top: e.pageY
+          });
+        }
         $('#species1-tooltip').fadeIn(200);
-
-
-        $('#species1-tooltip').css({
-         left: e.pageX,
-         top: e.pageY
-        });
 
       }
     });
