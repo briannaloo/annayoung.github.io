@@ -63,6 +63,7 @@ function main() {
     //Retrieve data to the tooltip on countries
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
       // tooltip info
+
       object.getElementById('country').textContent = data['country'].toUpperCase();
       var score = data['pacovw_2012'];
       if (score == -99) {
@@ -74,6 +75,7 @@ function main() {
           object.getElementById('score').textContent = Math.round(score * 10)/10 + '%';
       }
 
+      // fill in biomes
       var height_icon = 37;
       for (var biome = 1; biome < 15; biome++) {  // 14 biomes
         var protect = data['biome_' + biome];
@@ -81,13 +83,30 @@ function main() {
           var height_protect = height_icon * protect; // MAKE IT A DOUBLE!
           object.getElementById('biome' + biome + '-rect').setAttribute("height", height_protect + "");  
           object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1");  // doesn't carry over grey from other country  
-          //object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "1");
+          object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "1");  
         } else {  // not applicable
           object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
-          //object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "0.5");    
           object.getElementById('biome' + biome + '-rect').setAttribute("height", "0"); // clear from previous
+          object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "0.5");
         }
+
+        // global share when hover over a biome
+        /*$(object.getElementById("biome_" + biome)).hover(function() {
+          if (data['share_' + biome] != -1) {
+            var angle = parseInt(data['share_' + biome]) * 180; // deg of 180 deg circle
+            console.log(data['share_' + biome]);
+            var rad = angle * Math.PI/180;
+            var y = 56.0 / Math.tan(rad);
+            object.getElementById("global_share").setAttribute("points", "151.7,77.3 151.7,146.4 207.3," + y);
+          }
+        }, function() {
+
+        });*/
       }
+
+      
+
+
       /*$('#tool-tip').css({
          left:  e.pageX,
          top:   e.pageY - 60
@@ -104,7 +123,7 @@ function main() {
       for (var biome = 1; biome < 15; biome++) {  // 14 biomes
         object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");
         object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1"); 
-        //object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "1"); 
+        object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "1"); 
       }
     });
 
