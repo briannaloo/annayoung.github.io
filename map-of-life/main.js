@@ -36,7 +36,8 @@ function main() {
       },*/{
       sql: "SELECT * FROM pacovw_2014",
       cartocss: $('#pacovw').html().format('pacovw_2012'),
-      interactivity: "pacovw_2012, the_geom, country, biome_1, biome_2, biome_3, biome_4, biome_5, biome_6, biome_7, biome_8, biome_9, biome_10, biome_11, biome_12, biome_13, biome_14"
+      interactivity: "pacovw_2012, the_geom, country, biome_1, biome_2, biome_3, biome_4, biome_5, biome_6, biome_7, biome_8, biome_9, biome_10, biome_11, biome_12, biome_13, biome_14, \
+                      share_1, share_2, share_3, share_4, share_5, share_6, share_7, share_8, share_9, share_10, share_11, share_12, share_13, share_14"
       }]
 
   }).done(function(layer) {
@@ -64,7 +65,7 @@ function main() {
       // tooltip info
       object.getElementById('country').textContent = data['country'].toUpperCase();
       var score = data['pacovw_2012'];
-      if (score == -9) {
+      if (score == -99) {
         object.getElementById('score').textContent = 'N/A';
       } else {  
         if (score >= 10)  // format numbers to either be x.x or xx
@@ -79,9 +80,11 @@ function main() {
         if (protect != -1) {
           var height_protect = height_icon * protect; // MAKE IT A DOUBLE!
           object.getElementById('biome' + biome + '-rect').setAttribute("height", height_protect + "");  
-          object.getElementById('biome' + biome + '-path').setAttribute("fill", "#fff");  // doesn't carry over grey from other country  
+          object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1");  // doesn't carry over grey from other country  
+          //object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "1");
         } else {  // not applicable
-          object.getElementById('biome' + biome + '-path').setAttribute("fill", "#c9c9c9");  
+          object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
+          //object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "0.5");    
           object.getElementById('biome' + biome + '-rect').setAttribute("height", "0"); // clear from previous
         }
       }
@@ -100,7 +103,8 @@ function main() {
       object.getElementById('score').textContent = '';
       for (var biome = 1; biome < 15; biome++) {  // 14 biomes
         object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");
-        object.getElementById('biome' + biome + '-path').setAttribute("fill", "#fff");  
+        object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1"); 
+        //object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "1"); 
       }
     });
 

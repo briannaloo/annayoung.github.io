@@ -27,9 +27,8 @@ h1 {
   position: absolute;
   right: 25px;
   bottom: 20px;
-  width: 280px;
-  height: 300px;
-  pointer-events: none;
+  width: 320px;
+  height: 340px;
   z-index: 50;
 }
 
