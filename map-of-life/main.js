@@ -31,8 +31,8 @@ function main() {
     user_name: 'annasyoung',
     type: 'cartodb',
     sublayers: [/*{
-      sql: "SELECT * FROM bathymetry_layers",
-      cartocss: "#bathymetry_layers{ polygon-fill: #A7C6E4;polygon-opacity: 0.2;line-color: #FFF;line-width: 0;line-opacity: 1;}"
+      sql: "SELECT * FROM doc",
+      cartocss: "#doc{ polygon-fill: #A7C6E4;polygon-opacity: 1;line-color: #FFF;line-width: 0;line-opacity: 1;}"
       },*/{
       sql: "SELECT * FROM pacovw_latest",
       cartocss: $('#pacovw').html().format('pacovw_2012'),
