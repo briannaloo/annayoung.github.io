@@ -50,8 +50,9 @@ h1 {
 }
 
 #tool-tip {
+  pointer-events: none;
   position: absolute;
-  right: 25px;
+  left: 25px;
   bottom: 20px;
   width: 320px;
   height: 340px;

@@ -50,17 +50,20 @@ function main() {
     $('#map').append(v.render().el);
 
     //Make Tool-tip follow the mouse.
-   /* var event = function(e){
+    var event = function(e){
       $('#tool-tip').css({
-         left:  e.pageX,
+         left: e.pageX,
          top:   e.pageY - 60
       });
-    };*/
+    };
+    $(document).bind('mousemove', event);
+
     var obj = document.getElementById("svg-object");  // access svg doc
     var object = obj.contentDocument;
 
     //Retrieve data to the tooltip on countries
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
+    
       // tooltip info
       if (data['country'] != "Species1") {
          $('#species1-tooltip').hide();
@@ -118,20 +121,11 @@ function main() {
         $('#species1-tooltip').fadeIn(200);
 
         $('#species1-tooltip').css({
-         left:  e.pageX,
+         right: e.width - e.pageX,
          top:   e.pageY
         });
 
       }
-
-      
-
-
-      /*$('#tool-tip').css({
-         left:  e.pageX,
-         top:   e.pageY - 60
-      });
-      //$(document).bind('mousemove', event);*/
     });
 
     sublayer_country.on('featureOut', function(e, pos, latlng, data) {
