@@ -31,7 +31,7 @@ function main() {
     user_name: 'annasyoung',
     type: 'cartodb',
     sublayers: [/*{
-      sql: "SELECT * FROM doc",
+      sql: "SELECT * FROM bathymetry",
       cartocss: "#doc{ polygon-fill: #A7C6E4;polygon-opacity: 1;line-color: #FFF;line-width: 0;line-opacity: 1;}"
       },*/{
       sql: "SELECT * FROM pacovw_latest",
@@ -63,6 +63,8 @@ function main() {
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
       // tooltip info
       if (data['country'] != "Species1") {
+         $('#species1-tooltip').hide();
+
         object.getElementById('country').textContent = data['country'].toUpperCase();
         var score = data['pacovw_2012'];
         if (score == -99) {
@@ -103,6 +105,24 @@ function main() {
           });*/
         }
       }
+      else {  // country = Species1
+        // clear tooltip
+        object.getElementById('country').textContent = "SPECIES: KOALA";
+        for (var biome = 1; biome < 15; biome++) {  // 14 biomes
+          object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
+          object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "0.5");
+          object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");
+          object.getElementById('score').textContent = '';
+        }
+
+        $('#species1-tooltip').fadeIn(200);
+
+        $('#species1-tooltip').css({
+         left:  e.pageX,
+         top:   e.pageY
+        });
+
+      }
 
       
 
@@ -110,8 +130,8 @@ function main() {
       /*$('#tool-tip').css({
          left:  e.pageX,
          top:   e.pageY - 60
-      });*/
-      //$(document).bind('mousemove', event);
+      });
+      //$(document).bind('mousemove', event);*/
     });
 
     sublayer_country.on('featureOut', function(e, pos, latlng, data) {
@@ -125,6 +145,7 @@ function main() {
         object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1"); 
         object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "1"); 
       }
+      $('#species1-tooltip').hide();
     });
 
   });

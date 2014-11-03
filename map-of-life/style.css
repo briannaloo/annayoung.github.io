@@ -23,6 +23,32 @@ h1 {
   top: 0px;
 }
 
+#species1-tooltip {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  width: 420px;
+  height: 270px;
+  background-color: #c9c9c9;
+  opacity: 0.9;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+.species-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Helvetica;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.species-span {
+  font-size: 16px;
+}
+
 #tool-tip {
   position: absolute;
   right: 25px;
