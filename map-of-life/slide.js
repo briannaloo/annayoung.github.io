@@ -89,7 +89,7 @@
         }
         
         if(settings.tabLocation === 'left') {
-            obj.css({ 'left': '-354px'});
+            obj.css({ 'left': '-504px'});
             settings.tabHandle.css({'right' : '-' + properties.tabWidth});
         }
 
@@ -110,7 +110,7 @@
             if (settings.tabLocation === 'top') {
                 obj.animate({top:'-' + properties.containerHeight}, settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'left') {
-                obj.animate({left: '-354px'}, settings.speed).removeClass('open');
+                obj.animate({left: '-504px'}, settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'right') {
                 obj.animate({right: '-60%'},  settings.speed).removeClass('open');
             } else if (settings.tabLocation === 'bottom') {

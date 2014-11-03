@@ -29,6 +29,7 @@ h1 {
   bottom: 20px;
   width: 280px;
   height: 300px;
+  pointer-events: none;
   z-index: 50;
 }
 
@@ -128,7 +129,7 @@ a {
 }
 
 #slide_out_info {
-  width: 350px;
+  width: 500px;  /*350*/
   height: 50%;
   border-radius: 0 0 10px 0px;
   background: #ccc;
