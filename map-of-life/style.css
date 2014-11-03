@@ -30,6 +30,8 @@ h1 {
   left: 100px;
   width: 420px;
   height: 270px;
+  margin-left: -420px;
+  margin-top: -270px;
   background-color: #c9c9c9;
   opacity: 0.9;
   border-radius: 8px;

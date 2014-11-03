@@ -120,9 +120,10 @@ function main() {
 
         $('#species1-tooltip').fadeIn(200);
 
+
         $('#species1-tooltip').css({
-         right: e.width - e.pageX,
-         top:   e.pageY
+         left: e.pageX,
+         top: e.pageY
         });
 
       }
