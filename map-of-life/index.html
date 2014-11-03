@@ -60,6 +60,8 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
         line-color: #000;
         line-width: 0.25;
         line-opacity: 1;
+        polygon-pattern-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/annasyoung/assets/20141103164017paper_texture_white.png);
+        polygon-pattern-comp-op: multiply;
       }
 
       #pacovw [ {0} < 18] {
@@ -82,6 +84,11 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
       }
       #pacovw [ {0} < 0] {
          polygon-fill: rgb(199, 199, 197);
+      }
+
+      #pacovw [country = 'Species1'] {
+        polygon-pattern-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/annasyoung/assets/20141103163515shrew.jpg);
+        polygon-pattern-alignment: local;
       }
     </script>   
 
