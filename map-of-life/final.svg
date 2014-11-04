@@ -63,7 +63,7 @@
          transform="translate(-0.36330703,1.0899211)"
          id="g5399"><g
            transform="translate(-3.5965556,-90.334195)"
-           id="biome_1"><path id="biome1-path" style="pointer-events: all; cursor: pointer" pointer-events="all" cursor="pointer"
+           id="biome_1"><path id="biome1-path" style="pointer-events: all; cursor: pointer" pointer-events="all" cursor="pointer" stroke="#08b900" stroke-width="3"
              d="m 92,196.7 c 0,9.9 -8,17.8 -17.8,17.8 -9.9,0 -17.8,-8 -17.8,-17.8 0,-9.9 8,-17.8 17.8,-17.8 9.8,-0.1 17.8,7.9 17.8,17.8"
              fill="#ffffff" /></g>
 <rect clip-path="url(#biome1)" width="35.84996" height="36" ry="17.92498" x="52.558323" y="-124.39296" transform="matrix(1,0,0,-1,0,0)" id="rect6434" style="fill:#08b900;fill-opacity:1"/>
@@ -171,7 +171,7 @@
            style="fill:#494846;fill-rule:evenodd" /><g
            id="g5905"><defs
              id="defs5907"><polygon
-               points="151.7,77.3 151.7,146.4 207.3,102 "
+               points=""
                id="global_share" /></defs><clipPath
              id="SVGID_32_"><use
                id="use5911"

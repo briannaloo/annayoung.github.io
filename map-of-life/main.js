@@ -63,7 +63,13 @@ function main() {
       $(object.getElementById("biome" + biome + "-path")).click(function() {
           var id = $(this).attr("id");
           id = id.slice(5, 5 + (id.length - 10));
+
+          // get rid of previous selected
+          $(object.getElementById("biome" + current_biome + "-path")).attr("stroke", "none");
+          $(object.getElementById("biome" + current_biome + "-path")).attr("stroke-width", "0");
           current_biome = id;
+          $(this).attr("stroke", "#08b900");
+          $(this).attr("stroke-width", "3");
           // just using biome wasn't working
       });
     }
