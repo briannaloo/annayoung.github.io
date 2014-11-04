@@ -23,6 +23,29 @@ h1 {
   top: 0px;
 }
 
+#iframe {
+  width: 370px; height: 220px; position: absolute; left: 20px; top: 400px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+table, td {
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+td {
+  padding: 10px;
+}
+table td:first-child, table td:last-child  {
+  font-style: italic;
+  font-weight: none;
+  font-size: 11px;
+  width: 55px;
+}
+
 #species1-tooltip {
   display: none;
   position: absolute;
@@ -43,15 +66,40 @@ h1 {
   font-size: 20px;
   font-weight: bold;
   font-family: Helvetica;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
+}
+
+#species-facts {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Helvetica;
+  position: absolute;
+  top: 230px;
+  width: 96%;
+  height: 100px;
+  left: 2%;
 }
 
 .species-span {
   font-size: 16px;
+  font-style: italic;
+  width: 280px;
+  position: absolute;
+  left: 120px;
+  display: block;
+  text-align: left;
+}
+
+.species-pic {
+  width: 100px;
+  position: absolute;
+  left: 15px;
 }
 
 #tool-tip {
+  pointer-events: none;
   position: absolute;
   right: 25px;
   bottom: 20px;
@@ -66,6 +114,8 @@ h1 {
   bottom: 20px;
   width: 130px;
   height: 340px;
+  /*bottom: 360px;
+  right: 325px;*/
   z-index: 100;
   pointer-events: none;
 }

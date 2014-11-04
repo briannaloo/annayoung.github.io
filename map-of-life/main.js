@@ -244,12 +244,14 @@ function main() {
 
       object.getElementById('country').textContent = "HOVER OVER A COUNTRY";
       //object.getElementById('score').textContent = '';
-      //object.getElementById("global_use").setAttribute("xlink:href", "global_share");
+      
       for (var biome = 1; biome < 15; biome++) {  // 14 biomes
         object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");
         object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1"); 
         $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#d09b23");
         $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#d09b23");
+      
+        object.getElementById("global_share" + biome).setAttribute("points", "");
       }
       $('#species1-tooltip').hide();
     });
