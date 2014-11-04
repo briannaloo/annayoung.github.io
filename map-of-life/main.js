@@ -62,16 +62,18 @@ function main() {
     "Tropical & <br>Subtropical Dry <br>Broadleaf Forests",
     "Tropical & <br>Subtropical Coniferous Forests",
     "Temperate <br>Broadleaf and <br>Mixed Forests",
-    "Temperate <br>Conifer Forests<br><br>",
-    "Boreal <br>Forests and Taiga<br><br>",
+    "<br>Temperate <br>Conifer Forests<br>",
+    "<br>Boreal <br>Forests and Taiga<br>",
     "Tropical & <br>Subtropical Grasslands,<br>Savannas & Shrublands",
     "Temperate <br>Grasslands, Savannas <br>& Shrublands",
     "Flooded <br>Grasslands &<br> Savannas",
     "Montagne <br>Grasslands & <br>Shrublands",
-    "Tundra<br><br><br>",
+    "<br>Tundra<br><br>",
     "Mediterranean <br>Forests, Woodlands <br>& Scrub",
     "Deserts <br>and Xeric  <br>Shrublands",
-    "Mangrove<br><br><br>"];
+    "<br>Mangrove<br><br>"];
+    object.getElementById("global_use").setAttributeNS( "http://www.w3.org/1999/xlink", "href", "#global_share1");
+
 
     var current_biome = 1;
     var previous_biome = 1;
@@ -96,6 +98,8 @@ function main() {
           $('#biome-protection' + previous_biome).css("display", "none");
           $('#biome-global' + previous_biome).css("display", "none");
           $('#biome-global' + current_biome).css("display", "inline");
+
+          object.getElementById("global_use").setAttributeNS( "http://www.w3.org/1999/xlink", "href", "#global_share" + current_biome);
       });
     }
 
@@ -140,7 +144,7 @@ function main() {
             $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#d09b23");
             $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#d09b23");
           
-            $('#biome-protection' + biome).html((protect*100).toPrecision(3));
+            $('#biome-protection' + biome).html((protect*100).toPrecision(2));
           } else {  // not applicable
             object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
             object.getElementById('biome' + biome + '-rect').setAttribute("height", "0"); // clear from previous
@@ -153,36 +157,56 @@ function main() {
           // global share
           var global = data['share_' + biome];
           if (global != -1) {
-            $('#biome-global' + biome).html((global*100).toPrecision(3));
+            $('#biome-global' + biome).html((global*100).toPrecision(2));
+
+            // pie piece
+            var share = Number(global).toFixed(10);
+            console.log('data' + share);
+            var angle = share * 360; // deg of 180 deg circle
+            console.log('angle ' + angle);
+            var rad = (angle * Math.PI/180).toFixed(10);
+            console.log('rad ' + rad);
+            var x_diff = 250 - 151;
+            console.log((Math.tan(rad)).toFixed(10));
+            var y = 146 - x_diff / (Math.tan(rad)).toFixed(10);
+            console.log('y ' + y);
+            if (angle > 1) {
+              object.getElementById("global_share" + biome).setAttribute("points", "151,27 151,146 250," + y);
+            }
+
           }
           else {
             $('#biome-global' + biome).html("N/A");
+            object.getElementById("global_share" + biome).setAttribute("points", "");
           }
+
+          // global share for selected biome
+          /*if (global != -1) {
+            var data = Number(global).toFixed(10);
+            //$('#biome-global').html((data*100).toPrecision(3));
+
+            //var data = Number(data['share_' + biome]).toFixed(10);
+            console.log('data ' + data);
+            var angle = data * 360; // deg of 180 deg circle
+            console.log('angle ' + angle);
+            var rad = (angle * Math.PI/180).toFixed(10);
+            console.log('rad ' + rad);
+            var x_diff = 250 - 151;
+            console.log((Math.tan(rad)).toFixed(10));
+            var y = 146 - x_diff / (Math.tan(rad)).toFixed(10);
+            console.log('y ' + y);
+            if (angle > 1) {
+              object.getElementById("global_share" + biome).setAttribute("points", "151,27 151,146 250," + y);
+            }
+          }
+          else {
+            $('#biome-global' + biome).html("N/A");
+            object.getElementById("global_share" + biome).setAttribute("points", "");
+          }*/
+
         }
 
-        // global share for selected biome
-        if (data['share_' + current_biome] != -1) {
-          $('#biome-global').html((data['share_' + current_biome]*100).toPrecision(3));
-
-          console.log('current_biome ' + current_biome);
-          var data = Number(data['share_' + current_biome]).toFixed(10);
-          console.log('data ' + data);
-          var angle = data * 360; // deg of 180 deg circle
-          console.log('angle ' + angle);
-          var rad = (angle * Math.PI/180).toFixed(10);
-          console.log('rad ' + rad);
-          var x_diff = 250 - 151;
-          console.log((Math.tan(rad)).toFixed(10));
-          var y = 146 - x_diff / (Math.tan(rad)).toFixed(10);
-          console.log('y ' + y);
-          if (angle > 1) {
-            object.getElementById("global_share").setAttribute("points", "151,27 151,146 250," + y);
-          }
-        }
-        else {
-          $('#biome-global').html("N/A");
-          object.getElementById("global_share").setAttribute("points", "");
-        }
+        
 
       }
       else {  // country = Species1
@@ -220,7 +244,7 @@ function main() {
 
       object.getElementById('country').textContent = "HOVER OVER A COUNTRY";
       //object.getElementById('score').textContent = '';
-      object.getElementById("global_share").setAttribute("points", "");
+      //object.getElementById("global_use").setAttribute("xlink:href", "global_share");
       for (var biome = 1; biome < 15; biome++) {  // 14 biomes
         object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");
         object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1"); 

@@ -87,6 +87,7 @@ span {
   font-size: 11px;
   font-family: Helvetica;
   text-align: center;
+  font-weight: bold;
 }
 
 #protections span, #globals span {
