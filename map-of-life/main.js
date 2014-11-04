@@ -58,6 +58,21 @@ function main() {
     var obj = document.getElementById("svg-object");  // access svg doc
     var object = obj.contentDocument;
 
+    var biome_types = ["Tropical & <br>Subtropical Moist <br>Broadleaf Forests", 
+    "Tropical & <br>Subtropical Dry <br>Broadleaf Forests",
+    "Tropical & <br>Subtropical Coniferous Forests",
+    "Temperate <br>Broadleaf and <br>Mixed Forests",
+    "Temperate <br>Conifer Forests<br><br>",
+    "Boreal <br>Forests and Taiga<br><br>",
+    "Tropical & <br>Subtropical Grasslands,<br>Savannas & Shrublands",
+    "Temperate <br>Grasslands, Savannas <br>& Shrublands",
+    "Flooded <br>Grasslands &<br> Savannas",
+    "Montagne <br>Grasslands & <br>Shrublands",
+    "Tundra<br><br><br>",
+    "Mediterranean <br>Forests, Woodlands <br>& Scrub",
+    "Deserts <br>and Xeric  <br>Shrublands",
+    "Mangrove<br><br><br>"];
+
     var current_biome = 1;
     for (var biome = 1; biome < 15; biome++) {
       $(object.getElementById("biome" + biome + "-path")).click(function() {
@@ -71,6 +86,8 @@ function main() {
           $(this).attr("stroke", "#08b900");
           $(this).attr("stroke-width", "3");
           // just using biome wasn't working
+
+          $('#biome-label').html(biome_types[parseInt(id)-1]);
       });
     }
 
@@ -80,17 +97,29 @@ function main() {
       if (data['country'] != "Species1") {
         //$(object.getElementById("svg-container")).show();
          $('#species1-tooltip').hide();
+         $('#biome-specifics').show();
 
-        object.getElementById('country').textContent = data['country'].toUpperCase();
+         var protection = data['biome_' + current_biome];
+         if (protection != -1)
+          $('#biome-protection').html((protection*100));
+        else
+          $('#biome-protection').html("N/A");
+
+
         var score = data['pacovw_2012'];
         if (score == -99) {
-          object.getElementById('score').textContent = 'N/A';
+          //object.getElementById('score').textContent = 'N/A';
+          score = "N/A"
         } else {  
           if (score >= 10)  // format numbers to either be x.x or xx
-            object.getElementById('score').textContent = Math.round(score) + '%';
+            score = Math.round(score) + '%';
+            //object.getElementById('score').textContent = Math.round(score) + '%';
           else
-            object.getElementById('score').textContent = Math.round(score * 10)/10 + '%';
+            score = Math.round(score * 10)/10 + '%';
+            //object.getElementById('score').textContent = Math.round(score * 10)/10 + '%';
         }
+        object.getElementById('country').textContent = score + ": " + data['country'].toUpperCase();
+        
 
         // fill in biomes
         var height_icon = 37;
@@ -112,6 +141,8 @@ function main() {
 
         // global share for selected biome
         if (data['share_' + current_biome] != -1) {
+          $('#biome-global').html((data['share_' + current_biome]*100).toPrecision(3));
+
           console.log('current_biome ' + current_biome);
           var data = Number(data['share_' + current_biome]).toFixed(10);
           console.log('data ' + data);
@@ -128,6 +159,7 @@ function main() {
           }
         }
         else {
+          $('#biome-global').html("N/A");
           object.getElementById("global_share").setAttribute("points", "");
         }
 
@@ -135,9 +167,10 @@ function main() {
       else {  // country = Species1
         // clear tooltip
         //$(object.getElementById("svg-container")).hide();
+        $('#biome-specifics').hide();
 
         object.getElementById('country').textContent = "";
-        object.getElementById('score').textContent = '';
+        //object.getElementById('score').textContent = '';
         object.getElementById("global_share").setAttribute("points", "");
         for (var biome = 1; biome < 15; biome++) {  // 14 biomes
           object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
@@ -162,9 +195,10 @@ function main() {
 
       // clear tooltip
       //$(object.getElementById("svg-container")).hide();
+      $('#biome-specifics').hide();
 
       object.getElementById('country').textContent = "HOVER OVER A COUNTRY";
-      object.getElementById('score').textContent = '';
+      //object.getElementById('score').textContent = '';
       object.getElementById("global_share").setAttribute("points", "");
       for (var biome = 1; biome < 15; biome++) {  // 14 biomes
         object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");

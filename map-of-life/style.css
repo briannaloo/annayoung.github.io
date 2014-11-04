@@ -60,7 +60,19 @@ h1 {
   z-index: 50;
 }
 
-.leaflet-control-attribution {display: none;}
+#tooltip-info {
+  position: absolute;
+  right: 116px;
+  bottom: 20px;
+  width: 130px;
+  height: 340px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#biome-label {
+  margin-top: 130px;
+}
 
 span {
   color:#323232;
@@ -69,6 +81,25 @@ span {
   text-align: center;
   display: block;
 }
+
+#tooltip-info span {
+  color: #fff;
+  font-size: 11px;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+#biome-global, #biome-protection {
+  font-size: 16px !important;
+  color: #08b900 !important;
+  font-weight: bold;
+}
+
+#biome-specifics {
+  display: none;
+}
+
+.leaflet-control-attribution {display: none;}
 
 a {
   color:#4c52ff;
