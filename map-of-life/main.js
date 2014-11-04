@@ -47,22 +47,32 @@ function main() {
     $('#map').append(v.render().el);
 
     //Make Tool-tip follow the mouse.
-    var event = function(e){
+    /*var event = function(e){
       $('#tool-tip').css({
          left: e.pageX,
          top:   e.pageY - 140
       });
     };
-    $(document).bind('mousemove', event);
+    $(document).bind('mousemove', event);*/
 
     var obj = document.getElementById("svg-object");  // access svg doc
     var object = obj.contentDocument;
+
+    var current_biome = 1;
+    for (var biome = 1; biome < 15; biome++) {
+      $(object.getElementById("biome" + biome + "-path")).click(function() {
+          var id = $(this).attr("id");
+          id = id.slice(5, 5 + (id.length - 10));
+          current_biome = id;
+          // just using biome wasn't working
+      });
+    }
 
     //Retrieve data to the tooltip on countries
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
       // tooltip info
       if (data['country'] != "Species1") {
-        $(object.getElementById("svg-container")).show();
+        //$(object.getElementById("svg-container")).show();
          $('#species1-tooltip').hide();
 
         object.getElementById('country').textContent = data['country'].toUpperCase();
@@ -80,12 +90,6 @@ function main() {
         var height_icon = 37;
         for (var biome = 1; biome < 15; biome++) {  // 14 biomes
           var protect = data['biome_' + biome];
-
-          object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
-          object.getElementById('biome' + biome + '-rect').setAttribute("height", "0"); // clear from previous
-          $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#B5B5B5");
-          $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#B5B5B5");
-            
           if (protect != -1) {
             var height_protect = height_icon * protect; // MAKE IT A DOUBLE!
             object.getElementById('biome' + biome + '-rect').setAttribute("height", height_protect + "");  
@@ -93,34 +97,48 @@ function main() {
             $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#d09b23");
             $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#d09b23");
           } else {  // not applicable
-            
+            object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
+            object.getElementById('biome' + biome + '-rect').setAttribute("height", "0"); // clear from previous
+            $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#B5B5B5");
+            $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#B5B5B5");
           }
-
-          // global share when hover over a biome
-          /*$(object.getElementById("biome_" + biome)).hover(function() {
-            if (data['share_' + biome] != -1) {
-              var angle = parseInt(data['share_' + biome]) * 180; // deg of 180 deg circle
-              console.log(data['share_' + biome]);
-              var rad = angle * Math.PI/180;
-              var y = 56.0 / Math.tan(rad);
-              object.getElementById("global_share").setAttribute("points", "151.7,77.3 151.7,146.4 207.3," + y);
-            }
-          }, function() {
-
-          });*/
         }
+
+        // global share for selected biome
+        if (data['share_' + current_biome] != -1) {
+          console.log('current_biome ' + current_biome);
+          var data = Number(data['share_' + current_biome]).toFixed(10);
+          console.log('data ' + data);
+          var angle = data * 360; // deg of 180 deg circle
+          console.log('angle ' + angle);
+          var rad = (angle * Math.PI/180).toFixed(10);
+          console.log('rad ' + rad);
+          var x_diff = 250 - 151;
+          console.log((Math.tan(rad)).toFixed(10));
+          var y = 146 - x_diff / (Math.tan(rad)).toFixed(10);
+          console.log('y ' + y);
+          if (angle > 1) {
+            object.getElementById("global_share").setAttribute("points", "151,27 151,146 250," + y);
+          }
+        }
+        else {
+          object.getElementById("global_share").setAttribute("points", "");
+        }
+
       }
       else {  // country = Species1
         // clear tooltip
-        $(object.getElementById("svg-container")).hide();
+        //$(object.getElementById("svg-container")).hide();
 
-        /*object.getElementById('country').textContent = "SPECIES: KOALA";
+        object.getElementById('country').textContent = "";
+        object.getElementById('score').textContent = '';
+        object.getElementById("global_share").setAttribute("points", "");
         for (var biome = 1; biome < 15; biome++) {  // 14 biomes
-          object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1");
-          object.getElementById('biome' + biome + '-obj').setAttribute("opacity", "1");
-          object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");
-          object.getElementById('score').textContent = '';
-        }*/
+          object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
+            object.getElementById('biome' + biome + '-rect').setAttribute("height", "0"); // clear from previous
+            $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#B5B5B5");
+            $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#B5B5B5");
+        }
 
         if ($('#species1-tooltip').css("display") == "none") {  // only move it to mouse once
           $('#species1-tooltip').css({
@@ -137,10 +155,11 @@ function main() {
       //$(document).unbind('mousemove', event, false);
 
       // clear tooltip
-      $(object.getElementById("svg-container")).hide();
+      //$(object.getElementById("svg-container")).hide();
 
       object.getElementById('country').textContent = "HOVER OVER A COUNTRY";
       object.getElementById('score').textContent = '';
+      object.getElementById("global_share").setAttribute("points", "");
       for (var biome = 1; biome < 15; biome++) {  // 14 biomes
         object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");
         object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1"); 
