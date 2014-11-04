@@ -89,7 +89,8 @@ span {
   text-align: center;
 }
 
-#biome-global, #biome-protection {
+#protections span, #globals span {
+  display:none;
   font-size: 16px !important;
   color: #08b900 !important;
   font-weight: bold;

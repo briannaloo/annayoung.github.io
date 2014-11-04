@@ -74,6 +74,7 @@ function main() {
     "Mangrove<br><br><br>"];
 
     var current_biome = 1;
+    var previous_biome = 1;
     for (var biome = 1; biome < 15; biome++) {
       $(object.getElementById("biome" + biome + "-path")).click(function() {
           var id = $(this).attr("id");
@@ -82,12 +83,19 @@ function main() {
           // get rid of previous selected
           $(object.getElementById("biome" + current_biome + "-path")).attr("stroke", "none");
           $(object.getElementById("biome" + current_biome + "-path")).attr("stroke-width", "0");
+          previous_biome = current_biome;
           current_biome = id;
           $(this).attr("stroke", "#08b900");
           $(this).attr("stroke-width", "3");
           // just using biome wasn't working
 
           $('#biome-label').html(biome_types[parseInt(id)-1]);
+          $('#biome-protection' + previous_biome).hide();
+
+          $('#biome-protection' + current_biome).css("display", "inline");
+          $('#biome-protection' + previous_biome).css("display", "none");
+          $('#biome-global' + previous_biome).css("display", "none");
+          $('#biome-global' + current_biome).css("display", "inline");
       });
     }
 
@@ -99,11 +107,11 @@ function main() {
          $('#species1-tooltip').hide();
          $('#biome-specifics').show();
 
-         var protection = data['biome_' + current_biome];
+         /*var protection = data['biome_' + current_biome];
          if (protection != -1)
           $('#biome-protection').html((protection*100));
         else
-          $('#biome-protection').html("N/A");
+          $('#biome-protection').html("N/A");*/
 
 
         var score = data['pacovw_2012'];
@@ -131,11 +139,24 @@ function main() {
             object.getElementById('biome' + biome + '-path').setAttribute("opacity", "1");  // doesn't carry over grey from other country  
             $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#d09b23");
             $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#d09b23");
+          
+            $('#biome-protection' + biome).html((protect*100).toPrecision(3));
           } else {  // not applicable
             object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
             object.getElementById('biome' + biome + '-rect').setAttribute("height", "0"); // clear from previous
             $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#B5B5B5");
             $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#B5B5B5");
+          
+            $('#biome-protection' + biome).html("N/A");
+          }
+
+          // global share
+          var global = data['share_' + biome];
+          if (global != -1) {
+            $('#biome-global' + biome).html((global*100).toPrecision(3));
+          }
+          else {
+            $('#biome-global' + biome).html("N/A");
           }
         }
 
