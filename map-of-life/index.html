@@ -17,29 +17,31 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
   <body>
     <div id="map"></div>
 
-    <div id="species1-tooltip">
-      <p class="species-text">Brown-Throated Barbet<br><br>
-      <img src="./barbet.png" class="species-pic">
-      <span class="species-span">The brown-throated barbet (Megalaima corvina) is a species of bird in the Ramphastidae family. It is endemic to Indonesia. Its natural habitats are subtropical or tropical moist lowland forests and subtropical or tropical moist montane forests.</span><br><br></p>
+    <div id="species-tooltip">
+      <p ><span id="species-text"></span><br><br>
+      <img src="./Species1.png" class="species-pic">
+      <span class="species-span"></span><br><br></p>
       <div id="species-facts">
         <table>
           <tr>
-              <td>Expert range size</td>
-              <td>10,992 km<sup>2</sup></td>
-              <td>2,652 km<sup>2</sup></td>
-              <td>Refined range size</td>
+            <td>Expert range size</td>
+            <td id="data1"></td>
+            <td id="data2"></td>
+            <td>Refined range size</td>
           </tr>
           <tr>
-              <td>Total validation points</td>
-              <td>20</td>
-              <td>20</td>
-              <td>Validation points in refined range</td>
+            <td>Total validation points</td>
+            <td id="data3"></td>
+            <td id="data4"></td>
+            <td>Validation points in refined range</td>
           </tr>
+
         </table>
       </div>
-      <iframe id="iframe" src="http://epi.yale.edu/pollution-map/" scrolling="no" border="none" ></iframe>
+      <div id="iframe-container">
+        <iframe id="iframe" src="http://ng-alpha.map-of-life.appspot.com/info/protect/Megalaima_corvina" scrolling="no" border="none" ></iframe>
+      </div>
       <div style="height: 40px; position: absolute; top: 620px; width: 100%"></div>
-
     </div>
 
     <div id="tool-tip">
@@ -86,7 +88,7 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
     </div>
     <div id="legends">   
       <div id="legend_countries" class="legend">
-        <p class="legend_title">Terrestrial Protection Score</p>
+        <p class="legend_title">Biodiversity Protection Score</p>
         <span class="left">0%</span>
         <span class="right">17%</span><br>
         <aside class="colors">
@@ -123,7 +125,7 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
         line-color: #000;
         line-width: 0.25;
         line-opacity: 1;
-        polygon-pattern-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/annasyoung/assets/20141103164017paper_texture_white.png);
+        polygon-pattern-file: url(http://annayoung.github.io/map-of-life/paper_texture_white.png);
         polygon-pattern-comp-op: multiply;
       }
 

@@ -23,8 +23,16 @@ h1 {
   top: 0px;
 }
 
+#iframe-container {
+  width: 370px; height: 220px;
+  overflow: hidden;
+  position: relative;
+left: 20px;
+top: 300px;
+}
+
 #iframe {
-  width: 370px; height: 220px; position: absolute; left: 20px; top: 400px;
+  width: 1280px; height: 1200px; position: absolute; /*left: 20px; top: 400px;*/
 }
 
 table {
@@ -49,7 +57,7 @@ table td:first-child, table td:last-child  {
   width: 55px;
 }
 
-#species1-tooltip {
+#species-tooltip {
   display: none;
   position: absolute;
   top: 10px;
@@ -64,7 +72,7 @@ table td:first-child, table td:last-child  {
   overflow-y: scroll;
 }
 
-.species-text {
+#species-text {
   color: #fff;
   font-size: 20px;
   font-weight: bold;

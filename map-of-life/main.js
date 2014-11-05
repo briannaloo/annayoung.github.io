@@ -2,6 +2,26 @@
 
 // code for info window and hover features
 
+var species_text = {
+  "Species1": ["Brown-Throated Barbet", 
+    "The brown-throated barbet (Megalaima corvina) is a species of bird in the Ramphastidae family. It is endemic to Indonesia. Its natural habitats are subtropical or tropical moist lowland forests and subtropical or tropical moist montane forests.",
+    "10,992 km<sup>2</sup>",  // expert range
+    "2,652 km<sup>2</sup>", // refined range
+    "20", // total validation points
+    "20",  // validation points in refined range
+    "http://ng-alpha.map-of-life.appspot.com/info/protect/Megalaima_corvina"
+  ],
+  "Species2": ["Smoky White-Toothed Shrew",
+  "The Smoky White-toothed Shrew (Crocidura fumosa) is a species of mammal in the Soricidae family. It is endemic to Kenya. Its natural habitat is subtropical or tropical moist montane forests. It is threatened by habitat loss.",
+  "12,012 km<sup>2</sup>",
+  "2,197 km<sup>2</sup>",
+  "9",
+  "9",
+  "http://ng-alpha.map-of-life.appspot.com/info/protect/Crocidura_fumosa"
+  ]};
+// picture names need to be Species1.png and Species2.png
+
+
 //Formats the columns for us into css
 String.prototype.format = (function (i, safe, arg) {
   function format() {
@@ -31,7 +51,7 @@ function main() {
     user_name: 'annasyoung',
     type: 'cartodb',
     sublayers: [{
-      sql: "SELECT * FROM pacovw_2014",
+      sql: "SELECT * FROM pacovw_latest",
       cartocss: $('#pacovw').html().format('pacovw_2012'),
       interactivity: "pacovw_2012, the_geom, country, biome_1, biome_2, biome_3, biome_4, biome_5, biome_6, biome_7, biome_8, biome_9, biome_10, biome_11, biome_12, biome_13, biome_14, share_1, share_2, share_3, share_4, share_5, share_6, share_7, share_8, share_9, share_10, share_11, share_12, share_13, share_14"
       }]
@@ -106,8 +126,8 @@ function main() {
     //Retrieve data to the tooltip on countries
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
       // tooltip info
-      if (data['country'] != "Species1") {
-         $('#species1-tooltip').hide();
+      if (data['country'] != "Species1" && data['country'] != "Species2") {
+         $('#species-tooltip').hide();
          $('#biome-specifics').show();
 
         var score = data['pacovw_2012'];
@@ -201,7 +221,7 @@ function main() {
         
 
       }
-      else {  // country = Species1
+      else {  // country = Species1 or Species2
         // clear tooltip
         $('#biome-specifics').hide();
 
@@ -214,15 +234,25 @@ function main() {
             $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#B5B5B5");
         }
 
-        if ($('#species1-tooltip').css("display") == "none") {  // only move it to mouse once
-          $('#species1-tooltip').css({
+        if ($('#species-tooltip').css("display") == "none") {  // only move it to mouse once
+          $('#species-tooltip').css({
            left: e.pageX,
            top: e.pageY
           });
         }
-        $('#species1-tooltip').fadeIn(200);
+        $('#species-tooltip').fadeIn(200);
+
+        $('#species-text').html(species_text[data['country']][0]);
+        $('.species-pic').attr("src", "./" + data['country'] + ".png");
+        $('.species-span').html(species_text[data['country']][1]);
+        $('#data1').html(species_text[data['country']][2]);
+        $('#data2').html(species_text[data['country']][3]);
+        $('#data3').html(species_text[data['country']][4]);
+        $('#data4').html(species_text[data['country']][5]);
+        //$('#frame').attr("src", species_text[data['country']][6]);
 
       }
+      
     });
 
     sublayer_country.on('featureOut', function(e, pos, latlng, data) {
@@ -241,7 +271,7 @@ function main() {
       
         object.getElementById("global_share" + biome).setAttribute("points", "");
       }
-      $('#species1-tooltip').hide();
+      $('#species-tooltip').hide();
     });
 
   });
