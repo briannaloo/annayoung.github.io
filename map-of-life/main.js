@@ -31,7 +31,7 @@ function main() {
     user_name: 'annasyoung',
     type: 'cartodb',
     sublayers: [{
-      sql: "SELECT * FROM pacovw_latest",
+      sql: "SELECT * FROM pacovw_2014",
       cartocss: $('#pacovw').html().format('pacovw_2012'),
       interactivity: "pacovw_2012, the_geom, country, biome_1, biome_2, biome_3, biome_4, biome_5, biome_6, biome_7, biome_8, biome_9, biome_10, biome_11, biome_12, biome_13, biome_14, share_1, share_2, share_3, share_4, share_5, share_6, share_7, share_8, share_9, share_10, share_11, share_12, share_13, share_14"
       }]
@@ -107,16 +107,8 @@ function main() {
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
       // tooltip info
       if (data['country'] != "Species1") {
-        //$(object.getElementById("svg-container")).show();
          $('#species1-tooltip').hide();
          $('#biome-specifics').show();
-
-         /*var protection = data['biome_' + current_biome];
-         if (protection != -1)
-          $('#biome-protection').html((protection*100));
-        else
-          $('#biome-protection').html("N/A");*/
-
 
         var score = data['pacovw_2012'];
         if (score == -99) {
@@ -158,52 +150,52 @@ function main() {
           var global = data['share_' + biome];
           if (global != -1) {
             $('#biome-global' + biome).html((global*100).toPrecision(2));
-
-            // pie piece
+            // pie piece: fill in first quarter of circle
             var share = Number(global).toFixed(10);
-            console.log('data' + share);
             var angle = share * 360; // deg of 180 deg circle
-            console.log('angle ' + angle);
+            if (share > 0.25) // fill in first quarter properly no matter what
+              angle = 0.25 * 360;
             var rad = (angle * Math.PI/180).toFixed(10);
-            console.log('rad ' + rad);
-            var x_diff = 250 - 151;
-            console.log((Math.tan(rad)).toFixed(10));
+            var x_diff = 350 - 151;
             var y = 146 - x_diff / (Math.tan(rad)).toFixed(10);
-            console.log('y ' + y);
             if (angle > 1) {
               object.getElementById("global_share" + biome).setAttribute("points", "151,27 151,146 250," + y);
+
+              // fill in second quarter of circle
+              var x, x2, y2;
+              if (share > 0.25) {
+                var second_share = share - 0.25;
+                if (second_share > 0.25)
+                  second_share = 0.25;
+                var rad = (second_share * 360 * Math.PI/180).toFixed(10);
+                var y_diff = 300 - 146;
+                x = 151 + y_diff / (Math.tan(rad)).toFixed(10);
+                object.getElementById("global_share" + biome).setAttribute("points", "151,27 151,146 " + x + ",300 250," + y);
+              }
+
+              // fill in third quarter of circle
+              if (share > 0.5) {
+                var third_share = share - 0.5;
+                if (third_share > 0.25)
+                  third_share = 0.25;
+                var rad = (third_share * 360 * Math.PI/180).toFixed(10);
+                var x_diff = 151 - 50;
+                y2 = 146 + (x_diff / (Math.tan(rad)).toFixed(10));
+                object.getElementById("global_share" + biome).setAttribute("points", "151,27 151,146 50," + y2 + " " + x + ",300 250," + y);
+              }
+              //if (share > 0.75) 
+                // won't ever happen with this data
+
             }
+            else  // clear it so doesn't get previous country's data
+              object.getElementById("global_share" + biome).setAttribute("points", "");
+
 
           }
           else {
             $('#biome-global' + biome).html("N/A");
             object.getElementById("global_share" + biome).setAttribute("points", "");
           }
-
-          // global share for selected biome
-          /*if (global != -1) {
-            var data = Number(global).toFixed(10);
-            //$('#biome-global').html((data*100).toPrecision(3));
-
-            //var data = Number(data['share_' + biome]).toFixed(10);
-            console.log('data ' + data);
-            var angle = data * 360; // deg of 180 deg circle
-            console.log('angle ' + angle);
-            var rad = (angle * Math.PI/180).toFixed(10);
-            console.log('rad ' + rad);
-            var x_diff = 250 - 151;
-            console.log((Math.tan(rad)).toFixed(10));
-            var y = 146 - x_diff / (Math.tan(rad)).toFixed(10);
-            console.log('y ' + y);
-            if (angle > 1) {
-              object.getElementById("global_share" + biome).setAttribute("points", "151,27 151,146 250," + y);
-            }
-          }
-          else {
-            $('#biome-global' + biome).html("N/A");
-            object.getElementById("global_share" + biome).setAttribute("points", "");
-          }*/
-
         }
 
         
@@ -211,11 +203,9 @@ function main() {
       }
       else {  // country = Species1
         // clear tooltip
-        //$(object.getElementById("svg-container")).hide();
         $('#biome-specifics').hide();
 
         object.getElementById('country').textContent = "";
-        //object.getElementById('score').textContent = '';
         object.getElementById("global_share").setAttribute("points", "");
         for (var biome = 1; biome < 15; biome++) {  // 14 biomes
           object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
@@ -239,11 +229,9 @@ function main() {
       //$(document).unbind('mousemove', event, false);
 
       // clear tooltip
-      //$(object.getElementById("svg-container")).hide();
       $('#biome-specifics').hide();
 
       object.getElementById('country').textContent = "HOVER OVER A COUNTRY";
-      //object.getElementById('score').textContent = '';
       
       for (var biome = 1; biome < 15; biome++) {  // 14 biomes
         object.getElementById('biome' + biome + '-rect').setAttribute("height", "0");

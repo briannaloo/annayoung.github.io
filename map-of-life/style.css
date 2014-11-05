@@ -39,6 +39,9 @@ table, td {
 td {
   padding: 10px;
 }
+tr {
+  height: 75px;
+}
 table td:first-child, table td:last-child  {
   font-style: italic;
   font-weight: none;
@@ -103,16 +106,16 @@ table td:first-child, table td:last-child  {
   position: absolute;
   right: 25px;
   bottom: 20px;
-  width: 320px;
-  height: 340px;
+  width: 375px;
+  height: 325px;
   z-index: 50;
 }
 
 #tooltip-info {
   position: absolute;
-  right: 116px;
+  right: 130px;
   bottom: 20px;
-  width: 130px;
+  width: 155px;
   height: 340px;
   /*bottom: 360px;
   right: 325px;*/
@@ -134,7 +137,7 @@ span {
 
 #tooltip-info span {
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   font-family: Helvetica;
   text-align: center;
   font-weight: bold;
@@ -142,7 +145,7 @@ span {
 
 #protections span, #globals span {
   display:none;
-  font-size: 16px !important;
+  font-size: 18px !important;
   color: #08b900 !important;
   font-weight: bold;
 }
