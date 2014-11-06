@@ -66,14 +66,14 @@ function main() {
     v.show();
     $('#map').append(v.render().el);
 
-    //Make Tool-tip follow the mouse.
-    /*var event = function(e){
-      $('#tool-tip').css({
+    //Make country Tool-tip follow the mouse.
+    var event = function(e){
+      $('#country-hover').css({
          left: e.pageX,
-         top:   e.pageY - 140
+         top:   e.pageY
       });
     };
-    $(document).bind('mousemove', event);*/
+    $(document).bind('mousemove', event);
 
     var obj = document.getElementById("svg-object");  // access svg doc
     var object = obj.contentDocument;
@@ -85,7 +85,7 @@ function main() {
     "<br>Temperate <br>Conifer Forests<br>",
     "<br>Boreal <br>Forests and Taiga<br>",
     "Tropical & <br>Subtropical Grasslands,<br>Savannas & Shrublands",
-    "Temperate <br>Grasslands, Savannas <br>& Shrublands",
+    "Temperate Grasslands,<br> Savannas <br>& Shrublands",
     "Flooded <br>Grasslands &<br> Savannas",
     "Montagne <br>Grasslands & <br>Shrublands",
     "<br>Tundra<br><br>",
@@ -123,12 +123,60 @@ function main() {
       });
     }
 
-    //Retrieve data to the tooltip on countries
+    // show country name and score when hovering
     sublayer_country.on('featureOver', function(e, pos, latlng, data) {
+      if (data['country'] == "Species1" || data['country' == "Species2"]) {  // country = Species1 or Species2
+        // clear tooltip
+        //$('#tooltip-container').hide();
+        $('#country-hover').hide();
+
+        if ($('#species-tooltip').css("display") == "none") {  // only move it to mouse once
+          $('#species-tooltip').css({
+           left: e.pageX,
+           top: e.pageY
+          });
+        }
+        $('#species-tooltip').fadeIn(200);
+
+        $('#species-text').html(species_text[data['country']][0]);
+        $('.species-pic').attr("src", "./" + data['country'] + ".png");
+        $('.species-span').html(species_text[data['country']][1]);
+        $('#data1').html(species_text[data['country']][2]);
+        $('#data2').html(species_text[data['country']][3]);
+        $('#data3').html(species_text[data['country']][4]);
+        $('#data4').html(species_text[data['country']][5]);
+        //$('#frame').attr("src", species_text[data['country']][6]);
+
+      }
+      else {
+        $('#species-tooltip').hide();
+        $('#country-hover').show();
+
+        var score = data['pacovw_2012'];
+        if (score == -99) {
+          score = "N/A"
+        } else {  
+          if (score >= 10)  // format numbers to either be x.x or xx
+            score = Math.round(score) + '%';
+          else
+            score = Math.round(score * 10)/10 + '%';
+        }
+        $('#country').html(score + " " + data['country'].toUpperCase());
+      }
+    });
+    sublayer_country.on('featureOut', function(e, pos, latlng, data) {
+        $('#species-tooltip').hide();
+        $('#country-hover').hide();
+        //$('#tooltip-container').show();
+    });
+
+    //Retrieve data to the tooltip on countries: on click
+    sublayer_country.on('featureClick', function(e, pos, latlng, data) {
       // tooltip info
       if (data['country'] != "Species1" && data['country'] != "Species2") {
          $('#species-tooltip').hide();
-         $('#biome-specifics').show();
+         //$('#tooltip-container').show();
+         //$('#tool-tip').show();
 
         var score = data['pacovw_2012'];
         if (score == -99) {
@@ -156,7 +204,7 @@ function main() {
             $(object.getElementById('biome' + biome + '-obj')).find('path').attr("fill", "#d09b23");
             $(object.getElementById('biome' + biome + '-obj')).find('rect').attr("fill", "#d09b23");
           
-            $('#biome-protection' + biome).html((protect*100).toPrecision(2));
+            $('#biome-protection' + biome).html((protect*100).toPrecision(2) + "%");
           } else {  // not applicable
             object.getElementById('biome' + biome + '-path').setAttribute("opacity", "0.5");
             object.getElementById('biome' + biome + '-rect').setAttribute("height", "0"); // clear from previous
@@ -169,7 +217,11 @@ function main() {
           // global share
           var global = data['share_' + biome];
           if (global != -1) {
-            $('#biome-global' + biome).html((global*100).toPrecision(2));
+            var global_show = (global*100).toPrecision(2);
+            if ((global*100) < 1) {
+              global_show = (global*100).toFixed(2);
+            }
+            $('#biome-global' + biome).html(global_show + "%");
             // pie piece: fill in first quarter of circle
             var share = Number(global).toFixed(10);
             var angle = share * 360; // deg of 180 deg circle
@@ -221,9 +273,9 @@ function main() {
         
 
       }
-      else {  // country = Species1 or Species2
+      /*else {  // country = Species1 or Species2
         // clear tooltip
-        $('#biome-specifics').hide();
+        $('#tooltip-info').hide();
 
         object.getElementById('country').textContent = "";
         object.getElementById("global_share").setAttribute("points", "");
@@ -251,15 +303,15 @@ function main() {
         $('#data4').html(species_text[data['country']][5]);
         //$('#frame').attr("src", species_text[data['country']][6]);
 
-      }
+      }*/
       
     });
 
-    sublayer_country.on('featureOut', function(e, pos, latlng, data) {
+    /*sublayer_country.on('featureOut', function(e, pos, latlng, data) {
       //$(document).unbind('mousemove', event, false);
 
       // clear tooltip
-      $('#biome-specifics').hide();
+      $('#tooltip-info').hide();
 
       object.getElementById('country').textContent = "HOVER OVER A COUNTRY";
       
@@ -272,7 +324,7 @@ function main() {
         object.getElementById("global_share" + biome).setAttribute("points", "");
       }
       $('#species-tooltip').hide();
-    });
+    });*/
 
   });
 }

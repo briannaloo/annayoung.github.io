@@ -13,7 +13,7 @@ h1 {
   text-align: center;
   color: #1d1d1d;
   text-transform: uppercase;
-  font-family: arial;
+  font-family: Helvetica;
   font-size: 17px;
 }
 
@@ -121,10 +121,10 @@ table td:first-child, table td:last-child  {
 
 #tooltip-info {
   position: absolute;
-  right: 130px;
+  right: 73px;
   bottom: 20px;
-  width: 155px;
-  height: 340px;
+  width: 270px;
+  height: 280px;
   /*bottom: 360px;
   right: 325px;*/
   z-index: 100;
@@ -132,18 +132,22 @@ table td:first-child, table td:last-child  {
 }
 
 #biome-label {
-  margin-top: 130px;
+  position: absolute;
+  right: 320px;
+  width: 120px;
+  bottom: 20px;
+  pointer-events: none;
 }
 
 span {
   color:#323232;
   font-size: 12px;
-  font-family: arial;
+  font-family: Helvetica;
   text-align: center;
   display: block;
 }
 
-#tooltip-info span {
+#tooltip-info span, #biome-label {
   color: #fff;
   font-size: 13px;
   font-family: Helvetica;
@@ -151,15 +155,46 @@ span {
   font-weight: bold;
 }
 
-#protections span, #globals span {
+#globals span {
   display:none;
-  font-size: 18px !important;
+  font-size: 38px !important;
   color: #08b900 !important;
+  font-weight: bold;
+}
+
+#protections span {
+  position: absolute;
+  display:none;
+  font-size: 15px !important;
+  color: #494846 !important;
   font-weight: bold;
 }
 
 #biome-specifics {
   display: none;
+}
+
+#globals {
+  position: absolute;
+  top: 125px;
+  left: 72px;
+  text-align: center;
+  width: 125px;
+}
+
+#country-hover {
+  position: absolute;
+  display: none;
+  width: 300px;
+  pointer-events: none;
+}
+
+#country-hover span {
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline;
 }
 
 .leaflet-control-attribution {display: none;}
@@ -194,7 +229,7 @@ a {
   position: absolute;
   left:15px;
   top:30px;
-  font-family: arial;   
+  font-family: Helvetica;   
   font-size: 13px;
   color: #6b6a6a;
 }
@@ -202,7 +237,7 @@ a {
   position: absolute;
   right:15px;
   top:30px;
-  font-family: arial;   
+  font-family: Helvetica;   
   font-size: 13px;
   color: #6b6a6a;
 }
@@ -216,7 +251,7 @@ a {
 .legend_title {
   text-align: center;
   margin-top: 5px;
-  font-family: arial;
+  font-family: Helvetica;
   font-size: 13px;
   color: #6b6a6a;
 }

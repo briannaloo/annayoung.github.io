@@ -39,7 +39,7 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
         </table>
       </div>
       <div id="iframe-container">
-        <iframe id="iframe" src="http://ng-alpha.map-of-life.appspot.com/info/protect/Megalaima_corvina" scrolling="no" border="none" ></iframe>
+        <iframe id="iframe" src="" scrolling="no" border="none" ></iframe>
       </div>
       <div style="height: 40px; position: absolute; top: 620px; width: 100%"></div>
     </div>
@@ -47,44 +47,51 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
     <div id="tool-tip">
       <object id="svg-object" style="pointer-events: auto;position: absolute; left: 0; right: 0;" type="image/svg+xml" data="./final.svg">Your browser does not support SVG</object>
     </div>
-    <p id="tooltip-info">
+
+    <div id="country-hover">
+      <img src="./plus.png" width="15px" height="15px" style="display: inline">
+      <span id="country"></span>
+    </div>
+
+    <div id="tooltip-container">
       <span id="biome-label">Tropical & <br>Subtropical Moist Broadleaf Forests</span>
-      <span id="biome-specifics">
-      <span id="protections">
-        <span id="biome-protection1" style="display: inline"></span>
-        <span id="biome-protection2"></span>
-        <span id="biome-protection3"></span>
-        <span id="biome-protection4"></span>
-        <span id="biome-protection5"></span>
-        <span id="biome-protection6"></span>
-        <span id="biome-protection7"></span>
-        <span id="biome-protection8"></span>
-        <span id="biome-protection9"></span>
-        <span id="biome-protection10"></span>
-        <span id="biome-protection11"></span>
-        <span id="biome-protection12"></span>
-        <span id="biome-protection13"></span>
-        <span id="biome-protection14"></span>
-      </span>
-      <span id="biome-text" style="font-size: 14px">% protected</span>
-      <span id="globals">
-        <span id="biome-global1" style="display: inline"></span>
-        <span id="biome-global2"></span>
-        <span id="biome-global3"></span>
-        <span id="biome-global4"></span>
-        <span id="biome-global5"></span>
-        <span id="biome-global6"></span>
-        <span id="biome-global7"></span>
-        <span id="biome-global8"></span>
-        <span id="biome-global9"></span>
-        <span id="biome-global10"></span>
-        <span id="biome-global11"></span>
-        <span id="biome-global12"></span>
-        <span id="biome-global13"></span>
-        <span id="biome-global14"></span>
-      </span>
-      <span id="biome-text" style="font-size: 14px">% of global</span></span>
-    </p>
+      <p id="tooltip-info">
+        <span id="protections">
+          <span id="biome-protection1" style="display: inline; top: 87px;left: 18px;"></span>
+          <span id="biome-protection2" style="top: 50px;left: 49px;"></span>
+          <span id="biome-protection3" style="top: 28px;left: 95px;"></span>
+          <span id="biome-protection4" style="top: 25px;left: 143px;"></span>
+          <span id="biome-protection5" style="top: 46px;left: 190px;"></span>
+          <span id="biome-protection6" style="top: 85px;left: 222px;"></span>
+          <span id="biome-protection7" style="top: 137px;left: 232px;"></span>
+          <span id="biome-protection8" style="top: 184px;left: 222px;"></span>
+          <span id="biome-protection9" style="top: 223px;left: 190px;"></span>
+          <span id="biome-protection10" style="top: 245px;left: 143px;"></span>
+          <span id="biome-protection11" style="top: 245px;left: 95px;"></span>
+          <span id="biome-protection12" style="top: 223px;left: 49px;"></span>
+          <span id="biome-protection13" style="top: 184px;left: 18px;"></span>
+          <span id="biome-protection14" style="top: 137px;left: 6px;"></span>
+        </span>
+          <!--<span id="biome-text" style="font-size: 14px">% protected</span>-->
+        <span id="globals">
+          <span id="biome-global1" style="display: inline"></span>
+          <span id="biome-global2"></span>
+          <span id="biome-global3"></span>
+          <span id="biome-global4"></span>
+          <span id="biome-global5"></span>
+          <span id="biome-global6"></span>
+          <span id="biome-global7"></span>
+          <span id="biome-global8"></span>
+          <span id="biome-global9"></span>
+          <span id="biome-global10"></span>
+          <span id="biome-global11"></span>
+          <span id="biome-global12"></span>
+          <span id="biome-global13"></span>
+          <span id="biome-global14"></span>
+        </span>
+        <!--<span id="biome-text" style="font-size: 14px">% of global</span>-->
+
+      </p>
     </div>
     <div id="legends">   
       <div id="legend_countries" class="legend">
