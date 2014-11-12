@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--index.html, author Anna Young 
+
 To change color scheme, edit colors of <aside> and cartocss/html script below. 
 -->
 <html>
@@ -7,7 +8,7 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
      <link href='style.css' rel='stylesheet' type='text/css'>
-     <title>Biodiversity Protection Interactive Map</title>
+     <title>Terrestrial Habitat Protection Map</title>
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script type="text/javascript" src="./slide.js"></script>
      <script type="text/javascript" src="./main.js"></script>
@@ -17,35 +18,8 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
   <body>
     <div id="map"></div>
 
-    <div id="species-tooltip">
-      <p ><span id="species-text"></span><br><br>
-      <img src="./Species1.png" class="species-pic">
-      <span class="species-span"></span><br><br></p>
-      <div id="species-facts">
-        <table>
-          <tr>
-            <td>Expert range size</td>
-            <td id="data1"></td>
-            <td id="data2"></td>
-            <td>Refined range size</td>
-          </tr>
-          <tr>
-            <td>Total validation points</td>
-            <td id="data3"></td>
-            <td id="data4"></td>
-            <td>Validation points in refined range</td>
-          </tr>
-
-        </table>
-      </div>
-      <div id="iframe-container">
-        <iframe id="iframe" src="" scrolling="no" border="none" ></iframe>
-      </div>
-      <div style="height: 40px; position: absolute; top: 620px; width: 100%"></div>
-    </div>
-
     <div id="tool-tip">
-      <object id="svg-object" style="pointer-events: auto;position: absolute; left: 0; right: 0;" type="image/svg+xml" data="./final.svg">Your browser does not support SVG</object>
+      <object id="svg-object" style="pointer-events: auto;position: absolute; left: 0;" type="image/svg+xml" data="./final.svg">Your browser does not support SVG</object>
     </div>
 
     <div id="country-hover">
@@ -53,23 +27,28 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
       <span id="country"></span>
     </div>
 
+    <div id="parks">
+      <div id="switch"><div id="switch-button"></div></div>
+      <span id="park-button">Explore National Protected Areas</span>
+    </div>
+
     <div id="tooltip-container">
-      <span id="biome-label">Tropical & <br>Subtropical Moist Broadleaf Forests</span>
+      <div id="biome-label-container"><div id="biome-label"><span id="biome-title">Tropical & <br>Subtropical Moist Broadleaf Forests</span></div></div>
       <p id="tooltip-info">
         <span id="protections">
           <span id="biome-protection1" style="display: inline; top: 87px;left: 18px;"></span>
           <span id="biome-protection2" style="top: 50px;left: 49px;"></span>
-          <span id="biome-protection3" style="top: 28px;left: 95px;"></span>
-          <span id="biome-protection4" style="top: 25px;left: 143px;"></span>
-          <span id="biome-protection5" style="top: 46px;left: 190px;"></span>
-          <span id="biome-protection6" style="top: 85px;left: 222px;"></span>
-          <span id="biome-protection7" style="top: 137px;left: 232px;"></span>
-          <span id="biome-protection8" style="top: 184px;left: 222px;"></span>
-          <span id="biome-protection9" style="top: 223px;left: 190px;"></span>
+          <span id="biome-protection3" style="top: 28px;left: 93px;"></span>
+          <span id="biome-protection4" style="top: 25px;left: 140px;"></span>
+          <span id="biome-protection5" style="top: 46px;left: 186px;"></span>
+          <span id="biome-protection6" style="top: 85px;left: 218px;"></span>
+          <span id="biome-protection7" style="top: 137px;left: 228px;"></span>
+          <span id="biome-protection8" style="top: 184px;left: 218px;"></span>
+          <span id="biome-protection9" style="top: 223px;left: 187px;"></span>
           <span id="biome-protection10" style="top: 245px;left: 143px;"></span>
-          <span id="biome-protection11" style="top: 245px;left: 95px;"></span>
-          <span id="biome-protection12" style="top: 223px;left: 49px;"></span>
-          <span id="biome-protection13" style="top: 184px;left: 18px;"></span>
+          <span id="biome-protection11" style="top: 245px;left: 93px;"></span>
+          <span id="biome-protection12" style="top: 223px;left: 47px;"></span>
+          <span id="biome-protection13" style="top: 184px;left: 16px;"></span>
           <span id="biome-protection14" style="top: 137px;left: 6px;"></span>
         </span>
           <!--<span id="biome-text" style="font-size: 14px">% protected</span>-->
@@ -89,15 +68,14 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
           <span id="biome-global13"></span>
           <span id="biome-global14"></span>
         </span>
-        <!--<span id="biome-text" style="font-size: 14px">% of global</span>-->
-
+        
       </p>
     </div>
     <div id="legends">   
       <div id="legend_countries" class="legend">
-        <p class="legend_title">Biodiversity Protection Score</p>
-        <span class="left">0%</span>
-        <span class="right">17%</span><br>
+        <p class="legend_title">EPI Terrestrial Habitat Protection Score</p>
+        <span class="left">0</span>
+        <span class="right">100</span><br>
         <aside class="colors">
           <div style="background-color:#D3CC03;"></div>
           <div style="background-color:#BCC00F;"></div>
@@ -117,9 +95,9 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
         <div class="text" style="font-family: arial; font-size: 14px;">
           <h1 style="color: #366ab2"></h1>
           <br> 
-          <img height="1709" width="460" src="http://epi.yale.edu/files/terrestrial-protected-areas_final-01.png">
+          <img height="auto" width="460" src="http://epi.yale.edu/visuals/biodiversity-map/infographic.png">
           <br>
-          <i style="font-size: 11px">Map created by Anna Young (Yale College '16) and designed by Peter Hirsch (MEM '15 candidate) </i><br><br>
+          <!--<i style="font-size: 11px"><br>Map programmed by Anna Young (Yale College '16) <br>Design by Peter Hirsch (MEM '15 candidate) </i>--><br><br>
           
       </div></div>
     </div>
@@ -132,7 +110,7 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
         line-color: #000;
         line-width: 0.25;
         line-opacity: 1;
-        polygon-pattern-file: url(http://annayoung.github.io/map-of-life/paper_texture_white.png);
+        polygon-pattern-file: url(http://epi.yale.edu/visuals/biodiversity-map/paper_texture_white.png);
         polygon-pattern-comp-op: multiply;
       }
 
@@ -157,15 +135,6 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
       #pacovw [ {0} < 0] {
          polygon-fill: rgb(199, 199, 197);
       }
-
-      #pacovw [country = 'Species1'] {
-        polygon-fill: #d09b23;
-        polygon-opacity: 1;
-        polygon-smooth: 1;
-        /*polygon-opacity: 0;
-        polygon-pattern-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/annasyoung/assets/20141103230801Koala.jpg);*/
-      }
-
 
     </script>   
 

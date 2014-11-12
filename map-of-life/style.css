@@ -23,16 +23,22 @@ h1 {
   top: 0px;
 }
 
-#iframe-container {
-  width: 370px; height: 220px;
-  overflow: hidden;
-  position: relative;
-left: 20px;
-top: 300px;
+#parks {
+  position: fixed;
+  left: 75px;
+  top: 10px;
+  cursor: pointer;
 }
 
-#iframe {
-  width: 1280px; height: 1200px; position: absolute; /*left: 20px; top: 400px;*/
+#park-button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Helvetica;
+  position:absolute;
+  left:20px;
+  top: 2px;
+  width:300px;
 }
 
 table {
@@ -58,22 +64,41 @@ table td:first-child, table td:last-child  {
 }
 
 #species-tooltip {
-  display: none;
+  display: inline;
   position: absolute;
-  top: 10px;
-  left: 100px;
-  width: 420px;
+  /*top: 10px;
+  left: 100px;*/
+  width: 500px;
   height: 270px;
   margin-left: -420px;
   margin-top: -270px;
-  background-color: #c9c9c9;
-  opacity: 0.9;
+  /*background-color: #c9c9c9;*/
+  background-color: #fff;
+  opacity: 1;
   border-radius: 8px;
   overflow-y: scroll;
+  pointer-events: auto;
+}
+
+#mol-logo {
+  width: 120px; position: absolute; top: 5px; left: 5px;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  top: 10px;
+}
+
+.leaflet-popup-content-wrapper {
+  background: none;
+  box-shadow: none;
 }
 
 #species-text {
-  color: #fff;
+  color: rgb(140, 191, 68);
   font-size: 20px;
   font-weight: bold;
   font-family: Helvetica;
@@ -96,11 +121,12 @@ table td:first-child, table td:last-child  {
 .species-span {
   font-size: 16px;
   font-style: italic;
-  width: 280px;
+  width: 370px;
   position: absolute;
   left: 120px;
   display: block;
   text-align: left;
+  color: rgb(6, 45, 102);
 }
 
 .species-pic {
@@ -112,8 +138,8 @@ table td:first-child, table td:last-child  {
 #tool-tip {
   pointer-events: none;
   position: absolute;
-  right: 25px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 50px;
   width: 375px;
   height: 325px;
   z-index: 50;
@@ -121,8 +147,8 @@ table td:first-child, table td:last-child  {
 
 #tooltip-info {
   position: absolute;
-  right: 73px;
-  bottom: 20px;
+  right: 58px;
+  bottom: 37px;
   width: 270px;
   height: 280px;
   /*bottom: 360px;
@@ -131,12 +157,40 @@ table td:first-child, table td:last-child  {
   pointer-events: none;
 }
 
-#biome-label {
+#biome-label-container {
   position: absolute;
-  right: 320px;
-  width: 120px;
+  right: 60px;
   bottom: 20px;
+  width: 388px;
+  height: 280px;
   pointer-events: none;
+}
+
+#biome-label {
+  display: none;
+  position: absolute;
+  /*right: 130px;*/
+  /*width: auto;
+  max-width: 220px;*/
+  width: auto;
+  height: 20px;
+  /*min-height: 18px;
+  max-height: 35px;*/
+  bottom:175px;
+  padding: 5px 10px 2px 10px;
+  pointer-events: none;
+  z-index: 1000;
+  /*right: 320px;
+  width: 120px;
+  bottom: 20px;*/
+  background-color: #c9c9c9;
+  opacity: 0.9;
+  border-radius: 13px;
+  color: #494846;
+  font-size: 13px;
+  font-family: Helvetica;
+  text-align: center;
+  font-weight: bold;
 }
 
 span {
@@ -147,7 +201,7 @@ span {
   display: block;
 }
 
-#tooltip-info span, #biome-label {
+#tooltip-info span {
   color: #fff;
   font-size: 13px;
   font-family: Helvetica;
@@ -214,8 +268,7 @@ a {
   background-color: white;
   border-radius: 10px;
   margin-top: 10px;
-  border: 1px solid #a4a2a2;
-  box-shadow: rgba(0,0,0,0.2) 0 0 4px 2px;
+  border: 1px solid #fff;
   opacity: 1;
 }
 .legend div {
@@ -231,7 +284,7 @@ a {
   top:30px;
   font-family: Helvetica;   
   font-size: 13px;
-  color: #6b6a6a;
+  color: #4a4947;
 }
 .right {
   position: absolute;
@@ -239,7 +292,7 @@ a {
   top:30px;
   font-family: Helvetica;   
   font-size: 13px;
-  color: #6b6a6a;
+  color: #4a4947;
 }
 .colors {
   position: absolute;
@@ -252,8 +305,8 @@ a {
   text-align: center;
   margin-top: 5px;
   font-family: Helvetica;
-  font-size: 13px;
-  color: #6b6a6a;
+  font-size: 10px;
+  color: #4a4947;
 }
 
 #rotated_text {
@@ -291,7 +344,7 @@ a {
   background: #ccc;
   border: 1px solid #a4a2a2;
   background-color: white;
-  opacity: .9;
+  opacity: 1;
   z-index: 50;
 }
 
@@ -301,6 +354,33 @@ a {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
 .text {
   padding: 20px;
+}
+
+#switch {
+  background-color: #c9c9c9;
+  width: 35px;
+  height: 20px;
+  border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+}
+
+#switch-button {
+  background-color: #fff;
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  
 }
