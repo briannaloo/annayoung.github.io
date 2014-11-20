@@ -196,8 +196,8 @@ obj.addEventListener("load", function() {
 	$(object.getElementById("go_back_cities")).click(function() {
 		$(buildings).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$([trees, trees_hidden]).attr("cursor", "pointer").attr("pointer-events", "auto");
-		$(object.getElementById("page1-ref2")).attr("visibility", "hidden");
-		$(object.getElementById("page1-references")).attr("visibility", "visible");
+		//$(object.getElementById("page1-ref2")).attr("visibility", "hidden");
+		//$(object.getElementById("page1-references")).attr("visibility", "visible");
 		$(smog).delay(1000*seconds).fadeIn(seconds*1000);
 		$(object.getElementById("group1")).fadeOut(500);
 		$(object.getElementById("molecules")).fadeOut(500);
@@ -214,8 +214,8 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("cityscape2")).fadeOut(700);
 		$(object.getElementById("go_back_balloon")).fadeOut(200);
 
-		$(object.getElementById("page1-references")).attr("visibility", "visible");
-		$(object.getElementById("balloon-ref")).attr("visibility", "hidden");
+		//$(object.getElementById("page1-references")).attr("visibility", "visible");
+		//$(object.getElementById("balloon-ref")).attr("visibility", "hidden");
 	});
 	// from trees
 	$(object.getElementById("go_back_trees")).click(function() {
@@ -228,8 +228,8 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("layer3")).delay(seconds/4.0*1000).fadeOut(seconds/4.0*1000);
 		$(object.getElementById("layer4-sun")).fadeOut(seconds/4.0*1000);
 
-		$(object.getElementById("page1-references")).attr("visibility", "visible");
-		$(object.getElementById("eco-ref")).attr("visibility", "hidden");
+		//$(object.getElementById("page1-references")).attr("visibility", "visible");
+		//$(object.getElementById("eco-ref")).attr("visibility", "hidden");
 
 		$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(seconds*1000).fadeOut(0);});
 		//$(object.getElementById("layer5-lines")).find("polygon").each(function() {$(this).fadeOut(0);});
@@ -242,8 +242,8 @@ obj.addEventListener("load", function() {
 		$([buildings, trees, balloon]).attr("cursor", "pointer").attr("pointer-events", "auto");
 		$(object.getElementById("go_back_page5")).fadeOut(400);
 		$([object.getElementById("page5-trees1"), object.getElementById("page5-trees2")]).delay(3*seconds*1000).fadeIn(500);
-		$(object.getElementById("bowman")).attr("visibility", "hidden");
-		$(object.getElementById("page1-references")).attr("visibility", "visible");
+		//$(object.getElementById("bowman")).attr("visibility", "hidden");
+		//$(object.getElementById("page1-references")).attr("visibility", "visible");
 	});
 
 // HIDE ELEMENTS OF FIRST PAGE	
@@ -292,8 +292,8 @@ obj.addEventListener("load", function() {
 
 			$(object.getElementById("go_back_land_use")).delay(4500).fadeIn(500);
 
-			$(object.getElementById("land-ref")).attr("visibility", "visible");
-			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			//$(object.getElementById("land-ref")).attr("visibility", "visible");
+			//$(object.getElementById("page1-references")).attr("visibility", "hidden");
 		});
 		
 		$(object.getElementById("go_back_land_use")).click(function() {
@@ -301,8 +301,8 @@ obj.addEventListener("load", function() {
 			$(object.getElementById("land-sun")).fadeOut(1000);
 			$([object.getElementById("buildings"), object.getElementById("trees")]).attr("cursor", "pointer").attr("pointer-events", "auto");
 
-			$(object.getElementById("land-ref")).attr("visibility", "hidden");
-			$(object.getElementById("page1-references")).attr("visibility", "visible");
+			//$(object.getElementById("land-ref")).attr("visibility", "hidden");
+			//$(object.getElementById("page1-references")).attr("visibility", "visible");
 
 			$([object.getElementById("factory-container"), object.getElementById("tree_hide_land_use")]).delay(1900).fadeIn(100);
 
@@ -497,8 +497,8 @@ obj.addEventListener("load", function() {
 			$(object.getElementById("go_back_page5")).delay(5*seconds*1000).fadeIn(400);
 			$([object.getElementById("page5-trees1"), object.getElementById("page5-trees2")]).fadeOut(500);
 
-			$(object.getElementById("bowman")).attr("visibility", "visible");
-			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			//$(object.getElementById("bowman")).attr("visibility", "visible");
+			//$(object.getElementById("page1-references")).attr("visibility", "hidden");
 		});
 
 		// text comes in
@@ -570,17 +570,17 @@ obj.addEventListener("load", function() {
 			$(this).append(createSet("visibility", "visible", open + ".click", close + ".click + " + (seconds/2.0) + "s; go_back_page5.click + " + (seconds/2.0) + "s", false));
 		});
 		$(object.getElementById("page5-clip1")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "page51_open.click", "0", "450.65", "page51_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/2.0, "page51_openclose.click; go_back_page5.click", "450.65", "0", "page51_open.click; page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page51_open.click", "0", "520", "page51_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/2.0, "page51_openclose.click; go_back_page5.click", "520", "0", "page51_open.click; page5.click", false));
 		$(object.getElementById("page5-clip2")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "page52_open.click", "0", "450.65", "page52_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/2.0, "page52_openclose.click; go_back_page5.click", "450.65", "0", "page52_open.click; page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page52_open.click", "0", "520", "page52_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/2.0, "page52_openclose.click; go_back_page5.click", "520", "0", "page52_open.click; page5.click", false));
 		$(object.getElementById("page5-clip3")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "page53_open.click", "0", "450.65", "page53_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/2.0, "page53_openclose.click; go_back_page5.click", "450.65", "0", "page53_open.click; page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page53_open.click", "0", "520", "page53_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/2.0, "page53_openclose.click; go_back_page5.click", "520", "0", "page53_open.click; page5.click", false));
 		$(object.getElementById("page5-clip4")).find("rect")
-			.append(createAnimate("width", seconds/2.0, "page54_open.click", "0", "450.65", "page54_openclose.click; go_back_page5.click", false))
-			.append(createAnimate("width", seconds/2.0, "page54_openclose.click; go_back_page5.click", "450.65", "0", "page54_open.click; page5.click", false));
+			.append(createAnimate("width", seconds/2.0, "page54_open.click", "0", "520", "page54_openclose.click; go_back_page5.click", false))
+			.append(createAnimate("width", seconds/2.0, "page54_openclose.click; go_back_page5.click", "520", "0", "page54_open.click; page5.click", false));
 
 
 	}
@@ -591,8 +591,8 @@ obj.addEventListener("load", function() {
 			$(object.getElementById("smog2")).delay(seconds*1000).fadeIn(seconds*1000);
 			$(object.getElementById("go_back_trees")).delay(5.5*seconds*1000).fadeIn(400);
 
-			$(object.getElementById("page1-references")).attr("visibility", "hidden");
-			$(object.getElementById("eco-ref")).attr("visibility", "visible");
+			//$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			//$(object.getElementById("eco-ref")).attr("visibility", "visible");
 		
 			// ozone layers draw
 			$(object.getElementById("layer1")).delay(1.5*seconds*1000).fadeIn(seconds*1000);
@@ -679,8 +679,8 @@ obj.addEventListener("load", function() {
 			$(object.getElementById("cityscape2")).delay(seconds*800).fadeIn(800);
 			$(object.getElementById("go_back_balloon")).delay(4*seconds*1000).fadeIn(200);
 
-			$(object.getElementById("page1-references")).attr("visibility", "hidden");
-			$(object.getElementById("balloon-ref")).attr("visibility", "visible");
+			//$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			//$(object.getElementById("balloon-ref")).attr("visibility", "visible");
 		});
 
 		// text come in
@@ -780,8 +780,8 @@ obj.addEventListener("load", function() {
 			$(object.getElementById("group1")).delay(2*seconds*1000).fadeIn(500);
 			$(object.getElementById("go_back_cities")).delay(4*seconds*1000 + 1400).fadeIn(200);
 
-			$(object.getElementById("page1-ref2")).attr("visibility", "visible");
-			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			//$(object.getElementById("page1-ref2")).attr("visibility", "visible");
+			//$(object.getElementById("page1-references")).attr("visibility", "hidden");
 		});
 
 		// expand-sun clicked
@@ -846,6 +846,19 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("go_back_cities")).append(createSet("cursor", "auto", "expand_sun.click", "expand_sun.click + " + (3.5*seconds) + "s"));
 		$(object.getElementById("go_back_cities")).append(createSet("pointer-events", "none", "collapse_sun.click", "collapse_sun.click + " + (seconds) + "s"));
 		$(object.getElementById("go_back_cities")).append(createSet("cursor", "auto", "collapse_sun.click", "collapse_sun.click + " + (seconds) + "s"));
+
+
+		// hover over each source
+		$([object.getElementById('plants_source_hover'),
+			object.getElementById('forests_source_hover'),
+			object.getElementById('motor_source_hover'),
+			object.getElementById('cities_source_hover')]).hover(function() {
+			var id = $(this).attr("id") + '_text';
+			$(object.getElementById(id)).attr("fill", "#d2df60");
+		}, function() {
+			var id = $(this).attr("id") + '_text';
+			$(object.getElementById(id)).attr("fill", "#fff");
+		});
 
 	}
 

@@ -1,29 +1,33 @@
-// main.js, author: Anna Young
+// main.js, author: Anna Young, Nov 2014
 
 // code for info window and hover features
 
 var species_text = {
   "Species1": ["Brown-Throated Barbet", 
-    "The brown-throated barbet (Megalaima corvina) is a species of bird in the Ramphastidae family. It is endemic to Indonesia. Its natural habitats are subtropical or tropical moist lowland forests and subtropical or tropical moist montane forests.",
-    "http://epi.yale.edu/visuals/biodiversity-map/barbet.png"
+    "http://epi.yale.edu/visuals/biodiversity-map/barbet.png", // don't delete - for the icon pic
+    "Brown_Throat",
+    "http://species.mol.org/info/Megalaima_corvina" // link to mol site
   ],
   "Species2": ["Smoky White-Toothed Shrew",
-    "The Smoky White-toothed Shrew (Crocidura fumosa) is a species of mammal in the Soricidae family. It is endemic to Kenya. Its natural habitat is subtropical or tropical moist montane forests. It is threatened by habitat loss.",
-    "http://epi.yale.edu/visuals/biodiversity-map/shrew.png"
+    "http://epi.yale.edu/visuals/biodiversity-map/shrew.png", // link to icon pic
+    "Smoky_Shrew",
+    "http://species.mol.org/info/Crocidura_fumosa"
   ],
   "Species3": ["White-Winged Cuckooshrike",
-    "The white-winged cuckooshrike (Coracina ostenta) is a species of bird in the Campephagidae family. It is endemic to the Philippines. Its natural habitats are subtropical or tropical moist lowland forests and subtropical or tropical moist montane forests. It is threatened by habitat loss.",
-    "http://epi.yale.edu/visuals/biodiversity-map/cuckooshrike.png"
+    "http://epi.yale.edu/visuals/biodiversity-map/cuckooshrike.png",
+    "White_Wing",
+    "http://species.mol.org/info/Coracina_ostenta"
   ],
   "Species4": ["Western Long-Beaked Echidna",
-    "The western long-beaked echidna (Zaglossus bruijni) is one of the four extant echidnas and one of three species of Zaglossus that occur in New Guinea. It is present in the Bird's Head Peninsula and Foja Mountains of West Papua and Papua provinces, Indonesia, at elevations between 1,300 and 4,000 meters.",
-    "http://epi.yale.edu/visuals/biodiversity-map/echidna.png"
+    "http://epi.yale.edu/visuals/biodiversity-map/echidna.png",
+    "Western_Longbeak",
+    "http://species.mol.org/info/Zaglossus_bruijni"
   ],
   "Species5": ["Orlov's Treefrog",
-    "Rhacophorus orlovi is a species of frog in the Rhacophoridae family found in Laos, Thailand, and Vietnam. Its natural habitats are subtropical or tropical moist lowland forests, rivers, freshwater marshes, and intermittent freshwater marshes. It is threatened by habitat loss.",
-    "http://epi.yale.edu/visuals/biodiversity-map/treefrog.png"
+    "http://epi.yale.edu/visuals/biodiversity-map/treefrog.png",
+    "Treefrogg",
+    "http://species.mol.org/info/Rhacophorus_orlovi"
   ]};
-// picture names need to be Species1.png and Species2.png
 
 
 //Formats the columns for us into css
@@ -96,15 +100,15 @@ function parksHover(layer) {
 function onEachFeature (feature, layer) {
     var name = feature.properties.name;
     var popupContent = '<div id="species-tooltip">\
-      <a href="http://mol.org" target="_blank"><img id="mol-logo" src="http://mol.org/sites/all/themes/mol_beep_edition/logo.png"></a>\
-      <div style="height: 15px; background-color: rgb(140, 191, 68); margin-top: 60px;"></div>\
-      <p ><span id="species-text">' + species_text[name][0] + '</span><br><br>\
-      <img src="' + species_text[name][2] + '" class="species-pic">\
-      <span class="species-span">' + species_text[name][1] + '</span><br><br></p>\
-      <div id="species-facts">\
-      </div>\
-      <div style="height: 40px; position: absolute; top: 670px; width: 100%"></div>\
-    </div>';
+      <iframe width="100%" height="486px" frameBorder="0" scrolling="no" class="species-pic" src="./' + species_text[name][2] + '_frame.html"></iframe>\
+     </div>';
+     // use iframes so country names don't hover on top of species tooltip (z-index not enough)
+
+    /*var popupContent = '<div id="species-tooltip">\
+      <img class="species-pic" src="./' + species_text[name][2] + '.png">\
+      <a id="link" href="' + species_text[name][3] + '" target="_blank">Read More</a>\
+     </div>';*/
+
     layer.bindPopup(popupContent);
 };
 
@@ -121,7 +125,7 @@ function addMarker(map, coordinates, name) {
     }
   };
 
-  var url = species_text[name][2];
+  var url = species_text[name][1];
 
   var species_icon = L.icon({
     iconUrl: url,
@@ -270,9 +274,9 @@ function main() {
       } else {  
         score =  (score * (100/17.0)).toPrecision(2);
         if (score >= 10)  // format numbers to either be x.x or xx
-          score = Math.round(score) + '%';
+          score = Math.round(score);
         else
-          score = Math.round(score * 10)/10 + '%';
+          score = Math.round(score * 10)/10;
       }*/
       $('#country').html(data['country'].toUpperCase());
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--index.html, author Anna Young 
+<!--
 
 To change color scheme, edit colors of <aside> and cartocss/html script below. 
 -->
@@ -13,6 +13,11 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
      <script type="text/javascript" src="./slide.js"></script>
      <script type="text/javascript" src="./main.js"></script>
      <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> 
+
+     <meta property="og:url" content="http://epi.yale.edu/visuals/biodiversity-map/" />
+     <meta property="og:title" content="Terrestrial Habitat Protection Map">
+     <meta property="og:image" content="http://epi.yale.edu/visuals/biodiversity-map/screenshot.png" />
+
   </head>
 
   <body>
@@ -34,7 +39,7 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
 
     <div id="tooltip-container">
       <div id="biome-label-container"><div id="biome-label"><span id="biome-title">Tropical & <br>Subtropical Moist Broadleaf Forests</span></div></div>
-      <p id="tooltip-info">
+      <div id="tooltip-info">
         <span id="protections">
           <span id="biome-protection1" style="display: inline; top: 87px;left: 18px;"></span>
           <span id="biome-protection2" style="top: 50px;left: 49px;"></span>
@@ -69,7 +74,7 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
           <span id="biome-global14"></span>
         </span>
         
-      </p>
+      </div>
     </div>
     <div id="legends">   
       <div id="legend_countries" class="legend">
@@ -89,13 +94,13 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
 
     <div id="slide_out_info">
       <a class="handle" href="#">
-        <span id="rotated_text">MAP INFO</span>
+        <span id="rotated_text">HOW TO READ THIS MAP</span>
       </a>
       <div class="content">
         <div class="text" style="font-family: arial; font-size: 14px;">
           <h1 style="color: #366ab2"></h1>
           <br> 
-          <img height="auto" width="460" src="http://epi.yale.edu/visuals/biodiversity-map/infographic.png">
+          <img height="auto" width="460" src="./infographic.png">
           <br>
           <!--<i style="font-size: 11px"><br>Map programmed by Anna Young (Yale College '16) <br>Design by Peter Hirsch (MEM '15 candidate) </i>--><br><br>
           
@@ -142,7 +147,7 @@ To change color scheme, edit colors of <aside> and cartocss/html script below.
        //have the info tab slide out
       $('#slide_out_info').tabSlideOut({
         tabHandle: '.handle',                //class of the element
-        height: '110px',                     //height of tab 
+        height: '190px',                     //height of tab (110)
         width: '30px',                       //width of tab 
         tabLocation: 'left',                 //location
         speed: 400,                          //speed of animation
