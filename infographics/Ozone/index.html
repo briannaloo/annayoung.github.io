@@ -666,6 +666,9 @@ obj.addEventListener("load", function() {
 		$(object.getElementById("eco-path4")).find("rect")
 			.append(createAnimate("width", seconds/4.0, "ecosystem4_open.click", "0", "231", "ecosystem4_openclose.click; go_back_trees.click", false))
 			.append(createAnimate("width", seconds/4.0, "ecosystem4_openclose.click; go_back_trees.click", "231", "0", "ecosystem4_open.click; trees.click; trees_person.click; home_button3.click", false));
+		$(object.getElementById("eco-path-gap")).find("rect")
+			.append(createAnimate("width", seconds/4.0, "ecosystem_gap_open.click", "0", "266", "ecosystem_gap_openclose.click; go_back_trees.click", false))
+			.append(createAnimate("width", seconds/4.0, "ecosystem_gap_openclose.click; go_back_trees.click", "266", "0", "ecosystem_gap_open.click; trees.click; trees_person.click; home_button3.click", false));
 
 	}
 

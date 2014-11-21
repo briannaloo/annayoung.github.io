@@ -70,7 +70,12 @@
         </rect> 
     </clipPath>
     <clipPath id="eco-path4">
-        <rect transform="rotate(180 1334.443 799.918)" x="1218.943" y="759.134" width="0" height="81.568">
+        <rect transform="rotate(180 1326.443 799.918)" x="1210.943" y="759.134" width="0" height="81.568">
+            <set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
+        </rect> 
+    </clipPath>
+    <clipPath id="eco-path-gap">
+        <rect transform="rotate(180 1243 601)" x="1115" y="530" width="0" height="152">
             <set attributeName="width" begin="0s" repeatCount="indefinite" to="0"/>
         </rect> 
     </clipPath>
@@ -106,6 +111,7 @@
             <set attributeName="width" begin="0s" repeatCount="indefinite" to="1600"/>
         </rect> 
     </clipPath>
+    <clipPath xmlns="http://www.w3.org/2000/svg" id="clipPath1152"><path d="m 0,1150 1600,0 L 1600,0 0,0 0,1150 z" id="path1154"/></clipPath>
 
     <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="811.643" y="420.002" width="740.602" height="550.698">
         <feFlood style="flood-color:white;flood-opacity:1" result="back"/>
@@ -3825,9 +3831,16 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
             <rect xmlns="http://www.w3.org/2000/svg" x="1218.943" y="759.134" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="230.729" height="81.568"/>
             <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 1227.0503 778.0146)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE CAUSES </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">DAMAGE IN FORESTS </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">AND OTHER SENSITIVE </tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">LANDSCAPES.</tspan></text>
         </g>
+        <g id="ecosystem_gap" clip-path="url(#eco-path-gap)">
+            <rect xmlns="http://www.w3.org/2000/svg" x="1115" y="530" opacity="0.8" fill="#3A9E99" stroke="#FFFFFF" stroke-miterlimit="10" width="266" height="151.568"/>
+            <text xmlns="http://www.w3.org/2000/svg" transform="matrix(1 0 0 1 1122 550)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">RESEARCH AND MONITORING OF AIR </tspan><tspan x="0" y="15.601" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">QUALITY HAVE SO FAR FOCUSED </tspan><tspan x="0" y="31.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">MOSTLY ON HUMAN HEALTH. MORE</tspan><tspan x="0" y="46.8" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">WORK IS NEEDED IN MEASURING</tspan><tspan x="0" y="62.4" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">OZONE IMPACTS ON ECOSYSTEMS, </tspan><tspan x="0" y="78" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">KEY TO DEVELOPING INDICATORS </tspan><tspan x="0" y="93.6" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">THAT WOULD COMMUNICATE THESE </tspan><tspan x="0" y="109.2" fill="#FFFFFF" font-family="'Helvetica'" font-size="13">EFFECTS TO POLICYMAKERS..</tspan></text>
+        </g>
     </g>
 
     <g id="ecosystem-buttons-open" cursor="pointer" visibility="hidden" style="display: none">
+        <g id="ecosystem_gap_open">
+            <g clip-path="url(#clipPath1152)" transform="matrix(1.25,0,0,-1.25,1000,1080)" id="g1150"><g transform="translate(380.9575,363.8594)" id="g1160"><path d="m 0,0 c 0,6.563 -14.415,11.879 -32.191,11.879 -17.775,0 -32.191,-5.316 -32.191,-11.879 0,-6.562 14.416,-11.877 32.191,-11.877 C -14.415,-11.877 0,-6.562 0,0 z" id="path1162" style="fill:none;stroke:#21716E;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"/></g><g transform="translate(349.4331,434.7549)" id="g1164"><path d="M 0,0 C -12.537,0 -22.704,-9.726 -22.704,-21.726 -22.704,-35.248 0,-72.092 0,-72.092 c 0,0 22.697,36.844 22.697,50.366 C 22.697,-9.726 12.542,0 0,0" id="path1166" style="fill:#21716E;fill-opacity:1;fill-rule:nonzero;stroke:none"/></g><g transform="translate(340.4097,411.3623)" id="g1168"><path d="m 0,0 c 0,0 0.003,8.356 8.617,8.358 6.664,0 7.83,-6.006 7.835,-8.358 0.005,-2.089 -1.565,-4.439 -4.962,-7.049 -3.395,-2.613 -3.541,-3.527 -3.656,-7.573" id="path1170" style="fill:none;stroke:#D1DE58;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"/></g><g transform="translate(351.3784,390.2109)" id="g1172"><path d="m 0,0 c 0,-1.587 -1.287,-2.872 -2.874,-2.872 -1.586,0 -2.872,1.285 -2.872,2.872 0,1.586 1.286,2.872 2.872,2.872 C -1.287,2.872 0,1.586 0,0" id="path1174" style="fill:#D1DE58;fill-opacity:1;fill-rule:nonzero;stroke:none"/></g></g>
+        </g>
         <g id="ecosystem1_open">
             <polygon class="buttons" fill="#D1DE58" points="406.401,780.809 387.292,799.918 406.401,819.027  "/>
             <g>
@@ -3878,6 +3891,9 @@ AAAAAAj5/wUYANtT9k64sYx4AAAAAElFTkSuQmCC" transform="matrix(0.2532 0 0 0.2532 11
         </g>
     </g>
     <g id="ecosystem-buttons-close" cursor="pointer" style="display: none" visibility="hidden">
+        <g id="ecosystem_gap_openclose">
+            <g clip-path="url(#clipPath1152)" transform="matrix(1.25,0,0,-1.25,1000,1080)" id="g1150"><g transform="translate(380.9575,363.8594)" id="g1160"><path d="m 0,0 c 0,6.563 -14.415,11.879 -32.191,11.879 -17.775,0 -32.191,-5.316 -32.191,-11.879 0,-6.562 14.416,-11.877 32.191,-11.877 C -14.415,-11.877 0,-6.562 0,0 z" id="path1162" style="fill:none;stroke:#21716E;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"/></g><g transform="translate(349.4331,434.7549)" id="g1164"><path d="M 0,0 C -12.537,0 -22.704,-9.726 -22.704,-21.726 -22.704,-35.248 0,-72.092 0,-72.092 c 0,0 22.697,36.844 22.697,50.366 C 22.697,-9.726 12.542,0 0,0" id="path1166" style="fill:#21716E;fill-opacity:1;fill-rule:nonzero;stroke:none"/></g><g transform="translate(340.4097,411.3623)" id="g1168"><path d="m 0,0 c 0,0 0.003,8.356 8.617,8.358 6.664,0 7.83,-6.006 7.835,-8.358 0.005,-2.089 -1.565,-4.439 -4.962,-7.049 -3.395,-2.613 -3.541,-3.527 -3.656,-7.573" id="path1170" style="fill:none;stroke:#D1DE58;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"/></g><g transform="translate(351.3784,390.2109)" id="g1172"><path d="m 0,0 c 0,-1.587 -1.287,-2.872 -2.874,-2.872 -1.586,0 -2.872,1.285 -2.872,2.872 0,1.586 1.286,2.872 2.872,2.872 C -1.287,2.872 0,1.586 0,0" id="path1174" style="fill:#D1DE58;fill-opacity:1;fill-rule:nonzero;stroke:none"/></g></g>
+        </g>
         <g id="ecosystem1_openclose">
             <polygon class="buttons" fill="#D1DE58" points="389.198,821.103 408.802,802.501 390.2,782.897  "/>
             <g>
