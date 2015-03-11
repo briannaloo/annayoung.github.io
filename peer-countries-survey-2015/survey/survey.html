@@ -1,0 +1,1009 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<link rel="shortcut icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png" type="image/x-icon">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10; chrome=1;">
+<meta name="fragment" content="!">
+<base target="_blank">
+<title>peer countries</title>
+<link rel="stylesheet" type="text/css" href="">
+
+<link href='./static/forms/client/css/3377299198-formview_ltr.css' type='text/css' rel='stylesheet'>
+
+<style type="text/css">
+
+  .language {
+    cursor: pointer;
+    padding: 4px;
+    color: #6A93BF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px;
+  }
+  .selected-language {
+    text-decoration: underline;
+  }
+
+  #searched {
+    background-color: #FFFF99;
+  }
+
+  #searchbox {
+    z-index: 150;
+    opacity: 0.9;
+  }
+
+
+</style>
+
+<script src="./jquery.js" type="text/javascript"></script>
+
+<link href='./static/forms/client/css/1446748018-mobile_formview_ltr.css' type='text/css' rel='stylesheet' media='screen and (max-device-width: 721px)'>
+<script type="text/javascript">
+        /**
+ * @license
+ *! H5F
+ * https://github.com/ryanseddon/H5F/
+ * Copyright (c) Ryan Seddon | Licensed MIT
+ */
+
+(function(e,t){"function"==typeof define&&define.amd?define(t):e.H5F=t()})(this,function(){
+  var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;
+    return r=function(e,t){
+      var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};
+      if("object"==typeof t)
+        for(var r in i)
+          t[r]===void 0&&(t[r]=i[r]);
+      if(n=t||i,a)
+        for(var l=0,u=e.length;u>l;l++)
+          s(e[l]);
+      else s(e)},s=function(a){
+        var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;
+        if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),
+
+          b(a,"submit",function(i){
+            e=!0,t||s||a.checkValidity()||w(i)
+            }
+            ,!1),!v())
+          for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&&l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&&!s.test(i)&&p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&&(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&o&&(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o>l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&(n||r&&n)&&(u(i),i.validity.valid||s||(e&&i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(x,"validity")&&E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},b=function(e,t,a,i){
+            E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
+
+
+      </script>
+<link rel="alternate" type="text/xml+oembed" href="https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/oembed?url=https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/viewform&amp;format=xml">
+<meta name="viewport" content="width=device-width">
+<meta property="og:title" content="peer countries"><meta property="og:type" content="article"><meta property="og:site_name" content="Google Docs"><meta property="og:url" content="https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/viewform"><meta property="og:image" content="https://ssl.gstatic.com/docs/forms/social/social-forms.png"><meta property="og:image:width" content="90"><meta property="og:image:height" content="90">
+</head>
+<body dir="ltr" class="ss-base-body">
+  <div itemscope itemtype="http://schema.org/CreativeWork/FormObject"><meta itemprop="name" content="peer countries">
+
+
+<meta itemprop="url" content="https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/viewform">
+<meta itemprop="embedUrl" content="https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/viewform?embedded=true">
+<meta itemprop="faviconUrl" content="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png">
+
+
+
+<div class="ss-form-container" style="width: 97%;"><div class="ss-header-image"></div>
+<div class="ss-top-of-page"><div class="ss-form-heading">
+
+
+    <a class="language selected-language">English</a>
+    <a class="language">Español</a>
+    <a class="language">Português</a>
+    <a class="language">Français</a>
+    <a class="language">Deutsch</a>
+    <a class="language">中文</a>
+    <a class="language">日本語</a>
+    <a class="language">العربية</a>
+    <a class="language">русский</a>
+    <a class="language">हिंदी</a>
+    <span><br><br></span>
+   
+
+<hr class="ss-email-break" style="display:none;">
+<div class="ss-required-asterisk" aria-hidden="true">* Required</div></div></div>
+<div class="ss-form"><form action="https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/formResponse" method="POST" id="ss-form" target="_self" onsubmit="showResults()"><ol role="list" class="ss-question-list" style="padding-left: 0">
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item ss-item-required ss-select"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_200171192"><div class="ss-q-title"><span id="question1">What country are you from?</span>
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<select name="entry.200171192" id="entry_200171192" aria-label="What country are you from?  " aria-required="true" required=""><option value=""></option>
+<option value="Afghanistan">Afghanistan</option> <option value="Albania">Albania</option> <option value="Algeria">Algeria</option> <option value="American Samoa">American Samoa</option> <option value="Andorra">Andorra</option> <option value="Angola">Angola</option> <option value="Anguilla">Anguilla</option> <option value="Antigua and Barbuda">Antigua and Barbuda</option> <option value="Argentina">Argentina</option> <option value="Armenia">Armenia</option> <option value="Aruba">Aruba</option> <option value="Australia">Australia</option> <option value="Austria">Austria</option> <option value="Azerbaijan">Azerbaijan</option> <option value="Bahamas">Bahamas</option> <option value="Bahrain">Bahrain</option> <option value="Bangladesh">Bangladesh</option> <option value="Barbados">Barbados</option> <option value="Belarus">Belarus</option> <option value="Belgium">Belgium</option> <option value="Belize">Belize</option> <option value="Benin">Benin</option> <option value="Bermuda">Bermuda</option> <option value="Bhutan">Bhutan</option> <option value="Bolivia">Bolivia</option> <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option> <option value="Botswana">Botswana</option> <option value="Brazil">Brazil</option> <option value="British Virgin Islands">British Virgin Islands</option> <option value="Brunei Darussalam">Brunei Darussalam</option> <option value="Bulgaria">Bulgaria</option> <option value="Burkina Faso">Burkina Faso</option> <option value="Burundi">Burundi</option> <option value="Cambodia">Cambodia</option> <option value="Cameroon">Cameroon</option> <option value="Canada">Canada</option> <option value="Cape Verde">Cape Verde</option> <option value="Cayman Islands">Cayman Islands</option> <option value="Central African Republic">Central African Republic</option> <option value="Chad">Chad</option> <option value="Chile">Chile</option> <option value="China">China</option> <option value="Colombia">Colombia</option> <option value="Comoros">Comoros</option> <option value="Congo">Congo</option> <option value="Cook Islands">Cook Islands</option> <option value="Costa Rica">Costa Rica</option> <option value="Cote d&#39;Ivoire">Cote d&#39;Ivoire</option> <option value="Croatia">Croatia</option> <option value="Cuba">Cuba</option> <option value="Cyprus">Cyprus</option> <option value="Czech Republic">Czech Republic</option> <option value="Dem. Rep. Congo">Dem. Rep. Congo</option> <option value="Denmark">Denmark</option> <option value="Djibouti">Djibouti</option> <option value="Dominica">Dominica</option> <option value="Dominican Republic">Dominican Republic</option> <option value="Ecuador">Ecuador</option> <option value="Egypt">Egypt</option> <option value="El Salvador">El Salvador</option> <option value="Equatorial Guinea">Equatorial Guinea</option> <option value="Eritrea">Eritrea</option> <option value="Estonia">Estonia</option> <option value="Ethiopia">Ethiopia</option> <option value="Faeroe Islands">Faeroe Islands</option> <option value="Falkland Islands">Falkland Islands</option> <option value="Fiji">Fiji</option> <option value="Finland">Finland</option> <option value="France">France</option> <option value="French Guiana">French Guiana</option> <option value="French Polynesia">French Polynesia</option> <option value="Gabon">Gabon</option> <option value="Gambia">Gambia</option> <option value="Georgia">Georgia</option> <option value="Germany">Germany</option> <option value="Ghana">Ghana</option> <option value="Gibraltar">Gibraltar</option> <option value="Greece">Greece</option> <option value="Greenland">Greenland</option> <option value="Grenada">Grenada</option> <option value="Guadeloupe">Guadeloupe</option> <option value="Guam">Guam</option> <option value="Guatemala">Guatemala</option> <option value="Guinea">Guinea</option> <option value="Guinea-Bissau">Guinea-Bissau</option> <option value="Guyana">Guyana</option> <option value="Haiti">Haiti</option> <option value="Holy See">Holy See</option> <option value="Honduras">Honduras</option> <option value="Hong Kong">Hong Kong</option> <option value="Hungary">Hungary</option> <option value="Iceland">Iceland</option> <option value="India">India</option> <option value="Indonesia">Indonesia</option> <option value="Iran">Iran</option> <option value="Iraq">Iraq</option> <option value="Ireland">Ireland</option> <option value="Isle of Man">Isle of Man</option> <option value="Israel">Israel</option> <option value="Italy">Italy</option> <option value="Jamaica">Jamaica</option> <option value="Japan">Japan</option> <option value="Jordan">Jordan</option> <option value="Kazakhstan">Kazakhstan</option> <option value="Kenya">Kenya</option> <option value="Kiribati">Kiribati</option> <option value="Kuwait">Kuwait</option> <option value="Kyrgyzstan">Kyrgyzstan</option> <option value="Laos">Laos</option> <option value="Latvia">Latvia</option> <option value="Lebanon">Lebanon</option> <option value="Lesotho">Lesotho</option> <option value="Liberia">Liberia</option> <option value="Libya">Libya</option> <option value="Liechtenstein">Liechtenstein</option> <option value="Lithuania">Lithuania</option> <option value="Luxembourg">Luxembourg</option> <option value="Macao">Macao</option> <option value="Macedonia">Macedonia</option> <option value="Madagascar">Madagascar</option> <option value="Malawi">Malawi</option> <option value="Malaysia">Malaysia</option> <option value="Maldives">Maldives</option> <option value="Mali">Mali</option> <option value="Malta">Malta</option> <option value="Marshall Islands">Marshall Islands</option> <option value="Martinique">Martinique</option> <option value="Mauritania">Mauritania</option> <option value="Mauritius">Mauritius</option> <option value="Mayotte">Mayotte</option> <option value="Mexico">Mexico</option> <option value="Micronesia">Micronesia</option> <option value="Moldova">Moldova</option> <option value="Monaco">Monaco</option> <option value="Mongolia">Mongolia</option> <option value="Montenegro">Montenegro</option> <option value="Montserrat">Montserrat</option> <option value="Morocco">Morocco</option> <option value="Mozambique">Mozambique</option> <option value="Myanmar">Myanmar</option> <option value="Namibia">Namibia</option> <option value="Nauru">Nauru</option> <option value="Nepal">Nepal</option> <option value="Netherlands">Netherlands</option> <option value="Netherlands Antilles">Netherlands Antilles</option> <option value="New Caledonia">New Caledonia</option> <option value="New Zealand">New Zealand</option> <option value="Nicaragua">Nicaragua</option> <option value="Niger">Niger</option> <option value="Nigeria">Nigeria</option> <option value="Niue">Niue</option> <option value="Norfolk Island">Norfolk Island</option> <option value="North Korea">North Korea</option> <option value="Northern Mariana Islands">Northern Mariana Islands</option> <option value="Norway">Norway</option> <option value="Oman">Oman</option> <option value="Pakistan">Pakistan</option> <option value="Palau">Palau</option> <option value="Panama">Panama</option> <option value="Papua New Guinea">Papua New Guinea</option> <option value="Paraguay">Paraguay</option> <option value="Peru">Peru</option> <option value="Philippines">Philippines</option> <option value="Pitcairn">Pitcairn</option> <option value="Poland">Poland</option> <option value="Portugal">Portugal</option> <option value="Puerto Rico">Puerto Rico</option> <option value="Qatar">Qatar</option> <option value="Reunion">Reunion</option> <option value="Romania">Romania</option> <option value="Russia">Russia</option> <option value="Rwanda">Rwanda</option> <option value="Saint Helena">Saint Helena</option> <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> <option value="Saint Lucia">Saint Lucia</option> <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option> <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option> <option value="Samoa">Samoa</option> <option value="San Marino">San Marino</option> <option value="Sao Tome and Principe">Sao Tome and Principe</option> <option value="Saudi Arabia">Saudi Arabia</option> <option value="Senegal">Senegal</option> <option value="Serbia">Serbia</option> <option value="Seychelles">Seychelles</option> <option value="Sierra Leone">Sierra Leone</option> <option value="Singapore">Singapore</option> <option value="Slovakia">Slovakia</option> <option value="Slovenia">Slovenia</option> <option value="Solomon Islands">Solomon Islands</option> <option value="Somalia">Somalia</option> <option value="South Africa">South Africa</option> <option value="South Korea">South Korea</option> <option value="Spain">Spain</option> <option value="Sri Lanka">Sri Lanka</option> <option value="State of Palestine">State of Palestine</option> <option value="Sudan">Sudan</option> <option value="Suriname">Suriname</option> <option value="Svalbard and Jan Mayen Islands">Svalbard and Jan Mayen Islands</option> <option value="Swaziland">Swaziland</option> <option value="Sweden">Sweden</option> <option value="Switzerland">Switzerland</option> <option value="Syria">Syria</option> <option value="Taiwan">Taiwan</option> <option value="Tajikistan">Tajikistan</option> <option value="Tanzania">Tanzania</option> <option value="Thailand">Thailand</option> <option value="Tibet">Tibet</option> <option value="Timor-Leste">Timor-Leste</option> <option value="Togo">Togo</option> <option value="Tokelau">Tokelau</option> <option value="Tonga">Tonga</option> <option value="Trinidad and Tobago">Trinidad and Tobago</option> <option value="Tunisia">Tunisia</option> <option value="Turkey">Turkey</option> <option value="Turkmenistan">Turkmenistan</option> <option value="Turks and Caicos Islands">Turks and Caicos Islands</option> <option value="Tuvalu">Tuvalu</option> <option value="Uganda">Uganda</option> <option value="Ukraine">Ukraine</option> <option value="United Arab Emirates">United Arab Emirates</option> <option value="United Kingdom">United Kingdom</option> <option value="United States of America">United States of America</option> <option value="United States Virgin Islands">United States Virgin Islands</option> <option value="Uruguay">Uruguay</option> <option value="Uzbekistan">Uzbekistan</option> <option value="Vanuatu">Vanuatu</option> <option value="Venezuela">Venezuela</option> <option value="Viet Nam">Viet Nam</option> <option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option> <option value="Western Sahara">Western Sahara</option> <option value="Yemen">Yemen</option> <option value="Zambia">Zambia</option> <option value="Zimbabwe">Zimbabwe</option> <option value="Other">Other</option></select>
+<div class="required-message">This is a required question</div></div></div></div> 
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1345426498"><div class="ss-q-title"><span id="occupation">What is your occupation?</span>
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices" role="radiogroup" aria-label="What is your occupation?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.567018711" value="Government" id="group_567018711_1" role="radio" class="ss-q-radio" aria-label="Government"></span>
+<span class="ss-choice-label">Government</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.567018711" value="Academia" id="group_567018711_2" role="radio" class="ss-q-radio" aria-label="Academia"></span>
+<span class="ss-choice-label">Academia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.567018711" value="Business" id="group_567018711_3" role="radio" class="ss-q-radio" aria-label="Business"></span>
+<span class="ss-choice-label">Business</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.567018711" value="Media" id="group_567018711_4" role="radio" class="ss-q-radio" aria-label="Media"></span>
+<span class="ss-choice-label">Media</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.567018711" value="__other_option__" id="group_567018711_5" role="radio" class="ss-q-radio ss-q-other-toggle"></span>
+<span class="ss-choice-label">Other:</span></label>
+<span class="ss-q-other-container goog-inline-block"><input type="text" name="entry.567018711.other_option_response" value="" class="ss-q-other" id="entry_567018711_other_option_response" dir="auto" aria-label="Other"></span>
+</li></ul>
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div></div></div></div>
+
+
+
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item ss-item-required ss-checkbox">
+  <div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_64097766"><div class="ss-q-title"><span id="question2">Identify up to 20 countries that are often compared to yours because of similarities with respect to natural resources, economic development, and environmental challenges.</span>
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span>
+
+<span><br><br>
+  <form method="get">
+      <input type="search" placeholder="Search" name="country_search" results="0"
+      onKeyUP="searchCountries(this.value)"
+      onsearch="searchCountries(this.value)"
+      id="searchbox"
+      />
+    </form>
+</span>
+
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices ss-choices-required" role="group" aria-label="Identify up to 20 countries that are often compared to yours because of similarities with respect to natural resources, economic development, and environmental challenges.  Please select at least 3 countries." style="width: 97%; overflow-y: scroll; padding: 10px;
+
+columns: 6;
+-webkit-columns: 6;
+-moz-columns: 6;">
+
+  <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Afghanistan" id="group_875817215_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Afghanistan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Albania" id="group_875817215_2" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Albania</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Algeria" id="group_875817215_3" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Algeria</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="American Samoa" id="group_875817215_4" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">American Samoa</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Andorra" id="group_875817215_5" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Andorra</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Angola" id="group_875817215_6" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Angola</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Anguilla" id="group_875817215_7" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Anguilla</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Antigua and Barbuda" id="group_875817215_8" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Antigua and Barbuda</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Argentina" id="group_875817215_9" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Argentina</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Armenia" id="group_875817215_10" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Armenia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Aruba" id="group_875817215_11" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Aruba</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Australia" id="group_875817215_12" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Australia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Austria" id="group_875817215_13" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Austria</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Azerbaijan" id="group_875817215_14" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Azerbaijan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Bahamas" id="group_875817215_15" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Bahamas</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Bahrain" id="group_875817215_16" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Bahrain</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Bangladesh" id="group_875817215_17" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Bangladesh</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Barbados" id="group_875817215_18" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Barbados</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Belarus" id="group_875817215_19" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Belarus</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Belgium" id="group_875817215_20" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Belgium</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Belize" id="group_875817215_21" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Belize</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Benin" id="group_875817215_22" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Benin</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Bermuda" id="group_875817215_23" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Bermuda</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Bhutan" id="group_875817215_24" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Bhutan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Bolivia" id="group_875817215_25" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Bolivia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Bosnia and Herzegovina" id="group_875817215_26" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Bosnia and Herzegovina</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Botswana" id="group_875817215_27" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Botswana</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Brazil" id="group_875817215_28" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Brazil</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="British Virgin Islands" id="group_875817215_29" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">British Virgin Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Brunei Darussalam" id="group_875817215_30" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Brunei Darussalam</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Bulgaria" id="group_875817215_31" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Bulgaria</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Burkina Faso" id="group_875817215_32" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Burkina Faso</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Burundi" id="group_875817215_33" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Burundi</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Cambodia" id="group_875817215_34" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Cambodia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Cameroon" id="group_875817215_35" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Cameroon</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Canada" id="group_875817215_36" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Canada</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Cape Verde" id="group_875817215_37" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Cape Verde</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Cayman Islands" id="group_875817215_38" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Cayman Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Central African Republic" id="group_875817215_39" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Central African Republic</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Chad" id="group_875817215_40" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Chad</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Chile" id="group_875817215_41" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Chile</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="China" id="group_875817215_42" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">China</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Colombia" id="group_875817215_43" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Colombia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Comoros" id="group_875817215_44" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Comoros</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Congo" id="group_875817215_45" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Congo</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Cook Islands" id="group_875817215_46" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Cook Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Costa Rica" id="group_875817215_47" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Costa Rica</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Cote d&#39;Ivoire" id="group_875817215_48" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Cote d&#39;Ivoire</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Croatia" id="group_875817215_49" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Croatia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Cuba" id="group_875817215_50" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Cuba</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Cyprus" id="group_875817215_51" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Cyprus</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Czech Republic" id="group_875817215_52" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Czech Republic</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Dem. Rep. Congo" id="group_875817215_53" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Dem. Rep. Congo</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Denmark" id="group_875817215_54" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Denmark</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Djibouti" id="group_875817215_55" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Djibouti</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Dominica" id="group_875817215_56" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Dominica</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Dominican Republic" id="group_875817215_57" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Dominican Republic</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Ecuador" id="group_875817215_58" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Ecuador</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Egypt" id="group_875817215_59" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Egypt</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="El Salvador" id="group_875817215_60" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">El Salvador</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Equatorial Guinea" id="group_875817215_61" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Equatorial Guinea</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Eritrea" id="group_875817215_62" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Eritrea</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Estonia" id="group_875817215_63" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Estonia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Ethiopia" id="group_875817215_64" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Ethiopia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Faeroe Islands" id="group_875817215_65" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Faeroe Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Falkland Islands" id="group_875817215_66" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Falkland Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Fiji" id="group_875817215_67" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Fiji</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Finland" id="group_875817215_68" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Finland</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="France" id="group_875817215_69" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">France</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="French Guiana" id="group_875817215_70" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">French Guiana</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="French Polynesia" id="group_875817215_71" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">French Polynesia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Gabon" id="group_875817215_72" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Gabon</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Gambia" id="group_875817215_73" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Gambia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Georgia" id="group_875817215_74" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Georgia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Germany" id="group_875817215_75" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Germany</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Ghana" id="group_875817215_76" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Ghana</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Gibraltar" id="group_875817215_77" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Gibraltar</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Greece" id="group_875817215_78" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Greece</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Greenland" id="group_875817215_79" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Greenland</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Grenada" id="group_875817215_80" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Grenada</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Guadeloupe" id="group_875817215_81" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Guadeloupe</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Guam" id="group_875817215_82" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Guam</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Guatemala" id="group_875817215_83" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Guatemala</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Guinea" id="group_875817215_84" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Guinea</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Guinea-Bissau" id="group_875817215_85" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Guinea-Bissau</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Guyana" id="group_875817215_86" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Guyana</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Haiti" id="group_875817215_87" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Haiti</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Holy See" id="group_875817215_88" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Holy See</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Honduras" id="group_875817215_89" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Honduras</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Hong Kong" id="group_875817215_90" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Hong Kong</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Hungary" id="group_875817215_91" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Hungary</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Iceland" id="group_875817215_92" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Iceland</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="India" id="group_875817215_93" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">India</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Indonesia" id="group_875817215_94" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Indonesia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Iran" id="group_875817215_95" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Iran</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Iraq" id="group_875817215_96" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Iraq</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Ireland" id="group_875817215_97" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Ireland</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Isle of Man" id="group_875817215_98" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Isle of Man</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Israel" id="group_875817215_99" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Israel</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Italy" id="group_875817215_100" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Italy</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Jamaica" id="group_875817215_101" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Jamaica</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Japan" id="group_875817215_102" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Japan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Jordan" id="group_875817215_103" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Jordan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Kazakhstan" id="group_875817215_104" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Kazakhstan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Kenya" id="group_875817215_105" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Kenya</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Kiribati" id="group_875817215_106" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Kiribati</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Kuwait" id="group_875817215_107" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Kuwait</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Kyrgyzstan" id="group_875817215_108" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Kyrgyzstan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Laos" id="group_875817215_109" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Laos</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Latvia" id="group_875817215_110" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Latvia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Lebanon" id="group_875817215_111" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Lebanon</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Lesotho" id="group_875817215_112" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Lesotho</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Liberia" id="group_875817215_113" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Liberia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Libya" id="group_875817215_114" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Libya</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Liechtenstein" id="group_875817215_115" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Liechtenstein</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Lithuania" id="group_875817215_116" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Lithuania</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Luxembourg" id="group_875817215_117" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Luxembourg</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Macao" id="group_875817215_118" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Macao</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Macedonia" id="group_875817215_119" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Macedonia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Madagascar" id="group_875817215_120" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Madagascar</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Malawi" id="group_875817215_121" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Malawi</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Malaysia" id="group_875817215_122" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Malaysia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Maldives" id="group_875817215_123" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Maldives</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Mali" id="group_875817215_124" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Mali</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Malta" id="group_875817215_125" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Malta</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Marshall Islands" id="group_875817215_126" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Marshall Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Martinique" id="group_875817215_127" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Martinique</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Mauritania" id="group_875817215_128" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Mauritania</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Mauritius" id="group_875817215_129" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Mauritius</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Mayotte" id="group_875817215_130" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Mayotte</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Mexico" id="group_875817215_131" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Mexico</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Micronesia" id="group_875817215_132" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Micronesia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Moldova" id="group_875817215_133" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Moldova</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Monaco" id="group_875817215_134" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Monaco</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Mongolia" id="group_875817215_135" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Mongolia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Montenegro" id="group_875817215_136" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Montenegro</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Montserrat" id="group_875817215_137" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Montserrat</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Morocco" id="group_875817215_138" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Morocco</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Mozambique" id="group_875817215_139" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Mozambique</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Myanmar" id="group_875817215_140" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Myanmar</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Namibia" id="group_875817215_141" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Namibia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Nauru" id="group_875817215_142" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Nauru</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Nepal" id="group_875817215_143" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Nepal</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Netherlands" id="group_875817215_144" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Netherlands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Netherlands Antilles" id="group_875817215_145" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Netherlands Antilles</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="New Caledonia" id="group_875817215_146" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">New Caledonia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="New Zealand" id="group_875817215_147" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">New Zealand</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Nicaragua" id="group_875817215_148" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Nicaragua</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Niger" id="group_875817215_149" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Niger</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Nigeria" id="group_875817215_150" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Nigeria</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Niue" id="group_875817215_151" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Niue</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Norfolk Island" id="group_875817215_152" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Norfolk Island</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="North Korea" id="group_875817215_153" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">North Korea</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Northern Mariana Islands" id="group_875817215_154" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Northern Mariana Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Norway" id="group_875817215_155" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Norway</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Oman" id="group_875817215_156" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Oman</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Pakistan" id="group_875817215_157" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Pakistan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Palau" id="group_875817215_158" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Palau</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Panama" id="group_875817215_159" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Panama</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Papua New Guinea" id="group_875817215_160" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Papua New Guinea</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Paraguay" id="group_875817215_161" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Paraguay</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Peru" id="group_875817215_162" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Peru</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Philippines" id="group_875817215_163" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Philippines</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Pitcairn" id="group_875817215_164" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Pitcairn</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Poland" id="group_875817215_165" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Poland</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Portugal" id="group_875817215_166" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Portugal</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Puerto Rico" id="group_875817215_167" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Puerto Rico</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Qatar" id="group_875817215_168" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Qatar</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Reunion" id="group_875817215_169" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Reunion</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Romania" id="group_875817215_170" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Romania</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Russia" id="group_875817215_171" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Russia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Rwanda" id="group_875817215_172" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Rwanda</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Saint Helena" id="group_875817215_173" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Saint Helena</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Saint Kitts and Nevis" id="group_875817215_174" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Saint Kitts and Nevis</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Saint Lucia" id="group_875817215_175" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Saint Lucia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Saint Pierre and Miquelon" id="group_875817215_176" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Saint Pierre and Miquelon</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Saint Vincent and the Grenadines" id="group_875817215_177" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Saint Vincent and the Grenadines</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Samoa" id="group_875817215_178" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Samoa</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="San Marino" id="group_875817215_179" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">San Marino</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Sao Tome and Principe" id="group_875817215_180" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Sao Tome and Principe</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Saudi Arabia" id="group_875817215_181" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Saudi Arabia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Senegal" id="group_875817215_182" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Senegal</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Serbia" id="group_875817215_183" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Serbia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Seychelles" id="group_875817215_184" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Seychelles</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Sierra Leone" id="group_875817215_185" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Sierra Leone</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Singapore" id="group_875817215_186" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Singapore</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Slovakia" id="group_875817215_187" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Slovakia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Slovenia" id="group_875817215_188" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Slovenia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Solomon Islands" id="group_875817215_189" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Solomon Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Somalia" id="group_875817215_190" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Somalia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="South Africa" id="group_875817215_191" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">South Africa</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="South Korea" id="group_875817215_192" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">South Korea</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Spain" id="group_875817215_193" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Spain</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Sri Lanka" id="group_875817215_194" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Sri Lanka</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="State of Palestine" id="group_875817215_195" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">State of Palestine</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Sudan" id="group_875817215_196" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Sudan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Suriname" id="group_875817215_197" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Suriname</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Svalbard and Jan Mayen Islands" id="group_875817215_198" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Svalbard and Jan Mayen Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Swaziland" id="group_875817215_199" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Swaziland</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Sweden" id="group_875817215_200" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Sweden</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Switzerland" id="group_875817215_201" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Switzerland</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Syria" id="group_875817215_202" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Syria</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Taiwan" id="group_875817215_203" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Taiwan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Tajikistan" id="group_875817215_204" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Tajikistan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Tanzania" id="group_875817215_205" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Tanzania</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Thailand" id="group_875817215_206" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Thailand</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Tibet" id="group_875817215_207" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Tibet</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Timor-Leste" id="group_875817215_208" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Timor-Leste</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Togo" id="group_875817215_209" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Togo</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Tokelau" id="group_875817215_210" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Tokelau</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Tonga" id="group_875817215_211" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Tonga</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Trinidad and Tobago" id="group_875817215_212" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Trinidad and Tobago</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Tunisia" id="group_875817215_213" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Tunisia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Turkey" id="group_875817215_214" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Turkey</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Turkmenistan" id="group_875817215_215" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Turkmenistan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Turks and Caicos Islands" id="group_875817215_216" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Turks and Caicos Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Tuvalu" id="group_875817215_217" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Tuvalu</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Uganda" id="group_875817215_218" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Uganda</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Ukraine" id="group_875817215_219" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Ukraine</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="United Arab Emirates" id="group_875817215_220" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">United Arab Emirates</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="United Kingdom" id="group_875817215_221" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">United Kingdom</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="United States of America" id="group_875817215_222" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">United States of America</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="United States Virgin Islands" id="group_875817215_223" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">United States Virgin Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Uruguay" id="group_875817215_224" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Uruguay</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Uzbekistan" id="group_875817215_225" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Uzbekistan</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Vanuatu" id="group_875817215_226" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Vanuatu</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Venezuela" id="group_875817215_227" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Venezuela</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Viet Nam" id="group_875817215_228" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Viet Nam</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Wallis and Futuna Islands" id="group_875817215_229" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Wallis and Futuna Islands</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Western Sahara" id="group_875817215_230" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Western Sahara</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Yemen" id="group_875817215_231" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Yemen</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Zambia" id="group_875817215_232" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Zambia</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="Zimbabwe" id="group_875817215_233" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+<span class="ss-choice-label">Zimbabwe</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.875817215" value="__other_option__" id="group_875817215_234" role="checkbox" class="ss-q-checkbox ss-q-other-toggle" aria-required="true"></span>
+<span class="ss-choice-label">Other:</span></label>
+<span class="ss-q-other-container goog-inline-block"><input type="text" name="entry.875817215.other_option_response" value="" class="ss-q-other" id="entry_875817215_other_option_response" dir="auto" aria-label="Other"></span>
+</li></ul>
+<div class="error-message">Please select at least 3 countries.</div>
+<div class="required-message">This is a required question</div></div></div></div>
+<input type="hidden" name="draftResponse" value="[,,&quot;3996874859189601606&quot;]
+">
+<input type="hidden" name="pageHistory" value="0">
+
+
+<input type="hidden" name="fbzx" value="3996874859189601606">
+
+<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+<input type="submit" name="submit" value="Submit" id="ss-submit">
+</td>
+</tr></tbody></table></div></ol></form></div>
+<div class="ss-footer"><div class="ss-attribution"></div>
+<div class="ss-legal"><div class="disclaimer-separator"></div>
+<div class="disclaimer" dir="ltr"><div class="powered-by-logo"><span class="powered-by-text">Powered by</span>
+<div class="ss-logo-container"><div class="ss-logo-image"></div>
+<span class="aria-only-help">Google Forms</span></div></div>
+<div class="ss-terms"><span class="disclaimer-msg">This content is neither created nor endorsed by Google.</span>
+<br>
+<a href="https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/reportabuse?source=https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/viewform">Report Abuse</a>
+-
+<a href="http://www.google.com/accounts/TOS">Terms of Service</a>
+-
+<a href="http://www.google.com/google-d-s/terms.html">Additional Terms</a></div></div></div></div>
+
+<div id="docs-aria-speakable" class="docs-a11y-ariascreenreader-speakable docs-offscreen" aria-live="assertive" role="region" aria-atomic></div></div>
+<a class="ss-edit-link" href="https://docs.google.com/forms/d/1Z7MjbLH3BJE1rdF9Lu5K2t9yo_SDhI43QCbMXmdfLUw/edit">Edit this form</a>
+
+<script type='text/javascript' src='./static/forms/client/js/2901528336-formviewer_prd.js'></script>
+
+<script type="text/javascript">
+  // translations
+  var english = [
+ "Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Dem. Rep. Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Faeroe Islands", "Falkland Islands", "Fiji", "Finland", "France", "French Guiana", "French Polynesia", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "North Korea", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Helena", "Saint Kitts and Nevis", "Saint Lucia", "Saint Pierre and Miquelon", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "Spain", "Sri Lanka", "State of Palestine", "Sudan", "Suriname", "Svalbard and Jan Mayen Islands", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Tibet", "Timor-Leste", "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "United States Virgin Islands", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Viet Nam", "Wallis and Futuna Islands", "Western Sahara", "Yemen", "Zambia", "Zimbabwe", "Other"
+  ];
+  var occupations_english = [
+    "Government",
+    "Academia",
+    "Business",
+    "Media",
+    "Other:"
+  ];
+  
+  var spanish = [
+"Afganistán", "Albania", "Argelia", "Samoa Americana", "Andorra", "Angola", "Anguilla", "Antigua y Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bahrein", "Bangladesh", "Barbados", "Bielorrusia", "Bélgica", "Belice", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia y Herzegovina", "Botswana", "Brasil", "Islas Vírgenes Británicas", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Camboya", "Camerún", "Canadá", "Cabo Verde", "Islas Caimán", "República Centroafricana", "Chad", "Chile", "China", "Colombia", "Comoras", "Congo", "Islas Cook", "Costa Rica", "Côte d'Ivoire", "Croacia", "Cuba", "Chipre", "República Checa", "República Democrática del Congo", "Dinamarca", "Djibouti", "Dominica", "República Dominicana", "Ecuador", "Egipto", "El Salvador", "Guinea Ecuatorial", "Eritrea", "Estonia", "Etiopía", "Islas Feroe", "Islas Malvinas", "Fiji", "Finlandia", "Francia", "Guiana francés", "Polinesia francés", "Gabón", "Gambia", "Georgia", "Alemania", "Ghana", "Gibraltar", "Grecia", "Groenlandia", "Granada", "Guadalupe", "Guam", "Guatemala", "Guinea", "Guinea-Bissau", "Guayana", "Haití", "Santa Sede", "Honduras", "Hong Kong", "Hungría", "Islandia", "India", "Indonesia", "Irán", "Irak", "Irlanda", "Isla de Man", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajstán", "Kenia", "Kiribati", "Kuwait", "Kirguistán", "Laos", "Letonia", "Líbano", "Lesoto", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macao", "Macedonia", "Madagascar", "Malawi", "Malasia", "Maldivas", "Malí", "Malta", "Islas Marshall", "Martinica", "Mauritania", "Mauricio", "Mayotte", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Montserrat", "Marruecos", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Países Bajos", "Antillas Holandesas", "Nueva Caledonia", "Nueva Zelandia", "Nicaragua", "Níger", "Nigeria", "Niue", "Isla Norfolk", "Corea del Norte", "Islas Marianas del Norte", "Noruega", "Omán", "Pakistán", "Palau", "Panamá", "Papua Nueva Guinea", "Paraguay", "Perú", "Filipinas", "Pitcairn", "Polonia", "Portugal", "Puerto Rico", "Katar", "Reunión", "Rumania", "Rusia", "Ruanda", "Santa Elena", "Saint Kitts y Nevis", "Santa Lucía", "San Pedro y Miquelón", "San Vicente y las Granadinas", "Samoa", "San Marino", "Santo Tomé y Príncipe", "Arabia Saudita", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Eslovaquia", "Eslovenia", "Islas Salomón", "Somalia", "Sudáfrica", "Corea del Sur", "España", "Sri Lanka", "Estado de Palestina", "Sudán", "Suriname", "Svalbard y Jan Mayen", "Swazilandia", "Suecia", "Suiza", "Siria", "Taiwan", "Tayikistán", "Tanzania", "Tailandia", "Tíbet", "Timor-Leste", "Togo", "Tokelau", "Tonga", "Trinidad y Tobago", "Túnez", "Turquía", "Turkmenistán", "Turcas y Caicos", "Tuvalu", "Uganda", "Ucrania", "Emiratos Árabes Unidos", "Reino Unido", "Estados Unidos de América", "Islas Vírgenes de los Estados Unidos", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Viet Nam", "Islas Wallis y Futuna", "Sáhara Occidental", "Yemen", "Zambia", "Zimbabue", "Otro"
+  ];
+   var occupations_spanish = [
+    "Gubernamental",
+    "Académica",
+    "Negocios",
+    "Medios",
+    "Otra:"
+  ];
+  var german = [
+  "Afghanistan", "Albanien", "Algerien", "Amerikanische Samoa", "Andorra", "Angola", "Anguilla", "Antigua und Barbuda", "Argentinien", "Armenien", "Aruba", "Australien", "Österreich", "Aserbaidschan", "Bahamas", "Bahrein", "Bangladesch", "Barbados", "Weißrussland", "Belgien", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivien", "Bosnien und Herzegowina", "Botswana", "Brasilien", "British Virgin Islands", "Brunei Darussalam", "Bulgarien", "Burkina Faso", "Burundi", "Kambodscha", "Kamerun", "Kanada", "Kap Verde", "Cayman Islands", "Zentralafrikanische Republik", "Tschad", "Chile", "China", "Kolumbien", "Komoren", "Kongo", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Kroatien", "Kuba", "Zypern", "Tschechische Republik", "Demokratische Republik Kongo", "Dänemark", "Dschibuti", "Dominica", "Dominikanische Republik", "Ecuador", "Ägypten", "El Salvador", "Äquatorial-Guinea", "Eritrea", "Estland", "Äthiopien", "Färöer-Inseln", "Falkland-Inseln", "Fidschi", "Finnland", "Frankreich", "Französisch-Guayana", "Französisch-Polynesien", "Gabun", "Gambia", "Georgia", "Deutschland", "Ghana", "Gibraltar", "Griechenland", "Grönland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heiligen Stuhl", "Honduras", "Hongkong", "Ungarn", "Island", "Indien", "Indonesien", "Iran", "Irak", "Irland", "Isle of Man", "Israel", "Italien", "Jamaika", "Japan", "Jordan", "Kasachstan", "Kenia", "Kiribati", "Kuwait", "Kirgisistan", "Laos", "Lettland", "Libanon", "Lesotho", "Liberia", "Libyen", "Liechtenstein", "Litauen", "Luxemburg", "Macao", "Mazedonien", "Madagaskar", "Malawi", "Malaysia", "Malediven", "Mali", "Malta", "Marshall-Inseln", "Martinique", "Mauretanien", "Mauritius", "Mayotte", "Mexiko", "Mikronesien", "Moldawien", "Monaco", "Mongolei", "Montenegro", "Montserrat", "Marokko", "Mosambik", "Myanmar", "Namibia", "Nauru", "Nepal", "Niederlande", "Niederländische Antillen", "Neukaledonien", "Neuseeland", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk-Insel", "Nordkorea", "Northern Mariana Islands", "Norwegen", "Oman", "Pakistan", "Palau", "Panama", "Papua-Neuguinea", "Paraguay", "Peru", "Philippinen", "Pitcairn", "Polen", "Portugal", "Puerto Rico", "Katar", "Wiedervereinigung", "Rumänien", "Russland", "Ruanda", "St. Helena", "St. Kitts und Nevis", "St. Lucia", "Saint-Pierre und Miquelon", "St. Vincent und die Grenadinen", "Samoa", "San Marino", "Sao Tome und Principe", "Saudi-Arabien", "Senegal", "Serbien", "Seychellen", "Sierra Leone", "Singapur", "Slowakei", "Slowenien", "Salomon-Inseln", "Somalia", "Südafrika", "Südkorea", "Spanien", "Sri Lanka", "Staat Palästina", "Sudan", "Suriname", "Spitzbergen und Jan-Mayen-Inseln", "Swasiland", "Schweden", "Schweiz", "Syrien", "Taiwan", "Tadschikistan", "Tansania", "Thailand", "Tibet", "Timor-Leste", "Togo", "Tokelau", "Tonga", "Trinidad und Tobago", "Tunesien", "Türkei", "Turkmenistan", "Turks-und Caicosinseln", "Tuvalu", "Uganda", "Ukraine", "Vereinigte Arabische Emirate", "Vereinigtes Königreich", "Vereinigte Staaten von Amerika", "Amerikanische Jungferninseln", "Uruguay", "Usbekistan", "Vanuatu", "Venezuela", "Viet Nam", "Wallis und Futuna", "Westsahara", "Jemen", "Sambia", "Simbabwe", "Andere"
+  ];
+   var occupations_german = [
+    "Regierung/öffentlicher Sektor",
+    "Akademie",
+    "Geschäftsmann/-frau",
+    "Medien",
+    "Andere:"
+  ];
+  var portuguese = [
+  "Afeganistão", "Albânia", "Argélia", "Samoa americana", "Andorra", "Angola", "Anguilla", "Antígua e Barbuda", "Argentina", "Armênia", "Aruba", "Austrália", "Áustria", "Azerbaijão", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Bélgica", "Belize", "Benin", "Bermudas", "Butão", "Bolívia", "Bósnia e Herzegovina", "Botswana", "Brasil", "Ilhas Virgens Britânicas", "Brunei Darussalam", "Bulgária", "Burkina Faso", "Burundi", "Camboja", "Camarões", "Canadá", "Cabo Verde", "Ilhas Cayman", "República Centro-Africano", "Chade", "Chile", "China", "Colômbia", "Comores", "Congo", "Ilhas Cook", "Costa Rica", "Cote d'Ivoire", "Croácia", "Cuba", "Chipre", "República Checa", "República Democrática do Congo", "Dinamarca", "Djibouti", "Dominica", "República Dominicana", "Equador", "Egito", "El Salvador", "Guiné Equatorial", "Eritreia", "Estônia", "Etiópia", "Ilhas Faroé", "Ilhas Malvinas", "Fiji", "Finlândia", "França", "Guiana Francesa", "Polinésia Francesa", "Gabão", "Gâmbia", "Georgia", "Alemanha", "Gana", "Gibraltar", "Grécia", "Groenlândia", "Granada", "Guadalupe", "Guam", "Guatemala", "Guiné", "Guiné-Bissau", "Guiana", "Haiti", "Santa Sé", "Honduras", "Hong Kong", "Hungria", "Islândia", "Índia", "Indonésia", "Irã", "Iraque", "Irlanda", "Ilha de Man", "Israel", "Itália", "Jamaica", "Japão", "Jordânia", "Cazaquistão", "Quênia", "Kiribati", "Kuweit", "Quirguistão", "Laos", "Látvia", "Líbano", "Lesoto", "Libéria", "Líbia", "Liechtenstein", "Lituânia", "Luxemburgo", "Macau", "Macedonia", "Madagáscar", "Malavi", "Malásia", "Maldivas", "Mali", "Malta", "Ilhas Marshall", "Martinica", "Mauritânia", "Maurício", "Mayotte", "México", "Micronésia", "Moldávia", "Mônaco", "Mongólia", "Montenegro", "Montserrat", "Marrocos", "Moçambique", "Mianmar", "Namíbia", "Nauru", "Nepal", "Holanda", "Antilhas Holandesas", "Nova Caledônia", "Nova Zelândia", "Nicarágua", "Níger", "Nigéria", "Niue", "Ilha de Norfolk", "Coréia do Norte", "Ilhas Marianas do Norte", "Noruega", "Oman", "Paquistão", "Palau", "Panamá", "Papua Nova Guiné", "Paraguai", "Peru", "Filipinas", "Pitcairn", "Polônia", "Portugal", "Porto Rico", "Catar", "Reunião", "Romênia", "Rússia", "Ruanda", "Santa Helena", "São Cristóvão e Nevis", "Santa Lúcia", "São Pedro e Miquelon", "São Vicente e Granadinas", "Samoa", "San Marino", "São Tomé e Príncipe", "Arábia Saudita", "Senegal", "Sérvia", "Seychelles", "Serra Leoa", "Cingapura", "Eslováquia", "Eslovenia", "Ilhas Salomão", "Somália", "África do Sul", "Coréia do Sul", "Espanha", "Sri Lanka", "Estado da Palestina", "Sudão", "Suriname", "Svalbard e Jan Mayen", "Suazilândia", "Suécia", "Suíça", "Síria", "Taiwan", "Tadjiquistão", "Tanzânia", "Tailândia", "Tibete", "Timor-Leste", "Togo", "Tokelau", "Tonga", "Trinidad e Tobago", "Tunísia", "Turquia", "Turquemenistão", "Ilhas Turks e Caicos", "Tuvalu", "Uganda", "Ucrânia", "Emirados Árabes Unidos", "Reino Unido", "EUA", "Ilhas Virgens Americanas", "Uruguai", "Uzbequistão", "Vanuatu", "Venezuela", "Viet Nam", "Ilhas Wallis e Futuna", "Saara Ocidental", "Iémen", "Zâmbia", "Zimbábue", "Outro"
+  ];
+   var occupations_portuguese = [
+    "Governo",
+    "Academia",
+    "Negócios",
+    "Media",
+    "Outro:"
+  ];
+  var french = [
+  "Afghanistan", "Albanie", "Algérie", "Samoa américain", "Andorre", "Angola", "Anguilla", "Antigua-et-Barbuda", "Argentine", "Arménie", "Aruba", "Australie", "Autriche", "Azerbaïdjan", "Bahamas", "Bahreïn", "Bangladesh", "Barbade", "Bélarus", "Belgique", "Belize", "Bénin", "Bermudes", "Bhoutan", "Bolivie", "Bosnie-Herzégovine", "Botswana", "Brésil", "Îles Vierges britanniques", "Brunei Darussalam", "Bulgarie", "Burkina Faso", "Burundi", "Cambodge", "Cameroun", "Canada", "Cap-Vert", "Îles Caïmans", "République centrafricaine", "Tchad", "Chili", "Chine", "Colombie", "Comores", "Congo", "Îles Cook", "Costa Rica", "Côte d'Ivoire", "Croatie", "Cuba", "Chypre", "République tchèque", "République démocratique du Congo", "Danemark", "Djibouti", "Dominique", "République dominicaine", "Équateur", "Egypte", "El Salvador", "Guinée équatoriale", "Erythrée", "Estonie", "Ethiopie", "Îles Féroé", "Îles Falkland", "Fidji", "Finlande", "France", "Guyane française", "Polynésie française", "Gabon", "Gambie", "Géorgie", "Allemagne", "Ghana", "Gibraltar", "Grèce", "Groenland", "Grenade", "Guadeloupe", "Guam", "Guatemala", "Guinée", "Guinée-Bissau", "Guyane", "Haïti", "Saint-Siège", "Honduras", "Hong-Kong", "Hongrie", "Islande", "Inde", "Indonésie", "Iran", "Irak", "Irlande", "Ile de Man", "Israël", "Italie", "Jamaïque", "Japon", "Jordanie", "Kazakhstan", "Kenya", "Kiribati", "Koweit", "Kirghizistan", "Laos", "Lettonie", "Liban", "Lesotho", "Libéria", "Libye", "Liechtenstein", "Lituanie", "Luxembourg", "Macao", "Macédoine", "Madagascar", "Malawi", "Malaisie", "Maldives", "Mali", "Malte", "Îles Marshall", "Martinique", "Mauritanie", "Maurice", "Mayotte", "Mexique", "Micronésie", "Moldavie", "Monaco", "Mongolie", "Monténégro", "Montserrat", "Maroc", "Mozambique", "Myanmar", "Namibie", "Nauru", "Népal", "Pays-Bas", "Antilles néerlandaises", "Nouvelle-Calédonie", "Nouvelle-Zélande", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Corée du Nord", "Îles Mariannes du Nord", "Norvège", "Oman", "Pakistan", "Palau", "Panama", "Papouasie-Nouvelle-Guinée", "Paraguay", "Pérou", "Philippines", "Pitcairn", "Pologne", "Portugal", "Puerto Rico", "Qatar", "Réunion", "Roumanie", "Russie", "Rwanda", "Sainte-Hélène", "Saint-Kitts-et-Nevis", "Sainte-Lucie", "Saint-Pierre-et-Miquelon", "Saint-Vincent-et-les-Grenadines", "Samoa", "San Marino", "Sao Tomé et Principe", "Arabie Saoudite", "Sénégal", "Serbie", "Seychelles", "Sierra Leone", "Singapour", "Slovaquie", "Slovénie", "Îles Salomon", "Somalie", "Afrique du Sud", "Corée du Sud", "Espagne", "Sri Lanka", "Etat de Palestine", "Soudan", "Suriname", "Svalbard et Jan Mayen", "Swaziland", "Suède", "Suisse", "Syrie", "Taiwan", "Tadjikistan", "Tanzanie", "Thaïlande", "Tibet", "Timor-Leste", "Togo", "Tokelau", "Tonga", "Trinité-et-Tobago", "Tunisie", "Turquie", "Turkménistan", "Îles Turques et Caïques", "Tuvalu", "Ouganda", "Ukraine", "Émirats arabes unis", "Royaume-Uni", "Etats-Unis d'Amérique", "Îles Vierges des États-Unis", "Uruguay", "Ouzbékistan", "Vanuatu", "Venezuela", "Viet Nam", "Wallis-et-Futuna", "Sahara occidental", "Yémen", "Zambie", "Zimbabwe", "Autre"
+  ];
+   var occupations_french = [
+    "Gouvernemental",
+    "Le milieu universitaire et de la recherche",
+    "Milieux d´affaires",
+    "Les médias",
+    "Autre:"
+  ];
+  var chinese = [
+  "阿富汗", "阿尔巴尼亚", "阿尔及利亚", "美属萨摩亚", "安道​​尔", "安哥拉", "安圭拉", "安提瓜和巴布达", "阿根廷", "亚美尼亚", "阿鲁巴", "澳大利亚", "奥地利", "阿塞拜疆", "巴哈马", "巴林", "孟加拉国", "巴巴多斯", "白俄罗斯", "比利时", "伯利兹", "贝宁", "百慕大", "不丹", "玻利维亚", "波斯尼亚和黑塞哥维那", "博茨瓦纳", "巴西", "英属维尔京群岛", "文莱达鲁萨兰国", "保加利亚", "布基纳法索", "布隆迪", "柬埔寨", "喀麦隆", "加拿大", "佛得角", "开曼群岛", "中非共和国", "乍得", "智利", "中国", "哥伦比亚", "科摩罗", "刚果", "库克群岛", "哥斯达黎加", "科特迪瓦", "克罗地亚", "古巴", "塞浦路斯", "捷克共和国", "刚果民主共和国", "丹麦", "吉布提", "多米尼加", "多明尼加共和国", "厄瓜多尔", "埃及", "萨尔瓦多", "赤道几内亚", "厄立特里亚", "爱沙尼亚", "埃塞俄比亚", "法罗群岛", "福克兰群岛", "斐", "芬兰", "法国", "法属圭亚那", "法属波利尼西亚", "加蓬", "冈比亚", "格鲁吉亚", "德国", "加纳", "直布罗陀", "希腊", "格陵兰", "格林纳达", "瓜德罗普岛", "关岛", "危地马拉", "几内亚", "几内亚比绍", "圭亚那", "海地", "教廷", "洪都拉斯", "香港", "匈牙利", "冰岛", "印度", "印尼", "伊朗", "伊拉克", "爱尔兰", "马恩岛", "以色列", "意大利", "牙买加", "日本", "约旦", "哈萨克斯坦", "肯尼亚", "基里巴斯", "科威特", "吉尔吉斯斯坦", "老挝", "拉脱维亚", "黎巴嫩", "莱索托", "利比里亚", "利比亚", "列支敦士登", "立陶宛", "卢森堡", "澳门", "马其顿", "马达加斯加", "马拉维", "马来西亚", "马尔代夫", "马里", "马耳他", "马绍尔群岛", "马提尼克", "毛里塔尼亚", "毛里求斯", "马约特岛", "墨西哥", "密克罗尼西亚", "摩尔多瓦", "摩纳哥", "蒙古", "黑山", "蒙特塞拉特", "摩洛哥", "莫桑比克", "缅甸", "纳米比亚", "瑙鲁", "尼泊尔", "荷兰", "荷属安的列斯", "新喀里多尼亚", "新西兰", "尼加拉瓜", "尼日尔", "尼日利亚", "纽埃", "诺福克岛", "北朝鲜", "北马里亚纳群岛", "挪威", "阿曼", "巴基斯坦", "帕劳", "巴拿马", "巴布亚新几内亚", "巴拉圭", "秘鲁", "菲律宾", "皮特凯恩", "波兰", "葡萄牙", "波多黎各", "卡塔尔", "团圆", "罗马尼亚", "俄国", "卢旺达", "圣赫勒拿", "圣基茨和尼维斯", "圣卢西亚", "圣皮埃尔和密克隆", "圣文森特和格林纳丁斯", "萨摩亚", "圣马力诺", "圣多美和普林西比", "沙特阿拉伯", "塞内加尔", "塞尔维亚", "塞舌尔", "塞拉利昂", "新加坡", "斯洛伐克", "斯洛文尼亚", "所罗门群岛", "索马里", "南非", "韩国", "西班牙", "斯里兰卡", "巴勒斯坦国", "苏丹", "苏里南", "斯瓦尔巴群岛和扬马延岛", "斯威士兰", "瑞典", "瑞士", "叙利亚", "台湾", "塔吉克斯坦", "坦桑尼亚", "泰国", "西藏", "东帝汶", "多哥", "托克劳", "汤加", "特里尼达和多巴哥", "突尼斯", "土耳其", "土库曼斯坦", "特克斯和凯科斯群岛", "图瓦卢", "乌干达", "乌克兰", "阿联酋", "联合王国", "美国", "美属维尔京群岛", "乌拉圭", "乌兹别克斯坦", "瓦努阿图", "委内瑞拉", "越南", "瓦利斯和富图纳群岛", "西撒哈拉", "也门", "赞比亚", "津巴布韦", "其他"
+  ];
+   var occupations_chinese = [
+    "政府",
+    "学术界",
+    "业务",
+    "媒体",
+    "其他:"
+  ];
+  var japanese = [
+  "アフガニスタン", "アルバニア", "アルジェリア", "米サモア", "アンドラ", "アンゴラ", "アングィラ", "アンチグアバーブーダ", "アルゼンチン", "アルメニア", "アルバ", "オーストラリア", "オーストリア", "アゼルバイジャン", "バハマ", "バーレーン", "バングラデシュ", "バルバドス", "ベラルーシ", "ベルギー", "ベリーズ", "ベナン", "バミューダ", "ブータン", "ボリビア", "ボスニア·ヘルツェゴビナ", "ボツワナ", "ブラジル", "英領ヴァージン諸島", "ブルネイ·ダルサラーム国", "ブルガリア", "ブルキナファソ", "ブルンジ", "カンボジア", "カメルーン", "カナダ", "カーボベルデ", "ケイマン諸島", "中央アフリカ共和国", "チャド", "チリ", "中国", "コロンビア", "コモロ", "コンゴ", "クック諸島", "コスタリカ", "コー​​トジボワール", "クロアチア", "キューバ", "キプロス", "チェコ共和国", "コンゴ民主共和国", "デンマーク", "ジブチ", "ドミニカ", "ドミニカ共和国", "エクアドル", "エジプト", "エルサルバドル", "赤道ギニア", "エリトリア", "エストニア", "エチオピア", "フェロー諸島", "フォークランド諸島", "フィジー", "フィンランド", "フランス", "仏領ギアナ", "フランス領ポリネシア", "ガボン", "ガンビア", "グルジア", "ドイツ", "ガーナ", "ジブラルタル", "ギリシャ", "グリーンランド", "グレナダ", "グアドループ島", "グアム島", "グアテマラ", "ギニア", "ギニアビサウ", "ガイアナ", "ハイチ", "教皇庁", "ホンジュラス", "香港", "ハンガリー", "アイスランド", "インド", "インドネシア", "イラン", "イラク", "アイルランド", "マン島", "イスラエル", "イタリア", "ジャマイカ", "日本", "ヨルダン", "カザフスタン", "ケニア", "キリバス", "クウェート", "キルギスタン", "ラオス", "ラトビア", "レバノン", "レソト", "リベリア", "リビア", "リヒテンシュタイン", "リトアニア", "ルクセンブルク", "マカオ", "マケドニア", "マダガスカル", "マラウイ", "マレーシア", "モルディブ", "マリ", "マルタ", "マーシャル諸島", "マルティニーク島", "モーリタニア", "モーリシャス", "マヨット島", "メキシコ", "ミクロネシア", "モルドバ", "モナコ", "モンゴル国", "モンテネグロ", "モントセラト", "モロッコ", "モザンビーク", "ミャンマー", "ナミビア", "ナウル", "ネパール", "オランダ", "オランダ領アンティル", "ニューカレドニア", "ニュージーランド", "ニカラグア", "ニジェール", "ナイジェリア", "ニウエ", "ノーフォーク島", "北朝鮮", "北マリアナ諸島連邦", "ノルウェー", "オマーン", "パキスタン", "パラオ", "パナマ", "パプアニューギニアの", "パラグアイ", "ペルー", "フィリピン", "ピトケアン", "ポーランド", "ポルトガル", "プエルトリコ", "カタール", "再会", "ルーマニア", "ロシア", "ルワンダ", "セント·ヘレナ島", "セントクリストファーネイビス", "セントルシア", "サンピエール島·ミクロン島", "セントビンセントおよびグレナディーン諸島", "サモア", "サン·マリノ", "サントメプリンシペ", "サウジアラビア", "セネガル", "セルビア", "セイシェル", "シエラレオネ", "シンガポール", "スロバキア", "スロベニア", "ソロモン諸島", "ソマリア", "南アフリカ", "韓国", "スペイン", "スリ·ランカ", "パレスチナの状態", "スーダン", "スリナム", "スバールバル諸島とヤンマイエン島", "スワジランド", "スウェーデン", "スイス", "シリア", "台湾", "タジキスタン", "タンザニア", "タイ", "チベット", "東ティモール", "トーゴ", "トケラウ", "トンガ", "トリニダード·トバゴ", "チュニジア", "トルコ", "トルクメニスタン", "タークスカイコス諸島", "ツバル", "ウガンダ", "ウクライナ", "アラブ首長国連邦", "イギリス", "アメリカ合衆国", "アメリカ領ヴァージン諸島", "ウルグアイ", "ウズベキスタン", "バヌアツ", "ベネズエラ", "ベトナム", "ワリー·エ·フトゥーナ諸島", "西サハラ", "イエメン", "ザンビア", "ジンバブエ", "その他"
+  ];
+   var occupations_japanese = [
+    "政府",
+    "アカデミア",
+    "ビジネス",
+    "メディア",
+    "その他："
+  ];
+  var arabic = [
+  "أفغانستان", "ألبانيا", "الجزائر", "ساموا الأمريكية", "أندورا", "أنغولا", "أنغيلا", "أنتيغوا وبربودا", "الأرجنتين", "أرمينيا", "أروبا", "أستراليا", "النمسا", "أذربيجان", "جزر البهاما", "البحرين", "بنغلاديش", "بربادوس", "روسيا البيضاء", "بلجيكا", "بليز", "بنين", "برمودا", "بوتان", "بوليفيا", "البوسنة والهرسك", "بوتسوانا", "البرازيل", "جزر فيرجن البريطانية", "بروناي دار السلام", "بلغاريا", "بوركينا فاسو", "بوروندي", "كمبوديا", "الكاميرون", "كندا", "الرأس الأخضر", "جزر كايمان", "جمهورية أفريقيا الوسطى", "تشاد", "شيلي", "الصين", "كولومبيا", "جزر القمر", "الكونغو", "جزر كوك", "كوستاريكا", "كوت ديفوار", "كرواتيا", "كوبا", "قبرص", "الجمهورية التشيكية", "جمهورية الكونغو الديمقراطية", "الدنمارك", "جيبوتي", "دومينيكا", "جمهورية الدومينيكان", "الإكوادور", "مصر", "السلفادور", "غينيا الاستوائية", "إريتريا", "استونيا", "أثيوبيا", "جزر فارو", "جزر فوكلاند", "فيجي", "فنلندا", "فرنسا", "جويانا الفرنسية", "بولينيزيا الفرنسية", "الغابون", "غامبيا", "جورجيا", "ألمانيا", "غانا", "جبل طارق", "يونان", "جرينلاند", "غرينادا", "غوادلوب", "غوام", "غواتيمالا", "غينيا", "غينيا بيساو", "غيانا", "هايتي", "الكرسي الرسولي", "هندوراس", "هونغ كونغ", "هنغاريا", "أيسلندا", "الهند", "أندونيسيا", "ايران", "العراق", "ايرلندا", "جزيرة آيل أوف مان", "إسرائيل", "إيطاليا", "جامايكا", "اليابان", "الأردن", "كازاخستان", "كينيا", "كيريباتي", "الكويت", "قيرغيزستان", "لاوس", "لاتفيا", "لبنان", "ليسوتو", "ليبيريا", "ليبيا", "ليختنشتاين", "ليتوانيا", "لوكسمبورغ", "ماكاو", "مقدونيا", "مدغشقر", "مالاوي", "ماليزيا", "جزر المالديف", "مالي", "مالطا", "جزر مارشال", "مارتينيك", "موريتانيا", "موريشيوس", "مايوت", "المكسيك", "مايكرونيزيا", "مولدوفا", "موناكو", "منغوليا", "الجبل الأسود", "مونتسيرات", "مغربي", "موزمبيق", "ميانمار", "ناميبيا", "ناورو", "نيبال", "هولندا", "جزر الأنتيل الهولندية", "كاليدونيا الجديدة", "نيوزيلندا", "نيكاراغوا", "النيجر", "نيجيريا", "نيوي", "جزيرة نورفولك", "كوريا الشمالية", "جزر ماريانا الشمالية", "النرويج", "عمان", "باكستان", "بالاو", "بناما", "بابوا غينيا الجديدة", "باراغواي", "بيرو", "الفلبين", "بيتكيرن", "بولندا", "البرتغال", "بورتوريكو", "قطر", "جمع شمل", "رومانيا", "روسيا", "رواندا", "سانت هيلانة", "سانت كيتس ونيفيس", "سانت لوسيا", "سان بيار وميكلون", "سانت فنسنت وجزر غرينادين", "ساموا", "سان مارينو", "ساو تومي وبرينسيبي", "العربية السعودية", "السنغال", "صربيا", "سيشيل", "سيراليون", "سنغافورة", "سلوفاكيا", "سلوفينيا", "جزر سليمان", "الصومال", "جنوب أفريقيا", "كوريا الجنوبية", "إسبانيا", "سري لانكا", "دولة فلسطين", "سودان", "سورينام", "جزر سفالبارد وجان ماين", "سوازيلاند", "السويد", "سويسرا", "سوريا", "تايوان", "طاجيكستان", "تنزانيا", "تايلاند", "التبت", "تيمور الشرقية", "توغو", "توكيلاو", "تونغا", "ترينيداد وتوباغو", "تونس", "تركيا", "تركمانستان", "جزر تركس وكايكوس", "توفالو", "أوغندا", "أوكرانيا", "الأمارات العربية المتحدة", "المملكة المتحدة", "الولايات المتحدة", "الجزر العذراء الأمريكية", "أوروغواي", "أوزبكستان", "فانواتو", "فنزويلا", "فييت نام", "واليس وفوتونا", "الصحراء الغربية", "يمني", "زامبيا", "زيمبابوي", "آخر"
+  ];
+   var occupations_arabic = [
+    "الحكومة",
+    " الأوساط الأكاديمية",
+    "أعمال تجارية",
+    "الصحافة والإعلام",
+    "آخر"
+  ];
+  var russian = [
+  "Афганистан", "Албания", "Алжир", "Американское Самоа", "Андорра", "Ангола", "Ангилья", "Антигуа и Барбуда", "Аргентина", "Армения", "Аруба", "Австралия", "Австрия", "Азербайджан", "Багамские острова", "Бахрейн", "Бангладеш", "Барбадос", "Беларусь", "Бельгия", "Белиз", "Бенин", "Бермудские острова", "Бутан", "Боливия", "Босния и Герцеговина", "Ботсвана", "Бразилия", "Британские Виргинские острова", "Бруней-Даруссалам", "Болгария", "Буркина-Фасо", "Бурунди", "Камбоджа", "Камерун", "Канада", "Кабо-Верде", "Каймановы острова", "Центрально-Африканская Республика", "Чад", "Чили", "Китай", "Колумбия", "Коморские острова", "Конго", "Острова Кука", "Коста-Рика", "Берег Слоновой Кости", "Хорватия", "Куба", "Кипр", "Чешская республика", "Демократическая Республика Конго", "Дания", "Джибути", "Доминика", "Доминиканская Республика", "Эквадор", "Египет", "Сальвадор", "Экваториальная Гвинея", "Эритрея", "Эстония", "Эфиопия", "Фарерские острова", "Фолклендские острова", "Фиджи", "Финляндия", "Франция", "Французская Гвиана", "Французская Полинезия", "Габон", "Гамбия", "Грузия", "Германия", "Гана", "Гибралтар", "Греция", "Гренландия", "Гренада", "Гваделупа", "Гуам", "Гватемала", "Гвинея", "Гвинея-Бисау", "Гайана", "Гаити", "Папский престол", "Гондурас", "Гонконг", "Венгрия", "Исландия", "Индия", "Индонезия", "Иран", "Ирак", "Ирландия", "Остров Мэн", "Израиль", "Италия", "Ямайка", "Япония", "Иордания", "Казахстан", "Кения", "Кирибати", "Кувейт", "Киргизия", "Лаос", "Латвия", "Ливан", "Лесото", "Либерия", "Ливия", "Лихтенштейн", "Литва", "Люксембург", "Макао", "Македония", "Мадагаскар", "Малави", "Малайзия", "Мальдивы", "Мали", "Мальта", "Маршалловы острова", "Мартиника", "Мавритания", "Маврикий", "Майотта", "Мексика", "Микронезия", "Молдова", "Монако", "Монголия", "Черногория", "Монтсеррат", "Марокко", "Мозамбик", "Мьянма", "Намибия", "Науру", "Непал", "Нидерланды", "Нидерландские Антильские острова", "Новая Каледония", "Новая Зеландия", "Никарагуа", "Нигер", "Нигерия", "Ниуэ", "Остров Норфолк", "Северная Корея", "Северные Марианские острова", "Норвегия", "Оман", "Пакистан", "Палау", "Панама", "Папуа-Новая Гвинея", "Парагвай", "Перу", "Филиппины", "Питкэрн", "Польша", "Португалия", "Пуэрто-Рико", "Катар", "Воссоединение", "Румыния", "Россия", "Руанда", "Остров Святой Елены", "Сент-Китс и Невис", "Сент-Люсия", "Сен-Пьер и Микелон", "Сент-Винсент и Гренадины", "Самоа", "Сан - Марино", "Сан-Томе и Принсипи", "Саудовская Аравия", "Сенегал", "Сербия", "Сейшельские острова", "Сьерра-Леоне", "Сингапур", "Словакия", "Словения", "Соломоновы Острова", "Сомали", "ЮАР", "Южная Корея", "Испания", "Шри Ланка", "Государство Палестина", "Судан", "Суринам", "Шпицберген и Ян-Майен", "Свазиленд", "Швеция", "Швейцария", "Сирия", "Тайвань", "Таджикистан", "Танзания", "Таиланд", "Тибет", "Тимор-Лешти", "Того", "Токелау", "Тонга", "Тринидад и Тобаго", "Тунис", "Турция", "Туркменистан", "Острова Теркс и Кайкос", "Тувалу", "Уганда", "Украина", "Объединенные Арабские Эмираты", "Великобритания", "Соединенные Штаты Америки", "Виргинские острова Соединенных Штатов", "Уругвай", "Узбекистан", "Вануату", "Венесуэла", "Вьетнам", "Острова Уоллис и Футуна", "Западная Сахара", "Йемен", "Замбия", "Зимбабве", "Другой"
+  ];
+   var occupations_russian = [
+    "Правительство",
+    "Академия",
+    "Бизнес",
+    "Медиа",
+    "Другой:"
+  ];
+  var hindi = [
+  "अफ़ग़ानिस्तान", "अल्बानिया", "अल्जीरिया", "अमेरिकन समोआ", "एंडोरा", "अंगोला", "एंगुइल्ला", "एंटीगुआ और बारबुडा", "अर्जेंटीना", "अर्मेनिआ", "अरूबा", "ऑस्ट्रेलिया", "ऑस्ट्रिया", "आज़रबाइजान", "बहमास", "बहरीन", "बांग्लादेश", "बारबाडोस", "बेलोरूस", "बेल्जियम", "बेलीज", "बेनिन", "बरमूडा", "भूटान", "बोलीविया", "बोस्निया और हर्ज़िगोविना", "बोत्सवाना", "ब्राज़िल", "ब्रिटिश वर्जिन आइलैंड्स", "ब्रुनेई दारुस्सलाम", "बुल्गारिया", "बुर्किना फासो", "बुस्र्न्दी", "कंबोडिया", "कैमरून", "कनाडा", "केप वर्ड", "केमैन द्वीप", "मध्य अफ्रीकी गणराज्य", "काग़ज़ का टुकड़ा", "चिली", "चीन", "कोलंबिया", "कोमोरोज़", "कांगो", "कुक आइलैंड्स", "कोस्टा रिका", "कोटे डी आइवर", "क्रोएशिया", "क्यूबा", "सायप्रस", "चेक गणराज्य", "कांगो लोकतांत्रिक गणराज्य", "डेन्मार्क", "जिबोटी", "डॉमिनिका", "डॉमिनिक गणराज्य", "इक्वेडोर", "मिस्र", "अल सल्वाडोर", "इक्वेटोरियल गिनी", "इरीट्रिया", "एस्तोनिया", "इथियोपिया", "फ़ायरो द्वीप", "फ़ॉकलैंड आइलैंड्स", "फिजी", "फ़िनलैंड", "फ्रांस", "फ़्रेंच गयाना", "फ़्रेंच पोलिनेशिया", "गैबन", "जाम्बिया", "जॉर्जिया", "जर्मनी", "घाना", "गिब्राल्टर", "ग्रीस", "ग्रीनलैंड", "ग्रेनेडा", "ग्वाडेलोप", "गुआम", "ग्वाटेमाला", "गिन्नी", "गिन्नी - बिसाउ", "गिनी - बिसाऊ", "हैती", "धर्ममण्डल", "होंडुरस", "हाँग काँग", "हंगरी", "आइसलैंड", "भारत", "इंडोनेशिया", "ईरान", "इराक", "आयरलैंड", "आइल ऑफ मैन", "इजराइल", "इटली", "जमैका", "जापान", "जॉर्डन", "कजाखस्तान", "केन्या", "किरबाती", "कुवैत", "किर्गिस्तान", "लाओस", "लाटविया", "लेबनान", "लेसोथो", "लाइबेरिया", "लीबिया", "लिचेंस्टीन", "लिथुआनिया", "लक्ज़मबर्ग", "मकाओ", "मकदूनिया", "मेडागास्कर", "मलावी", "मलेशिया", "मालदीव", "माली", "माल्टा", "मार्शल द्वीप", "मार्टीनिक", "मॉरिटानिया", "मॉरिशस", "मायोटी", "मेक्सिको", "माइक्रोनेशिया", "मोलदोवा", "मोनाको", "मंगोलिया", "मॉन्टेंगरो", "मॉन्स्टेरॉट", "मोरक्को", "मोज़ाम्बिक", "म्यांमार", "नामीबिया", "नॉरू", "नेपाल", "नीदरलैंड", "नीदरलैंड एंटाइल्स", "न्यू कैलेडोनिया", "न्यूजीलैंड", "निकारागुआ", "नाइजर", "नाइजीरिया", "नीयू", "नॉरफ़ॉक आइलैंड", "उत्तर कोरिया", "उत्तरी मारियाना द्वीप", "नॉर्वे", "ओमान", "पाकिस्तान", "पलाऊ", "पनामा", "पापुआ न्यू गिनीआ", "परागुआ", "पेरू", "फ़िलिपींस", "पिटकेर्न", "पोलैंड", "पुर्तगाल", "पोर्टो रीको", "क़तर", "पुनर्मिलन", "रोमानिया", "रूस", "रवांडा", "सेंट हेलेना", "सैंत किट्स एंड नेविस", "सेंट लूसिया", "सेंट पियरे और मिकेलॉन", "सेंट विंसेंट और द ग्रेनाडाइन्स", "सामोआ", "सैन मारिनो", "साओ टोम और प्रिंसिपे", "सऊदी अरब", "सेनेगल", "सर्बिआ", "सेशेल्स", "सिएरा लियोन", "सिंगापुर", "स्लोवाकिया", "स्लोवेनिया", "सोलोमन आइलैंड्स", "सोमालिया", "दक्षिण अफ्रीका", "दक्षिण कोरिया", "स्पेन", "श्रीलंका", "फिलिस्तीन के राज्य", "सूडान", "सूरीनाम", "स्वालबार्ड और जैन मायेन द्वीप समूह", "स्वाज़ीलैंड", "स्वीडन", "स्विजरलैंड", "सीरिया", "ताइवान", "ताजीकिस्तान", "तंज़ानिया", "थाईलैंड", "तिब्बत", "तिमोर-लेस्ते", "टोगो", "टोकेलाऊ", "टोंगा", "त्रिनिदाद एंड टोबेगो", "ट्यूनीशिया", "टर्की", "तुर्कमेनिस्तान", "तुर्क्स ऐंड कैकोज़ आइलैंड्स", "टवालू", "यूगांडा", "यूक्रेन", "संयुक्त अरब अमीरात", "यूनाइटेड किंगडम", "अमेरिका", "संयुक्त राज्य अमेरिका वर्जिन आइलैंड्स", "उरुग्वे", "उज़्बेकिस्तान", "वानातू", "वेनेज़ुएला", "वियतनाम", "वालिस और फ़्यूचूना द्वीप", "पश्चिमी सहारा", "यमन", "ज़ाम्बिया", "ज़िम्बाब्वे", "अन्य"
+  ];
+   var occupations_hindi = [
+    "सरकार",
+    "एकेडेमिया",
+    "व्यापार",
+    "मीडिया",
+    "अन्य"
+  ];
+
+
+
+  var translatePeers = function(text, occupations) {
+    $('.ss-choice-label').each(function(index) {
+      if (index > 4) {
+        index -=5;
+        $(this).text(text[index]);
+      }
+      else
+      {
+        $(this).text(occupations[index]);
+      }
+    });
+
+    $("option").each(function(index) {
+      if (index!=0)
+      {
+        index--;
+        $(this).text(text[index]);
+      }
+    });
+  };
+
+
+
+ // choose language
+ var language = $(".language");
+  language.click(function() {
+      language.removeClass('selected-language');
+      $(this).addClass('selected-language');
+
+      if (this.text === "English")
+      {
+        $("#question1").text("What country are you from?");
+        $("#question2").text("Identify up to 20 countries that are often compared to yours because of similarities with respect to natural resources, economic development, and environmental challenges.");
+        $("#occupation").text("What is your occupation?");
+        translatePeers(english, occupations_english);
+      }
+      else if (this.text === "Español")
+      {
+        $("#question1").text("¿De qué país es usted?");
+        $("#question2").text("Seleccione un máximo de 20 países que son frecuentemente comparados con el suyo por similitudes en sus recursos naturales, desarrollo económico y desafíos ambientales.");
+        $("#occupation").text("¿Cuál es su ocupación?");
+        translatePeers(spanish, occupations_spanish);
+      }
+      else if (this.text === "Português")
+      {
+        $("#question1").text("De que país você é?");
+        $("#question2").text("Identifica até vinte países que frequentamente são comparados ao seu devido às semelhanças com respeito aos recursos naturais, desenvolvimento econômico e os desafios ambientais.");
+        $("#occupation").text("Qual é a sua ocupação?");
+        translatePeers(portuguese, occupations_portuguese);
+      }
+      else if (this.text === "Français")
+      {
+        $("#question1").text("De quel pays venez-vous?");
+        $("#question2").text("Identifiez jusqu'à 20 pays qui sont souvent comparés au votre pour leur ressemblances en termes de ressources naturelles, développement économique et enjeux environnementaux.");
+        $("#occupation").text("Quelle est votre profession?");
+        translatePeers(french, occupations_french);
+      }
+      else if (this.text === "Deutsch")
+      {
+        $("#question1").text("Aus welchem Land kommen Sie?");
+        $("#question2").text("Nennen Sie bitte bis zu 20 Länder, die auf Grund von Ähnlichkeiten in den Bereichen natürlicher Resourcen, wirtschaftlicher Entwicklung und potenzieller Umweltprobleme häufig mit Ihrem Land verglichen werden.");
+        $("#occupation").text("Was ist Ihr Berufsfeld?");
+        translatePeers(german, occupations_german);
+      }
+      else if (this.text === "中文")
+      {
+        $("#question1").text("您从哪个国家来？");
+        $("#question2").text("指认出20个因为在自然资源、经济发展以及环境挑战方面与你国家相似而经常与你国家作为比较的国家。");
+        $("#occupation").text("您做什么工作？");
+        translatePeers(chinese, occupations_chinese);
+      }
+      else if (this.text === "日本語")
+      {
+        $("#question1").text("あなたはどこの国から来たの？");
+        $("#question2").text("天然資源、経済発展、環境の類似性から、あなたの国と比較されやすい国を２０カ国まで挙げて下さい。");
+        $("#occupation").text("あなたの職業は何ですか？");
+        translatePeers(japanese, occupations_japanese);
+      }
+       else if (this.text === "हिंदी")
+      {
+        $("#question1").text("");
+        $("#question2").text("क्रपिया २० देशों को पहेच्छनिए, जिन में आपके देश के समान प्राकृतिक संसाधान हैं, और जहाँ आपके देश के समान आर्थिक वा पर्यावरनिया चुनौतियाँ हैं.");
+        $("#occupation").text("आपका व्यवसाय क्या है?");
+        translatePeers(hindi, occupations_hindi);
+      }
+      else if (this.text === "العربية")
+      {
+        $("#question1").text("ما هي جنسيتك؟");
+        $("#question2").text("اختر 20 بلد، أو أقل،  يتشابهون مع بلدك بالنسبه إلى الموارد الطبيعيه و التقدم الإقتصادي و المشاكل البيئيه؟");
+        $("#occupation").text("ما هي مهنتك؟");
+        translatePeers(arabic, occupations_arabic);
+      }
+      else if (this.text === "русский")
+      {
+        $("#question1").text("");
+        $("#question2").text("Назовите до 20ти стран,  которые часто сравнивают с Вашей (страной) по аналагичному отношению к природным ресурсам, экономическому развитию и по отношению к экологическим проблемам");
+        $("#occupation").text("Чем вы занимаетесь?");
+        translatePeers(russian, occupations_russian);
+      }
+
+    });
+
+    var search_position = $('#searchbox').offset().top;
+    // search for countries
+    function searchCountries(text) {
+      var length = text.length;
+
+      if (length === 0) {
+        $('.ss-choice-label').each(function(index) {
+          $(this).removeAttr("id", "searched");
+          $('#searchbox').css("position", "static");
+        });
+      }
+
+      else
+      {
+        var counter = 0;
+        $('.ss-choice-label').each(function(index) {
+          if (index > 4) {
+            index -=5;
+            var country = $(this).text().toUpperCase();
+            //if (country.substring(0, length).toUpperCase() === text.toUpperCase())
+            if (country.indexOf(text.toUpperCase()) != -1)
+            {
+              counter++;
+              $(this).attr("id", "searched");
+              
+              if (counter===1) { // scroll to first search result
+                var scroll_y = $(this).offset().top - 50;
+                $('html, body').animate({
+                  scrollTop: scroll_y
+                }, 500);
+
+                $('#searchbox').css("position", "fixed");
+              }
+            }
+            else
+            {
+              $(this).removeAttr("id", "searched");
+            }
+          }
+        });
+      }
+    };
+
+    $("#searchbox").on('keydown', function(e) {
+      if (e.keyCode == 13)
+      {
+        event.preventDefault();
+        return false;
+      }
+    });
+
+    // process answers
+    function showResults () {
+      var origin = $('#entry_200171192 option:selected').text();
+
+      var peers = [];
+      $('.ss-checkbox input:checked').each(function() {
+        peers.push($(this).val());
+      });
+
+      var peers_text = "";
+      for (key in peers)
+        peers_text += peers[key] + "<br>";
+
+      $('#origin', window.parent.document).text(origin.toUpperCase());
+      $('#peers-text', window.parent.document).html(peers_text);
+      $('.results', window.parent.document).css("display", "inline");
+
+      var data = window.parent.peer_data;
+      var names = data.names;
+      var matrix = data.matrix["All Peers"];
+
+      // get the index of the country in the matrix
+      var origin_index = -1;
+      for (var i in names) {
+        if (origin === names[i] || (origin+'*') === names[i]) {
+          origin_index = i;
+          break;
+        }
+      }
+
+      // get the peers of that country (from data)
+      if (origin_index != -1 && names[origin_index].indexOf('*') === -1)
+      {
+        var real_peers = "";
+        var peer_data = matrix[origin_index];
+        for (var i in peer_data)
+        {
+          if (peer_data[i] > 0 && !region(i, data.regions))
+          {
+            var name = names[i];
+            if (name.charAt(name.length-1) === '*')
+              name = name.substring(0, name.length-1);
+            real_peers += name + "<br>";
+          }
+        }
+
+        $('#data-peers', window.parent.document).html(real_peers);
+       }
+      else
+      {
+        $('#data-peers', window.parent.document).text("Sorry, we do not have data for this country yet.");
+      }
+
+      // get which countries think that origin country is their peer
+      if (origin_index != -1)
+      {
+        var their_peer = "";
+        for (var i in matrix)
+        {
+          if (matrix[i][origin_index] > 0 && !region(i, data.regions))
+          {
+            var name = names[i];
+            if (name.charAt(name.length-1) === '*')
+              name = name.substring(0, name.length-1);
+            their_peer += name + "<br>";
+          }
+        }
+        $('#their-peer', window.parent.document).html(their_peer);
+      }
+    }
+
+    function region(index, regions) {
+      for (var i in regions) {
+        if (parseInt(index) === regions[i])
+          return true;
+      }
+      return false;
+    }
+
+
+</script>
+
+<script type="text/javascript">H5F.setup(document.getElementById('ss-form'));_initFormViewer(
+          "[100,\x22#CCC\x22,[[[875817215,[[7,200,[\x223\x22]\n,\x22Please select at least 3 countries.\x22]\n]\n]\n]\n]\n]\n");
+      </script></div></body></html>
