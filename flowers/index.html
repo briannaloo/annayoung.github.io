@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+	<title>Peer country flows</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+	<link href="style.css" rel="stylesheet" media="all">
+
+  <script src="javascripts/d3.v3.min.js"></script>
+  <script src="main.js"></script>
+
+  <style type="text/css">
+  .results {
+    width: 75%; height: 75%; top: 12.5%; left: 12.5%; background-color: white; border: 2px solid #6F99C6; display: none; overflow: scroll;
+  }
+  #response-container {
+    width: 95%; height: 95%; position: absolute; top: 2.5%; left: 2.5%; background-color: #668DB7; overflow: scroll;
+  }
+  .text-results {
+    width: 95%; height: 90px; text-align: center; color: #6F99C6; font-size: 18px;
+    margin-top: 20px;
+  }
+  .results-container {
+    width: 705px; background-color: #fff;
+    margin-left: auto; margin-right: auto;
+  }
+  .indicators {
+    width: 77px;
+    height: auto;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 150px;
+    border-left: 1px solid white;
+  }
+  .indicator-labels {
+    width: 77px; 
+    height: 100px;
+    float: left;
+    text-align: center;
+    position: relative;
+    border-left: 1px solid white;
+  }
+  #issue-name {
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    line-height: 1.0em;
+  }
+  #flag { 
+    width: 80px;
+    max-width: 200%;
+    position: relative;
+    left: -15px;
+    top: -12px;
+  }
+  #circle {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  #icon {
+    width: 86%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: -5px;
+  }
+  .flag-hover {
+    background-color: #6A93BF;
+    height: 25px;
+    width: auto;
+    border: 1px solid white;
+    color: white;
+    font-size: 12px;
+    visibility: hidden;
+  }
+
+  </style>
+</head>
+<body>
+  <iframe id="frame" src="survey/index.html" width="75%" height="75%" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
+  <div id="frame" class="results">
+    <div class="response-container">
+      
+      <div class="text-results">
+        <span>Thanks! Your response has been recorded.<br>
+          Here's how you and your peers rank in environmental issues.<br><br><br><br></span>
+      </div>
+
+      <div class="results-container">
+
+        <div class="indicator-labels" style="background-color: rgb(248, 207, 149);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EHEH" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="#ff9600" d="M35,0.038c-19.31,0-34.963,15.653-34.963,34.963S15.69,69.962,35,69.962
+            c19.309,0,34.963-15.651,34.963-34.961S54.309,0.038,35,0.038"></path>
+              <path fill="rgb(248, 207, 149)" d="M56.524,48.357c-0.287-0.615-0.675-1.209-1.172-1.787c-0.496-0.588-1.149-1.021-1.95-1.307
+            c-0.383-0.133-0.876-0.322-1.488-0.572c-0.613-0.25-1.301-0.531-2.062-0.844c-0.762-0.316-1.569-0.656-2.422-1.016
+            c-0.846-0.367-1.689-0.725-2.52-1.092c-0.829-0.361-1.637-0.717-2.42-1.059c-0.781-0.344-1.479-0.652-2.088-0.918v-3.352
+            c0-0.148,0.044-0.395,0.143-0.731c0.093-0.333,0.201-0.68,0.312-1.044c0.134-0.419,0.279-0.87,0.432-1.34
+            c0.551-1.036,0.985-2.194,1.3-3.486c0.318-1.29,0.477-2.646,0.477-4.081c0-1.945-0.204-3.599-0.615-4.939
+            c-0.415-1.348-0.977-2.436-1.694-3.266c-0.715-0.831-1.543-1.431-2.49-1.806c-0.945-0.373-1.95-0.556-3.021-0.556
+    c-1.088,0-2.105,0.188-3.048,0.57c-0.947,0.38-1.773,0.995-2.48,1.834c-0.703,0.841-1.265,1.928-1.677,3.266
+    c-0.408,1.335-0.615,2.969-0.615,4.896c0,1.47,0.162,2.861,0.489,4.169c0.323,1.309,0.766,2.475,1.316,3.506
+    c0.151,0.441,0.287,0.854,0.401,1.232c0.097,0.324,0.187,0.644,0.272,0.957c0.087,0.317,0.146,0.552,0.187,0.705v3.266
+    c-0.595,0.266-1.28,0.572-2.065,0.918c-0.782,0.344-1.614,0.703-2.493,1.086c-0.875,0.383-1.757,0.762-2.646,1.146
+    c-0.886,0.383-1.734,0.74-2.536,1.074c-0.8,0.332-1.524,0.627-2.175,0.885c-0.649,0.264-1.176,0.457-1.575,0.59
+    c-0.783,0.285-1.423,0.719-1.919,1.307c-0.494,0.578-0.889,1.172-1.176,1.787c-0.344,0.707-0.597,1.453-0.77,2.234v0.843
+    c5.041,6.818,13.137,11.241,22.268,11.241s17.226-4.425,22.266-11.245v-0.839C57.114,49.811,56.869,49.064,56.524,48.357z"></path>
+            </svg>
+          </div>
+          <span id="issue-name">HEALTH IMPACTS</span></div>
+
+        <div class="indicator-labels" style="background-color: rgb(253, 232, 146);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EHAIR" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="rgb(253, 232, 146)" d="M35,0.038C15.689,0.038,0.038,15.69,0.038,35c0,19.309,15.651,34.962,34.962,34.962
+                c19.309,0,34.963-15.653,34.963-34.962C69.963,15.69,54.309,0.038,35,0.038"></path>
+              <path fill="#f7c80b" d="M35,0.038C15.689,0.038,0.038,15.69,0.038,35c0,19.309,15.651,34.962,34.962,34.962
+                c19.309,0,34.963-15.653,34.963-34.962C69.963,15.69,54.309,0.038,35,0.038 M36.48,6.774c3.688,0,6.682,2.989,6.682,6.68
+                c0,0.761-0.154,1.479-0.391,2.159c1.922,0.616,3.319,2.395,3.319,4.521c0,2.633-2.135,4.77-4.768,4.77
+                c-0.095,0-0.183-0.023-0.271-0.028c0.171,0.434,0.271,0.901,0.271,1.396c0,2.093-1.695,3.786-3.789,3.786
+                c-2.092,0-3.788-1.693-3.788-3.786c0-1.984,1.527-3.593,3.467-3.757c-0.408-0.704-0.658-1.51-0.658-2.381
+                c0-0.003,0.002-0.005,0.002-0.008c-0.027,0-0.053,0.008-0.078,0.008c-3.688,0-6.679-2.989-6.679-6.68S32.792,6.774,36.48,6.774
+                 M48.875,60.08H19.348V47.955h11.353L34.336,35h3.637l3.635,12.955h7.268V60.08z"></path>
+            </svg>
+          </div>
+          <span id="issue-name">AIR QUALITY</span></div>
+
+        <div class="indicator-labels" style="background-color: rgb(253, 197, 168);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EHWATER" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="rgb(253, 197, 168)" d="M35.001,0.038c-19.31,0-34.963,15.65-34.963,34.961c0,19.312,15.653,34.963,34.963,34.963
+                c19.31,0,34.959-15.651,34.959-34.963C69.96,15.688,54.311,0.038,35.001,0.038"></path>
+              <path fill="#ff6d24" d="M35.001,0.038c-19.31,0-34.963,15.65-34.963,34.961c0,19.312,15.653,34.963,34.963,34.963
+                c19.31,0,34.959-15.651,34.959-34.963C69.96,15.688,54.311,0.038,35.001,0.038 M22.848,15.423h17.22
+                c1.309,0,2.367,1.059,2.367,2.365c0,1.309-1.06,2.367-2.367,2.367h-7.033v8.586H29.88v-8.586h-7.032
+          c-1.307,0-2.367-1.059-2.367-2.367C20.481,16.481,21.542,15.423,22.848,15.423 M53.225,51.195h-2.211h-4.971h-2.207v-2.209
+          c0-0.024-0.029-2.021-1.012-3.986c-1.262-2.523-3.463-3.748-6.723-3.748H21.365h-1.259c-0.601,2.354-2.426,5.105-6.707,5.105V45.09
+          v-1.265v-14.54v-1.263v-1.271c2.111,0,5.87,1.123,6.762,5.109h1.204h14.736c16.926,0,17.123,16.951,17.123,17.125V51.195z"></path>
+            </svg>
+          </div>
+          <span id="issue-name" style="font-size: 13px; bottom: 3%;">WATER & SANITATION</span></div>
+        
+        <div class="indicator-labels" style="background-color: rgb(197, 207, 241);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EVWATER" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="rgb(197, 207, 241)" d="M34.999,0.038C15.691,0.038,0.037,15.69,0.037,35c0,19.312,15.654,34.962,34.962,34.962
+                c19.312,0,34.964-15.649,34.964-34.962C69.963,15.69,54.311,0.038,34.999,0.038"></path>
+              <path fill="#7993f2" d="M34.999,0.038C15.691,0.038,0.037,15.69,0.037,35c0,19.312,15.654,34.962,34.962,34.962
+                c19.312,0,34.964-15.649,34.964-34.962C69.963,15.69,54.311,0.038,34.999,0.038 M40.49,59.967c-2.021-0.383-3.881-1.172-5.427-2.156
+                c-1.758,1.207-3.556,1.9-5.317,2.209c-5.277-1.037-9.963-3.615-13.562-7.201c0.363-0.266,0.729-0.563,1.099-0.916l2.179-2.084
+                l2.179,2.084c0.934,0.875,5.936,5.031,11.191,0l2.178-2.084l2.18,2.084c0.937,0.875,5.939,5.031,11.197,0l2.18-2.079l2.177,2.079
+                c0.198,0.188,0.592,0.525,1.125,0.89C50.312,56.342,45.693,58.9,40.49,59.967 M57.691,47.932c-0.66-0.049-1.312-0.129-1.945-0.26
+                c-1.508-0.605-2.592-1.52-2.975-1.881l-2.183-2.084l-2.178,2.084c-1.039,0.996-2.074,1.621-3.065,1.992
+                c-1.761,0.316-3.484,0.242-5.103-0.096c-1.531-0.601-2.64-1.533-3.029-1.896l-2.18-2.086l-2.176,2.086
+                c-1.048,1-2.082,1.625-3.078,1.998c-1.755,0.311-3.473,0.236-5.081-0.098c-1.535-0.603-2.645-1.537-3.036-1.9l-2.179-2.086
+                l-2.179,2.086c-1.031,0.986-2.052,1.611-3.037,1.984c-0.632,0.113-1.256,0.16-1.875,0.182c-1.152-1.914-2.037-3.982-2.63-6.17
+                c2.072,0.629,4.77,0.541,7.543-2.111l2.178-2.084l2.177,2.084c0.937,0.869,5.938,5.027,11.197,0l2.176-2.084l2.18,2.084
+                c0.935,0.873,5.938,5.029,11.197,0l2.178-2.084l2.179,2.084c0.709,0.662,3.778,3.215,7.518,2.193
+                C59.695,44.016,58.822,46.049,57.691,47.932 M60.91,35.546c-0.777,0.14-1.549,0.209-2.307,0.209c-0.982,0-1.945-0.116-2.869-0.313
+                c-1.504-0.604-2.594-1.521-2.979-1.881l-2.18-2.084l-2.179,2.084c-1.041,0.996-2.071,1.622-3.063,1.994
+                c-1.763,0.312-3.485,0.241-5.104-0.095c-1.53-0.603-2.639-1.536-3.028-1.899l-2.179-2.085l-2.179,2.085
+                c-1.046,1.001-2.078,1.627-3.077,1.998c-1.752,0.31-3.472,0.237-5.079-0.097c-1.536-0.602-2.646-1.538-3.035-1.901l-2.18-2.085
+                l-2.178,2.085c-1.033,0.986-2.053,1.61-3.036,1.985c-1.792,0.321-3.541,0.243-5.182-0.104c-0.064-0.026-0.119-0.062-0.184-0.088
+                c0.015-2.008,0.298-3.951,0.778-5.82c2.084,0.654,4.812,0.6,7.623-2.088l2.178-2.083l2.178,2.083c0.934,0.871,5.936,5.026,11.195,0
+                l2.177-2.083l2.179,2.083c0.934,0.873,5.939,5.029,11.197,0l2.178-2.083l2.178,2.083c0.721,0.669,3.846,3.264,7.637,2.153
+                c0.479,1.875,0.758,3.826,0.764,5.84C61.074,35.472,60.99,35.516,60.91,35.546"></path>
+            </svg>
+          </div>
+          <span id="issue-name" style="font-size: 13px; bottom: 3%;">WATER RESOURCES</span></div>
+        
+        <div class="indicator-labels" style="background-color: rgb(172, 197, 221);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EVAG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="rgb(172, 197, 221)" d="M35,0.038C15.691,0.038,0.038,15.688,0.038,35c0,19.311,15.653,34.962,34.962,34.962
+                c19.311,0,34.962-15.651,34.962-34.962C69.962,15.688,54.311,0.038,35,0.038"></path>
+              <path fill="#2e74ba" d="M35,0.038C15.691,0.038,0.038,15.688,0.038,35c0,19.311,15.653,34.962,34.962,34.962
+                c19.311,0,34.962-15.651,34.962-34.962C69.962,15.688,54.311,0.038,35,0.038 M38.229,46.697l0.976,16.189
+                c0,0-0.69,0.588-3.815,0.588c-3.126,0-3.815-0.588-3.815-0.588l2.057-16.166c-19.456-1.713-19.471-22.01-19.471-22.01
+                c17.802,0,21.284,14.312,21.965,19.917c0.661-3.798,3.217-11.149,13.133-11.149C49.256,33.479,49.254,45.234,38.229,46.697"></path>
+            </svg>
+          </div>
+          <span id="issue-name" style="font-size: 12px; bottom: 10%;">AGRICULTURE</span></div>
+        
+        <div class="indicator-labels" style="background-color: rgb(151, 209, 228);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EVFOREST" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="rgb(151, 209, 228)" d="M35,0.038C15.693,0.038,0.039,15.689,0.039,35c0,19.309,15.654,34.962,34.961,34.962
+                c19.311,0,34.961-15.653,34.961-34.962C69.961,15.689,54.311,0.038,35,0.038"></path>
+              <path fill="#009bcc" d="M35,0.038C15.693,0.038,0.039,15.689,0.039,35c0,19.309,15.654,34.962,34.961,34.962
+                c19.311,0,34.961-15.653,34.961-34.962C69.961,15.689,54.311,0.038,35,0.038 M38.227,58.396c0,0-0.869,0.275-3.127,0.275
+                c-2.262,0-3.057-0.275-3.057-0.275v-5.483h6.185V58.396z M46.928,51.161H23.343h-3.706l9.071-12.308H21.83l9.073-12.309H24.02
+                l11.116-14.941l11.116,14.941h-6.881l9.072,12.309h-6.881l9.067,12.308H46.928z"></path>
+            </svg>
+          </div>
+          <span id="issue-name" style=" bottom: 8%;">FORESTS</span></div>
+       
+        <div class="indicator-labels" style="background-color: rgb(135, 206, 206);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EVFISH" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="rgb(135, 206, 206)" d="M35,0.038C15.691,0.038,0.038,15.689,0.038,35c0,19.311,15.653,34.962,34.962,34.962
+                c19.311,0,34.962-15.651,34.962-34.962C69.962,15.689,54.311,0.038,35,0.038"></path>
+              <g>
+                <path fill="#008C8C" d="M41.223,23.283c0-1.822-1.479-3.308-3.3-3.308c-1.823,0-3.304,1.485-3.304,3.308
+                  c0,1.83,1.48,3.313,3.304,3.313C39.742,26.597,41.223,25.113,41.223,23.283"></path>
+                <path fill="#008C8C" d="M35,0.038C15.691,0.038,0.038,15.689,0.038,35c0,19.311,15.653,34.962,34.962,34.962
+                  c19.311,0,34.962-15.651,34.962-34.962C69.962,15.689,54.311,0.038,35,0.038 M46.598,57.945H20.466l2.26-1.66
+                  c0.081-0.059,7.763-5.723,10.999-9.694l-0.021-0.03l0.047-0.069c-0.922-1.238-2.118-2.511-3.373-3.851
+                  c-6.3-6.727-14.931-15.938,2.808-31.647L35,9.478l1.794,1.495c17.758,15.73,9.127,24.941,2.825,31.667
+                  c-1.254,1.34-2.445,2.611-3.37,3.844l0.004,0.007l-0.026,0.042c3.213,3.976,10.965,9.693,11.047,9.753l2.26,1.659H46.598
+                  L46.598,57.945z"></path>
+              </g>
+            </svg>
+          </div>
+          <span id="issue-name" style="bottom: 8%;">FISHERIES</span></div>
+        
+        <div class="indicator-labels" style="background-color: rgb(139, 224, 210);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EVBH" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="rgb(139, 224, 210)" d="M34.999,0.038c-19.31,0-34.961,15.653-34.961,34.964c0,19.311,15.651,34.96,34.961,34.96
+                c19.312,0,34.963-15.649,34.963-34.96C69.962,15.691,54.311,0.038,34.999,0.038"></path>
+              <path fill="#00ccaa" d="M34.999,0.038c-19.31,0-34.961,15.653-34.961,34.964c0,19.311,15.651,34.96,34.961,34.96
+                c19.312,0,34.963-15.649,34.963-34.96C69.962,15.691,54.311,0.038,34.999,0.038 M20.255,54.902c0,0,0.001-8.438,4.36-12.234
+                c-10.021-3.363-12.224-23.327-12.224-23.327c17.78,0,21.198,22.226,21.198,22.226S33.59,54.902,20.255,54.902 M49.742,54.902
+                c-13.336,0-13.336-13.338-13.336-13.338S39.824,19.34,57.605,19.34c0,0-2.203,19.962-12.225,23.327
+                C49.742,46.465,49.742,54.902,49.742,54.902"></path>
+            </svg>
+          </div>
+          <span id="issue-name" style="font-size: 12px; bottom: 3%;">BIODIVERSITY & HABITAT</span></div>
+        
+        <div class="indicator-labels" style="background-color: rgb(151, 223, 181);">
+          <div id="icon">
+            <svg version="1.1" id="icon-EVCC" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+              <path fill="rgb(151, 223, 181)" d="M34.999,0.038c-19.307,0-34.961,15.651-34.961,34.964c0,19.311,15.654,34.96,34.961,34.96
+                c19.312,0,34.964-15.649,34.964-34.96C69.963,15.689,54.311,0.038,34.999,0.038"></path>
+              <path fill="#1cb85d" d="M35,29.802c-2.867,0-5.198,2.331-5.198,5.199c0,2.865,2.331,5.196,5.198,5.196c2.866,0,5.2-2.331,5.2-5.196
+                C40.199,32.133,37.865,29.802,35,29.802"></path>
+              <path fill="#1cb85d" d="M34.999,0.038c-19.307,0-34.961,15.651-34.961,34.964c0,19.311,15.654,34.96,34.961,34.96
+                c19.312,0,34.964-15.649,34.964-34.96C69.963,15.689,54.311,0.038,34.999,0.038 M48.279,36.477
+                c-0.289,3.108-3.047,19.57-26.223,19.57c-0.299,0-0.547-0.23-0.568-0.527c-0.02-0.301,0.194-0.562,0.489-0.604
+                c0.076-0.011,7.285-1.947,10.064-6.874C25.968,46.675,21.638,41.311,21.638,35c0-0.497,0.027-0.985,0.081-1.469
+                c0.285-3.112,3.275-19.134,26.461-19.134c0.297,0,0.545,0.233,0.563,0.53c0.021,0.298-0.191,0.562-0.486,0.604
+                c-0.075,0.01-7.521,1.501-10.299,6.429c6.074,1.363,10.401,6.73,10.401,13.04C48.361,35.499,48.332,35.99,48.279,36.477"></path>
+            </svg>
+          </div>
+          <span id="issue-name" style="font-size: 14px; bottom: 1%;">CLIMATE & ENERGY</span></div>
+
+
+        <div class="indicators" id="EH_HealthImpacts" style="background-color: rgb(248, 207, 149);"></div>
+        <div class="indicators" id="EH_AirQuality" style="background-color: rgba(247, 200, 11, 0.4);"></div>
+        <div class="indicators" id="EH_WaterSanitation" style="background-color: rgba(255, 109, 36, 0.4);"></div>
+        <div class="indicators" id="EV_WaterResources" style="background-color: rgba(121, 147, 242, 0.4);"></div>
+        <div class="indicators" id="EV_Agriculture" style="background-color: rgba(46, 116, 186, 0.4);"></div>
+        <div class="indicators" id="EV_Forests" style="background-color: rgba(0, 155, 204, 0.4);"></div>
+        <div class="indicators" id="EV_Fisheries" style="background-color: rgba(0, 140, 140, 0.4);"></div>
+        <div class="indicators" id="EV_BiodiversityHabitat" style="background-color: rgba(0, 204, 170, 0.4);"></div>
+        <div class="indicators" id="EV_ClimateEnergy" style="background-color: rgba(28, 184, 93, 0.4);"></div>
+    </div>
+  </div>
+  </div>
+  <img src="images/close.png" id="frame" class="close" style="top: 12.5%; left: 12.5%; width: 25px; height: 25px; cursor: pointer; z-index: -1;"></img>
+  
+
+  <div id="container" class="container">
+    <div id="survey" class="contribute" style="display: none">
+      <span style="position: absolute; top: 15px; left: 2px">Please contribute to our data!</span>
+    </div>
+
+    <br><span style="padding: 15px; font-size: 34px; color: #6A93BF;">FLOWERHACKS</span>
+    <br><span style="padding: 15px; font-size: 12px;">Based on code from <a target="_blank" href="http://www.global-migration.info/">Sander et al</a>.</span>
+    <hr>
+
+  	<div class="wrap">
+  		<main role="main">
+        <nav role=navigation>
+          <div id="timeline">
+          </div>
+        </nav>
+        <div id="diagram"></div>
+  		</main>
+  	</div>
+     
+    <div id=help-wrapper class=help-wrapper>
+      <div class="help" id="help">
+        <div class="tab">How to read the plot</div>
+        <div class="help-content" style="z-index:1000">
+          <h3>How to read the plot</h3>
+          <img src="images/help.png" class="left">
+          <p>
+            Regions/countries are represented by the circle’s segments and each is assigned a color. 
+            Flows have the same color as the surveyed region/country and the width indicates the number of peers it has in that region.
+            For "All Peers" and "Unreciprocated Peers", the direction of the flow is also shown by the gap between flow and country/region: small gap indicates surveyed country; large gap indicates peer.
+            <b>Click on a segment to switch between country and region view.</b>
+            <br><br>
+            * Countries with an asterisk have not been surveyed yet.
+          </p>
+          <div class="clear"></div>
+          <p>
+            Switch between plots using Ctrl and number keys (1,2,3,4); 
+            reset the plot using Ctrl and r; zoom in/out with Ctrl and +/- 
+          </p>
+
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      // survey response plots
+      var codes = {"Afghanistan": ["AF", "AFG", "af.png"], "Albania": ["AL", "ALB", "al.png"], "Algeria": ["DZ", "DZA", "dz.png"], "American Samoa": ["AS", "ASM", "as.png"], "Andorra": ["AD", "AND", "ad.png"], "Angola": ["AO", "AGO", "ao.png"], "Anguilla": ["AI", "AIA", "ai.png"], "Antigua and Barbuda": ["AG", "ATG", "ag.png"], "Argentina": ["AR", "ARG", "ar.png"], "Armenia": ["AM", "ARM", "am.png"], "Aruba": ["AW", "ABW", "aw.png"], "Australia": ["AU", "AUS", "au.png"], "Austria": ["AT", "AUT", "at.png"], "Azerbaijan": ["AZ", "AZE", "az.png"], "Bahamas": ["BS", "BHS", "bs.png"], "Bahrain": ["BH", "BHR", "bh.png"], "Bangladesh": ["BD", "BGD", "bd.png"], "Barbados": ["BB", "BRB", "bb.png"], "Belarus": ["BY", "BLR", "by.png"], "Belgium": ["BE", "BEL", "be.png"], "Belize": ["BZ", "BLZ", "bz.png"], "Benin": ["BJ", "BEN", "bj.png"], "Bermuda": ["BM", "BMU", "bm.png"], "Bhutan": ["BT", "BTN", "bt.png"], "Bolivia": ["BO", "BOL", "bo.png"], "Bosnia and Herzegovina": ["BA", "BIH", "ba.png"], "Botswana": ["BW", "BWA", "bw.png"], "Brazil": ["BR", "BRA", "br.png"], "British Virgin Islands": ["VG", "VGB", "vg.png"], "Brunei Darussalam": ["BN", "BRN", "bn.png"], "Bulgaria": ["BG", "BGR", "bg.png"], "Burkina Faso": ["BF", "BFA", "bf.png"], "Burundi": ["BI", "BDI", "bi.png"], "Cambodia": ["KH", "KHM", "kh.png"], "Cameroon": ["CM", "CMR", "cm.png"], "Canada": ["CA", "CAN", "ca.png"], "Cape Verde": ["CV", "CPV", "cv.png"], "Cayman Islands": ["KY", "CYM", "ky.png"], "Central African Republic": ["CF", "CAF", "cf.png"], "Chad": ["TD", "TCD", "td.png"], "Chile": ["CL", "CHL", "cl.png"], "China": ["CN", "CHN", "cn.png"], "Colombia": ["CO", "COL", "co.png"], "Comoros": ["KM", "COM", "km.png"], "Congo": ["CG", "COG", "cg.png"], "Cook Islands": ["CK", "COK", "ck.png"], "Costa Rica": ["CR", "CRI", "cr.png"], "Cote d'Ivoire": ["CI", "CIV", "ci.png"], "Croatia": ["HR", "HRV", "hr.png"], "Cuba": ["CU", "CUB", "cu.png"], "Cyprus": ["CY", "CYP", "cy.png"], "Czech Republic": ["CZ", "CZE", "cz.png"], "Dem. Rep. Congo": ["CD", "COD", "cd.png"], "Denmark": ["DK", "DNK", "dk.png"], "Djibouti": ["DJ", "DJI", "dj.png"], "Dominica": ["DM", "DMA", "dm.png"], "Dominican Republic": ["DO", "DOM", "do.png"], "Ecuador": ["EC", "ECU", "ec.png"], "Egypt": ["EG", "EGY", "eg.png"], "El Salvador": ["SV", "SLV", "sv.png"], "Equatorial Guinea": ["GQ", "GNQ", "gq.png"], "Eritrea": ["ER", "ERI", "er.png"], "Estonia": ["EE", "EST", "ee.png"], "Ethiopia": ["ET", "ETH", "et.png"], "Faeroe Islands": ["FO", "FRO", "fo.png"], "Falkland Islands": ["FK", "FLK", "fk.png"], "Fiji": ["FJ", "FJI", "fj.png"], "Finland": ["FI", "FIN", "fi.png"], "France": ["FR", "FRA", "fr.png"], "French Guiana": ["GF", "GUF", "gf.png"], "French Polynesia": ["PF", "PYF", "pf.png"], "Gabon": ["GA", "GAB", "ga.png"], "Gambia": ["GM", "GMB", "gm.png"], "Georgia": ["GE", "GEO", "ge.png"], "Germany": ["DE", "DEU", "de.png"], "Ghana": ["GH", "GHA", "gh.png"], "Gibraltar": ["GI", "GIB", "gi.png"], "Greece": ["GR", "GRC", "gr.png"], "Greenland": ["GL", "GRL", "gl.png"], "Grenada": ["GD", "GRD", "gd.png"], "Guadeloupe": ["GP", "GLP", "gp.png"], "Guam": ["GU", "GUM", "gu.png"], "Guatemala": ["GT", "GTM", "gt.png"], "Guinea": ["GN", "GIN", "gn.png"], "Guinea-Bissau": ["GW", "GNB", "gw.png"], "Guyana": ["GY", "GUY", "gy.png"], "Haiti": ["HT", "HTI", "ht.png"], "Holy See": ["VA", "VAT", "va.png"], "Honduras": ["HN", "HND", "hn.png"], "Hong Kong": ["HK", "HKG", "hk.png"], "Hungary": ["HU", "HUN", "hu.png"], "Iceland": ["IS", "ISL", "is.png"], "India": ["IN", "IND", "in.png"], "Indonesia": ["ID", "IDN", "id.png"], "Iran": ["IR", "IRN", "ir.png"], "Iraq": ["IQ", "IRQ", "iq.png"], "Ireland": ["IE", "IRL", "ie.png"], "Isle of Man": ["IM", "IMN", "im.png"], "Israel": ["IL", "ISR", "il.png"], "Italy": ["IT", "ITA", "it.png"], "Jamaica": ["JM", "JAM", "jm.png"], "Japan": ["JP", "JPN", "jp.png"], "Jordan": ["JO", "JOR", "jo.png"], "Kazakhstan": ["KZ", "KAZ", "kz.png"], "Kenya": ["KE", "KEN", "ke.png"], "Kiribati": ["KI", "KIR", "ki.png"], "Kuwait": ["KW", "KWT", "kw.png"], "Kyrgyzstan": ["KG", "KGZ", "kg.png"], "Laos": ["LA", "LAO", "la.png"], "Latvia": ["LV", "LVA", "lv.png"], "Lebanon": ["LB", "LBN", "lb.png"], "Lesotho": ["LS", "LSO", "ls.png"], "Liberia": ["LR", "LBR", "lr.png"], "Libya": ["LY", "LBY", "ly.png"], "Liechtenstein": ["LI", "LIE", "li.png"], "Lithuania": ["LT", "LTU", "lt.png"], "Luxembourg": ["LU", "LUX", "lu.png"], "Macao": ["MO", "MAC", "mo.png"], "Macedonia": ["MK", "MKD", "mk.png"], "Madagascar": ["MG", "MDG", "mg.png"], "Malawi": ["MW", "MWI", "mw.png"], "Malaysia": ["MY", "MYS", "my.png"], "Maldives": ["MV", "MDV", "mv.png"], "Mali": ["ML", "MLI", "ml.png"], "Malta": ["MT", "MLT", "mt.png"], "Marshall Islands": ["MH", "MHL", "mh.png"], "Martinique": ["MQ", "MTQ", "mq.png"], "Mauritania": ["MR", "MRT", "mr.png"], "Mauritius": ["MU", "MUS", "mu.png"], "Mayotte": ["YT", "MYT", "yt.png"], "Mexico": ["MX", "MEX", "mx.png"], "Micronesia": ["FM", "FSM", "fm.png"], "Moldova": ["MD", "MDA", "md.png"], "Monaco": ["MC", "MCO", "mc.png"], "Mongolia": ["MN", "MNG", "mn.png"], "Montenegro": ["ME", "MNE", "me.png"], "Montserrat": ["MS", "MSR", "ms.png"], "Morocco": ["MA", "MAR", "ma.png"], "Mozambique": ["MZ", "MOZ", "mz.png"], "Myanmar": ["MM", "MMR", "mm.png"], "Namibia": ["NA", "NAM", "na.png"], "Nauru": ["NR", "NRU", "nr.png"], "Nepal": ["NP", "NPL", "np.png"], "Netherlands": ["NL", "NLD", "nl.png"], "Netherlands Antilles": ["XX", "ANT", "xx.png"], "New Caledonia": ["NC", "NCL", "nc.png"], "New Zealand": ["NZ", "NZL", "nz.png"], "Nicaragua": ["NI", "NIC", "ni.png"], "Niger": ["NE", "NER", "ne.png"], "Nigeria": ["NG", "NGA", "ng.png"], "Niue": ["NU", "NIU", "nu.png"], "Norfolk Island": ["NF", "NFK", "nf.png"], "North Korea": ["KP", "PRK", "kp.png"], "Northern Mariana Islands": ["MP", "MNP", "mp.png"], "Norway": ["NO", "NOR", "no.png"], "Oman": ["OM", "OMN", "om.png"], "Pakistan": ["PK", "PAK", "pk.png"], "Palau": ["PW", "PLW", "pw.png"], "Panama": ["PA", "PAN", "pa.png"], "Papua New Guinea": ["PG", "PNG", "pg.png"], "Paraguay": ["PY", "PRY", "py.png"], "Peru": ["PE", "PER", "pe.png"], "Philippines": ["PH", "PHL", "ph.png"], "Pitcairn": ["PN", "PCN", "pn.png"], "Poland": ["PL", "POL", "pl.png"], "Portugal": ["PT", "PRT", "pt.png"], "Puerto Rico": ["PR", "PRI", "pr.png"], "Qatar": ["QA", "QAT", "qa.png"], "Reunion": ["RE", "REU", "re.png"], "Romania": ["RO", "ROU", "ro.png"], "Russia": ["RU", "RUS", "ru.png"], "Rwanda": ["RW", "RWA", "rw.png"], "Saint Helena": ["SH", "SHN", "sh.png"], "Saint Kitts and Nevis": ["KN", "KNA", "kn.png"], "Saint Lucia": ["LC", "LCA", "lc.png"], "Saint Pierre and Miquelon": ["PM", "SPM", "pm.png"], "Saint Vincent and the Grenadines": ["VC", "VCT", "vc.png"], "Samoa": ["WS", "WSM", "ws.png"], "San Marino": ["SM", "SMR", "sm.png"], "Sao Tome and Principe": ["ST", "STP", "st.png"], "Saudi Arabia": ["SA", "SAU", "sa.png"], "Senegal": ["SN", "SEN", "sn.png"], "Serbia": ["RS", "SRB", "rs.png"], "Seychelles": ["SC", "SYC", "sc.png"], "Sierra Leone": ["SL", "SLE", "sl.png"], "Singapore": ["SG", "SGP", "sg.png"], "Slovakia": ["SK", "SVK", "sk.png"], "Slovenia": ["SI", "SVN", "si.png"], "Solomon Islands": ["SB", "SLB", "sb.png"], "Somalia": ["SO", "SOM", "so.png"], "South Africa": ["ZA", "ZAF", "za.png"], "South Korea": ["KR", "KOR", "kr.png"], "Spain": ["ES", "ESP", "es.png"], "Sri Lanka": ["LK", "LKA", "lk.png"], "State of Palestine": ["PS", "PSE", "ps.png"], "Sudan": ["SD", "SDN", "sd.png"], "Suriname": ["SR", "SUR", "sr.png"], "Svalbard and Jan Mayen Islands": ["SJ", "SJM", "sj.png"], "Swaziland": ["SZ", "SWZ", "sz.png"], "Sweden": ["SE", "SWE", "se.png"], "Switzerland": ["CH", "CHE", "ch.png"], "Syria": ["SY", "SYR", "sy.png"], "Taiwan": ["TW", "TWN", "tw.png"], "Tajikistan": ["TJ", "TJK", "tj.png"], "Tanzania": ["TZ", "TZA", "tz.png"], "Thailand": ["TH", "THA", "th.png"], "Timor-Leste": ["TL", "TLS", "tl.png"], "Togo": ["TG", "TGO", "tg.png"], "Tokelau": ["TK", "TKL", "tk.png"], "Tonga": ["TO", "TON", "to.png"], "Trinidad and Tobago": ["TT", "TTO", "tt.png"], "Tunisia": ["TN", "TUN", "tn.png"], "Turkey": ["TR", "TUR", "tr.png"], "Turkmenistan": ["TM", "TKM", "tm.png"], "Turks and Caicos Islands": ["TC", "TCA", "tc.png"], "Tuvalu": ["TV", "TUV", "tv.png"], "Uganda": ["UG", "UGA", "ug.png"], "Ukraine": ["UA", "UKR", "ua.png"], "United Arab Emirates": ["AE", "ARE", "ae.png"], "United Kingdom": ["GB", "GBR", "gb.png"], "United States of America": ["US", "USA", "us.png"], "United States Virgin Islands": ["VI", "VIR", "vi.png"], "Uruguay": ["UY", "URY", "uy.png"], "Uzbekistan": ["UZ", "UZB", "uz.png"], "Vanuatu": ["VU", "VUT", "vu.png"], "Venezuela": ["VE", "VEN", "ve.png"], "Viet Nam": ["VN", "VNM", "vn.png"], "Wallis and Futuna Islands": ["WF", "WLF", "wf.png"], "Western Sahara": ["EH", "ESH", "eh.png"], "Yemen": ["YE", "YEM", "ye.png"], "Zambia": ["ZM", "ZMB", "zm.png"], "Zimbabwe": ["ZW", "ZWE", "zw.png"]};
+
+
+      window.drawDiagram = function(peers, indicator) {
+
+        var file = "http://epivisual.yale.edu/radar_chart.json?years[]=2012&indicators[]=" + indicator;
+        for (var key in peers) 
+        {
+          file += "&iso_codes[]=" + codes[peers[key]][1];
+        }
+        d3.json(file, function(data) {
+          var order = [];
+          data = data[0];
+          for (var key in data)
+          {
+            var country = data[key]["data"]["name"];
+            var value = data[key]["data"]["indicators"][0]["value"];
+            order.push(value + "," + country);
+          }
+          rank(order, indicator);
+        });
+      };
+
+      function rank(order, indicator) {
+          order.sort(function(a, b) {         // sort by score
+            a = parseInt((a.split(","))[0]);
+            b = parseInt((b.split(","))[0]);
+            return a-b;
+          });
+          order.reverse(); // highest (best) scores first
+          console.log(indicator);
+          console.log(order);
+          for (var rank in order)
+          {
+            var country = (order[rank].split(","))[1];
+            var flag = codes[country][2];
+            var circle = document.createElement('div');
+            circle.id = "circle";
+            var elt = document.createElement('img');
+            elt.src = "images/flags/" + flag;
+            elt.id = "flag";
+            elt.className = country;
+            circle.appendChild(elt);
+            var elt2 = document.createElement('div');
+            elt2.id = country;
+            elt2.className = "flag-hover";
+            elt2.text = country;
+            document.getElementById(indicator).appendChild(circle);
+            //document.getElementById(indicator).appendChild(elt2);
+
+          }
+      }
+
+
+
+    (function() {
+      // survey
+      var open = false;
+
+      var frame = d3.selectAll('#frame');
+      frame.style("opacity", "0");
+      d3.select('#survey').on('click', function() {
+        if (open === false)
+        {
+          frame.style("z-index", "100");
+          frame.transition()
+            .style("opacity", "1")
+            .duration(400)
+            .delay(0);
+          open = true;
+        }
+        else {
+          frame.style("z-index", "-1");
+          frame.transition()
+          .style("opacity", "0")
+          .duration(600)
+          .delay(0);
+          open = false;
+        }
+      });
+      d3.select('.close').on('click', function() {
+        frame.style("z-index", "-1");
+        frame.transition()
+          .style("opacity", "0")
+          .duration(600)
+          .delay(0);
+        open = false;
+      });
+
+
+      // help
+      var help = d3.select('#help');
+
+      help.on('click', function() {
+        var isActive = help.classed('active');
+
+        help
+          .classed('active', !isActive)
+          .transition()
+          .style('width', isActive ? '30px' : '572px');
+      });
+
+      function helpOffset() {
+        var offset = Math.max((document.body.clientWidth - document.getElementById('container').clientWidth) / 2, 0);
+
+        help.style('right', offset + 'px');
+      }
+      d3.select(window).on('resize.help-resize', helpOffset);
+      helpOffset();
+    })();
+  </script>
+
+
+
+  <script>
+    (function() {
+      var datafile = 'json/Peers.json';
+      var aLittleBit = Math.PI / 100000;
+
+      d3.json(datafile, function(data) {
+        var now = "Genomic Migration Rates";        
+        var chart = Globalmigration.chart(data, {
+          element: '#diagram',
+          now: now,
+          animationDuration: 500,
+          margin: 125,
+          arcPadding: 0.04,
+          layout: {
+            threshold: 0,
+            labelThreshold: 0,
+            colors: 'cd3d08 ec8f00 6dae29 683f92 b60275 2058a5 00a592 ffca00 009d3c 378974'.split(' ').map(function(c) { return '#' + c; })
+          }
+        });
+
+        Globalmigration.timeline(chart, {
+          now: now,
+          element: '#timeline'
+        });
+
+        chart.draw(now);
+      });
+    })();
+
+  </script>
+
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+    {"parsetags": "explicit"}
+  </script>
+
+  <script>
+    (function() {
+      function loadScript(d,s,l,id){
+        var js,
+        fjs=d.getElementsByTagName(s)[0],
+        p=/^http:/.test(d.location)?'http':'https';
+        if(!id || !d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+'://' + l;
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>
