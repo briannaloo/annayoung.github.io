@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+Author: Anna Young
+To change color scheme, edit colors of <aside> and cartocss/html script below. 
+-->
+<html>
+  <head>
+     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+     <link href='style.css' rel='stylesheet' type='text/css'>
+     <title>Country Networks</title>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <script type="text/javascript" src="./slide.js"></script>
+     <script type="text/javascript" src="./main.js"></script>
+
+     <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> 
+
+     <!--<meta property="og:url" content="http://epi.yale.edu/visuals/biodiversity-map/" />
+     <meta property="og:title" content="Country Networks Map">
+     <meta property="og:image" content="http://epi.yale.edu/visuals/biodiversity-map/screenshot.png" />-->
+
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+      <div id="small-tooltip">
+        <div id="legend_countries" class="legend">
+        <!--<p class="legend_title">Peers</p>
+        <img src="./label.png" width="200px" height="auto"/>-->
+        <div id="legend_below">
+          <p class="legend_title" style="width: 100px; margin-left: 55px">EPI Score</p>
+          <span class="left">0%</span>
+
+          <span class="right">100%</span>
+<br>
+          <aside class="colors">
+            <div style="background-color:#d72f27;"></div>
+            <div style="background-color:#d05725;"></div>
+            <div style="background-color:#ca7b24;"></div>
+            <div style="background-color:#c49e22;"></div>
+            <div style="background-color:#bcbd15;"></div>
+            <div style="background-color:#a5b724;"></div>
+            <div style="background-color:#7db120;"></div>
+            <div style="background-color:#46ab1d;"></div>
+            <div style="background-color:#219e1b;"></div>
+            <div style="background-color:#168043;"></div>
+          </aside>
+        </div>
+      </div></div>
+
+    <div id="tool-tip">
+     <!--<object id="svg-object" style="position: absolute; left: 0;" type="image/svg+xml" data="./options.svg">Your browser does not support SVG</object>-->
+     <div id="options" style="cursor: pointer;">
+       <span id="EPI Score" class="selected" style="color: #3a3736">EPI Score</span>
+       <span id="Environmental Health" style="margin-left: 10px; color: #cc3e00">Environmental Health</span>
+       
+       <span id="Health Impacts" style="margin-left: 20px; color: #ff9600">Health Impacts</span>
+       <span id="Child Mortality" style="margin-left: 30px; color: #ffab33">Child Mortality</span>
+       <span id="Air Quality" style="margin-left: 20px; color: #f7c80b">Air Quality</span>
+       <span id="Household Air Quality" style="margin-left: 30px; color: #f9d33c">Household Air Quality</span>
+        <span id="Air Pollution - Average Exposure to PM2.5" style="margin-left: 30px; color: #fade6d">Air Pollution Avg. Exp. to PM2.5</span>
+        <span id="Air Pollution - Average PM2.5 Exceedance" style="margin-left: 30px; color: #fce99d">Air Pollution PM2.5 Exceedance</span>
+
+       <span id="Water and Sanitation" style="margin-left: 20px; color: #ff6d24">Water and Sanitation</span>
+       <span id="Access to Sanitation" style="margin-left: 30px; color: #ffa77c">Access to Sanitation</span>
+        <span id="Access to Drinking Water" style="margin-left: 30px; color: #ff8a50">Access to Drinking Water</span>
+
+       <span id="Ecosystem Vitality"  style="margin-left: 10px; color: #006385">Ecosystem Vitality</span>
+
+        <span id="Water Resources"  style="margin-left: 20px; color: #7993f2">Water Resources</span>
+          <span id="Wastewater Treatment" style="margin-left: 30px; color: #94a9f5">Wastewater Treatment</span>
+        <span id="Agriculture" style="margin-left: 20px; color: #2e74ba">Agriculture</span>
+          <span id="Agricultural Subsidies" style="margin-left: 30px; color: #82acd6">Agricultural Subsidies</span>
+          <span id="Pesticide Regulation" style="margin-left: 30px; color: #5890c8">Pesticide Regulation</span>
+        <span id="Forests" style="margin-left: 20px; color: #009bcc">Forests</span>
+          <span id="Change in Forest Cover" style="margin-left: 30px; color: #33afd6">Change in Forest Cover</span>
+        <span id="Fisheries" style="margin-left: 20px; color: #008c8c">Fisheries</span>
+          <span id="Fish Stocks" style="margin-left: 30px; color: #33a3a3">Fish Stocks</span>
+          <span id="Coastal Shelf Fishing Pressure" style="margin-left: 30px; color: #66baba">Coastal Shelf Fishing Pressure</span>
+        <span id="Biodiversity and Habitat" style="margin-left: 20px; color: #00ccaa">Biodiversity and Habitat</span>
+           <span id="Terrestrial Protected Areas (National Biome Weights)" style="margin-left: 30px; color: #ccf5ee">National Biome Protection</span>
+          <span id="Terrestrial Protected Areas (Global Biome Weights)" style="margin-left: 30px; color: #99ebdd">Global Biome Protection</span>
+          <span id="Marine Protected Areas" style="margin-left: 30px; color: #66e0cc">Marine Protected Areas</span>
+          <span id="Critical Habitat Protection" style="margin-left: 30px; color: #33d6bb">Critical Habitat Protection</span>
+        
+        <span id="Climate and Energy" style="margin-left: 20px; color: #1cb85d">Climate and Energy</span>
+          <span id="Trend in Carbon Intensity" style="margin-left: 30px; color: #49c67d">Trend in Carbon Intensity</span>
+          <span id="Change of Trend in Carbon Intensity" style="margin-left: 30px; color: #77d49e">Change of Trend in Carbon Intensity</span>
+          <span id="Trend in CO2 Emissions per KwH" style="margin-left: 30px; color: #a4e3be">Trend in CO2 Emissions per KwH</span>
+
+     </div>
+    </div>
+
+    <div id="country-hover">
+      <img src="./plus.png" width="15px" height="15px" style="display: inline">
+      <span id="country"></span>
+
+    </div>
+
+
+    <div id="slide_out_info">
+      <a class="handle" href="#">
+        <span id="rotated_text">HOW TO READ THIS MAP</span>
+
+      </a>
+      <div class="content">
+        <div class="text" style="font-family: arial; font-size: 14px;">
+          <h1 style="color: #366ab2"></h1>
+          <br> 
+          <img height="auto" width="460" src="">
+          <br><br><br>
+          
+      </div></div>
+    </div>
+
+    <script type="cartocss/html" id="peers">
+     // COLOR SCHEME
+      #peers {
+       polygon-opacity: 0.7;
+       polygon-fill: #3D3C7F;
+       line-color: #FFF;
+       line-width: 0.75;
+       line-opacity: 1;
+    }
+
+
+    </script>   
+
+    <script type="text/javascript">
+       //have the info tab slide out
+      $('#slide_out_info').tabSlideOut({
+        tabHandle: '.handle',                //class of the element
+        height: '190px',                     //height of tab (110)
+        width: '30px',                       //width of tab 
+        tabLocation: 'left',                 //location
+        speed: 400,                          //speed of animation
+        action: 'click',                   
+      });
+    </script>  
+  </body>
+</html>
