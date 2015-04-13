@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Air Monitoring Infographics</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body style="background-color: #808080;">
+
+<object id="svg-object" width="100%" height="100%" style="position: absolute; left: 0; right:0; top: 7%;" type="image/svg+xml" data="./landing_final.svg">Your browser does not support SVG</object>
+
+</body>
+
+<script type="text/javascript">
+	
+	var obj = document.getElementById("svg-object");
+	obj.addEventListener("load", function() {
+		var object = obj.contentDocument;
+
+		// plane comes in
+		$(object.getElementById("plane"))
+			.append(createMotion(1, "0s", "0,0", "-500, 0", false));
+		// parachute opens
+		$(object.getElementById("parachute")).append(createTransform("scale", 0.3, "1.6s", "0", "1"));
+		$(object.getElementById("parachute"))
+			.append(createMotion(0.3, "1.6s", "1435, 320", "0,0", false));
+
+		$(object.getElementById("parachute_person")).delay(1100).fadeIn(200);
+		// person comes out
+		$(object.getElementById("parachute_person"))
+			.append(createMotion(8, "1.1s", "-35,-170", "-35, 505", false));
+
+		// turns into scuba diver at end
+		$(object.getElementById("parachute")).append(createAnimate("opacity", 0.5, 8, "1", "0"));
+		//$(object.getElementById("person")).append(createAnimate("opacity", 1, 9.1, "1", "0"));
+		$(object.getElementById("scuba_diver")).append(createAnimate("opacity", 0.5, 9.1, "0", "1"));
+		$(object.getElementById("person_arms")).append(createAnimate("opacity", 0.5, 9.1, "1", "0"));
+		// scuba diver rotates to horizontal
+		$(object.getElementById("parachute_person"))
+			.append(createTransform("rotate", 2, "9.6s", "0 1425 365", "-55 1425 365"));
+			//.append(createTransform("scale", 2, "11.6s", "1", "1.5"))
+			//.append(createMotion(2, "9.6s", "-35, 505", "-800, 365", false));
+
+		// colors appear when person hits the area
+			//ozone
+		$(object.getElementById("smog")).append(createSet("fill", "#D0DE57", "2s", "4s"));
+		$(object.getElementById("balloon")).append(createSet("fill", "#15EAFB", "2s", "4s"));
+			//pm
+		$(object.getElementById("factory-grey")).append(createSet("visibility", "hidden", "4s", "6s"));
+		$(object.getElementById("factory-color")).append(createSet("visibility", "visible", "4s", "6s"));
+		$(object.getElementById("smoke")).find('path').append(createSet("fill", "#F3743B", "4s", "6s"));
+			// pops
+		$(object.getElementById("pops")).append(createSet("visibility", "hidden", "6s", "8s"));
+		$(object.getElementById("pops-color")).append(createSet("visibility", "visible", "6s", "8s"));
+			// mercury
+		$(object.getElementById("sea")).append(createSet("fill","#4D9CA8", "8s", "10s"));
+		//$(object.getElementById("sea")).append(createSet("fill", "rgb(16, 56, 68)", "8s", "10s"));
+
+		// hover over button to open
+		var color;
+		$(object.getElementsByClassName("close_hover")).hover(function() {
+			color = $(this).attr("stroke");
+			$(this).attr("fill", color);
+		}, function() {
+			$(this).attr("fill", "#FFF");
+		});
+
+		$(object.getElementsByClassName("button_hover")).hover(function() {
+			var id = ($(this).attr("id"));
+			color = $(object.getElementById(id + "_close")).attr("stroke");
+			$(this).attr("fill", color);
+		}, function() {
+			$(this).attr("fill", "#FFF");
+		});
+		/*$(object.getElementsByClassName("button_hover")).hover(function() {
+			color = $(this).attr("fill");
+			$(this).attr("fill", "#FFF");
+			var id = $(this).attr("id");
+			$(this).trigger("hover");
+		}, function() {
+			$(this).attr("fill", color);
+		});
+
+		$(object.getElementsByClassName("close_hover")).hover(function() {
+			var id = ($(this).attr("id"));
+			color = $(object.getElementById(id.substring(0, id.length - 6))).attr("fill");
+			$(this).attr("fill", color);
+		}, function() {
+			$(this).attr("fill", "#FFF");
+		});*/
+
+
+		// labels appear
+		$(object.getElementById("ozone-box")).append(createSet("visibility", "visible", "2s"));
+		$(object.getElementById("pm-box")).append(createSet("visibility", "visible", "4s"));
+		$(object.getElementById("pops-box")).append(createSet("visibility", "visible", "6s"));
+		$(object.getElementById("mercury-box")).append(createSet("visibility", "visible", "8s"));
+
+
+		// hover over section
+		$([object.getElementById("ozone-box"), object.getElementById("ozone_click"), object.getElementById("ozone_click_close")]).hover(function() {
+			$(object.getElementById("smog")).attr("fill", "#D0DE57");
+			$(object.getElementById("balloon")).attr("fill", "#15EAFB");
+		}, function() {
+			$(object.getElementById("smog")).attr("fill", "#CBCBCB");
+			$(object.getElementById("balloon")).attr("fill", "#FFF");
+		});
+
+		$([object.getElementById("pm-box"), object.getElementById("pm_click"), object.getElementById("pm_click_close")]).hover(function() {
+			$(object.getElementById("factory-grey")).attr("visibility", "hidden");
+			$(object.getElementById("factory-color")).attr("visibility", "visible");
+			$(object.getElementById("smoke")).find('path').attr("fill", "#F3743B");
+		}, function() {
+			$(object.getElementById("factory-color")).attr("visibility", "hidden");
+			$(object.getElementById("factory-grey")).attr("visibility", "visible");
+			$(object.getElementById("smoke")).find('path').attr("fill", "#FFF");
+		});
+
+		$([object.getElementById("mercury-box"), object.getElementById("mercury_click"), object.getElementById("mercury_click_close")]).hover(function() {
+			$(object.getElementById("sea")).attr("fill", "#4D9CA8");
+		}, function() {
+			$(object.getElementById("sea")).attr("fill", "#494949");
+		});
+
+		$([object.getElementById("pops-box"), object.getElementById("pops_click"), object.getElementById("pops_click_close")]).hover(function() {
+			$(object.getElementById("pops")).attr("visibility", "hidden");
+			$(object.getElementById("pops-color")).attr("visibility", "visible");
+		}, function() {
+			$(object.getElementById("pops-color")).attr("visibility", "hidden");
+			$(object.getElementById("pops")).attr("visibility", "visible");
+		});
+
+		// animates line
+		$([object.getElementById("ozone-line"), object.getElementById("ozone-circle")]).each(function() {
+			var stroke = $(this).attr("stroke-dashoffset");
+			$(this).append(createAnimate("stroke-dashoffset", 2, 2, stroke, "0"));
+		});
+
+		$([object.getElementById("pm-line"), object.getElementById("pm-circle1"), object.getElementById("pm-circle2")]).each(function() {
+			var stroke = $(this).attr("stroke-dashoffset");
+			$(this).append(createAnimate("stroke-dashoffset", 2, 4, stroke, "0"));
+		});
+		
+		$(object.getElementById("pops-line")).children().each(function() {
+			var stroke = $(this).attr("stroke-dashoffset");
+			$(this).append(createAnimate("stroke-dashoffset", 2, 6, stroke, "0"));
+		});
+
+		$(object.getElementById("mercury-line")).children().each(function() {
+			var stroke = $(this).attr("stroke-dashoffset");
+			$(this).append(createAnimate("stroke-dashoffset", 2, 8, stroke, "0"));
+		});
+
+		// text boxes
+			// buttons
+		$(object.getElementById("ozone_click")).append(createSet("visibility", "visible", "4s; ozone_click_close.click", "ozone_click.click"));
+		$(object.getElementById("pm_click")).append(createSet("visibility", "visible", "6s; pm_click_close.click", "pm_click.click"));
+		$(object.getElementById("pops_click")).append(createSet("visibility", "visible", "8s; pops_click_close.click", "pops_click.click"));
+		$(object.getElementById("mercury_click")).append(createSet("visibility", "visible", "10s; mercury_click_close.click", "mercury_click.click"));
+
+		$(object.getElementById("ozone_click_close")).append(createSet("visibility", "visible", "ozone_click.click", "ozone_click_close.click"));
+		$(object.getElementById("pm_click_close")).append(createSet("visibility", "visible", "pm_click.click", "pm_click_close.click"));
+		$(object.getElementById("pops_click_close")).append(createSet("visibility", "visible", "pops_click.click", "pops_click_close.click"));
+		$(object.getElementById("mercury_click_close")).append(createSet("visibility", "visible", "mercury_click.click", "mercury_click_close.click"));
+
+		$(object.getElementById("ozone_text")).append(createSet("visibility", "visible", "ozone_click.click", "ozone_click_close.click + 0.5s"));
+		$(object.getElementById("pm_text")).append(createSet("visibility", "visible", "pm_click.click", "pm_click_close.click + 0.5s"));
+		$(object.getElementById("pops_text")).append(createSet("visibility", "visible", "pops_click.click", "pops_click_close.click + 0.5s"));
+		$(object.getElementById("mercury_text")).append(createSet("visibility", "visible", "mercury_click.click", "mercury_click_close.click + 0.5s"));
+
+		$(object.getElementById("ozone_clip")).find('rect')
+			.append(createAnimate("height", 0.5, "ozone_click.click", "0", "117", "ozone_click_close.click"))
+			.append(createAnimate("height", 0.5, "ozone_click_close.click", "117", "0", "ozone_click.click"));
+		$(object.getElementById("mercury_clip")).find('rect')
+			.append(createAnimate("height", 0.5, "mercury_click.click", "0", "117", "mercury_click_close.click"))
+			.append(createAnimate("height", 0.5, "mercury_click_close.click", "117", "0", "mercury_click.click"));
+		$(object.getElementById("pops_clip")).find('rect')
+			.append(createAnimate("height", 0.5, "pops_click.click", "0", "117", "pops_click_close.click"))
+			.append(createAnimate("height", 0.5, "pops_click_close.click", "117", "0", "pops_click.click"));
+		$(object.getElementById("pm_clip")).find('rect')
+			.append(createAnimate("height", 0.5, "pm_click.click", "0", "117", "pm_click_close.click"))
+			.append(createAnimate("height", 0.5, "pm_click_close.click", "117", "0", "pm_click.click"));
+
+	});
+
+	function createMotion(seconds, begin, from, to, end) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animateMotion");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("from", from);
+		animation.setAttribute("to", to);
+		animation.setAttribute("fill", "freeze");
+		if (end != false)
+			animation.setAttribute("end", end);
+		return animation;
+	}
+
+	function createAnimate(name, seconds, begin, from, to, end) {
+		var animation = document.createElementNS("http://www.w3.org/2000/svg","animate");
+		animation.setAttribute("dur", seconds + "s");
+		animation.setAttribute("attributeName", name);
+		animation.setAttribute("attributeType", "XML");
+		animation.setAttribute("repeatCount", "1");
+		animation.setAttribute("begin", begin);
+		animation.setAttribute("from", from);
+		animation.setAttribute("to", to);
+		animation.setAttribute("fill", "freeze");
+		if (end)
+			animation.setAttribute("end", end);
+		return animation;
+	}
+
+	function createSet(name, to, begin, end) {
+		var set = document.createElementNS("http://www.w3.org/2000/svg","set");
+		set.setAttribute("attributeName", name);
+		set.setAttribute("attributeType", "XML");
+		set.setAttribute("to", to);
+		set.setAttribute("begin", begin);
+		if (end)
+			set.setAttribute("end", end);
+		return set;
+	}
+
+	function createTransform(type, seconds, begin, from, to) {
+		var scale = document.createElementNS("http://www.w3.org/2000/svg","animateTransform");
+		scale.setAttribute("attributeName", "transform");
+		scale.setAttribute("attributeType", "XML");
+		scale.setAttribute("type", type);
+		scale.setAttribute("dur", seconds + "s");
+		scale.setAttribute("repeatCount", "1");
+		scale.setAttribute("begin", begin);
+		scale.setAttribute("from", from);
+		scale.setAttribute("to", to);
+		scale.setAttribute("fill", "freeze");
+		return scale;
+	}
+</script>
+</html>

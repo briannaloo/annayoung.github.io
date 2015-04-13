@@ -1,0 +1,502 @@
+<!DOCTYPE HTML>
+<!-- 
+Author: Anna Young, Yale Environmental Performance Index
+Date Created: August-March 2015 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ozone Infographic</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body style="background-color: #47BCB6;">
+
+<object id="svg-object" width="100%" height="91%" style="position: absolute; left: 0; right: 0; top: 9%;" type="image/svg+xml" data="./Ozone_final.svg">Your browser does not support SVG</object>
+
+<div style="position: absolute; left: 0; right:0; width: 25px; padding-left: 10px;">
+	<a href="../" target="_self"><img src="../home.png" width="25px" height="auto"/></a>
+</div>
+
+</body>
+
+<script type="text/javascript">
+// animation elements inside the svg file
+// old_index.html has the javascript version (where append to svg file from javascript)
+
+var obj = document.getElementById("svg-object");
+obj.addEventListener("load", function() {
+	var object = obj.contentDocument;
+
+	var balloon = object.getElementById("balloon");
+	var buildings = object.getElementById("buildings");
+	var front = object.getElementById("front-buildings");
+	var factory = object.getElementById("factory");
+	var stacks = object.getElementsByClassName("smoke-stack");
+	var trees = object.getElementById("trees");
+	var trees_hidden = object.getElementById("trees_person");
+	var person = object.getElementById("person");
+	var beach = object.getElementById("person+beach");
+	var sand = object.getElementById("beach");
+	var smog = object.getElementById("smog");
+	var button1 = object.getElementById("home_button1");
+	var button2 = object.getElementById("home_button2");
+	var button3 = object.getElementById("home_button3");
+	var button4 = object.getElementById("home_button4");
+
+// hover over elements
+	$([balloon, button4]).hover(function() {
+		$(balloon).attr("fill", "#D1DE58");
+		$(object.getElementById("button4_title")).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button4_triangle")).attr("fill", "#D1DE58");
+		$(object.getElementById("button4_triangle")).attr("opacity", "1");
+	}, function() {
+		$(balloon).attr("fill", "#FFFFFF");
+		$(object.getElementById("button4_title")).attr("fill", "#D1DE58");
+		$(object.getElementById("button4_triangle")).attr("fill", "#FFFFFF");
+		$(object.getElementById("button4_triangle")).attr("opacity", "0");
+	});
+	$([buildings, button1]).hover(function() {
+		$(object.getElementById("button1_expand")).attr("opacity", "1");
+
+		$(front).attr("fill", "#D1DE58");
+		$(factory).attr("fill", "#D1DE58");
+		$(object.getElementById("factory-line")).attr("fill", "#D1DE58");
+		$(stacks).each(function() {
+			$(this).attr("fill", "#D1DE58");
+		});
+		$(object.getElementById("button1_title")).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button1_triangle")).attr("fill", "#D1DE58");
+		$(object.getElementById("button1_triangle")).attr("opacity", "1");
+	}, function() {
+		$(object.getElementById("button1_expand")).attr("opacity", "0");
+
+		$(front).attr("fill", "#FFFFFF");
+		$(factory).attr("fill", "#FFFFFF");
+		$(object.getElementById("factory-line")).attr("fill", "#FFFFFF");
+		$(stacks).each(function() {
+			$(this).attr("fill", "#FFFFFF");
+		});
+		$(object.getElementById("button1_title")).attr("fill", "#D1DE58");
+		$(object.getElementById("button1_triangle")).attr("fill", "#FFFFFF");
+		$(object.getElementById("button1_triangle")).attr("opacity", "0");
+	});	
+
+	$([object.getElementById("sources_button"), object.getElementById("land_use_button")]).hover(function() {
+		$(this).find('text').attr("fill", "#3A9E99");
+		$(this).find('path').attr("fill", "#FFFFFF");
+	}, function() {
+		$(this).find('text').attr("fill", "#FFFFFF");
+		$(this).find('path').attr("fill", "#3A9E99");
+	});
+
+	$([trees, trees_hidden, button3]).hover(function() {
+		$(object.getElementsByClassName("tree")).each(function() {
+			$(this).attr("fill", "#D1DE58");
+		});
+		$(object.getElementsByClassName("tree-gray")).each(function() {
+			$(this).attr("fill", "#99a541");
+		});
+		$(object.getElementById("button3_title")).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button3_triangle")).attr("fill", "#D1DE58");
+		$(object.getElementById("button3_triangle")).attr("opacity", "1");
+	}, function() {
+		$(object.getElementsByClassName("tree")).each(function() {
+			$(this).attr("fill", "#FFFFFF");
+		});
+		$(object.getElementsByClassName("tree-gray")).each(function() {
+			$(this).attr("fill", "#D1D3D4");
+		});
+		$(object.getElementById("button3_title")).attr("fill", "#D1DE58");
+		$(object.getElementById("button3_triangle")).attr("fill", "#FFFFFF");
+		$(object.getElementById("button3_triangle")).attr("opacity", "0");
+	});
+
+	$([person, button2]).hover(function() {
+		$(person).attr("fill", "#D1DE58");
+		$(object.getElementById("button2_title")).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button2_triangle")).attr("fill", "#D1DE58");
+		$(object.getElementById("button2_triangle")).attr("opacity", "1");
+	}, function() {
+		$(person).attr("fill", "rgb(58, 158, 153)");
+		$(object.getElementById("button2_title")).attr("fill", "#D1DE58");
+		$(object.getElementById("button2_triangle")).attr("fill", "#FFFFFF");
+		$(object.getElementById("button2_triangle")).attr("opacity", "0");
+	});
+
+	$(object.getElementById("page5")).hover(function() {
+		$(object.getElementById("title")).attr("fill", "#3A9E99");
+		$(object.getElementById("triangle")).attr("fill", "#D1DE58");
+		$(object.getElementById("triangle")).attr("opacity", "1");
+	}, function() {
+		$(object.getElementById("title")).attr("fill", "#D1DE58");
+		$(object.getElementById("triangle")).attr("fill", "#FFFFFF");
+		$(object.getElementById("triangle")).attr("opacity", "0.3");
+	});
+
+	var color, elt;
+	$(object.getElementsByClassName("buttons")).hover(function() {
+		color = $(this).attr("fill");
+		$(this).attr("fill", "rgb(50, 143, 139)");
+	}, function() {
+		$(this).attr("fill", color);
+	});
+	$(object.getElementsByClassName("buttons-green")).hover(function() {
+		color = $(this).attr("fill");
+		$(this).attr("fill", "#D1DE58");
+	}, function() {
+		$(this).attr("fill", color);
+	});
+
+	$(object.getElementsByClassName("buttons2")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "rgb(50, 143, 139)");
+	}, function() {
+		elt.attr("fill", color);
+	});
+	$(object.getElementsByClassName("buttons3")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "rgb(50, 143, 139)");
+		$(this).find('path').attr("stroke", "rgb(50, 143, 139)");
+	}, function() {
+		elt.attr("fill", color);
+		$(this).find('path').attr("stroke", color);
+	});
+	$(object.getElementsByClassName("buttons4")).hover(function() {
+		elt = $(this).find('polygon');
+		color = elt.attr("fill");
+		elt.attr("fill", "rgb(50, 143, 139)");
+		$(this).find('line').attr("stroke", "rgb(50, 143, 139)");
+	}, function() {
+		elt.attr("fill", color);
+		$(this).find('line').attr("stroke", color);
+	});
+
+
+	var seconds = 1; // animation time
+
+// GO BACK BUTTON
+	// from person
+	$(object.getElementById("go_back")).click(function() {
+		$(person).attr("cursor", "pointer").attr("pointer-events", "auto");
+		$(trees_hidden).attr("cursor", "pointer").attr("pointer-events", "auto");
+
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
+		$(object.getElementById("health-references")).attr("visibility", "hidden");
+		$(object.getElementsByClassName("trees-hide")).show();
+		$(object.getElementById("tree-ground")).delay(seconds*1000).show(0);
+		$(object.getElementById("go_back")).delay(100).fadeOut(200);
+
+		$(object.getElementById("respiratory2")).fadeIn(200);
+
+		$(object.getElementById("respiratory_close")).fadeOut(200);
+		$(object.getElementById("respiratory-info")).fadeOut(200);
+	});
+	// from cities
+	$(object.getElementById("go_back_cities")).click(function() {
+		$(buildings).attr("cursor", "pointer").attr("pointer-events", "auto");
+		$([trees, trees_hidden]).attr("cursor", "pointer").attr("pointer-events", "auto");
+		$(object.getElementById("page1-ref2")).attr("visibility", "hidden");
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
+		$(smog).delay(1000*seconds).fadeIn(seconds*1000);
+		$(object.getElementById("group1")).fadeOut(500);
+		$(object.getElementById("molecules")).fadeOut(500);
+		$(object.getElementById("go_back_cities")).delay(100).fadeOut(200);
+		$(object.getElementById("green-molecules")).delay(seconds*1000).fadeOut(0);
+		$(object.getElementById("molecules-lines")).fadeIn(seconds*1000);
+	});
+	// from balloon
+	$(object.getElementById("go_back_balloon")).click(function() {
+		$([balloon, buildings, trees, trees_hidden]).attr("cursor", "pointer").attr("pointer-events", "auto");
+		$(smog).delay(1000*seconds).fadeIn(seconds*1000);
+
+		$([object.getElementById("cityscape"), object.getElementById("mountains")]).delay(2000).fadeIn(0);
+		$(object.getElementById("cityscape2")).delay(2000).fadeOut(0);
+		$(object.getElementById("go_back_balloon")).fadeOut(200);
+
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
+		$(object.getElementById("balloon-ref")).attr("visibility", "hidden");
+	});
+	// from trees
+	$(object.getElementById("go_back_trees")).click(function() {
+		$([balloon, buildings, trees, trees_hidden]).attr("cursor", "pointer").attr("pointer-events", "auto");
+		$(object.getElementById("smog2")).fadeOut(seconds * 1000);
+		$(object.getElementById("go_back_trees")).fadeOut(400);
+
+		$(object.getElementById("layer1")).delay(.75*seconds*1000).fadeOut(seconds/4.0*1000);
+		$(object.getElementById("layer2")).delay(seconds/2.0*1000).fadeOut(seconds/4.0*1000);
+		$(object.getElementById("layer3")).delay(seconds/4.0*1000).fadeOut(seconds/4.0*1000);
+		$(object.getElementById("layer4-sun")).fadeOut(seconds/4.0*1000);
+
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
+		$(object.getElementById("eco-ref")).attr("visibility", "hidden");
+
+		$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(seconds*1000).fadeOut(0);});
+		$(object.getElementById("rays-label")).fadeOut(0);
+		$([object.getElementById("ecosystem-buttons-open"), object.getElementById("ecosystem-buttons-close")]).fadeOut(seconds*1000);
+	});
+	// from recommendations page
+	$(object.getElementById("go_back_page5")).click(function() {
+		$(smog).delay(1000*seconds).fadeIn(2*seconds*1000);
+		$([buildings, trees, balloon]).attr("cursor", "pointer").attr("pointer-events", "auto");
+		$(object.getElementById("go_back_page5")).fadeOut(400);
+		$([object.getElementById("page5-trees1"), object.getElementById("page5-trees2")]).delay(3*seconds*1000).fadeIn(500);
+		$(object.getElementById("page1-references")).attr("visibility", "visible");
+	});
+
+// WHEN PERSON CLICKED
+	personClicked(object, person, trees_hidden, balloon, beach, seconds, button2);
+
+// WHEN CITIES/FACTORY CLICKED
+	citiesClicked(object, buildings, seconds, trees, person, trees_hidden, smog, sand, object.getElementById("sources_button"));
+
+// WHEN BALLOON CLICKED
+	balloonClicked(object, seconds, balloon, beach, buildings, trees, trees_hidden, smog, button4);
+
+// WHEN TREES CLICKED
+	treesClicked(object, seconds, trees, trees_hidden, smog, balloon, buildings, button3);
+
+// WHEN RECOMMENDATIONS CLICKED
+	recsClicked(object, seconds, smog, buildings, trees, balloon);
+
+// WHEN CLIMATE CHANGE CLICKED
+	landUseClicked(object, seconds, smog, trees_hidden);
+});
+
+	function landUseClicked(object, seconds, smog, trees_hidden)
+	{
+		// land_use_button
+		$(object.getElementById("land_use_button")).click(function() {
+			$(smog).fadeOut(1000);
+			$([object.getElementById("buildings"), object.getElementById("trees")]).attr("cursor", "auto").attr("pointer-events", "none");
+			$(object.getElementById("land-sun")).delay(1000).fadeIn(1000);
+
+			$([object.getElementById("tree4"), object.getElementById("tree5"), object.getElementById("tree6"), object.getElementById("tree7"), object.getElementById("factory_copy")]).delay(500).fadeOut(1000);
+
+			$(object.getElementById("go_back_land_use")).delay(4500).fadeIn(500);
+
+			$(object.getElementById("land-ref")).attr("visibility", "visible");
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+		});
+		
+		$(object.getElementById("go_back_land_use")).click(function() {
+			$(smog).delay(1000).fadeIn(seconds*1000);
+			$(object.getElementById("land-sun")).fadeOut(1000);
+			$([object.getElementById("buildings"), object.getElementById("trees")]).attr("cursor", "pointer").attr("pointer-events", "auto");
+
+			$(object.getElementById("land-ref")).attr("visibility", "hidden");
+			$(object.getElementById("page1-references")).attr("visibility", "visible");
+
+			$([object.getElementById("tree4"), object.getElementById("tree5"), object.getElementById("tree6"), object.getElementById("tree7"), object.getElementById("factory_copy")]).delay(1000).fadeIn(500);
+
+			$(object.getElementById("go_back_land_use")).hide();
+		});
+
+		ozoneSlider(object);
+
+	}
+
+	function ozoneSlider(object)
+	{
+		var current = 0; // can be 0-4 inclusive
+		$([object.getElementById("land_use_button"), 
+			object.getElementById("ozone_chemicals_close")]).click(function() {
+			if (current != 0)
+			{
+				$(object.getElementById("chemicals" + current)).fadeOut(500);
+				$(object.getElementById("chemicals0")).fadeIn(500);
+				$(object.getElementById("ozone_left")).attr("opacity", "0.5").attr("pointer-events", "none");
+				$(object.getElementById("ozone_right")).attr("opacity", "1").attr("pointer-events", "auto");
+
+			}
+			current = 0;
+		});
+
+		$(object.getElementById("ozone_chemicals_open")).click(function() {
+			if (current != 4)
+			{
+				$(object.getElementById("chemicals4")).fadeIn(500);
+				$(object.getElementById("chemicals" + current)).fadeOut(500);
+				$(object.getElementById("ozone_left")).attr("opacity", "1").attr("pointer-events", "auto");
+				$(object.getElementById("ozone_right")).attr("opacity", "0.5").attr("pointer-events", "none");
+
+			}
+			current = 4;
+		});
+
+		$(object.getElementById("ozone_right")).click(function() {
+			if (current < 4)
+			{
+				if (current == 0)
+					$(object.getElementById("ozone_left")).attr("opacity", "1").attr("pointer-events", "auto");
+
+				$(object.getElementById("chemicals" + current)).fadeOut(500);	// hide previous
+				current++;
+				$(object.getElementById("chemicals" + current)).fadeIn(500); // show next
+				if (current == 4)
+				{
+					$(this).attr("opacity", "0.5").attr("pointer-events", "none");
+				}
+				
+			}
+			// else can't move right any more
+		});
+
+		$(object.getElementById("ozone_left")).click(function() {
+			if (current > 0)
+			{
+				if (current == 4)
+				{
+					$(object.getElementById("ozone_right")).attr("opacity", "1").attr("pointer-events", "auto");
+				}
+
+				$(object.getElementById("chemicals" + current)).fadeOut(500);	// hide previous
+				current--;
+				$(object.getElementById("chemicals" + current)).fadeIn(500); // show next
+				if (current == 0)
+				{
+					$(this).attr("opacity", "0.5").attr("pointer-events", "none");
+				}
+				
+			}
+			// else can't move left any more
+		});
+	}
+
+
+
+	function recsClicked(object, seconds, smog, buildings, trees, balloon) {
+		$(object.getElementById("page5")).click(function() {
+			$(smog).fadeOut(seconds*1000);
+			$([buildings, trees, balloon]).attr("cursor", "auto").attr("pointer-events", "none");
+			$(object.getElementById("go_back_page5")).delay(5*seconds*1000).fadeIn(400);
+			$([object.getElementById("page5-trees1"), object.getElementById("page5-trees2")]).fadeOut(500);
+
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+		});
+
+	}
+
+	function treesClicked(object, seconds, trees, trees_hidden, smog, balloon, buildings, button) {
+		$([trees, trees_hidden, button]).click(function() {
+			$([balloon, buildings, trees, trees_hidden]).attr("cursor", "auto").attr("pointer-events", "none");
+			$(object.getElementById("smog2")).delay(seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("go_back_trees")).delay(5.5*seconds*1000).fadeIn(400);
+
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			$(object.getElementById("eco-ref")).attr("visibility", "visible");
+		
+			// ozone layers draw
+			$(object.getElementById("layer1")).delay(1.5*seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("layer2")).delay(2.5*seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("layer3")).delay(3.5*seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("layer4-sun")).delay(4.5*seconds*1000).fadeIn(seconds*1000);
+		
+			// sun rays
+			$(object.getElementById("layer5-lines")).find("polyline").each(function() {$(this).delay(4.5*seconds*1000).fadeIn(0);});
+			$(object.getElementById("rays-label")).delay(6.4*seconds*1000).fadeIn(0);
+		
+			// text boxes fade in
+			$([object.getElementById("ecosystem-buttons-open"), object.getElementById("ecosystem-buttons-close")]).delay(4.5*seconds*1000).fadeIn(seconds*1000);
+		});
+
+	}
+
+	function balloonClicked(object, seconds, balloon, beach, buildings, trees, trees_hidden, smog, button) {
+		$([balloon, button]).click(function() {
+			$([balloon, buildings, trees, trees_hidden]).attr("cursor", "auto").attr("pointer-events", "none");
+			$(smog).fadeOut(seconds*1000);
+
+			$([object.getElementById("cityscape"), object.getElementById("mountains")])
+				.delay(seconds*800).fadeOut(800);
+			$(object.getElementById("cityscape2")).delay(seconds*800).fadeIn(800);
+			$(object.getElementById("go_back_balloon")).delay(4*seconds*1000).fadeIn(200);
+
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			$(object.getElementById("balloon-ref")).attr("visibility", "visible");
+		});
+	}
+
+	function citiesClicked(object, buildings, seconds, trees, person, trees_hidden, smog, sand, button) {
+		$([buildings, button]).click(function() {
+			$([buildings, trees, trees_hidden]).attr("cursor", "auto").attr("pointer-events", "none");
+			$(smog).fadeOut(seconds*1000);
+
+			$(object.getElementById("molecules")).delay(2*seconds*1000).fadeIn(2*seconds*1000);
+			$(object.getElementById("group1")).delay(2*seconds*1000).fadeIn(500);
+			$(object.getElementById("go_back_cities")).delay(4*seconds*1000 + 1400).fadeIn(200);
+
+			$(object.getElementById("page1-ref2")).attr("visibility", "visible");
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+		});
+
+		// expand-sun clicked
+		$(object.getElementById("expand_sun")).click(function() {
+			$(object.getElementById("green-molecules")).delay(3*seconds*1000).fadeIn(seconds*1000);
+			$(object.getElementById("molecules")).delay(3*seconds*1000).fadeOut(seconds*1000);
+			$(object.getElementById("molecules-lines")).delay(3*seconds*1000).fadeOut(seconds*1000);
+		});
+		// collapse-sun clicked
+		$(object.getElementById("collapse_sun")).click(function() {
+			$(object.getElementById("green-molecules")).delay(seconds*1000).fadeOut(0);
+			$(object.getElementById("molecules")).fadeIn(seconds*1000);
+			$(object.getElementById("molecules-lines")).fadeIn(seconds*1000);
+		});
+
+		// hover over each source
+		$([object.getElementById('plants_source_hover'),
+			object.getElementById('forests_source_hover'),
+			object.getElementById('motor_source_hover'),
+			object.getElementById('cities_source_hover')]).hover(function() {
+			var id = $(this).attr("id");
+			$(object.getElementById(id + '_text')).attr("fill", "#d2df60");
+
+			$(object.getElementById(id + '_chem')).find('circle').attr("fill", "#d2df60");
+
+			$(object.getElementById(id + '_line')).attr("stroke", "#d2df60");
+		}, function() {
+			var id = $(this).attr("id");
+			$(object.getElementById(id + '_text')).attr("fill", "#fff");
+			$(object.getElementById(id + '_chem')).find('circle').attr("fill", "#328F8B");
+			$(object.getElementById(id + '_line')).attr("stroke", "#fff");
+		});
+
+	}
+
+
+	function personClicked(object, person, trees_hidden, balloon, beach, seconds,  button) {
+		$([person, button]).click(function() {
+			$(person).attr("cursor", "auto").attr("pointer-events", "none");
+			$(trees_hidden).attr("cursor", "auto").attr("pointer-events", "none");
+			$(object.getElementById("tree-ground")).hide();
+			$(object.getElementById("go_back")).delay(3/2.0*seconds * 1000).fadeIn(200);
+			$(object.getElementById("page1-references")).attr("visibility", "hidden");
+			$(object.getElementById("health-references")).attr("visibility", "visible");
+
+			// make trees bigger ---- ineffective??
+			$(object.getElementsByClassName("trees-hide")).hide();
+		});
+
+		initializeRespiratory(object, seconds, 0);
+	}
+
+	function initializeRespiratory(object, seconds, sec) {
+		// open respiratory effects
+		$(object.getElementById("respiratory2")).click(function() {	
+			$(object.getElementById("respiratory2")).fadeOut(200);
+
+			$(object.getElementById("respiratory_close")).fadeIn(200);
+			$(object.getElementById("respiratory-info")).show();
+		});
+
+		// close respiratory effects
+		$([object.getElementById("respiratory_close"), object.getElementById("forward")]).click(function() {
+			$(object.getElementById("respiratory2")).fadeIn(200);
+			$(object.getElementById("respiratory_close")).fadeOut(200);
+			$(object.getElementById("respiratory-info")).fadeOut(200);
+		});
+	}
+
+</script>
+</html>
