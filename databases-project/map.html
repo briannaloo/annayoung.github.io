@@ -92,9 +92,8 @@
           user_name: 'briannaloo',
           type: 'cartodb',
           sublayers: [{
-            /*sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, state_name, population2014, median_cash_rent, rent.area_name, rent.state FROM county_shapes, county_size, rent",*/
             sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, cnty_fips, state_name, State, County, state_fips, population2014, glyphosate.county_fips_code, glyphosate.state_fips_code, kg FROM county_shapes, county_size, glyphosate",
-            cartocss: $('#coloring').html().format('kg'),
+            cartocss: $('#coloring').html().format('total_score'),
             interactivity: "cartodb_id, the_geom_webmercator, name, state_name, population2014, kg"
             }]
 
@@ -109,7 +108,10 @@
           sublayer_county = layer.getSubLayer(0);
           sublayer_county.setInteraction(true);
           sublayer_county.setSQL(
-            "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014,\
+            "SELECT cartodb_id, the_geom_webmercator, name, state_name, population2014, kg, pesticide_score, population_score, \
+              (pesticide_score + population_score)/2 as total_score \
+              FROM \
+            (SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, kg, \
             CASE \
               WHEN kg <= 10 THEN 10 \
               WHEN kg <= 50 and kg > 10 THEN 9 \
@@ -121,7 +123,7 @@
               WHEN kg <= 100000 and kg > 50000 THEN 3 \
               WHEN kg <= 350000 and kg > 100000 THEN 2 \
               WHEN kg <= 700000 and kg > 350000 THEN 1 \
-            END as kg, \
+            END as pesticide_score, \
             CASE \
               WHEN population2014 >= 2000000 THEN 10 \
               WHEN population2014 >= 900000 and population2014 < 2000000 THEN 9 \
@@ -138,16 +140,8 @@
             WHERE county_shapes.state_name=county_size.State \
             AND CONCAT(county_shapes.name,' County')=county_size.County \
             AND glyphosate.state_fips_code=county_shapes.state_fips \
-            AND glyphosate.county_fips_code=county_shapes.cnty_fips  \
+            AND glyphosate.county_fips_code=county_shapes.cnty_fips ) as r \
             ");
-          /*sublayer_county.setSQL(
-            "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, median_cash_rent \
-            FROM county_shapes, county_size, rent \
-            WHERE county_shapes.state_name=county_size.State \
-            AND CONCAT(county_shapes.name,' County')=county_size.County \
-            AND county_shapes.name=rent.area_name \
-            AND rent.state=county_shapes.state_name  \
-            ");*/
           
 
     });
