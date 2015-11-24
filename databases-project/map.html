@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+     <link href='iframe_style.css' rel='stylesheet' type='text/css'>
+     <script type="text/javascript" src="jquery.js"></script>
+     <script type="text/javascript" src="slide.js"></script>
+  </head>
+
+  <body>
+    
+    <div id="map"></div>
+    
+  </body>
+
+   <script type="cartocss/html" id="population">
+    #population{
+      polygon-fill: #FFFFB2;
+      polygon-opacity: 1;
+    }
+
+    #population [ {0} <= 100000000] {
+       polygon-fill: #000000;
+    }
+    #population [ {0} <= 300000] {
+       polygon-fill: #1A0800;
+    }
+    #population [ {0} <= 200000] {
+       polygon-fill: #241105;
+    }
+    #population [ {0} <= 100000] {
+       polygon-fill: #301703;
+    }
+    #population [ {0} <= 60000] {
+       polygon-fill: #3F1C05;
+    }
+    #population [ {0} <= 40000] {
+       polygon-fill: #4D1E04;
+    }
+    #population [ {0} <= 20000] {
+       polygon-fill: #631E04;
+    }
+    </script>
+
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> 
+     
+     <script>
+          //Formats the columns for us into css
+          String.prototype.format = (function (i, safe, arg) {
+            function format() {
+                var str = this,
+                    len = arguments.length + 1;
+
+                for (i = 0; i < len; arg = arguments[i++]) {
+                    safe = typeof arg === 'object' ? JSON.stringify(arg) : arg;
+                    str = str.replace(RegExp('\\{' + (i - 1) + '\\}', 'g'), safe);
+                }
+                return str;
+            }
+            return format;
+            
+        })();
+
+
+    function main() {
+      var loader = new cdb.geo.ui.TilesLoader({ template: function(){ return '<div class="loader"></div>' } });
+
+        var map = new L.Map('map', { 
+          zoomControl: true,
+          legend:true,
+          center: [40, -98],
+          zoom: 3.8,
+          scrollWheelZoom: true,
+          searchControl: true
+        });
+
+        // create our layers
+        cartodb.createLayer(map, {
+          user_name: 'briannaloo',
+          type: 'cartodb',
+          sublayers: [{
+            sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, state_name, population2014, median_cash_rent, rent.area_name, rent.state FROM county_shapes, county_size, rent",
+            cartocss: $('#population').html().format('population2014'),
+            interactivity: "cartodb_id, the_geom_webmercator, name, state_name, population2014, median_cash_rent"
+            }]
+
+        }).done(function(layer) {
+          function addLoader(layer) {
+            layer.bind('loading', function() { loader.show() });
+            layer.bind('load',  function() { loader.hide(); });
+          }
+          console.log("loaded data")
+          // add the layers to our map 
+          map.addLayer(layer);
+          sublayer_county = layer.getSubLayer(0);
+          sublayer_county.setInteraction(true);
+          sublayer_county.setSQL(
+            "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, median_cash_rent \
+            FROM county_shapes, county_size, rent \
+            WHERE county_shapes.state_name=county_size.State \
+            AND CONCAT(county_shapes.name,' County')=county_size.County \
+            AND county_shapes.name=rent.area_name \
+            AND rent.state=county_shapes.state_name  \
+            ");
+
+    });
+  }
+
+      window.onload = main;
+
+
+  
+    </script>
+
+</script>
+</html>
