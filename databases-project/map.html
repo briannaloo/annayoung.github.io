@@ -15,31 +15,31 @@
     
   </body>
 
-   <script type="cartocss/html" id="population">
-    #population{
+   <script type="cartocss/html" id="coloring">
+    #coloring{
       polygon-fill: #FFFFB2;
       polygon-opacity: 1;
     }
 
-    #population [ {0} <= 100000000] {
+    #coloring [ {0} <= 700000] {
        polygon-fill: #000000;
     }
-    #population [ {0} <= 300000] {
+    #coloring [ {0} <= 100000] {
        polygon-fill: #1A0800;
     }
-    #population [ {0} <= 200000] {
+    #coloring [ {0} <= 50000] {
        polygon-fill: #241105;
     }
-    #population [ {0} <= 100000] {
+    #coloring [ {0} <= 25000] {
        polygon-fill: #301703;
     }
-    #population [ {0} <= 60000] {
+    #coloring [ {0} <= 10000] {
        polygon-fill: #3F1C05;
     }
-    #population [ {0} <= 40000] {
+    #coloring [ {0} <= 1000] {
        polygon-fill: #4D1E04;
     }
-    #population [ {0} <= 20000] {
+    #coloring [ {0} <= 10] {
        polygon-fill: #631E04;
     }
     </script>
@@ -81,9 +81,10 @@
           user_name: 'briannaloo',
           type: 'cartodb',
           sublayers: [{
-            sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, state_name, population2014, median_cash_rent, rent.area_name, rent.state FROM county_shapes, county_size, rent",
-            cartocss: $('#population').html().format('population2014'),
-            interactivity: "cartodb_id, the_geom_webmercator, name, state_name, population2014, median_cash_rent"
+            /*sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, state_name, population2014, median_cash_rent, rent.area_name, rent.state FROM county_shapes, county_size, rent",*/
+            sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, cnty_fips, state_name, State, County, state_fips, population2014, glyphosate.county_fips_code, glyphosate.state_fips_code, glyphosate.kg FROM county_shapes, county_size, glyphosate",
+            cartocss: $('#coloring').html().format('kg'),
+            interactivity: "cartodb_id, the_geom_webmercator, name, state_name, population2014, kg"
             }]
 
         }).done(function(layer) {
@@ -97,13 +98,22 @@
           sublayer_county = layer.getSubLayer(0);
           sublayer_county.setInteraction(true);
           sublayer_county.setSQL(
+            "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, kg \
+            FROM county_shapes, county_size, glyphosate \
+            WHERE county_shapes.state_name=county_size.State \
+            AND CONCAT(county_shapes.name,' County')=county_size.County \
+            AND glyphosate.state_fips_code=county_shapes.state_fips \
+            AND glyphosate.county_fips_code=county_shapes.cnty_fips  \
+            ");
+          /*sublayer_county.setSQL(
             "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, median_cash_rent \
             FROM county_shapes, county_size, rent \
             WHERE county_shapes.state_name=county_size.State \
             AND CONCAT(county_shapes.name,' County')=county_size.County \
             AND county_shapes.name=rent.area_name \
             AND rent.state=county_shapes.state_name  \
-            ");
+            ");*/
+          
 
     });
   }
