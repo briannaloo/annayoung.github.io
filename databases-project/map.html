@@ -21,25 +21,25 @@
       polygon-opacity: 1;
     }
 
-    #coloring [ {0} <= 700000] {
+    #coloring [ {0} <= 10] {
        polygon-fill: #000000;
     }
-    #coloring [ {0} <= 100000] {
+    #coloring [ {0} <= 8] {
        polygon-fill: #1A0800;
     }
-    #coloring [ {0} <= 50000] {
+    #coloring [ {0} <= 7] {
        polygon-fill: #241105;
     }
-    #coloring [ {0} <= 25000] {
+    #coloring [ {0} <= 6] {
        polygon-fill: #301703;
     }
-    #coloring [ {0} <= 10000] {
+    #coloring [ {0} <= 5] {
        polygon-fill: #3F1C05;
     }
-    #coloring [ {0} <= 1000] {
+    #coloring [ {0} <= 4] {
        polygon-fill: #4D1E04;
     }
-    #coloring [ {0} <= 10] {
+    #coloring [ {0} <= 2] {
        polygon-fill: #631E04;
     }
     </script>
@@ -82,7 +82,7 @@
           type: 'cartodb',
           sublayers: [{
             /*sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, state_name, population2014, median_cash_rent, rent.area_name, rent.state FROM county_shapes, county_size, rent",*/
-            sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, cnty_fips, state_name, State, County, state_fips, population2014, glyphosate.county_fips_code, glyphosate.state_fips_code, glyphosate.kg FROM county_shapes, county_size, glyphosate",
+            sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, cnty_fips, state_name, State, County, state_fips, population2014, glyphosate.county_fips_code, glyphosate.state_fips_code, kg FROM county_shapes, county_size, glyphosate",
             cartocss: $('#coloring').html().format('kg'),
             interactivity: "cartodb_id, the_geom_webmercator, name, state_name, population2014, kg"
             }]
@@ -98,7 +98,7 @@
           sublayer_county = layer.getSubLayer(0);
           sublayer_county.setInteraction(true);
           sublayer_county.setSQL(
-            "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, kg \
+            "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, LOG(kg)/LOG(4) as kg \
             FROM county_shapes, county_size, glyphosate \
             WHERE county_shapes.state_name=county_size.State \
             AND CONCAT(county_shapes.name,' County')=county_size.County \
