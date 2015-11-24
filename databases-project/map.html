@@ -98,7 +98,31 @@
           sublayer_county = layer.getSubLayer(0);
           sublayer_county.setInteraction(true);
           sublayer_county.setSQL(
-            "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, LOG(kg)/LOG(4) as kg \
+            "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014,\
+            CASE \
+              WHEN kg <= 10 THEN 10 \
+              WHEN kg <= 50 and kg > 10 THEN 9 \
+              WHEN kg <= 100 and kg > 50 THEN 8 \
+              WHEN kg <= 1000 and kg > 100 THEN 7 \
+              WHEN kg <= 5000 and kg > 1000 THEN 6 \
+              WHEN kg <= 10000 and kg > 5000 THEN 5 \
+              WHEN kg <= 50000 and kg > 10000 THEN 4 \
+              WHEN kg <= 100000 and kg > 50000 THEN 3 \
+              WHEN kg <= 350000 and kg > 100000 THEN 2 \
+              WHEN kg <= 700000 and kg > 350000 THEN 1 \
+            END as kg, \
+            CASE \
+              WHEN population2014 >= 2000000 THEN 10 \
+              WHEN population2014 >= 900000 and population2014 < 2000000 THEN 9 \
+              WHEN population2014 >= 600000 and population2014 < 900000 THEN 8 \
+              WHEN population2014 >= 400000 and population2014 < 600000 THEN 7 \
+              WHEN population2014 >= 200000 and population2014 < 400000 THEN 6 \
+              WHEN population2014 >= 100000 and population2014 < 200000 THEN 5 \
+              WHEN population2014 >= 50000 and population2014 < 100000 THEN 4 \
+              WHEN population2014 >= 15000 and population2014 < 50000 THEN 3 \
+              WHEN population2014 >= 5000 and population2014 < 15000 THEN 2 \
+              WHEN population2014 >= 0 and population2014 < 5000 THEN 1 \
+            END as population_score \
             FROM county_shapes, county_size, glyphosate \
             WHERE county_shapes.state_name=county_size.State \
             AND CONCAT(county_shapes.name,' County')=county_size.County \
