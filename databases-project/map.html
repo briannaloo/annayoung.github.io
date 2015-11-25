@@ -92,9 +92,9 @@
           user_name: 'briannaloo',
           type: 'cartodb',
           sublayers: [{
-            sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, cnty_fips, state_name, State, County, state_fips, population2014, glyphosate.county_fips_code, glyphosate.state_fips_code, kg,  FROM county_shapes, county_size, glyphosate",
+            sql: "SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, county_shapes.name, cnty_fips, state_name, State, County, state_fips, population2014, glyphosate.county_fips_code, glyphosate.state_fips_code, kg, rent.median_cash_rent, rent.state, rent.area_name FROM county_shapes, county_size, glyphosate, rent",
             cartocss: $('#coloring').html().format('total_score'),
-            interactivity: "cartodb_id, the_geom_webmercator, name, state_name, population2014, kg"
+            interactivity: "cartodb_id, the_geom_webmercator, name, state_name, population2014, kg, median_cash_rent"
             }]
 
         }).done(function(layer) {
@@ -108,10 +108,10 @@
           sublayer_county = layer.getSubLayer(0);
           sublayer_county.setInteraction(true);
           sublayer_county.setSQL(
-            "SELECT cartodb_id, the_geom_webmercator, name, state_name, population2014, kg, pesticide_score, population_score \
-              (pesticide_score + population_score)/2 as total_score \
+            "SELECT cartodb_id, the_geom_webmercator, name, state_name, population2014, kg, median_cash_rent, pesticide_score, population_score, rent_score \
+              (pesticide_score + population_score + rent_score)/3 as total_score \
               FROM \
-            (SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, kg \
+            (SELECT county_shapes.cartodb_id, county_shapes.the_geom_webmercator, name, state_name, population2014, kg, median_cash_rent \
             CASE \
               WHEN kg <= 10 THEN 10 \
               WHEN kg <= 50 and kg > 10 THEN 9 \
@@ -135,12 +135,26 @@
               WHEN population2014 >= 15000 and population2014 < 50000 THEN 3 \
               WHEN population2014 >= 5000 and population2014 < 15000 THEN 2 \
               WHEN population2014 >= 0 and population2014 < 5000 THEN 1 \
-            END as population_score \
-            FROM county_shapes, county_size, glyphosate \
+            END as population_score, \
+            CASE \
+              WHEN median_cash_rent <= 200 THEN 10 \
+              WHEN median_cash_rent <= 400 and median_cash_rent > 200 THEN 9 \
+              WHEN median_cash_rent <= 600 and median_cash_rent > 400 THEN 8 \
+              WHEN median_cash_rent <= 800 and median_cash_rent > 600 THEN 7 \
+              WHEN median_cash_rent <= 1000 and median_cash_rent > 800 THEN 6 \
+              WHEN median_cash_rent <= 1200 and median_cash_rent > 1000 THEN 5 \
+              WHEN median_cash_rent <= 1400 and median_cash_rent > 1200 THEN 4 \
+              WHEN median_cash_rent <= 1600 and median_cash_rent > 1400 THEN 3 \
+              WHEN median_cash_rent <= 1800 and median_cash_rent > 1600 THEN 2 \
+              WHEN median_cash_rent <= 2001 and median_cash_rent > 1800 THEN 1 \
+            END as rent_score \
+            FROM county_shapes, county_size, glyphosate, rent \
             WHERE county_shapes.state_name=county_size.State \
             AND CONCAT(county_shapes.name,' County')=county_size.County \
             AND glyphosate.state_fips_code=county_shapes.state_fips \
-            AND glyphosate.county_fips_code=county_shapes.cnty_fips ) as r \
+            AND glyphosate.county_fips_code=county_shapes.cnty_fips \
+            AND rent.state=county_shapes.state_name \
+            AND rent.area_name=county_shapes.name ) as r \
             ");
           
 

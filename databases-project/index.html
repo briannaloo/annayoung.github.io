@@ -1,6 +1,10 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+	<link href='style.css' rel='stylesheet' type='text/css'>
+</head>
+
 <style type="text/css">
 	iframe {
 		width:600px;
@@ -11,28 +15,106 @@
 
 <body>
 <h1> Happy Healthy Home </h1>
-<p> Population </P>
-<form>
-  <input type="radio" name="population" value="1" checked> 1
-  <br>
-  <input type="radio" name="population" value="2"> 2
-  <br>
-  <input type="radio" name="population" value="3"> 3
-  <br>
-  <input type="radio" name="population" value="4"> 4
-  <br>
-  <input type="radio" name="population" value="5"> 5
-  <br>
-  <input type="radio" name="population" value="6"> 6
-  <br>
-  <input type="radio" name="population" value="7"> 7
-  <br>
-  <input type="radio" name="population" value="8"> 8
-  <br>
-  <input type="radio" name="population" value="9"> 9
-  <br>
-  <input type="radio" name="population" value="10"> 10
-</form> 
+
+
+<div class = "population-ranking">
+	<p> Population </P>
+	<form>
+	  <input type="radio" name="population" value="1" checked> 1
+	  <br>
+	  <input type="radio" name="population" value="2"> 2
+	  <br>
+	  <input type="radio" name="population" value="3"> 3
+	  <br>
+	  <input type="radio" name="population" value="4"> 4
+	  <br>
+	  <input type="radio" name="population" value="5"> 5
+	  <br>
+	  <input type="radio" name="population" value="6"> 6
+	  <br>
+	  <input type="radio" name="population" value="7"> 7
+	  <br>
+	  <input type="radio" name="population" value="8"> 8
+	  <br>
+	  <input type="radio" name="population" value="9"> 9
+	  <br>
+	  <input type="radio" name="population" value="10"> 10
+	</form> 
+</div>
+
+<div class = "pesticides-ranking">
+	<p> Pesticides </p>
+	<form>
+	  <input type="radio" name="pesticides" value="1" checked> 1
+	  <br>
+	  <input type="radio" name="pesticides" value="2"> 2
+	  <br>
+	  <input type="radio" name="pesticides" value="3"> 3
+	  <br>
+	  <input type="radio" name="pesticides" value="4"> 4
+	  <br>
+	  <input type="radio" name="pesticides" value="5"> 5
+	  <br>
+	  <input type="radio" name="pesticides" value="6"> 6
+	  <br>
+	  <input type="radio" name="pesticides" value="7"> 7
+	  <br>
+	  <input type="radio" name="pesticides" value="8"> 8
+	  <br>
+	  <input type="radio" name="pesticides" value="9"> 9
+	  <br>
+	  <input type="radio" name="pesticides" value="10"> 10
+	</form> 
+</div>
+
+<div class  = "rent-ranking">
+	<p> Rent </p>
+	<form>
+	  <input type="radio" name="median_rent" value="1" checked> 1
+	  <br>
+	  <input type="radio" name="median_rent" value="2"> 2
+	  <br>
+	  <input type="radio" name="median_rent" value="3"> 3
+	  <br>
+	  <input type="radio" name="median_rent" value="4"> 4
+	  <br>
+	  <input type="radio" name="median_rent" value="5"> 5
+	  <br>
+	  <input type="radio" name="median_rent" value="6"> 6
+	  <br>
+	  <input type="radio" name="median_rent" value="7"> 7
+	  <br>
+	  <input type="radio" name="median_rent" value="8"> 8
+	  <br>
+	  <input type="radio" name="median_rent" value="9"> 9
+	  <br>
+	  <input type="radio" name="median_rent" value="10"> 10
+	</form> 
+</div>
+
+<br>
+
+<div class="update_button">
+	<button onclick="saveRankings()"> Update </button>
+	<br>
+
+	<p id="test_pop"></p>
+	<p id="test_pest"></p>
+	<p id="test_rent"></p>
+
+	<script>
+	function saveRankings(){
+		var pop = document.querySelector('input[name="population"]:checked').value;
+		var pest = document.querySelector('input[name="pesticides"]:checked').value;
+		var rent = document.querySelector('input[name="median_rent"]:checked').value;
+
+		document.getElementById("test_pop").innerHTML = pop;
+		document.getElementById("test_pest").innerHTML = pest;
+		document.getElementById("test_rent").innerHTML = rent;
+
+	}
+	</script>
+</div>
 
 </body>
 

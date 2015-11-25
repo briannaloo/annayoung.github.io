@@ -1,0 +1,19 @@
+.population-ranking {
+	float: left;
+	margin-right: 20px;
+}
+
+.pesticides-ranking {
+    float: left;
+    margin-right: 20px;
+}
+
+.rent-ranking {
+	float: left;
+	margin-right: 40px;
+}
+
+.update_button {
+	float: left;
+	clear: right;
+}
