@@ -135,7 +135,7 @@
               WHEN population2014 >= 15000 and population2014 < 50000 THEN 3 \
               WHEN population2014 >= 5000 and population2014 < 15000 THEN 2 \
               WHEN population2014 >= 0 and population2014 < 5000 THEN 1 \
-            END as population_score \
+            END as population_score, \
             CASE \
               WHEN median_cash_rent <= 200 THEN 10 \
               WHEN median_cash_rent <= 400 and median_cash_rent > 200 THEN 9 \
